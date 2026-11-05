@@ -1,0 +1,12 @@
+# Runs X11 programs under compositors without built-in XWayland (such as niri).
+# Needs the `Xwayland` binary on the machine.
+[package]
+name = 'xwayland-satellite'
+repo = 'https://github.com/Supreeeme/xwayland-satellite'
+rev = 'v0.8'
+
+[build]
+system = 'cargo'
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['xcb', 'xcb-cursor']

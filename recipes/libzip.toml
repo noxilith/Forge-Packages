@@ -1,0 +1,22 @@
+# Foundation library that many distributions lack or ship too old.
+[package]
+name = 'libzip'
+repo = 'https://github.com/nih-at/libzip'
+rev = 'v1.12.1'
+
+[build]
+system = 'cmake'
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['zlib']
+configure_args = [
+  '-DBUILD_DOC=OFF',
+  '-DBUILD_EXAMPLES=OFF',
+  '-DBUILD_REGRESS=OFF',
+  '-DBUILD_TOOLS=OFF',
+  '-DENABLE_COMMONCRYPTO=OFF',
+  '-DENABLE_GNUTLS=OFF',
+  '-DENABLE_MBEDTLS=OFF',
+  '-DENABLE_OPENSSL=OFF',
+  '-DBUILD_SHARED_LIBS=ON',
+]

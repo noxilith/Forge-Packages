@@ -1,0 +1,18 @@
+[package]
+name = 'hypridle'
+repo = 'https://github.com/hyprwm/hypridle'
+rev = 'v0.1.8'
+deps = ['hyprlang', 'hyprutils', 'hyprland-protocols', 'sdbus-cpp']
+
+[build]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['wayland-client', 'wayland-protocols']
+
+[run]
+isolate = 'none'
+dirs = ['config/hypr']
+args = ['--config', '{data}/config/hypr/hypridle.conf']
+args_commands = ['hypridle']

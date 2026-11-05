@@ -1,9 +1,11 @@
 [package]
-name = "hyprgraphics"
-repo = "https://github.com/hyprwm/hyprgraphics"
-deps = ["hyprutils"]
+name = 'hyprgraphics'
+repo = 'https://github.com/hyprwm/hyprgraphics'
+rev = 'v0.6.0'
+deps = ['hyprutils']
 
 [build]
-system = "cmake"
-tools = ["cmake"]
-pkgconfig = ["pixman-1", "cairo", "libjpeg", "libwebp", "libpng"]
+system = 'cmake'
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['pixman-1', 'cairo', 'libjpeg', 'libwebp', 'libpng']

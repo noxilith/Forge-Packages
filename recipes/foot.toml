@@ -1,0 +1,27 @@
+# Wayland terminal. It starts your shell, so only its own --config is pointed at the package
+# (an XDG redirect would leak into every program you run in it).
+[package]
+name = 'foot'
+repo = 'https://codeberg.org/dnkl/foot'
+rev = '1.28.0'
+deps = ['fcft', 'tllist', 'utf8proc']
+
+[build]
+system = 'meson'
+tools = ['pkg-config', 'wayland-scanner']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = [
+  'wayland-client',
+  'wayland-cursor',
+  'wayland-protocols',
+  'xkbcommon',
+  'fontconfig',
+  'pixman-1',
+]
+configure_args = ['-Ddocs=disabled']
+
+[run]
+isolate = 'none'
+dirs = ['config/foot']
+args = ['--config', '{data}/config/foot/foot.ini']
+args_commands = ['foot']

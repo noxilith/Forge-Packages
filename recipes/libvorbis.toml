@@ -1,0 +1,10 @@
+# Foundation library that many distributions lack or ship too old.
+[package]
+name = 'libvorbis'
+repo = 'https://github.com/xiph/vorbis'
+rev = 'v1.3.7'
+deps = ['libogg']
+
+[build]
+system = 'cmake'
+configure_args = ['-DBUILD_SHARED_LIBS=ON']

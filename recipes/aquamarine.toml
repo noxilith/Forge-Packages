@@ -1,10 +1,24 @@
 [package]
-name = "aquamarine"
-repo = "https://github.com/hyprwm/aquamarine"
-deps = ["hyprutils"]
+name = 'aquamarine'
+repo = 'https://github.com/hyprwm/aquamarine'
+rev = 'v0.16.0'
+deps = ['hyprutils']
 
 [build]
-system = "cmake"
-tools = ["cmake"]
-deps = ["hyprwayland-scanner"]   # needed only while building
-pkgconfig = ["libdrm", "gbm", "libinput", "libseat", "libudev", "pixman-1", "wayland-client", "wayland-protocols", "hwdata", "egl", "glesv2"]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = [
+  'libdrm',
+  'gbm',
+  'libinput',
+  'libseat',
+  'libudev',
+  'pixman-1',
+  'wayland-client',
+  'wayland-protocols',
+  'hwdata',
+  'egl',
+  'glesv2',
+]

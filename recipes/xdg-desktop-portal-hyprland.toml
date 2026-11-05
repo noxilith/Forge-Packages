@@ -1,0 +1,14 @@
+# Screen sharing and screenshots for sandboxed apps. The repository also contains a Meson file for
+# its systemd unit, so the build system is named explicitly.
+[package]
+name = 'xdg-desktop-portal-hyprland'
+repo = 'https://github.com/hyprwm/xdg-desktop-portal-hyprland'
+rev = 'v1.5.0'
+deps = ['hyprutils', 'hyprlang', 'hyprland-protocols', 'sdbus-cpp', 'hyprtoolkit']
+
+[build]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['wayland-client', 'wayland-protocols', 'libpipewire-0.3', 'libspa-0.2', 'libdrm', 'uuid', 'gbm']

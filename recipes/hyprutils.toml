@@ -1,10 +1,10 @@
-# Utility library used by the other Hypr* projects.
 [package]
-name = "hyprutils"
-repo = "https://github.com/hyprwm/hyprutils"
+name = 'hyprutils'
+repo = 'https://github.com/hyprwm/hyprutils'
+rev = 'v0.14.3'
 
 [build]
-system = "cmake"
-tools = ["cmake"]
-# `pkgconfig` lists HOST libraries only; Forge packages provide their own.
-pkgconfig = ["pixman-1"]
+system = 'cmake'
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['pixman-1']

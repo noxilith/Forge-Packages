@@ -1,0 +1,12 @@
+# Needs Qt 6 on the machine. Its QML module is installed inside the package (by default it asks
+# for Qt's own system directory).
+[package]
+name = 'hyprland-qt-support'
+repo = 'https://github.com/hyprwm/hyprland-qt-support'
+rev = 'v0.1.0'
+deps = ['hyprlang']
+
+[build]
+system = 'cmake'
+tools = ['pkg-config']
+configure_args = ['-DINSTALL_QML_PREFIX=lib/qt6/qml']

@@ -1,0 +1,11 @@
+[package]
+name = 'hyprwire'
+repo = 'https://github.com/hyprwm/hyprwire'
+rev = 'v0.3.1'
+deps = ['hyprutils']
+
+[build]
+system = 'cmake'
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['libffi']

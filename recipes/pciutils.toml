@@ -1,0 +1,11 @@
+# Foundation library that many distributions lack or ship too old. (libpci, needed by hyprsysteminfo)
+[package]
+name = 'pciutils'
+repo = 'https://github.com/pciutils/pciutils'
+rev = 'v3.15.0'
+
+[build]
+steps = [
+  'make -j"$FORGE_JOBS" CC=gcc SHARED=yes ZLIB=no DNS=no PREFIX="$FORGE_PREFIX"',
+  'make install install-lib CC=gcc SHARED=yes ZLIB=no DNS=no PREFIX="$FORGE_PREFIX" DESTDIR="$FORGE_STAGE" LDCONFIG=true',
+]

@@ -1,0 +1,10 @@
+# Clipboard history. Uses wl-clipboard at runtime.
+[package]
+name = 'cliphist'
+repo = 'https://github.com/sentriz/cliphist'
+rev = 'v0.7.0'
+deps = ['wl-clipboard']
+
+[build]
+system = 'go'
+targets = ['.']

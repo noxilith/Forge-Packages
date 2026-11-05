@@ -1,0 +1,12 @@
+[package]
+name = 'hyprpaper'
+repo = 'https://github.com/hyprwm/hyprpaper'
+rev = 'v0.8.5'
+deps = ['hyprlang', 'hyprutils', 'hyprtoolkit', 'hyprwire']
+
+[build]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['wayland-client', 'pixman-1', 'libdrm']

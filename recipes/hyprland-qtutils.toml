@@ -1,0 +1,16 @@
+# Needs Qt 6 on the machine. Finds hyprland-qt-support's QML module through QML_IMPORT_PATH.
+[package]
+name = 'hyprland-qtutils'
+repo = 'https://github.com/hyprwm/hyprland-qtutils'
+rev = 'v0.1.5'
+deps = ['hyprutils', 'hyprland-qt-support']
+
+[build]
+system = 'cmake'
+tools = ['pkg-config']
+
+[run]
+isolate = 'none'
+
+[run.env]
+QML_IMPORT_PATH = '{dep:hyprland-qt-support}/lib/qt6/qml'

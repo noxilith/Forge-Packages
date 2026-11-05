@@ -1,0 +1,12 @@
+# Screenshots.
+[package]
+name = 'grim'
+repo = 'https://github.com/emersion/grim'
+rev = 'v1.4.0'
+
+[build]
+system = 'meson'
+tools = ['pkg-config', 'wayland-scanner']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['libpng', 'libjpeg', 'pixman-1', 'wayland-client', 'wayland-protocols']
+configure_args = ['-Dman-pages=disabled', '-Dfish-completions=false']

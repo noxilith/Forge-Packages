@@ -1,0 +1,12 @@
+[package]
+name = 'hyprsunset'
+repo = 'https://github.com/hyprwm/hyprsunset'
+rev = 'v0.4.0'
+deps = ['hyprutils', 'hyprlang', 'hyprland-protocols']
+
+[build]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['wayland-client', 'wayland-protocols']

@@ -1,0 +1,15 @@
+# Foundation library that many distributions lack or ship too old.
+# Needs an sd-bus implementation from the machine: libsystemd, or elogind on systems without
+# systemd. Some systems ship a libsystemd.pc without its headers, so the choice is made by whether
+# the header is really there.
+[package]
+name = 'sdbus-cpp'
+repo = 'https://github.com/Kistler-Group/sdbus-cpp'
+rev = 'v2.3.1'
+
+[build]
+steps = [
+  'L=default; [ -e /usr/include/systemd/sd-bus.h ] || L=elogind; cmake -S . -B "$FORGE_OBJ" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$FORGE_PREFIX" -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_INSTALL_RPATH="$FORGE_PREFIX/lib" -DSDBUSCPP_BUILD_DOCS=OFF -DSDBUSCPP_BUILD_TESTS=OFF -DSDBUSCPP_SDBUS_LIB=$L',
+  'cmake --build "$FORGE_OBJ" -j "$FORGE_JOBS"',
+  'DESTDIR="$FORGE_STAGE" cmake --install "$FORGE_OBJ"',
+]

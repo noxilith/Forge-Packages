@@ -1,0 +1,12 @@
+# Select a region of the screen (pairs with grim).
+[package]
+name = 'slurp'
+repo = 'https://github.com/emersion/slurp'
+rev = 'v1.5.0'
+
+[build]
+system = 'meson'
+tools = ['pkg-config', 'wayland-scanner']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['cairo', 'wayland-client', 'wayland-cursor', 'wayland-protocols', 'xkbcommon']
+configure_args = ['-Dman-pages=disabled']

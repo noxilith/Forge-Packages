@@ -1,0 +1,11 @@
+[package]
+name = 'hyprpolkitagent'
+repo = 'https://github.com/hyprwm/hyprpolkitagent'
+rev = 'v0.2.0'
+deps = ['hyprutils', 'hyprtoolkit', 'hyprgraphics', 'hyprlang', 'sdbus-cpp']
+
+[build]
+system = 'cmake'
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['pixman-1', 'libdrm']

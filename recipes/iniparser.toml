@@ -1,0 +1,9 @@
+# Foundation library that many distributions lack or ship too old. (needed by hyprtoolkit)
+[package]
+name = 'iniparser'
+repo = 'https://github.com/ndevilla/iniparser'
+rev = 'v4.3.2'
+
+[build]
+system = 'cmake'
+configure_args = ['-DBUILD_SHARED_LIBS=ON', '-DBUILD_EXAMPLES=OFF', '-DBUILD_DOCS=OFF']

@@ -1,0 +1,12 @@
+# Wallpaper.
+[package]
+name = 'swaybg'
+repo = 'https://github.com/swaywm/swaybg'
+rev = 'v1.2.2'
+
+[build]
+system = 'meson'
+tools = ['pkg-config', 'wayland-scanner']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['wayland-client', 'wayland-protocols', 'cairo', 'gdk-pixbuf-2.0']
+configure_args = ['-Dman-pages=disabled']

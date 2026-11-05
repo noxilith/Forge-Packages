@@ -1,0 +1,12 @@
+# Lua 5.5, which current Hyprland requires. Static, position-independent, with a lua.pc
+# pkg-config file (the upstream sources ship none).
+[package]
+name = 'lua'
+repo = 'https://github.com/lua/lua'
+rev = 'v5.5.1'
+
+[build]
+steps = [
+  'make -j"$FORGE_JOBS" all CC=gcc MYCFLAGS="-std=c99 -DLUA_USE_LINUX -fPIC"',
+  "D=\"$FORGE_STAGE$FORGE_PREFIX\"; mkdir -p \"$D/bin\" \"$D/lib/pkgconfig\" \"$D/include\"; cp lua \"$D/bin/\"; cp liblua.a \"$D/lib/\"; cp lua.h luaconf.h lualib.h lauxlib.h \"$D/include/\"; printf 'extern \"C\" {\\n#include \"lua.h\"\\n#include \"lualib.h\"\\n#include \"lauxlib.h\"\\n}\\n' > \"$D/include/lua.hpp\"; for n in lua lua5.5 lua55; do printf 'prefix=%s\\nName: Lua\\nDescription: Lua language\\nVersion: 5.5.1\\nLibs: -L${prefix}/lib -llua -lm -ldl\\nCflags: -I${prefix}/include\\n' \"$FORGE_PREFIX\" > \"$D/lib/pkgconfig/$n.pc\"; done",
+]

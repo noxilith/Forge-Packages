@@ -1,0 +1,13 @@
+# Foundation library that many distributions lack or ship too old. (libxcb-errors, needed by Hyprland for XWayland)
+# Pinned to a master commit: the 1.0.1 tag points a submodule at a git:// URL that no longer answers.
+# Needs a working autoconf/automake/libtool on the machine (it ships no generated `configure`).
+[package]
+name = 'xcb-util-errors'
+repo = 'https://gitlab.freedesktop.org/xorg/lib/libxcb-errors.git'
+rev = 'b90bcfbb7a41716a40fe7fb11518cc89190dbe85'
+
+[build]
+system = 'autotools'
+tools = ['autoreconf', 'python3', 'pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['xcb']

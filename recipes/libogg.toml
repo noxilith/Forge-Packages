@@ -1,0 +1,9 @@
+# Foundation library that many distributions lack or ship too old.
+[package]
+name = 'libogg'
+repo = 'https://github.com/xiph/ogg'
+rev = 'v1.3.6'
+
+[build]
+system = 'cmake'
+configure_args = ['-DBUILD_SHARED_LIBS=ON']

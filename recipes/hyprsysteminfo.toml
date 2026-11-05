@@ -1,0 +1,11 @@
+[package]
+name = 'hyprsysteminfo'
+repo = 'https://github.com/hyprwm/hyprsysteminfo'
+rev = 'v0.2.0'
+deps = ['hyprtoolkit', 'hyprutils', 'glaze', 'pciutils']
+
+[build]
+system = 'cmake'
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['libdrm', 'pixman-1']

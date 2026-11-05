@@ -1,0 +1,18 @@
+# Screen locker. Uses the machine's PAM and needs a PAM service file for `swaylock`.
+[package]
+name = 'swaylock'
+repo = 'https://github.com/swaywm/swaylock'
+rev = 'v1.8.6'
+
+[build]
+system = 'meson'
+tools = ['pkg-config', 'wayland-scanner']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['wayland-client', 'wayland-protocols', 'xkbcommon', 'cairo', 'gdk-pixbuf-2.0']
+configure_args = ['-Dman-pages=disabled', '-Dfish-completions=false']
+
+[run]
+isolate = 'none'
+dirs = ['config/swaylock']
+args = ['--config', '{data}/config/swaylock/config']
+args_commands = ['swaylock']

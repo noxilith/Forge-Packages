@@ -1,0 +1,8 @@
+# Header-only list library used by foot, fcft and fuzzel.
+[package]
+name = 'tllist'
+repo = 'https://codeberg.org/dnkl/tllist'
+rev = '1.1.0'
+
+[build]
+system = 'meson'

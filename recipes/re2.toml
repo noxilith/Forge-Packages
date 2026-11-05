@@ -1,0 +1,9 @@
+# Foundation library that many distributions lack or ship too old. (needed by Hyprland)
+[package]
+name = 're2'
+repo = 'https://github.com/google/re2'
+deps = ['abseil-cpp']
+
+[build]
+system = 'cmake'
+configure_args = ['-DRE2_BUILD_TESTING=OFF', '-DBUILD_SHARED_LIBS=ON']

@@ -1,0 +1,11 @@
+# Man-page compiler. A build-time tool for projects (fuzzel) whose build insists on their documentation.
+[package]
+name = 'scdoc'
+repo = 'https://git.sr.ht/~sircmpwn/scdoc'
+rev = '1.11.5'
+
+[build]
+steps = [
+  'make -j"$FORGE_JOBS" CC=gcc PREFIX="$FORGE_PREFIX"',
+  'make install CC=gcc PREFIX="$FORGE_PREFIX" DESTDIR="$FORGE_STAGE"',
+]

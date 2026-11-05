@@ -1,0 +1,8 @@
+# Wayland protocol definitions used by the Hypr* tools.
+[package]
+name = 'hyprland-protocols'
+repo = 'https://github.com/hyprwm/hyprland-protocols'
+rev = 'v0.8.0'
+
+[build]
+system = 'cmake'

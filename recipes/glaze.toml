@@ -1,0 +1,14 @@
+# Header-only JSON/reflection library. Hyprland would otherwise download it while
+# configuring, which an offline sandboxed build cannot do.
+[package]
+name = 'glaze'
+repo = 'https://github.com/stephenberry/glaze'
+rev = 'v9.1.0'
+
+[build]
+system = 'cmake'
+configure_args = [
+  '-Dglaze_BUILD_EXAMPLES=OFF',
+  '-Dglaze_DEVELOPER_MODE=OFF',
+  '-DBUILD_TESTING=OFF',
+]

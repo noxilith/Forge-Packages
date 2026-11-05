@@ -1,0 +1,25 @@
+# Screen locker. Authenticates through the machine's PAM, so the system needs a PAM service
+# file for it (`/etc/pam.d/hyprlock`); Forge never writes outside its own directories.
+[package]
+name = 'hyprlock'
+repo = 'https://github.com/hyprwm/hyprlock'
+rev = 'v0.9.7'
+deps = ['hyprlang', 'hyprutils', 'hyprgraphics', 'hyprland-protocols', 'sdbus-cpp']
+
+[build]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = [
+  'wayland-client',
+  'wayland-protocols',
+  'wayland-egl',
+  'egl',
+  'xkbcommon',
+  'cairo',
+  'pangocairo',
+  'libdrm',
+  'gbm',
+  'pam',
+]

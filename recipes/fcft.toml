@@ -1,0 +1,12 @@
+# Font loading and glyph rasterization library for foot and fuzzel.
+[package]
+name = 'fcft'
+repo = 'https://codeberg.org/dnkl/fcft'
+rev = '3.3.3'
+deps = ['tllist', 'utf8proc']
+
+[build]
+system = 'meson'
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['freetype2', 'harfbuzz', 'fontconfig', 'pixman-1']

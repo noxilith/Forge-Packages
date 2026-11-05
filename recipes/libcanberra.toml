@@ -1,0 +1,19 @@
+# Foundation library that many distributions lack or ship too old. (needed by Hyprland)
+# Source: a GitHub mirror of the original, unmaintained upstream, pinned to the commit that ships a
+# generated `configure`. Its build-aux helper scripts are symlinks to a path that only exists on the
+# author's machine; any that dangle are replaced from libtool's copies. GTK/PulseAudio/ALSA backends
+# are turned off, as Hyprland only needs the library.
+[package]
+name = 'libcanberra'
+repo = 'https://github.com/Distrotech/libcanberra'
+rev = 'edbf1733563f37c650d99fae1e826bf4a46ac3f7'
+deps = ['libvorbis']
+
+[build]
+tools = ['pkg-config']
+steps = [
+  'for f in compile config.guess config.sub depcomp install-sh ltmain.sh missing; do [ -e build-aux/$f ] || { rm -f build-aux/$f; for d in /usr/share/libtool/build-aux /usr/share/automake-*; do [ -f $d/$f ] && cp $d/$f build-aux/$f && break; done; }; done',
+  './configure --prefix="$FORGE_PREFIX" --disable-gtk --disable-gtk3 --disable-alsa --disable-pulse --disable-oss --disable-gstreamer --disable-tdb --disable-lynx --disable-gtk-doc --disable-gtk-doc-html',
+  'make -j"$FORGE_JOBS"',
+  'make install DESTDIR="$FORGE_STAGE"',
+]

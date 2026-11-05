@@ -1,0 +1,9 @@
+# Foundation library that many distributions lack or ship too old.
+[package]
+name = 'utf8proc'
+repo = 'https://github.com/JuliaStrings/utf8proc'
+rev = 'v2.12.0'
+
+[build]
+system = 'cmake'
+configure_args = ['-DBUILD_SHARED_LIBS=ON']

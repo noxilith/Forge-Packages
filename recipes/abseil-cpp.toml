@@ -1,0 +1,17 @@
+# Foundation library that many distributions lack or ship too old.
+# Built as shared libraries: a shared library that uses a static Abseil leaves unresolved
+# symbols for everything that links it (hyprtoolkit -> hyprpaper).
+[package]
+name = 'abseil-cpp'
+repo = 'https://github.com/abseil/abseil-cpp'
+rev = '20260817.0'
+
+[build]
+system = 'cmake'
+configure_args = [
+  '-DCMAKE_CXX_STANDARD=17',
+  '-DABSL_PROPAGATE_CXX_STD=ON',
+  '-DABSL_BUILD_TESTING=OFF',
+  '-DCMAKE_POSITION_INDEPENDENT_CODE=ON',
+  '-DBUILD_SHARED_LIBS=ON',
+]

@@ -1,0 +1,12 @@
+[package]
+name = 'hyprpicker'
+repo = 'https://github.com/hyprwm/hyprpicker'
+rev = 'v0.4.8'
+deps = ['hyprutils']
+
+[build]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['wayland-client', 'wayland-protocols', 'xkbcommon', 'cairo', 'pango', 'pangocairo', 'libjpeg']

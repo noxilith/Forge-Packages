@@ -1,0 +1,33 @@
+# Notification daemon. Starts programs on actions, so only --config is pointed at the package.
+# Uses the machine's sd-bus: libsystemd, or elogind where systemd's header isn't installed.
+[package]
+name = 'mako'
+repo = 'https://github.com/emersion/mako'
+rev = 'v1.11.0'
+
+[build]
+system = 'meson'
+tools = ['pkg-config', 'wayland-scanner']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = [
+  'cairo',
+  'pango',
+  'pangocairo',
+  'glib-2.0',
+  'gobject-2.0',
+  'wayland-client',
+  'wayland-protocols',
+  'wayland-cursor',
+  'gdk-pixbuf-2.0',
+]
+configure_args = ['-Dman-pages=disabled']
+# Shell fragments, decided on the build machine.
+configure_sh = [
+  '-Dsd-bus-provider=$([ -e /usr/include/systemd/sd-bus.h ] && echo auto || echo libelogind)',
+]
+
+[run]
+isolate = 'none'
+dirs = ['config/mako']
+args = ['--config', '{data}/config/mako/config']
+args_commands = ['mako']

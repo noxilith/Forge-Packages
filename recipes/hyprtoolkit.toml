@@ -1,0 +1,23 @@
+[package]
+name = 'hyprtoolkit'
+repo = 'https://github.com/hyprwm/hyprtoolkit'
+rev = 'v0.6.0'
+deps = ['hyprutils', 'hyprlang', 'hyprgraphics', 'aquamarine', 'iniparser', 'abseil-cpp']
+
+[build]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = [
+  'wayland-client',
+  'wayland-protocols',
+  'egl',
+  'pixman-1',
+  'libdrm',
+  'gbm',
+  'xkbcommon',
+  'pango',
+  'cairo',
+  'pangocairo',
+]

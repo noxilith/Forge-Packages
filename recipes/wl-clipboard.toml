@@ -1,0 +1,15 @@
+# wl-copy and wl-paste: clipboard access from the command line (the tools gh looks for).
+[package]
+name = 'wl-clipboard'
+repo = 'https://github.com/bugaevc/wl-clipboard'
+rev = 'v2.3.0'
+
+[build]
+system = 'meson'
+tools = ['pkg-config', 'wayland-scanner']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = ['wayland-client', 'wayland-protocols']
+configure_args = [
+  '-Dzshcompletiondir=share/zsh/site-functions',
+  '-Dfishcompletiondir=share/fish/vendor_completions.d',
+]

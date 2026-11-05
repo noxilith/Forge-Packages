@@ -1,30 +1,59 @@
-# NOT VERIFIED: the dependency chain works (see the other recipes), but the
-# test machine lacks libzip, re2, xcb-errors and glaze, so this was not built.
-# Hyprland's build must not download anything: install `glaze` on the host
-# (header-only) rather than letting CMake fetch it, since builds are offline.
+# The Hyprland compositor. Everything it needs that distributions often lack is a Forge dependency
+# (re2, glaze, lua, libcanberra, libxcb-errors, the Hypr* libraries). The machine must provide the usual
+# Wayland/graphics libraries below, glslang and a C++ compiler.
+# To log in to it: `forge integrate hyprland`.
 [package]
-name = "hyprland"
-repo = "https://github.com/hyprwm/Hyprland"
-deps = ["hyprutils", "hyprlang", "hyprcursor", "hyprgraphics", "aquamarine"]
-
-[build]
-system = "cmake"
-tools = ["cmake", "pkg-config"]
-configure_args = ["-DNO_TESTS=ON"]
-deps = ["hyprwayland-scanner"]
-pkgconfig = [
-  "pixman-1", "cairo", "pango", "pangocairo", "libdrm", "gbm", "libinput", "libseat", "libudev",
-  "xkbcommon", "wayland-server", "wayland-protocols", "egl", "glesv2", "uuid", "tomlplusplus",
-  "xcb", "xcb-icccm", "xcb-composite", "xcb-render", "xcb-xfixes", "xcb-res", "xcb-ewmh",
-  "xcb-util", "xcursor", "lcms2", "re2", "xcb-errors", "glaze",
+name = 'hyprland'
+repo = 'https://github.com/hyprwm/Hyprland'
+rev = 'v0.57.1'
+deps = [
+  'hyprutils',
+  'hyprlang',
+  'hyprcursor',
+  'hyprgraphics',
+  'aquamarine',
+  'hyprland-protocols',
+  're2',
+  'glaze',
+  'lua',
+  'libcanberra',
+  'xcb-util-errors',
 ]
 
-# Hyprland takes its config path as an argument, so nothing is exported into
-# the environment that programs started from the compositor would inherit.
-# Only the compositor itself gets --config (not hyprctl and friends). Whether
-# Hyprland creates a default config at that path was not verified.
+[build]
+system = 'cmake'
+deps = ['hyprwayland-scanner']   # needed only while building
+tools = ['pkg-config', 'python3']
+# Host libraries (Forge packages above provide their own).
+pkgconfig = [
+  'xkbcommon',
+  'uuid',
+  'wayland-server',
+  'wayland-protocols',
+  'cairo',
+  'pango',
+  'pangocairo',
+  'pixman-1',
+  'xcursor',
+  'libdrm',
+  'libinput',
+  'libeis-1.0',
+  'gbm',
+  'gio-2.0',
+  'muparser',
+  'lcms2',
+  'xcb',
+  'xcb-render',
+  'xcb-xfixes',
+  'xcb-icccm',
+  'xcb-composite',
+  'xcb-res',
+  'egl',
+  'glesv2',
+]
+
 [run]
-isolate = "none"
-dirs = ["config/hypr"]
-args = ["--config", "{data}/config/hypr/hyprland.conf"]
-args_commands = ["Hyprland"]
+isolate = 'none'
+dirs = ['config/hypr']
+args = ['--config', '{data}/config/hypr/hyprland.conf']
+args_commands = ['Hyprland']
