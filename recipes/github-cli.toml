@@ -1,0 +1,22 @@
+# GitHub's command-line tool. Written in Go: Forge downloads a Go toolchain
+# itself if the machine has none that is new enough.
+[package]
+name = "github-cli"
+repo = "https://github.com/cli/cli"
+
+[build]
+system = "go"
+targets = ["./cmd/gh"]      # just the `gh` program, not every tool in the repository
+
+# gh keeps its settings and login in the package's own data directory
+# (GH_CONFIG_DIR). XDG variables are left alone: gh starts a browser to log in,
+# and a browser should not inherit a redirected config location.
+# After `gh auth setup-git`, git's credential helper must point at Forge's stable
+# launcher (`~/.local/share/forge/bin/gh`), not the versioned path gh records:
+# only the launcher sets GH_CONFIG_DIR, and the versioned path disappears on update.
+#   git config --global --add credential.https://github.com.helper '!'$HOME'/.local/share/forge/bin/gh auth git-credential'
+[run]
+isolate = "none"
+dirs = ["config/gh"]
+[run.env]
+GH_CONFIG_DIR = "{data}/config/gh"

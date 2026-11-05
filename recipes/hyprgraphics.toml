@@ -1,0 +1,9 @@
+[package]
+name = "hyprgraphics"
+repo = "https://github.com/hyprwm/hyprgraphics"
+deps = ["hyprutils"]
+
+[build]
+system = "cmake"
+tools = ["cmake"]
+pkgconfig = ["pixman-1", "cairo", "libjpeg", "libwebp", "libpng"]

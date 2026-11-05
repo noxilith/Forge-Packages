@@ -1,0 +1,10 @@
+# NOT VERIFIED: needs libzip on the host, which the test machine lacks.
+[package]
+name = "hyprcursor"
+repo = "https://github.com/hyprwm/hyprcursor"
+deps = ["hyprlang"]
+
+[build]
+system = "cmake"
+tools = ["cmake"]
+pkgconfig = ["libzip", "librsvg-2.0", "cairo", "tomlplusplus"]

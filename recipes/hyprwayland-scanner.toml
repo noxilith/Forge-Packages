@@ -1,0 +1,9 @@
+# Code generator used while building other Hypr* projects.
+[package]
+name = "hyprwayland-scanner"
+repo = "https://github.com/hyprwm/hyprwayland-scanner"
+
+[build]
+system = "cmake"
+tools = ["cmake"]
+pkgconfig = ["pugixml"]

@@ -1,0 +1,10 @@
+[package]
+name = "aquamarine"
+repo = "https://github.com/hyprwm/aquamarine"
+deps = ["hyprutils"]
+
+[build]
+system = "cmake"
+tools = ["cmake"]
+deps = ["hyprwayland-scanner"]   # needed only while building
+pkgconfig = ["libdrm", "gbm", "libinput", "libseat", "libudev", "pixman-1", "wayland-client", "wayland-protocols", "hwdata", "egl", "glesv2"]

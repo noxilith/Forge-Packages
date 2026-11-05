@@ -1,0 +1,28 @@
+[package]
+name = "niri"
+repo = "https://github.com/YaLTeR/niri"
+
+[build]
+system = "cargo"
+tools = ["cargo", "pkg-config"]
+# Host development libraries niri links against.
+pkgconfig = ["libinput", "libseat", "xkbcommon", "gbm", "libudev"]
+
+[install]
+# Session file + default config ship in the package; registering the session
+# with a display manager is a separate, optional step.
+post = [
+  '[ ! -f resources/niri.desktop ] || install -Dm644 resources/niri.desktop "$FORGE_STAGE$FORGE_PREFIX/share/wayland-sessions/niri.desktop"',
+  '[ ! -f resources/default-config.kdl ] || install -Dm644 resources/default-config.kdl "$FORGE_STAGE$FORGE_PREFIX/share/niri/default-config.kdl"',
+]
+
+# niri keeps its configuration inside the package (NIRI_CONFIG). niri removes
+# that variable from its own environment, so programs started from the
+# compositor do not inherit it. The default config is copied in on first run.
+[run]
+isolate = "none"
+dirs = ["config/niri"]
+[run.env]
+NIRI_CONFIG = "{data}/config/niri/config.kdl"
+[run.seed]
+"config/niri/config.kdl" = "share/niri/default-config.kdl"

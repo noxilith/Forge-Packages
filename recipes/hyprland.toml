@@ -1,0 +1,30 @@
+# NOT VERIFIED: the dependency chain works (see the other recipes), but the
+# test machine lacks libzip, re2, xcb-errors and glaze, so this was not built.
+# Hyprland's build must not download anything: install `glaze` on the host
+# (header-only) rather than letting CMake fetch it, since builds are offline.
+[package]
+name = "hyprland"
+repo = "https://github.com/hyprwm/Hyprland"
+deps = ["hyprutils", "hyprlang", "hyprcursor", "hyprgraphics", "aquamarine"]
+
+[build]
+system = "cmake"
+tools = ["cmake", "pkg-config"]
+configure_args = ["-DNO_TESTS=ON"]
+deps = ["hyprwayland-scanner"]
+pkgconfig = [
+  "pixman-1", "cairo", "pango", "pangocairo", "libdrm", "gbm", "libinput", "libseat", "libudev",
+  "xkbcommon", "wayland-server", "wayland-protocols", "egl", "glesv2", "uuid", "tomlplusplus",
+  "xcb", "xcb-icccm", "xcb-composite", "xcb-render", "xcb-xfixes", "xcb-res", "xcb-ewmh",
+  "xcb-util", "xcursor", "lcms2", "re2", "xcb-errors", "glaze",
+]
+
+# Hyprland takes its config path as an argument, so nothing is exported into
+# the environment that programs started from the compositor would inherit.
+# Only the compositor itself gets --config (not hyprctl and friends). Whether
+# Hyprland creates a default config at that path was not verified.
+[run]
+isolate = "none"
+dirs = ["config/hypr"]
+args = ["--config", "{data}/config/hypr/hyprland.conf"]
+args_commands = ["Hyprland"]

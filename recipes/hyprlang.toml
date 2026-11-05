@@ -1,0 +1,8 @@
+[package]
+name = "hyprlang"
+repo = "https://github.com/hyprwm/hyprlang"
+deps = ["hyprutils"]
+
+[build]
+system = "cmake"
+tools = ["cmake"]
