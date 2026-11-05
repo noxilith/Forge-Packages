@@ -21,3 +21,7 @@ add taps you trust.
 their comments: the dependency chain they sit on (hyprutils, hyprlang,
 hyprwayland-scanner, aquamarine) was built and tested, but the machine used to
 write them lacked some host libraries needed to build those two.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
