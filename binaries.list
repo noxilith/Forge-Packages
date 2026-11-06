@@ -1,12 +1,54 @@
 # Packages the binaries workflow builds, packs and publishes (one name per line).
-# Their dependencies are built too and published with them.
-# Start small: add a name only once `forge install <name> --from-source` works for you.
-foot
-grim
-slurp
-wl-clipboard
+# Their dependencies are built too and published with them. A package that fails to build is
+# reported by the workflow and left out; the rest are still published.
+abseil-cpp
+aquamarine
 cliphist
-swaybg
-hyprutils
-hyprlang
 elora-notes
+fcft
+foot
+fuzzel
+github-cli
+glaze
+grim
+hyprcursor
+hyprgraphics
+hypridle
+hyprland
+hyprland-guiutils
+hyprland-protocols
+hyprland-qt-support
+hyprland-qtutils
+hyprlang
+hyprlock
+hyprpaper
+hyprpicker
+hyprpolkitagent
+hyprsunset
+hyprsysteminfo
+hyprtoolkit
+hyprutils
+hyprwayland-scanner
+hyprwire
+iniparser
+libcanberra
+libogg
+libvorbis
+libzip
+lua
+mako
+niri
+pciutils
+re2
+scdoc
+sdbus-cpp
+slurp
+swaybg
+swayidle
+swaylock
+tllist
+utf8proc
+wl-clipboard
+xcb-util-errors
+xdg-desktop-portal-hyprland
+xwayland-satellite
