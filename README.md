@@ -13,12 +13,12 @@ forge sync                                        # fetch newer recipes
 Two directories, looked up in this order:
 
 * `recipes/`: written and kept up by hand (the packages below).
-* `void/`: about 5,200 recipes generated from
-  [Void Linux](https://voidlinux.org)'s templates (see `void/REPORT.md` for what was
-  skipped and why, and `void/IMPORTED_FROM` for the Void commit). Regenerate with
-  `forge-import void <void-packages> --out void`. **Never built**: each recipe's
+* `foundry/`: about 5,200 recipes generated from
+  [Void Linux](https://voidlinux.org)'s templates (see `foundry/REPORT.md` for what was
+  skipped and why, and `foundry/IMPORTED_FROM` for the Void commit). Regenerate with
+  `forge-import void <void-packages> --out foundry`. **Never built**: each recipe's
   header lists what the importer could not carry over. The Void templates are
-  BSD-2-Clause licensed; `void/LICENSE-void-packages` has their notice.
+  BSD-2-Clause licensed; `foundry/LICENSE-void-packages` has their notice.
 
 Recipes are build instructions that run in Forge's sandbox, but they are still
 code you are choosing to run. Hand-written recipes pin a release tag (or a
