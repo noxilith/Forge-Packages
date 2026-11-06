@@ -38,8 +38,8 @@ commit); imported ones pin a source archive by SHA-256, so builds are repeatable
   `mako`, `swaybg`, `swaylock`, `swayidle`, `niri`, `xwayland-satellite`.
 * **`github-cli`** (the `gh` command; Go, built with a Go toolchain Forge provides).
 
-The recipes marked "generated" are written by `gen_recipes.py` (run it to
-regenerate `recipes/`); `niri` and `github-cli` are written by hand.
+The recipes marked "generated" are written by `gen-recipes` (run `cargo run --manifest-path
+gen-recipes/Cargo.toml` to regenerate `recipes/`); `niri` and `github-cli` are written by hand.
 
 ## How well tested is this?
 
