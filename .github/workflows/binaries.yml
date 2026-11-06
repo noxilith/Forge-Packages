@@ -21,6 +21,8 @@ permissions:
 env:
   FORGE_ROOT: /opt/forge
   FORGE_PLATFORM: x86_64-linux
+  # Always Forge's own compilers, never whatever the runner has: the binaries must be reproducible.
+  FORGE_TOOLCHAINS: managed
 
 jobs:
   build:
