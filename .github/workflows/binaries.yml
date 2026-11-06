@@ -23,6 +23,9 @@ env:
   FORGE_PLATFORM: x86_64-linux
   # Always Forge's own compilers, never whatever the runner has: the binaries must be reproducible.
   FORGE_TOOLCHAINS: managed
+  # Hyprland's libraries need C++23 (<print>), which means GCC 14; Ubuntu 24.04 defaults to 13.
+  CC: gcc-14
+  CXX: g++-14
 
 jobs:
   build:
@@ -39,7 +42,7 @@ jobs:
       - name: Tools the builds need
         run: |
           sudo apt-get update
-          sudo apt-get install -y bubblewrap git curl build-essential pkg-config cmake ninja-build meson \
+          sudo apt-get install -y bubblewrap git curl build-essential gcc-14 g++-14 pkg-config cmake ninja-build meson \
             libwayland-dev libwayland-bin wayland-protocols libxkbcommon-dev libfontconfig-dev libfreetype-dev \
             libharfbuzz-dev libpixman-1-dev libpng-dev libjpeg-dev libcairo2-dev libgdk-pixbuf-2.0-dev
           # bubblewrap needs unprivileged user namespaces, which Ubuntu 24.04 restricts by default
