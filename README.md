@@ -42,6 +42,19 @@ commit); imported ones pin a source archive by SHA-256, so builds are repeatable
 The recipes marked "generated" are written by `gen-recipes` (run `cargo run --manifest-path
 gen-recipes/Cargo.toml` to regenerate `recipes/`); `niri` and `github-cli` are written by hand.
 
+## Prebuilt packages
+
+Every recipe in `recipes/` is built from source by a GitHub Actions workflow (on Arch Linux, in
+three parallel jobs), signed, and published to the `binaries` release; `forge install` downloads
+them instead of compiling. 50 of the 51 are published; `hyprland-qtutils` is not (its build needs
+Qt's private Wayland module, which CMake does not find). A package published as *relocatable* works
+in any Forge root (for example `elora-notes`, `niri`, `grim`, `slurp`); the others only fit the
+system-wide install (`/opt/forge`). The imported `foundry/` recipes are not prebuilt: they have never
+been built, and a release holds at most 1,000 files.
+
+The binaries need a C library at least as new as Arch's. `forge install <name> --from-source`
+always compiles.
+
 ## How well tested is this?
 
 Honestly: not very. Forge itself is tested; the recipes were checked like this on
@@ -65,7 +78,8 @@ completions went outside the package), xdg-desktop-portal-hyprland (missing
 `configure` and that machine's `autoconf` is broken. `hyprland` depends on it for
 XWayland support.
 
-**Never built:** `hyprland` itself, `xwayland-satellite`. `niri` built once with an
+**Never built by me by hand:** the CI run above built all of them except `hyprland-qtutils`, but
+nobody has run most of the results. `niri` built once with an
 earlier version of its recipe.
 
 If a build fails for you, please open an issue with the output; that is how the
