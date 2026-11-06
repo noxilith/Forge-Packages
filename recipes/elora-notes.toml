@@ -1,0 +1,21 @@
+# EloraNotes: a Markdown notes app (the `elora` window and the `elora-server` for shared notes).
+# Needs a C compiler to build. At run time the window loads the machine's Wayland or X11,
+# xkbcommon and OpenGL libraries.
+[package]
+name = "elora-notes"
+repo = "https://github.com/noxilith/EloraNotes"
+rev = "v0.15.9"
+description = "A calm, minimalistic Markdown notes app (with an optional server for shared notes)"
+homepage = "https://noxilith.github.io/docs/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"
+
+[install]
+# The menu entry and icons ship inside the package. Its notes stay in a normal folder
+# (Documents/EloraNotes), its settings in the package's own data directory.
+post = [
+  '[ ! -f packaging/linux/io.github.noxilith.EloraNotes.desktop ] || install -Dm644 packaging/linux/io.github.noxilith.EloraNotes.desktop "$FORGE_STAGE$FORGE_PREFIX/share/applications/io.github.noxilith.EloraNotes.desktop"',
+  'for n in 16 24 32 48 64 128 256 512; do [ ! -f assets/icons/elora-notes-$n.png ] || install -Dm644 assets/icons/elora-notes-$n.png "$FORGE_STAGE$FORGE_PREFIX/share/icons/hicolor/${n}x${n}/apps/io.github.noxilith.EloraNotes.png"; done',
+]

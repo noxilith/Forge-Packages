@@ -37,6 +37,7 @@ commit); imported ones pin a source archive by SHA-256, so builds are repeatable
 * **Wayland tools**: `foot`, `fuzzel`, `wl-clipboard`, `cliphist`, `grim`, `slurp`,
   `mako`, `swaybg`, `swaylock`, `swayidle`, `niri`, `xwayland-satellite`.
 * **`github-cli`** (the `gh` command; Go, built with a Go toolchain Forge provides).
+* **`elora-notes`**: [EloraNotes](https://github.com/noxilith/EloraNotes), the Markdown notes app and its server (Rust). Never built through Forge.
 
 The recipes marked "generated" are written by `gen-recipes` (run `cargo run --manifest-path
 gen-recipes/Cargo.toml` to regenerate `recipes/`); `niri` and `github-cli` are written by hand.
