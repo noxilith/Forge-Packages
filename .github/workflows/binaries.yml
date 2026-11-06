@@ -70,5 +70,5 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view binaries >/dev/null 2>&1 || gh release create binaries --title binaries --notes "Prebuilt packages for forge install (signed)."
-          gh release upload binaries out/* --clobber
+          gh release view binaries -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 || gh release create binaries -R "$GITHUB_REPOSITORY" --title binaries --notes "Prebuilt packages for forge install (signed)."
+          gh release upload binaries -R "$GITHUB_REPOSITORY" out/* --clobber
