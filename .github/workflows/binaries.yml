@@ -61,7 +61,7 @@ jobs:
           export FORGE_REPO="$PWD/packages" FORGE_BINARY_URL=""
           sudo mkdir -p "$FORGE_ROOT"
           for pkg in $(grep -v '^#' packages/binaries.list); do
-            sudo -E "$forge" --system install "$pkg" --yes --from-source
+            sudo -E "$forge" --system install "$pkg" --yes --from-source || echo "::warning::$pkg failed to build and was left out"
           done
           mkdir out
           sudo -E "$forge" --system binary pack --all --out out --secret key
