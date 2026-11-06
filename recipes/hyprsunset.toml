@@ -1,3 +1,5 @@
+# Where systemd is present the build wants to install its user unit into /usr; it is kept inside the
+# package (lib/systemd/user) instead.
 [package]
 name = 'hyprsunset'
 repo = 'https://github.com/hyprwm/hyprsunset'
@@ -10,3 +12,8 @@ deps = ['hyprwayland-scanner']   # needed only while building
 tools = ['pkg-config']
 # Host libraries (Forge packages above provide their own).
 pkgconfig = ['wayland-client', 'wayland-protocols']
+
+[install]
+post = [
+  '[ ! -d "$FORGE_STAGE/usr/lib/systemd/user" ] || { mkdir -p "$FORGE_STAGE$FORGE_PREFIX/lib/systemd/user" && mv "$FORGE_STAGE"/usr/lib/systemd/user/* "$FORGE_STAGE$FORGE_PREFIX/lib/systemd/user/" && find "$FORGE_STAGE/usr" -type d -empty -delete; }',
+]

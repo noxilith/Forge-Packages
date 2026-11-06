@@ -56,6 +56,7 @@ struct Recipe {
     args: Vec<String>,
     args_sh: Vec<String>,
     steps: Vec<String>,
+    post: Vec<String>,
     targets: Vec<String>,
     note: String,
     run: Option<Run>,
@@ -96,6 +97,10 @@ impl Recipe {
     }
     fn steps(mut self, d: &[&str]) -> Self {
         self.steps = v(d);
+        self
+    }
+    fn post(mut self, d: &[&str]) -> Self {
+        self.post = v(d);
         self
     }
     fn targets(mut self, d: &[&str]) -> Self {
@@ -152,6 +157,11 @@ impl Recipe {
         }
         if !self.steps.is_empty() {
             o.push(format!("steps = {}", arr(&self.steps, true)));
+        }
+        if !self.post.is_empty() {
+            o.push(String::new());
+            o.push("[install]".into());
+            o.push(format!("post = {}", arr(&self.post, true)));
         }
         if let Some(run) = &self.run {
             o.push(String::new());
@@ -227,7 +237,7 @@ fn all() -> Vec<Recipe> {
         ]));
     r.push(recipe("utf8proc", &format!("{GH}JuliaStrings/utf8proc"), cm).rev("v2.12.0").note(found).args(&["-DBUILD_SHARED_LIBS=ON"]));
     r.push(recipe("libogg", &format!("{GH}xiph/ogg"), cm).rev("v1.3.6").note(found).args(&["-DBUILD_SHARED_LIBS=ON"]));
-    r.push(recipe("libvorbis", &format!("{GH}xiph/vorbis"), cm).rev("v1.3.7").note(found).deps(&["libogg"]).args(&["-DBUILD_SHARED_LIBS=ON"]));
+    r.push(recipe("libvorbis", &format!("{GH}xiph/vorbis"), cm).rev("v1.3.7").note(found).deps(&["libogg"]).args(&["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"]));
     r.push(recipe("libcanberra", &format!("{GH}Distrotech/libcanberra"), "custom").rev("edbf1733563f37c650d99fae1e826bf4a46ac3f7").deps(&["libvorbis"])
         .note(&format!("{found} (needed by Hyprland)\nSource: a GitHub mirror of the original, unmaintained upstream, pinned to the commit that ships a\ngenerated `configure`. Its build-aux helper scripts are symlinks to a path that only exists on the\nauthor's machine; any that dangle are replaced from libtool's copies. GTK/PulseAudio/ALSA backends\nare turned off, as Hyprland only needs the library."))
         .tools(&["pkg-config"])
@@ -275,12 +285,14 @@ fn all() -> Vec<Recipe> {
         .tools(&["pkg-config"]).pkgconfig(&["wayland-client", "wayland-protocols"]).run(spawner("hypridle", "config/hypr/hypridle.conf", "--config")));
     r.push(recipe("hyprlock", &h("hyprlock"), cm).rev("v0.9.7").deps(&["hyprlang", "hyprutils", "hyprgraphics", "hyprland-protocols", "sdbus-cpp"])
         .build_deps(&scanner)
-        .note("Screen locker. Authenticates through the machine's PAM, so the system needs a PAM service\nfile for it (`/etc/pam.d/hyprlock`); Forge never writes outside its own directories.")
-        .tools(&["pkg-config"]).pkgconfig(&["wayland-client", "wayland-protocols", "wayland-egl", "egl", "xkbcommon", "cairo", "pangocairo", "libdrm", "gbm", "pam"]));
+        .note("Screen locker. Authenticates through the machine's PAM, so the system needs a PAM service\nfile for it (`/etc/pam.d/hyprlock`); Forge never writes outside its own directories. A copy to use\nis shipped in the package, at etc/pam.d/hyprlock.")
+        .tools(&["pkg-config"]).pkgconfig(&["wayland-client", "wayland-protocols", "wayland-egl", "egl", "xkbcommon", "cairo", "pangocairo", "libdrm", "gbm", "pam"]).args(&["-DCMAKE_INSTALL_SYSCONFDIR=etc"]));
     r.push(recipe("hyprpaper", &h("hyprpaper"), cm).rev("v0.8.5").deps(&["hyprlang", "hyprutils", "hyprtoolkit", "hyprwire"]).build_deps(&scanner)
         .tools(&["pkg-config"]).pkgconfig(&["wayland-client", "pixman-1", "libdrm"]));
     r.push(recipe("hyprsunset", &h("hyprsunset"), cm).rev("v0.4.0").deps(&["hyprutils", "hyprlang", "hyprland-protocols"]).build_deps(&scanner)
-        .tools(&["pkg-config"]).pkgconfig(&["wayland-client", "wayland-protocols"]));
+        .note("Where systemd is present the build wants to install its user unit into /usr; it is kept inside the\npackage (lib/systemd/user) instead.")
+        .tools(&["pkg-config"]).pkgconfig(&["wayland-client", "wayland-protocols"])
+        .post(&[r#"[ ! -d "$FORGE_STAGE/usr/lib/systemd/user" ] || { mkdir -p "$FORGE_STAGE$FORGE_PREFIX/lib/systemd/user" && mv "$FORGE_STAGE"/usr/lib/systemd/user/* "$FORGE_STAGE$FORGE_PREFIX/lib/systemd/user/" && find "$FORGE_STAGE/usr" -type d -empty -delete; }"#]));
     r.push(recipe("hyprpicker", &h("hyprpicker"), cm).rev("v0.4.8").deps(&["hyprutils"]).build_deps(&scanner).tools(&["pkg-config"])
         .pkgconfig(&["wayland-client", "wayland-protocols", "xkbcommon", "cairo", "pango", "pangocairo", "libjpeg"]));
     r.push(recipe("xdg-desktop-portal-hyprland", &h("xdg-desktop-portal-hyprland"), cm).rev("v1.5.0")

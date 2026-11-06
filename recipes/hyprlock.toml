@@ -1,5 +1,6 @@
 # Screen locker. Authenticates through the machine's PAM, so the system needs a PAM service
-# file for it (`/etc/pam.d/hyprlock`); Forge never writes outside its own directories.
+# file for it (`/etc/pam.d/hyprlock`); Forge never writes outside its own directories. A copy to use
+# is shipped in the package, at etc/pam.d/hyprlock.
 [package]
 name = 'hyprlock'
 repo = 'https://github.com/hyprwm/hyprlock'
@@ -23,3 +24,4 @@ pkgconfig = [
   'gbm',
   'pam',
 ]
+configure_args = ['-DCMAKE_INSTALL_SYSCONFDIR=etc']
