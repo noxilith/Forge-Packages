@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wmenu'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wmenu"
+version = "0.2.0"
+archive = "https://codeberg.org/adnano/wmenu/archive/0.2.0.tar.gz"
+sha256 = "b1b593a80310085a90bd349d458ffbcfacf875d74468ae4428bdf5692a671ef9"
+strip_components = 1
+description = "Dmenu for wayland"
+homepage = "https://codeberg.org/adnano/wmenu"
+license = "MIT"
+deps = ["libxkbcommon", "pango", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

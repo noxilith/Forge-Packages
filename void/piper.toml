@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'piper'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-evdev, python3-lxml
+[package]
+name = "piper"
+version = "0.8"
+archive = "https://github.com/libratbag/piper/archive/0.8.tar.gz"
+sha256 = "78becb1861f102057f7cac26c90bde2f4ef5027680c0d2758a7c2700b51dd73d"
+strip_components = 1
+description = "GTK application to configure gaming mice"
+homepage = "https://github.com/libratbag/piper"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libratbag", "python3-cairo", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk4"]

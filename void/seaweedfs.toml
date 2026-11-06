@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'seaweedfs'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "seaweedfs"
+version = "4.48"
+archive = "https://github.com/seaweedfs/seaweedfs/archive/4.48.tar.gz"
+sha256 = "93199495e93a981451d1fefecb5aa71e12aa1692093eed2338bbfe7f08960bfb"
+strip_components = 1
+description = "Simple and highly scalable distributed file system"
+homepage = "https://github.com/seaweedfs/seaweedfs"
+license = "Apache-2.0"
+
+[build]
+system = "go"

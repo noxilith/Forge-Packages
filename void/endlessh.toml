@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'endlessh'. Review before relying on it.
+[package]
+name = "endlessh"
+version = "1.1"
+archive = "https://github.com/skeeto/endlessh/archive/1.1.tar.gz"
+sha256 = "786cea9e2c8e0a37d3d4ecd984ca4a0ae0b2d6e2b8da37e3cdbb9d49ccdecbf0"
+strip_components = 1
+description = "SSH tarpit that slowly sends an endless banner"
+homepage = "https://github.com/skeeto/endlessh"
+license = "Unlicense"
+
+[build]
+system = "make"

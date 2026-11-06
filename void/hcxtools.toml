@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'hcxtools'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "hcxtools"
+version = "6.2.0"
+archive = "https://github.com/ZerBea/hcxtools/archive/6.2.0.tar.gz"
+sha256 = "34435b08385ee23dbc1054e92e5b1a1637b352aa73fed301ef94b4b40a6165a1"
+strip_components = 1
+description = "Portable solution for conversion of cap/pcap/pcapng WiFi dump files"
+homepage = "https://github.com/ZerBea/hcxtools/"
+license = "MIT"
+deps = ["curl", "openssl", "zlib"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

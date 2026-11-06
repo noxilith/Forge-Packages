@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libppd'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: cups, ghostscript, mupdf
+[package]
+name = "libppd"
+version = "2.1.1"
+archive = "https://github.com/OpenPrinting/libppd/releases/download/2.1.1/libppd-2.1.1.tar.xz"
+sha256 = "3fa341cc03964046d2bf6b161d80c1b4b2e20609f38d860bcaa11cb70c1285e4"
+strip_components = 1
+description = "OpenPrinting legacy support library for PPD files"
+homepage = "https://github.com/OpenPrinting/libppd"
+license = "Apache-2.0 WITH custom:GPL2-LGPL2-Exception"
+deps = ["libcupsfilters"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["poppler"]

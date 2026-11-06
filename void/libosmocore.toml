@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libosmocore'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: talloc
+[package]
+name = "libosmocore"
+version = "1.2.0"
+archive = "https://github.com/osmocom/libosmocore/archive/1.2.0.tar.gz"
+sha256 = "74b8e0edb2a97eb3665f4004ed7b5c6a42c2e3f5fe29dcd5d474e7c4d1d11888"
+strip_components = 1
+description = "Core libs for osmocom"
+homepage = "https://bb.osmocom.org/trac/wiki/libosmocore"
+license = "GPL-2.0-or-later"
+deps = ["gnutls", "pcsclite"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

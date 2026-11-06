@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tcltls'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: tcl
+[package]
+name = "tcltls"
+version = "1.7.22"
+archive = "https://core.tcl-lang.org/tcltls/uv/tcltls-1.7.22.tar.gz"
+sha256 = "e84e2b7a275ec82c4aaa9d1b1f9786dbe4358c815e917539ffe7f667ff4bc3b4"
+strip_components = 1
+description = "Binding to OpenSSL toolkit"
+homepage = "https://core.tcl-lang.org/tcltls"
+license = "TCL"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

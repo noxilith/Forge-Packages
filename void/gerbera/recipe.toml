@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gerbera'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: ffmpeg6, sqlite, util-linux-common
+[package]
+name = "gerbera"
+version = "2.5.0"
+archive = "https://github.com/gerbera/gerbera/archive/v2.5.0.tar.gz"
+sha256 = "e1dd2c710758fbb9f4db6f1afc461bdd1b6c55ef29147d450ab6d90624177f09"
+strip_components = 1
+description = "UPnP Media Server based on MediaTomb"
+homepage = "http://gerbera.io/"
+license = "GPL-2.0-only"
+deps = ["curl", "duktape", "exiv2", "expat", "file", "fmt", "libebml", "libexif", "libmatroska", "libnpupnp", "pugixml", "spdlog", "taglib"]
+patches = ["patches/fmt-12.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_SYSTEMD=OFF", "-DWITH_AVCODEC=ON", "-DWITH_NPUPNP=ON"]
+tools = ["pkg-config"]

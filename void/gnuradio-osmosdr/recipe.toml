@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnuradio-osmosdr'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: boost, python3-pybind11
+[package]
+name = "gnuradio-osmosdr"
+version = "0.2.4"
+archive = "https://github.com/osmocom/gr-osmosdr/archive/v0.2.4.tar.gz"
+sha256 = "28b6f2768aee7b397b227e9e70822e28de3b4c5362a5d14646a0948a48094a63"
+strip_components = 1
+description = "GNU Radio source block for rtlsdr, hackrf and airspy"
+homepage = "https://osmocom.org/projects/gr-osmosdr/wiki/GrOsmoSDR"
+license = "GPL-3.0-or-later"
+deps = ["SoapySDR", "airspy", "gnuradio", "hackrf", "librtlsdr"]
+patches = ["patches/boost-1.89.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

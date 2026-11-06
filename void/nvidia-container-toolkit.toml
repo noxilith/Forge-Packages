@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nvidia-container-toolkit'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+# needs, but Forge has no recipe for yet: libnvidia-container
+[package]
+name = "nvidia-container-toolkit"
+version = "1.17.5"
+archive = "https://github.com/NVIDIA/nvidia-container-toolkit/archive/v1.17.5.tar.gz"
+sha256 = "4e10f5248f4d7d0934b21bbde531379ff3b5940b5a3f753652f1590d8282791e"
+strip_components = 1
+description = "Build and run containers leveraging NVIDIA GPUs"
+homepage = "https://github.com/NVIDIA/nvidia-container-toolkit/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

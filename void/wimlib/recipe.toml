@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wimlib'. Review before relying on it.
+[package]
+name = "wimlib"
+version = "1.14.5"
+archive = "https://wimlib.net//downloads/wimlib-1.14.5.tar.gz"
+sha256 = "84221a3abd5b91228f15f8e6065c335a336237b5738197b75bf419eea561a194"
+strip_components = 1
+description = "Create, extract, and modify Windows Imaging archives"
+homepage = "https://wimlib.net/"
+license = "GPL-3.0-or-later"
+deps = ["fuse3", "libxml2", "ntfs-3g"]
+patches = ["patches/musl-fs.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

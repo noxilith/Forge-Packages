@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'nrpe'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, build_helper, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: monitoring-plugins
+[package]
+name = "nrpe"
+version = "4.1.0"
+archive = "https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-4.1.0/nrpe-4.1.0.tar.gz"
+sha256 = "a1f14aa8aaf935b576cc55ab5d77b7cb9c920d7702aff44c9d18c4c841ef8ecc"
+strip_components = 1
+description = "Nagios Remote Plugin Executor"
+homepage = "https://github.com/NagiosEnterprises/nrpe"
+license = "GPL-2.0-or-later"
+deps = ["openssl"]
+patches = ["patches/reproducible.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-nagios-user=_nagios", "--with-nagios-group=_nagios", "--with-nrpe-user=_nagios", "--with-nrpe-group=_nagios", "--with-opsys=linux", "--with-init-type=unknown", "--with-dist-type=void", "--with-inetd-type=unknown"]

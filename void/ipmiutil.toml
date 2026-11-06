@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ipmiutil'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "ipmiutil"
+version = "3.1.8"
+archive = "https://downloads.sourceforge.net/sourceforge/project/ipmiutil/ipmiutil-3.1.8.tar.gz"
+sha256 = "b14357b9723e38a19c24df2771cff63d5f15f8682cd8a5b47235044b767b1888"
+strip_components = 1
+description = "Series of utilities that perform common IPMI management functions"
+homepage = "http://ipmiutil.sourceforge.net"
+license = "BSD-2-Clause, BSD-3-Clause"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-systemd"]

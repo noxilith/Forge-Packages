@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mesa-libclc'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "mesa-libclc"
+version = "22.1.8.3"
+archive = "https://gitlab.freedesktop.org/karolherbst/mesa-libclc/-/archive/22.1.8.3/mesa-libclc-22.1.8.3.tar.gz"
+sha256 = "d6fc17db2c4ae20ecfe04060af0572b2ab3701bb13822dab93efcaca0675205e"
+strip_components = 1
+description = "Fork of LLVM's libclc applying some fixes of a known good state"
+homepage = "https://gitlab.freedesktop.org/karolherbst/mesa-libclc"
+license = "Apache-2.0 AND NCSA"
+deps = ["llvm22"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["SPIRV-LLVM-Translator22"]

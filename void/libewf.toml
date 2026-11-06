@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libewf'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, util-linux-common
+[package]
+name = "libewf"
+version = "20260924"
+archive = "https://github.com/libyal/libewf/releases/download/20260924/libewf-experimental-20260924.tar.gz"
+sha256 = "e2da4fdb8999b855948863d1bcb11e9427af959e789093491ed94dca397905b5"
+strip_components = 1
+description = "Libewf and tooling to access the Expert Witness Compression Format"
+homepage = "https://github.com/libyal/libewf"
+license = "LGPL-3.0-or-later"
+deps = ["fuse", "openssl", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["flex", "pkg-config"]
+deps = ["byacc", "gettext"]

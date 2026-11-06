@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cldr-emoji-annotation'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cldr-emoji-annotation"
+version = "36.12.120191002.0"
+archive = "https://github.com/fujiwarat/cldr-emoji-annotation/releases/download/36.12.120191002_0/cldr-emoji-annotation-36.12.120191002_0.tar.gz"
+sha256 = "fdd6e2c8665a124242e1a9df67c58f2ad2a5b1e6a4807aa0cfe92dcda8044cc8"
+strip_components = 1
+description = "Emoji annotation files in CLDR"
+homepage = "https://github.com/fujiwarat/cldr-emoji-annotation/"
+license = "Unicode-DFS-2016"
+
+[build]
+system = "autotools"

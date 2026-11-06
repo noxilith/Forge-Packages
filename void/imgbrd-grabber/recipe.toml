@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'imgbrd-grabber'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "imgbrd-grabber"
+version = "7.1.1"
+archive = "https://github.com/Bionus/imgbrd-grabber/archive/v7.1.1.tar.gz"
+sha256 = "4ecb247f92fb4ba7c3245439bcd221e8c64dd037c1761065a663adb6b4571740"
+strip_components = 1
+description = "Powerful imageboard/booru downloader"
+homepage = "https://bionus.github.io/imgbrd-grabber"
+license = "Apache-2.0"
+patches = ["patches/QPainterPath.patch"]
+
+[build]
+system = "cmake"
+deps = ["nodejs"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'setzer'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebkit2gtk41, python3-bibtexparser, python3-pexpect
+[package]
+name = "setzer"
+version = "65"
+archive = "https://github.com/cvfosammmm/setzer/archive/v65.tar.gz"
+sha256 = "68fda13b921afa7d4e45d97c36d6c1ffa7cf9f4c19717f3499341795e195d9a9"
+strip_components = 1
+description = "Simple yet full-featured LaTeX editor written in Python with Gtk"
+homepage = "https://github.com/cvfosammmm/setzer"
+license = "GPL-3.0-or-later"
+deps = ["gspell", "gtksourceview5", "libhandy1", "poppler", "python3-gobject"]
+
+[build]
+system = "meson"
+deps = ["gettext"]

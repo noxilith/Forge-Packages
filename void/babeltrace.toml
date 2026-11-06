@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'babeltrace'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "babeltrace"
+version = "1.5.8"
+archive = "https://www.efficios.com/files/babeltrace/babeltrace-1.5.8.tar.bz2"
+sha256 = "9ff143e4d1d7f1902b05542ac8f1747fb2d7e0ca31c6fa39ccae5765e11d6fc2"
+strip_components = 1
+description = "Open source trace format converter"
+homepage = "http://diamon.org/babeltrace"
+license = "MIT, GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["elfutils", "glib", "popt"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

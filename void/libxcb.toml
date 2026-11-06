@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libxcb'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libxcb"
+version = "1.17.0"
+archive = "https://xorg.freedesktop.org/archive/individual/lib/libxcb-1.17.0.tar.xz"
+sha256 = "599ebf9996710fea71622e6e184f3a8ad5b43d0e5fa8c4e407123c88a59a6d55"
+strip_components = 1
+description = "X protocol C-language Binding"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb"
+license = "MIT"
+deps = ["libXau", "libXdmcp"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-build-docs", "--enable-xinput", "--enable-xkb"]
+tools = ["pkg-config"]
+deps = ["xcb-proto", "xorg-util-macros"]

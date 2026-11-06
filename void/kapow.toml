@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kapow'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kapow"
+version = "1.7.1"
+archive = "https://gottcode.org/kapow/kapow-1.7.1.tar.bz2"
+sha256 = "10609c452b70e7317a27c02172fabee6ee941a7e23a8cc7e0d3daa5b0dfb1733"
+strip_components = 1
+description = "Simple punch-clock style time tracker"
+homepage = "https://gottcode.org/kapow/"
+license = "GPL-3.0-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["gettext"]

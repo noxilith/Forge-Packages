@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'vinegar'. Review before relying on it.
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: wine
+[package]
+name = "vinegar"
+version = "1.9.4"
+archive = "https://github.com/vinegarhq/vinegar/archive/v1.9.4.tar.gz"
+sha256 = "4e0b6d102f2ae49eed61f5735e719eb35ffecf0abb08f710dcbc14eb337f316f"
+strip_components = 1
+description = "Run Roblox Studio on Linux"
+homepage = "https://vinegarhq.org"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "libadwaita"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["gettext"]

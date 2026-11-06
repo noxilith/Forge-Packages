@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'minicom'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "minicom"
+version = "2.11.1"
+archive = "https://ftp.debian.org/debian/pool/main/m/minicom/minicom_2.11.1.orig.tar.bz2"
+sha256 = "87cf0da91af0531357cd61b8e1906b907edd2c9ef82f9ae74c277e1893d0f98c"
+strip_components = 1
+description = "Menu driven communications program"
+homepage = "https://tracker.debian.org/pkg/minicom"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

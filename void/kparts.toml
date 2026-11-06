@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kparts'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kparts"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kparts-5.116.0.tar.xz"
+sha256 = "193b2a2d0725ca0ec9a622357308fdd74217e16169a0bf680dd2765620a6f933"
+strip_components = 1
+description = "KDE Plugin framework for user interface components"
+homepage = "https://invent.kde.org/frameworks/kparts"
+license = "LGPL-2.1-or-later"
+deps = ["kio"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

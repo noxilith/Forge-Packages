@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rust-cargo-bloat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rust-cargo-bloat"
+version = "0.12.1"
+archive = "https://static.crates.io/crates/cargo-bloat/cargo-bloat-0.12.1.crate"
+sha256 = "56e2c483ab55e38021c2c701061e078cc6c28d563932cbdf6bc4efaa28ab117e"
+strip_components = 1
+description = "Find out what takes most of the space in your executable"
+homepage = "https://crates.io/crates/cargo-bloat"
+license = "MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'shotwell'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libwebkit2gtk41, libwebp
+[package]
+name = "shotwell"
+version = "0.32.13"
+archive = "https://download.gnome.org/sources/shotwell/0.32/shotwell-0.32.13.tar.xz"
+sha256 = "bdd3e84f602e2fc7eb42843c90a25eb3aa49fb2ffb75edb51db01bd2905dbd1e"
+strip_components = 1
+description = "Open source photo manager for GNOME"
+homepage = "https://wiki.gnome.org/Apps/Shotwell"
+license = "LGPL-2.1-or-later, CC-BY-SA-3.0"
+deps = ["desktop-file-utils", "gst-plugins-base1", "libchamplain", "libgee", "libgexiv2", "libgphoto2", "libgudev", "libportal", "libraw", "libsecret", "libsoup3", "rest", "vala"]
+patches = ["patches/fix-unused-method.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gcr", "gettext", "glib"]

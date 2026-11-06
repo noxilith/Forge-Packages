@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'valabind'. Review before relying on it.
+[package]
+name = "valabind"
+version = "1.8.0"
+archive = "https://github.com/radare/valabind/archive/1.8.0.tar.gz"
+sha256 = "3eba8c36c923eda932a95b8d0c16b7b30e8cdda442252431990436519cf87cdd"
+strip_components = 1
+description = "Tool to transform vala source files to swig, GIR or GEAR"
+homepage = "https://radare.org/r/"
+license = "GPL-3.0-or-later"
+deps = ["glib", "vala"]
+patches = ["patches/0002-vala-0.50-fix.patch", "patches/cross.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

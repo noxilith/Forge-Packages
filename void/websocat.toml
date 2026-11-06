@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'websocat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "websocat"
+version = "1.14.1"
+archive = "https://github.com/vi/websocat/archive/refs/tags/v1.14.1.tar.gz"
+sha256 = "5c976c535800ca635b72839fe49d0fe4ad2479db8744c5a00f0cf911e4832e2d"
+strip_components = 1
+description = "Netcat, curl and socat for WebSockets"
+homepage = "https://github.com/vi/websocat"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

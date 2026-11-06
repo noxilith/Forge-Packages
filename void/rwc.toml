@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'rwc'. Review before relying on it.
+[package]
+name = "rwc"
+version = "0.3"
+archive = "https://github.com/leahneukirchen/rwc/archive/v0.3.tar.gz"
+sha256 = "5a6561a3039e00f3e6da27c46e7961a9d1abf3a96b60b27437b7a5c8c5bef700"
+strip_components = 1
+description = "Report when files change"
+homepage = "https://github.com/leahneukirchen/rwc"
+license = "CC0-1.0"
+
+[build]
+system = "make"

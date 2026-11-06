@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'xf86-video-intel'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, LDFLAGS, lib32disabled
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "xf86-video-intel"
+version = "2.99.917.20210115"
+archive = "https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel/-/archive/master/xf86-video-intel-31486f40f8e8f8923ca0799aea84b58799754564.tar.gz"
+sha256 = "177b91518159088051b8298417e9e963cc955d1ce927bea5df17a778533fae3a"
+strip_components = 1
+description = "Xorg DDX Intel video driver"
+homepage = "https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel/"
+license = "MIT"
+deps = ["libXScrnSaver", "libXcursor", "libXinerama", "libXrandr", "libXvMC", "xorg-server"]
+patches = ["patches/O_CLOEXEC.patch", "patches/gcc-8.2.0-force_inline.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-default-dri=3"]
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

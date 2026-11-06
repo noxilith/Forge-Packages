@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kdialog'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kdialog"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kdialog-26.08.1.tar.xz"
+sha256 = "e7142c812d2b4b202abd12bea054f8368fdba9bb0552a9f46d3a7d7283339c72"
+strip_components = 1
+description = "Utility for displaying dialog boxes from shell scripts"
+homepage = "https://invent.kde.org/utilities/kdialog"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kdbusaddons", "kf6-kguiaddons", "kf6-kiconthemes", "kf6-kio", "kf6-knotifications", "kf6-ktextwidgets", "kf6-kwindowsystem", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons"]

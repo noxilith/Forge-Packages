@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'eid-mw'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: pcsc-tools
+[package]
+name = "eid-mw"
+version = "5.1.31"
+archive = "https://dist.eid.belgium.be/continuous/sources/eid-mw-5.1.31-v5.1.31.tar.gz"
+sha256 = "17911fffe23d52d98ec7cce3d51eef8750bf1f7c92e096a4f34e27f6a635d1e8"
+strip_components = 1
+description = "Middleware for Belgian eID"
+homepage = "https://eid.belgium.be/en"
+license = "LGPL-3.0-or-later"
+deps = ["curl", "gtk+3", "libassuan", "libproxy", "openssl", "pcsc-acsccid", "pcsc-ccid", "pcsclite", "pinentry"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["autoconf-archive", "gdk-pixbuf", "gettext", "glib"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jo'. Review before relying on it.
+[package]
+name = "jo"
+version = "1.9"
+archive = "https://github.com/jpmens/jo/archive/refs/tags/1.9.tar.gz"
+sha256 = "87b3e40584730d6f8b8cdb9deb1700173d25dc54403fcb17d2c1d9def2ba8102"
+strip_components = 1
+description = "Small utility to create JSON objects"
+homepage = "https://github.com/jpmens/jo"
+license = "GPL-2.0-or-later"
+deps = ["bash-completion"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

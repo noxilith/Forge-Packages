@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ykclient'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "ykclient"
+version = "2.15"
+archive = "https://developers.yubico.com/yubico-c-client/Releases/ykclient-2.15.tar.gz"
+sha256 = "f461cdefe7955d58bbd09d0eb7a15b36cb3576b88adbd68008f40ea978ea5016"
+strip_components = 1
+description = "Yubico YubiKey OTP C client and library"
+homepage = "https://developers.yubico.com/yubico-c-client"
+license = "BSD-2-Clause"
+deps = ["curl"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-silent-rules"]
+tools = ["pkg-config"]

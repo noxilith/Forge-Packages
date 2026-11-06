@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fcitx5-m17n'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: doxygen, fcitx5, m17n-db
+[package]
+name = "fcitx5-m17n"
+version = "5.1.6"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-m17n/fcitx5-m17n-5.1.6.tar.zst"
+sha256 = "de94d87a2c98e983d3e3f2d2dea9cdef0f24f1161beca8a83fef741e5f2fbecf"
+strip_components = 1
+description = "Fcitx v5 - m17n engine"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "LGPL-2.1-or-later"
+deps = ["fmt", "m17n-lib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gtk-theme-config'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "gtk-theme-config"
+version = "1.0"
+archive = "https://github.com/satya164/gtk-theme-config/archive/v1.0.tar.gz"
+sha256 = "174aac3ea43966168d120dbd9e0f23d7900d095ee1b0cf32472d59b0fdea8448"
+strip_components = 1
+description = "Utility to set GTK Theme Preferences"
+homepage = "https://github.com/satya164/gtk-theme-config"
+license = "GPL-3.0-only"
+deps = ["desktop-file-utils", "glib", "gtk+3", "vala"]
+patches = ["patches/no_cc_for_vala.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

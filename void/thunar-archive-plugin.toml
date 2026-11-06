@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'thunar-archive-plugin'. Review before relying on it.
+[package]
+name = "thunar-archive-plugin"
+version = "0.6.0"
+archive = "https://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0.6/thunar-archive-plugin-0.6.0.tar.xz"
+sha256 = "692708cd047c7a552f2f85fe2ee32f19c7d5be5bf695d0288e8cadf50289db06"
+strip_components = 1
+description = "Create and extract archives in Thunar"
+homepage = "https://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin"
+license = "GPL-2.0-or-later"
+deps = ["Thunar", "exo"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

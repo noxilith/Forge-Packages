@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'glade3'. Review before relying on it.
+# settings not translated: build_helper, lib32disabled
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libwebkit2gtk41
+[package]
+name = "glade3"
+version = "3.40.0"
+archive = "https://download.gnome.org/sources/glade/3.40/glade-3.40.0.tar.xz"
+sha256 = "31c9adaea849972ab9517b564e19ac19977ca97758b109edc3167008f53e3d9c"
+strip_components = 1
+description = "User Interface Designer for GTK+3"
+homepage = "http://glade.gnome.org/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["desktop-file-utils", "gjs", "gtk+3", "python3-gobject"]
+patches = ["patches/meson.build.patch", "patches/webkit2gtk41.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgtk_doc=true", "-Dman=true", "-Dintrospection=true", "-Dwebkit2gtk=enabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc", "yelp-tools"]

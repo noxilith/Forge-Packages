@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'openra'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: make_build_args, make_install_args, make_install_target
+# needs, but Forge has no recipe for yet: lua51, msbuild-bin, unzip
+[package]
+name = "openra"
+version = "20250330"
+archive = "https://github.com/OpenRA/OpenRA/archive/release-20250330.tar.gz"
+sha256 = "e29fac3018bf1676fe300ce6e2e2232115cf5cf2ccdb4cf2bebc83e00c3556a4"
+strip_components = 1
+description = "Open-source implementation of the Red Alert engine"
+homepage = "http://www.openra.net"
+license = "GPL-3.0-or-later"
+deps = ["SDL2", "freetype", "libgdiplus", "libopenal", "mono", "xdg-utils", "zenity"]
+
+[build]
+system = "make"
+deps = ["curl"]

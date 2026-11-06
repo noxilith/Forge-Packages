@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libepoxy'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "libepoxy"
+version = "1.5.10"
+archive = "https://github.com/anholt/libepoxy/archive/1.5.10.tar.gz"
+sha256 = "a7ced37f4102b745ac86d6a70a9da399cc139ff168ba6b8002b4d8d43c900c15"
+strip_components = 1
+description = "Library for handling OpenGL function pointer management for you"
+homepage = "https://github.com/anholt/libepoxy"
+license = "MIT"
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

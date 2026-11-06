@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'doasedit'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "doasedit"
+version = "1.0.9"
+archive = "https://codeberg.org/TotallyLeGIT/doasedit/archive/1.0.9.tar.gz"
+sha256 = "bb02ab7a86b44f9128f6216946c8d21b41a1a4cc9acc06055d4774105a2239ee"
+strip_components = 1
+description = "Doas wrapper to edit files with an unprivileged editor"
+homepage = "https://codeberg.org/TotallyLeGIT/doasedit"
+license = "MIT"
+deps = ["opendoas"]
+
+[build]
+system = "make"

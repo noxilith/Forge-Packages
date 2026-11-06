@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'davfs2'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, conf_files
+[package]
+name = "davfs2"
+version = "1.6.1"
+archive = "https://download.savannah.nongnu.org/releases/davfs2/davfs2-1.6.1.tar.gz"
+sha256 = "ce3eb948ece582a51c934ccb0cc70e659839172717caff173f69a5e2af90c5c0"
+strip_components = 1
+description = "File system driver that allows you to mount a WebDAV folder"
+homepage = "https://savannah.nongnu.org/projects/davfs2"
+license = "GPL-3.0-or-later"
+deps = ["neon"]
+patches = ["patches/010-main_code_fix.patch", "patches/100-musl-compat.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["dav_user=nobody", "dav_group=network", "--enable-largefile"]
+deps = ["gettext", "tar"]

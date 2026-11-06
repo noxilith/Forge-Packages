@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'keymapper'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "keymapper"
+version = "5.8.1"
+archive = "https://github.com/houmain/keymapper/archive/refs/tags/5.8.1.tar.gz"
+sha256 = "5b8851c67945803648d5b7392e1a954abb52de50b42013c46e2d44cb973116e4"
+strip_components = 1
+description = "Cross-platform context-aware key remapper"
+homepage = "https://github.com/houmain/keymapper"
+license = "GPL-3.0-only"
+deps = ["dbus", "eudev", "libX11", "libayatana-appindicator", "libusb", "libxkbcommon", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DVERSION=5.8.1"]
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wlr-randr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wlr-randr"
+version = "0.5.0"
+archive = "https://gitlab.freedesktop.org/emersion/wlr-randr/-/archive/v0.5.0/wlr-randr-v{version}.tar.gz"
+sha256 = "01aeaf1aef220486bee0fcb0d5a5658af91ae52440f10ce44b64bd8cfe477abf"
+strip_components = 1
+description = "Wayland clone of xrandr for wlroots compositors"
+homepage = "https://gitlab.freedesktop.org/emersion/wlr-randr"
+license = "MIT"
+deps = ["wayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

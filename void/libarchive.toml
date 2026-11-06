@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libarchive'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "libarchive"
+version = "3.8.11"
+archive = "https://github.com/libarchive/libarchive/releases/download/v3.8.11/libarchive-3.8.11.tar.xz"
+sha256 = "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2"
+strip_components = 1
+description = "Library to read/write several different streaming archive formats"
+homepage = "https://www.libarchive.org/"
+license = "BSD-2-Clause"
+deps = ["acl", "lz4", "lzo", "openssl", "xz", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-acl", "--enable-xattr", "--enable-lzo2", "--enable-lz4", "--enable-openssl", "--enable-zstd", "--without-xml2", "--without-libb2", "--without-nettle", "--disable-rpath"]
+tools = ["pkg-config"]

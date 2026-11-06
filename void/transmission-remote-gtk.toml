@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'transmission-remote-gtk'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-docutils
+[package]
+name = "transmission-remote-gtk"
+version = "1.7.1"
+archive = "https://github.com/transmission-remote-gtk/transmission-remote-gtk/releases/download/1.7.1/transmission-remote-gtk-1.7.1.tar.xz"
+sha256 = "5ef98bd96b3b77eb3880474a2d904e316bb29cbd22dfa0ca85d43b04a28fba34"
+strip_components = 1
+description = "GTK client for remote management of the Transmission BitTorrent client"
+homepage = "https://github.com/transmission-remote-gtk/transmission-remote-gtk"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "json-glib", "libayatana-appindicator", "libsoup3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["AppStream", "desktop-file-utils", "gettext"]

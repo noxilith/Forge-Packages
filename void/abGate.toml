@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'abGate'. Review before relying on it.
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "abGate"
+version = "1.2.0"
+archive = "https://github.com/antanasbruzas/abGate/archive/v1.2.0.tar.gz"
+sha256 = "ebee1cc545b088bf6e5989c114e7e34fa9f21ac7fdb1eee3fd067bcf98703b86"
+strip_components = 1
+description = "LV2 Noise Gate plugin"
+homepage = "http://abgate.sourceforge.net/"
+license = "LGPL-3.0-or-later"
+deps = ["gtkmm2", "lv2"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

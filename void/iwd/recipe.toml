@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'iwd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: libreadline8, python3-docutils
+[package]
+name = "iwd"
+version = "3.12"
+archive = "https://www.kernel.org/pub/linux/network/wireless/iwd-3.12.tar.xz"
+sha256 = "d89a5e45c7180170e19be828f9e944a768c593758094fc57a358d0e7c4cb1a49"
+strip_components = 1
+description = "Internet Wireless Daemon by Intel that aims to replace wpa_supplicant"
+homepage = "https://iwd.wiki.kernel.org/"
+license = "LGPL-2.1-or-later"
+deps = ["dbus", "openresolv"]
+patches = ["patches/fix-name-request.patch", "patches/musl.patch", "patches/resolvconf-default.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-systemd-service", "--enable-pie", "--enable-dbus-policy", "--enable-wired"]
+tools = ["pkg-config"]

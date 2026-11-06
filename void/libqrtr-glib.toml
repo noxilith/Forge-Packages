@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libqrtr-glib'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libqrtr-glib"
+version = "1.2.2"
+archive = "https://gitlab.freedesktop.org/mobile-broadband/libqrtr-glib/-/archive/1.2.2/libqrtr-glib-1.2.2.tar.gz"
+sha256 = "c5cdf5ea91cbd2cf2758b2896064c7b1dfe7156063267df905f957ac69b6b763"
+strip_components = 1
+description = "Qualcomm IPC Router protocol helper library"
+homepage = "https://gitlab.freedesktop.org/mobile-broadband/libqrtr-glib"
+license = "LGPL-2.1-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gtk-doc"]

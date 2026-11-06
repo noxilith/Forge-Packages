@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'yaml-cpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "yaml-cpp"
+version = "0.8.0"
+archive = "https://github.com/jbeder/yaml-cpp/archive/refs/tags/0.8.0.tar.gz"
+sha256 = "fbe74bbdcee21d656715688706da3c8becfd946d92cd44705cc6098bb23b3a16"
+strip_components = 1
+description = "YAML parser and emitter in C++"
+homepage = "https://github.com/jbeder/yaml-cpp"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DYAML_BUILD_SHARED_LIBS=ON", "-DYAML_CPP_BUILD_TOOLS=OFF", "-DYAML_CPP_BUILD_TESTS=OFF", "-DCMAKE_INSTALL_DATADIR=lib"]

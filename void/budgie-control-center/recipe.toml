@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'budgie-control-center'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cracklib, cups, gnome-settings-daemon, hicolor-icon-theme, mit-krb5, samba, sound-theme-freedesktop
+[package]
+name = "budgie-control-center"
+version = "1.4.0"
+archive = "https://github.com/BuddiesOfBudgie/budgie-control-center/releases/download/v1.4.0/budgie-control-center-1.4.0.tar.xz"
+sha256 = "120d760b6c1190e937cc7f3b3c50227682960123ff0bccfe3ff4902785550d82"
+strip_components = 1
+description = "Budgie Control Center"
+homepage = "https://github.com/BuddiesOfBudgie/budgie-control-center"
+license = "GPL-2.0-or-later"
+deps = ["ModemManager", "NetworkManager", "accountsservice", "cheese", "colord", "colord-gtk", "cups-pk-helper", "desktop-file-utils", "gcr", "gdk-pixbuf", "glib", "gnome-bluetooth1", "gnome-desktop", "gnutls", "gsettings-desktop-schemas", "gsound", "gtk+3", "ibus", "iso-codes", "libX11", "libXi", "libepoxy", "libgtop", "libgudev", "libhandy1", "libnma", "libpwquality", "libsecret", "libwacom", "libxml2", "polkit", "pulseaudio", "udisks2", "upower"]
+patches = ["patches/gcc14.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

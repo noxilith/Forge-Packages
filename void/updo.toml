@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'updo'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "updo"
+version = "0.4.8"
+archive = "https://github.com/Owloops/updo/archive/refs/tags/v0.4.8.tar.gz"
+sha256 = "771a0265ebfd9132698c16937dd9b207344d3108b79a5623b39da111fcb19fb5"
+strip_components = 1
+description = "Uptime monitoring CLI tool with alerting and advanced settings"
+homepage = "https://github.com/Owloops/updo"
+license = "MIT"
+
+[build]
+system = "go"

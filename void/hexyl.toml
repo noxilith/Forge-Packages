@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hexyl'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "hexyl"
+version = "0.17.0"
+archive = "https://github.com/sharkdp/hexyl/archive/refs/tags/v0.17.0.tar.gz"
+sha256 = "72fa17397ad187eec6b295d02c7caabbb209a6e0d5706187b8a599bd5df8615e"
+strip_components = 1
+description = "Command-line hex viewer"
+homepage = "https://github.com/sharkdp/hexyl"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pam_rundir'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "pam_rundir"
+version = "1.0.0"
+archive = "https://jjacky.com/pam_rundir/pam_rundir-1.0.0.tar.gz"
+sha256 = "c779b699ed23777a3bdba87b7f67ed395fe957f3c96138faee45f87a27bcc020"
+strip_components = 1
+description = "PAM Module to create and remove user runtime directories"
+homepage = "https://jjacky.com/pam_rundir"
+license = "GPL-2.0-or-later"
+deps = ["pam"]
+patches = ["patches/fix.patch", "patches/fix2.patch", "patches/setegid.patch"]
+
+[build]
+system = "autotools"

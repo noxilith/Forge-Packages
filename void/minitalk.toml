@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'minitalk'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "minitalk"
+version = "0.3.1"
+archive = "https://github.com/abenson/minitalk/archive/v0.3.1.tar.gz"
+sha256 = "86e6696d885a10f6c2c19ab256a5124ed69149b114f2fb394af9e6e299f4209b"
+strip_components = 1
+description = "Small chat system for multiple users on a UNIX-like host "
+homepage = "https://github.com/abenson/minitalk"
+license = "MIT"
+
+[build]
+system = "make"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libvoikko'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "libvoikko"
+version = "4.3.3"
+archive = "https://www.puimula.org/voikko-sources/libvoikko/libvoikko-4.3.3.tar.gz"
+sha256 = "d1162965c61de44f72162fd87ec1394bd4f90f87bc8152d13fe4ae692fdc73fa"
+strip_components = 1
+description = "Free linguistic software and data for Finnish"
+homepage = "https://voikko.puimula.org/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-hfst=false"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'a4'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "a4"
+version = "2.0"
+archive = "https://github.com/rpmohn/a4/archive/refs/tags/v2.0.tar.gz"
+sha256 = "25fc11b38fb248fab2028547d7f7b96b693695ac3e0064802aa46a806ae6fe58"
+strip_components = 1
+description = "Dynamic terminal manager and multiplexer"
+homepage = "https://a4term.com/"
+license = "MIT"
+deps = ["libtickit", "libvterm"]
+patches = ["patches/fix-makefile.patch"]
+
+[build]
+system = "make"

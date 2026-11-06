@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'dropbear'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: libtomcrypt, libtommath
+[package]
+name = "dropbear"
+version = "2025.89"
+archive = "https://matt.ucc.asn.au/dropbear/releases/dropbear-2025.89.tar.bz2"
+sha256 = "0d1f7ca711cfc336dc8a85e672cab9cfd8223a02fe2da0a4a7aeb58c9e113634"
+strip_components = 1
+description = "Small SSH server and client"
+homepage = "https://matt.ucc.asn.au/dropbear/dropbear.html"
+license = "MIT"
+deps = ["zlib"]
+patches = ["patches/test-without-pip.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-zlib", "--disable-bundled-libtom"]

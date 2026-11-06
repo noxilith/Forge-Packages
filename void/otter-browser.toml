@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'otter-browser'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "otter-browser"
+version = "1.0.03"
+archive = "https://github.com/OtterBrowser/otter-browser/archive/v1.0.03.tar.gz"
+sha256 = "2b07d22a5d921ec0b3d29a680eb913c3fe0713ca7d10e37873a3802d1a5154a3"
+strip_components = 1
+description = "Web browser aiming to recreate the best aspects of the classic Opera UI"
+homepage = "http://otter-browser.org"
+license = "GPL-3.0-or-later"
+deps = ["hunspell", "libgcrypt", "qt5-webkit"]
+
+[build]
+system = "cmake"

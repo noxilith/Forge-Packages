@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'rtkit'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: vim
+[package]
+name = "rtkit"
+version = "0.14"
+archive = "https://gitlab.freedesktop.org/pipewire/rtkit/-/archive/v0.14/rtkit-v0.14.tar.gz"
+sha256 = "55dd379b11f52b81655e2dc676de9d602d050cb0beb18ef01f0f65569f0a5e59"
+strip_components = 1
+description = "Realtime Policy and Watchdog Daemon"
+homepage = "https://gitlab.freedesktop.org/pipewire/rtkit"
+license = "MIT, GPL-3.0-or-later"
+deps = ["dbus", "libcap"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'cyrus-sasl'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: db, mit-krb5, sqlite
+[package]
+name = "cyrus-sasl"
+version = "2.1.28"
+archive = "https://github.com/cyrusimap/cyrus-sasl/releases/download/cyrus-sasl-2.1.28/cyrus-sasl-2.1.28.tar.gz"
+sha256 = "7ccfc6abd01ed67c1a0924b353e526f1b766b21f42d4562ee635a8ebfc5bb38c"
+strip_components = 1
+description = "Cyrus SASL - auth daemon and administration tools"
+homepage = "https://www.cyrusimap.org/sasl/"
+license = "BSD-3-Clause-Attribution"
+deps = ["libsasl", "mariadb", "openldap", "openssl", "pam", "postgresql18"]
+patches = ["patches/cross-makemd5.patch", "patches/gcc14.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-shared", "--enable-checkapop", "--enable-cram", "--enable-digest", "--disable-otp", "--disable-srp", "--disable-srp-setpass", "--disable-krb4", "--enable-gssapi", "--enable-auth-sasldb", "--enable-plain", "--enable-anon", "--enable-login", "--enable-ntlm", "--disable-passdss", "--enable-sql", "--enable-ldapdb", "--disable-macos-framework", "--with-pam", "--with-ldap", "--with-devrandom=/dev/urandom", "ac_cv_gssapi_supports_spnego=yes"]
+tools = ["pkg-config"]
+deps = ["groff"]

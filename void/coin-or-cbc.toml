@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'coin-or-cbc'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "coin-or-cbc"
+version = "2.10.13"
+archive = "https://github.com/coin-or/Cbc/archive/refs/tags/releases/2.10.13.tar.gz"
+sha256 = "62fde44dcf6f3d05c5cd291d7435cdd1b7e8acd3c78ec481dd39fe49cbc40399"
+strip_components = 1
+description = "COIN-OR Branch-and-Cut solver"
+homepage = "https://github.com/coin-or/Cbc"
+license = "EPL-2.0"
+deps = ["Clp", "coin-or-cgl", "coin-or-osi", "coin-or-utils"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

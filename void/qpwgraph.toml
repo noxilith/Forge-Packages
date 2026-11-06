@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qpwgraph'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg
+[package]
+name = "qpwgraph"
+version = "1.0.4"
+archive = "https://gitlab.freedesktop.org/rncbc/qpwgraph/-/archive/v1.0.4/qpwgraph-v1.0.4.tar.gz"
+sha256 = "ec5a9232e65493aee08f067c301009e3a1e1627a80b26a25bf86673f2ea5e2e5"
+strip_components = 1
+description = "Graph manager for PipeWire"
+homepage = "https://gitlab.freedesktop.org/rncbc/qpwgraph"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "pipewire", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["qt6-declarative"]

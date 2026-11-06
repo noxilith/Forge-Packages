@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'minio'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, make_dirs, conf_files
+[package]
+name = "minio"
+version = "2021.04.06"
+archive = "https://github.com/minio/minio/archive/RELEASE.2021-04-06T23-11-00Z.tar.gz"
+sha256 = "c5c7828eaf15e89c2347afa200d01e22e74a2087f425ecfa656e1d06d5bc29b4"
+strip_components = 1
+description = "Object storage server compatible with Amazon S3"
+homepage = "https://github.com/minio/minio"
+license = "Apache-2.0"
+
+[build]
+system = "go"

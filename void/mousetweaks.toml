@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mousetweaks'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "mousetweaks"
+version = "3.32.0"
+archive = "https://download.gnome.org/sources/mousetweaks/3.32/mousetweaks-3.32.0.tar.xz"
+sha256 = "0ebd5cdef01547787cbc3697ae758c57db1eec10eab613704d4a17b27685ae00"
+strip_components = 1
+description = "Mouse accessibility enhancements for the GNOME desktop"
+homepage = "http://www.gnome.org"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "gsettings-desktop-schemas", "gtk+3", "libXtst"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["glib"]

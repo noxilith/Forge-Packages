@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'courier-unicode'. Review before relying on it.
+[package]
+name = "courier-unicode"
+version = "2.6.0"
+archive = "https://downloads.sourceforge.net/sourceforge/courier/courier-unicode/2.6.0/courier-unicode-2.6.0.tar.bz2"
+sha256 = "0aed2349c5b62de0d33ccf8c23527aae41daf95a03c8054c88de4faef8da8a08"
+strip_components = 1
+description = "Courier Unicode Library"
+homepage = "http://www.courier-mta.org/unicode/"
+license = "GPL-3.0-only"
+
+[build]
+system = "autotools"
+tools = ["perl"]

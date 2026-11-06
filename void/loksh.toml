@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'loksh'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "loksh"
+version = "7.9"
+archive = "https://github.com/dimkr/loksh/releases/download/7.9/loksh-7.9.tar.xz"
+sha256 = "9cd50a5d5023c1886ef70dfe7334cebec4f4c6a9548f15d01a04732038e9ac0f"
+strip_components = 1
+description = "Linux port of OpenBSD's ksh"
+homepage = "https://github.com/dimkr/loksh"
+license = "custom:Public Domain"
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

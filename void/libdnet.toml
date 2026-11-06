@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libdnet'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libdnet"
+version = "1.18.0"
+archive = "https://github.com/dugsong/libdnet/archive/libdnet-1.18.0.tar.gz"
+sha256 = "a4a82275c7d83b85b1daac6ebac9461352731922161f1dcdcccd46c318f583c9"
+strip_components = 1
+description = "Portable interface to low level networking routines"
+homepage = "https://github.com/dugsong/libdnet"
+license = "BSD-3-Clause"
+deps = ["check"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

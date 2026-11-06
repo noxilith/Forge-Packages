@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'git-extras'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "git-extras"
+version = "7.4.0"
+archive = "https://github.com/tj/git-extras/archive/refs/tags/7.4.0.tar.gz"
+sha256 = "aaab3bab18709ec6825a875961e18a00e0c7d8214c39d6e3a63aeb99fa11c56e"
+strip_components = 1
+description = "Little git extras"
+homepage = "https://github.com/tj/git-extras"
+license = "MIT"
+
+[build]
+system = "make"

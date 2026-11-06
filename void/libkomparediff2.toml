@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libkomparediff2'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "libkomparediff2"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libkomparediff2-26.08.1.tar.xz"
+sha256 = "d222901b0a90f853f21e86bf08db73c3edb65e8d4bbf820626512df82c8430c2"
+strip_components = 1
+description = "Library to compare files and strings"
+homepage = "https://www.kde.org/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kio", "kf6-kparts", "kf6-kxmlgui"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

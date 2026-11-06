@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libdisplay-info'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: hwids
+[package]
+name = "libdisplay-info"
+version = "0.3.0"
+archive = "https://gitlab.freedesktop.org/emersion/libdisplay-info/-/archive/0.3.0/libdisplay-info-0.3.0.tar.gz"
+sha256 = "2b467e3336aec63819d6aca28d7310d3dc7415b2b3a3c3a5aec9d3727053c078"
+strip_components = 1
+description = "EDID and DisplayID library"
+homepage = "https://gitlab.freedesktop.org/emersion/libdisplay-info/"
+license = "MIT"
+
+[build]
+system = "meson"

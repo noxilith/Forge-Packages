@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gawk'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "gawk"
+version = "5.4.1"
+archive = "https://ftp.gnu.org/gnu/gawk/gawk-5.4.1.tar.xz"
+sha256 = "07f6f7342b7febe4313fc2c2542ad93d64fe20ad8717200109f105a826f5fd37"
+strip_components = 1
+description = "GNU awk utility"
+homepage = "https://directory.fsf.org/wiki/Gawk"
+license = "GPL-3.0-or-later"
+patches = ["patches/fix-node-layout-without-mpfr.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-readline", "--disable-pma"]

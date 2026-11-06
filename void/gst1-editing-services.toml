@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gst1-editing-services'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "gst1-editing-services"
+version = "1.28.6"
+archive = "https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.28.6.tar.xz"
+sha256 = "3d151e5097d686c5890ae76f14c57ee19538fd61c6cf637171f90b309cafd53c"
+strip_components = 1
+description = "GStreamer 1.x Editing Services"
+homepage = "https://gstreamer.freedesktop.org"
+license = "LGPL-2.0-or-later"
+deps = ["glib", "gst-plugins-bad1", "gst-plugins-base1"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddoc=disabled"]
+tools = ["flex", "perl", "pkg-config"]
+deps = ["gobject-introspection"]

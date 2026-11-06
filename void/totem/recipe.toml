@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'totem'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: dbus-glib, itstool
+[package]
+name = "totem"
+version = "43.2"
+archive = "https://download.gnome.org/sources/totem/43/totem-43.2.tar.xz"
+sha256 = "0b007d30fbb93b95a604f14848a497f57fc333a75c2e638a249972e99c01e6a4"
+strip_components = 1
+description = "GNOME integrated movie player based on Gstreamer"
+homepage = "https://wiki.gnome.org/Apps/Videos"
+license = "LGPL-2.0-or-later, GPL-2.0-or-later"
+deps = ["clutter-gst3", "clutter-gtk", "evolution-data-server", "gnome-desktop", "grilo", "grilo-plugins", "gst-libav", "gst-plugins-base1", "gst-plugins-good1", "gst-plugins-ugly1", "libSM", "libXtst", "libhandy1", "libpeas", "libportal", "python3-gobject", "tinysparql", "totem-pl-parser"]
+patches = ["patches/girepository-2.0.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Denable-python=yes"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gstreamer1"]

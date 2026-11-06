@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ffsend'. Review before relying on it.
+# hooks not translated: post_extract, post_install, post_patch
+[package]
+name = "ffsend"
+version = "0.2.77"
+archive = "https://github.com/timvisee/ffsend/archive/v0.2.77.tar.gz"
+sha256 = "b13329704c5eab7c74ebc29c3f2209290ea00e758139daaefc0ab0d5728c2fa4"
+strip_components = 1
+description = "Fully featured Firefox Send client"
+homepage = "https://github.com/timvisee/ffsend"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

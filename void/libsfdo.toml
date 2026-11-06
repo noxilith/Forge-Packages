@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libsfdo'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libsfdo"
+version = "0.1.4"
+archive = "https://gitlab.freedesktop.org/vyivel/libsfdo/-/archive/v0.1.4/libsfdo-v0.1.4.tar.gz"
+sha256 = "9d74a9bff1f872e38ab662d8e2b5f6ecd404d7f82f84e9c324013f856688fa2d"
+strip_components = 1
+description = "Libraries which implement some of the freedesktop.org specifications"
+homepage = "https://gitlab.freedesktop.org/vyivel/libsfdo"
+license = "BSD-2-Clause"
+
+[build]
+system = "meson"
+configure_args = ["-Dexamples=false"]

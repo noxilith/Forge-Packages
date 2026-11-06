@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'myrddin'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_target
+[package]
+name = "myrddin"
+version = "0.3.1"
+archive = "https://myrlang.org/releases/myrddin-0.3.1.tar.xz"
+sha256 = "efb8d73e8e237f836460f46507b7fcd54a174497b9ed8782d7f0a2a2e31915b3"
+strip_components = 1
+description = "Myrddin systems programming language compiler and tools"
+homepage = "https://myrlang.org/"
+license = "MIT"
+
+[build]
+system = "autotools"
+tools = ["bison"]

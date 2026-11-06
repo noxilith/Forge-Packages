@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'i3status'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "i3status"
+version = "2.15"
+archive = "https://i3wm.org/i3status/i3status-2.15.tar.xz"
+sha256 = "6c67f52cae4f139df764ad1cc736562be0f97750791bc212b53f34c06eaf2205"
+strip_components = 1
+description = "Status bar generator for i3bar, dzen2, xmobar or similar programs"
+homepage = "https://www.i3wm.org/i3status/"
+license = "BSD-3-Clause"
+deps = ["alsa-lib", "confuse", "libcap", "libnl3", "yajl"]
+
+[build]
+system = "meson"
+configure_args = ["-Dmans=true"]
+tools = ["perl", "pkg-config"]
+deps = ["xmlto"]

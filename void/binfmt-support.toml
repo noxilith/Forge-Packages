@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'binfmt-support'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: xbps-triggers
+[package]
+name = "binfmt-support"
+version = "2.2.2"
+archive = "https://ftp.debian.org/debian/pool/main/b/binfmt-support/binfmt-support_2.2.2.orig.tar.gz"
+sha256 = "cce14163f9b526283e6f0d00f3be1cfe239fa2c7574e5e0ba8ad3db74166a4a5"
+strip_components = 1
+description = "Register interpreters for various binary formats"
+homepage = "http://packages.debian.org/en/sid/binfmt-support"
+license = "GPL-2.0-or-later"
+deps = ["libpipeline"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

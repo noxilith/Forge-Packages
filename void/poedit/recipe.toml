@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'poedit'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS, CPPFLAGS
+# needs, but Forge has no recipe for yet: boost, cld2, db, gtkspell3, hicolor-icon-theme
+[package]
+name = "poedit"
+version = "3.7"
+archive = "https://github.com/vslavik/poedit/releases/download/v3.7-oss/poedit-3.7.tar.gz"
+sha256 = "1bb2388f03618991effde4e8d0e8c35db363af6ca58f6d8ebab21daa76731d71"
+strip_components = 1
+description = "Cross-platform gettext catalogs (.po files) editor"
+homepage = "https://www.poedit.net/"
+license = "MIT"
+deps = ["Lucene++", "desktop-file-utils", "enchant2", "gettext", "gtk+3", "pugixml", "wxWidgets-gtk3"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-wx-config=wx-config-gtk3", "--with-boost-system=c"]
+tools = ["pkg-config"]

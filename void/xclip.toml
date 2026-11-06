@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xclip'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "xclip"
+version = "0.13"
+archive = "https://github.com/astrand/xclip/archive/0.13.tar.gz"
+sha256 = "ca5b8804e3c910a66423a882d79bf3c9450b875ac8528791fb60ec9de667f758"
+strip_components = 1
+description = "Command line interface to the X11 clipboard"
+homepage = "https://github.com/astrand/xclip"
+license = "GPL-2.0-or-later"
+deps = ["libXmu"]
+
+[build]
+system = "autotools"

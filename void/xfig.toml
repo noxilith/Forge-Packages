@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfig'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ghostscript, gsfonts, netpbm
+[package]
+name = "xfig"
+version = "3.2.9a"
+archive = "https://downloads.sourceforge.net/sourceforge/mcj/xfig-3.2.9a.tar.xz"
+sha256 = "bc572a1881e5e20987ac590158b041ab7803845a9691036d3ba5e982f66d9ca3"
+strip_components = 1
+description = "Interactive drawing tool"
+homepage = "http://mcj.sourceforge.net/"
+license = "custom:xfig"
+deps = ["fig2dev", "freetype", "libXaw", "libXaw3d", "libXft", "libXi", "libXmu", "libXpm", "libXt", "libjpeg-turbo", "libpng"]
+
+[build]
+system = "autotools"

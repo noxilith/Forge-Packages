@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'mobile-config-firefox'. Review before relying on it.
+[package]
+name = "mobile-config-firefox"
+version = "4.3.2"
+archive = "https://gitlab.com/postmarketOS/mobile-config-firefox/-/archive/4.3.2.tar.gz"
+sha256 = "22b571bf2706d76d7568eb1b41db7934b760bea0f188d6e4668acb4b777ad54b"
+strip_components = 1
+description = "Mobile and privacy friendly configuration for Firefox"
+homepage = "https://gitlab.com/postmarketOS/mobile-config-firefox"
+license = "MPL-2.0"
+
+[build]
+system = "make"

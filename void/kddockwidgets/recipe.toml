@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kddockwidgets'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "kddockwidgets"
+version = "2.4.0"
+archive = "https://github.com/KDAB/KDDockWidgets/releases/download/v2.4.0/kddockwidgets-2.4.0.tar.gz"
+sha256 = "51dbf24fe72e43dd7cb9a289d3cab47112010f1a2ed69b6fc8ac0dff31991ed2"
+strip_components = 1
+description = "KDAB's Dock Widget Framework for Qt"
+homepage = "https://github.com/KDAB/KDDockWidgets"
+license = "GPL-3.0-only OR GPL-2.0-only"
+deps = ["json-c++", "qt6-base", "qt6-declarative"]
+patches = ["patches/qt610.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDDockWidgets_QT6=true"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

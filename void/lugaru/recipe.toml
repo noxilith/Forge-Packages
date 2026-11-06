@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lugaru'. Review before relying on it.
+[package]
+name = "lugaru"
+version = "1.2"
+archive = "https://github.com/osslugaru/lugaru/releases/download/1.2/lugaru-1.2.tar.xz"
+sha256 = "f3ea477caf78911c69939fbdc163f9f6517c7ef2267e716a0e050be1a166ef97"
+strip_components = 1
+description = "Third person ninja rabbit fighting game"
+homepage = "https://osslugaru.gitlab.io/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "glu", "libjpeg-turbo", "libopenal", "libpng", "libvorbis", "zlib"]
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSYSTEM_INSTALL=ON", "-DCMAKE_INSTALL_BINDIR=bin", "-DCMAKE_INSTALL_DATADIR=share", "-DCMAKE_INSTALL_MANDIR=share/man"]
+tools = ["pkg-config"]

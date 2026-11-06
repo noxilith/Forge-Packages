@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'inkscape'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: boost, gtkspell3, harfbuzz, hicolor-icon-theme, intltool, libcdr, libreadline8, libvisio, perl-XML-Parser, python3-Cython, python3-Pillow, python3-appdirs (+7)
+[package]
+name = "inkscape"
+version = "1.4.3"
+archive = "https://media.inkscape.org/dl/resources/file/inkscape-1.4.3.tar.xz"
+sha256 = "e83a2c3db570b6c5a1ff0fccfe7098837b3f6bd74b133567937c8a91710ed1d1"
+strip_components = 1
+description = "Vector-based drawing program"
+homepage = "https://inkscape.org/"
+license = "GPL-2.0-only, LGPL-2.1-or-later"
+deps = ["aspell", "cairomm", "desktop-file-utils", "double-conversion", "gc", "gdl", "gsl", "gspell", "gtest", "gtkmm", "gtksourceview4", "hunspell", "lib2geom", "libatomic_ops", "libwpd", "libwpg", "libxml2", "libxslt", "pango", "poppler", "popt", "potrace"]
+patches = ["patches/boost-filesystem.patch", "patches/boost-stacktrace.patch", "patches/gcc-16.patch", "patches/musl-ext-translations.patch", "patches/poppler_26.00.0.patch", "patches/poppler_26.02.0.patch", "patches/poppler_26.03.0.patch", "patches/poppler_26.04.0.patch", "patches/poppler_26.05.0.patch", "patches/poppler_26.06.0.patch", "patches/poppler_26.07.0.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["GraphicsMagick", "gettext", "glib", "which"]

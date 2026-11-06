@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'neard'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "neard"
+version = "0.19"
+archive = "https://github.com/linux-nfc/neard/archive/refs/tags/v0.19.tar.gz"
+sha256 = "129bbf69488fdb599d480356765941f111d7799495d0d64095b25e893c4d2be7"
+strip_components = 1
+description = "Near Field Communication (NFC) manager"
+homepage = "https://github.com/linux-nfc/neard"
+license = "GPL-2.0-only"
+deps = ["dbus", "glib", "libnl3"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-systemd", "--enable-ese", "--enable-tools"]
+tools = ["pkg-config"]
+deps = ["autoconf-archive"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mmutils'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_install
+# settings not translated: LDFLAGS
+[package]
+name = "mmutils"
+version = "1.4.1"
+archive = "https://github.com/pockata/mmutils/archive/v1.4.1.tar.gz"
+sha256 = "949a817e8a5fdb12aab09161b96111b0d0473d91ba63867edbeaae01310c8f31"
+strip_components = 1
+description = "Set of utilities to easily get xrandr monitor information"
+homepage = "https://github.com/pockata/mmutils"
+license = "ISC"
+deps = ["libxcb"]
+
+[build]
+system = "make"

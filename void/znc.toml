@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'znc'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: boost, perl, tcl
+[package]
+name = "znc"
+version = "1.10.3"
+archive = "https://znc.in/releases/znc-1.10.3.tar.gz"
+sha256 = "68f3f6641b480c041010c5596e1234043e05c9137eda06233845017603095f5b"
+strip_components = 1
+description = "Advanced IRC Bouncer"
+homepage = "https://znc.in/"
+license = "Apache-2.0"
+deps = ["argon2", "libicu78", "libsasl", "openssl", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWANT_PYTHON=YES", "-DWANT_PERL=YES", "-DWANT_TCL=YES", "-DWANT_ARGON=YES", "-DWANT_I18N=YES"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext"]

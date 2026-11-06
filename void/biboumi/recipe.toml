@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'biboumi'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: botan, python3-Sphinx, python3-sphinx_rtd_theme, sqlite, udns
+[package]
+name = "biboumi"
+version = "9.0"
+archive = "https://codeberg.org/poezio/biboumi/archive/9.0.tar.gz"
+sha256 = "618776cf3dccb59c84322a921681f4b1f8b144b523fd5e118d2b47fb0f3eb43f"
+strip_components = 1
+description = "XMPP to IRC gateway"
+homepage = "https://biboumi.louiz.org/"
+license = "Zlib"
+deps = ["expat", "libidn", "libpqxx", "libticonv", "postgresql18"]
+patches = ["patches/backport-botan3.patch", "patches/remove-git.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITHOUT_SYSTEMD=1"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'stdm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "stdm"
+version = "0.1.1"
+archive = "https://git.jcg.re/jcgruenhage/stdm/archive/v0.1.1.tar.gz"
+sha256 = "7570b30d50081d4438aff731fba4fdc3f268cb65f9c61d1fa93352d89bc52f2f"
+strip_components = 1
+description = "Simple terminal display manager"
+homepage = "https://git.jcg.re/jcgruenhage/stdm"
+license = "AGPL-3.0-only"
+patches = ["patches/cargo.lock.patch"]
+
+[build]
+system = "cargo"

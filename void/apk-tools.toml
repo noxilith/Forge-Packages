@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'apk-tools'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: lua53, zstd
+[package]
+name = "apk-tools"
+version = "3.0.8"
+archive = "https://gitlab.alpinelinux.org/alpine/apk-tools/-/archive/v3.0.8/apk-tools-v3.0.8.tar.gz"
+sha256 = "e81c64a6e7c3806d45d4622c253e757aee970be84048554fa0eed79310e9453e"
+strip_components = 1
+description = "Alpine Package Keeper (Alpine package manager)"
+homepage = "https://git.alpinelinux.org/apk-tools"
+license = "GPL-2.0-only"
+deps = ["openssl", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpython=disabled", "-Dlua=disabled", "-Dhelp=enabled", "-Ddefault_library=static", "-Dprefer_static=true"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'DarkRadiant'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: glew, python3-pybind11, ruby-asciidoctor
+[package]
+name = "DarkRadiant"
+version = "3.9.0"
+archive = "https://github.com/codereader/DarkRadiant/archive/3.9.0.tar.gz"
+sha256 = "719311456ec1a86314b6c385fa46ae1356245018a041e534f15aa5ffb0a2fb58"
+strip_components = 1
+description = "Map editor for The Dark Mod and other idTech4/Doom3-based games"
+homepage = "https://github.com/codereader/DarkRadiant/"
+license = "GPL-2.0-or-later"
+deps = ["eigen", "freealut", "ftgl", "glib", "libgit2", "libjpeg-turbo", "libsigc++", "libvorbis", "libxml2", "wxWidgets-gtk3"]
+patches = ["patches/do-no-install-test.patch", "patches/musl.patch", "patches/wayland.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

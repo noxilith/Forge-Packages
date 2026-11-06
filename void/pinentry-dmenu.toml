@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pinentry-dmenu'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: CFLAGS, LDFLAGS
+[package]
+name = "pinentry-dmenu"
+version = "0.2.3"
+archive = "https://github.com/ftrvxmtrx/pinentry-dmenu/archive/0.2.3.tar.gz"
+sha256 = "8ee15e114a880fd5f5c5f5aebd9b2eb469b26104449987454ee789fbe2bf9ee3"
+strip_components = 1
+description = "Pinentry program based on dmenu"
+homepage = "https://github.com/ftrvxmtrx/pinentry-dmenu"
+license = "GPL-2.0-or-later"
+deps = ["freetype", "gpgme", "libXft", "libXinerama", "libassuan", "libconfig", "libgpg-error"]
+
+[build]
+system = "make"

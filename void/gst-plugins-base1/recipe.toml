@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'gst-plugins-base1'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_check
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: liboil, libtheora, mesa, orc
+[package]
+name = "gst-plugins-base1"
+version = "1.28.6"
+archive = "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.28.6.tar.xz"
+sha256 = "0ba699c7c6c66f4ba640be78cb38a24715add9683f3e3a199f5369dc5a4f04ac"
+strip_components = 1
+description = "GStreamer Base Plug-ins (v1.x)"
+homepage = "https://gstreamer.freedesktop.org"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["alsa-lib", "cairo", "glib", "graphene", "gstreamer1", "libSM", "libXext", "libXv", "libgudev", "libvorbis", "libxml2", "opus", "pango"]
+patches = ["patches/sndio.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtremor=disabled", "-Dexamples=disabled", "-Ddoc=disabled"]
+tools = ["pkg-config"]
+deps = ["gettext"]

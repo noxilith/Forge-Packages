@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'opam'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: ncurses, ocaml-findlib, unzip
+[package]
+name = "opam"
+version = "2.6.1"
+archive = "https://github.com/ocaml/opam/releases/download/2.6.1/opam-full-2.6.1.tar.gz"
+sha256 = "ebbaffa4192e69d612d2c1a5fc5a15b32730322d7e34bc4456ad4076bb987007"
+strip_components = 1
+description = "OCaml package manager"
+homepage = "https://opam.ocaml.org/"
+license = "LGPL-2.1-only WITH OCaml-LGPL-linking-exception"
+deps = ["bubblewrap", "curl", "ocaml", "tar"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-vendored-deps", "--with-mccs"]

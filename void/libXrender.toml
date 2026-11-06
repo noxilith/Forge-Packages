@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXrender'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXrender"
+version = "0.9.12"
+archive = "https://www.x.org/releases/individual/lib/libXrender-0.9.12.tar.xz"
+sha256 = "b832128da48b39c8d608224481743403ad1691bf4e554e4be9c174df171d1b97"
+strip_components = 1
+description = "X Render Library"
+homepage = "https://www.x.org/releases/individual"
+license = "MIT"
+deps = ["libXext", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]

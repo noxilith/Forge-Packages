@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libsixel'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libsixel"
+version = "1.10.5"
+archive = "https://github.com/libsixel/libsixel/archive/refs/tags/v1.10.5.tar.gz"
+sha256 = "b6654928bd423f92e6da39eb1f40f10000ae2cc6247247fc1882dcff6acbdfc8"
+strip_components = 1
+description = "SIXEL encoder/decoder"
+homepage = "https://github.com/libsixel/libsixel"
+license = "MIT"
+deps = ["libjpeg-turbo", "libpng"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

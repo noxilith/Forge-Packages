@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bfs'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bfs"
+version = "4.1.4"
+archive = "https://github.com/tavianator/bfs/archive/4.1.4.tar.gz"
+sha256 = "0cac6849efb8a9447268fb273de3fab38f8460adb26a1770934e3f325fab8f5d"
+strip_components = 1
+description = "Breadth-first version of the UNIX find command"
+homepage = "https://github.com/tavianator/bfs"
+license = "0BSD"
+deps = ["acl", "libcap", "liburing", "oniguruma"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-release"]

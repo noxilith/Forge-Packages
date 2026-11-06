@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'zint'. Review before relying on it.
+# hooks not translated: pre_check
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "zint"
+version = "2.16.0"
+archive = "https://github.com/zint/zint/archive/refs/tags/2.16.0.tar.gz"
+sha256 = "e1077fd5846bdd0128fef3ab8c3c28e93e450d2efaf1424d0aa96e0c9e514591"
+strip_components = 1
+description = "Barcode encoding library"
+homepage = "https://www.zint.org.uk/"
+license = "GPL-3.0-or-later"
+deps = ["libpng", "qt6-base", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DZINT_USE_QT=ON", "-DZINT_USE_PNG=ON", "-DZINT_QT6=ON"]

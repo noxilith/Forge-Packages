@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'vultr'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "vultr"
+version = "2.0.3"
+archive = "https://github.com/JamesClonk/vultr/archive/v2.0.3.tar.gz"
+sha256 = "6529d521a7fa006808cd07331f31256e91773ec7e1a0c7839cd14884034fb185"
+strip_components = 1
+description = "Vultr CLI and API client"
+homepage = "https://jamesclonk.github.io/vultr/"
+license = "MIT"
+
+[build]
+system = "go"

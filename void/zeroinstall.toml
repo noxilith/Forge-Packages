@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'zeroinstall'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: make_install_target
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "zeroinstall"
+version = "2.18"
+archive = "https://github.com/0install/0install/releases/download/v2.18/0install-2.18.tbz"
+sha256 = "648c4b318c1a26dfcb44065c226ab8ca723795924ad80a3bf39ae1ce0e9920c3"
+strip_components = 1
+description = "Cross-distribution software installation system"
+homepage = "http://0install.net"
+license = "LGPL-2.1-only"
+deps = ["curl", "desktop-file-utils", "glib", "gnupg", "gtk+3", "openssl", "xdg-utils"]
+
+[build]
+system = "make"
+tools = ["m4", "pkg-config"]
+deps = ["gettext", "ocaml", "opam", "tar", "which"]

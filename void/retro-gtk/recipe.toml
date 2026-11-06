@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'retro-gtk'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "retro-gtk"
+version = "1.0.2"
+archive = "https://download.gnome.org/sources/retro-gtk/1.0/retro-gtk-1.0.2.tar.xz"
+sha256 = "7118b0b5f9c1f2f0bc742faf8689eb48b44833efada0f6dbce990ec9783bcbd2"
+strip_components = 1
+description = "GTK+ Libretro frontend framework"
+homepage = "https://gitlab.gnome.org/GNOME/retro-gtk"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gtk+3", "libepoxy", "libsamplerate", "pulseaudio"]
+patches = ["patches/meson.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["vala"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'c-blosc'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "c-blosc"
+version = "1.21.3"
+archive = "https://github.com/Blosc/c-blosc/archive/v1.21.3.tar.gz"
+sha256 = "941016c4564bca662080bb01aea74f06630bd665e598c6f6967fd91b2e2e0bb6"
+strip_components = 1
+description = "Blocking, shuffling and lossless compression library"
+homepage = "https://www.blosc.org"
+license = "BSD-3-Clause, MIT"
+deps = ["lz4", "snappy", "zlib"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPREFER_EXTERNAL_ZLIB=1", "-DPREFER_EXTERNAL_LZ4=1", "-DPREFER_EXTERNAL_SNAPPY=1", "-DPREFER_EXTERNAL_ZSTD=1"]

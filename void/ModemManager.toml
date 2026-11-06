@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'ModemManager'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "ModemManager"
+version = "1.24.2"
+archive = "https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.24.2/ModemManager-1.24.2.tar.bz2"
+sha256 = "691aa026aee458d4e92f95be3fc19989c0484bf51b3ba00673c28909ce5b6729"
+strip_components = 1
+description = "Mobile broadband modem management service"
+homepage = "https://www.freedesktop.org/wiki/Software/ModemManager/"
+license = "GPL-2.0-or-later"
+deps = ["bash-completion", "elogind", "glib", "libgudev", "libmbim", "libqmi", "libxslt", "polkit", "ppp", "python3-dbus", "python3-gobject"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpolkit=permissive", "-Dsystemdsystemunitdir=no", "-Dsystemd_journal=false", "-Dintrospection=true", "-Dvapi=true", "-Dplugin_qcom_soc=enabled"]
+tools = ["pkg-config"]
+deps = ["gettext"]

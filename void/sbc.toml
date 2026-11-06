@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sbc'. Review before relying on it.
+[package]
+name = "sbc"
+version = "2.2"
+archive = "https://www.kernel.org/pub/linux/bluetooth/sbc-2.2.tar.xz"
+sha256 = "a1ada76ef35e5af9c2fbd063754dc9e37a8d989417c6eb1ecebb089b1383ae9e"
+strip_components = 1
+description = "Bluetooth Subband Codec (SBC) library"
+homepage = "http://www.bluez.org/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["libsndfile"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-pie", "--disable-static"]
+tools = ["pkg-config"]

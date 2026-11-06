@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mgba'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, qt5
+[package]
+name = "mgba"
+version = "0.10.5"
+archive = "https://github.com/mgba-emu/mgba/archive/0.10.5.tar.gz"
+sha256 = "91d6fbd32abcbdf030d58d3f562de25ebbc9d56040d513ff8e5c19bee9dacf14"
+strip_components = 1
+description = "Game Boy Advance emulator written in C"
+homepage = "https://www.mgba.io/"
+license = "MPL-2.0"
+deps = ["ImageMagick", "SDL2", "libedit", "libepoxy", "libzip"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils"]

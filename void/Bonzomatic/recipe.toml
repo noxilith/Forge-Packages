@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'Bonzomatic'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: glew
+[package]
+name = "Bonzomatic"
+version = "2023.06.15"
+archive = "https://github.com/Gargaj/Bonzomatic/archive/2023-06-15.tar.gz"
+sha256 = "f41903d47fc744a726c7ecdaee78e2d9dda790beb22e310a63f6a0a1c0cfd4a7"
+strip_components = 1
+description = "Live shader coding tool"
+homepage = "https://github.com/Gargaj/Bonzomatic"
+license = "Unlicense"
+deps = ["alsa-lib", "fontconfig", "glfw", "libX11", "libXcursor", "libXi", "libXinerama", "libXrandr"]
+patches = ["patches/fix-wayland.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBONZOMATIC_USE_SYSTEM_GLEW=ON", "-DBONZOMATIC_USE_SYSTEM_GLFW=ON"]
+tools = ["pkg-config"]

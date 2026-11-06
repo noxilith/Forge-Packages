@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fiche'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, make_dirs
+[package]
+name = "fiche"
+version = "0.9.1"
+archive = "https://github.com/solusipse/fiche/archive/0.9.1.tar.gz"
+sha256 = "f0cb279a2c2a4c0d1debcf56785fd8731a1427d2524221678cf69c9aaa85e831"
+strip_components = 1
+description = "Command line pastebin server for sharing terminal output"
+homepage = "https://github.com/solusipse/fiche"
+license = "MIT"
+
+[build]
+system = "make"

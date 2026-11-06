@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'bitchx'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "bitchx"
+version = "1.2.1"
+archive = "https://downloads.sourceforge.net/sourceforge/bitchx/bitchx-1.2.1.tar.gz"
+sha256 = "2d270500dd42b5e2b191980d584f6587ca8a0dbda26b35ce7fadb519f53c83e2"
+strip_components = 1
+description = "Simple IRC client (Internet Relay Chat)"
+homepage = "http://bitchx.sourceforge.net/"
+license = "BSD-3-Clause"
+deps = ["openssl"]
+patches = ["patches/bitchx-1.2.1-security.patch", "patches/openssl-1.1.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-ssl", "--with-ipv6", "--with-plugins"]

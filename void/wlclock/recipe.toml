@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wlclock'. Review before relying on it.
+[package]
+name = "wlclock"
+version = "1.0.1"
+archive = "https://git.sr.ht/~leon_plickat/wlclock/archive/v1.0.1.tar.gz"
+sha256 = "df624174a07dc381773039c230252e3364abee81831069ce66a12970311accfa"
+strip_components = 1
+description = "Digital analog clock for Wayland desktops"
+homepage = "https://git.sr.ht/~leon_plickat/wlclock/"
+license = "GPL-3.0-or-later"
+deps = ["cairo", "wayland", "wayland-protocols"]
+patches = ["patches/fix-wlclock-argv.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

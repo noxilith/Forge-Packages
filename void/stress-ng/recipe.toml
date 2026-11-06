@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'stress-ng'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "stress-ng"
+version = "0.22.01"
+archive = "https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.22.01.tar.gz"
+sha256 = "67e75894da3f634b85992069b0a888893221a77a3db5e3293cdddd0b1c0d4705"
+strip_components = 1
+description = "Load and stress a computer system"
+homepage = "https://github.com/ColinIanKing/stress-ng/"
+license = "GPL-2.0-or-later"
+deps = ["libglvnd"]
+patches = ["patches/ppc64-glibc-be-no-vecmath.patch"]
+
+[build]
+system = "make"

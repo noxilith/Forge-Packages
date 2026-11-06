@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pavucontrol'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool, libcanberra, lynx
+[package]
+name = "pavucontrol"
+version = "6.2"
+archive = "https://www.freedesktop.org/software/pulseaudio/pavucontrol/pavucontrol-6.2.tar.xz"
+sha256 = "e93a7836c7307dcbc989e95fc7ec0878322514c475fabd90e89ed52fd4f15d32"
+strip_components = 1
+description = "PulseAudio Volume Control"
+homepage = "https://www.freedesktop.org/software/pulseaudio/pavucontrol"
+license = "GPL-2.0-or-later"
+deps = ["gtk4", "gtkmm", "gtkmm4", "json-glib", "pulseaudio"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

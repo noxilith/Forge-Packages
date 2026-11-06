@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'csync2'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "csync2"
+version = "2.0"
+archive = "https://github.com/LINBIT/csync2/archive/csync2-2.0.tar.gz"
+sha256 = "a1c6b0364eb9f19986a92fccd369bae29aa5aa55300e0664dadaf80d80de23ff"
+strip_components = 1
+description = "Cluster synchronization tool"
+homepage = "http://oss.linbit.com/csync2/"
+license = "GPL-2.0-or-later"
+deps = ["gnutls", "librsync"]
+patches = ["patches/CVE-2019-15522.patch", "patches/musl-strlcpy.patch"]
+
+[build]
+system = "autotools"
+tools = ["bison", "flex", "pkg-config"]

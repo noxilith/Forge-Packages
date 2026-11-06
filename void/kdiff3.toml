@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kdiff3'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "kdiff3"
+version = "1.12.3"
+archive = "https://download.kde.org/stable/kdiff3/kdiff3-1.12.3.tar.xz"
+sha256 = "e22654c457881799808305529c6b596c0c9dc38b5a2ecc142ec76d46f6873f4c"
+strip_components = 1
+description = "File comparator/merge tool"
+homepage = "https://kde.org/applications/development/kdiff3"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kio", "kf6-kwidgetsaddons", "kf6-kxmlgui", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xlsatoms'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xlsatoms"
+version = "1.1.5"
+archive = "https://www.x.org/releases/individual/app/xlsatoms-1.1.5.tar.xz"
+sha256 = "9ac9400328fbeffe15c9d94a90dedb90d09dcaa9d51482efabc55b33a736e317"
+strip_components = 1
+description = "List interned atoms defined on the X server"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libxcb"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

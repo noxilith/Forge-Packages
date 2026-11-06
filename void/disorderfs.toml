@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'disorderfs'. Review before relying on it.
+# settings not translated: CXXFLAGS
+[package]
+name = "disorderfs"
+version = "0.5.11"
+archive = "https://salsa.debian.org/reproducible-builds/disorderfs/-/archive/0.5.11/disorderfs-0.5.11.tar.bz2"
+sha256 = "e13935220dccb13e6e3dbaf1c2f7b22015e3ac90083e00b35573b756050d9481"
+strip_components = 1
+description = "FUSE filesystem that introduces non-determinism filesystem metadata"
+homepage = "https://reproducible-builds.org/tools/"
+license = "GPL-3.0-or-later"
+deps = ["attr", "fuse"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

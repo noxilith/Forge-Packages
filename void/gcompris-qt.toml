@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gcompris-qt'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qml-box2d, qt6-charts, qt6-graphs, qt6-multimedia, qt6-sensors, qt6-svg, qt6-tools
+[package]
+name = "gcompris-qt"
+version = "26.2"
+archive = "https://gcompris.net/download/qt/src/gcompris-qt-26.2.tar.xz"
+sha256 = "f876239f39397f554006f4218a3c229627e2af4317a8765ecf9462f0058dfcb4"
+strip_components = 1
+description = "High quality educational software suite for children aged 2 to 10"
+homepage = "https://gcompris.net/index-en.html"
+license = "AGPL-3.0-only"
+deps = ["qt6-base", "qt6-declarative", "qt6-wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_NO_PRIVATE_MODULE_WARNING=ON"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

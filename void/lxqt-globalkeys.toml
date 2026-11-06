@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-globalkeys'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-globalkeys"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-globalkeys/archive/2.4.0.tar.gz"
+sha256 = "3290c132958ab1e164426fdfe32f11f5a0d1009639b14a2de91572f4029b3003"
+strip_components = 1
+description = "LXQt daemon and library for global keyboard shortcuts registration"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["liblxqt"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "qt6-base"]

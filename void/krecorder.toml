@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'krecorder'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-svg, qt6-tools
+[package]
+name = "krecorder"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/krecorder-26.08.1.tar.xz"
+sha256 = "bbf1e147e9f89d222404eda2be3ad146ca0ed7c7415a03f96183c84db28ea4b4"
+strip_components = 1
+description = "Convergent audio recording application for Plasma"
+homepage = "https://apps.kde.org/krecorder/"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kirigami-addons", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+deps = ["extra-cmake-modules", "gettext"]

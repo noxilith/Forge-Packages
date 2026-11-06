@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'btfs'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "btfs"
+version = "2.24"
+archive = "https://github.com/johang/btfs/archive/v2.24.tar.gz"
+sha256 = "d71ddefe3c572e05362542a0d9fd0240d8d4e1578ace55a8b3245176e7fd8935"
+strip_components = 1
+description = "Bittorrent filesystem based on FUSE"
+homepage = "https://github.com/johang/btfs"
+license = "GPL-3.0-or-later"
+deps = ["curl", "fuse", "libtorrent-rasterbar"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

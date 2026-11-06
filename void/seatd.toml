@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'seatd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "seatd"
+version = "0.9.3"
+archive = "https://git.sr.ht/~kennylevinsen/seatd/archive/0.9.3.tar.gz"
+sha256 = "302564d54d8e28191fadfd734f2675ecb0c9e0615a58011b89ef15dfa4dbaa96"
+strip_components = 1
+description = "Minimal seat management daemon"
+homepage = "https://sr.ht/~kennylevinsen/seatd/"
+license = "MIT"
+
+[build]
+system = "meson"
+configure_args = ["-Dexamples=disabled", "-Dwerror=false"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

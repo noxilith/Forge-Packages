@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ell'. Review before relying on it.
+[package]
+name = "ell"
+version = "0.50"
+archive = "https://www.kernel.org/pub/linux/libs/ell/ell-0.50.tar.xz"
+sha256 = "0fe51d51c6eddc2a2784092f1dfdd1143a5ef27f15c274ecfbadd680d3a72fd9"
+strip_components = 1
+description = "Linux library for embedded development"
+homepage = "https://01.org/ell"
+license = "GPL-2.0-only"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-glib"]
+tools = ["pkg-config"]

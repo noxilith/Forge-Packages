@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'miniupnpd'. Review before relying on it.
+# hooks not translated: post_configure, post_extract, post_install
+# settings not translated: make_install_args, conf_files
+# needs, but Forge has no recipe for yet: libnfnetlink
+[package]
+name = "miniupnpd"
+version = "2.3.11"
+archive = "https://miniupnp.tuxfamily.org/files/miniupnpd-2.3.11.tar.gz"
+sha256 = "91994b127da735b2c97f19992e34420648c0e8c4ace8a4bcb0596e7685c48678"
+strip_components = 1
+description = "Lightweight UPnP IGD daemon"
+homepage = "https://miniupnp.tuxfamily.org"
+license = "BSD-3-Clause"
+deps = ["iptables", "openssl"]
+patches = ["patches/fix-configure-script.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-fork", "--ipv6", "--igd2", "--leasefile"]
+tools = ["pkg-config"]

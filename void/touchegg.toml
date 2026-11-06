@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'touchegg'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "touchegg"
+version = "2.0.17"
+archive = "https://github.com/JoseExposito/touchegg/archive/2.0.17.tar.gz"
+sha256 = "0600c4c57d6c96b6f0a84a56cb4f5d8ce0fa42831bfa0d6cf94ce6a1a23823f8"
+strip_components = 1
+description = "Multitouch gesture recognizer"
+homepage = "https://github.com/JoseExposito/touchegg"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "eudev", "glib", "gtk+3", "libX11", "libXi", "libXrandr", "libXtst", "libinput", "pugixml"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_SYSTEMD=false"]
+tools = ["pkg-config"]

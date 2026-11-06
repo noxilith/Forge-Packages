@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kubernetes-kind'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_import_path, build_helper
+[package]
+name = "kubernetes-kind"
+version = "0.33.0"
+archive = "https://github.com/kubernetes-sigs/kind/archive/v0.33.0.tar.gz"
+sha256 = "8b00b127eb567f30b028cb032d236d990404e9fd83ce7798db7f9c7a305fab34"
+strip_components = 1
+description = "Kind is a tool for running local Kubernetes clusters using Docker"
+homepage = "https://kind.sigs.k8s.io/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

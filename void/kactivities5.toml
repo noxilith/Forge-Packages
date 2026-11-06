@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kactivities5'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, qt5
+[package]
+name = "kactivities5"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kactivities-5.116.0.tar.xz"
+sha256 = "7a7c4e91995867e85bb0ee4f68992d6f09a6fb5db33adbf4374e39ed35d1727d"
+strip_components = 1
+description = "KDE API for using and interacting with the Activity Manager"
+homepage = "https://invent.kde.org/frameworks/kactivities"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["kconfig", "kcoreaddons", "kwindowsystem"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

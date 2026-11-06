@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'primesieve'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "primesieve"
+version = "12.14"
+archive = "https://github.com/kimwalisch/primesieve/archive/refs/tags/v12.14.tar.gz"
+sha256 = "65cf173e11bc9aff1b189f2cd19c6b6c502c30e966876b5c5ef71e138f49c8c9"
+strip_components = 1
+description = "Fast prime number generator"
+homepage = "https://github.com/kimwalisch/primesieve"
+license = "BSD-2-Clause"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTS=ON", "-DBUILD_SHARED_LIBS=ON", "-DBUILD_STATIC_LIBS=OFF"]

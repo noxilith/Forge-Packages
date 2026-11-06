@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'texlab'. Review before relying on it.
+# settings not translated: make_install_args
+[package]
+name = "texlab"
+version = "5.25.1"
+archive = "https://github.com/latex-lsp/texlab/archive/refs/tags/v5.25.1.tar.gz"
+sha256 = "7d8435761b0012b6de1cfdb4db37f5eafcba8e670530ef1df44aa9934eef0887"
+strip_components = 1
+description = "Implementation of the Language Server Protocol for LaTeX"
+homepage = "https://texlab.netlify.app/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'termshark'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "termshark"
+version = "2.4.0"
+archive = "https://github.com/gcla/termshark/archive/v2.4.0.tar.gz"
+sha256 = "949c71866fcd2f9ed71a754ea9e3d1bdc23dee85969dcdc78180f1d18ca8b087"
+strip_components = 1
+description = "Terminal UI for tshark, inspired by Wireshark"
+homepage = "https://github.com/gcla/termshark"
+license = "MIT"
+deps = ["wireshark"]
+
+[build]
+system = "go"

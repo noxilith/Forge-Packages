@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xdg-dbus-proxy'. Review before relying on it.
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "xdg-dbus-proxy"
+version = "0.1.9"
+archive = "https://github.com/flatpak/xdg-dbus-proxy/releases/download/0.1.9/xdg-dbus-proxy-0.1.9.tar.xz"
+sha256 = "5450dda586ec3bb3ca709d311e845487883faa3b09cf562608d7e84f4311dced"
+strip_components = 1
+description = "Filtering proxy for D-Bus connections"
+homepage = "https://github.com/flatpak/xdg-dbus-proxy"
+license = "GPL-3.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["libxslt"]

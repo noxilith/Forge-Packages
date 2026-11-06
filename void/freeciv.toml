@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'freeciv'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL2_gfx, SDL2_image, lua53
+[package]
+name = "freeciv"
+version = "3.2.5"
+archive = "https://downloads.sourceforge.net/sourceforge/freeciv/freeciv-3.2.5.tar.xz"
+sha256 = "d32808f02a9b9f49ef159bcbf266b16ce2a3ce6ea8f71115d80f952c3cc609e8"
+strip_components = 1
+description = "Free and Open Source empire-building strategy game - server/data"
+homepage = "https://www.freeciv.org/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2_mixer", "SDL2_ttf", "curl", "gtk+3"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-fcdb=sqlite3", "--enable-fcmp=all", "--enable-client=gtk3.22,sdl2"]
+tools = ["pkg-config"]
+deps = ["gettext"]

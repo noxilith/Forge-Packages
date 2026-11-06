@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libspiro'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libspiro"
+version = "20240903"
+archive = "https://github.com/fontforge/libspiro/archive/20240903.tar.gz"
+sha256 = "cf0251eb5f3545cce365b727a4a56a2f1292f1ef29245c2045c83e28f8a1df42"
+strip_components = 1
+description = "Simplifies the drawing of beautiful curves"
+homepage = "https://github.com/fontforge/libspiro"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'elogind'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_check, post_install, pre_check
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: docbook-xsl, python3-Jinja2, shadow
+[package]
+name = "elogind"
+version = "252.39"
+archive = "https://github.com/elogind/elogind/archive/v252.39.tar.gz"
+sha256 = "5789c9d483dc236fbf72143dc9989329c399b6a507892c160b3c5852913123d5"
+strip_components = 1
+description = "Standalone logind fork"
+homepage = "https://github.com/elogind/elogind"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["acl", "dbus", "eudev", "glib", "libcap", "libseccomp", "pam"]
+patches = ["patches/SEEK_DATA.patch", "patches/getdents.patch", "patches/gshadow.patch", "patches/id-nobody.patch", "patches/musl-basename.patch", "patches/rlim-cur.patch", "patches/sigfillset.patch", "patches/statx.patch", "patches/strerror_r.patch", "patches/strerror_r_1.patch", "patches/tests.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcgroup-controller=elogind", "-Ddefault-hierarchy=legacy", "-Ddefault-kill-user-processes=false", "-Dman=true", "-Dpolkit=true"]
+tools = ["gperf", "m4", "pkg-config"]
+deps = ["gettext", "libxslt"]

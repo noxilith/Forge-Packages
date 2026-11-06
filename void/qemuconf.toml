@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'qemuconf'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_target, conf_files
+[package]
+name = "qemuconf"
+version = "0.2.1"
+archive = "https://github.com/Gottox/qemuconf/archive/v0.2.1.tar.gz"
+sha256 = "8b57872e6f7d281e7ed7d142ff05efb50e2fbe2c46e656a30fbb1705b4382548"
+strip_components = 1
+description = "Simple qemu launcher with config file support"
+homepage = "https://github.com/Gottox/qemuconf"
+license = "MIT"
+deps = ["qemu"]
+
+[build]
+system = "make"

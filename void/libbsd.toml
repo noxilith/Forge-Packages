@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libbsd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libbsd"
+version = "0.12.2"
+archive = "https://libbsd.freedesktop.org/releases/libbsd-0.12.2.tar.xz"
+sha256 = "b88cc9163d0c652aaf39a99991d974ddba1c3a9711db8f1b5838af2a14731014"
+strip_components = 1
+description = "Provides useful functions commonly found on BSD system"
+homepage = "https://libbsd.freedesktop.org/"
+license = "ISC, MIT, Beerware, BSD-2-Clause, BSD-3-Clause, BSD-4-Clause"
+deps = ["libmd"]
+
+[build]
+system = "autotools"

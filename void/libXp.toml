@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXp"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/lib/libXp-1.0.4.tar.xz"
+sha256 = "1f19e3b8e82a34a8fd9889a7d9af0abe8588cb03fb57c37c569634cf3b9df1a4"
+strip_components = 1
+description = "X Print Service Extension Library"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXext", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]

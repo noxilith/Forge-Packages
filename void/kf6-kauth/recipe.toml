@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kauth'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kauth"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kauth-6.30.0.tar.xz"
+sha256 = "60b75e02abc2bfbb247c586e3ab94def7ecd7b4e1ddb8260358951d84d9ea8c9"
+strip_components = 1
+description = "KDE Execute actions as privileged user"
+homepage = "https://invent.kde.org/frameworks/kauth"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcoreaddons", "kf6-kwindowsystem", "polkit-qt6"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "qt6-base"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libmbim'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libmbim"
+version = "1.34.0"
+archive = "https://gitlab.freedesktop.org/mobile-broadband/libmbim/-/archive/1.34.0/libmbim-1.34.0.tar.bz2"
+sha256 = "2671244f03325bf6633a69ae8931be223c32e08beac6b2e147b4b768fe5e4684"
+strip_components = 1
+description = "MBIM modem protocol helper library"
+homepage = "https://www.freedesktop.org/wiki/Software/libmbim/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["bash-completion", "glib", "libgudev"]
+
+[build]
+system = "meson"
+configure_args = ["-Dintrospection=true"]
+tools = ["pkg-config"]

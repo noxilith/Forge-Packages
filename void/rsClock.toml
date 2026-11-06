@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rsClock'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rsClock"
+version = "0.1.12"
+archive = "https://github.com/valebes/rsClock/archive/refs/tags/v0.1.12.tar.gz"
+sha256 = "b8b03978a79ec8262ae7c2d3d1d358e5d555b3d90624ff2c0fdaf87a91fdd609"
+strip_components = 1
+description = "Simple terminal clock written in Rust"
+homepage = "https://github.com/valebes/rsClock"
+license = "MIT"
+
+[build]
+system = "cargo"

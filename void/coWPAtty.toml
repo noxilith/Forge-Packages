@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'coWPAtty'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_install_args
+[package]
+name = "coWPAtty"
+version = "4.8"
+archive = "https://github.com/joswr1ght/cowpatty/archive/4.8.tar.gz"
+sha256 = "8aae67f4823edb76dff036808137888d2479477ec1e52aa86d6cecd26d58aa23"
+strip_components = 1
+description = "WPA-PSK dictionary attack"
+homepage = "https://github.com/joswr1ght/cowpatty"
+license = "BSD-3-Clause"
+deps = ["libpcap", "openssl"]
+
+[build]
+system = "make"

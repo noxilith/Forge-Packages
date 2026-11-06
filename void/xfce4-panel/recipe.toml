@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xfce4-panel'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "xfce4-panel"
+version = "4.20.7"
+archive = "https://archive.xfce.org/src/xfce/xfce4-panel/4.20/xfce4-panel-4.20.7.tar.bz2"
+sha256 = "696e3eff0b1b5bfa8ba90fd7afdea58f5b06e5547840a7443d11388f2fd578ea"
+strip_components = 1
+description = "Next generation panel for the XFCE desktop environment"
+homepage = "https://docs.xfce.org/xfce/xfce4-panel/start"
+license = "GPL-2.0-or-later"
+deps = ["exo", "garcon", "glib", "gtk+3", "gtk-layer-shell", "libdbusmenu-glib", "libwnck", "libxfce4ui", "libxfce4util", "libxfce4windowing", "xfconf"]
+patches = ["patches/valadeps.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

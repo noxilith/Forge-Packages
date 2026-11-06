@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gpu-screen-recorder-ui'. Review before relying on it.
+# hooks not translated: post_patch
+[package]
+name = "gpu-screen-recorder-ui"
+version = "1.10.8"
+archive = "https://dec05eba.com/snapshot/gpu-screen-recorder-ui.git.1.10.8.tar.gz"
+sha256 = "59a6e9c44f67e288d8c0981633aabcf3c74c12767278fa075c2a582ecefb65eb"
+strip_components = 1
+description = "ShadowPlay-like UI for gpu-screen-recorder"
+homepage = "https://git.dec05eba.com/gpu-screen-recorder-ui/about"
+license = "GPL-3.0-only, OFL-1.1, CC-BY-SA-3.0, CC0-1.0, CC-BY-4.0"
+deps = ["dbus", "gpu-screen-recorder", "gpu-screen-recorder-notification", "libX11", "libXcomposite", "libXcursor", "libXext", "libXfixes", "libXi", "libXrandr", "libXrender", "libcap", "libdrm", "libglvnd", "pulseaudio", "wayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils"]

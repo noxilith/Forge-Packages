@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'writerperfect'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, libabw, libcdr, libetonyek, libfreehand, libpagemaker, libvisio
+[package]
+name = "writerperfect"
+version = "0.9.6"
+archive = "https://downloads.sourceforge.net/sourceforge/libwpd/writerperfect-0.9.6.tar.xz"
+sha256 = "1fe162145013a9786b201cb69724b2d55ff2bf2354c3cd188fd4466e7fc324e6"
+strip_components = 1
+description = "Tools for exporting various file formats to ODF or EPUB"
+homepage = "https://sourceforge.net/p/libwpd/wiki/writerperfect/"
+license = "LGPL-2.1-or-later"
+deps = ["libe-book", "libepubgen", "libgsf", "libmspub", "libmwaw", "libodfgen", "librevenge", "libwpd", "libwpg", "libwps"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-werror"]
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'uftrace'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses, pandoc
+[package]
+name = "uftrace"
+version = "0.20"
+archive = "https://github.com/namhyung/uftrace/archive/v0.20.tar.gz"
+sha256 = "03189061130693b274a4d0af47c4a3135d4a496ca111b78233593bfcb3d3720f"
+strip_components = 1
+description = "Function graph tracer for user-space"
+homepage = "https://github.com/namhyung/uftrace"
+license = "GPL-2.0-only"
+deps = ["capstone", "elfutils"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

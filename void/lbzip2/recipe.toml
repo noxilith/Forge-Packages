@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'lbzip2'. Review before relying on it.
+[package]
+name = "lbzip2"
+version = "2.5"
+archive = "https://fossies.org/linux/privat/lbzip2-2.5.tar.gz"
+sha256 = "46c75ee93cc95eedc6005625442b2b8e59a2bef3ba80987d0491f055185650e9"
+strip_components = 1
+description = "Parallel bzip2 compression utility"
+homepage = "http://lbzip2.org/"
+license = "GPL-3.0-or-later"
+patches = ["patches/fseterr.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'hexchat'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: dbus-glib, libcanberra, pciutils, perl, python3-cffi
+[package]
+name = "hexchat"
+version = "2.16.2"
+archive = "https://github.com/hexchat/hexchat/archive/v2.16.2.tar.gz"
+sha256 = "486d73cdb6a89fa91cfbe242107901d06e777bea25956a7786c4a831a2caa0e3"
+strip_components = 1
+description = "GTK+ based IRC client successor of Xchat"
+homepage = "https://hexchat.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "enchant2", "gtk+", "iso-codes", "libnotify", "libproxy", "openssl"]
+patches = ["patches/url-percent-escape.patch", "patches/url_delim.patch", "patches/whox_colon.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddbus=enabled", "-Dtls=enabled", "-Dwith-python=python3", "-Dlibcanberra=enabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

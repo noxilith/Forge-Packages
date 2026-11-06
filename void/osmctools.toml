@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'osmctools'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "osmctools"
+version = "0.9"
+archive = "https://gitlab.com/osm-c-tools/osmctools/-/archive/0.9/osmctools-0.9.tar.gz"
+sha256 = "2f5298be5b4ba840a04f360c163849b34a31386ccd287657885e21268665f413"
+strip_components = 1
+description = "Tools to convert, filter and update OpenStreetMap data files"
+homepage = "https://gitlab.com/osm-c-tools/osmctools"
+license = "AGPL-3.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"

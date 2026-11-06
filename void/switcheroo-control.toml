@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'switcheroo-control'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "switcheroo-control"
+version = "3.0"
+archive = "https://gitlab.freedesktop.org/hadess/switcheroo-control/-/archive/3.0/power-profiles-daemon-3.0.tar.gz"
+sha256 = "f58ab3d265c6ed3abeea6113d850fbc6ffb07216d20a2f342e2a91675b01ac05"
+strip_components = 1
+description = "D-Bus service to check the availability of dual-GPU"
+homepage = "https://gitlab.freedesktop.org/hadess/switcheroo-control"
+license = "GPL-3.0-or-later"
+deps = ["glib", "libdrm", "libgudev", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

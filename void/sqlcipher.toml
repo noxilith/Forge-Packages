@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sqlcipher'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libreadline8, tcl
+[package]
+name = "sqlcipher"
+version = "4.6.1"
+archive = "https://github.com/sqlcipher/sqlcipher/archive/v4.6.1.tar.gz"
+sha256 = "d8f9afcbc2f4b55e316ca4ada4425daf3d0b4aab25f45e11a802ae422b9f53a3"
+strip_components = 1
+description = "SQLite extension that provides transparent 256-bit AES encryption"
+homepage = "https://www.zetetic.net/sqlcipher/"
+license = "BSD-3-Clause"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-tempstore=yes"]

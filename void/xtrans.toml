@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xtrans'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xtrans"
+version = "1.6.0"
+archive = "https://www.x.org/releases/individual/lib/xtrans-1.6.0.tar.gz"
+sha256 = "936b74c60b19c317c3f3cb1b114575032528dbdaf428740483200ea874c2ca0a"
+strip_components = 1
+description = "Network API translation layer to insulate X"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

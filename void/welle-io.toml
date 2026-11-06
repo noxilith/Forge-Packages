@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'welle-io'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: fftw, qt5, qt6-charts, qt6-multimedia, qt6-tools, vim
+[package]
+name = "welle-io"
+version = "2.7"
+archive = "https://github.com/AlbrechtL/welle.io/archive/v2.7.tar.gz"
+sha256 = "191687c163a2dc69a49beef8d3fa1ba85114e7a046f6718290e54d4b163bdbaf"
+strip_components = 1
+description = "DAB/DAB+ Software Defined Radio (SDR)"
+homepage = "https://www.welle.io/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "faad2", "lame", "mpg123", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

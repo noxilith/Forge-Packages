@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'UxPlay'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: avahi
+[package]
+name = "UxPlay"
+version = "1.73.6"
+archive = "https://github.com/FDH2/UxPlay/archive/refs/tags/v1.73.6.tar.gz"
+sha256 = "3a1a754bc7ed4b0f72b6237aa4d769238b9c20a71b651bc3fe9ac679e2a67f18"
+strip_components = 1
+description = "AirPlay Unix mirroring server"
+homepage = "https://github.com/FDH2/UxPlay"
+license = "GPL-3.0-or-later"
+deps = ["gst-libav", "gst-plugins-bad1", "gst-plugins-base1", "gst-plugins-good1", "gstreamer1", "libX11", "libplist", "openssl"]
+
+[build]
+system = "cmake"
+configure_args = ["-DNO_MARCH_NATIVE=ON"]
+tools = ["pkg-config"]

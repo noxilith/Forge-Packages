@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ibus-hangul'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "ibus-hangul"
+version = "1.5.5"
+archive = "https://github.com/libhangul/ibus-hangul/releases/download/1.5.5/ibus-hangul-1.5.5.tar.xz"
+sha256 = "a5aac88286cd18960229860e3e1a778978a7aeaa484ad9acfa48284b87fdc3bb"
+strip_components = 1
+description = "Korean input engine for IBus"
+homepage = "https://github.com/libhangul/ibus-hangul"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "ibus", "libhangul", "librsvg", "python3-gobject"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "swig"]

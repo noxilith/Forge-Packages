@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'krfb'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "krfb"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/krfb-26.08.1.tar.xz"
+sha256 = "4f84ade2d03a0452fa9f9553b95101c24b86b7eebc2e81d3f1d5fea904dd41dd"
+strip_components = 1
+description = "KDE Desktop Sharing"
+homepage = "https://kde.org/applications/en/system/org.kde.krfb"
+license = "GPL-2.0-or-later, GFDL-1.2-only, LGPL-2.1-or-later"
+deps = ["kf6-kcompletion", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdnssd", "kf6-kdoctools", "kf6-ki18n", "kf6-knotifications", "kf6-kstatusnotifieritem", "kf6-kwallet", "kf6-kwayland", "kf6-kwidgetsaddons", "kf6-kxmlgui", "kpipewire", "libXtst", "libvncserver", "pipewire", "plasma-wayland-protocols", "qt6-base", "xcb-util-image"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "wayland"]

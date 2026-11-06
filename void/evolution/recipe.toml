@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'evolution'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool, itstool, libcanberra, libwebkit2gtk41, ytnef
+[package]
+name = "evolution"
+version = "3.56.2"
+archive = "https://download.gnome.org/sources/evolution/3.56/evolution-3.56.2.tar.xz"
+sha256 = "7dfdc9aeb2dab326dabfdc1f8577c4ecc123a12da0012f8c64a726065a3c0b2b"
+strip_components = 1
+description = "Integrated mail, addressbook and calendaring for GNOME"
+homepage = "https://wiki.gnome.org/Apps/Evolution"
+license = "LGPL-2.1-or-later, LGPL-3.0-or-later, GPL-2.0-or-later"
+deps = ["NetworkManager", "clutter-gtk", "cmark", "enchant2", "evolution-data-server", "gnome-desktop", "gnome-keyring", "gspell", "libgweather", "libnotify", "libsoup3"]
+patches = ["patches/attachments.patch", "patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_AUTOAR=OFF", "-DENABLE_LIBCRYPTUI=OFF", "-DENABLE_GTKSPELL=OFF", "-DENABLE_TEXT_HIGHLIGHT=OFF", "-DENABLE_PST_IMPORT=OFF", "-DENABLE_WEATHER=ON", "-DWITH_ENCHANT_VERSION=2"]
+tools = ["pkg-config"]
+deps = ["glib"]

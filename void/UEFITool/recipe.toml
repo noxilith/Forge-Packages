@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'UEFITool'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "UEFITool"
+version = "A76"
+archive = "https://github.com/LongSoft/UEFITool/archive/A76.tar.gz"
+sha256 = "46298af3490c8c7700b83da58648f0683f09e04a61c006d5c2fe62954d4360bf"
+strip_components = 1
+description = "UEFI firmware image viewer and editor"
+homepage = "https://github.com/LongSoft/UEFITool/"
+license = "BSD-2-Clause"
+deps = ["qt6-declarative"]
+patches = ["patches/use-system-libs.patch"]
+
+[build]
+system = "cmake"
+deps = ["qt6-base"]

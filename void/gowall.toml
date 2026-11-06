@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gowall'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "gowall"
+version = "0.2.1"
+archive = "https://github.com/Achno/gowall/archive/refs/tags/v0.2.1.tar.gz"
+sha256 = "11bef4f3b6126388124a55333ab3594a23f14bef0045b0ca6a34e1944e58f07e"
+strip_components = 1
+description = "Tool to convert an image to any color-scheme/pallete"
+homepage = "https://github.com/Achno/gowall"
+license = "MIT"
+
+[build]
+system = "go"

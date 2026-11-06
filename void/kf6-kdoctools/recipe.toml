@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'kf6-kdoctools'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xml, docbook-xsl, kf6-base, perl-URI, qt6-tools
+[package]
+name = "kf6-kdoctools"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kdoctools-6.30.0.tar.xz"
+sha256 = "b90b42ab222a3034729e517d0c06258abf6bdc28591ec78ad56f24aebbaaed94"
+strip_components = 1
+description = "KDE Create documentation from DocBook"
+homepage = "https://invent.kde.org/frameworks/kdoctools"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-karchive", "kf6-ki18n", "libxslt"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

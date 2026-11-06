@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'grantlee5'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "grantlee5"
+version = "5.3.1"
+archive = "https://github.com/steveire/grantlee/archive/v5.3.1.tar.gz"
+sha256 = "ba288ae9ed37ec0c3622ceb40ae1f7e1e6b2ea89216ad8587f0863d64be24f06"
+strip_components = 1
+description = "Qt5 string template engine based on the Django template system"
+homepage = "https://github.com/steveire/grantlee"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "cmake"

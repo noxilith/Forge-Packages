@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ctwm'. Review before relying on it.
+# 6 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "ctwm"
+version = "4.1.0"
+archive = "https://ctwm.org/dist/ctwm-4.1.0.tar.xz"
+sha256 = "dffc4724dda6d5637e96c44e476aee87850ff144312f589dd856e1e8bf192029"
+strip_components = 1
+description = "Claude's Tab Window Manager"
+homepage = "https://ctwm.org"
+license = "MIT"
+deps = ["libICE", "libSM", "libX11", "libXext", "libXmu", "libXpm", "libXrandr", "libXt"]
+
+[build]
+system = "cmake"
+tools = ["flex", "m4"]

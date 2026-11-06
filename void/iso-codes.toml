@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'iso-codes'. Review before relying on it.
+[package]
+name = "iso-codes"
+version = "4.20.1"
+archive = "https://ftp.debian.org/debian/pool/main/i/iso-codes/iso-codes_4.20.1.orig.tar.xz"
+sha256 = "5d551f3ddb32548c4321e9011720fd97751af0107592f79ebffc939bd32f2268"
+strip_components = 1
+description = "List of country, language and currency names"
+homepage = "https://salsa.debian.org/iso-codes-team/iso-codes"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "meson"
+deps = ["gettext"]

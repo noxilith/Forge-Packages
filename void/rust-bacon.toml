@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rust-bacon'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rust-bacon"
+version = "3.22.0"
+archive = "https://github.com/Canop/bacon/archive/refs/tags/v3.22.0.tar.gz"
+sha256 = "ee6ea9784bc14e404a3dd11c2deddb4b75d597e29b645a57773011945a664f8d"
+strip_components = 1
+description = "Background rust code checker"
+homepage = "https://dystroy.org/bacon/"
+license = "AGPL-3.0-only"
+
+[build]
+system = "cargo"

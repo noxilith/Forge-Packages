@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libiec61883'. Review before relying on it.
+[package]
+name = "libiec61883"
+version = "1.2.0"
+archive = "https://www.kernel.org/pub/linux/libs/ieee1394/libiec61883-1.2.0.tar.xz"
+sha256 = "d1e02c7e276fac37313a2f8c1c33d7a9e19282ff16f32e72435428ff5121f09e"
+strip_components = 1
+description = "High level API for streaming DV, MPEG-2 and audio over IEEE 1394"
+homepage = "http://www.kernel.org/pub/linux/libs/ieee1394/"
+license = "LGPL-2.1"
+deps = ["libraw1394"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

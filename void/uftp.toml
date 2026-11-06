@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'uftp'. Review before relying on it.
+[package]
+name = "uftp"
+version = "5.0.3"
+archive = "https://downloads.sourceforge.net/sourceforge/uftp-multicast/source-tar/uftp-5.0.3.tar.gz"
+sha256 = "cb8668c19b1f10bc63a16ffa893e205dc3ec86361037d477d8003260ebc40080"
+strip_components = 1
+description = "Encrypted multicast file transfer program"
+homepage = "http://uftp-multicast.sourceforge.net"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "make"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'engrampa'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "engrampa"
+version = "1.28.2"
+archive = "https://pub.mate-desktop.org/releases/1.28/engrampa-1.28.2.tar.xz"
+sha256 = "1e9977c23745bf8843a37f315171d9af97814a0971aeac3d774f017650ac09ef"
+strip_components = 1
+description = "Archive manipulator for MATE"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["caja", "cpio", "desktop-file-utils", "file", "glib", "gtk+3", "json-glib", "libICE", "libSM", "libarchive"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-magic", "--disable-packagekit"]
+tools = ["pkg-config"]
+deps = ["gettext"]

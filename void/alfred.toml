@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'alfred'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, CFLAGS
+# needs, but Forge has no recipe for yet: batman-adv
+[package]
+name = "alfred"
+version = "2026.1"
+archive = "https://downloads.open-mesh.org/batman/stable/sources/alfred/alfred-2026.1.tar.gz"
+sha256 = "45dfbcb8a7cbbaaee3e12607a46601dd86ce5225072535e9b49da40bbf02b489"
+strip_components = 1
+description = "Daemon for distributing arbitrary information over a batman mesh"
+homepage = "https://www.open-mesh.org/projects/alfred/wiki"
+license = "GPL-2.0-or-later, MIT"
+deps = ["libcap", "libnl3"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["which"]

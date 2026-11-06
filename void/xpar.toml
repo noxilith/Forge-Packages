@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xpar'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "xpar"
+version = "2.0"
+archive = "https://github.com/iczelia/xpar/releases/download/2.0/xpar-2.0.tar.gz"
+sha256 = "12890dfcf32ef5b8a40f054f252721deeaded9fd89a5893001c1cac0614f5fbd"
+strip_components = 1
+description = "Error/erasure code system guarding data integrity"
+homepage = "https://github.com/iczelia/xpar"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-lto"]
+tools = ["nasm"]

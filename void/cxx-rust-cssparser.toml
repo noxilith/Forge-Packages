@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cxx-rust-cssparser'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "cxx-rust-cssparser"
+version = "1.1.0"
+archive = "https://download.kde.org/stable/cxx-rust-cssparser/cxx-rust-cssparser-1.1.0.tar.xz"
+sha256 = "c88f883f67d132240f7ef5c8b8fe4f743a79c448b98ac88f2be3b68264840358"
+strip_components = 1
+description = "Library for parsing CSS using the Rust cssparser crate"
+homepage = "https://invent.kde.org/libraries/cxx-rust-cssparser"
+license = "LGPL-2.1-only, LGPL-3.0-only"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DUSE_CORROSION_CXXBRIDGE=OFF"]
+deps = ["corrosion", "extra-cmake-modules"]

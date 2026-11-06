@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'xterm'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libutempter, ncurses
+[package]
+name = "xterm"
+version = "412"
+archive = "https://invisible-mirror.net/archives/xterm/xterm-412.tgz"
+sha256 = "b48bc780c1cbc14f6d89269f7e593712af6095876960d650be28b55e5dad65a6"
+strip_components = 1
+description = "X Terminal Emulator"
+homepage = "https://invisible-island.net/xterm/"
+license = "MIT, X11"
+deps = ["libXaw", "libXft", "libxkbfile"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-wide-chars", "--enable-88-color", "--enable-broken-osc", "--enable-256-color", "--enable-luit", "--enable-paste64", "--enable-ansi-color", "--enable-mini-luit", "--enable-readline-mouse", "--enable-broken-st", "--enable-narrowproto", "--enable-load-vt-fonts", "--enable-i18n", "--disable-full-tgetent", "--disable-imake", "--enable-doublechars", "--enable-freetype", "--enable-tcap-query", "--enable-logging", "--enable-dabbrev", "--with-pkg-config=yes", "--enable-exec-xterm", "--with-utempter", "--with-xterm-kbs=DEL", "--enable-backarrow-is-erase", "--enable-sixel-graphics"]
+tools = ["pkg-config"]

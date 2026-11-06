@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libxml++3.0'. Review before relying on it.
+[package]
+name = "libxml++3.0"
+version = "3.0.1"
+archive = "https://download.gnome.org/sources/libxml++/3.0/libxml++-3.0.1.tar.xz"
+sha256 = "19dc8d21751806c015179bc0b83f978e65c878724501bfc0b6c1bcead29971a6"
+strip_components = 1
+description = "C++ bindings for libxml2"
+homepage = "http://libxmlplusplus.sourceforge.net/"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "glibmm", "libsigc++", "libxml2"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]

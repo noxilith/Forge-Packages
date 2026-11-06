@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'umoci'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "umoci"
+version = "0.6.0"
+archive = "https://github.com/opencontainers/umoci/archive/refs/tags/v0.6.0.tar.gz"
+sha256 = "400a26c5f7ac06e40af907255e0e23407237d950e78e8d7c9043a1ad46da9ae5"
+strip_components = 1
+description = "Umoci Modifies Open Container Images"
+homepage = "https://umo.ci"
+license = "Apache-2.0"
+
+[build]
+system = "go"
+deps = ["go-md2man"]

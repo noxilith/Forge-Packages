@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wike'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebkit2gtk41, python3-requests
+[package]
+name = "wike"
+version = "3.0.1"
+archive = "https://github.com/hugolabe/Wike/archive/refs/tags/3.0.1.tar.gz"
+sha256 = "e59c9e6b11db1c1a9c3f07ba58639a0a11762aa5220d37cdce9eb5dc74d90112"
+strip_components = 1
+description = "Wikipedia Reader for the GNOME Desktop"
+homepage = "https://github.com/hugolabe/Wike"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "libadwaita", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

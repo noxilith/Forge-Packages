@@ -1,0 +1,23 @@
+# Imported from Void Linux's template for 'llvm23'. Review before relying on it.
+# 20 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build, pre_configure, pre_install
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: libffi, lua54, python3-MyST-Parser, python3-Sphinx, python3-markdown-it, python3-mdit-py-plugins, python3-sphinx-automodapi, python3-sphinx-markdown-tables, python3-yaml
+[package]
+name = "llvm23"
+version = "23.1.4"
+archive = "https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-23.1.4.tar.gz"
+sha256 = "3e1c70b30f623976c2046d94b8eeab6cac536f107914cb4ed7bac572a03131db"
+strip_components = 1
+description = "LLVM Compiler Infrastructure Project - Version 23"
+homepage = "https://www.llvm.org"
+license = "Apache-2.0 AND NCSA AND custom:Apache-2.0-with-llvm-exception"
+deps = ["elfutils", "libedit", "libxml2", "z3", "zlib"]
+patches = ["patches/SmallVector.patch", "patches/always-set-a-larger-stack-size-explicitly.patch", "patches/armv7l-is-armhf.patch", "patches/clang-001-fix-unwind-chain-inclusion.patch", "patches/clang-003-ppc64-dynamic-linker-path.patch", "patches/compiler-rt-sanitizer-supported-arch.patch", "patches/cross-compiler-as-configured.patch", "patches/disable-lldb-docs.patch", "patches/fix-build-scudo-standalone-tests.patch", "patches/fix-runtimes-cross-build.patch", "patches/flang-disable-native-128bit-float.patch", "patches/install-llvm-min-tblgen.patch", "patches/libcxx-armv67.patch", "patches/libcxx-musl.patch", "patches/libcxx-ssp-nonshared.patch", "patches/libcxxabi-dl.patch", "patches/lldb-tblgen-build-cross.patch", "patches/llvm-001-musl.patch", "patches/llvm-004-override-opt.patch", "patches/llvm-005-ppc-bigpic.patch", "patches/llvm-006-aarch64-mf_exec.patch", "patches/openmp-target-libdirs.patch", "patches/z3-libs.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release", "-Wno-dev", "-DENABLE_LINKER_BUILD_ID=ON", "-DCOMPILER_RT_DEFAULT_TARGET_ONLY=ON", "-DLIBOMP_ENABLE_SHARED=ON", "-DLIBOMP_INSTALL_ALIASES=OFF", "-DOPENMP_INSTALL_LIBDIR=lib", "-DOFFLOAD_INSTALL_LIBDIR=lib", "-DLLVM_BUILD_DOCS=ON", "-DLLVM_INCLUDE_DOCS=ON", "-DLLVM_ENABLE_SPHINX=ON", "-DLLVM_ENABLE_Z3_SOLVER=ON", "-DSPHINX_WARNINGS_AS_ERRORS=OFF", "-DLLVM_INSTALL_UTILS=ON", "-DLLVM_BUILD_LLVM_DYLIB=ON", "-DLLVM_LINK_LLVM_DYLIB=ON", "-DCLANG_LINK_CLANG_DYLIB=ON", "-DLLVM_ENABLE_RTTI=ON", "-DLLVM_ENABLE_FFI=ON", "-DLLVM_ENABLE_PER_TARGET_RUNTIME_DIR=OFF", "-DLLVM_USE_LINKER=lld", "-DLLVM_RUNTIME_TARGETS=default;amdgcn-amd-amdhsa-llvm;amdgcn-amd-amdhsa;nvptx64-nvidia-cuda;spirv32-unknown-unknown;spirv64-unknown-unknown;spirv32-unknown-vulkan;spirv64-unknown-vulkan", "-DRUNTIMES_spirv64-unknown-unknown_LIBCLC_USE_SPIRV_BACKEND=ON", "-DRUNTIMES_spirv32-unknown-unknown_LIBCLC_USE_SPIRV_BACKEND=ON", "-DRUNTIMES_amdgcn-amd-amdhsa_CMAKE_C_FLAGS=", "-DRUNTIMES_amdgcn-amd-amdhsa-llvm_CMAKE_C_FLAGS=", "-DRUNTIMES_nvptx64-nvidia-cuda_CMAKE_C_FLAGS=", "-DRUNTIMES_spirv32-unknown-vulkan_CMAKE_C_FLAGS=", "-DRUNTIMES_spirv64-unknown-vulkan_CMAKE_C_FLAGS=", "-DRUNTIMES_spirv32-unknown-unknown_CMAKE_C_FLAGS=", "-DRUNTIMES_spirv64-unknown-unknown_CMAKE_C_FLAGS=", "-DRUNTIMES_amdgcn-amd-amdhsa_CMAKE_CXX_FLAGS=", "-DRUNTIMES_amdgcn-amd-amdhsa-llvm_CMAKE_CXX_FLAGS=", "-DRUNTIMES_nvptx64-nvidia-cuda_CMAKE_CXX_FLAGS=", "-DRUNTIMES_spirv32-unknown-vulkan_CMAKE_CXX_FLAGS=", "-DRUNTIMES_spirv64-unknown-vulkan_CMAKE_CXX_FLAGS=", "-DRUNTIMES_spirv32-unknown-unknown_CMAKE_CXX_FLAGS=", "-DRUNTIMES_spirv64-unknown-unknown_CMAKE_CXX_FLAGS=", "-DRUNTIMES_amdgcn-amd-amdhsa_CMAKE_ASM_FLAGS=", "-DRUNTIMES_amdgcn-amd-amdhsa-llvm_CMAKE_ASM_FLAGS=", "-DRUNTIMES_nvptx64-nvidia-cuda_CMAKE_ASM_FLAGS=", "-DRUNTIMES_spirv32-unknown-vulkan_CMAKE_ASM_FLAGS=", "-DRUNTIMES_spirv64-unknown-vulkan_CMAKE_ASM_FLAGS=", "-DRUNTIMES_spirv32-unknown-unknown_CMAKE_ASM_FLAGS=", "-DRUNTIMES_spirv64-unknown-unknown_CMAKE_ASM_FLAGS="]
+subdir = "llvm"
+tools = ["perl", "pkg-config"]
+deps = ["patchelf", "swig"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'simgear'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, plib
+[package]
+name = "simgear"
+version = "2024.1.3"
+archive = "https://gitlab.com/flightgear/simgear/-/archive/2024.1.3/simgear-2024.1.3.tar.bz2"
+sha256 = "d395dcca2aa3875c5468f285f23d053e41e5e8d92576e16fd9801d685441115d"
+strip_components = 1
+description = "Simulation engine for FlightGear"
+homepage = "https://www.flightgear.org/"
+license = "GPL-2.0-or-later"
+deps = ["c-ares", "curl", "expat", "freetype", "giflib", "libfreeglut", "libjpeg-turbo", "libopenal", "osg", "xz"]
+patches = ["patches/musl-strerror.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTS=OFF", "-DSYSTEM_EXPAT=ON", "-DSIMGEAR_SHARED=ON"]
+tools = ["pkg-config"]

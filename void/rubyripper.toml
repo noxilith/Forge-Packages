@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rubyripper'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cdparanoia
+[package]
+name = "rubyripper"
+version = "0.7.0rc2"
+archive = "https://github.com/bleskodev/rubyripper/archive/v0.7.0rc2.tar.gz"
+sha256 = "977089c4a262936f9acf82ad1ab5932de97523ba31b61b5ccc1279a94eaea6ae"
+strip_components = 1
+description = "High quality CD ripper"
+homepage = "https://github.com/bleskodev/rubyripper"
+license = "GPL-3.0-or-later"
+deps = ["ruby"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-cli"]

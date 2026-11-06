@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lavalauncher'. Review before relying on it.
+[package]
+name = "lavalauncher"
+version = "2.1.1"
+archive = "https://git.sr.ht/~leon_plickat/lavalauncher/archive/v2.1.1.tar.gz"
+sha256 = "951edb0e00a118cd57d54349349d4898cfc18c6208a7c4d7f6e892eec1497c3b"
+strip_components = 1
+description = "Simple panel launcher for Wayland"
+homepage = "https://git.sr.ht/~leon_plickat/lavalauncher"
+license = "GPL-3.0-or-later"
+deps = ["cairo", "librsvg", "libxkbcommon", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

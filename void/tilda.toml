@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tilda'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "tilda"
+version = "2.0.0"
+archive = "https://github.com/lanoxx/tilda/archive/tilda-2.0.0.tar.gz"
+sha256 = "ff9364244c58507cd4073ac22e580a4cded048d416c682496c1b1788ee8a30df"
+strip_components = 1
+description = "GTK drop down terminal similar to guake"
+homepage = "https://github.com/lanoxx/tilda"
+license = "GPL-2.0-or-later"
+deps = ["confuse", "desktop-file-utils", "gtk+3", "vte3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

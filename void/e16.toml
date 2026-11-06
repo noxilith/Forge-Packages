@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'e16'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "e16"
+version = "1.0.30"
+archive = "https://downloads.sourceforge.net/sourceforge/enlightenment/e16-1.0.30.tar.gz"
+sha256 = "b8b7748a2c48c4c7c9758d9ad12b14f566d2bec38f2eda533e6d874f5ce9074c"
+strip_components = 1
+description = "Enlightenment DR16 window manager"
+homepage = "https://www.enlightenment.org/e16"
+license = "BSD-2-Clause"
+deps = ["alsa-lib", "imlib2", "libXcomposite", "libXdamage", "libXft", "libXinerama", "libXrandr", "libsndfile", "pango"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-sound=alsa"]
+tools = ["pkg-config"]
+deps = ["tar"]

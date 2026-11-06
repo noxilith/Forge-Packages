@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'arpwatch'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure, pre_install
+[package]
+name = "arpwatch"
+version = "3.9"
+archive = "https://ee.lbl.gov/downloads/arpwatch/arpwatch-3.9.tar.gz"
+sha256 = "832d20a5a508d9694a84a17e2627de3b3aa8b42b19ebdd97e264c511168f6eb4"
+strip_components = 1
+description = "Ethernet/FDDI station activity monitor"
+homepage = "https://ee.lbl.gov/"
+license = "BSD-3-Clause-LBNL"
+deps = ["libpcap"]
+patches = ["patches/missing-time_h.patch", "patches/no_getshort.patch"]
+
+[build]
+system = "autotools"

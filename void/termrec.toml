@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'termrec'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "termrec"
+version = "0.18"
+archive = "https://downloads.sourceforge.net/sourceforge/termrec/termrec-0.18.tar.xz"
+sha256 = "34701853dc26073b7cd5d202438998349c45a61a0f210948e79469bf3255a5e3"
+strip_components = 1
+description = "Record terminal"
+homepage = "http://angband.pl/termrec.html"
+license = "LGPL-2.0-or-later"
+deps = ["curl"]
+
+[build]
+system = "autotools"

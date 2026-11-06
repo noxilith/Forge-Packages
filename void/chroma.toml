@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'chroma'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "chroma"
+version = "2.27.0"
+archive = "https://github.com/alecthomas/chroma/archive/v2.27.0.tar.gz"
+sha256 = "45deb53e12a92cea43e797ed3d1edde0bf6ca7492d454126506e35e8822863a1"
+strip_components = 1
+description = "General purpose syntax highlighter"
+homepage = "https://github.com/alecthomas/chroma"
+license = "MIT"
+
+[build]
+system = "go"
+subdir = "cmd/chroma"

@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libaal'. Review before relying on it.
+[package]
+name = "libaal"
+version = "1.0.7"
+archive = "https://sourceforge.net/projects/reiser4/files/reiser4-utils/libaal/libaal-1.0.7.tar.gz"
+sha256 = "7c8568869d8f54268d690455278cdf5bc9ae9228aa33706017c570bbdaab9891"
+strip_components = 1
+description = "Reiser4 filesystem support library"
+homepage = "http://sourceforge.net/projects/reiser4/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

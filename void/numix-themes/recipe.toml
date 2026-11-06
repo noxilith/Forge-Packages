@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'numix-themes'. Review before relying on it.
+[package]
+name = "numix-themes"
+version = "2.6.7"
+archive = "https://github.com/numixproject/numix-gtk-theme/archive/2.6.7.tar.gz"
+sha256 = "2b997ad3eee0b802d0dd49dd772127fd3c337cca32d8863efd4897928e38879a"
+strip_components = 1
+description = "Modern flat theme with a combination of light and dark elements"
+homepage = "https://github.com/numixproject/numix-gtk-theme"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "gtk-engine-murrine"]
+patches = ["patches/sassc.patch"]
+
+[build]
+system = "make"
+deps = ["gdk-pixbuf", "glib", "sassc"]

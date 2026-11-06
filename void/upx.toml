@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'upx'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ucl
+[package]
+name = "upx"
+version = "5.1.1"
+archive = "https://github.com/upx/upx/releases/download/v5.1.1/upx-5.1.1-src.tar.xz"
+sha256 = "8eb914115b306fd9fd2110bd3d27ddb8ae7c5a03bb965f7d10f046a3a4ff9dfe"
+strip_components = 1
+description = "Ultimate Packer for eXecutables"
+homepage = "https://upx.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release"]
+tools = ["perl"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'dino'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libcanberra, sqlite, unzip
+[package]
+name = "dino"
+version = "0.5.1"
+archive = "https://github.com/dino/dino/archive/v0.5.1.tar.gz"
+sha256 = "2658b83abe1203b2dd4d6444519f615b979faaac7e97f384e655bff85769584b"
+strip_components = 1
+description = 'Modern XMPP ("Jabber") Chat Client using GTK/Vala'
+homepage = "https://github.com/dino/dino"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gnutls", "gpgme", "gspell", "gst-plugins-base1", "gtk4", "libadwaita", "libgcrypt", "libgee", "libnice", "libomemo-c", "libsoup3", "libsrtp", "qrencode", "webrtc-audio-processing-2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dplugin-notification-sound=enabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

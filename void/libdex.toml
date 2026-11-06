@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libdex'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libdex"
+version = "1.2.0"
+archive = "https://download.gnome.org/sources/libdex/1.2/libdex-1.2.0.tar.xz"
+sha256 = "69f5b244c21f6402831c3ab8af85a01772f72fb118677388436f12f32bfb06d9"
+strip_components = 1
+description = "Future-based programming for GLib-based applications"
+homepage = "https://gitlab.gnome.org/GNOME/libdex"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "gobject-introspection", "liburing"]
+
+[build]
+system = "meson"
+configure_args = ["-Dexamples=false"]
+tools = ["pkg-config"]
+deps = ["gettext"]

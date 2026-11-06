@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'irqbalance'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "irqbalance"
+version = "1.9.4"
+archive = "https://github.com/Irqbalance/irqbalance/archive/v1.9.4.tar.gz"
+sha256 = "f37bb2e27c2e9ec609131d0ee3f770185d3845f79ee6ef11477ea0ffb600a561"
+strip_components = 1
+description = "Handholding your interrupts for power and performance"
+homepage = "https://github.com/Irqbalance/irqbalance"
+license = "GPL-2.0-only"
+deps = ["glib", "libcap-ng"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

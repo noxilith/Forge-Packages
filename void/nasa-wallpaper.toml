@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'nasa-wallpaper'. Review before relying on it.
+[package]
+name = "nasa-wallpaper"
+version = "2.1.2"
+archive = "https://github.com/davidpob99/nasa-wallpaper/archive/refs/tags/v2.1.2.tar.gz"
+sha256 = "ab263f5017d55f4cd7a1d353b411c18cc70ac06c27f48b500e8c877cba6a91ec"
+strip_components = 1
+description = "Change your desktop background with a NASA image"
+homepage = "https://github.com/davidpob99/nasa-wallpaper/"
+license = "Apache-2.0"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

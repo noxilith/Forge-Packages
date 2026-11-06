@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'simde'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "simde"
+version = "0.8.2"
+archive = "https://github.com/simd-everywhere/simde/archive/refs/tags/v0.8.2.tar.gz"
+sha256 = "ed2a3268658f2f2a9b5367628a85ccd4cf9516460ed8604eed369653d49b25fb"
+strip_components = 1
+description = "Implementations of SIMD instruction sets"
+homepage = "https://github.com/simd-everywhere/simde"
+license = "MIT"
+
+[build]
+system = "meson"

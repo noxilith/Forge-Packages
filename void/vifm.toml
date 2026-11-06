@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'vifm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "vifm"
+version = "0.14.4"
+archive = "https://downloads.sourceforge.net/sourceforge/vifm/vifm-0.14.4.tar.bz2"
+sha256 = "40bc32ec10d829ada3d0297d33cd4f302c520bb431287d544fc0a05ae45fdb1b"
+strip_components = 1
+description = "File manager with curses interface and Vim-like environment"
+homepage = "https://vifm.info/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "file"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-gtk"]
+tools = ["perl"]
+deps = ["mdocml"]

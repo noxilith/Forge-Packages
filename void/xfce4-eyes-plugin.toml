@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce4-eyes-plugin'. Review before relying on it.
+[package]
+name = "xfce4-eyes-plugin"
+version = "4.7.0"
+archive = "https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin/-/archive/xfce4-eyes-plugin-4.7.0/xfce4-eyes-plugin-xfce4-eyes-plugin-4.7.0.tar.gz"
+sha256 = "96a4e5c4c434deb91b0919ed68cb1b0ca0c6171a167c27f0eb390bff027cb021"
+strip_components = 1
+description = "Cursor-spying eyes for the Xfce4 panel"
+homepage = "https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

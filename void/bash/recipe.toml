@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'bash'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, CFLAGS, make_dirs
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "bash"
+version = "5.3"
+archive = "https://ftp.gnu.org/gnu/bash/bash-5.3.tar.gz"
+sha256 = "0d5cd86965f869a26cf64f4b71be7b96f90a3ba8b3d74e27e8e9d9d5550f31ba"
+strip_components = 1
+description = "GNU Bourne Again Shell"
+homepage = "https://www.gnu.org/software/bash/bash.html"
+license = "GPL-3.0-or-later"
+patches = ["patches/bash53-001.patch", "patches/bash53-002.patch", "patches/bash53-003.patch", "patches/bash53-004.patch", "patches/bash53-005.patch", "patches/bash53-006.patch", "patches/bash53-007.patch", "patches/bash53-008.patch", "patches/bash53-009.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-bash-malloc", "--with-curses", "--without-installed-readline"]
+tools = ["bison"]

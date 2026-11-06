@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'connman-gtk'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "connman-gtk"
+version = "1.1.1"
+archive = "https://github.com/jgke/connman-gtk/archive/v1.1.1.tar.gz"
+sha256 = "fc1da266c4216d34db7c38f7329c698b42666389ce32a8df58a818af9eee2262"
+strip_components = 1
+description = "GTK GUI for ConnMan"
+homepage = "https://github.com/jgke/connman-gtk"
+license = "GPL-2.0-or-later"
+deps = ["connman", "gettext", "gtk+3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["glib"]

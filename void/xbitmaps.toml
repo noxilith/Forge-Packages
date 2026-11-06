@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'xbitmaps'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xbitmaps"
+version = "1.1.4"
+archive = "https://www.x.org/releases/individual/data/xbitmaps-1.1.4.tar.xz"
+sha256 = "895722f136e21e728c52f2d99fd2dae95018b9ddad1bac1f29d61bcd6593721d"
+strip_components = 1
+description = "Common X11 bitmaps"
+homepage = "https://wiki.freedesktop.org/xorg/"
+license = "MIT"
+
+[build]
+system = "autotools"

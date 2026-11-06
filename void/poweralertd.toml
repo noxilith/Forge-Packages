@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'poweralertd'. Review before relying on it.
+[package]
+name = "poweralertd"
+version = "0.3.0"
+archive = "https://git.sr.ht/~kennylevinsen/poweralertd/archive/0.3.0.tar.gz"
+sha256 = "5b2a1d0fefab62e5ddb5784f2cd3d330f36b3cb5260936f5051f6ff89d8abc3f"
+strip_components = 1
+description = "UPower-powered power alerter"
+homepage = "https://git.sr.ht/~kennylevinsen/poweralertd"
+license = "GPL-3.0-or-later"
+deps = ["elogind", "upower"]
+
+[build]
+system = "meson"
+configure_args = ["-Dman-pages=enabled"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

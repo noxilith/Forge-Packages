@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nautilus-python'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "nautilus-python"
+version = "4.1.0"
+archive = "https://download.gnome.org/sources/nautilus-python/4.1.0}/nautilus-python-4.1.0.tar.xz"
+sha256 = "fc4a448bccb1a09b68865409b9e2aed171d28a2d5ac80f7be44f5fcca84ee0c1"
+strip_components = 1
+description = "Python bindings for the Nautilus extension framework"
+homepage = "https://wiki.gnome.org/Projects/NautilusPython"
+license = "GPL-2.0-or-later"
+deps = ["nautilus", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

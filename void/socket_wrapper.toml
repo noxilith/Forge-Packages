@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'socket_wrapper'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "socket_wrapper"
+version = "1.4.2"
+archive = "https://download.samba.org/pub/cwrap/socket_wrapper-1.4.2.tar.gz"
+sha256 = "0a08ec249dd9ffbb3b16d577b352d573561f57beeec3596182ac6ec8e46b9ab6"
+strip_components = 1
+description = "Library for passing all socket communications through unix sockets"
+homepage = "http://cwrap.org/socket_wrapper.html"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

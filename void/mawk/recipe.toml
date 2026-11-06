@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mawk'. Review before relying on it.
+[package]
+name = "mawk"
+version = "1.3.4.20260302"
+archive = "https://invisible-mirror.net/archives/mawk/mawk-1.3.4-20260302.tgz"
+sha256 = "e2c08a77d0a84a01f9be454d1ca3872d4f103f9ada683d075198b0c6e965633d"
+strip_components = 1
+description = "Interpreter for the AWK Programming Language"
+homepage = "https://invisible-island.net/mawk/mawk.html"
+license = "GPL-2.0-only"
+patches = ["patches/skip-nan-demo.patch"]
+
+[build]
+system = "autotools"

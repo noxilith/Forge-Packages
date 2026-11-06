@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xfce4-panel-profiles'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: python3-psutil
+[package]
+name = "xfce4-panel-profiles"
+version = "1.1.1"
+archive = "https://archive.xfce.org/src/apps/xfce4-panel-profiles/1.1/xfce4-panel-profiles-1.1.1.tar.xz"
+sha256 = "0126373a03778bb4894afa151de28d36bfc563ddab96d3bd7c63962350d34ba2"
+strip_components = 1
+description = "Simple application to manage Xfce panel layouts"
+homepage = "https://docs.xfce.org/apps/xfce4-panel-profiles/start"
+license = "GPL-3.0-only"
+deps = ["python3-gobject", "xfce4-panel"]
+
+[build]
+system = "autotools"
+configure_args = ["--python=python3"]
+deps = ["gettext", "tar"]

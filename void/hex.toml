@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hex'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# needs, but Forge has no recipe for yet: pandoc
+[package]
+name = "hex"
+version = "0.6.0"
+archive = "https://github.com/sitkevij/hex/archive/refs/tags/v0.6.0.tar.gz"
+sha256 = "7952ee2b6782e49259f82155c3b5287f1be72f15360a88e379c9270bd0d2416c"
+strip_components = 1
+description = "Futuristic take on hexdump"
+homepage = "https://github.com/sitkevij/hex"
+license = "MIT"
+
+[build]
+system = "cargo"

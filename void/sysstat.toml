@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'sysstat'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_configure
+# settings not translated: conf_files
+[package]
+name = "sysstat"
+version = "12.8.0"
+archive = "https://sysstat.github.io/sysstat-packages/sysstat-12.8.0.tar.xz"
+sha256 = "7fc1a2f7c90a04f7fadf199da2afdd8019e8d187c6ea863b0ff04b74b589c818"
+strip_components = 1
+description = "Collection of performance monitoring tools"
+homepage = "https://sysstat.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["lm_sensors"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-copy-only", "--disable-file-attr", "--with-systemdsystemunitdir=", "--enable-install-cron", "--enable-sensors"]
+tools = ["pkg-config"]
+deps = ["gettext"]

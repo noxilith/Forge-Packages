@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'R'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_check, pre_configure
+# needs, but Forge has no recipe for yet: bzip2, libreadline8, tcl, tk
+[package]
+name = "R"
+version = "4.6.1"
+archive = "https://cran.r-project.org/src/base/R-4/R-4.6.1.tar.gz"
+sha256 = "4da6e61d2c0aac5f14a2e7e432cb5fcc269efe83da4293050ba7f03dff4e2cf4"
+strip_components = 1
+description = "System for statistical computation and graphics"
+homepage = "https://www.r-project.org/"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "curl", "less", "libXmu", "libXt", "libdeflate", "libicu78", "libjpeg-turbo", "libpng", "libxml2", "pcre2", "tiff", "which", "xdg-utils", "xz", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-lapack", "--enable-R-shlib", "--with-tcltk", "--enable-memory-profiling", "LIBnn=lib"]
+tools = ["perl", "pkg-config"]
+deps = ["tar"]

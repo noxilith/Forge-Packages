@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'redir'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "redir"
+version = "3.3"
+archive = "https://github.com/troglobit/redir/archive/v3.3.tar.gz"
+sha256 = "7311731097aabd390bd4d8f390980278b16b25d0bae8e21a9e768cd824f846f7"
+strip_components = 1
+description = "Redirect TCP connections"
+homepage = "https://github.com/troglobit/redir"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"

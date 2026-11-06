@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'SPIRV-LLVM-Translator19'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "SPIRV-LLVM-Translator19"
+version = "19.1.23"
+archive = "https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/refs/tags/v19.1.23.tar.gz"
+sha256 = "7c47c694b3c24152eaf55770a134631deae9e7d271417da502ea970f731aa923"
+strip_components = 1
+description = "LLVM/SPIR-V bi-directional translator - LLVM 19"
+homepage = "https://github.com/KhronosGroup/SPIRV-LLVM-Translator"
+license = "NCSA"
+deps = ["SPIRV-Headers", "SPIRV-Tools", "llvm19"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_SKIP_RPATH=ON", "-DLLVM_LINK_LLVM_DYLIB=ON", "-DLLVM_SPIRV_INCLUDE_TESTS=OFF"]
+tools = ["pkg-config"]

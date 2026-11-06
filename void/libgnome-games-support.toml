@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libgnome-games-support'. Review before relying on it.
+[package]
+name = "libgnome-games-support"
+version = "1.8.2"
+archive = "https://download.gnome.org/sources/libgnome-games-support/1.8/libgnome-games-support-1.8.2.tar.xz"
+sha256 = "28434604a7b038731ac0231731388ff104f565bb2330cc24e78cda04cfd3ef7d"
+strip_components = 1
+description = "GNOME games shared code"
+homepage = "https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "libgee"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "gobject-introspection", "vala"]

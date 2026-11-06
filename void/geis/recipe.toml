@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'geis'. Review before relying on it.
+# hooks not translated: post_extract
+[package]
+name = "geis"
+version = "2.2.17"
+archive = "https://launchpad.net/geis/trunk/2.2.17/+download/geis-2.2.17.tar.xz"
+sha256 = "8a60f5683852094038904e690d23cc5a90a980fc52da67f0f28890baa25c70eb"
+strip_components = 1
+description = "Gesture Engine Interface and Support"
+homepage = "https://launchpad.net/geis"
+license = "GPL-3.0-only"
+deps = ["dbus", "frame", "grail", "libXi", "xorg-server"]
+patches = ["patches/fix-gcc6-indentation.patch", "patches/gcc-7.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

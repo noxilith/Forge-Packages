@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'uget'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "uget"
+version = "2.2.2"
+archive = "https://downloads.sourceforge.net/sourceforge/urlget/uget-2.2.2.tar.gz"
+sha256 = "5cf7f311ef59bd02b71e0ce750dd37a0299ef15f9f6c6e7e60ffd175409abfc2"
+strip_components = 1
+description = "GTK+ download manager"
+homepage = "http://ugetdm.com/"
+license = "LGPL-2.1-or-later"
+deps = ["curl", "gstreamer1", "gtk+3", "libnotify"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zinnia'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "zinnia"
+version = "0.06"
+archive = "https://downloads.sourceforge.net/sourceforge/zinnia/zinnia/0.06/zinnia-0.06.tar.gz"
+sha256 = "ece3af93f937282971634fd81d3e997f848e8cfa958220e26a4564ca064ac20b"
+strip_components = 1
+description = "OCR system for hand-written input"
+homepage = "https://taku910.github.io/zinnia/"
+license = "BSD-2-Clause"
+patches = ["patches/Fix-compile-error-of-std-make_pair-in-C-11.patch", "patches/minimum-distance-precision.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

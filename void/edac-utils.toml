@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'edac-utils'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "edac-utils"
+version = "0.18"
+archive = "https://github.com/grondo/edac-utils/archive/0.18.tar.gz"
+sha256 = "2a027dbde6c3095807c9fbfa0025bedad38fc839e9967707c1986089ff4c8750"
+strip_components = 1
+description = "Userspace helper for kernel EDAC drivers"
+homepage = "https://github.com/grondo/edac-utils"
+license = "GPL-2.0-or-later"
+deps = ["sysfsutils"]
+
+[build]
+system = "autotools"
+tools = ["perl"]

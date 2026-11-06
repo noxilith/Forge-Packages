@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xf86-input-wacom'. Review before relying on it.
+# settings not translated: lib32disabled
+[package]
+name = "xf86-input-wacom"
+version = "1.2.4"
+archive = "https://github.com/linuxwacom/xf86-input-wacom/releases/download/xf86-input-wacom-1.2.4/xf86-input-wacom-1.2.4.tar.bz2"
+sha256 = "cbc5fccda8994b9314e60da6933d8e5f901e4c3f208dd9fc09a611fe25b71a0d"
+strip_components = 1
+description = "Xorg Wacom tablet input driver"
+homepage = "https://github.com/linuxwacom/xf86-input-wacom"
+license = "GPL-2.0-only"
+deps = ["eudev", "libXi", "libXinerama", "libXrandr", "xorg-server"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

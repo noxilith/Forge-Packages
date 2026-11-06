@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'plasma-activities'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, kde-plasma-base, qt6-tools
+[package]
+name = "plasma-activities"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-activities-6.7.5.tar.xz"
+sha256 = "d93f31b6f33733ad3803098f4f622e55e3ef52cb5cd97e621a7b803e6f0e3f7c"
+strip_components = 1
+description = "Core components for the KDE's Activities System"
+homepage = "https://invent.kde.org/plasma/plasma-activities"
+license = "(LGPL-2.1-only OR LGPL-3.0-only) AND GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kwindowsystem", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules"]

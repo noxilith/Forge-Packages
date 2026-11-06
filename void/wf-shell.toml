@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wf-shell'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "wf-shell"
+version = "0.11.0"
+archive = "https://github.com/WayfireWM/wf-shell/releases/download/v0.11.0/wf-shell-0.11.0.tar.xz"
+sha256 = "8ba3698a6a136cdb85a666e7b597cd183337f05edaabf072cf2f290a2ffa4a3b"
+strip_components = 1
+description = "Wayfire shell with GTK-based panel and background client"
+homepage = "https://wayfire.org"
+license = "MIT"
+deps = ["alsa-lib", "gtk4-layer-shell", "gtkmm4", "libdbusmenu-glib", "pam", "pipewire", "pulseaudio", "wayfire", "wireplumber"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib", "gobject-introspection", "wayland"]

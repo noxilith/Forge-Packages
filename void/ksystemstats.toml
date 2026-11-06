@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ksystemstats'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "ksystemstats"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/ksystemstats-6.7.5.tar.xz"
+sha256 = "27cfb9a189244b897ae23f3a8681e7c4b45cc67ec27faff8961783edce16f1fc"
+strip_components = 1
+description = "Plugin based system monitoring daemon"
+homepage = "https://invent.kde.org/plasma/ksystemstats"
+license = "GPL-3.0-only,LGPL-3.0-only"
+deps = ["kf6-kcrash", "kf6-kdbusaddons", "kf6-kio", "kf6-networkmanager-qt", "kf6-solid", "libksysguard", "libnl3", "lm_sensors"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-base"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libtifiles2'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "libtifiles2"
+version = "1.1.7"
+archive = "https://downloads.sourceforge.net/sourceforge/tilp/tilp2-linux/tilp2-1.18/libtifiles2-1.1.7.tar.bz2"
+sha256 = "9ac63b49e97b09b30b37bbc84aeb15fa7967bceb944e56141c5cd5a528acc982"
+strip_components = 1
+description = "TI File format library"
+homepage = "https://www.ticalc.org"
+license = "GPL-2.0-or-later"
+deps = ["gettext", "libarchive", "libticonv"]
+
+[build]
+system = "autotools"
+tools = ["bison", "pkg-config"]
+deps = ["groff"]

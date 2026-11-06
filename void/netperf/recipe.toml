@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'netperf'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "netperf"
+version = "2.7.0"
+archive = "https://github.com/HewlettPackard/netperf/archive/netperf-2.7.0.tar.gz"
+sha256 = "4569bafa4cca3d548eb96a486755af40bd9ceb6ab7c6abd81cc6aa4875007c4e"
+strip_components = 1
+description = "Network benchmarking tool"
+homepage = "https://github.com/HewlettPackard/netperf"
+license = "custom:Proprietary"
+patches = ["patches/include.patch"]
+
+[build]
+system = "autotools"

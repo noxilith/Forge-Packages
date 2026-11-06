@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kldap'. Review before relying on it.
+[package]
+name = "kldap"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kldap-26.08.1.tar.xz"
+sha256 = "e4be78254cfd19976544ad10981bae5aacdd96b778a9eaa4cec28be233722505"
+strip_components = 1
+description = "LDAP access API for KDE"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kdoctools", "kf6-kio", "qtkeychain-qt6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rpcsvc-proto'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "rpcsvc-proto"
+version = "1.4.1"
+archive = "https://github.com/thkukuk/rpcsvc-proto/releases/download/v1.4.1/rpcsvc-proto-1.4.1.tar.xz"
+sha256 = "9429e143bb8dd33d34bf0663f571d4d4a1103e1afd7c49791b367b7ae1ef7f35"
+strip_components = 1
+description = "Rpcsvc protocol definitions from glibc"
+homepage = "https://github.com/thkukuk/rpcsvc-proto"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'feh'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_args
+[package]
+name = "feh"
+version = "3.13.1"
+archive = "https://feh.finalrewind.org/feh-3.13.1.tar.bz2"
+sha256 = "785cd3bf51e05f6bb86ab0d649b7ed20e31892eb635bc5a25c963bf934088445"
+strip_components = 1
+description = "Fast and light imlib2-based image viewer"
+homepage = "https://feh.finalrewind.org"
+license = "MIT-feh"
+deps = ["curl", "giblib", "libXinerama", "libXt", "libexif", "libjpeg-turbo"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

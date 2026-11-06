@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nestopia'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "nestopia"
+version = "1.53.2"
+archive = "https://github.com/0ldsk00l/nestopia/archive/1.53.2.tar.gz"
+sha256 = "7783d2673ad496109e7dd3d75756cfef30c5b400409131b83b45c2fa3ddd735b"
+strip_components = 1
+description = "Portable NES/Famicom emulator written in C++"
+homepage = "http://0ldsk00l.ca/nestopia/"
+license = "GPL-2.0-only"
+deps = ["SDL2", "desktop-file-utils", "fltk", "gtk+3", "libao", "libarchive"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["autoconf-archive"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kpipewire'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, kde-plasma-base, qt6-tools
+[package]
+name = "kpipewire"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kpipewire-6.7.5.tar.xz"
+sha256 = "20af39d9450d495468c56a50930810d82137f7ccd3a710592e02b6f620758f55"
+strip_components = 1
+description = "Components relating to Flatpak 'pipewire' use in Plasma"
+homepage = "https://invent.kde.org/plasma/kpipewire"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kcoreaddons", "kf6-ki18n", "kf6-kwayland", "libepoxy", "libva", "pipewire", "plasma-wayland-protocols", "qt6-base", "qt6-declarative", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

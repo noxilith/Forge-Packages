@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kamera'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kamera"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kamera-26.08.1.tar.xz"
+sha256 = "3a81883e06889a3aefd97da8a7b7a0d0ecfeb7501d068c25e59fa606922e5e11"
+strip_components = 1
+description = "KDE integration for gphoto2 cameras"
+homepage = "https://apps.kde.org/kamera/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kdoctools", "kf6-ki18n", "kf6-kio", "kf6-kxmlgui", "libgphoto2", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

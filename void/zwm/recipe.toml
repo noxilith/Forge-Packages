@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'zwm'. Review before relying on it.
+[package]
+name = "zwm"
+version = "0.1.12"
+archive = "https://github.com/Yazeed1s/zwm/archive/refs/tags/0.1.12.tar.gz"
+sha256 = "331e0b0e646f162a8b83cde08077b6125141104bc84b7439ca4a3ec777a0004d"
+strip_components = 1
+description = "Minimal tiling window manager for X11"
+homepage = "https://github.com/Yazeed1s/zwm"
+license = "GPL-3.0-or-later"
+deps = ["libxcb", "wmctrl", "xcb-util", "xcb-util-cursor", "xcb-util-keysyms", "xcb-util-wm"]
+patches = ["patches/fix-makefile.patch", "patches/fix-musl.patch"]
+
+[build]
+system = "make"

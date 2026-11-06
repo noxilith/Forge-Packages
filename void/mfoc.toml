@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mfoc'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "mfoc"
+version = "0.10.7"
+archive = "https://github.com/nfc-tools/mfoc/archive/mfoc-0.10.7.tar.gz"
+sha256 = "2dfd8ffa4a8b357807680d190a91c8cf3db54b4211a781edc1108af401dbaad7"
+strip_components = 1
+description = "Mifare Classic Offline Cracker"
+homepage = "http://nfc-tools.org"
+license = "GPL-2.0-or-later"
+deps = ["libnfc"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'vmpk'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: docbook-xsl, qt5
+[package]
+name = "vmpk"
+version = "0.7.2"
+archive = "https://downloads.sourceforge.net/sourceforge/vmpk/0.7.2/vmpk-0.7.2.tar.bz2"
+sha256 = "e682eb8d0003839f4cc696f408d2d0004e7be0839260b0cb24d690ffdab670c4"
+strip_components = 1
+description = "MIDI events generator and receiver"
+homepage = "http://vmpk.sourceforge.net"
+license = "GPL-3.0-or-later"
+deps = ["drumstick"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["libxslt"]

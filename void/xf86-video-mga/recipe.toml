@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xf86-video-mga'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, LDFLAGS, lib32disabled
+[package]
+name = "xf86-video-mga"
+version = "2.1.0"
+archive = "https://www.x.org/releases/individual/driver/xf86-video-mga-2.1.0.tar.xz"
+sha256 = "7bf85dbf4efa17b7cdd483be8f61cf11fd73d0310514b6ae10d89358de63ab73"
+strip_components = 1
+description = "Xorg Matrox Graphics Adapter video driver"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["xorg-server"]
+patches = ["patches/no-vbe-non-x86.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

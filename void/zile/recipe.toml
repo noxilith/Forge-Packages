@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'zile'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "zile"
+version = "2.6.4"
+archive = "https://ftp.gnu.org/gnu/zile/zile-2.6.4.tar.gz"
+sha256 = "d5d44b85cb490643d0707e1a2186f3a32998c2f6eabaa9481479b65caeee57c0"
+strip_components = 1
+description = "Small, fast, and powerful Emacs clone"
+homepage = "http://www.gnu.org/software/zile"
+license = "GPL-3.0-or-later"
+deps = ["acl", "gc", "libatomic_ops", "libgee", "vala"]
+patches = ["patches/zile.1.in.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["gl_cv_func_memmem_works_fast=yes"]
+tools = ["pkg-config"]
+deps = ["help2man"]

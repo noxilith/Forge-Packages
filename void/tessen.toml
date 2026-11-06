@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'tessen'. Review before relying on it.
+[package]
+name = "tessen"
+version = "2.2.1"
+archive = "https://git.sr.ht/~ayushnix/tessen/refs/download/v2.2.1/tessen-2.2.1.tar.gz"
+sha256 = "31d510d5ffac5825bc7e63f13283c5d432eb102db2d2483ee937c9135c8cfc04"
+strip_components = 1
+description = "Interactive menu to autotype and copy pass and gopass data"
+homepage = "https://git.sr.ht/~ayushnix/tessen"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"
+deps = ["scdoc"]

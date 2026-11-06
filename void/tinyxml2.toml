@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'tinyxml2'. Review before relying on it.
+[package]
+name = "tinyxml2"
+version = "11.0.0"
+archive = "https://github.com/leethomason/tinyxml2/archive/11.0.0.tar.gz"
+sha256 = "5556deb5081fb246ee92afae73efd943c889cef0cafea92b0b82422d6a18f289"
+strip_components = 1
+description = "Simple, small and efficient C++ XML parser"
+homepage = "http://www.grinninglizard.com/tinyxml2/index.html"
+license = "Zlib"
+
+[build]
+system = "cmake"
+configure_args = ["-Dtinyxml2_SHARED_LIBS=true"]

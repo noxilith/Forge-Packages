@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kfind'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-qt5compat
+[package]
+name = "kfind"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kfind-26.08.1.tar.xz"
+sha256 = "946df18e730a5b97c421816163533b3511aae361d69e4e9856dc5b9f549be8af"
+strip_components = 1
+description = "Find files and folders"
+homepage = "https://www.kde.org/applications/utilities/kfind/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-karchive", "kf6-kcrash", "kf6-kdoctools", "kf6-kfilemetadata", "kf6-ki18n", "kf6-kio", "kf6-kwidgetsaddons", "kf6-kxmlgui"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

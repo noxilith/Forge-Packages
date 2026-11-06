@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'newsraft'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "newsraft"
+version = "0.38"
+archive = "https://codeberg.org/newsraft/newsraft/archive/newsraft-0.38.tar.gz"
+sha256 = "60da202448e104687c429a6d7b227ec7d038f7b906001dda594c78847efcc378"
+strip_components = 1
+description = "Feed reader with ncurses user interface"
+homepage = "https://codeberg.org/newsraft/newsraft"
+license = "ISC"
+deps = ["curl", "expat", "gumbo-parser"]
+
+[build]
+system = "make"
+deps = ["scdoc"]

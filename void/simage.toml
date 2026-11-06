@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'simage'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "simage"
+version = "1.8.3"
+archive = "https://github.com/coin3d/simage/releases/download/v1.8.3/simage-1.8.3-src.tar.gz"
+sha256 = "ffc0d5a00b74d1e15655ad195bd535f0c0828c9d0f464c1ea4167799c79f6fe7"
+strip_components = 1
+description = "Library with image format loaders for image files as texture"
+homepage = "https://github.com/coin3d/simage"
+license = "0BSD"
+deps = ["giflib", "jasper", "libjpeg-turbo", "libpng", "libsndfile", "libvorbis", "tiff"]
+
+[build]
+system = "cmake"

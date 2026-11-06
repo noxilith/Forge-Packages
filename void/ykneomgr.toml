@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ykneomgr'. Review before relying on it.
+# hooks not translated: post_extract, pre_configure
+[package]
+name = "ykneomgr"
+version = "0.1.8"
+archive = "https://developers.yubico.com/libykneomgr/Releases/libykneomgr-0.1.8.tar.gz"
+sha256 = "2749ef299a1772818e63c0ff5276f18f1694f9de2137176a087902403e5df889"
+strip_components = 1
+description = "Yubikey NEO Manager"
+homepage = "https://developers.yubico.com/libykneomgr/"
+license = "LGPL-3.0-or-later"
+deps = ["libzip", "pcsclite", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gengetopt", "gtk-doc", "help2man"]

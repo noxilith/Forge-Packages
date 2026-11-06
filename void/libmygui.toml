@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libmygui'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost, doxygen
+[package]
+name = "libmygui"
+version = "3.4.3"
+archive = "https://github.com/MyGUI/mygui/archive/MyGUI3.4.3.tar.gz"
+sha256 = "33c91b531993047e77cace36d6fea73634b8c17bd0ed193d4cd12ac7c6328abd"
+strip_components = 1
+description = "Fast, flexible and simple GUI"
+homepage = "http://mygui.info"
+license = "MIT"
+deps = ["freetype", "libX11", "ois"]
+
+[build]
+system = "cmake"
+configure_args = ["-DMYGUI_BUILD_DEMOS=OFF", "-DMYGUI_RENDERSYSTEM=1", "-DMYGUI_BUILD_TOOLS=OFF", "-DMYGUI_DONT_USE_OBSOLETE=ON"]
+tools = ["pkg-config"]

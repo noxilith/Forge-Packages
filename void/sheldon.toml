@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sheldon'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "sheldon"
+version = "0.8.5"
+archive = "https://github.com/rossmacarthur/sheldon/archive/refs/tags/0.8.5.tar.gz"
+sha256 = "a32e181667ec8bf235f0c50f2671d3c0d78fbdd7502a61e2f88c7deacb534b20"
+strip_components = 1
+description = "Fast, configurable shell plugin manager"
+homepage = "https://sheldon.cli.rs/"
+license = "Apache-2.0 OR MIT"
+deps = ["curl", "libgit2-1.9", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

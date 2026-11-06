@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libucontext'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "libucontext"
+version = "1.5"
+archive = "https://github.com/kaniini/libucontext/archive/refs/tags/libucontext-1.5.tar.gz"
+sha256 = "b3ca8d7d3e5c926a90ddb691f8a52ccb364069a745304a40c29f3b0d39b80c93"
+strip_components = 1
+description = "Compatibility layer providing ucontext functions"
+homepage = "https://github.com/kaniini/libucontext"
+license = "ISC"
+
+[build]
+system = "meson"
+configure_args = ["-Ddocs=true"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

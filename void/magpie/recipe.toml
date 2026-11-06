@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'magpie'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gnome-settings-daemon, libcanberra, mesa
+[package]
+name = "magpie"
+version = "0.9.4"
+archive = "https://github.com/BuddiesOfBudgie/magpie/releases/download/v0.9.4/magpie-0.9.4.tar.xz"
+sha256 = "348a572a78e6f199761fa45ebc2a7a8bbf267b8960d32cc4bf6fd4e6012dabdb"
+strip_components = 1
+description = "X11 window manager and compositor library for Budgie Desktop"
+homepage = "https://github.com/BuddiesOfBudgie/magpie"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "elogind", "glib", "gnome-desktop", "graphene", "gsettings-desktop-schemas", "gtk+3", "json-glib", "libSM", "libXtst", "libgudev", "libinput", "libwacom", "pipewire", "startup-notification"]
+patches = ["patches/fixudev.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Degl_device=true", "-Dudev=true", "-Dnative_backend=true", "-Dprofiler=false", "-Dintrospection=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "xorg-server", "zenity"]

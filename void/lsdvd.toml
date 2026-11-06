@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lsdvd'. Review before relying on it.
+[package]
+name = "lsdvd"
+version = "0.17"
+archive = "https://downloads.sourceforge.net/sourceforge/lsdvd/lsdvd-0.17.tar.gz"
+sha256 = "7d2c5bd964acd266b99a61d9054ea64e01204e8e3e1a107abe41b1274969e488"
+strip_components = 1
+description = "Console application that displays the content of a dvd"
+homepage = "http://sourceforge.net/projects/lsdvd/"
+license = "GPL-2.0-only"
+deps = ["libdvdread"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

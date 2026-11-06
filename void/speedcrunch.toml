@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'speedcrunch'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "speedcrunch"
+version = "0.12.0"
+archive = "https://bitbucket.org/heldercorreia/speedcrunch/get/release-0.12.0.tar.bz2"
+sha256 = "59bfc6747060dd15c43c1e9afffdb708c15e3c2a7c36855b83952f33ba451d85"
+strip_components = 1
+description = "High-precision scientific calculator"
+homepage = "https://speedcrunch.org/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "cmake"
+subdir = "src"

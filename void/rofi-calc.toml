@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rofi-calc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rofi-calc"
+version = "2.5.0"
+archive = "https://github.com/svenstaro/rofi-calc/archive/v2.5.0.tar.gz"
+sha256 = "92cf4a1b2a42067d162cc7e87556644dab5db335cb3a65bc30e97467d7347b75"
+strip_components = 1
+description = "Do live calcualtions in rofi"
+homepage = "https://github.com/svenstaro/rofi-calc"
+license = "MIT"
+deps = ["libqalculate", "rofi"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

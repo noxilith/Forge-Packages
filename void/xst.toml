@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xst'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "xst"
+version = "0.10.0"
+archive = "https://github.com/gnotclub/xst/archive/v0.10.0.tar.gz"
+sha256 = "b8d36a0851c8b8cd9b2b95bfe4562e21a625f4e06f23edae936bb257b1b9832a"
+strip_components = 1
+description = "St fork with support for xresources"
+homepage = "https://github.com/gnotclub/xst"
+license = "MIT"
+deps = ["desktop-file-utils", "fontconfig", "libXext", "libXft"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

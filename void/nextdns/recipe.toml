@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nextdns'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "nextdns"
+version = "1.43.5"
+archive = "https://github.com/nextdns/nextdns/archive/refs/tags/v1.43.5.tar.gz"
+sha256 = "743f64d876c2c7afdae47716af1d41a6c5ec21adae74a318e5eb9319023a38c2"
+strip_components = 1
+description = "NextDNS CLI client (DoH Proxy)"
+homepage = "https://nextdns.io/"
+license = "MIT"
+patches = ["patches/Don't touch files managed by xbps.patch"]
+
+[build]
+system = "go"

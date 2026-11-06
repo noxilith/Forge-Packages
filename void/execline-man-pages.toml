@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'execline-man-pages'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "execline-man-pages"
+version = "2.9.3.0.3"
+archive = "https://github.com/flexibeast/execline-man-pages/archive/v2.9.3.0.3.tar.gz"
+sha256 = "d390a3e4c67b7d63a3507954bc43708c7c753b8b921c426d191e97711a073ba9"
+strip_components = 1
+description = "Mdoc versions of the documentation for the execline suite"
+homepage = "https://github.com/flexibeast/execline-man-pages"
+license = "ISC"
+
+[build]
+system = "make"
+deps = ["mdocml"]

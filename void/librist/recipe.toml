@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'librist'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: mbedtls
+[package]
+name = "librist"
+version = "0.2.20"
+archive = "https://code.videolan.org/rist/librist/-/archive/v0.2.20/librist-v0.2.20.tar.gz"
+sha256 = "9e40eeb87f014790531ad41326cc271b930a65962e4b15231b301fc59b29fe31"
+strip_components = 1
+description = "Reliable Internet Stream Transport (RIST)"
+homepage = "https://code.videolan.org/rist/librist"
+license = "BSD-2-Clause"
+patches = ["patches/disable-unrelibale-tests.patch"]
+
+[build]
+system = "meson"

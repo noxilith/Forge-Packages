@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'sterm'. Review before relying on it.
+[package]
+name = "sterm"
+version = "20200306"
+archive = "https://github.com/wentasah/sterm/archive/20200306.tar.gz"
+sha256 = "61c963e7b1f2caf7024567fb101ec839aea3fa6cf0eedf881ac86c7917694776"
+strip_components = 1
+description = "Simple serial terminal"
+homepage = "https://rtime.felk.cvut.cz/gitweb/sojka/sterm.git"
+license = "GPL-3.0-only"
+
+[build]
+system = "make"

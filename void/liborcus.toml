@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'liborcus'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "liborcus"
+version = "0.21.0"
+archive = "https://gitlab.com/api/v4/projects/orcus%2Forcus/packages/generic/source/0.21.0/liborcus-0.21.0.tar.xz"
+sha256 = "1c6e473d6b8a63d61d0e6874a1762d6f0e0e78338d763e48ac93126ecde19b37"
+strip_components = 1
+description = "Library for processing spreadsheet documents"
+homepage = "https://gitlab.com/orcus/orcus"
+license = "MPL-2.0"
+deps = ["libixion", "mdds", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

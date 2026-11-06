@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'foomatic-db-nonfree'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "foomatic-db-nonfree"
+version = "20210104"
+archive = "https://github.com/OpenPrinting/foomatic-db-nonfree/archive/6ddae02ac89240c019f8b5026cfe70e30fd2b3db.tar.gz"
+sha256 = "958c1067a24c37cb753ee2b4aeb9e8325629f4363ce9e108f1f6d0f828e5b7c5"
+strip_components = 1
+description = "OpenPrinting printer support - nonfree database"
+homepage = "https://wiki.linuxfoundation.org/openprinting/database/foomatic"
+license = "custom:Various Nonfree"
+
+[build]
+system = "autotools"
+deps = ["tar", "xmlstarlet"]

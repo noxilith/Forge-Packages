@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bitmap'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bitmap"
+version = "1.1.2"
+archive = "https://www.x.org/releases/individual/app/bitmap-1.1.2.tar.xz"
+sha256 = "5c6d2637244c575a9cc65a6b1ee15ced480ef0184821aceeab29650daf323c12"
+strip_components = 1
+description = "Bitmap editor and converter utilities for X"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXaw", "libXmu", "libXt", "xbitmaps"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

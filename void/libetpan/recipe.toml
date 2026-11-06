@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libetpan'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: db
+[package]
+name = "libetpan"
+version = "1.9.3"
+archive = "https://github.com/dinhviethoa/libetpan/archive/1.9.3.tar.gz"
+sha256 = "591f97d5102f600e668502fe1dd5a341e910a840d8ea62e689a3a79d8bfbac87"
+strip_components = 1
+description = "Mail Framework library for C language"
+homepage = "http://www.etpan.org/libetpan.html"
+license = "BSD-3-Clause"
+deps = ["curl", "expat", "libsasl", "openssl", "zlib"]
+patches = ["patches/fix-musl.patch", "patches/implicit-declaration.patch", "patches/multilib.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ipv6", "--with-curl", "--with-expat", "--with-openssl", "--with-zlib", "--with-sasl"]

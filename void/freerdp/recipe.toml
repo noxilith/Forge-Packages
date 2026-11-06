@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'freerdp'. Review before relying on it.
+# 11 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: cups, mit-krb5
+[package]
+name = "freerdp"
+version = "3.32.2"
+archive = "https://github.com/FreeRDP/FreeRDP/archive/3.32.2.tar.gz"
+sha256 = "9ccb8357bf0188044a460de775c7ea289ca7d2a2a917eca0f0a7c4dc9c8b08ea"
+strip_components = 1
+description = "Free RDP (Remote Desktop Protocol) client"
+homepage = "https://www.freerdp.com/"
+license = "Apache-2.0"
+deps = ["alsa-lib", "fuse3", "libXcursor", "libXdamage", "libXinerama", "libXrandr", "libXv", "libfido2", "libicu78", "libjpeg-turbo", "libusb", "libxkbfile", "openssl", "pam", "pulseaudio", "uriparser"]
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-Wno-dev", "-DCMAKE_BUILD_TYPE=Release", "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG", "-DCMAKE_CXX_FLAGS_DEBUG=-DNDEBUG", "-DCMAKE_CXX_FLAGS_RELWITHDEBINFO=-DNDEBUG", "-DCMAKE_C_FLAGS_RELEASE=-DNDEBUG", "-DCMAKE_C_FLAGS_DEBUG=-DNDEBUG", "-DCMAKE_C_FLAGS_RELWITHDEBINFO=-DNDEBUG", "-DPKG_CONFIG_RELOCATABLE=OFF", "-DRDTK_FORCE_STATIC_BUILD=ON", "-DCHANNEL_URBDRC_CLIENT=ON", "-DWITH_BINARY_VERSIONING=ON", "-DWITH_ALSA=ON", "-DWITH_CHANNELS=ON", "-DWITH_CLIENT_CHANNELS=ON", "-DWITH_CUPS=ON", "-DWITH_FREERDP_DEPRECATED_COMMANDLINE=ON", "-DWITH_FUSE=ON", "-DWITH_GSTREAMER_1_0=OFF", "-DWITH_ICU=ON", "-DWITH_JPEG=ON", "-DWITH_LIBSYSTEMD=OFF", "-DWITH_PULSE=ON", "-DWITH_SAMPLE=OFF", "-DWITH_SERVER=ON", "-DWITH_SERVER_CHANNELS=ON", "-DWITH_WINPR_TOOLS=ON", "-DWITH_X11=ON", "-DWITH_XCURSOR=ON", "-DWITH_XEXT=ON", "-DWITH_XI=ON", "-DWITH_XINERAMA=ON", "-DWITH_XKBFILE=ON", "-DWITH_XRENDER=ON", "-DWITH_XV=ON", "-DCHANNEL_RDPEWA=ON", "-DCHANNEL_RDPEWA_CLIENT=ON", "-DWITH_WAYLAND=OFF", "-DWITH_PAM=ON", "-DWITH_VERBOSE_WINPR_ASSERT=OFF"]
+tools = ["pkg-config"]
+deps = ["wayland"]

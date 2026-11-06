@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'plank'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "plank"
+version = "0.11.89"
+archive = "https://launchpad.net/plank/1.0/0.11.89/+download/plank-0.11.89.tar.xz"
+sha256 = "a662a46eaeffbd40661d1f36abd2589f7a98baef4b918876b872047b7ca59d9d"
+strip_components = 1
+description = "Elegant, simple, clean dock"
+homepage = "https://launchpad.net/plank"
+license = "GPL-3.0-or-later"
+deps = ["bamf", "gnome-menus", "libgee", "libwnck", "vala"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-apport"]
+tools = ["pkg-config"]
+deps = ["glib", "libxml2"]

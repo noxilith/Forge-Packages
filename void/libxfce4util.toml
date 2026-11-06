@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libxfce4util'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "libxfce4util"
+version = "4.20.1"
+archive = "https://archive.xfce.org/src/xfce/libxfce4util/4.20/libxfce4util-4.20.1.tar.bz2"
+sha256 = "84bfc4daab9e466193540c3665eee42b2cf4d24e3f38fc3e8d1e0a2bebe3b8f1"
+strip_components = 1
+description = "Utility library for the Xfce4 desktop environment"
+homepage = "https://xfce.org/"
+license = "LGPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

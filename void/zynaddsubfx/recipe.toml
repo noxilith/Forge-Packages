@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'zynaddsubfx'. Review before relying on it.
+# hooks not translated: post_build, post_install, post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: doxygen, fftw, jack, portaudio
+[package]
+name = "zynaddsubfx"
+version = "3.0.6"
+archive = "https://downloads.sourceforge.net/sourceforge/zynaddsubfx/zynaddsubfx/3.0.6/zynaddsubfx-3.0.6.tar.bz2"
+sha256 = "cbd160778f6cf147f9b0487719edc5197a1404f46d7c7bfd89e153f0d8ce71ae"
+strip_components = 1
+description = "Open Source software synthesizer"
+homepage = "http://zynaddsubfx.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["fltk", "libXpm", "liblo", "mxml"]
+patches = ["patches/cmake-build-type-none.patch", "patches/fix-bogus-strstr.patch", "patches/fix-memset.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDefaultOutput=jack", "-DDefaultInput=jack", "-DGuiModule=fltk"]
+tools = ["pkg-config"]

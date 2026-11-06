@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'msitools'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "msitools"
+version = "0.106"
+archive = "https://download.gnome.org/sources/msitools/0.106/msitools-0.106.tar.xz"
+sha256 = "1ed34279cf8080f14f1b8f10e649474125492a089912e7ca70e59dfa2e5a659b"
+strip_components = 1
+description = "Inspect and build Windows Installer (.MSI) files"
+homepage = "https://wiki.gnome.org/msitools"
+license = "GPL-2.0-or-later"
+deps = ["gcab", "glib", "libgsf"]
+
+[build]
+system = "meson"
+tools = ["bison", "pkg-config"]
+deps = ["gettext", "vala"]

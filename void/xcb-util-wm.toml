@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xcb-util-wm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcb-util-wm"
+version = "0.4.2"
+archive = "https://xcb.freedesktop.org/dist/xcb-util-wm-0.4.2.tar.xz"
+sha256 = "62c34e21d06264687faea7edbf63632c9f04d55e72114aa4a57bb95e4f888a0b"
+strip_components = 1
+description = "Utility libraries for XC Binding - window-manager helpers for ICCCM"
+homepage = "https://xcb.freedesktop.org"
+license = "X11"
+deps = ["libxcb", "xcb-util"]
+
+[build]
+system = "autotools"
+tools = ["m4", "pkg-config"]

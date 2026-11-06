@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'x11vnc'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "x11vnc"
+version = "0.9.17"
+archive = "https://github.com/LibVNC/x11vnc/archive/0.9.17.tar.gz"
+sha256 = "3ab47c042bc1c33f00c7e9273ab674665b85ab10592a8e0425589fe7f3eb1a69"
+strip_components = 1
+description = "VNC server for real X displays"
+homepage = "http://www.karlrunge.com/x11vnc/"
+license = "GPL-2.0-or-later, x11vnc-openssl-exception"
+deps = ["libXdamage", "libXinerama", "libXrandr", "libXtst", "libjpeg-turbo", "libvncserver", "openssl", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

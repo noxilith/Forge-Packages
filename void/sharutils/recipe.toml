@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sharutils'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "sharutils"
+version = "4.15.2"
+archive = "https://ftp.gnu.org/gnu/sharutils/sharutils-4.15.2.tar.xz"
+sha256 = "2b05cff7de5d7b646dc1669bc36c35fdac02ac6ae4b6c19cb3340d87ec553a9a"
+strip_components = 1
+description = "Makes so-called shell archives out of many files"
+homepage = "http://www.gnu.org/software/sharutils"
+license = "GPL-3"
+patches = ["patches/CVE-2018-1000097.patch", "patches/fix-glibc-2.27.patch"]
+
+[build]
+system = "autotools"
+tools = ["perl"]

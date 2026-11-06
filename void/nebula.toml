@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'nebula'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, make_dirs
+[package]
+name = "nebula"
+version = "1.11.2"
+archive = "https://github.com/slackhq/nebula/archive/v1.11.2.tar.gz"
+sha256 = "0031d1ddd616f5e25dc29f4b67d6a0c58864251be17095a68d15e4d0edb54843"
+strip_components = 1
+description = "Scalable overlay networking tool"
+homepage = "https://github.com/slackhq/nebula"
+license = "MIT"
+
+[build]
+system = "go"

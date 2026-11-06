@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'strace'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "strace"
+version = "7.1"
+archive = "https://github.com/strace/strace/releases/download/v7.1/strace-7.1.tar.xz"
+sha256 = "81743ecf2a5b44186b2f5038afdc8beda7e5c70aed15b4fbfbcc6e9ece24490f"
+strip_components = 1
+description = "System Call Tracer"
+homepage = "https://strace.io/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-silent-rules"]

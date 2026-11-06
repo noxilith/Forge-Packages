@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fbterm'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "fbterm"
+version = "1.7.0"
+archive = "https://github.com/izmntuk/fbterm/archive/v1.7.tar.gz"
+sha256 = "68e9742b23d6f143d809a5930f5f22c7e55d7c14a4ab2c8a842e0b5c27b1f863"
+strip_components = 1
+description = "Fast frame buffer based terminal emulator"
+homepage = "https://github.com/izmntuk/fbterm"
+license = "GPL-2.0-or-later"
+deps = ["fontconfig", "gpm"]
+patches = ["patches/fix-gcc6-narrowing.patch", "patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gpm"]
+tools = ["pkg-config"]

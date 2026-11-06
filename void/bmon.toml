@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bmon'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "bmon"
+version = "5.0"
+archive = "https://github.com/tgraf/bmon/archive/v5.0.tar.gz"
+sha256 = "cd7f5fb366a8c32c0e33c79a5daae78edd273993d0edf1036638f269400cf012"
+strip_components = 1
+description = "Bandwidth monitor and rate estimator"
+homepage = "https://github.com/tgraf/bmon/"
+license = "BSD-2-Clause, MIT"
+deps = ["confuse", "libnl3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

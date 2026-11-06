@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'trojita'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "trojita"
+version = "0.7"
+archive = "https://downloads.sourceforge.net/sourceforge/trojita/trojita-0.7.tar.xz"
+sha256 = "e08da881721cafa00ecd772eaef6b99fd37d068cb703eeb532de0ed1ea0136d9"
+strip_components = 1
+description = "A fast Qt IMAP/SMPTP client"
+homepage = "http://trojita.flaska.net/"
+license = "GPL-2,GPL-3"
+deps = ["qt5-webkit", "zlib"]
+patches = ["patches/39772585033c1c0aff96f297e93de7be53f9b114.patch", "patches/QPainterPath.patch"]
+
+[build]
+system = "cmake"

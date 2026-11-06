@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'icann-rdap-cli'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "icann-rdap-cli"
+version = "1.0.1"
+archive = "https://github.com/icann/icann-rdap/archive/refs/tags/v1.0.1.tar.gz"
+sha256 = "cde23e68f4a80216187f80a658f583adc68ee3d81776bded7abe116b1198ea9f"
+strip_components = 1
+description = "ICANN implementation of the Registry Data Access Protocol (RDAP)"
+homepage = "https://github.com/icann/icann-rdap"
+license = "Apache-2.0 OR MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+subdir = "icann-rdap-cli"
+tools = ["pkg-config"]

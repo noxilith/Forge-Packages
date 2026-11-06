@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'source-highlight'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_configure, post_patch
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "source-highlight"
+version = "3.1.9"
+archive = "https://ftp.gnu.org/gnu/src-highlite/source-highlight-3.1.9.tar.gz"
+sha256 = "3a7fd28378cb5416f8de2c9e77196ec915145d44e30ff4e0ee8beb3fe6211c91"
+strip_components = 1
+description = "Convert source code to syntax highlighted document"
+homepage = "http://www.gnu.org/software/src-highlite/"
+license = "GPL-3.0-or-later"
+patches = ["patches/gcc-12.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-boost-regex=c"]

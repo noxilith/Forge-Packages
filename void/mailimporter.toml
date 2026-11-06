@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mailimporter'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "mailimporter"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/mailimporter-26.08.1.tar.xz"
+sha256 = "e3181bb3502a5433be41af82ade8012ae50f970ca4c2092068b0ab399b757752"
+strip_components = 1
+description = "Mail importer library"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["libkdepim", "pimcommon"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

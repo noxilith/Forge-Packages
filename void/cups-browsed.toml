@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cups-browsed'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: avahi-discover, cups
+[package]
+name = "cups-browsed"
+version = "2.1.1"
+archive = "https://github.com/OpenPrinting/cups-browsed/releases/download/2.1.1/cups-browsed-2.1.1.tar.xz"
+sha256 = "d185169a74e6a5731b6bd74cba8d269f34e5c71cb71ef1841f2fa91637ba1d58"
+strip_components = 1
+description = "Daemon to browse network for remote CUPS queues and IPP network printers"
+homepage = "https://github.com/OpenPrinting/cups-browsed"
+license = "Apache-2.0 WITH custom:GPL2-LGPL2-Exception"
+deps = ["glib", "libcupsfilters", "libppd"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

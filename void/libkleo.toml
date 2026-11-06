@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libkleo'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: boost, qt6-tools
+[package]
+name = "libkleo"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libkleo-26.08.1.tar.xz"
+sha256 = "57868f2f89ec307423d4986aa181380be58bea311e45fc29a617f7f0a32e4eec"
+strip_components = 1
+description = "KDE PIM cryptographic library"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["gpgme-qt6", "gpgmepp", "kf6-kitemmodels", "kpimtextedit"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

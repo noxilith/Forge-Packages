@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'goversion'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "goversion"
+version = "1.2.0"
+archive = "https://github.com/rsc/goversion/archive/v1.2.0.tar.gz"
+sha256 = "65e9c181995ed8c9207ea08d79a148ab53307b7fad2172a5a0764d6aa393a98e"
+strip_components = 1
+description = "Print version used to build Go executables"
+homepage = "https://github.com/rsc/goversion"
+license = "BSD-3-Clause"
+
+[build]
+system = "go"

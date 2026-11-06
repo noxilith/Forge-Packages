@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'reptyr'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "reptyr"
+version = "0.10.0"
+archive = "https://github.com/nelhage/reptyr/archive/reptyr-0.10.0.tar.gz"
+sha256 = "c6ffbc34a511ac00d072219bda30699e51f2f4eb483cbae9e32e981d49e8b380"
+strip_components = 1
+description = "Reparent a running program to a new terminal"
+homepage = "https://github.com/nelhage/reptyr"
+license = "MIT"
+
+[build]
+system = "make"

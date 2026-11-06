@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'aerc'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_build_tags, go_import_path
+# needs, but Forge has no recipe for yet: notmuch
+[package]
+name = "aerc"
+version = "0.22.0"
+archive = "https://git.sr.ht/~rjarry/aerc/archive/0.22.0.tar.gz"
+sha256 = "f1cd5e358fd836051d4d88c189ecaa025a108b729281985525b45b13bc49e70f"
+strip_components = 1
+description = "Terminal email client"
+homepage = "https://aerc-mail.org"
+license = "MIT"
+patches = ["patches/makefile-only-install.patch"]
+
+[build]
+system = "go"
+deps = ["scdoc"]

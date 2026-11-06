@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'supertuxkart'. Review before relying on it.
+# hooks not translated: post_extract
+# needs, but Forge has no recipe for yet: harfbuzz, hicolor-icon-theme, sqlite
+[package]
+name = "supertuxkart"
+version = "1.5"
+archive = "https://github.com/supertuxkart/stk-code/releases/download/1.5/SuperTuxKart-1.5-src.tar.gz"
+sha256 = "33cf8841e4ff4082d80b9248014295bbbea61d14683e86dff100e3ab8f7b27cb"
+strip_components = 1
+description = "Kart racing game featuring Tux and his friends"
+homepage = "https://supertuxkart.net"
+license = "GPL-3.0-or-later"
+deps = ["SDL2", "bluez", "curl", "desktop-file-utils", "freetype", "libenet", "libjpeg-turbo", "libogg", "libopenal", "libopenglrecorder", "libpng", "libvorbis", "mcpp", "openssl", "shaderc", "zlib"]
+patches = ["patches/system-certs.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

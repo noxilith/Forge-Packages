@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pa-applet'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: libcanberra
+[package]
+name = "pa-applet"
+version = "0.0.0.20140304"
+archive = "https://github.com/fernandotcl/pa-applet/archive/33b413b83234d457b9512219cf4c1020eb99a3de.tar.gz"
+sha256 = "db30c04a6954e1d138c6bc80739dae80d667a0af151b015db503e48fb30b0b7a"
+strip_components = 1
+description = "PulseAudio system tray applet with volume bar"
+homepage = "https://github.com/fernandotcl/pa-applet"
+license = "BSD-2-Clause"
+deps = ["gtk+3", "libnotify", "pulseaudio"]
+patches = ["patches/fix-volume-notification.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

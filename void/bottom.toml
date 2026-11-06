@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'bottom'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "bottom"
+version = "0.12.3"
+archive = "https://github.com/ClementTsang/bottom/archive/0.12.3.tar.gz"
+sha256 = "1c70894f0eceb7034075959ff3080cf4706c11d7c012912c24e777abe4e62b70"
+strip_components = 1
+description = "Yet another cross-platform graphical process/system monitor"
+homepage = "https://github.com/ClementTsang/bottom"
+license = "MIT"
+
+[build]
+system = "cargo"

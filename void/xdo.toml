@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xdo'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "xdo"
+version = "0.5.7"
+archive = "https://github.com/baskerville/xdo/archive/0.5.7.tar.gz"
+sha256 = "b661229f0457939d3867cca1664c5671ae959b309feb58abe9142229c8c7ffb4"
+strip_components = 1
+description = "Small X utility to perform elementary actions on windows"
+homepage = "https://github.com/baskerville/xdo"
+license = "BSD-2-Clause"
+deps = ["libxcb", "xcb-util-wm"]
+
+[build]
+system = "make"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-ksvg'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-svg, qt6-tools
+[package]
+name = "kf6-ksvg"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/ksvg-6.30.0.tar.xz"
+sha256 = "7b7aba4e9baa88bfb303977e139e8a105b5cd243443029ee773954307b51eb91"
+strip_components = 1
+description = "Components for handling SVGs"
+homepage = "https://invent.kde.org/frameworks/ksvg"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-karchive", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kirigami", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "qt6-base"]

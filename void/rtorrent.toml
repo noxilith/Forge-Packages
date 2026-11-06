@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'rtorrent'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: libcppunit, ncurses
+[package]
+name = "rtorrent"
+version = "0.16.20"
+archive = "https://github.com/rakshasa/rtorrent/archive/v0.16.20.tar.gz"
+sha256 = "a089a6f4d39091315da1c76e381ababf486ea9b0a9d60546368fd84cd1cf4da3"
+strip_components = 1
+description = "Ncurses BitTorrent client based on libTorrent"
+homepage = "https://github.com/rakshasa/rtorrent"
+license = "GPL-2.0-or-later"
+deps = ["libsigc++", "libtorrent", "xmlrpc-c"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-xmlrpc-c"]
+tools = ["pkg-config"]

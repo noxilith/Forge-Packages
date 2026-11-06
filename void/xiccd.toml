@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xiccd'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "xiccd"
+version = "0.4.1"
+archive = "https://github.com/agalakhov/xiccd/archive/v0.4.1.tar.gz"
+sha256 = "bd4077fa45bdb74e3e5e029b4361648459bbb67ecb0d762bc9df9f9cf26ea567"
+strip_components = 1
+description = "Simple bridge between colord and X"
+homepage = "https://github.com/agalakhov/xiccd"
+license = "GPL-3.0-or-later"
+deps = ["colord", "glib", "libX11", "libXrandr"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

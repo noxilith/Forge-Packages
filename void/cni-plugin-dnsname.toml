@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cni-plugin-dnsname'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+# needs, but Forge has no recipe for yet: dnsmasq
+[package]
+name = "cni-plugin-dnsname"
+version = "1.3.1"
+archive = "https://github.com/containers/dnsname/archive/v1.3.1.tar.gz"
+sha256 = "a9319a1829e242b4769697650f7df63a635eda7369ba659618d49056b78bf3ce"
+strip_components = 1
+description = "Name resolution for containers"
+homepage = "https://github.com/containers/dnsname"
+license = "Apache-2.0"
+
+[build]
+system = "go"

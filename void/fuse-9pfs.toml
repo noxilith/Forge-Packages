@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fuse-9pfs'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "fuse-9pfs"
+version = "0.4"
+archive = "https://github.com/ftrvxmtrx/9pfs/archive/0.4.tar.gz"
+sha256 = "6c0a4fd61c87524a444ac8f0050bb2874cb8696c802e15694ac1c5a6460dfbdb"
+strip_components = 1
+description = "FUSE client for 9p protocol"
+homepage = "https://github.com/ftrvxmtrx/9pfs"
+license = "ISC, MIT"
+deps = ["fuse"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

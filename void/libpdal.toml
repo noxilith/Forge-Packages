@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libpdal'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "libpdal"
+version = "2.10.2"
+archive = "https://github.com/PDAL/PDAL/releases/download/2.10.2/PDAL-2.10.2-src.tar.gz"
+sha256 = "1fa8156b0394136e891462507466fb8ee9f6fac98d3fe07f17e1fcdb53dbefd1"
+strip_components = 1
+description = "Point Data Abstraction Library"
+homepage = "https://pdal.io/"
+license = "BSD-3-Clause"
+deps = ["curl", "libgdal", "libgeotiff", "libunwind", "libxml2", "proj", "tiff", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cdrdao'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "cdrdao"
+version = "1.2.5"
+archive = "https://downloads.sourceforge.net/sourceforge/cdrdao/1.2.5/cdrdao-1.2.5.tar.bz2"
+sha256 = "d19b67c853c5dba2406afaab6cd788e77f35eebe634cac4679528477c7be01b6"
+strip_components = 1
+description = "Records audio or data CD-Rs in disk-at-once (DAO) mode"
+homepage = "http://cdrdao.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["lame", "libao", "libmad", "libvorbis"]
+patches = ["patches/fix-uninitialized-toc-file-name.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

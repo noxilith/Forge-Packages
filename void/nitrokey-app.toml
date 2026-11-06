@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nitrokey-app'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "nitrokey-app"
+version = "1.4.2"
+archive = "https://github.com/Nitrokey/nitrokey-app/releases/download/v1.4.2/nitrokey-app-v1.4.2.tar.gz"
+sha256 = "965c05409c0fb534b8092eb66a54bafd4cb1a2e50f15cf197f6527ae14747634"
+strip_components = 1
+description = "Management application for Nitrokey tokens"
+homepage = "https://github.com/Nitrokey/nitrokey-app"
+license = "GPL-3.0-only"
+deps = ["bash-completion", "cppcodec", "libnitrokey"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

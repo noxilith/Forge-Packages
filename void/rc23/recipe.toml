@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rc23'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "rc23"
+version = "2.0.8"
+archive = "https://codeberg.org/rc23/rc23/archive/v2.0.8.tar.gz"
+sha256 = "94793834f750471ceda456b41a82108eb020bd494d9d86b817248696043947b5"
+strip_components = 1
+description = "Alternative implementation of the plan 9 rc shell"
+homepage = "https://codeberg.org/rc23/rc23"
+license = "Zlib"
+patches = ["patches/static.patch"]
+
+[build]
+system = "make"

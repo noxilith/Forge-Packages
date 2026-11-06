@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ZMusic'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: fluidsynth
+[package]
+name = "ZMusic"
+version = "1.1.14"
+archive = "https://github.com/coelckers/ZMusic/archive/1.1.14.tar.gz"
+sha256 = "f04410fe4ea08136f37703e7715c27df4c8532ace1e721cf40c6f303a93acc54"
+strip_components = 1
+description = "GZDoom's music system"
+homepage = "https://github.com/coelckers/ZMusic"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "libsndfile", "mpg123", "zlib"]
+patches = ["patches/ppc-musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDYN_SNDFILE=OFF", "-DDYN_FLUIDSYNTH=OFF", "-DDYN_MPG123=OFF"]
+tools = ["pkg-config"]

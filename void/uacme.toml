@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'uacme'. Review before relying on it.
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "uacme"
+version = "1.8.1"
+archive = "https://github.com/ndilieto/uacme/archive/refs/tags/upstream/1.8.1.tar.gz"
+sha256 = "de7588577f8298dcb0d42dfaa9452a918fa692c4e165060207ac22f72fb0425d"
+strip_components = 1
+description = "Minimal ACMEv2 (Let's Encrypt) client written in plain C"
+homepage = "https://github.com/ndilieto/uacme"
+license = "GPL-3.0-or-later"
+deps = ["curl", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-maintainer-mode", "--with-openssl"]
+tools = ["pkg-config"]

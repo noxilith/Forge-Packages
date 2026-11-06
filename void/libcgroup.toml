@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libcgroup'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: make_dirs
+[package]
+name = "libcgroup"
+version = "3.0.0"
+archive = "https://github.com/libcgroup/libcgroup/releases/download/v3.0/libcgroup-3.0.0.tar.gz"
+sha256 = "8d284d896fca1c981b55850e92acd3ad9648a69227c028dda7ae3402af878edd"
+strip_components = 1
+description = "Library that abstracts the control group file system in Linux"
+homepage = "https://github.com/libcgroup/libcgroup"
+license = "LGPL-2.1-only"
+deps = ["pam"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-tests=no"]
+tools = ["flex"]

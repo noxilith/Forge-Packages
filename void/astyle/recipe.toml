@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'astyle'. Review before relying on it.
+# hooks not translated: post_build, post_configure, post_install
+[package]
+name = "astyle"
+version = "3.6.2"
+archive = "https://downloads.sourceforge.net/sourceforge/astyle/astyle/astyle-3.6.2.tar.bz2"
+sha256 = "f7e8e1ac4aa314a6645fa7016d882da381a8e1020c83462a2ca26cb25d8f3cbb"
+strip_components = 1
+description = "Free, fast and small formatter for C, C++, C#, and Java source code"
+homepage = "https://astyle.sourceforge.net"
+license = "MIT"
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"

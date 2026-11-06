@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'hidrd'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "hidrd"
+version = "0.2.0"
+archive = "https://github.com/DIGImend/hidrd/archive/0.2.0.tar.gz"
+sha256 = "0147993dedb3066873d22fab1dc3aafec78d8c5783d168cccc43126f0fc3b307"
+strip_components = 1
+description = "HID report descriptor I/O library and conversion tool"
+homepage = "https://github.com/DIGImend/hidrd"
+license = "GPL-2.0-or-later"
+patches = ["patches/0001-Replace-use-of-tempfile-with-mktemp-in-tests.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

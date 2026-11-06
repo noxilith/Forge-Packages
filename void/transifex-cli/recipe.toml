@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'transifex-cli'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "transifex-cli"
+version = "1.6.6"
+archive = "https://github.com/transifex/cli/archive/refs/tags/v1.6.6.tar.gz"
+sha256 = "f73997b885a0d50f5201e1ead9b15c371fc8139bb94bdc4ba510b4e9530b196b"
+strip_components = 1
+description = "Transifex command-line client"
+homepage = "https://github.com/transifex/cli"
+license = "Apache-2.0"
+patches = ["patches/disable-self-updates.patch"]
+
+[build]
+system = "go"

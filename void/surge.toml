@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'surge'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "surge"
+version = "0.8.6"
+archive = "https://github.com/SurgeDM/Surge/archive/refs/tags/v0.8.6.tar.gz"
+sha256 = "bbc1908eeefb3ebcab01b5dc33321c5c1d21662e712827887306896646477eb1"
+strip_components = 1
+description = "Blazing fast TUI download manager built in Go"
+homepage = "https://github.com/SurgeDM/Surge"
+license = "MIT"
+
+[build]
+system = "go"

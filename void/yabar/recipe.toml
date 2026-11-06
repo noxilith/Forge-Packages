@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'yabar'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "yabar"
+version = "0.4.0"
+archive = "https://github.com/geommer/yabar/archive/0.4.0.tar.gz"
+sha256 = "f8cc613413328af78944ccb8063a5ba8e6be11797a883c419876e973e102fed0"
+strip_components = 1
+description = "Modern and lightweight status bar for X window managers"
+homepage = "https://github.com/geommer/yabar"
+license = "MIT"
+deps = ["alsa-lib", "gdk-pixbuf", "libconfig", "pango", "xcb-util-wm"]
+patches = ["patches/gcc7.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["glib"]

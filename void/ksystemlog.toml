@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ksystemlog'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "ksystemlog"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/ksystemlog-26.08.1.tar.xz"
+sha256 = "f7307547bebaff4703023a747e9bc44df91db919ee1d17ba930df42f1ea13231"
+strip_components = 1
+description = "KDE System log viewer tool"
+homepage = "https://kde.org/applications/system/ksystemlog/"
+license = "GPL-2.0-or-later"
+deps = ["audit", "kf6-karchive", "kf6-kcompletion", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-ki18n", "kf6-kio", "kf6-kitemviews", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "kf6-kxmlgui"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools", "qt6-base"]

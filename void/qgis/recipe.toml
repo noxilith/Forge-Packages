@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'qgis'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: freexl, libspatialite, python3-Jinja2, python3-Pillow, python3-PyQt-builder, python3-Pygments, python3-dateutil, python3-numpy, python3-owslib, python3-packaging, python3-psycopg2, python3-pyqt6 (+17)
+[package]
+name = "qgis"
+version = "4.2.3"
+archive = "https://github.com/qgis/QGIS/archive/final-4_2_3.tar.gz"
+sha256 = "b847e671e89c17475238680f8c66f75e30394f18714411e3b2e70c02b603c234"
+strip_components = 1
+description = "Open Source Geographic Information System"
+homepage = "https://qgis.org"
+license = "GPL-2.0-only"
+deps = ["OpenCL-CLHPP", "draco", "exiv2", "expat", "geos", "gsl", "hdf5", "libblend2d", "libgdal", "libpdal", "librttopo", "libspatialindex", "libxml2", "libzip", "minizip", "netcdf", "ocl-icd", "openjpeg2", "postgresql18", "proj", "protobuf", "qca-qt6", "qt6-base", "qt6-declarative", "qtkeychain-qt6", "zlib"]
+patches = ["patches/cross-python.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTS=OFF", "-DWITH_3D=True", "-DWITH_PDAL=True", "-DWITH_PDF4QT=ON", "-DPDF4QT_INSTALL_TO_USR=OFF"]
+tools = ["bison", "flex", "pkg-config"]

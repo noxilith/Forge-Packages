@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'atomix'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "atomix"
+version = "44.0"
+archive = "https://download.gnome.org/sources/atomix/44/atomix-44.0.tar.xz"
+sha256 = "c8849317688d87da734c9063035631052007f2a8799b6c6cc915265880b55fb4"
+strip_components = 1
+description = "GNOME puzzle game where you build molecules"
+homepage = "https://wiki.gnome.org/Apps/Atomix"
+license = "GPL-2.0-or-later"
+deps = ["libgnome-games-support"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

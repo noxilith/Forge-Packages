@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kscreen'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, kde-plasma-base, qt6-sensors, qt6-tools
+[package]
+name = "kscreen"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kscreen-6.7.5.tar.xz"
+sha256 = "a1742210a0cf4ea76959f708c55180b2573648e9cd35cb4e38f349fe5694c9df"
+strip_components = 1
+description = "KDE screen management software"
+homepage = "https://invent.kde.org/plasma/kscreen"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kf6-kcmutils", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kimageformats", "kf6-kitemmodels", "kf6-kpackage", "kf6-ksvg", "kf6-kxmlgui", "layer-shell-qt", "libkf6screen", "libplasma", "plasma5support", "qt6-base", "wayland-protocols"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-declarative", "wayland"]

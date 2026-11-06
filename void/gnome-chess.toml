@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-chess'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-chess"
+version = "50.1"
+archive = "https://download.gnome.org/sources/gnome-chess/50/gnome-chess-50.1.tar.xz"
+sha256 = "dc29a330b8157cfac8d04a24c1afa848b6f0f4792454d8479d2bfeb7a3519298"
+strip_components = 1
+description = "GNOME chess user interface"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-chess"
+license = "GPL-3.0-or-later"
+deps = ["gnuchess", "gtk4", "libadwaita", "librsvg"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk+3", "vala"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'playerctl'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "playerctl"
+version = "2.4.1"
+archive = "https://github.com/acrisci/playerctl/archive/v2.4.1.tar.gz"
+sha256 = "75957ad5071956f563542c7557af16a57e40b4a7f66bc9b6373d022ec5eef548"
+strip_components = 1
+description = "MPRIS command-line controller and library"
+homepage = "https://github.com/acrisci/playerctl"
+license = "LGPL-3.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

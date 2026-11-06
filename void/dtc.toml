@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dtc'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args, CFLAGS
+[package]
+name = "dtc"
+version = "1.8.1"
+archive = "https://www.kernel.org/pub/software/utils/dtc/dtc-1.8.1.tar.xz"
+sha256 = "23526015a6f1550e0541a53fe7acea1b5a11e3697cdf3a3bdc076abc38f6045d"
+strip_components = 1
+description = "Device Tree Compiler"
+homepage = "https://git.kernel.org/pub/scm/utils/dtc/dtc.git"
+license = "GPL-2.0-only"
+deps = ["libyaml"]
+
+[build]
+system = "make"
+tools = ["bison", "flex", "pkg-config"]

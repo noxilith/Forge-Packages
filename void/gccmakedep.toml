@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'gccmakedep'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "gccmakedep"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/util/gccmakedep-1.0.4.tar.gz"
+sha256 = "5f36cde3f7cce8150a6eeb8026759977be523068a64fad899776122c3f03311f"
+strip_components = 1
+description = "Program calls 'gcc -M' to output makefile rules"
+homepage = "http://cgit.freedesktop.org/xorg/util/gccmakedep/"
+license = "MIT"
+
+[build]
+system = "autotools"

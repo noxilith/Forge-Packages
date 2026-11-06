@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rpi-usbboot'. Review before relying on it.
+[package]
+name = "rpi-usbboot"
+version = "20221215.105525"
+archive = "https://github.com/raspberrypi/usbboot/archive/refs/tags/20221215-105525.tar.gz"
+sha256 = "2f02dbe9a88e9dfad5f05e513e1f30afd47b1575820f7c3b09665dfefc45bbaa"
+strip_components = 1
+description = "Raspberry Pi USB booting code, moved from tools repository"
+homepage = "https://github.com/raspberrypi/usbboot"
+license = "Apache-2.0"
+deps = ["libusb"]
+patches = ["patches/0001-Use-PREFIX-and-DESTDIR-in-Makefile.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

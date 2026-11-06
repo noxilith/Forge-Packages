@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Lucene++'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "Lucene++"
+version = "3.0.9"
+archive = "https://github.com/luceneplusplus/LucenePlusPlus/archive/rel_3.0.9.tar.gz"
+sha256 = "4e69e29d5d79a976498ef71eab70c9c88c7014708be4450a9fda7780fe93584e"
+strip_components = 1
+description = "C++ port of the popular text search engine"
+homepage = "https://github.com/luceneplusplus/LucenePlusPlus"
+license = "LGPL-3.0-or-later, Apache-2.0"
+deps = ["gtest", "zlib"]
+patches = ["patches/boost-1.85.patch", "patches/boost-1.87.patch", "patches/boost-1.89.patch", "patches/boost-1.90.patch", "patches/cxx-standard.patch"]
+
+[build]
+system = "cmake"

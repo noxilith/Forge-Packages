@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'diffstat'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "diffstat"
+version = "1.69"
+archive = "https://invisible-mirror.net/archives/diffstat/diffstat-1.69.tgz"
+sha256 = "bb02464072f769dd9832fd999526734c90eb4d66fb56d5351540a750c88a77f6"
+strip_components = 1
+description = "Display a histogram of diff output"
+homepage = "http://invisible-island.net/diffstat/diffstat.html"
+license = "MIT"
+deps = ["xz"]
+
+[build]
+system = "autotools"

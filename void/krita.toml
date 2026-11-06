@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'krita'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: boost, fftw, libjxl, libwebp, python3-PyQt5, qt5, sip
+[package]
+name = "krita"
+version = "6.0.3"
+archive = "https://download.kde.org/stable/krita/6.0.3/krita-6.0.3.tar.xz"
+sha256 = "9716b8b9b58d5a7c4cc755380ae2a0ba2298086aed93c63c74f0d69edb63b032"
+strip_components = 1
+description = "Painting and image editing program"
+homepage = "https://krita.org/"
+license = "GPL-3.0-only"
+deps = ["eigen", "exiv2", "giflib", "gsl", "immer", "karchive", "kcompletion", "kconfig", "kcoreaddons", "kcrash", "kguiaddons", "ki18n", "kio", "kitemviews", "kwidgetsaddons", "kwindowsystem", "lager", "libXi", "libheif", "libjpeg-turbo", "libkdcraw5", "libmypaint", "libraw", "libunibreak", "mlt7", "opencolorio", "openexr", "openjpeg2", "poppler-qt5", "quazip", "seexpr-krita", "tiff", "xsimd", "zug"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DENABLE_UPDATERS=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

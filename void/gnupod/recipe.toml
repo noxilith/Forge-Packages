@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gnupod'. Review before relying on it.
+# needs, but Forge has no recipe for yet: perl-Digest-SHA1, perl-MP3-Info, perl-TimeDate, perl-Unicode-String, perl-XML-Parser
+[package]
+name = "gnupod"
+version = "0.99.8"
+archive = "https://ftp.gnu.org/gnu/gnupod/gnupod-0.99.8.tgz"
+sha256 = "bd566295a2e14352e6d05f5c816cab36b0e80d3ab36d29c4bbb45c581d3f3c31"
+strip_components = 1
+description = "Command line tools for managing data on iPods"
+homepage = "http://www.gnu.org/software/gnupod/"
+license = "GPL-3.0-or-later"
+patches = ["patches/incdir.patch", "patches/perl-5.22.patch"]
+
+[build]
+system = "autotools"

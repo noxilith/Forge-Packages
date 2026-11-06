@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'luanti'. Review before relying on it.
+# needs, but Forge has no recipe for yet: LuaJIT, hicolor-icon-theme, mesa, sqlite
+[package]
+name = "luanti"
+version = "5.17.0"
+archive = "https://github.com/luanti-org/luanti/archive/refs/tags/5.17.0.tar.gz"
+sha256 = "52e7dd315ae0e5c3868a23231e691578cd694bcca5af627fc57c03f32bdc846f"
+strip_components = 1
+description = "Voxel game-creation platform with easy modding and game creation"
+homepage = "https://www.luanti.org/"
+license = "LGPL-2.1-or-later"
+deps = ["SDL2", "curl", "desktop-file-utils", "freetype", "gmp", "jsoncpp", "libjpeg-turbo", "libopenal", "libvorbis"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SERVER=TRUE"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libserialport'. Review before relying on it.
+[package]
+name = "libserialport"
+version = "0.1.1"
+archive = "https://sigrok.org/download/source/libserialport/libserialport-0.1.1.tar.gz"
+sha256 = "4a2af9d9c3ff488e92fb75b4ba38b35bcf9b8a66df04773eba2a7bbf1fa7529d"
+strip_components = 1
+description = "Cross-platform library for accessing serial ports"
+homepage = "https://sigrok.org/wiki/Libserialport"
+license = "LGPL-3.0-or-later"
+patches = ["patches/0001-Remove-termiox-as-it-has-been-removed-from-recent-ke.patch"]
+
+[build]
+system = "autotools"

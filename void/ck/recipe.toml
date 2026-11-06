@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ck'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "ck"
+version = "0.7.0"
+archive = "https://github.com/concurrencykit/ck/archive/0.7.0.tar.gz"
+sha256 = "e730cb448fb0ecf9d19bf4c7efe9efc3c04dd9127311d87d8f91484742b0da24"
+strip_components = 1
+description = "Concurrency Kit C library"
+homepage = "http://concurrencykit.org/"
+license = "BSD-2-Clause"
+patches = ["patches/cross.patch", "patches/ppc32.patch"]
+
+[build]
+system = "autotools"

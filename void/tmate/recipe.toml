@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tmate'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "tmate"
+version = "2.4.0"
+archive = "https://github.com/tmate-io/tmate/archive/2.4.0.tar.gz"
+sha256 = "62b61eb12ab394012c861f6b48ba0bc04ac8765abca13bdde5a4d9105cb16138"
+strip_components = 1
+description = "Instant Terminal Sharing"
+homepage = "http://tmate.io"
+license = "ISC"
+deps = ["libevent", "libssh", "msgpack"]
+patches = ["patches/msgpack-c.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

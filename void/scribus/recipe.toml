@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'scribus'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_patch
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, cups, ghostscript, harfbuzz, libcdr, libfreehand, libpagemaker, libvisio, qt5
+[package]
+name = "scribus"
+version = "1.6.6"
+archive = "https://downloads.sourceforge.net/sourceforge/scribus/scribus/1.6.6/scribus-1.6.6.tar.xz"
+sha256 = "fdfe3e7cbe84b760b38d0561ed8736f9d25d4923adde6e15e03760d83be6166d"
+strip_components = 1
+description = "Open Source DTP (Desktop Publishing) application"
+homepage = "https://scribus.net"
+license = "GPL-2.0-or-later"
+deps = ["GraphicsMagick", "cairo", "hunspell", "hyphen", "lcms2", "libmspub", "libqxp", "libxml2", "podofo", "poppler", "zlib"]
+patches = ["patches/musl-types.patch", "patches/no-execinfo.patch", "patches/poppler-26.05.patch", "patches/poppler-26.06.patch", "patches/poppler-26.07.0.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWANT_DISTROBUILD=ON", "-DWANT_GRAPHICSMAGICK=1", "-DWANT_CPP20=ON"]
+tools = ["pkg-config"]

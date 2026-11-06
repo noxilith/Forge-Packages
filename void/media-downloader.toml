@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'media-downloader'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "media-downloader"
+version = "5.6.6"
+archive = "https://github.com/mhogomchungu/media-downloader/archive/refs/tags/5.6.6.tar.gz"
+sha256 = "1308e2fc2b6ffd459918d24006c5da8472711765179f71a0ee6ffba2350ded55"
+strip_components = 1
+description = "Qt/C++ frontend to youtube-dl"
+homepage = "https://github.com/mhogomchungu/media-downloader"
+license = "GPL-2.0-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lcms'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "lcms"
+version = "1.19"
+archive = "https://downloads.sourceforge.net/sourceforge/lcms/lcms-1.19.tar.gz"
+sha256 = "80ae32cb9f568af4dc7ee4d3c05a4c31fc513fc3e31730fed0ce7378237273a9"
+strip_components = 1
+description = "Light Color Management System -- a color management library"
+homepage = "http://www.littlecms.com"
+license = "MIT"
+deps = ["libjpeg-turbo", "tiff"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

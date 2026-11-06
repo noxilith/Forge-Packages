@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'numlockx'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "numlockx"
+version = "1.2"
+archive = "https://ftp.debian.org/debian/pool/main/n/numlockx/numlockx_1.2.orig.tar.gz"
+sha256 = "e468eb9121c94c9089dc6a287eeb347e900ce04a14be37da29d7696cbce772e4"
+strip_components = 1
+description = "Activate NumLock at startup"
+homepage = "http://www.mike-devlin.com/linux/README-numlockx.htm"
+license = "MIT"
+deps = ["libSM", "libX11", "libXext", "libXtst"]
+
+[build]
+system = "autotools"

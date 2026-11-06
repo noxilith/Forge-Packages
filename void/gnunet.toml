@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnunet'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "gnunet"
+version = "0.12.2"
+archive = "https://sources.voidlinux.org/gnunet-0.12.2/gnunet-0.12.2.tar.gz"
+sha256 = "ac288b047d1156fc5e739062b11242bad0487993631e79781aede620ddf18cd7"
+strip_components = 1
+description = "Framework for secure peer-to-peer networking"
+homepage = "https://gnunet.org"
+license = "GPL-3.0-or-later"
+deps = ["libgcrypt", "libidn", "libunistring", "mariadb", "postgresql18", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "tar", "texinfo"]

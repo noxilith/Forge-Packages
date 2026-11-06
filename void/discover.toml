@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'discover'. Review before relying on it.
+# needs, but Forge has no recipe for yet: discount, kde-plasma-base, qt6-tools
+[package]
+name = "discover"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/discover-6.7.5.tar.xz"
+sha256 = "e9830fffebc54c781dcb076db4ab9462ee27ddd7fd3769403a211743636e1f67"
+strip_components = 1
+description = "KDE resources management flatpak, plasma plugins"
+homepage = "https://apps.kde.org/discover"
+license = "GPL-2.0-or-later"
+deps = ["AppStream", "flatpak", "fwupd", "kf6-attica", "kf6-karchive", "kf6-kauth", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kidletime", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-knewstuff", "kf6-knotifications", "kf6-kstatusnotifieritem", "kf6-kuserfeedback", "kf6-kxmlgui", "kf6-purpose", "kirigami-addons", "ostree", "qcoro-qt6", "qt6-declarative", "qt6-webview"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools", "qt6-base"]

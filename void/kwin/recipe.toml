@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'kwin'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, hwids, kde-plasma-base, libcanberra, qt6-multimedia, qt6-qt5compat, qt6-sensors, qt6-svg, qt6-tools
+[package]
+name = "kwin"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kwin-6.7.5.tar.xz"
+sha256 = "6baa910b732d93c48c90f9c1cc685cc93d0b8de0cdf138c24192c045bc3a48e2"
+strip_components = 1
+description = "KDE Window manager"
+homepage = "https://invent.kde.org/plasma/kwin"
+license = "GPL-2.0-or-later"
+deps = ["aurorae", "breeze-qt6", "kf6-kauth", "kf6-kcmutils", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdeclarative", "kf6-kdecoration", "kf6-kglobalaccel", "kf6-kguiaddons", "kf6-ki18n", "kf6-kidletime", "kf6-kirigami", "kf6-knewstuff", "kf6-knotifications", "kf6-kpackage", "kf6-krunner", "kf6-kservice", "kf6-ksvg", "kf6-kwayland", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "kglobalacceld", "knighttime", "kscreenlocker", "layer-shell-qt", "lcms2", "libICE", "libSM", "libcap", "libdisplay-info", "libei", "libepoxy", "libinput", "libkf6screen", "libplasma", "libqaccessibilityclient", "libxcvt", "libxkbcommon", "pipewire", "plasma-activities", "plasma-wayland-protocols", "qt6-base", "qt6-declarative", "wayland", "xcb-util-cursor", "xcb-util-wm", "xorg-server-xwayland"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DFORCE_CROSSCOMPILED_TOOLS=ON", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'imagescan'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS, CXXFLAGS, conf_files
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "imagescan"
+version = "3.65.0"
+archive = "https://sources.voidlinux.org/imagescan-3.65.0/imagescan_3.65.0.orig.tar.gz"
+sha256 = "e83704398c51a3166fd62c25b89e95cf6262e52f3dc6e627db3e7556e2220d64"
+strip_components = 1
+description = "EPSON Image Scan v3 front-end and backend for scanners and all-in-ones"
+homepage = "https://gitlab.com/utsushi/imagescan/"
+license = "GPL-3.0-or-later"
+deps = ["ImageMagick", "eudev", "gtkmm2", "libusb", "sane"]
+patches = ["patches/boost-1.80.patch", "patches/gcc-16.patch", "patches/makefile_in-sane_dll_d.patch", "patches/sane.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-boost-system=c", "--with-gtkmm", "--enable-sane-config", "--enable-udev-config", "--with-jpeg", "--with-magick", "--with-sane", "--with-tiff"]
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cadaver'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "cadaver"
+version = "0.28"
+archive = "https://notroj.github.io/cadaver/cadaver-0.28.tar.gz"
+sha256 = "33e3a54bd54b1eb325b48316a7cacc24047c533ef88e6ef98b88dfbb60e12734"
+strip_components = 1
+description = "Command-line WebDAV client for Unix"
+homepage = "https://notroj.github.io/cadaver/"
+license = "GPL-2.0-or-later"
+deps = ["gnutls", "neon"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-ssl=gnutls"]
+tools = ["pkg-config"]

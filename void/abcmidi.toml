@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'abcmidi'. Review before relying on it.
+[package]
+name = "abcmidi"
+version = "2026.02.18"
+archive = "https://ifdo.ca/~seymour/runabc/abcMIDI-2026.02.18.zip"
+sha256 = "67240bbf9f2ef90887bfbd2e6adf03249a5a8fe17d8758da27733acac7a2836e"
+strip_components = 1
+description = "Utilites for working with ABC files"
+homepage = "https://ifdo.ca/~seymour/runabc/top.html"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

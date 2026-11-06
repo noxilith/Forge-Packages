@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bees'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "bees"
+version = "0.8"
+archive = "https://github.com/Zygo/bees/archive/refs/tags/v0.8.tar.gz"
+sha256 = "3efb1a7290b014b8dd0cb64ce98382c2bde1f9ccf649e1b4fc86f27ffa42edea"
+strip_components = 1
+description = "Best-Effort Extent-Same, a btrfs deduplication agent"
+homepage = "https://github.com/Zygo/bees"
+license = "GPL-3.0-or-later"
+deps = ["btrfs-progs"]
+patches = ["patches/0001-don-t-run-tests-unless-asked.patch", "patches/0002-move-sbin-into-bin.patch", "patches/0003-start-work-on-cross-compilation.patch", "patches/pthread_getname1.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

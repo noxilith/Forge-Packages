@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'posh'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "posh"
+version = "0.14.6"
+archive = "https://ftp.debian.org/debian/pool/main/p/posh/posh_0.14.6.tar.xz"
+sha256 = "0edee3b8f4fdad8dff2c868e9ca6adc20144683cfe1ea230b143c1d902fd500a"
+strip_components = 1
+description = "Policy-compliant Ordinary SHell"
+homepage = "https://packages.debian.org/sid/posh"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

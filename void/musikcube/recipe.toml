@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'musikcube'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: ffmpeg6, libev, ncurses, portaudio, sndio
+[package]
+name = "musikcube"
+version = "3.0.5"
+archive = "https://github.com/clangen/musikcube/archive/refs/tags/3.0.5.tar.gz"
+sha256 = "708292a583bb5072a8dbb14e408c2a1f61de9b8c9786d4e53b3e69bef5dad8c5"
+strip_components = 1
+description = "Terminal-based music player in c++"
+homepage = "https://musikcube.com/"
+license = "BSD-3-Clause"
+deps = ["alsa-lib", "asio", "curl", "lame", "libgme", "libmicrohttpd", "libogg", "libopenmpt", "libvorbis", "openssl", "pipewire", "pulseaudio", "taglib", "zlib"]
+patches = ["patches/fix-install-locations.patch", "patches/musl.patch", "patches/no-rpath.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DNO_NCURSESW=1"]
+tools = ["pkg-config"]

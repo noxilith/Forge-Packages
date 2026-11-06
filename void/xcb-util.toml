@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xcb-util'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcb-util"
+version = "0.4.1"
+archive = "https://xorg.freedesktop.org/archive/individual/lib/xcb-util-0.4.1.tar.xz"
+sha256 = "5abe3bbbd8e54f0fa3ec945291b7e8fa8cfd3cccc43718f8758430f94126e512"
+strip_components = 1
+description = "XCB utilities library"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb-util"
+license = "X11"
+deps = ["libxcb"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["gperf", "pkg-config"]

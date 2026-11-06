@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'SoapyAirspy'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "SoapyAirspy"
+version = "0.2.0"
+archive = "https://github.com/pothosware/SoapyAirspy/archive/soapy-airspy-0.2.0.tar.gz"
+sha256 = "4279ab4278fab699ef8325f3f921b2307496130a56028d33022be10916b6ccff"
+strip_components = 1
+description = "SoapySDR module for Airspy"
+homepage = "https://github.com/pothosware/SoapyAirspy"
+license = "MIT"
+deps = ["SoapySDR", "airspy"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

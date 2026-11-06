@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'vcsh'. Review before relying on it.
+[package]
+name = "vcsh"
+version = "2.0.4"
+archive = "https://github.com/RichiH/vcsh/releases/download/v2.0.4/vcsh-2.0.4.tar.xz"
+sha256 = "5bf425d89f474c340fbb47a5df8987573a9ef3928658b3e9876b07cae1333cf2"
+strip_components = 1
+description = "Version Control System for home directory"
+homepage = "https://github.com/RichiH/vcsh"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

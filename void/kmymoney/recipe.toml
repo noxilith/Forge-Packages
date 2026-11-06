@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kmymoney'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gwenhywfar, qt6-svg
+[package]
+name = "kmymoney"
+version = "5.2.2"
+archive = "https://download.kde.org/stable/kmymoney/5.2.2/kmymoney-5.2.2.tar.xz"
+sha256 = "40b6639e6a216100d20248ed74fa154202f9ccdfbc335227cedc1bef8ea5d377"
+strip_components = 1
+description = "Personal finance manager"
+homepage = "https://kmymoney.org"
+license = "GPL-2.0-or-later"
+deps = ["alkimia", "aqbanking", "gpgme-qt6", "kdiagram6", "kf6-akonadi", "kf6-karchive", "kf6-kcmutils", "kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcontacts", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-kholidays", "kf6-ki18n", "kf6-kio", "kf6-kitemmodels", "kf6-kitemviews", "kf6-knotifications", "kf6-kservice", "kf6-ktextwidgets", "kf6-kxmlgui", "kidentitymanagement", "libical", "libofx", "opensp", "plasma-activities", "qt6-base", "qt6-declarative", "qtkeychain-qt6", "shared-mime-info", "sqlcipher"]
+patches = ["patches/qt610.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DBUILD_WITH_QT6=ON", "-DENABLE_GPG=ON", "-DENABLE_ADDRESSBOOK=OFF", "-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

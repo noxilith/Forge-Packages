@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'timeshift'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: CFLAGS
+[package]
+name = "timeshift"
+version = "25.12.4"
+archive = "https://github.com/linuxmint/timeshift/archive/25.12.4/timeshift-25.12.4.tar.gz"
+sha256 = "7babff88c97da80ca0f6b1384d894a74a52474855ef3e854788b0dd6ad7b4504"
+strip_components = 1
+description = "System restore tool"
+homepage = "https://github.com/linuxmint/timeshift"
+license = "GPL-3.0-only"
+deps = ["gobject-introspection", "json-glib", "libgee", "libxkbfile", "psmisc", "rsync", "vte3", "xapp", "xhost"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

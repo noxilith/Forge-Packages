@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'portmidi'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: unzip
+[package]
+name = "portmidi"
+version = "2.0.6"
+archive = "https://github.com/PortMidi/portmidi/archive/refs/tags/v2.0.6.tar.gz"
+sha256 = "81d22b34051621cd56c8d5ef12908ef2a59764c9cdfba6dae47aabddb71ac914"
+strip_components = 1
+description = "Real-time input and output of MIDI data"
+homepage = "https://github.com/PortMidi/portmidi/"
+license = "MIT"
+deps = ["alsa-lib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_JAVA_NATIVE_INTERFACE=OFF"]

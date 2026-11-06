@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kwidgetsaddons'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kwidgetsaddons"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kwidgetsaddons-5.116.0.tar.xz"
+sha256 = "a8e1e054f16760e90d4c830b96d62ed066404f71c01f33e99f472795f9119565"
+strip_components = 1
+description = "Large set of desktop widgets"
+homepage = "https://invent.kde.org/frameworks/kwidgetsaddons"
+license = "LGPL-2.0-or-later, LGPL-2.1-or-later"
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "kcoreaddons"]

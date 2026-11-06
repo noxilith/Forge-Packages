@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'minidlna'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: ffmpeg6, sqlite
+[package]
+name = "minidlna"
+version = "1.3.3"
+archive = "https://downloads.sourceforge.net/sourceforge/minidlna/minidlna-1.3.3.tar.gz"
+sha256 = "39026c6d4a139b9180192d1c37225aa3376fdf4f1a74d7debbdbb693d996afa4"
+strip_components = 1
+description = "DLNA/UPnP-AV compliant media server"
+homepage = "https://minidlna.sourceforge.net/"
+license = "GPL-2.0-only, BSD-3-Clause"
+deps = ["flac", "libexif", "libid3tag", "libjpeg-turbo", "libvorbis"]
+patches = ["patches/config.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-os-url=http://www.voidlinux.org"]
+tools = ["pkg-config"]
+deps = ["gettext"]

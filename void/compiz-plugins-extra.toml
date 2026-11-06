@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'compiz-plugins-extra'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "compiz-plugins-extra"
+version = "0.8.18"
+archive = "https://github.com/compiz-reloaded/compiz-plugins-extra/archive/v0.8.18.tar.gz"
+sha256 = "0c3d6e56ed4d1b04e06a3d0fd95caa7f55b325e4799b3eadd69207dc2ba9d188"
+strip_components = 1
+description = "Extra plugins for Compiz Reloaded"
+homepage = "https://github.com/compiz-reloaded"
+license = "GPL-2.0-or-later"
+deps = ["compiz-core", "compiz-plugins-main", "libnotify"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["compiz-bcop", "gettext"]

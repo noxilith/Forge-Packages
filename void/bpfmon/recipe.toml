@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bpfmon'. Review before relying on it.
+# settings not translated: make_install_args
+[package]
+name = "bpfmon"
+version = "2.60"
+archive = "https://github.com/bbonev/bpfmon/releases/download/v2.60/bpfmon-2.60.tar.xz"
+sha256 = "cf970afb6426e7f035be369948656fa91a048dce5ce306e2219483b48b82415a"
+strip_components = 1
+description = "BPF based visual packet rate monitor"
+homepage = "https://github.com/bbonev/bpfmon"
+license = "GPL-2.0-or-later"
+deps = ["libpcap", "yascreen"]
+patches = ["patches/0001-Separate-DESTDIR-from-PREFIX.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'vis'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libtermkey, lua53, lua54-lpeg, ncurses
+[package]
+name = "vis"
+version = "0.9"
+archive = "https://github.com/martanne/vis/archive/v0.9.tar.gz"
+sha256 = "bd37ffba5535e665c1e883c25ba5f4e3307569b6d392c60f3c7d5dedd2efcfca"
+strip_components = 1
+description = "Vi-like editor based on Plan 9's structural regular expressions"
+homepage = "https://github.com/martanne/vis"
+license = "ISC"
+deps = ["acl"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

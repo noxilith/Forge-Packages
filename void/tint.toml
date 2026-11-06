@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tint'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "tint"
+version = "0.1.6"
+archive = "https://github.com/ashish0kumar/tint/archive/refs/tags/v0.1.6.tar.gz"
+sha256 = "0a2cd3bdb842eba008096a410e3f9da7b6e286507a3e179acf143623a77fc4da"
+strip_components = 1
+description = "Recolor images using your favorite theme palettes"
+homepage = "https://github.com/ashish0kumar/tint"
+license = "MIT"
+
+[build]
+system = "go"

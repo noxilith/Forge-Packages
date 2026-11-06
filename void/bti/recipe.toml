@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bti'. Review before relying on it.
+[package]
+name = "bti"
+version = "034"
+archive = "https://www.kernel.org/pub/software/web/bti/bti-034.tar.xz"
+sha256 = "8b4a1a11f529f83956468acadaea9d11db4f03e82afe07fecb84b2d00e9eae83"
+strip_components = 1
+description = "Console client for Twitter and identi.ca"
+homepage = "https://gregkh.github.io/bti/"
+license = "GPL-2.0-only"
+deps = ["curl", "json-c", "liboauth", "libxml2", "pcre", "wget"]
+patches = ["patches/0db8dc6022f67a4e1f49397b8bf519b2a34f74c9.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

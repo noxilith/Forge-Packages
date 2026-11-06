@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'coin-or-osi'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "coin-or-osi"
+version = "0.108.12"
+archive = "https://github.com/coin-or/Osi/archive/refs/tags/releases/0.108.12.tar.gz"
+sha256 = "1d80d0b4275f2e1ceefc6dda66b8616e3a8c8b07a926ef4456db4a0d55249333"
+strip_components = 1
+description = "COIN-OR Open Solver Interface"
+homepage = "https://github.com/coin-or/Osi"
+license = "EPL-2.0"
+deps = ["coin-or-utils"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

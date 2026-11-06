@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'rygel'. Review before relying on it.
+# settings not translated: build_helper, conf_files
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, sqlite
+[package]
+name = "rygel"
+version = "0.44.2"
+archive = "https://download.gnome.org/sources/rygel/0.44/rygel-0.44.2.tar.xz"
+sha256 = "796eee494cdf60dc2bf82b00b8f99a14ba1c7cf40d2944817ff0c1aa6073d5a0"
+strip_components = 1
+description = "GNOME home media solution"
+homepage = "https://gnome.pages.gitlab.gnome.org/rygel/"
+license = "LGPL-2.1-or-later"
+deps = ["desktop-file-utils", "gssdp", "gst1-editing-services", "gtk+3", "gupnp-av", "gupnp-dlna", "libgee", "libmediaart", "libsoup3", "tinysparql"]
+patches = ["patches/require-gupnp.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dexamples=false", "-Dtests=false"]
+tools = ["pkg-config"]
+deps = ["docbook2x", "gettext", "glib", "vala"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nuspell'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen, pandoc
+[package]
+name = "nuspell"
+version = "5.1.8"
+archive = "https://github.com/nuspell/nuspell/archive/v5.1.8.tar.gz"
+sha256 = "4221df51003a4406717440f617044e03f916dfcb900e2d1f13902c533b0969f8"
+strip_components = 1
+description = "C++ spell checking library"
+homepage = "https://nuspell.github.io/"
+license = "LGPL-3.0-or-later"
+deps = ["catch2", "libicu78"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rusty-diceware'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rusty-diceware"
+version = "0.5.8"
+archive = "https://gitlab.com/yuvallanger/rusty-diceware/-/archive/diceware-v0.5.8/rusty-diceware-diceware-v0.5.8.tar.gz"
+sha256 = "a3301f585149af8818d10972238656b9586a3fd78a6842150aec6d0ae8e4dbe8"
+strip_components = 1
+description = "Commandline diceware, sans dice, written in rustlang"
+homepage = "https://gitlab.com/yuvallanger/rusty-diceware"
+license = "AGPL-3.0-only"
+
+[build]
+system = "cargo"

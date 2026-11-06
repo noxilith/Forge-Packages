@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'unifdef'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "unifdef"
+version = "2.12"
+archive = "https://dotat.at/prog/unifdef/unifdef-2.12.tar.xz"
+sha256 = "43ce0f02ecdcdc723b2475575563ddb192e988c886d368260bc0a63aee3ac400"
+strip_components = 1
+description = "Selectively remove C preprocessor conditionals"
+homepage = "https://dotat.at/prog/unifdef/"
+license = "BSD-2-Clause"
+
+[build]
+system = "make"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'extrace'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "extrace"
+version = "0.9"
+archive = "https://github.com/leahneukirchen/extrace/archive/v0.9.tar.gz"
+sha256 = "e488db1126bd941e5a094e6024c3975f70abfa7ad51a3451191d1518c0b35ced"
+strip_components = 1
+description = "Trace exec(2) calls system-wide"
+homepage = "https://github.com/leahneukirchen/extrace"
+license = "GPL-2.0-or-later, BSD-2-Clause"
+deps = ["libcap"]
+
+[build]
+system = "make"

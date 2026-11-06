@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'openpgp-card-tool-git'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "openpgp-card-tool-git"
+version = "0.1.7"
+archive = "https://codeberg.org/openpgp-card/oct-git/archive/v0.1.7.tar.gz"
+sha256 = "ec51aa9e959f656f5e919cda1a5cb1660e18b0217feb89cc321926e97aec6f40"
+strip_components = 1
+description = "OpenPGP card tool for Git signing and verification"
+homepage = "https://codeberg.org/openpgp-card/oct-git"
+license = "MIT OR Apache-2.0"
+deps = ["dbus", "openssl", "pcsc-ccid", "pcsclite"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

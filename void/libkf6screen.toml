@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libkf6screen'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "libkf6screen"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/libkscreen-6.7.5.tar.xz"
+sha256 = "df317e03acfadfcbc68981b78131750103fadf4d5c5df6368c9e91e698677219"
+strip_components = 1
+description = "KDE screen management software"
+homepage = "https://invent.kde.org/plasma/libkscreen"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "libXrandr", "plasma-wayland-protocols", "qt6-base", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-bh-100dpi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-bh-100dpi"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-bh-100dpi-1.0.4.tar.gz"
+sha256 = "cfd9b6bf6dae77eb7186afa296ad7233bb43d9c2f840d8010e197d55a2cc21dc"
+strip_components = 1
+description = "Standard 100dpi Bigelow and Holmes PCF fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

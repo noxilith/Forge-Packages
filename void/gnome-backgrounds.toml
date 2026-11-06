@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gnome-backgrounds'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libjxl
+[package]
+name = "gnome-backgrounds"
+version = "48.2.1"
+archive = "https://download.gnome.org/sources/gnome-backgrounds/48/gnome-backgrounds-48.2.1.tar.xz"
+sha256 = "6a1c5b7b2e0d8f5ce977926d55f9c2d65dd180822cdea5e59150dcfb5abd1ed9"
+strip_components = 1
+description = "Set of background images for the GNOME Desktop"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-backgrounds"
+license = "GPL-2.0-or-later, CC-BY-2.0, CC-BY-SA-2.0, CC-BY-SA-3.0"
+deps = ["librsvg"]
+
+[build]
+system = "meson"
+deps = ["gettext"]

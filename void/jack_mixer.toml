@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'jack_mixer'. Review before relying on it.
+# hooks not translated: post_extract
+# needs, but Forge has no recipe for yet: jack, python3-Cython, python3-xdg
+[package]
+name = "jack_mixer"
+version = "18"
+archive = "https://github.com/jack-mixer/jack_mixer/releases/download/release-18/jack_mixer-18.tar.xz"
+sha256 = "991d3c1442beb40a368da2097c2ddbab56b2108c9c5b2236c0eaa2a6d3981852"
+strip_components = 1
+description = "GTK JACK audio mixer with a look similar to its hardware counterpart"
+homepage = "https://rdio.space/jackmixer/"
+license = "GPL-2.0-or-later"
+deps = ["glib", "python3-cairo", "python3-gobject"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcheck-py-modules=false"]
+tools = ["pkg-config"]
+deps = ["gettext"]

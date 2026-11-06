@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ser2net'. Review before relying on it.
+[package]
+name = "ser2net"
+version = "4.6.5"
+archive = "https://github.com/cminyard/ser2net/releases/download/v4.6.5/ser2net-4.6.5.tar.gz"
+sha256 = "96dfc3fd06b1bf4d7c1f46d7e8cc1eff555de64f419d76f57bd0346e000f9781"
+strip_components = 1
+description = "Serial to network interface, allows TCP/UDP to serial port connections"
+homepage = "https://github.com/cminyard/ser2net"
+license = "GPL-2.0-only"
+deps = ["libgensio", "libyaml"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

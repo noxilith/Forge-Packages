@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ntfs2btrfs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "ntfs2btrfs"
+version = "20230501"
+archive = "https://github.com/maharmstone/ntfs2btrfs/archive/20230501.tar.gz"
+sha256 = "15924a22e9d80e4ca28bf5524708dd8f69d840df1e781a659ce953fee7d90730"
+strip_components = 1
+description = "Filesystem converter for Microsoft's NTFS"
+homepage = "https://github.com/maharmstone/ntfs2btrfs"
+license = "GPL-2.0-only"
+deps = ["fmt", "lzo", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_INSTALL_SBINDIR=bin"]
+tools = ["pkg-config"]

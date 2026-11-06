@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gloobus-preview'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: boost, libspectre
+[package]
+name = "gloobus-preview"
+version = "2015.12.21"
+archive = "https://github.com/antonio-malcolm/gloobus-preview/archive/v2015.12.21.tar.gz"
+sha256 = "c43f1ed00ccc3603042abb78b871665ff6c6a89987d7f854b9b4254b7cf9d86c"
+strip_components = 1
+description = "GNOME's extension to preview all kinds of file"
+homepage = "https://github.com/antonio-malcolm/gloobus-preview"
+license = "GPL-3.0-only"
+deps = ["ImageMagick", "cairo", "djvulibre", "freetype", "gettext", "glib", "gst-libav", "gst-plugins-bad1", "gst-plugins-base1", "gst-plugins-good1", "gst-plugins-ugly1", "gstreamer1", "gtk+3", "gtksourceview", "libX11", "libarchive", "libgxps", "poppler", "python3-dbus", "python3-gobject"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xz"]

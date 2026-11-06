@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'showtime'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "showtime"
+version = "50.0"
+archive = "https://download.gnome.org/sources/showtime/50/showtime-50.0.tar.xz"
+sha256 = "4399c9fa7f61e5984242e279acd1519beec246b98a676d44a4b2ab94e9eecb01"
+strip_components = 1
+description = "Video player for GNOME"
+homepage = "https://apps.gnome.org/Showtime/"
+license = "GPL-3.0-or-later"
+deps = ["gst-libav", "gst-plugins-good1", "gst-plugins-rs1", "libadwaita", "python3-gobject"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils", "gettext", "glib", "gtk4"]

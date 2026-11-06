@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'doggo'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "doggo"
+version = "1.4.1"
+archive = "https://github.com/mr-karan/doggo/archive/refs/tags/v1.4.1.tar.gz"
+sha256 = "d707bd7948cd560c290298ba623f70681e93862eed2c8555b09b7b90f5610c9c"
+strip_components = 1
+description = "Command-line DNS client for humans"
+homepage = "https://github.com/mr-karan/doggo"
+license = "GPL-3.0-only"
+
+[build]
+system = "go"

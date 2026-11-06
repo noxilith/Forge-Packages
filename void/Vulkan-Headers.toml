@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'Vulkan-Headers'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "Vulkan-Headers"
+version = "1.4.363.0"
+archive = "https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.4.363.0.tar.gz"
+sha256 = "4a078be12bef21cfebc09d878b77a63cff9d68f899254a0b00d0e37ef73e7f7e"
+strip_components = 1
+description = "Vulkan header files"
+homepage = "https://www.khronos.org/vulkan/"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "cmake"

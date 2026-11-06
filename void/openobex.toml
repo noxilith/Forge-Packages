@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'openobex'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "openobex"
+version = "1.7.2"
+archive = "https://downloads.sourceforge.net/sourceforge/openobex/openobex-1.7.2-Source.tar.gz"
+sha256 = "158860aaea52f0fce0c8e4b64550daaae06df2689e05834697b7e8c7d73dd4fc"
+strip_components = 1
+description = "OBEX protocol implementation"
+homepage = "http://dev.zuckschwerdt.org/openobex/"
+license = "LGPL-2"
+deps = ["bluez", "eudev", "libusb"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["libxslt"]

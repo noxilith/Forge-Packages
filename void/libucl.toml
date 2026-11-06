@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libucl'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libucl"
+version = "0.9.4"
+archive = "https://github.com/vstakhov/libucl/archive/0.9.4.tar.gz"
+sha256 = "319d8ff13441f55d91cd7f3708a54bd03779733e26958c2346c5109014520aaf"
+strip_components = 1
+description = "Universal configuration library parser"
+homepage = "https://github.com/vstakhov/libucl"
+license = "BSD-2-Clause"
+deps = ["curl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-urls", "--enable-signatures"]
+tools = ["pkg-config"]

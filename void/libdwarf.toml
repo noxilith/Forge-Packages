@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libdwarf'. Review before relying on it.
+[package]
+name = "libdwarf"
+version = "2.3.2"
+archive = "https://www.prevanders.net/libdwarf-2.3.2.tar.xz"
+sha256 = "7992e7b9019ebfabdda5773e86243517c48cf89fafed3209e853692bc9573efd"
+strip_components = 1
+description = "DWARF Debugging Information Format Library"
+homepage = "https://www.prevanders.net/dwarf.html"
+license = "LGPL-2.1-only"
+deps = ["elfutils"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--enable-dwarfgen"]

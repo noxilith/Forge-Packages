@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'aoeui'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "aoeui"
+version = "1.7"
+archive = "https://github.com/pklausler/aoeui/archive/4e5dee93ebbaf5bd7bd7da80ce34b2eef196cd08.tar.gz"
+sha256 = "3b06c7950b0fcbdfe57e78de8cb9b9d7af141932459a32d72a029f96839d667f"
+strip_components = 1
+description = "Lightweight UNIX-friendly text editor"
+homepage = "https://github.com/pklausler/aoeui"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"
+tools = ["m4"]

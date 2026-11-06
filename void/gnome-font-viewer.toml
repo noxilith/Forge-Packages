@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-font-viewer'. Review before relying on it.
+# needs, but Forge has no recipe for yet: harfbuzz
+[package]
+name = "gnome-font-viewer"
+version = "50.0"
+archive = "https://download.gnome.org/sources/gnome-font-viewer/50/gnome-font-viewer-50.0.tar.xz"
+sha256 = "9564b088c5b150c54e2a3a7bc7014deec6ee551261e98488f891b1f1b8dc6b80"
+strip_components = 1
+description = "Font viewer for GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-font-viewer"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "fontconfig", "freetype", "glib", "gnome-desktop", "gtk4", "libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

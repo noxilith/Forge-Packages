@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gonic'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path, make_dirs
+# needs, but Forge has no recipe for yet: ffmpeg
+[package]
+name = "gonic"
+version = "0.22.0"
+archive = "https://github.com/sentriz/gonic/archive/v0.22.0.tar.gz"
+sha256 = "9a4e231be315160e8a8f6a3e86f10e85282041a251b39890bd3f99d1bba0a920"
+strip_components = 1
+description = "Music streaming server / subsonic server API implementation"
+homepage = "https://github.com/sentriz/gonic"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'rpcbind'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "rpcbind"
+version = "1.3.1"
+archive = "https://downloads.sourceforge.net/sourceforge/rpcbind/rpcbind-1.3.1.tar.bz2"
+sha256 = "8e551b445f5172f8ef218845af342fb2a2d741b57ce8c777c781a01ea92f92a5"
+strip_components = 1
+description = "Converts RPC program numbers into universal addresses"
+homepage = "https://rpcbind.sourceforge.net"
+license = "BSD-3-Clause"
+deps = ["libtirpc"]
+patches = ["patches/musl-sunrpc.patch", "patches/rpcbind-sunrpc.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-warmstarts", "--with-rpcuser=rpc", "--with-systemdsystemunitdir=no"]
+tools = ["pkg-config"]

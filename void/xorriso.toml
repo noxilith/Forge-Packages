@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xorriso'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, libreadline8
+[package]
+name = "xorriso"
+version = "1.5.6.pl02"
+archive = "https://ftp.gnu.org/gnu/xorriso/xorriso-1.5.6.pl02.tar.gz"
+sha256 = "786f9f5df9865cc5b0c1fecee3d2c0f5e04cab8c9a859bd1c9c7ccd4964fdae1"
+strip_components = 1
+description = "ISO 9660 Rock Ridge Filesystem Manipulator"
+homepage = "https://www.gnu.org/software/xorriso"
+license = "GPL-3.0-or-later"
+deps = ["acl", "zlib"]
+
+[build]
+system = "autotools"

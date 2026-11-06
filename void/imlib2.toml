@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'imlib2'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libjxl, libspectre, libwebp
+[package]
+name = "imlib2"
+version = "1.12.7"
+archive = "https://downloads.sourceforge.net/sourceforge/enlightenment/imlib2-src/imlib2-1.12.7.tar.xz"
+sha256 = "d71ee5351cc1914fb01968123d0dcf276740e5af5662943ac47ae60cafa4d13b"
+strip_components = 1
+description = "Image manipulation library"
+homepage = "https://sourceforge.net/projects/enlightenment/"
+license = "Imlib2"
+deps = ["freetype", "giflib", "libSM", "libXext", "libheif", "libid3tag", "libjpeg-turbo", "libpng", "librsvg", "openjpeg2", "tiff"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-visibility-hiding"]
+tools = ["pkg-config"]

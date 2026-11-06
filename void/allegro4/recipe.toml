@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'allegro4'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "allegro4"
+version = "4.4.3.1"
+archive = "https://github.com/liballeg/allegro5/releases/download/4.4.3.1/allegro-4.4.3.1.tar.gz"
+sha256 = "ec19dbc9a021244582b4819b3583ee594b50141f9fcf6944a4ed8069cbf8d4d4"
+strip_components = 1
+description = "Portable library mainly aimed at video game and multimedia programming"
+homepage = "https://liballeg.org"
+license = "custom:Allegro"
+deps = ["alsa-lib", "glu", "libXcursor", "libXpm", "libXxf86dga", "libXxf86vm", "libpng", "libvorbis", "zlib"]
+patches = ["patches/mesa10-uncompat.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWANT_DOCS=OFF"]
+tools = ["pkg-config"]

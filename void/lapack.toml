@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lapack'. Review before relying on it.
+# hooks not translated: post_build, post_check, post_configure, post_install, pre_build, pre_check, pre_configure, pre_install
+# needs, but Forge has no recipe for yet: python
+[package]
+name = "lapack"
+version = "3.12.1"
+archive = "https://github.com/Reference-LAPACK/lapack/archive/v3.12.1.tar.gz"
+sha256 = "2ca6407a001a474d4d4d35f3a61550156050c48016d949f0da0529c0aa052422"
+strip_components = 1
+description = "Linear Algebra PACKage"
+homepage = "https://netlib.org/lapack/"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_SKIP_RPATH=ON", "-DCMAKE_VERBOSE_MAKEFILE=ON", "-DCBLAS=ON", "-DLAPACKE=ON"]

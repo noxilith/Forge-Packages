@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gnome-usage'. Review before relying on it.
+[package]
+name = "gnome-usage"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gnome-usage/48/gnome-usage-48.0.tar.xz"
+sha256 = "501de3c6d4d653d59ce0d707758dccf83dc3ea81a2ed1492d2f333162fee0a17"
+strip_components = 1
+description = "Nice way to view information about use of system resources"
+homepage = "https://apps.gnome.org/Baobab"
+license = "GPL-3.0-or-later"
+deps = ["NetworkManager", "gtk4", "json-glib", "libadwaita", "libgee", "libgtop", "tinysparql"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

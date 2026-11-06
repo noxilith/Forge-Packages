@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'disputils'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: LDFLAGS
+[package]
+name = "disputils"
+version = "1.0.0"
+archive = "https://github.com/tudurom/disputils/archive/v1.0.0.tar.gz"
+sha256 = "67a07dce4505f15f9b6c770dcd47109a344c5c0f13ad1916785e3894920bc799"
+strip_components = 1
+description = "Utilities for getting info about displays"
+homepage = "https://github.com/tudurom/disputils"
+license = "ISC"
+deps = ["xcb-util"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'umbrello'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-svg
+[package]
+name = "umbrello"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/umbrello-26.08.1.tar.xz"
+sha256 = "25cc282f9cba45f4b83d6c7b1e87ef9974c04cd269c8643a032db0f6d486838b"
+strip_components = 1
+description = "UML modelling tool and code generator"
+homepage = "https://apps.kde.org/umbrello/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later, GFDL-1.2-or-later"
+deps = ["kf6-karchive", "kf6-kcompletion", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-ktexteditor", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "libxml2", "libxslt", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_WITH_QT6=ON"]
+deps = ["extra-cmake-modules", "gettext"]

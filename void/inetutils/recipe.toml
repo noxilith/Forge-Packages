@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'inetutils'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "inetutils"
+version = "2.8"
+archive = "https://ftp.gnu.org/gnu/inetutils/inetutils-2.8.tar.gz"
+sha256 = "57b3cf4f77555992881e5ba2a09a63b05aa2c56342a60ed4305b5f45938390b5"
+strip_components = 1
+description = "GNU network utilities"
+homepage = "https://www.gnu.org/software/inetutils/"
+license = "GPL-3.0-or-later"
+deps = ["pam"]
+patches = ["patches/procnet-dev.patch", "patches/tgetent.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-wrap", "--with-pam"]

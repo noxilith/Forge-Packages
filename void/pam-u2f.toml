@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pam-u2f'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "pam-u2f"
+version = "1.4.0"
+archive = "https://developers.yubico.com/pam-u2f/Releases/pam_u2f-1.4.0.tar.gz"
+sha256 = "a59927cea38ea8d91a6836a04e20fc629edde4204b16082f703f6db378e9c634"
+strip_components = 1
+description = "Pluggable Authentication Module (PAM) for U2F"
+homepage = "https://developers.yubico.com/pam-u2f/"
+license = "BSD-2-Clause"
+deps = ["libfido2", "openssl", "pam"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

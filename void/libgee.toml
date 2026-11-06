@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libgee'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "libgee"
+version = "0.20.8"
+archive = "https://download.gnome.org/sources/libgee/0.20/libgee-0.20.8.tar.xz"
+sha256 = "189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee"
+strip_components = 1
+description = "GObject collection library"
+homepage = "https://wiki.gnome.org/Libgee"
+license = "LGPL-2.1-or-later"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

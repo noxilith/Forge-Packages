@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gitu'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libssh2
+[package]
+name = "gitu"
+version = "0.43.0"
+archive = "https://github.com/altsem/gitu/archive/refs/tags/v0.43.0.tar.gz"
+sha256 = "4cc89732b2fa4fee07b2db5ce4cf325577fd195995e70e11c86b9bc1a6a2e114"
+strip_components = 1
+description = "Git client inspired by Magit"
+homepage = "https://github.com/altsem/gitu"
+license = "MIT"
+deps = ["libgit2-1.9", "openssl", "zlib"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-dev-tools'. Review before relying on it.
+# hooks not translated: post_patch
+[package]
+name = "xfce4-dev-tools"
+version = "4.20.0"
+archive = "https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.20/xfce4-dev-tools-4.20.0.tar.bz2"
+sha256 = "1fba39a08a0ecc771eaa3a3b6e4272a4f0b9e7c67d0f66e780cd6090cd4466aa"
+strip_components = 1
+description = "Xfce developer tools"
+homepage = "https://xfce.org/"
+license = "GPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["libxslt"]

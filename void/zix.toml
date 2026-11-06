@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'zix'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "zix"
+version = "0.6.2"
+archive = "https://download.drobilla.net/zix-0.6.2.tar.xz"
+sha256 = "4bc771abf4fcf399ea969a1da6b375f0117784f8fd0e2db356a859f635f616a7"
+strip_components = 1
+description = "C library of portability wrappers and data structures"
+homepage = "https://gitlab.com/drobilla/zix/"
+license = "ISC"
+
+[build]
+system = "meson"

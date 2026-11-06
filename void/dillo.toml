@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'dillo'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libwebp
+[package]
+name = "dillo"
+version = "3.3.0"
+archive = "https://codeberg.org/dillo/dillo/archive/v3.3.0.tar.gz"
+sha256 = "53ce0aaf71dd491a0619ac3830d95b96e39275103fbf0f1443f1a7d99b4344c8"
+strip_components = 1
+description = "Small and light graphical web browser"
+homepage = "https://dillo-browser.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["brotli", "fltk", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-tls", "--enable-ipv6", "--enable-threaded-dns"]
+deps = ["which"]

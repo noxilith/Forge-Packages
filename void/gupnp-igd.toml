@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gupnp-igd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "gupnp-igd"
+version = "1.4.0"
+archive = "https://gitlab.gnome.org/GNOME/gupnp-igd/-/archive/a10bc3732e978f364319cbf7e67b71efa6b0b504/gupnp-igd-a10bc3732e978f364319cbf7e67b71efa6b0b504.tar.gz"
+sha256 = "6dcfef6298bd2fceed36393b43cb46254b22bded577bad244f8b043210e98b5f"
+strip_components = 1
+description = "Library to handle UPnP IGD port mapping"
+homepage = "http://gupnp.org"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "gssdp", "gupnp", "libxml2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

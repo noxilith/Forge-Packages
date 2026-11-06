@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'opensmtpd-filter-dkimsign'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, make_cmd
+[package]
+name = "opensmtpd-filter-dkimsign"
+version = "0.5"
+archive = "https://distfiles.sigtrap.nl/filter-dkimsign-0.5.tar.gz"
+sha256 = "a5b4ec3af5ecb42351a0b5459bdd0f32c00ec55c23050b5f46dfaed8e321974b"
+strip_components = 1
+description = "Filter for signing mail with DKIM"
+homepage = "https://imperialat.at/dev/filter-dkimsign/"
+license = "ISC"
+deps = ["libopensmtpd", "openssl"]
+patches = ["patches/cleanup-search-paths.patch"]
+
+[build]
+system = "make"

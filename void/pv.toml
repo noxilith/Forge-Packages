@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'pv'. Review before relying on it.
+[package]
+name = "pv"
+version = "1.12.7"
+archive = "https://www.ivarch.com/programs/sources/pv-1.12.7.tar.gz"
+sha256 = "5326ed7ee95ef18039390c0b17891ac28985ac7c7a4235070fab767c1fe37bd8"
+strip_components = 1
+description = "Monitor the progress of data through a pipeline"
+homepage = "https://www.ivarch.com/programs/pv.shtml"
+license = "Artistic-2.0"
+
+[build]
+system = "autotools"

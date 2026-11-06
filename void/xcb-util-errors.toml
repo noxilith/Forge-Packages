@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xcb-util-errors'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcb-util-errors"
+version = "1.0.1"
+archive = "https://xcb.freedesktop.org/dist/xcb-util-errors-1.0.1.tar.xz"
+sha256 = "5628c87b984259ad927bacd8a42958319c36bdf4b065887803c9d820fb80f357"
+strip_components = 1
+description = "XCB errors library"
+homepage = "https://xcb.freedesktop.org"
+license = "MIT"
+deps = ["libxcb", "xcb-proto"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["m4", "pkg-config"]

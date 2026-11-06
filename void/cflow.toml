@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'cflow'. Review before relying on it.
+[package]
+name = "cflow"
+version = "1.8"
+archive = "https://ftp.gnu.org/gnu/cflow/cflow-1.8.tar.bz2"
+sha256 = "8321627b55b6c7877f6a43fcc6f9f846a94b1476a081a035465f7a78d3499ab8"
+strip_components = 1
+description = "C source files control analyzer and grapher"
+homepage = "http://www.gnu.org/software/cflow/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

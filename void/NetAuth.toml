@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'NetAuth'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path, build_helper
+[package]
+name = "NetAuth"
+version = "0.6.4"
+archive = "https://github.com/NetAuth/NetAuth/archive/v0.6.4.tar.gz"
+sha256 = "8f66f5b4532fa51257cc8ecaadf1badd282c5d16de96f5c57007ebb83b51fcba"
+strip_components = 1
+description = "Network authentication and identity system"
+homepage = "https://netauth.org"
+license = "MIT"
+
+[build]
+system = "go"

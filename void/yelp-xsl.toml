@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'yelp-xsl'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "yelp-xsl"
+version = "42.4"
+archive = "https://download.gnome.org/sources/yelp-xsl/42/yelp-xsl-42.4.tar.xz"
+sha256 = "fdebb07eb2e66a7fb7a0dce6ad8248ad29a4bbb134ba829128ca104f58abd7d1"
+strip_components = 1
+description = "Help browser for GNOME desktop - XSL and misc files"
+homepage = "https://wiki.gnome.org/Apps/Yelp/Xsl"
+license = "GPL-2.0-or-later"
+deps = ["libxslt"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

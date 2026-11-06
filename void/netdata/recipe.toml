@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'netdata'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: build_helper, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: libmnl, libnetfilter_acct, util-linux-common
+[package]
+name = "netdata"
+version = "1.42.1"
+archive = "https://github.com/netdata/netdata/releases/download/v1.42.1/netdata-v1.42.1.tar.gz"
+sha256 = "2728f74ec499bb8cce4d046b1ed3980bf3c84ad225a77d0be3b70f653a787a76"
+strip_components = 1
+description = "Real-time performance monitoring, done right"
+homepage = "https://www.netdata.cloud/"
+license = "GPL-3.0-or-later"
+deps = ["json-c", "libcap", "libuv", "libyaml", "lz4", "openssl", "snappy", "zlib"]
+patches = ["patches/cpp17.patch", "patches/protobuf-35.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-user=_netdata", "ac_cv_file_externaldeps_libbpf_libbpf_a=no"]
+tools = ["pkg-config"]

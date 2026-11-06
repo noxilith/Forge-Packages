@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cpptrace'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "cpptrace"
+version = "1.0.4"
+archive = "https://github.com/jeremy-rifkin/cpptrace/archive/refs/tags/v1.0.4.tar.gz"
+sha256 = "5c9f5b301e903714a4d01f1057b9543fa540f7bfcc5e3f8bd1748e652e24f9ea"
+strip_components = 1
+description = "Stacktrace library for C++11 and newer"
+homepage = "https://github.com/jeremy-rifkin/cpptrace/tree/main"
+license = "MIT"
+deps = ["libdwarf", "libunwind"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCPPTRACE_BUILD_SHARED=ON", "-DCPPTRACE_USE_EXTERNAL_ZSTD=ON", "-DCPPTRACE_USE_EXTERNAL_LIBDWARF=ON", "-DCPPTRACE_FIND_LIBDWARF_WITH_PKGCONFIG=ON", "-DCPPTRACE_UNWIND_WITH_LIBUNWIND=ON"]
+tools = ["pkg-config"]

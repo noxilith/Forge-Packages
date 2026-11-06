@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'plog'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "plog"
+version = "1.1.10"
+archive = "https://github.com/SergiusTheBest/plog/archive/refs/tags/1.1.10.tar.gz"
+sha256 = "55a090fc2b46ab44d0dde562a91fe5fc15445a3caedfaedda89fe3925da4705a"
+strip_components = 1
+description = "Portables, simple and extensible C++ logging library"
+homepage = "https://github.com/SergiusTheBest/plog"
+license = "MIT"
+
+[build]
+system = "cmake"

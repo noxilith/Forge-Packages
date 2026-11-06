@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'chrony_exporter'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "chrony_exporter"
+version = "0.15.0"
+archive = "https://github.com/SuperQ/chrony_exporter/archive/refs/tags/v0.15.0.tar.gz"
+sha256 = "a17d8e74664657ed69b2955927e157a906278ed6c326d66ccb5d52b2dd847cc0"
+strip_components = 1
+description = "Prometheus exporter for Chrony NTP"
+homepage = "https://github.com/SuperQ/chrony_exporter"
+license = "Apache-2.0"
+deps = ["chrony"]
+
+[build]
+system = "go"

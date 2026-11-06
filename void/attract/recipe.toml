@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'attract'. Review before relying on it.
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "attract"
+version = "2.7.0"
+archive = "https://github.com/mickelson/attract/archive/v2.7.0.tar.gz"
+sha256 = "497bc9d4d5846cb0eee71eaed2352d2350f789df3a913f423a3d6eed9ba428e8"
+strip_components = 1
+description = "Attract-Mode is a graphical frontend for emulators"
+homepage = "https://attractmode.org/"
+license = "GPL-3.0-or-later"
+deps = ["SFML", "curl", "fontconfig", "glu", "libXinerama", "libXrandr", "libarchive", "libjpeg-turbo"]
+patches = ["patches/Makefile.patch", "patches/fix-musl.patch", "patches/null.patch", "patches/string.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

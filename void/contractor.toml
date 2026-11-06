@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'contractor'. Review before relying on it.
+# settings not translated: make_dirs
+[package]
+name = "contractor"
+version = "0.3.4"
+archive = "https://github.com/elementary/contractor/archive/0.3.4.tar.gz"
+sha256 = "a7fb7aa317d1e7f5168ce902a04b8bc2d0eb784edb938c131caf4e81b367d00c"
+strip_components = 1
+description = "A desktop-wide extension service used by elementary OS"
+homepage = "https://github.com/elementary/contractor"
+license = "GPL-3.0-or-later"
+deps = ["dbus", "glib", "libgee"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gobject-introspection", "vala"]

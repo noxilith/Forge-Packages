@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xfce4-weather-plugin'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "xfce4-weather-plugin"
+version = "0.12.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.12/xfce4-weather-plugin-0.12.0.tar.xz"
+sha256 = "5dd90b032c06ef4b64b818023154ef9463a2c694a0290e57f3412296c7545ff6"
+strip_components = 1
+description = "XFCE panel plugin to show temperature and weather"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin"
+license = "GPL-2.0-or-later"
+deps = ["glib", "json-c", "libsoup3", "libxfce4ui", "libxml2", "upower", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "xfce4-dev-tools"]

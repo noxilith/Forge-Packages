@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qtox'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, libtomcrypt, libvpx, qt6-svg, qt6-tools
+[package]
+name = "qtox"
+version = "1.18.6"
+archive = "https://github.com/TokTok/qTox/archive/v1.18.6.tar.gz"
+sha256 = "3cbb24652ca7318c65d454b4de7530425121c14b480c011e9a1061a0d035a198"
+strip_components = 1
+description = "QT-based TOX instant messenger client"
+homepage = "https://wiki.tox.chat/clients/qtox"
+license = "GPL-3.0-or-later"
+deps = ["kf6-sonnet", "libXScrnSaver", "libexif", "libopenal", "libsodium", "opus", "qrencode", "qt6-base", "sqlcipher", "toxcore", "v4l-utils"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUPDATE_CHECK=OFF", "-DGIT_VERSION=1.18.6", "-DGIT_DESCRIBE_EXACT=1.18.6", "-DGIT_DESCRIBE=1.18.6"]
+tools = ["pkg-config"]

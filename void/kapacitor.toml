@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kapacitor'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, make_dirs, conf_files
+[package]
+name = "kapacitor"
+version = "1.5.4"
+archive = "https://github.com/influxdata/kapacitor/archive/v1.5.4.tar.gz"
+sha256 = "c27b472713a9d45a57a772e5d38caffeeaa02ade6961ff7c33ed0e399c53b3f5"
+strip_components = 1
+description = "Open source framework for alerting on time series data"
+homepage = "https://www.influxdata.com/time-series-platform/kapacitor/"
+license = "MIT"
+
+[build]
+system = "go"

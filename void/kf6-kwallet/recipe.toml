@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kf6-kwallet'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kwallet"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kwallet-6.30.0.tar.xz"
+sha256 = "93cb9c1df2630807c04bf8c30312e75ae3bb466c77dd9b29bb2c752e71d34a26"
+strip_components = 1
+description = "KWallet: Credential Storage"
+homepage = "https://invent.kde.org/frameworks/kwallet"
+license = "LGPL-2.1-or-later"
+deps = ["gpgmepp", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-knotifications", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "libgcrypt", "libsecret", "qca-qt6"]
+patches = ["patches/cross-kwalletd.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

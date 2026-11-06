@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'media-player-info'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "media-player-info"
+version = "24"
+archive = "https://www.freedesktop.org/software/media-player-info/media-player-info-24.tar.gz"
+sha256 = "e6cf46db0b503e9929407ec6aa3fcd2becc9e2ca945b4ff787c98c8db63a1134"
+strip_components = 1
+description = "Data files describing media player capabilities, for post-HAL systems"
+homepage = "https://www.freedesktop.org/wiki/Software/media-player-info/"
+license = "BSD-3-Clause"
+deps = ["eudev"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

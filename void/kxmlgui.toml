@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kxmlgui'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kxmlgui"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kxmlgui-5.116.0.tar.xz"
+sha256 = "636566a2530db0011c09de7f98ba83a53591e6cbdc43a2bb63ff125b991c7a40"
+strip_components = 1
+description = "KDE Framework for managing menu and toolbar actions"
+homepage = "https://invent.kde.org/frameworks/kxmlgui"
+license = "LGPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["attica", "kglobalaccel", "ktextwidgets"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

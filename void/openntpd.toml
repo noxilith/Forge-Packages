@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'openntpd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: ca-certificates, libtls
+[package]
+name = "openntpd"
+version = "7.9p1"
+archive = "https://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/openntpd-7.9p1.tar.gz"
+sha256 = "091eeb3f4e358e28c3ab2ea58f93d7a0b5758a20d7c8a0418e162e9b2c27addc"
+strip_components = 1
+description = "FREE, easy to use implementation of the Network Time Protocol"
+homepage = "http://openntpd.org/"
+license = "ISC"
+
+[build]
+system = "autotools"
+configure_args = ["--with-privsep-user=openntpd"]

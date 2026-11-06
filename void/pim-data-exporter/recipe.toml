@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pim-data-exporter'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "pim-data-exporter"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/pim-data-exporter-26.08.1.tar.xz"
+sha256 = "597b9a5c4bf5d643d9da967ba58770aaf6a42ecb5e08dc11860a1cf37384d651"
+strip_components = 1
+description = "Import and export KDE PIM settings"
+homepage = "https://kontact.kde.org/"
+license = "GPL-2.0-or-later"
+deps = ["calendarsupport", "kf6-kstatusnotifieritem", "mailcommon", "messagelib"]
+patches = ["patches/find-ki18n.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdoctools", "qt6-base"]

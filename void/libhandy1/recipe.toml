@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libhandy1'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libhandy1"
+version = "1.8.3"
+archive = "https://download.gnome.org/sources/libhandy/1.8/libhandy-1.8.3.tar.xz"
+sha256 = "05b497229073ff557f10b326e074c5066f8743a302d4820ab97bcb5cd2dab087"
+strip_components = 1
+description = "GTK+3 building blocks for modern adaptive applications"
+homepage = "https://gitlab.gnome.org/GNOME/libhandy/"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "gtk+3"]
+patches = ["patches/fix-tests.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dexamples=true", "-Dtests=true"]
+tools = ["pkg-config"]
+deps = ["gettext"]

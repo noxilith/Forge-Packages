@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'papers'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool, libspectre
+[package]
+name = "papers"
+version = "51.0"
+archive = "https://download.gnome.org/sources/papers/51.0/papers-51.0.tar.xz"
+sha256 = "4b8caf527d85f7eabc63ebe9d2320e0490653c2e138b88fbf42e6f41dd3e451c"
+strip_components = 1
+description = "Document viewer for the GNOME desktop"
+homepage = "https://apps.gnome.org/Papers"
+license = "GPL-2.0-or-later"
+deps = ["djvulibre", "exempi", "libadwaita", "libgxps", "libsecret", "nautilus", "poppler"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcomics=enabled", "-Ddjvu=enabled", "-Dpdf=enabled", "-Dtiff=enabled"]
+tools = ["pkg-config"]
+deps = ["AppStream", "blueprint-compiler", "desktop-file-utils", "gettext", "glib", "gtk4"]

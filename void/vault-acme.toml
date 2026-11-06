@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'vault-acme'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "vault-acme"
+version = "0.0.9"
+archive = "https://github.com/remilapeyre/vault-acme/archive/refs/tags/v0.0.9.tar.gz"
+sha256 = "e1c8a3ef30ece81670f3e2a084fe3298433f7ad10fbb3aa531331a4a943a3e06"
+strip_components = 1
+description = "ACME backend for Hashicorp Vault"
+homepage = "https://github.com/remilapeyre/vault-acme"
+license = "MPL-2.0"
+deps = ["libcap", "vault"]
+
+[build]
+system = "go"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'espeakup'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: espeak-ng
+[package]
+name = "espeakup"
+version = "0.80"
+archive = "https://github.com/williamh/espeakup/archive/v0.80.tar.gz"
+sha256 = "4de284e30b6bdb0f9dee9c8ea02d13a3d20a61415b812338446b8b381e997ef4"
+strip_components = 1
+description = "Lightweight connector for espeak and speakup"
+homepage = "https://github.com/williamh/espeakup"
+license = "GPL-3.0-or-later"
+patches = ["patches/use-with-espeak-ng.patch"]
+
+[build]
+system = "make"

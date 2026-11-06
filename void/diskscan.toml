@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'diskscan'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "diskscan"
+version = "0.21"
+archive = "https://github.com/baruch/diskscan/archive/0.21.tar.gz"
+sha256 = "e4d82e0c9f29435e0fffc95fe94efa8f3fafb2573b92d1cb3fb547bd3c40f693"
+strip_components = 1
+description = "Scan HDD/SSD for failed and near failed sectors"
+homepage = "http://blog.disksurvey.org/proj/diskscan/"
+license = "GPL-3.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "cmake"

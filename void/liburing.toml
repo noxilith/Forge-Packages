@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'liburing'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: make_build_args
+[package]
+name = "liburing"
+version = "2.15"
+archive = "https://github.com/axboe/liburing/archive/refs/tags/liburing-2.15.tar.gz"
+sha256 = "8d052f2622dcb3678cbaee5ff582a87572672a6c0a56533cdda5b65cb636120a"
+strip_components = 1
+description = "Linux-native io_uring I/O access library"
+homepage = "https://git.kernel.dk/cgit/liburing"
+license = "LGPL-2.1-only"
+
+[build]
+system = "autotools"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'turnstile'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "turnstile"
+version = "0.1.11"
+archive = "https://github.com/chimera-linux/turnstile/archive/refs/tags/v0.1.11.tar.gz"
+sha256 = "04904eff68a726bed281820b3497e018ede55a5d745f31ceb9a502f905d0ed56"
+strip_components = 1
+description = "Independent session/login tracker and user service manager"
+homepage = "https://github.com/chimera-linux/turnstile"
+license = "BSD-2-Clause"
+deps = ["pam"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddinit=enabled", "-Drunit=enabled", "-Ddefault_backend=runit", "-Dmanage_rundir=true"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

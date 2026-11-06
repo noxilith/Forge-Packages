@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-power-manager'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "gnome-power-manager"
+version = "43.0"
+archive = "https://download.gnome.org/sources/gnome-power-manager/43/gnome-power-manager-43.0.tar.xz"
+sha256 = "7daab48bbddb30e9df2aba650cb60d05e667c9f885ace6a0a1e7950e0cbdd32f"
+strip_components = 1
+description = "GNOME power management tool"
+homepage = "http://www.gnome.org/projects/gnome-power-manager/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "upower"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'grail'. Review before relying on it.
+[package]
+name = "grail"
+version = "3.1.1"
+archive = "https://launchpad.net/grail/trunk/3.1.1/+download/grail-3.1.1.tar.bz2"
+sha256 = "5eed1f650f042481daa3a2de5e7d43261fe343b2a1b1e240f3b7fc26572c9df3"
+strip_components = 1
+description = "Gesture Recognition And Instantiation Library"
+homepage = "https://launchpad.net/grail"
+license = "LGPL-3.0-only"
+deps = ["frame", "libXfixes", "libXi"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-x11"]
+tools = ["pkg-config"]

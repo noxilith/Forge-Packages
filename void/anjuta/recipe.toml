@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'anjuta'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool, itstool, libwebkit2gtk41, sqlite, subversion
+[package]
+name = "anjuta"
+version = "3.34.0"
+archive = "https://download.gnome.org/sources/anjuta/3.34/anjuta-3.34.0.tar.xz"
+sha256 = "42a93130ed3ee02d064a7094e94e1ffae2032b3f35a87bf441e37fc3bb3a148f"
+strip_components = 1
+description = "GNOME Integrated Development Environment"
+homepage = "https://projects.gnome.org/anjuta"
+license = "GPL-2.0-or-later"
+deps = ["apr-util", "autogen", "devhelp", "gdl", "gjs", "glade3", "graphviz", "gtksourceview", "libgda", "libxml2", "libxslt", "neon", "vala", "vte3"]
+patches = ["patches/fix-unistd_h.patch", "patches/fix-webkit2gtk-detection.patch", "patches/no-gnome-common.patch", "patches/python.patch", "patches/vala-050.patch", "patches/vala.patch", "patches/vala048.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-compile-warnings", "--disable-schemas-compile", "PYTHON=python3"]
+tools = ["flex", "pkg-config"]
+deps = ["gettext", "glib", "gtk-doc", "yelp-tools"]

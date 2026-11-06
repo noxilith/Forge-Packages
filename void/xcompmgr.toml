@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xcompmgr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcompmgr"
+version = "1.1.10"
+archive = "https://www.x.org/releases/individual/app/xcompmgr-1.1.10.tar.xz"
+sha256 = "7824f709c4f22432eaea7542ec93384e5dd48f6fcb85c12ff82d721423b0b98f"
+strip_components = 1
+description = "Composite Window-effects manager for X.org"
+homepage = "https://www.x.org/wiki/"
+license = "HPND"
+deps = ["libXcomposite", "libXdamage", "libXext", "libXrender"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

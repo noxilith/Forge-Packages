@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'frame'. Review before relying on it.
+[package]
+name = "frame"
+version = "2.5.0"
+archive = "https://launchpad.net/frame/trunk/v2.5.0/+download/frame-2.5.0.tar.gz"
+sha256 = "cfb9ab52cdccd926f1822a457264d0014c7eb9f4600a72626063dd073b26256f"
+strip_components = 1
+description = "Touch Frame Library"
+homepage = "https://launchpad.net/frame"
+license = "LGPL-3.0-only"
+deps = ["libXi", "xorg-server"]
+patches = ["patches/fix-gcc6-uninitialized.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-x11"]
+tools = ["pkg-config"]

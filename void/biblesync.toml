@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'biblesync'. Review before relying on it.
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "biblesync"
+version = "2.1.0"
+archive = "https://github.com/karlkleinpaste/biblesync/archive/2.1.0.tar.gz"
+sha256 = "9083fcacc4d85f2b8c3a3254112129c02d940d20db8c0c5bcb6239b115e8d0e8"
+strip_components = 1
+description = "Multicast shared co-navigation library for Bible programs"
+homepage = "https://github.com/karlkleinpaste/biblesync"
+license = "Public Domain"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=TRUE"]

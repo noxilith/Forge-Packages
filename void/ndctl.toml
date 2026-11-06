@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'ndctl'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "ndctl"
+version = "70.1"
+archive = "https://github.com/pmem/ndctl/archive/v70.1.tar.gz"
+sha256 = "2b2a7e6228481076dc807df7a658ba91017658fcb932e8bea489330380d2d682"
+strip_components = 1
+description = "Utility library for managing libnvdimm"
+homepage = "https://github.com/pmem/ndctl"
+license = "LGPL-2.1-only, GPL-2.0-only"
+deps = ["bash-completion", "eudev", "json-c", "keyutils", "kmod"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-docs", "--without-systemd"]
+tools = ["pkg-config"]
+deps = ["xmlto"]

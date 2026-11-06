@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'efivar'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_build
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "efivar"
+version = "39"
+archive = "https://github.com/rhboot/efivar/archive/39.tar.gz"
+sha256 = "c9edd15f2eeeea63232f3e669a48e992c7be9aff57ee22672ac31f5eca1609a6"
+strip_components = 1
+description = "Tools to manipulate EFI variables"
+homepage = "https://github.com/rhboot/efivar"
+license = "LGPL-2.1-or-later"
+patches = ["patches/build-tester.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["mdocml"]

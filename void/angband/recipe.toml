@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'angband'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: SDL2_image, ncurses
+[package]
+name = "angband"
+version = "4.2.5"
+archive = "https://github.com/angband/angband/archive/refs/tags/4.2.5.tar.gz"
+sha256 = "2a27ce296310c4cbf960e2eb41ef55d383e546f24533446cf224119498a99651"
+strip_components = 1
+description = "Free, single-player dungeon exploration game"
+homepage = "https://rephial.org/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2_mixer", "SDL2_ttf"]
+patches = ["patches/fix-tests.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-sdl2", "--enable-sdl2-mixer"]

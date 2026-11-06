@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libstaroffice'. Review before relying on it.
+[package]
+name = "libstaroffice"
+version = "0.0.8"
+archive = "https://github.com/fosnola/libstaroffice/releases/download/0.0.8/libstaroffice-0.0.8.tar.xz"
+sha256 = "bbca92882e96c55bd1527670866d6bc7529ccb12786da55a2398b60a063378da"
+strip_components = 1
+description = "Import filter for all StarOffice document"
+homepage = "https://github.com/fosnola/libstaroffice"
+license = "LGPL-2.1-or-later, MPL-2.0"
+deps = ["librevenge", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

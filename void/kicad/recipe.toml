@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'kicad'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, glew, ngspice, python3-setuptools, sqlite, wxPython
+[package]
+name = "kicad"
+version = "10.0.8"
+archive = "https://gitlab.com/kicad/code/kicad/-/archive/10.0.8/kicad-10.0.8.tar.gz"
+sha256 = "0723fedd82522fcd33cb9d8ad53979a35f6e4d3ec627c4e2e2708dfcba360574"
+strip_components = 1
+description = "Electronic schematic and PCB design software"
+homepage = "http://kicad.org"
+license = "GPL-3.0-or-later"
+deps = ["cairo", "curl", "glm", "gtk+3", "libfreeglut", "libgit2", "libsecret", "libspnav", "nng", "occt", "poppler", "protobuf", "unixodbc", "wxWidgets-gtk3"]
+patches = ["patches/aarch64-musl-ice.patch", "patches/fix-linking.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKICAD_SCRIPTING_WXPYTHON=ON", "-DKICAD_BUILD_QA_TESTS=OFF", "-DKICAD_BUILD_I18N=ON", "-DKICAD_I18N_UNIX_STRICT_PATH=ON"]
+tools = ["pkg-config"]
+deps = ["gettext", "swig", "tar"]

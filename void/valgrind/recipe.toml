@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'valgrind'. Review before relying on it.
+# settings not translated: CFLAGS, CXXFLAGS
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "valgrind"
+version = "3.25.1"
+archive = "https://sourceware.org/pub/valgrind/valgrind-3.25.1.tar.bz2"
+sha256 = "61deb8d0727b45c268efdc1b3b6c9e679cd97cbf5ee4b28d1dead7c8b7a271af"
+strip_components = 1
+description = "Tool for finding memory management bugs in programs"
+homepage = "http://valgrind.org/"
+license = "GPL-2.0-or-later"
+patches = ["patches/throw.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-tls", "--without-mpicc", "--enable-lto=yes"]
+tools = ["perl", "pkg-config"]

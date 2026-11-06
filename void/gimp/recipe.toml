@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gimp'. Review before relying on it.
+# settings not translated: build_helper, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: LuaJIT, ghostscript, gi-docgen, hicolor-icon-theme, libjxl, libwebp, lua54-lgi
+[package]
+name = "gimp"
+version = "3.2.6"
+archive = "https://download.gimp.org/gimp/v3.2/gimp-3.2.6.tar.xz"
+sha256 = "40b15e90ad0c0c631b76da3c467ea9847fa5c24f37413ac5b492804860a28cd8"
+strip_components = 1
+description = "GNU image manipulation program"
+homepage = "https://www.gimp.org"
+license = "GPL-3.0-only"
+deps = ["AppStream", "aalib", "alsa-lib", "appstream-glib", "babl", "cfitsio", "desktop-file-utils", "gegl", "gjs", "glib-networking", "gobject-introspection", "gtk+3", "iso-codes", "libXmu", "libXpm", "libgexiv2", "libheif", "libmng", "libmypaint", "librsvg", "libunwind", "libwmf", "mypaint-brushes", "openexr", "openjpeg2", "poppler", "python3-gobject"]
+patches = ["patches/0001-meson-tools-Fix-regression-on-cross-building-after-G.patch", "patches/atol.patch", "patches/cross.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcheck-update=no", "-Drevision=1", "-Denable-default-bin=enabled", "-Dbug-report-url=https://github.com/void-linux/void-packages/issues/new/choose"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "glib", "libxslt", "xdg-utils", "xz", "yelp-tools"]

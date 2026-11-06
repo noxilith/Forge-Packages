@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gfeeds'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libwebkit2gtk41, python3-BeautifulSoup4, python3-Pillow, python3-Pygments, python3-dateutil, python3-humanize, python3-magic, python3-pytz, python3-readability-lxml
+[package]
+name = "gfeeds"
+version = "2.2.0"
+archive = "https://gitlab.gnome.org/World/gfeeds/-/archive/2.2.0/gfeeds-2.2.0.tar.gz"
+sha256 = "13a3e99acbb0ee29389673fc0c9f9de69c29b6574acb848103ef0c5653a78b45"
+strip_components = 1
+description = "RSS/Atom feed reader for GNOME"
+homepage = "https://gfeeds.gabmus.org/"
+license = "GPL-3.0-or-later"
+deps = ["libadwaita", "python3-gobject", "python3-syndom"]
+patches = ["patches/fix-for-blueprint-0.8.patch", "patches/upgrade-blueprint-0.8-syntax.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "gettext", "glib", "gtk+3"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'qbittorrent'. Review before relying on it.
+# hooks not translated: post_build, post_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "qbittorrent"
+version = "5.3.0"
+archive = "https://downloads.sourceforge.net/sourceforge/qbittorrent/qbittorrent-5.3.0.tar.xz"
+sha256 = "9ea9c0256f976921abd8e0294241464af9977790255d97a186af76d3f0d67a7e"
+strip_components = 1
+description = "Free software alternative to µtorrent"
+homepage = "https://www.qbittorrent.org/"
+license = "GPL-2.0-or-later"
+deps = ["libtorrent-rasterbar", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSYSTEMD=OFF", "-DGUI=ON", "-DWEBUI=ON"]
+tools = ["pkg-config"]

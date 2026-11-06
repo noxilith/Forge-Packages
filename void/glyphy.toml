@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'glyphy'. Review before relying on it.
+# hooks not translated: post_configure, pre_configure
+[package]
+name = "glyphy"
+version = "0.0.20190307"
+archive = "https://codeload.github.com/behdad/glyphy/tar.gz/bc2da506d23bdaf3eb0d95c9649a4591b4d912c7"
+sha256 = "821be957828215cbca8766b7be48983cccef7d578dcf90db0beffbb4be2715b0"
+strip_components = 1
+description = "Signed-distance-field (SDF) text renderer using OpenGL"
+homepage = "https://github.com/behdad/glyphy"
+license = "Apache-2.0"
+deps = ["freetype"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["which"]

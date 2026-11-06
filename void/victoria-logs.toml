@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'victoria-logs'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_package, go_import_path, make_dirs
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "victoria-logs"
+version = "1.53.0"
+archive = "https://github.com/VictoriaMetrics/VictoriaLogs/archive/v1.53.0.tar.gz"
+sha256 = "9dab43bfb2ccc2b3009a2e7cacd798f12b561a92f4a29c8a697c60295a383874"
+strip_components = 1
+description = "Fast and easy-to-use open source logs solution"
+homepage = "https://victoriametrics.com/products/victorialogs/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

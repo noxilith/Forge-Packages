@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fcitx5-anthy'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fcitx5
+[package]
+name = "fcitx5-anthy"
+version = "5.1.10"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-anthy/fcitx5-anthy-5.1.10.tar.zst"
+sha256 = "b7865d3c03ef51b776890bdf525165a544e30be446e2762e0c53c87e90590786"
+strip_components = 1
+description = "Fcitx5 - Anthy engine"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "GPL-2.0-or-later"
+deps = ["anthy-unicode"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

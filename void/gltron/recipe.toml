@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gltron'. Review before relying on it.
+# needs, but Forge has no recipe for yet: SDL_sound
+[package]
+name = "gltron"
+version = "0.70"
+archive = "https://downloads.sourceforge.net/sourceforge/gltron/gltron-0.70-source.tar.gz"
+sha256 = "e0c8ebb41a18a1f8d7302a9c2cb466f5b1dd63e9a9966c769075e6b6bdad8bb0"
+strip_components = 1
+description = "3d tron, just like the movie"
+homepage = "http://gltron.org/"
+license = "GPL-2.0-only"
+deps = ["glu", "libmikmod", "libogg", "libpng", "libvorbis", "smpeg"]
+patches = ["patches/gltron-0.70-configure.patch", "patches/gltron-0.70-debian.patch", "patches/gltron-0.70-prototypes.patch", "patches/stdint.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-warn=off"]

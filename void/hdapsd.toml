@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'hdapsd'. Review before relying on it.
+[package]
+name = "hdapsd"
+version = "20141024"
+archive = "https://downloads.sourceforge.net/sourceforge/hdaps/hdapsd-20141024.tar.gz"
+sha256 = "4a9f7c4d6351bd31757f236ad832ceccf10280d32bcaf4c25d15dc4ecc84581f"
+strip_components = 1
+description = "HDAPS userspace hard drive protection daemon"
+homepage = "http://sourceforge.net/projects/hdaps/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

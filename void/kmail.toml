@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kmail'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-location, qt6-tools, qt6-webchannel
+[package]
+name = "kmail"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kmail-26.08.1.tar.xz"
+sha256 = "2e5035d0f4219f7ec77a1859d483e8f902663db9bcc1c2fdd0a2a4337cc7bf89"
+strip_components = 1
+description = "KDE Mail Client"
+homepage = "https://kde.org/applications/en/internet/org.kde.kmail2"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later, GFDL-1.2-or-later"
+deps = ["akonadi-import-wizard", "kcalutils", "kdepim-runtime", "kf6-kcrash", "kf6-knotifyconfig", "kf6-kparts", "kf6-kstatusnotifieritem", "kf6-kuserfeedback", "kmail-account-wizard", "kontactinterface", "ktnef", "libkleo", "libksieve", "mailcommon", "mariadb", "messagelib", "pim-data-exporter", "qt6-pdf"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdoctools", "qt6-base"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'fswebcam'. Review before relying on it.
+[package]
+name = "fswebcam"
+version = "20200725"
+archive = "https://github.com/fsphil/fswebcam/archive/20200725.tar.gz"
+sha256 = "d5439b2bf49bb634100d7e42ed9854f84bfd355c1d40bc3d4d81593eeadd8aee"
+strip_components = 1
+description = "Neat and simple webcam app"
+homepage = "http://www.sanslogic.co.uk/fswebcam/"
+license = "GPL-2.0-only"
+deps = ["gd"]
+
+[build]
+system = "autotools"

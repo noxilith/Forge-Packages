@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 't1utils'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "t1utils"
+version = "1.42"
+archive = "https://www.lcdf.org/type/t1utils-1.42.tar.gz"
+sha256 = "61877935b1987044ddff4bb90a05200ca7164678a355e170bf5f1a5556cc9f29"
+strip_components = 1
+description = "Type 1 font utilities"
+homepage = "https://www.lcdf.org/type/#t1utils"
+license = "custom:Click"
+
+[build]
+system = "autotools"

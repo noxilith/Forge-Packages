@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xiate'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "xiate"
+version = "21.05"
+archive = "https://www.uninformativ.de/git/xiate/archives/xiate-v21.05.tar.gz"
+sha256 = "487dc53f48494e53a1db9aa36a1e04a594b207d7fcda84908e192bb4e706b7cb"
+strip_components = 1
+description = "Terminal emulator which uses VTE as a backend"
+homepage = "https://www.uninformativ.de/projects/xiate/"
+license = "MIT"
+deps = ["vte3"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

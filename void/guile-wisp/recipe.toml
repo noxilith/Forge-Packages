@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'guile-wisp'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "guile-wisp"
+version = "1.0.12"
+archive = "https://hg.sr.ht/~arnebab/wisp/archive/v1.0.12.tar.gz"
+sha256 = "ad993295163ec64fef1a9ca69076caa4ecf338e7c90dd95d83c55e50d1984ac4"
+strip_components = 1
+description = "SRFI-119 (WISP, Whitespace Lisp) implementation for guile"
+homepage = "https://www.draketo.de/english/wisp"
+license = "GPL-3.0-or-later"
+deps = ["guile"]
+patches = ["patches/escape.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["python3=python3"]
+tools = ["pkg-config"]

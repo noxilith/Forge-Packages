@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ghq'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "ghq"
+version = "1.10.1"
+archive = "https://github.com/x-motemen/ghq/archive/v1.10.1.tar.gz"
+sha256 = "67ff0fc695ba8d82ab1240c8a7be7106294c3d1493807903d3a49004ae56667a"
+strip_components = 1
+description = "Remote repository management made easy"
+homepage = "https://github.com/x-motemen/ghq"
+license = "MIT"
+
+[build]
+system = "go"

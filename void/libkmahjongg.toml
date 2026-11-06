@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libkmahjongg'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg
+[package]
+name = "libkmahjongg"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libkmahjongg-26.08.1.tar.xz"
+sha256 = "11d68a9cbbdab3a0331a6b6a353b522cbdc45ac4dac23ec7a0805595f9e01bac"
+strip_components = 1
+description = "Common code, backgrounds and tile sets for Majhongg games"
+homepage = "https://invent.kde.org/games/libkmahjongg"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

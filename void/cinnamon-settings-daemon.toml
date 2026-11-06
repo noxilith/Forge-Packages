@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cinnamon-settings-daemon'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme, libcanberra, nss
+[package]
+name = "cinnamon-settings-daemon"
+version = "6.6.3"
+archive = "https://github.com/linuxmint/cinnamon-settings-daemon/archive/6.6.3.tar.gz"
+sha256 = "c55cd5037adeb05a25c21fd4a9c03bd147e2917727c189a58e79c9dbfcaf489c"
+strip_components = 1
+description = "Cinnamon Settings Daemon"
+homepage = "https://github.com/linuxmint/cinnamon-settings-daemon"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["cinnamon-desktop", "desktop-file-utils", "elogind", "ibus", "json-glib", "libSM", "libgnomekbd", "libgudev", "libnotify", "librsvg", "polkit", "pulseaudio", "upower"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

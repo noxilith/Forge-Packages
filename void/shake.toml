@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'shake'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "shake"
+version = "1.0"
+archive = "https://github.com/unbrice/shake/archive/v1.0.tar.gz"
+sha256 = "ac5a57bd8d55e197734852bf66318ecf39b4c5c298e43a259ba1d8a4b7a2ced3"
+strip_components = 1
+description = "Defragmenter that runs in userspace while the system is used"
+homepage = "http://vleu.net/shake/"
+license = "GPL-3.0-or-later"
+deps = ["attr"]
+
+[build]
+system = "cmake"
+deps = ["help2man"]

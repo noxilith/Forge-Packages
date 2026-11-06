@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'openssh'. Review before relying on it.
+# 12 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, make_dirs, conf_files
+[package]
+name = "openssh"
+version = "10.6p2"
+archive = "https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p2.tar.gz"
+sha256 = "9ae44872090cf2f06b3cf9ff147e7f16f309671340763ed2f99248398ae29d5b"
+strip_components = 1
+description = "OpenSSH free Secure Shell (SSH) client and server implementation"
+homepage = "https://www.openssh.com"
+license = "BSD-2-Clause, ISC"
+deps = ["libedit", "pam", "zlib"]
+patches = ["patches/config.patch", "patches/d-name-size.patch", "patches/ssh-musl-gssapi.patch", "patches/sshd_config.patch", "patches/time_t.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-selinux", "--with-privsep-user=nobody", "--with-mantype=doc", "--without-rpath", "--disable-strip", "--with-pam", "--with-libedit", "--with-Werror", "ac_cv_header_sys_cdefs_h=false"]

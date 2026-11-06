@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mle'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: lua54, uthash
+[package]
+name = "mle"
+version = "1.8.1"
+archive = "https://github.com/adsr/mle/archive/v1.8.1.tar.gz"
+sha256 = "7ee33a695f801024254fc717b64aff6a7a4c274874fc4b83e1a23ccf1a74b9ca"
+strip_components = 1
+description = "Flexible terminal-based text editor (C)"
+homepage = "https://github.com/adsr/mle"
+license = "Apache-2.0"
+deps = ["pcre2"]
+
+[build]
+system = "make"

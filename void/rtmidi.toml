@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'rtmidi'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "rtmidi"
+version = "6.0.0"
+archive = "https://github.com/thestk/rtmidi/archive/6.0.0.tar.gz"
+sha256 = "ef7bcda27fee6936b651c29ebe9544c74959d0b1583b716ce80a1c6fea7617f0"
+strip_components = 1
+description = "C++ classes for realtime MIDI input/output"
+homepage = "http://www.music.mcgill.ca/~gary/rtmidi/"
+license = "custom:RtMidi"
+deps = ["alsa-lib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-alsa", "--with-jack"]

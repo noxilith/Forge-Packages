@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'plasma-desktop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, libaccounts-qt, libcanberra, noto-fonts-emoji, qt6-qt5compat, qt6-shadertools, qt6-svg, qt6-tools, signon-plugin-oauth2, xdg-user-dirs
+[package]
+name = "plasma-desktop"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-desktop-6.7.5.tar.xz"
+sha256 = "079fcf6b87d7bf65e3f2a4670d605fac9469344c279a285a98ad549332d7b53e"
+strip_components = 1
+description = "KDE Plasma Desktop"
+homepage = "https://invent.kde.org/plasma/plasma-desktop"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later, LGPL-2.1-or-later, GFDL-1.2-or-later"
+deps = ["SDL2", "accountsservice", "alsa-lib", "eudev", "glib", "ibus", "kf6-attica", "kf6-baloo", "kf6-kaccounts-integration", "kf6-kauth", "kf6-kcmutils", "kf6-kcodecs", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kded", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-knewstuff", "kf6-knotifications", "kf6-knotifyconfig", "kf6-kpackage", "kf6-krunner", "kf6-ksvg", "kf6-kwidgetsaddons", "kf6-kxmlgui", "kf6-qqc2-desktop-style", "kf6-sonnet", "kirigami-addons", "kmenuedit", "kscreenlocker", "ksystemstats", "kwin", "libX11", "libXcursor", "libXi", "libksysguard", "libplasma", "libwacom", "libxcb", "libxkbcommon", "libxkbfile", "plasma-activities", "plasma-activities-stats", "plasma-workspace", "plasma5support", "polkit-kde-agent", "powerdevil", "qt6-base", "qt6-declarative", "systemsettings", "xcb-util-image", "xf86-input-evdev", "xf86-input-libinput", "xorg-server"]
+patches = ["patches/no-discover-recommendation.patch", "patches/no-intltool.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "plasma-wayland-protocols", "wayland", "wayland-protocols"]

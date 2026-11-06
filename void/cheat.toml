@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cheat'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: go_package, go_import_path, build_helper
+[package]
+name = "cheat"
+version = "5.1.0"
+archive = "https://github.com/cheat/cheat/archive/refs/tags/5.1.0.tar.gz"
+sha256 = "5ef8864dacb5b37268d7d26cd01f74b99a33b2e5eb5b290e4221358410c99db4"
+strip_components = 1
+description = "Create and view interactive cheatsheets on the command-line"
+homepage = "https://github.com/cheat/cheat"
+license = "MIT"
+
+[build]
+system = "go"

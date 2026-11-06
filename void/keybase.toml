@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'keybase'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_build_tags, go_package, go_import_path
+[package]
+name = "keybase"
+version = "6.4.0"
+archive = "https://github.com/keybase/client/releases/download/v6.4.0/keybase-v6.4.0.tar.xz"
+sha256 = "506916263f71a3ac8385228b3855d6ddb3f3168574179a0b10ab9867d18b0e3d"
+strip_components = 1
+description = "Client for keybase.io"
+homepage = "https://keybase.io/"
+license = "BSD-3-Clause"
+deps = ["gnupg"]
+
+[build]
+system = "go"
+subdir = "go"

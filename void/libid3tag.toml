@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libid3tag'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libid3tag"
+version = "0.16.4"
+archive = "https://codeberg.org/tenacityteam/libid3tag/archive/0.16.4.tar.gz"
+sha256 = "ceb88ada1aa867c87c1d748a8aa40e68db5b0d2df636a9dab0ab1f7741d5e009"
+strip_components = 1
+description = "ID3 tag library, part of MAD (MPEG Audio Decoder)"
+homepage = "https://codeberg.org/tenacityteam/libid3tag"
+license = "GPL-2.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]
+tools = ["gperf", "pkg-config"]

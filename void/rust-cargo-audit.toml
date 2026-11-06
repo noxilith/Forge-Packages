@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rust-cargo-audit'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rust-cargo-audit"
+version = "0.22.1"
+archive = "https://static.crates.io/crates/cargo-audit/cargo-audit-0.22.1.crate"
+sha256 = "2f4e27b0ab2d116c87c29db159ad42565cdcdccf77eb62ef0486ddd017a02da6"
+strip_components = 1
+description = "Audit Cargo.lock for crates with security vulnerabilities"
+homepage = "https://rustsec.org"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "cargo"
+configure_args = ["--features=fix"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libofx'. Review before relying on it.
+[package]
+name = "libofx"
+version = "0.10.9"
+archive = "https://github.com/libofx/libofx/archive/refs/tags/0.10.9.tar.gz"
+sha256 = "ea9fa07759622ecc7f25b637fa8fb34d587af80607ca4389d25966a6a4f94ab9"
+strip_components = 1
+description = "OFX banking protocol abstraction library"
+homepage = "https://github.com/libofx/libofx"
+license = "GPL-2.0-or-later"
+deps = ["curl", "libxml++", "opensp"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

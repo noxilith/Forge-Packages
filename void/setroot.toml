@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'setroot'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+[package]
+name = "setroot"
+version = "2.0.4"
+archive = "https://github.com/ttzhou/setroot/archive/v2.0.4.tar.gz"
+sha256 = "729095d335e4c2dae392222ae01dec972b6e0d06625a0e77d9fe7ea3f0eb79cf"
+strip_components = 1
+description = "Simple X background setter"
+homepage = "https://github.com/ttzhou/setroot"
+license = "GPL-3.0-or-later"
+deps = ["imlib2"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

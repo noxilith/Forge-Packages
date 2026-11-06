@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'x264'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "x264"
+version = "20250402.165"
+archive = "https://code.videolan.org/videolan/x264/-/archive/b35605ace3ddf7c1a5d67a2eb553f034aef41d55/x264-b35605ace3ddf7c1a5d67a2eb553f034aef41d55.tar.gz"
+sha256 = "cd71a7515b0e9a012e1ac9b1f8415bebcaf6fc97d4db32286642ac4c0fbe24f9"
+strip_components = 1
+description = "Free library for encoding H264/AVC video streams"
+homepage = "https://www.videolan.org/developers/x264.html"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static", "--enable-shared", "--extra-ldflags=-Wl,-z,noexecstack"]
+tools = ["nasm", "perl"]

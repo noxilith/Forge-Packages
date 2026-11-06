@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libtracefs'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, make_build_target, make_install_target
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "libtracefs"
+version = "1.8.1"
+archive = "https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/snapshot/libtracefs-1.8.1.tar.gz"
+sha256 = "d295aa20d711c313a9e229dbd15ba14026f0c1a50d57ae8b0823cc561b23745f"
+strip_components = 1
+description = "Linux kernel trace file system library"
+homepage = "https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/"
+license = "GPL-2.0-only, LGPL-2.1-only"
+deps = ["libtraceevent"]
+patches = ["patches/musl-limits_h.patch", "patches/musl.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["source-highlight", "xmlto"]

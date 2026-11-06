@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'glm'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: unzip
+[package]
+name = "glm"
+version = "1.0.3"
+archive = "https://github.com/g-truc/glm/archive/refs/tags/1.0.3.tar.gz"
+sha256 = "6775e47231a446fd086d660ecc18bcd076531cfedd912fbd66e576b118607001"
+strip_components = 1
+description = "C++ mathematics library for graphics programming"
+homepage = "http://glm.g-truc.net"
+license = "MIT"
+patches = ["patches/be.patch", "patches/cmake.patch", "patches/pkg-config.patch", "patches/werror.patch"]
+
+[build]
+system = "cmake"

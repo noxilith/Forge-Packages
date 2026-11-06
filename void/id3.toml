@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'id3'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "id3"
+version = "0.81"
+archive = "https://github.com/squell/id3/releases/download/0.81/id3-0.81.tar.gz"
+sha256 = "5eda41e277e67492bfe0116d24962c24c47ead56a925a00f05f724bcc7687b0c"
+strip_components = 1
+description = "Tool for manipulating id3 and id3v2 tags in multiple files"
+homepage = "https://squell.github.io/id3/"
+license = "BSD-2-Clause"
+
+[build]
+system = "make"

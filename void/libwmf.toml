@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libwmf'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: gsfonts
+[package]
+name = "libwmf"
+version = "0.2.15"
+archive = "https://github.com/caolanm/libwmf/archive/v0.2.15.tar.gz"
+sha256 = "379ae041dd53ab35f55c9b73a78a31f1ce530e925023c31607b05f2199d867e6"
+strip_components = 1
+description = "Library for reading and converting WMF (Windows Meta Files)"
+homepage = "http://wvware.sourceforge.net/libwmf.html"
+license = "LGPL-2.0-or-later"
+deps = ["expat", "freetype", "gdk-pixbuf", "libjpeg-turbo", "libpng"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

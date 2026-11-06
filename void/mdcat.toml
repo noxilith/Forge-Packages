@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mdcat'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: ruby-asciidoctor
+[package]
+name = "mdcat"
+version = "2.19.0"
+archive = "https://github.com/BIRSAx2/mdcat/archive/refs/tags/mdcat-2.19.0.tar.gz"
+sha256 = "3be97adf9feff078d95e64f176c957074d20e1111046eb7d7331aefee2c65b9d"
+strip_components = 1
+description = "Cat for markdown"
+homepage = "https://github.com/BIRSAx2/mdcat"
+license = "MPL-2.0"
+deps = ["oniguruma", "openssl", "shared-mime-info"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

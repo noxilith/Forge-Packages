@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'can-utils'. Review before relying on it.
+[package]
+name = "can-utils"
+version = "2021.08.0"
+archive = "https://github.com/linux-can/can-utils/archive/v2021.08.0.tar.gz"
+sha256 = "c9b8f29515ad34af7f78450ec55c983abc5393e86b1f128a92ac0dfd141baaf7"
+strip_components = 1
+description = "Linux-CAN / SocketCAN user space applications "
+homepage = "https://github.com/linux-can/can-utils"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"

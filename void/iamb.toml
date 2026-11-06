@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'iamb'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "iamb"
+version = "0.13.1"
+archive = "https://github.com/ulyssa/iamb/archive/refs/tags/v0.13.1.tar.gz"
+sha256 = "8e919c19ef90f328d20e6e46720a26f0dea6e61901b8180fedbbacb473f131f1"
+strip_components = 1
+description = "Matrix client for Vim addicts"
+homepage = "https://iamb.chat/"
+license = "Apache-2.0"
+deps = ["oniguruma", "openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features=desktop"]
+tools = ["pkg-config"]

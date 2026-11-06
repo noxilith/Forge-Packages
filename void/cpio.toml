@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cpio'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "cpio"
+version = "2.15"
+archive = "https://ftp.gnu.org/gnu/cpio/cpio-2.15.tar.bz2"
+sha256 = "937610b97c329a1ec9268553fb780037bcfff0dcffe9725ebc4fd9c1aa9075db"
+strip_components = 1
+description = "GNU copy-in/out (cpio) with remote magnetic tape (rmt) support"
+homepage = "http://www.gnu.org/software/cpio/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+deps = ["gettext", "tar"]

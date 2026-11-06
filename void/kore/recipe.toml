@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kore'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, CFLAGS
+[package]
+name = "kore"
+version = "4.3.0"
+archive = "https://kore.io/releases/kore-4.3.0.tar.gz"
+sha256 = "94f767eb113f2c97a133b9609c78c4e3795c420dc8726154edce49965df6b8ed"
+strip_components = 1
+description = "Easy to use web platform for writing scalable web APIs in C"
+homepage = "https://kore.io"
+license = "ISC"
+deps = ["curl", "openssl", "postgresql18", "yajl"]
+patches = ["patches/musl.patch", "patches/no-werror.patch"]
+
+[build]
+system = "make"

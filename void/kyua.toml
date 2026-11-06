@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kyua'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "kyua"
+version = "0.14.1"
+archive = "https://github.com/freebsd/kyua/releases/download/kyua-0.14.1/kyua-0.14.1.tar.gz"
+sha256 = "3caf30a7e316f4f21c32e1c419ec80371fe113e3eed10ba1db9e6efc7ee15ecb"
+strip_components = 1
+description = "Kyua (automated testing framework) - Command line interface"
+homepage = "https://github.com/freebsd/kyua"
+license = "BSD-3-Clause"
+deps = ["atf", "lutok"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-atf", "kyua_cv_getcwd_works=yes", "kyua_cv_attribute_noreturn=yes", "kyua_cv_getcwd_dyn=yes", "kyua_cv_lchmod_works=no", "kyua_cv_getopt_gnu=yes", "kyua_cv_getopt_optind_reset_value=0", "kyua_cv_signals_lastno=31"]
+tools = ["pkg-config"]

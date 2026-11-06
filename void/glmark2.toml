@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'glmark2'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "glmark2"
+version = "2023.01"
+archive = "https://github.com/glmark2/glmark2/archive/2023.01.tar.gz"
+sha256 = "8fece3fc323b643644a525be163dc4931a4189971eda1de8ad4c1712c5db3d67"
+strip_components = 1
+description = "OpenGL 2.0 and ES 2.0 benchmark"
+homepage = "https://github.com/glmark2/glmark2"
+license = "GPL-3.0-or-later"
+deps = ["libjpeg-turbo", "libpng"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gocloc'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "gocloc"
+version = "0.7.0"
+archive = "https://github.com/hhatto/gocloc/archive/refs/tags/v0.7.0.tar.gz"
+sha256 = "9375f6699a7bffad42da661b4ba7988af23dd01191da4a4b21eca8f9bb676d9a"
+strip_components = 1
+description = "Counts lines of source code in many programming languages"
+homepage = "https://github.com/hhatto/gocloc"
+license = "MIT"
+
+[build]
+system = "go"

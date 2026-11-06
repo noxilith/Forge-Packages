@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cqrlog'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: lazarus
+[package]
+name = "cqrlog"
+version = "2.5.2"
+archive = "https://github.com/ok2cqr/cqrlog/archive/v2.5.2.tar.gz"
+sha256 = "82837455dc9f44f43dc7658d330c71cf09c38d794addacab1da936fdcdbefdca"
+strip_components = 1
+description = "Logging program for amateur radio operators"
+homepage = "https://www.cqrlog.com"
+license = "GPL-2.0-or-later"
+deps = ["gtk+", "hamlib", "mariadb", "xdg-utils"]
+
+[build]
+system = "make"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dosbox-staging'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: fluidsynth, opusfile, speexdsp
+[package]
+name = "dosbox-staging"
+version = "0.82.2"
+archive = "https://github.com/dosbox-staging/dosbox-staging/archive/v0.82.2.tar.gz"
+sha256 = "387c97b373c3164ab5abbbc2b210bf94b5567057abe44ee1e8b4d4e725bd422c"
+strip_components = 1
+description = "DOS/x86 emulator focusing on ease of use"
+homepage = "https://dosbox-staging.github.io"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_net", "alsa-lib", "libiir1", "libmt32emu", "libpng", "libslirp", "zlib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

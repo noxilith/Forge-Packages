@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gearlever'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: 7zip, python3-desktop-entry-lib, python3-ftputil, python3-requests, python3-xdg
+[package]
+name = "gearlever"
+version = "4.6.2"
+archive = "https://github.com/mijorus/gearlever/archive/4.6.2.tar.gz"
+sha256 = "9f8f7a43d51e8ddcb66ee1d9aa5e6d1b9f5948c70e51be89e5bac045a01bd9ca"
+strip_components = 1
+description = "Manage AppImages with ease"
+homepage = "https://github.com/mijorus/gearlever"
+license = "GPL-3.0-or-later"
+deps = ["libadwaita", "python3-dbus", "python3-gobject", "squashfs-tools"]
+
+[build]
+system = "meson"
+deps = ["desktop-file-utils", "gettext", "glib", "gtk4"]

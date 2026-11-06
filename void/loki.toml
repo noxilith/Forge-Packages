@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'loki'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: go_package, go_import_path
+[package]
+name = "loki"
+version = "3.1.1"
+archive = "https://github.com/grafana/loki/archive/v3.1.1.tar.gz"
+sha256 = "d53a46e3ee51a258f49f865cc5795fe05ade1593237709417de0e1395b5a21cf"
+strip_components = 1
+description = "Like Prometheus, but for logs"
+homepage = "https://grafana.com/oss/loki/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'snmp_exporter'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, make_dirs
+# needs, but Forge has no recipe for yet: net-snmp
+[package]
+name = "snmp_exporter"
+version = "0.31.0"
+archive = "https://github.com/prometheus/snmp_exporter/archive/refs/tags/v0.31.0.tar.gz"
+sha256 = "9c52951606f9138af758fd28693497181ad119b48433c0a542b4a2128049bd04"
+strip_components = 1
+description = "SNMP Exporter for Prometheus"
+homepage = "https://github.com/prometheus/snmp_exporter"
+license = "Apache-2.0"
+
+[build]
+system = "go"

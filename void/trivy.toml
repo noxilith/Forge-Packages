@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'trivy'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "trivy"
+version = "0.75.0"
+archive = "https://github.com/aquasecurity/trivy/archive/refs/tags/v0.75.0.tar.gz"
+sha256 = "4ee2010384f90bf23d4059ae49c11129e5041816a3754d890a90ae80f678d765"
+strip_components = 1
+description = "Comprehensive vulnerability scanner for containers"
+homepage = "https://github.com/aquasecurity/trivy"
+license = "Apache-2.0"
+
+[build]
+system = "go"

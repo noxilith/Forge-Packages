@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pdf2djvu'. Review before relying on it.
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "pdf2djvu"
+version = "0.9.19"
+archive = "https://github.com/jwilk/pdf2djvu/releases/download/0.9.19/pdf2djvu-0.9.19.tar.xz"
+sha256 = "eb45a480131594079f7fe84df30e4a5d0686f7a8049dc7084eebe22acc37aa9a"
+strip_components = 1
+description = "Create DjVu files from PDF files"
+homepage = "https://jwilk.net/software/pdf2djvu"
+license = "GPL-2.0-only"
+deps = ["GraphicsMagick", "djvulibre", "exiv2", "poppler"]
+patches = ["patches/001-no-redefine-poppler-version.patch", "patches/poppler-26.04.0.patch", "patches/poppler-26.06.0.patch", "patches/poppler-26.07.0.patch", "patches/poppler-26.08.0.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

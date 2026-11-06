@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'GPaste'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: harfbuzz
+[package]
+name = "GPaste"
+version = "45.3"
+archive = "https://www.imagination-land.org/files/gpaste/GPaste-45.3.tar.xz"
+sha256 = "514f29c3b6ea130836561ed2e864f1f2cc08ff62219708d082418d642ce83307"
+strip_components = 1
+description = "Clipboard management system"
+homepage = "https://www.imagination-land.org/tags/GPaste.html"
+license = "BSD-2-Clause"
+deps = ["appstream-glib", "dbus", "gcr4", "gdk-pixbuf", "glib", "gtk+3", "gtk4", "libX11", "libXi", "libXtst", "libadwaita", "vala"]
+patches = ["patches/446.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gobject-introspection"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kcm-wacomtablet'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "kcm-wacomtablet"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/wacomtablet-6.7.5.tar.xz"
+sha256 = "f668f1dbd18d5f9060b016dbc5667619b214e4e6ac0456be7d322214c20e9cbe"
+strip_components = 1
+description = "GUI for the Wacom Linux Drivers"
+homepage = "https://invent.kde.org/plasma/wacomtablet"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-knotifications", "kf6-kpackage", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "libICE", "libX11", "libXext", "libinput", "libplasma", "libwacom", "libxcb", "libxkbcommon", "plasma-workspace", "plasma5support", "qt6-base", "qt6-declarative", "xf86-input-wacom"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

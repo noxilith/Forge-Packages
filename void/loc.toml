@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'loc'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "loc"
+version = "0.4.1"
+archive = "https://github.com/cgag/loc/archive/v0.4.1.tar.gz"
+sha256 = "1e8403fd9a3832007f28fb389593cd6a572f719cd95d85619e7bbcf3dbea18e5"
+strip_components = 1
+description = "Count lines of code quickly"
+homepage = "https://github.com/cgag/loc"
+license = "MIT"
+
+[build]
+system = "cargo"

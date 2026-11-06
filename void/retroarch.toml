@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'retroarch'. Review before relying on it.
+# 10 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: mbedtls
+[package]
+name = "retroarch"
+version = "1.22.2"
+archive = "https://github.com/libretro/RetroArch/archive/v1.22.2.tar.gz"
+sha256 = "245ef18c8fa8fbd9fbb5eb25cf43e17c6aace2f95c1ed99873cbd794012bb232"
+strip_components = 1
+description = "Official reference frontend for the libretro API"
+homepage = "https://www.retroarch.com/"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "eudev", "freetype", "libusb", "libxkbcommon", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-networking", "--enable-udev", "--enable-systemmbedtls", "--disable-builtinbearssl", "--disable-builtinzlib"]
+tools = ["pkg-config"]

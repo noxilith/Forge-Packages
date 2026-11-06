@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce4-whiskermenu-plugin'. Review before relying on it.
+[package]
+name = "xfce4-whiskermenu-plugin"
+version = "2.10.1"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.10/xfce4-whiskermenu-plugin-2.10.1.tar.xz"
+sha256 = "8b5a777a5d9df1f1c39b109ba8b2d045cb2cc02c41a9a297aa00dcb2a4520530"
+strip_components = 1
+description = "Alternate menu for Xfce4"
+homepage = "https://gitlab.xfce.org/panel-plugins/xfce4-whiskermenu-plugin"
+license = "GPL-2.0-or-later"
+deps = ["accountsservice", "exo", "garcon", "gtk-layer-shell", "xfce4-panel"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

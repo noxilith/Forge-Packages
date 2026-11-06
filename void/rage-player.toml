@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rage-player'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rage-player"
+version = "0.4.0"
+archive = "https://download.enlightenment.org/rel/apps/rage/rage-0.4.0.tar.xz"
+sha256 = "7ce58419aa5197aa6c33f2e3f9eb9d78ff379cae863d5fa114fd1428d5a1ca0f"
+strip_components = 1
+description = "Video and Audio player written with Enlightenment Foundation Libraries"
+homepage = "https://www.enlightenment.org/about-rage"
+license = "BSD-2-Clause"
+deps = ["desktop-file-utils", "efl"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

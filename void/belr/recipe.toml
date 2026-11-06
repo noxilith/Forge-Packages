@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'belr'. Review before relying on it.
+[package]
+name = "belr"
+version = "5.3.106"
+archive = "https://gitlab.linphone.org/BC/public/belr/-/archive/5.3.106/belr-5.3.106.tar.gz"
+sha256 = "f03a3f8966f7d537cf1cc44898b50a301b7211de849137b835af62f3c452aa6a"
+strip_components = 1
+description = "ABNF Parser"
+homepage = "https://www.linphone.org"
+license = "GPL-3.0-or-later"
+deps = ["bctoolbox"]
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=TRUE", "-DENABLE_UNIT_TESTS=FALSE"]

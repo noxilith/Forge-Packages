@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xwud'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xwud"
+version = "1.0.8"
+archive = "https://www.x.org/releases/individual/app/xwud-1.0.8.tar.gz"
+sha256 = "2c67ddea52cd877b28922bf2781c5935f66abeb947c5a15955e4789e06fc4217"
+strip_components = 1
+description = "Image displayer for X"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

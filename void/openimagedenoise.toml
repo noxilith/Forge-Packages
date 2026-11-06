@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'openimagedenoise'. Review before relying on it.
+[package]
+name = "openimagedenoise"
+version = "2.3.0"
+archive = "https://github.com/OpenImageDenoise/oidn/releases/download/v2.3.0/oidn-2.3.0.src.tar.gz"
+sha256 = "cce3010962ec84e0ba1acd8c9055a3d8de402fedb1b463517cfeb920a276e427"
+strip_components = 1
+description = "Intel(R) Open Image Denoise library"
+homepage = "https://openimagedenoise.github.io"
+license = "Apache-2.0"
+deps = ["openimageio", "tbb"]
+
+[build]
+system = "cmake"
+deps = ["ispc"]

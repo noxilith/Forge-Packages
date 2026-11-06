@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'niri-float-sticky'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "niri-float-sticky"
+version = "0.0.8"
+archive = "https://github.com/probeldev/niri-float-sticky/archive/refs/tags/v0.0.8.tar.gz"
+sha256 = "2d011b9b08a7efb4f8da2a19e22d81f55d193ee1b170913f46177b903c8a6aed"
+strip_components = 1
+description = "Floating windows visible across all workspaces in niri"
+homepage = "https://github.com/probeldev/niri-float-sticky/"
+license = "MIT"
+deps = ["niri"]
+
+[build]
+system = "go"

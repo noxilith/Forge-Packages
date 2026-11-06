@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'liboauth'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: nss
+[package]
+name = "liboauth"
+version = "1.0.3"
+archive = "https://downloads.sourceforge.net/sourceforge/liboauth/liboauth-1.0.3.tar.gz"
+sha256 = "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f"
+strip_components = 1
+description = "C library implementing OAuth Core RFC 5849"
+homepage = "http://liboauth.sourceforge.net"
+license = "MIT"
+deps = ["curl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-nss"]
+tools = ["pkg-config"]

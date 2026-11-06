@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'operator-sdk'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "operator-sdk"
+version = "0.18.1"
+archive = "https://github.com/operator-framework/operator-sdk/archive/v0.18.1.tar.gz"
+sha256 = "33680b9236ea7da51cb7b165dc624b512f04e3e9a2bf592101bfc3b312e340f8"
+strip_components = 1
+description = "SDK for building Kubernetes applications"
+homepage = "https://github.com/operator-framework/operator-sdk"
+license = "Apache-2.0"
+
+[build]
+system = "go"

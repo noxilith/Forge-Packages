@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'hexer'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "hexer"
+version = "1.0.7"
+archive = "https://devel.ringlet.net/files/editors/hexer/hexer-1.0.7.tar.xz"
+sha256 = "2d6bb5583f0b1a1a9825b0de1e836482f07af44484c2d73c5ad9472bdfa2fba1"
+strip_components = 1
+description = "Multi-buffered hex editor for binary files, with a vi like interface"
+homepage = "https://devel.ringlet.net/editors/hexer/"
+license = "BSD-3-Clause"
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "make"

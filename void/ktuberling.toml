@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ktuberling'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-tools
+[package]
+name = "ktuberling"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/ktuberling-26.08.1.tar.xz"
+sha256 = "bf77b642365d58c8c444a7b9c6aeacbcd2fab11e0895b659a5a434e671b55178"
+strip_components = 1
+description = "Simple constructor game"
+homepage = "https://kde.org/applications/games/org.kde.ktuberling"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kio", "libkdegames"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["perl"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

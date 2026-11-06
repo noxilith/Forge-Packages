@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kwayland-integration'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt5
+[package]
+name = "kwayland-integration"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kwayland-integration-6.7.5.tar.xz"
+sha256 = "33b4862d9828e6928ef19e0615eae62954ec6f9a7c482cae8ed4fa84cb9cbe00"
+strip_components = 1
+description = "Integration plugins for Kwayland"
+homepage = "https://invent.kde.org/plasma/kwayland-integration"
+license = "LGPL-2.1-or-later"
+deps = ["kguiaddons", "kwayland", "kwindowsystem", "libxkbcommon", "wayland", "wayland-protocols"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "plasma-wayland-protocols"]

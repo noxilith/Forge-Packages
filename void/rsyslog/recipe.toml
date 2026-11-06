@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'rsyslog'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: libestr, liblogging, mit-krb5
+[package]
+name = "rsyslog"
+version = "8.2412.0"
+archive = "https://www.rsyslog.com/files/download/rsyslog/rsyslog-8.2412.0.tar.gz"
+sha256 = "8cdfa5a077cba576bdd6b1841cc2848b774e663b2e44a39512bb820174174802"
+strip_components = 1
+description = "Enhanced multi-threaded syslog daemon"
+homepage = "https://www.rsyslog.com"
+license = "GPL-3.0-or-later, Apache-2.0"
+deps = ["curl", "gnutls", "libfastjson", "libgcrypt", "mariadb", "postgresql18"]
+patches = ["patches/disable-omfile-outchannel.patch", "patches/disable-omfile-read-only-errmsg.patch", "patches/disable-omfile-read-only.patch", "patches/disable-omfwd_fast_imuxsock.patch", "patches/musl-glob.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gnutls", "--enable-mysql", "--enable-pgsql", "--enable-imdiag", "--enable-imfile", "--enable-mail", "--enable-imptcp", "--enable-gssapi-krb5", "--enable-mmsnmptrapd", "--enable-impstats", "--enable-omprog", "--enable-omstdout", "--enable-pmlastmsg", "--enable-pmcisconames", "--enable-pmsnare", "--enable-pmaixforwardedfrom", "--enable-omuxsock", "--disable-generate-man-pages", "--enable-elasticsearch", "--enable-testbench", "--disable-libsystemd", "--enable-clickhouse"]
+tools = ["pkg-config"]

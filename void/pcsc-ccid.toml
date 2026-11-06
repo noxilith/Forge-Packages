@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pcsc-ccid'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "pcsc-ccid"
+version = "1.6.2"
+archive = "https://ccid.apdu.fr/files/ccid-1.6.2.tar.xz"
+sha256 = "41958410950157e622f9d91c9e78c7b708db74e22f71190c581d24d20564d449"
+strip_components = 1
+description = "PC/SC driver to support CCID compliant readers"
+homepage = "https://ccid.apdu.fr/"
+license = "LGPL-2.1-or-later"
+deps = ["eudev", "libusb-compat", "pcsclite", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dserial=true", "-Denable-extras=true"]
+tools = ["flex", "perl", "pkg-config"]

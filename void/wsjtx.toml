@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'wsjtx'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: asciidoc, boost, fftw, portaudio, qt5, ruby-asciidoctor
+[package]
+name = "wsjtx"
+version = "3.0.2"
+archive = "https://github.com/WSJTX/wsjtx/archive/refs/tags/v3.0.2.tar.gz"
+sha256 = "8483a851bcb6455f5787de87b89efdf90e928842debde036e287e93e7f3837bd"
+strip_components = 1
+description = "Weak-signal Amateur Radio communication program"
+homepage = "https://wsjtx.github.io/wsjtx/index.html"
+license = "GPL-3.0-or-later"
+deps = ["hamlib", "libusb"]
+
+[build]
+system = "cmake"
+configure_args = ["-DRIGCTLCOM_EXE=", "-DRIGCTL_EXE=", "-DRIGCTLD_EXE="]
+tools = ["pkg-config"]

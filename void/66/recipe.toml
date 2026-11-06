@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for '66'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_check
+# needs, but Forge has no recipe for yet: s6
+[package]
+name = "66"
+version = "0.8.2.2"
+archive = "https://git.obarun.org/Obarun/66/-/archive/0.8.2.2/66-0.8.2.2.tar.bz2"
+sha256 = "14665d078b50a07db6dd0d4a4df0e54b177d6b42719aec834aca1bc7ed93f2e1"
+strip_components = 1
+description = "Small tools built around s6 and s6-rc programs"
+homepage = "http://web.obarun.org/software/"
+license = "ISC"
+deps = ["execline", "oblibs", "skalibs"]
+patches = ["patches/ftrigr-api.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-s6-log-timestamp=iso", "--with-s6-log-user=_s6log"]
+tools = ["pkg-config"]
+deps = ["lowdown"]

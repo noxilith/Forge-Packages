@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'mono'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: ca-certificates, python3-Pillow
+[package]
+name = "mono"
+version = "6.14.0"
+archive = "https://dl.winehq.org/mono/sources/mono/mono-6.14.0.tar.xz"
+sha256 = "6dd64b3900f5e5d5f55016d89ccf7635c8739cbb33cdb81c1c3b61622e91d510"
+strip_components = 1
+description = "Free implementation of the .NET platform including runtime and compiler"
+homepage = "https://gitlab.winehq.org/mono/mono"
+license = "MIT, BSD-3-Clause, GPL-2.0-or-later, LGPL-2.0-or-later, MPL-1.1"
+deps = ["libX11", "libgdiplus", "zlib"]
+patches = ["patches/fix-heapviz-import.patch", "patches/glibc-2.36.patch", "patches/musl-ppc.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-system-aot"]
+tools = ["perl"]
+deps = ["gettext", "which"]

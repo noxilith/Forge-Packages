@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'hackrf'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: fftw
+[package]
+name = "hackrf"
+version = "2026.01.3"
+archive = "https://github.com/greatscottgadgets/hackrf/releases/download/v2026.01.3/hackrf-2026.01.3.tar.xz"
+sha256 = "d2b76a1115d9b4df648c29efb2f3c8e80009b7cf9a8adf37abbfdba72101b086"
+strip_components = 1
+description = "Low cost software defined radio (SDR) platform - tools"
+homepage = "https://greatscottgadgets.com/hackrf/"
+license = "GPL-2.0-or-later"
+deps = ["libusb"]
+patches = ["patches/fix-device-acess-via-elogind.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUDEV_RULES_GROUP=plugdev"]
+subdir = "host"
+tools = ["pkg-config"]

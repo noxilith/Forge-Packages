@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'pango'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_check
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: harfbuzz, libthai, python3-docutils
+[package]
+name = "pango"
+version = "1.56.3"
+archive = "https://download.gnome.org/sources/pango/1.56/pango-1.56.3.tar.xz"
+sha256 = "2606252bc25cd8d24e1b7f7e92c3a272b37acd6734347b73b47a482834ba2491"
+strip_components = 1
+description = "Library for layout and rendering of text"
+homepage = "https://www.pango.org/"
+license = "LGPL-2.1-or-later"
+deps = ["fribidi", "libXft"]
+
+[build]
+system = "meson"
+configure_args = ["-Dbuild-examples=false", "-Dman-pages=true"]
+tools = ["pkg-config"]
+deps = ["glib"]

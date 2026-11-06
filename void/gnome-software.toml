@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-software'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: docbook-xsl, itstool
+[package]
+name = "gnome-software"
+version = "50.2"
+archive = "https://gitlab.gnome.org/GNOME/gnome-software/-/archive/50.2/gnome-software-50.2.tar.gz"
+sha256 = "b6500da19825e59bb4df167dad2792f31387a6b0ff298bc0357903f4fa804e3c"
+strip_components = 1
+description = "GNOME Software Center (flatpak only)"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-software"
+license = "GPL-3.0-or-later"
+deps = ["AppStream", "flatpak", "gnome-app-list", "gsettings-desktop-schemas", "gspell", "gtk4", "json-glib", "libadwaita", "libgudev", "libsoup3", "libxmlb", "polkit"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpackagekit=false", "-Dfwupd=false", "-Dmalcontent=false", "-Dwebapps=false", "-Dhardcoded_foss_webapps=false", "-Dhardcoded_proprietary_webapps=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxslt", "tar"]

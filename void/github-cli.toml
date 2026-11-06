@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'github-cli'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "github-cli"
+version = "2.103.3"
+archive = "https://github.com/cli/cli/archive/refs/tags/v2.103.3.tar.gz"
+sha256 = "bb148138a3a2fe023e57c78042fe3b42fc09171c0e8fff4cf983b227b7a2eade"
+strip_components = 1
+description = "GitHub CLI tool"
+homepage = "https://cli.github.com"
+license = "MIT"
+
+[build]
+system = "go"

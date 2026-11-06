@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gmrun'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "gmrun"
+version = "1.4w"
+archive = "https://github.com/wdlkmpx/gmrun/releases/download/1.4w/gmrun-1.4w.tar.xz"
+sha256 = "eaeb68c4ef9da383b0966420fdf1515eb86654673463dfc70124c880dbadf800"
+strip_components = 1
+description = "Run utility featuring a slim design and bash style auto-completion"
+homepage = "https://github.com/wdlkmpx/gmrun"
+license = "ISC"
+deps = ["gtk+3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'OpenCPN'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: OpenCPN-gshhs-crude, OpenCPN-tcdata-5.8.4_2, glew, gpsd, hicolor-icon-theme, portaudio, tinyxml
+[package]
+name = "OpenCPN"
+version = "5.8.4"
+archive = "https://github.com/OpenCPN/OpenCPN/archive/Release_5.8.4.tar.gz"
+sha256 = "7552726e5afce5eb401e307beedd8f3aa2c66725602fc27ab3ad1845f40b87a0"
+strip_components = 1
+description = "Concise ChartPlotter/Navigator"
+homepage = "https://opencpn.org/"
+license = "GPL-2.0-or-later, GPL-3.0-or-later, LGPL-2.0-or-later, MIT, WxWindows-exception-3.1, JasPer-2.0, BSD-3-Clause, SGI-B-2.0"
+deps = ["curl", "glu", "gtest", "gtk+3", "rapidjson", "wxWidgets-gtk3"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DOCPN_BUNDLE_GSHHS=NONE", "-DOCPN_BUNDLE_TCDATA=ON", "-DOCPN_BUNDLE_DOCS=ON", "-DOCPN_FORCE_GTK3=ON", "-DOCPN_USE_BUNDLED_LIBS=OFF", "-DOCPN_BUILD_TEST=OFF"]
+tools = ["pkg-config"]
+deps = ["gettext"]

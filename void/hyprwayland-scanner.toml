@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'hyprwayland-scanner'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "hyprwayland-scanner"
+version = "0.4.5"
+archive = "https://github.com/hyprwm/hyprwayland-scanner/archive/refs/tags/v0.4.5.tar.gz"
+sha256 = "2125d279eea106e3e6c8dc9fa15181c75d67467b5352d24e2a07903b10abad62"
+strip_components = 1
+description = "Hyprland implementation of wayland-scanner, in and for C++"
+homepage = "https://github.com/hyprwm/hyprwayland-scanner"
+license = "BSD-3-Clause"
+deps = ["pugixml"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

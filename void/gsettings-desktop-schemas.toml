@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gsettings-desktop-schemas'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "gsettings-desktop-schemas"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gsettings-desktop-schemas/48/gsettings-desktop-schemas-48.0.tar.xz"
+sha256 = "e68f155813bf18f865a8b2c8e9d473588b6ccadcafbb666ab788857c6c2d1bd3"
+strip_components = 1
+description = "Collection of GSettings schemas"
+homepage = "https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas"
+license = "LGPL-2.1-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

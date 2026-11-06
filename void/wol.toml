@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wol'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "wol"
+version = "0.7.1"
+archive = "https://downloads.sourceforge.net/sourceforge/ahh/wol-0.7.1.tar.gz"
+sha256 = "e0086c9b9811df2bdf763ec9016dfb1bcb7dba9fa6d7858725b0929069a12622"
+strip_components = 1
+description = "Wakes up hardware that is Magic Packet compliant"
+homepage = "http://wake-on-lan.sourceforge.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["jm_cv_func_working_malloc=yes"]
+tools = ["perl"]

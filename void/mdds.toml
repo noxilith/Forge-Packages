@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mdds'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "mdds"
+version = "3.1.0"
+archive = "https://gitlab.com/mdds/mdds/-/archive/3.1.0/mdds-3.1.0.tar.gz"
+sha256 = "f19a1426ced40167faac97af366dc60d2b456ccf1d3ab56457a55749a57eecce"
+strip_components = 1
+description = "Collection of multi-dimensional data structures and indexing algorithms"
+homepage = "https://gitlab.com/mdds/mdds"
+license = "MIT"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-release-tests"]

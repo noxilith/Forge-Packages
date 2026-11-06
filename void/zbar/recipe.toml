@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'zbar'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libzbar-0.23.1_9, python3-setuptools
+[package]
+name = "zbar"
+version = "0.23.1"
+archive = "https://linuxtv.org/downloads/zbar/zbar-0.23.1.tar.bz2"
+sha256 = "dad260b47ef887a639e840a89e5e6e132217b6bba2a8473565d1f459bcb97c1f"
+strip_components = 1
+description = "Barcode reading library and application"
+homepage = "https://git.linuxtv.org/zbar.git/"
+license = "LGPL-2.1-or-later"
+deps = ["ImageMagick", "gtk+3", "libXv", "v4l-utils"]
+patches = ["patches/PyEval_InitThreads.patch", "patches/python-3.11.patch", "patches/python-3.12.patch", "patches/python-3.9.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-gir", "--with-python=python3"]
+tools = ["pkg-config"]
+deps = ["glib"]

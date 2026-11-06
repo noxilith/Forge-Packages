@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'orage'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme
+[package]
+name = "orage"
+version = "4.20.3"
+archive = "https://archive.xfce.org/src/apps/orage/4.20/orage-4.20.3.tar.bz2"
+sha256 = "d9f6a3bcd1fdcd83d8277bc1996684a02d06ef60492b69c2404815f3314d640e"
+strip_components = 1
+description = "Simple calendar application for Xfce"
+homepage = "https://docs.xfce.org/apps/orage/start"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "desktop-file-utils", "gdk-pixbuf", "glib", "gtk+3", "libical", "libnotify", "libxfce4ui", "libxfce4util", "pango", "popt", "xfce4-panel"]
+
+[build]
+system = "autotools"
+tools = ["flex", "pkg-config"]
+deps = ["gettext"]

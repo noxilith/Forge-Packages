@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lksctp-tools'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: linux
+[package]
+name = "lksctp-tools"
+version = "1.0.21"
+archive = "https://github.com/sctp/lksctp-tools/archive/v1.0.21.tar.gz"
+sha256 = "8738bf17ecffbbe2440a6e2ffaf1cbcebb633fc99d63d88761af35c02a571893"
+strip_components = 1
+description = "User-space access to Linux Kernel SCTP"
+homepage = "http://lksctp.sourceforge.net"
+license = "GPL-2.0-or-later AND LGPL-2.1-only"
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bemenu'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "bemenu"
+version = "0.6.23"
+archive = "https://github.com/Cloudef/bemenu/archive/refs/tags/0.6.23.tar.gz"
+sha256 = "0e7878c3bf57e0e362efe89c59deddd33819cd62b980be7e0b7bb4da45478e44"
+strip_components = 1
+description = "Dynamic menu library and client program inspired by dmenu"
+homepage = "https://github.com/Cloudef/bemenu"
+license = "GPL-3.0-or-later, LGPL-3.0-or-later"
+deps = ["cairo", "libXinerama", "libxkbcommon", "pango", "wayland", "wayland-protocols"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["scdoc"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lemurs'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "lemurs"
+version = "0.4.0"
+archive = "https://github.com/coastalwhite/lemurs/archive/refs/tags/v0.4.0.tar.gz"
+sha256 = "05641ea9f0b8fa459c737adccd2f4714fd29e69e07a213c117b35013837bfe3a"
+strip_components = 1
+description = "Customizable TUI display/login manager written in Rust"
+homepage = "https://github.com/coastalwhite/lemurs"
+license = "Apache-2.0 OR MIT"
+deps = ["pam"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features"]
+tools = ["pkg-config"]

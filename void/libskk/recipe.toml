@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libskk'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+[package]
+name = "libskk"
+version = "1.0.5"
+archive = "https://github.com/ueno/libskk/archive/1.0.5.tar.gz"
+sha256 = "a298e9726b784dd9a6ce8dcb76ff8fbe633037756795d75cfd77d3aeab4f50ed"
+strip_components = 1
+description = "Japanese SKK input method library"
+homepage = "https://github.com/ueno/libskk"
+license = "GPL-3.0-or-later"
+deps = ["json-glib", "libgee", "libxkbcommon"]
+patches = ["patches/ftbfs.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "gobject-introspection", "vala"]

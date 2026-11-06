@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'remind'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "remind"
+version = "06.02.05"
+archive = "https://dianne.skoll.ca/projects/remind/download/remind-06.02.05.tar.gz"
+sha256 = "8124d0a057aebfaba30eb63a8c331b3c5e60dd15d24d8e6492316d1536e36305"
+strip_components = 1
+description = "Sophisticated calendar and alarm program"
+homepage = "https://dianne.skoll.ca/projects/remind/"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

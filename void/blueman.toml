@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'blueman'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-Cython
+[package]
+name = "blueman"
+version = "2.4.6"
+archive = "https://github.com/blueman-project/blueman/releases/download/2.4.6/blueman-2.4.6.tar.xz"
+sha256 = "c712a737f9855906684c074d166d4f10c7f165378af96612818bbffcfbf8e566"
+strip_components = 1
+description = "GTK+ Bluetooth Manager"
+homepage = "https://github.com/blueman-project/blueman"
+license = "GPL-3.0-or-later"
+deps = ["bluez", "gtk+3", "libnotify", "python3-gobject", "startup-notification"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "iproute2"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gloox'. Review before relying on it.
+[package]
+name = "gloox"
+version = "1.0.24"
+archive = "https://camaya.net/download/gloox-1.0.24.tar.bz2"
+sha256 = "ae1462be2a2eb8fe5cd054825143617c53c2c9c7195606cb5a5ba68c0f68f9c9"
+strip_components = 1
+description = "Portable XMPP Engine"
+homepage = "https://camaya.net/gloox"
+license = "GPL-3.0-or-later"
+deps = ["zlib"]
+patches = ["patches/fix-missing-ctime-include.patch", "patches/gloox-musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gemserv'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "gemserv"
+version = "0.6.6"
+archive = "https://git.sr.ht/~int80h/gemserv/archive/v0.6.6.tar.gz"
+sha256 = "a4423b91bff3e05708c296fe6135d00b7d09acc33b15c7d078a5c8753a84aa5a"
+strip_components = 1
+description = "Gemini server written in rust"
+homepage = "gemini://80h.dev/projects/gemserv/"
+license = "MIT"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

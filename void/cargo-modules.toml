@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'cargo-modules'. Review before relying on it.
+[package]
+name = "cargo-modules"
+version = "0.24.2"
+archive = "https://github.com/regexident/cargo-modules/archive/refs/tags/v0.24.2.tar.gz"
+sha256 = "85d9c1fa6a5976c7721793f7121d2761c16bb5c3c4a02668375df73f0c86d726"
+strip_components = 1
+description = "Cargo plugin to render crate's module/item structure as a tree or graph"
+homepage = "https://github.com/regexident/cargo-modules"
+license = "MPL-2.0"
+
+[build]
+system = "cargo"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Adapta'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "Adapta"
+version = "3.95.0.11"
+archive = "https://github.com/adapta-project/adapta-gtk-theme/archive/3.95.0.11.tar.gz"
+sha256 = "fb8fc11b770be59e1673b8f2d917704fc34e53aee5fb02fed70d83909d3309bd"
+strip_components = 1
+description = "Adaptive Gtk+ theme based on Material Design Guidelines"
+homepage = "https://github.com/adapta-project/adapta-gtk-theme"
+license = "GPL-2.0-or-later, CC-BY-SA-4.0"
+deps = ["glib", "librsvg"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["inkscape", "parallel", "procps-ng", "sassc"]

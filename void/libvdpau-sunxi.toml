@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libvdpau-sunxi'. Review before relying on it.
+[package]
+name = "libvdpau-sunxi"
+version = "0.4"
+archive = "https://github.com/linux-sunxi/libvdpau-sunxi/archive/v0.4.tar.gz"
+sha256 = "5139b007d9075654cfb47ced29f4e335302b7ede9ea9544524aa2232c357b08a"
+strip_components = 1
+description = "Experimental VDPAU for Allwinner sunxi SoCs"
+homepage = "https://github.com/linux-sunxi/libvdpau-sunxi"
+license = "LGPL-2.1"
+deps = ["libvdpau"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'agg'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "agg"
+version = "2.7.0.r145"
+archive = "https://ftp.debian.org/debian/pool/main/a/agg/agg_2.7.0.r145+dfsg.orig.tar.xz"
+sha256 = "b7181085d3c06166a972211cd17741cc5429adc7c1f58e4d528206f7208e6328"
+strip_components = 1
+description = "High Quality Rendering Engine for C++"
+homepage = "https://agg.sourceforge.net/antigrain.com/"
+license = "GPL-2.0-or-later"
+deps = ["freetype", "sdl12-compat"]
+patches = ["patches/agg-2.5-pkgconfig.patch", "patches/gcc82.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-examples"]
+tools = ["pkg-config"]
+deps = ["gettext"]

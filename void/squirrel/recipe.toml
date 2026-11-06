@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'squirrel'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "squirrel"
+version = "3.2"
+archive = "https://github.com/albertodemichelis/squirrel/archive/v3.2.tar.gz"
+sha256 = "02805414cfadd5bbb921891d3599b83375a40650abd6404a8ab407dc5e86a996"
+strip_components = 1
+description = "Squirrel Programming Language"
+homepage = "http://www.squirrel-lang.org/"
+license = "MIT"
+patches = ["patches/fix-version.patch"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'smu'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_args
+[package]
+name = "smu"
+version = "1.5"
+archive = "https://github.com/Gottox/smu/archive/v1.5.tar.gz"
+sha256 = "f3bb18f958962679a7fb48d7f8dcab8b59154d66f23c9aba02e78103106093a4"
+strip_components = 1
+description = "Simple markup - markdown like syntax"
+homepage = "https://github.com/Gottox/smu/"
+license = "MIT"
+
+[build]
+system = "make"

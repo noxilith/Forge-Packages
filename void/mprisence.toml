@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mprisence'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "mprisence"
+version = "1.9.1"
+archive = "https://github.com/lazykern/mprisence/archive/refs/tags/v1.9.1.tar.gz"
+sha256 = "61291afe9d9631612f8f78cc61cbc02c8752189e3cc85fc925322048bb413856"
+strip_components = 1
+description = "Discord Rich Presence for MPRIS media players"
+homepage = "https://github.com/lazykern/mprisence"
+license = "MIT"
+deps = ["dbus", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

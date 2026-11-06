@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gambit'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_build_target
+[package]
+name = "gambit"
+version = "4.9.8"
+archive = "https://github.com/gambit/gambit/archive/v4.9.8.tar.gz"
+sha256 = "0ec19b755dbda6c540e9e60b7235d801f26f40c2f211ddfb729b756218bcc873"
+strip_components = 1
+description = "Complete, portable, efficient and reliable implementation of Scheme"
+homepage = "https://gambitscheme.org/"
+license = "LGPL-2.1-only, Apache-2.0"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-compiler-name=gambit-gsc", "--enable-shared", "--disable-absolute-shared-libs", "--enable-versioned-shared-libs", "--enable-single-host", "--enable-gcc-opts", "--enable-openssl", "--enable-poll"]

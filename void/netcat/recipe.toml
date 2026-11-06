@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'netcat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "netcat"
+version = "0.7.1"
+archive = "https://downloads.sourceforge.net/sourceforge/netcat/netcat-0.7.1.tar.gz"
+sha256 = "30719c9a4ffbcf15676b8f528233ccc54ee6cba96cb4590975f5fd60c68a066f"
+strip_components = 1
+description = "The GNU netcat utility"
+homepage = "http://netcat.sourceforge.net/"
+license = "GPL-2.0-or-later"
+patches = ["patches/netcat-0.7.1-signed-bit-counting.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--program-prefix=g"]

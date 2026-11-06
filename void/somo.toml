@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'somo'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "somo"
+version = "1.4.0"
+archive = "https://github.com/theopfr/somo/archive/refs/tags/v1.4.0.tar.gz"
+sha256 = "b084d1617055f39f17e3ae08fe1fdba023b43f8f928c8edf53af0f8ce8a2b14a"
+strip_components = 1
+description = "CLI for monitoring sockets and ports"
+homepage = "https://github.com/theopfr/somo"
+license = "MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-pt_BR'. Review before relying on it.
+[package]
+name = "aspell-pt_BR"
+version = "20131030"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/pt_BR/aspell6-pt_BR-20131030-12-0.tar.bz2"
+sha256 = "eb0d99db0b5d5c442133a88bddfe96dd252c0c3df3da36e9326c241dc4bc14f7"
+strip_components = 1
+description = "Brazilian Portuguese dictionary for aspell"
+homepage = "http://aspell.net/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

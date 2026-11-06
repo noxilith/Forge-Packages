@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'vaultwarden'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: sqlite, zstd
+[package]
+name = "vaultwarden"
+version = "1.37.5"
+archive = "https://github.com/dani-garcia/vaultwarden/archive/1.37.5.tar.gz"
+sha256 = "6be37dcc95b91a058ecbe614f1a7acff68ca8d23dc2c016cec18517c7173e4cc"
+strip_components = 1
+description = "Unofficial Bitwarden compatible server written in Rust"
+homepage = "https://github.com/dani-garcia/vaultwarden"
+license = "AGPL-3.0-only"
+deps = ["mariadb", "openssl", "postgresql18", "zlib"]
+patches = ["patches/config.patch"]
+
+[build]
+system = "cargo"
+configure_args = ["--features", "sqlite,mysql,postgresql"]
+tools = ["pkg-config"]

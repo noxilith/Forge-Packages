@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'golangci-lint'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "golangci-lint"
+version = "2.15.0"
+archive = "https://github.com/golangci/golangci-lint/archive/v2.15.0.tar.gz"
+sha256 = "5411598703f014f1128b209f3d46da6f9f2c99a68783c90f846b4db1c8c08742"
+strip_components = 1
+description = "Linters Runner for Go"
+homepage = "https://github.com/golangci/golangci-lint"
+license = "GPL-3.0-only"
+patches = ["patches/0002-nilnil-use-32bit-compatible-test-values.patch"]
+
+[build]
+system = "go"

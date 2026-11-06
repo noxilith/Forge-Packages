@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-ki18n'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-ki18n"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/ki18n-6.30.0.tar.xz"
+sha256 = "dfbfc8af89b3bc68810b094bf87746db87c3eeb35b75caeb1882681ebed563bd"
+strip_components = 1
+description = "KDE Gettext-based UI text internationalization"
+homepage = "https://invent.kde.org/frameworks/ki18n"
+license = "LGPL-2.1-or-later"
+deps = ["iso-codes", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

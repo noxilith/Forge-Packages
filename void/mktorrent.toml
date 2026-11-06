@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mktorrent'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "mktorrent"
+version = "1.1"
+archive = "https://github.com/Rudde/mktorrent/archive/v1.1.tar.gz"
+sha256 = "d0f47500192605d01b5a2569c605e51ed319f557d24cfcbcb23a26d51d6138c9"
+strip_components = 1
+description = "Simple command line utility to create BitTorrent metainfo files"
+homepage = "https://github.com/Rudde/mktorrent"
+license = "GPL-2.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "make"

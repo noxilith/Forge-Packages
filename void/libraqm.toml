@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libraqm'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: harfbuzz
+[package]
+name = "libraqm"
+version = "0.11.0"
+archive = "https://github.com/HOST-Oman/libraqm/archive/refs/tags/v0.11.0.tar.gz"
+sha256 = "2ba3521d3f24e9696185a67a16f1a9643429d6c897d89d83dfb2aad3a398732a"
+strip_components = 1
+description = "Library for complex text layout"
+homepage = "https://github.com/HOST-Oman/libraqm"
+license = "MIT"
+deps = ["fribidi"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddocs=true", "-Db_ndebug=false"]
+tools = ["pkg-config"]
+deps = ["gtk-doc"]

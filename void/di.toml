@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'di'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "di"
+version = "6.2.2.2"
+archive = "https://downloads.sourceforge.net/sourceforge/diskinfo-di/di-6.2.2.2.tar.gz"
+sha256 = "19eeeb7ebcad3061ae7814cdae5593accfb2bb261ce24795a604a282cbfc60fe"
+strip_components = 1
+description = "Disk information utility"
+homepage = "https://diskinfo-di.sourceforge.io/"
+license = "Zlib"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=OFF"]

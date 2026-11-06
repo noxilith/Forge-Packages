@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'Carla'. Review before relying on it.
+# hooks not translated: post_build, post_install, post_patch, pre_build
+# settings not translated: CFLAGS, CXXFLAGS
+# needs, but Forge has no recipe for yet: fftw, fluidsynth, python3-PyQt5, python3-pyliblo3, python3-rdflib, qt5
+[package]
+name = "Carla"
+version = "2.5.10"
+archive = "https://github.com/falkTX/Carla/archive/v2.5.10.tar.gz"
+sha256 = "ae2835b12081f7271a6b0b25d34b87d36b022c40370028ca4a10f90fcedfa661"
+strip_components = 1
+description = "Audio plugin host"
+homepage = "https://kx.studio/Applications:Carla"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "file", "libX11", "liblo", "libsndfile", "pulseaudio", "which", "zlib"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

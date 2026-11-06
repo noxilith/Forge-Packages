@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'qt6-webview'. Review before relying on it.
+[package]
+name = "qt6-webview"
+version = "6.11.2"
+archive = "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtwebview-everywhere-src-6.11.2.tar.xz"
+sha256 = "7e21e109ee89dadeef2d3edd786bcb9d64a5562ea546f89dcc79b3f52f881f4c"
+strip_components = 1
+description = "Cross-platform application and UI framework - WebView"
+homepage = "https://www.qt.io"
+license = "GPL-3.0-only, GPL-2.0-only, LGPL-3.0-only"
+deps = ["qt6-base", "qt6-declarative", "qt6-pdf"]
+
+[build]
+system = "cmake"

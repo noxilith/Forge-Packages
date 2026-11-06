@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'timelimit'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_install_args
+[package]
+name = "timelimit"
+version = "1.9.2"
+archive = "https://devel.ringlet.net/files/sys/timelimit/timelimit-1.9.2.tar.xz"
+sha256 = "9cdd1f06049b9e1a4b7a8a93a0d4d0e1920bd617e7cd005525261a3f91386796"
+strip_components = 1
+description = "Limit command execution time"
+homepage = "http://devel.ringlet.net/sysutils/timelimit/"
+license = "BSD-2-Clause"
+
+[build]
+system = "make"

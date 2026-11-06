@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libgssglue'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+[package]
+name = "libgssglue"
+version = "0.9"
+archive = "https://gitlab.com/gsasl/libgssglue/-/archive/libgssglue-0.9/libgssglue-libgssglue-0.9.tar.gz"
+sha256 = "a7a953f3d65f8f61772bf18a03f12ba9bdf3f0af8463063293194fe85f2d247d"
+strip_components = 1
+description = "Mechanism-switch gssapi library"
+homepage = "https://gitlab.com/gsasl/libgssglue"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'shiori'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, make_dirs
+[package]
+name = "shiori"
+version = "1.5.5"
+archive = "https://github.com/go-shiori/shiori/archive/refs/tags/v1.5.5.tar.gz"
+sha256 = "979f9b30f7115ffb3374d882b05c45fda2ef52d48507ea4cccad332842189dda"
+strip_components = 1
+description = "Simple bookmark manager built with Go"
+homepage = "https://github.com/go-shiori/shiori"
+license = "MIT"
+
+[build]
+system = "go"

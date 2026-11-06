@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wvstreams'. Review before relying on it.
+# settings not translated: CXXFLAGS, conf_files
+[package]
+name = "wvstreams"
+version = "4.6.1"
+archive = "https://ftp.debian.org/debian/pool/main/w/wvstreams/wvstreams_4.6.1.orig.tar.gz"
+sha256 = "8403f5fbf83aa9ac0c6ce15d97fd85607488152aa84e007b7d0621b8ebc07633"
+strip_components = 1
+description = "Library for doing network in C++"
+homepage = "https://code.google.com/p/wvstreams"
+license = "LGPL-2.0-only"
+deps = ["openssl", "zlib"]
+patches = ["patches/gcc-6.patch", "patches/no_optimize.patch", "patches/wvstreams-4.6.1-argp-fpic.patch", "patches/wvstreams-4.6.1-gcc47.patch", "patches/wvstreams-4.6.1-glibc212.patch", "patches/wvstreams-4.6.1-modulemgr-limits.patch", "patches/wvstreams-4.6.1-openssl-1.0.0.patch", "patches/wvstreams-4.6.1-openssl-1.1.0.patch", "patches/wvstreams-4.6.1-parallel-make.patch", "patches/wvstreams-4.6.1-wvconfemu-execinfo.patch", "patches/wvstreams-4.6.1-wvcrash-basename.patch", "patches/wvstreams-4.6.1-wvcrash-execinfo.patch", "patches/wvstreams-4.6.1-wvtask-libc_stack_end.patch", "patches/wvstreams-4.6.1-wvtask-ucontext.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-dbus", "--without-tcl", "--without-qt"]

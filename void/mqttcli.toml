@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mqttcli'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "mqttcli"
+version = "0.2.0"
+archive = "https://github.com/shirou/mqttcli/archive/refs/tags/0.2.0.tar.gz"
+sha256 = "9c9d9238a65325f7a67bd7828a490bcd24cf3931d0c3eaae96ee39a107e26808"
+strip_components = 1
+description = "MQTT Client"
+homepage = "https://github.com/shirou/mqttcli"
+license = "EPL-1.0"
+
+[build]
+system = "go"

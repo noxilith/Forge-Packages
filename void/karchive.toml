@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'karchive'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, qt5, zstd
+[package]
+name = "karchive"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/karchive-5.116.0.tar.xz"
+sha256 = "1663e3c970b84063ece7f28548a87c97bc7592e79da0a0afaa4f6354f8dea30a"
+strip_components = 1
+description = "Qt5 addon providing access to numerous types of archives"
+homepage = "https://invent.kde.org/frameworks/karchive"
+license = "LGPL-2.0-only, LGPL-2.0-or-later"
+deps = ["xz", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "kcoreaddons"]

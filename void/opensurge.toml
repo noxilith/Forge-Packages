@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'opensurge'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: surgescript
+[package]
+name = "opensurge"
+version = "0.6.1.3"
+archive = "https://github.com/alemart/opensurge/archive/v0.6.1.3.tar.gz"
+sha256 = "be0f751a8d0910556380910fcc9ae2a219d7cc74dd2493b396af8edf5b3666a9"
+strip_components = 1
+description = "Retro platformer inspired by Sonic"
+homepage = "https://opensurge2d.org/"
+license = "GPL-3.0-or-later"
+deps = ["allegro5"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

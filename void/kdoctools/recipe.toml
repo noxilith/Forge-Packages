@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'kdoctools'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xml, docbook-xsl, perl-URI, qt5
+[package]
+name = "kdoctools"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kdoctools-5.116.0.tar.xz"
+sha256 = "36a0a60e422907b2baead8b82cec56008240b7a950678294bb2e1df65e1a6bb3"
+strip_components = 1
+description = "KDE Create documentation from DocBook"
+homepage = "https://invent.kde.org/frameworks/kdoctools"
+license = "LGPL-2.1-or-later"
+deps = ["karchive", "ki18n", "libxml2", "libxslt"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

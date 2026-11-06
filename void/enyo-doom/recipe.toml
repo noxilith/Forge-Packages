@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'enyo-doom'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "enyo-doom"
+version = "2.0.1"
+archive = "https://gitlab.com/sdcofer70/enyo-doom/-/archive/2.0.1/enyo-doom-2.0.1.tar.bz2"
+sha256 = "03d490081753dfd1d40b7cc8142b8f0e7642bad6f3d724f9ba9cfad0253f1a34"
+strip_components = 1
+description = "Frontend for Doom engines"
+homepage = "https://gitlab.com/sdcofer70/enyo-doom"
+license = "GPL-3.0-or-later"
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"

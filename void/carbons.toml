@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'carbons'. Review before relying on it.
+# settings not translated: LDFLAGS
+[package]
+name = "carbons"
+version = "0.2.3"
+archive = "https://github.com/gkdr/carbons/archive/v0.2.3.tar.gz"
+sha256 = "7aa847cb121483b10677dd67ae401af94550d1a65311fc502600998d2ef67b64"
+strip_components = 1
+description = "Pidgin/libpurple plugin for XEP-0280: Message Carbons"
+homepage = "https://github.com/gkdr/carbons"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libxml2", "pidgin"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

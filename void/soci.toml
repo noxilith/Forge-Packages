@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'soci'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, sqlite
+[package]
+name = "soci"
+version = "4.0.3"
+archive = "https://downloads.sourceforge.net/sourceforge/project/soci/soci/soci-4.0.3/soci-4.0.3.tar.gz"
+sha256 = "615e5f7e4b52007f3a3b4050a99aadf6346b56b5098eb08b3a650836083c6a33"
+strip_components = 1
+description = "Database access library for C++"
+homepage = "http://soci.sourceforge.net/"
+license = "BSL-1.0"
+deps = ["mariadb", "postgresql18", "unixodbc"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_CXX_STANDARD=11"]

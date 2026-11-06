@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tali'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "tali"
+version = "40.9"
+archive = "https://download.gnome.org/sources/tali/40/tali-40.9.tar.xz"
+sha256 = "fa9ede366f0a72e4caa52189c3ab0b10c1b56a80c7885b016602558c44dce7d3"
+strip_components = 1
+description = "GNOME sort of poker game with dice"
+homepage = "https://wiki.gnome.org/Apps/Tali"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libgnome-games-support"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

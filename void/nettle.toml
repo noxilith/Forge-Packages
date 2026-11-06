@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'nettle'. Review before relying on it.
+[package]
+name = "nettle"
+version = "3.10.2"
+archive = "https://ftp.gnu.org/gnu/nettle/nettle-3.10.2.tar.gz"
+sha256 = "fe9ff51cb1f2abb5e65a6b8c10a92da0ab5ab6eaf26e7fc2b675c45f1fb519b5"
+strip_components = 1
+description = "Low-level cryptographic library"
+homepage = "https://www.lysator.liu.se/~nisse/nettle/"
+license = "GPL-2.0-or-later, GPL-3.0-or-later"
+deps = ["gmp"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared"]
+tools = ["m4"]
+deps = ["texinfo"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gtksourceview'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gtksourceview"
+version = "3.24.11"
+archive = "https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz"
+sha256 = "691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd"
+strip_components = 1
+description = "Text widget that extends GTK+3 GtkTextView widget"
+homepage = "https://wiki.gnome.org/Projects/GtkSourceView"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libxml2", "vala"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-introspection"]
+tools = ["pkg-config"]
+deps = ["glib"]

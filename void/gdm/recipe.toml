@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'gdm'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: gnome-settings-daemon, gnome-shell, itstool, libcanberra, nss
+[package]
+name = "gdm"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gdm/48/gdm-48.0.tar.xz"
+sha256 = "1bc06daff093ec7b5e37ecb4f92e5da3474a1b1ba076edb9151ee967d1c30adf"
+strip_components = 1
+description = "GNOME Display Manager"
+homepage = "https://wiki.gnome.org/Projects/GDM"
+license = "GPL-2.0-or-later"
+deps = ["accountsservice", "elogind", "gettext", "glib", "gnome-session", "gnome-themes-extra", "gsettings-desktop-schemas", "iso-codes", "libSM", "libgudev", "pam", "plymouth", "polkit", "upower", "xorg-server", "xorg-server-xwayland", "xrdb"]
+patches = ["patches/drop-wayland-udev-rules.patch", "patches/pam-turnstile-elogind.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddefault-pam-config=arch", "-Dtcp-wrappers=false", "-Dplymouth=enabled", "-Dsystemd-journal=false", "-Dinitial-vt=7", "-Dwayland-support=true", "-Dselinux=disabled", "-Dlibaudit=disabled", "-Dgdm-xsession=true", "-Dlogind-provider=elogind"]
+tools = ["pkg-config"]
+deps = ["dconf"]

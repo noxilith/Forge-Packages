@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'startup-notification'. Review before relying on it.
+[package]
+name = "startup-notification"
+version = "0.12"
+archive = "https://www.freedesktop.org/software/startup-notification/releases/startup-notification-0.12.tar.gz"
+sha256 = "3c391f7e930c583095045cd2d10eb73a64f085c7fde9d260f2652c7cb3cfbe4a"
+strip_components = 1
+description = "Library for tracking application startup"
+homepage = "https://www.freedesktop.org/wiki/Software/startup-notification/"
+license = "LGPL-2.1-only"
+deps = ["libSM", "libX11", "xcb-util"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "lf_cv_sane_realloc=yes", "lf_cv_sane_malloc=yes"]
+tools = ["pkg-config"]

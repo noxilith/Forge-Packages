@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'synthv1'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack, qt6-svg
+[package]
+name = "synthv1"
+version = "1.4.3"
+archive = "https://downloads.sourceforge.net/sourceforge/synthv1/synthv1-1.4.3.tar.gz"
+sha256 = "c0b33b46f00592690edc61afca82b44841d432b3b39897864a25cf3650a5eda3"
+strip_components = 1
+description = "Old-school polyphonic synthesizer"
+homepage = "https://synthv1.sourceforge.io/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "liblo", "lv2", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

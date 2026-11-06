@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'embb'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "embb"
+version = "1.0.0"
+archive = "https://github.com/siemens/embb/releases/download/v1.0.0/embb-1.0.0.tar.gz"
+sha256 = "a392c710df719bbb1513dd9a6835ab9d73494d7355a47f17e818179fea64dcc8"
+strip_components = 1
+description = "Library for parallel programming of embedded systems"
+homepage = "https://github.com/siemens/embb"
+license = "BSD-2-Clause"
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_C11_AND_CXX11=ON", "-DBUILD_SHARED_LIBS=ON", "-DBUILD_TESTS=OFF"]

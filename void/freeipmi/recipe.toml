@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'freeipmi'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "freeipmi"
+version = "1.6.18"
+archive = "https://ftp.gnu.org/gnu/freeipmi/freeipmi-1.6.18.tar.gz"
+sha256 = "8098b23820038ad0aa39abf0f9a012e24683d384d9f91e760acb2a68b465e0fe"
+strip_components = 1
+description = "In-band and out-of-band IPMI software"
+homepage = "http://www.gnu.org/software/freeipmi/"
+license = "GPL-3.0-or-later"
+deps = ["libgcrypt"]
+patches = ["patches/fix-build-with-C99-compilers.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-systemdsystemunitdir", "ac_cv_header_sys_stropts_h=no"]
+tools = ["pkg-config"]
+deps = ["texinfo"]

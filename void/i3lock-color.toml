@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'i3lock-color'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libev
+[package]
+name = "i3lock-color"
+version = "2.13.c.5"
+archive = "https://github.com/Raymo111/i3lock-color/archive/2.13.c.5.tar.gz"
+sha256 = "46f15cbbf339873266e014f70b5e1ec02177f0295302b615a7bd85bef40d8ad2"
+strip_components = 1
+description = "Screenlocker forked from i3lock with more features"
+homepage = "https://github.com/Raymo111/i3lock-color"
+license = "MIT"
+deps = ["cairo", "libjpeg-turbo", "libxkbcommon", "pam", "xcb-util", "xcb-util-image", "xcb-util-xrm"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-micro-misc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-micro-misc"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-micro-misc-1.0.4.tar.xz"
+sha256 = "2ee0b9d6bd7ae849aff1bd82efab44a1b6b368fbb5e11d12ff7f015a3df6f943"
+strip_components = 1
+description = "Public domain micro font"
+homepage = "http://xorg.freedesktop.org/"
+license = "Public Domain"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

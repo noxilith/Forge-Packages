@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'screen-message'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "screen-message"
+version = "0.26"
+archive = "https://www.joachim-breitner.de/archive/screen-message/screen-message-0.26.tar.gz"
+sha256 = "bc12a7b973844190c00a694d3fdc2327735b21d8b1231ec8ef66ba363ea98f37"
+strip_components = 1
+description = "Displays a short text fullscreen "
+homepage = "https://www.joachim-breitner.de/projects#screen-message"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

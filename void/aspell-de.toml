@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-de'. Review before relying on it.
+[package]
+name = "aspell-de"
+version = "20161207.7.0"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/de/aspell6-de-20161207-7-0.tar.bz2"
+sha256 = "c2125d1fafb1d4effbe6c88d4e9127db59da9ed92639c7cbaeae1b7337655571"
+strip_components = 1
+description = "German dictionary for aspell"
+homepage = "http://aspell.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

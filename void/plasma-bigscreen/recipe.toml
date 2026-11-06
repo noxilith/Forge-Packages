@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'plasma-bigscreen'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-multimedia
+[package]
+name = "plasma-bigscreen"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-bigscreen-6.7.5.tar.xz"
+sha256 = "fd00b8ffd6a1c0fd7058acd06098110b00b5ca1dc720167058fad65d2ab50bdc"
+strip_components = 1
+description = "Plasma shell for TVs"
+homepage = "https://plasma-bigscreen.org"
+license = "GPL-2.0-or-later AND CC-BY-SA-4.0"
+deps = ["SDL3", "kde-cli-tools", "kdeconnect", "kf6-bluez-qt", "kf6-kcmutils", "kf6-kconfig", "kf6-kdbusaddons", "kf6-kglobalaccel", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-knotifications", "kf6-ksvg", "kf6-kwindowsystem", "kscreen", "kwin", "libcec", "libkf6screen", "libplasma", "milou", "plasma-activities", "plasma-activities-stats", "plasma-keyboard", "plasma-nano", "plasma-nm", "plasma-pa", "plasma-wayland-protocols", "plasma-workspace", "qcoro-qt6", "qt6-declarative", "qt6-pdf"]
+patches = ["patches/uaccess.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage", "qt6-base"]

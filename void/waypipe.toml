@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'waypipe'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg6, mesa, zstd
+[package]
+name = "waypipe"
+version = "0.10.6"
+archive = "https://gitlab.freedesktop.org/mstoeckl/waypipe/-/archive/v0.10.6/waypipe-v0.10.6.tar.gz"
+sha256 = "51dd2a257f43f15cfe886ec5a7370366d3efcb5486385dab222773e05ba3fbf9"
+strip_components = 1
+description = "Proxy for Wayland clients"
+homepage = "https://gitlab.freedesktop.org/mstoeckl/waypipe"
+license = "MIT"
+deps = ["libdrm", "libva", "lz4", "openssh"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwerror=false", "-Db_lto=false", "-Dbuild_c=true", "-Dbuild_rs=false"]
+tools = ["pkg-config"]
+deps = ["scdoc", "wayland"]

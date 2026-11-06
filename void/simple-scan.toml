@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'simple-scan'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libwebp
+[package]
+name = "simple-scan"
+version = "49.1"
+archive = "https://download.gnome.org/sources/simple-scan/49/simple-scan-49.1.tar.xz"
+sha256 = "9ae8d4151ecaf95845eb9f99b436d579c838f2cf02763fba3bc03780251be334"
+strip_components = 1
+description = "GTK Simple scanning utility"
+homepage = "https://gitlab.gnome.org/GNOME/simple-scan"
+license = "GPL-3.0-or-later"
+deps = ["libadwaita", "sane"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3", "vala"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'unpaper'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, python3-Sphinx
+[package]
+name = "unpaper"
+version = "7.0.0"
+archive = "https://www.flameeyes.eu/files/unpaper-7.0.0.tar.xz"
+sha256 = "2575fbbf26c22719d1cb882b59602c9900c7f747118ac130883f63419be46a80"
+strip_components = 1
+description = "Post-processing tool for scanned sheets of paper"
+homepage = "https://www.flameeyes.eu/projects/unpaper"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["libxslt"]

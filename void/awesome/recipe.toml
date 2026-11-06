@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'awesome'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch, pre_configure
+# settings not translated: build_helper, CFLAGS, conf_files
+# needs, but Forge has no recipe for yet: ruby-asciidoctor
+[package]
+name = "awesome"
+version = "4.3"
+archive = "https://github.com/awesomeWM/awesome/releases/download/v4.3/awesome-4.3.tar.xz"
+sha256 = "78264d6f012350b371e339127aca485260bc0aa935eff578ba75ce1a00e11753"
+strip_components = 1
+description = "Highly configurable, next gen framework window manager for X"
+homepage = "http://awesomewm.org"
+license = "GPL-2.0-or-later"
+deps = ["dbus", "gdk-pixbuf", "libxcb", "libxdg-basedir", "libxkbcommon", "pango", "startup-notification", "xcb-util", "xcb-util-cursor", "xcb-util-image", "xcb-util-keysyms", "xcb-util-wm", "xcb-util-xrm"]
+patches = ["patches/glib-2.86.0.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["ImageMagick"]

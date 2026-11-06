@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'bijiben'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool, libwebkit2gtk41
+[package]
+name = "bijiben"
+version = "40.2"
+archive = "https://download.gnome.org/sources/bijiben/40/bijiben-40.2.tar.xz"
+sha256 = "b22111bc06956bef359aacf1d6ede1e52a35b000c88113936632f8ac6cedce67"
+strip_components = 1
+description = "Intuitive note editor with strong GNOME desktop integration"
+homepage = "https://wiki.gnome.org/Apps/Notes"
+license = "GPL-3.0-or-later"
+deps = ["clutter-gtk", "curl", "desktop-file-utils", "evolution", "gnome-online-accounts", "gtk4", "libhandy1", "tinysparql"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

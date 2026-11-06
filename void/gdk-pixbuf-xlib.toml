@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gdk-pixbuf-xlib'. Review before relying on it.
+[package]
+name = "gdk-pixbuf-xlib"
+version = "2.40.2"
+archive = "https://gitlab.gnome.org/Archive/gdk-pixbuf-xlib/-/archive/2.40.2/gdk-pixbuf-xlib-2.40.2.tar.gz"
+sha256 = "e7d9b6a8ca53b6500a82ee8d5a1b3c17780740a6ca7bf04a5dabba0fe50bb7ff"
+strip_components = 1
+description = "Image loading library for The GTK+ toolkit (v2)"
+homepage = "https://wiki.gnome.org/Projects/GdkPixbuf"
+license = "LGPL-2.1-or-later"
+deps = ["gdk-pixbuf", "libX11", "shared-mime-info"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

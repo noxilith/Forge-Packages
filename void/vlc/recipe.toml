@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'vlc'. Review before relying on it.
+# 12 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure, pre_install
+# settings not translated: CFLAGS, CXXFLAGS, lib32disabled
+# needs, but Forge has no recipe for yet: avahi, dbus-glib, ffmpeg, freefont-ttf, hicolor-icon-theme, jack, libmpeg2, libtheora, ncurses, sndio, speex
+[package]
+name = "vlc"
+version = "3.0.24"
+archive = "https://download.videolan.org/pub/videolan/vlc/3.0.24/vlc-3.0.24.tar.xz"
+sha256 = "e7cab503d1d7d5849b89d2cf0e1ee60d0ef6d012407791b644b9cfc0cc225fdf"
+strip_components = 1
+description = "Cross-platform multimedia player"
+homepage = "https://www.videolan.org/vlc/"
+license = "GPL-2.0-only, LGPL-2.1-only"
+deps = ["chromaprint", "desktop-file-utils", "faad2", "gnutls", "libSM", "libXinerama", "libXpm", "libXvMC", "liba52", "libass", "libbluray", "libcdio", "libdca", "libdvbpsi", "libdvdnav", "libdvdread", "libmad", "libmatroska", "libmodplug", "libmtp", "libproxy", "libsamplerate", "libupnp", "live555", "opus", "pulseaudio", "sysfsutils", "taglib", "wayland-protocols", "x264", "xcb-util", "xcb-util-keysyms"]
+patches = ["patches/fix-waitpid-usage.patch", "patches/fribidi_allow_deprecated.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gme", "--disable-libtar", "--enable-jack", "--enable-live555", "--disable-fluidsynth", "--enable-dvdread", "--enable-flac", "--enable-merge-ffmpeg", "--disable-libplacebo"]
+tools = ["flex", "pkg-config"]
+deps = ["gettext", "libgcrypt"]

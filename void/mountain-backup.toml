@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mountain-backup'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "mountain-backup"
+version = "0.2.0"
+archive = "https://github.com/Noah-Huppert/mountain-backup/archive/v0.2.0.tar.gz"
+sha256 = "c01d790c16029a083b2c87541506dfae73c1f78674ae7a3c9a0a8183f11f0725"
+strip_components = 1
+description = "File backup tool"
+homepage = "https://github.com/Noah-Huppert/mountain-backup"
+license = "MIT"
+
+[build]
+system = "go"

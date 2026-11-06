@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'libt3key'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "libt3key"
+version = "0.2.11"
+archive = "https://os.ghalkes.nl/dist/libt3key-0.2.11.tar.bz2"
+sha256 = "e4dfdef50be52e365f68745df6177e819df5a7600e61716063d5480f7db3c06c"
+strip_components = 1
+description = "Tilde Terminal Toolkit's library for key sequences"
+homepage = "https://os.ghalkes.nl/t3/libt3key.html"
+license = "GPL-3.0-or-later"
+deps = ["gettext", "libt3config"]
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["LIBTOOL=./hack/libtool"]
+tools = ["pkg-config"]

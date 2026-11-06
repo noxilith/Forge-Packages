@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'linux-vt-setcolors'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "linux-vt-setcolors"
+version = "1.0.0"
+archive = "https://github.com/EvanPurkhiser/linux-vt-setcolors/archive/v1.0.0.tar.gz"
+sha256 = "ccad9aac5732faab749e8f6f6b40746ce44afec5633374aa77c8e3ac2a8eef42"
+strip_components = 1
+description = "Utility tool to set the linux VT default color palette"
+homepage = "https://github.com/EvanPurkhiser/linux-vt-setcolors"
+license = "MIT"
+patches = ["patches/8.diff"]
+
+[build]
+system = "make"

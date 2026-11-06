@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'numactl'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "numactl"
+version = "2.0.19"
+archive = "https://github.com/numactl/numactl/archive/v2.0.19.tar.gz"
+sha256 = "8b84ffdebfa0d730fb2fc71bb7ec96bb2d38bf76fb67246fde416a68e04125e4"
+strip_components = 1
+description = "Simple NUMA policy support"
+homepage = "https://github.com/numactl/numactl"
+license = "GPL-2.0-only"
+patches = ["patches/hardening.patch", "patches/musl.patch", "patches/no-perl-regex.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kile'. Review before relying on it.
+# needs, but Forge has no recipe for yet: perl, qt6-qt5compat, qt6-tools, texlive-core
+[package]
+name = "kile"
+version = "2.9.94"
+archive = "https://downloads.sourceforge.net/sourceforge/kile/kile-2.9.94.tar.bz2"
+sha256 = "53c6742bd83fb095cbdc898b03fdf8e15ab680a81693ccaf9c5076b93ad1a3ca"
+strip_components = 1
+description = "User friendly TeX/LaTeX frontend for KDE"
+homepage = "https://apps.kde.org/kile/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcodecs", "kf6-kcolorscheme", "kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kparts", "kf6-kservice", "kf6-ktexteditor", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "okular", "poppler-qt5", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools", "qt6-base"]

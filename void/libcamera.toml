@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libcamera'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-Jinja2, python3-ply, python3-yaml
+[package]
+name = "libcamera"
+version = "0.7.1"
+archive = "https://gitlab.freedesktop.org/camera/libcamera/-/archive/v0.7.1/libcamera-v0.7.1.tar.gz"
+sha256 = "0904342980cb228a7f930ddee813de9f6196bca38a15670e0fb6072a0d143f1d"
+strip_components = 1
+description = "Complex camera support library for Linux, Android, and ChromeOS"
+homepage = "https://libcamera.org/"
+license = "LGPL-2.1-or-later AND GPL-2.0-or-later"
+deps = ["gst-plugins-base1", "gstreamer1", "libevent", "libyaml", "openssl"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgstreamer=enabled", "-Dwerror=false", "-Dv4l2=enabled"]
+tools = ["pkg-config"]

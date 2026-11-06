@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'suil'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5, qt6-tools
+[package]
+name = "suil"
+version = "0.10.22"
+archive = "https://download.drobilla.net/suil-0.10.22.tar.xz"
+sha256 = "d720969e0f44a99d5fba35c733a43ed63a16b0dab867970777efca4b25387eb7"
+strip_components = 1
+description = "Lightweight C library for loading and wrapping LV2 plugin UIs"
+homepage = "https://gitlab.com/lv2/suil"
+license = "MIT"
+deps = ["gtk+", "gtk+3", "lv2", "qt6-base"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

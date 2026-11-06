@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gpart'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "gpart"
+version = "0.3"
+archive = "https://github.com/baruch/gpart/archive/0.3.tar.gz"
+sha256 = "ec56d12ec9ffdb9877c12692ea6e51620b1ae44473d3d253b27fc31ed9ebb4dd"
+strip_components = 1
+description = "Partition table rescue/guessing tool"
+homepage = "https://github.com/baruch/gpart"
+license = "GPL-2.0-or-later"
+patches = ["patches/0001-Fix-crash-on-a-non-disk-device.patch", "patches/0002-gpart-avoid-superfluous-seek-calls.patch", "patches/0003-gpart-use-posix_fadvise-to-increase-reading-speed.patch", "patches/0004-Speed-up-by-reading-larger-chunks.patch", "patches/0005-Add-LVM2-and-btrfs-to-list-of-supported-modules.patch", "patches/musl_loff_t.patch"]
+
+[build]
+system = "autotools"

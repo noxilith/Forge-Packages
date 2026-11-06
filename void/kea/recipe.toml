@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'kea'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: boost, docbook-xsl, doxygen, python3-Sphinx, python3-sphinx_rtd_theme
+[package]
+name = "kea"
+version = "3.1.8"
+archive = "https://ftp.isc.org/isc/kea/3.1.8/kea-3.1.8.tar.xz"
+sha256 = "fcf91984d61f84353618a66970e39398d22b1ec56ebc5e5bf775dde3f2b9d11d"
+strip_components = 1
+description = "Next generation DHCPv4/v6 server"
+homepage = "https://kea.isc.org"
+license = "MPL-2.0, Apache-2.0"
+deps = ["gtest", "log4cplus"]
+patches = ["patches/boost-1.89.patch", "patches/cross.patch", "patches/fix-musl-ethaddr.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcpp_std=gnu++20"]
+tools = ["bison", "flex", "perl", "pkg-config"]
+deps = ["elinks", "libxslt"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fflas-ffpack'. Review before relying on it.
+[package]
+name = "fflas-ffpack"
+version = "2.5.0"
+archive = "https://github.com/linbox-team/fflas-ffpack/releases/download/v2.5.0/fflas-ffpack-2.5.0.tar.gz"
+sha256 = "dafb4c0835824d28e4f823748579be6e4c8889c9570c6ce9cce1e186c3ebbb23"
+strip_components = 1
+description = "Finite Field Linear Algebra Subroutines / Package"
+homepage = "http://linbox-team.github.io/fflas-ffpack/"
+license = "LGPL-2.1-or-later"
+deps = ["givaro", "openblas"]
+patches = ["patches/357.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

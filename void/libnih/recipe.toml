@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libnih'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "libnih"
+version = "1.0.3"
+archive = "https://github.com/keybuk/libnih/archive/ecf8f37376524f40a6f3fbf9cc4d5b6fc8892c19.tar.gz"
+sha256 = "bd1ce78c9e4808fd02e06edaf581eb2b70fa43d7baae051848dfdbaf5b4d1a1c"
+strip_components = 1
+description = "Small library for C application development"
+homepage = "https://github.com/keybuk/libnih"
+license = "GPL-2.0-only"
+deps = ["dbus", "expat"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-threading"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xcmsdb'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcmsdb"
+version = "1.0.7"
+archive = "https://www.x.org/releases/individual/app/xcmsdb-1.0.7.tar.xz"
+sha256 = "5ec4068e488187b05ea92ee1362c96b78a90f19ccc7a1844c5921d70626bbc38"
+strip_components = 1
+description = "Device Color Characterization utility for X"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

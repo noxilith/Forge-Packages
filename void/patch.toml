@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'patch'. Review before relying on it.
+[package]
+name = "patch"
+version = "2.8"
+archive = "https://ftp.gnu.org/gnu/patch/patch-2.8.tar.xz"
+sha256 = "f87cee69eec2b4fcbf60a396b030ad6aa3415f192aa5f7ee84cad5e11f7f5ae3"
+strip_components = 1
+description = "Patch files using diff output"
+homepage = "http://www.gnu.org/software/patch/patch.html"
+license = "GPL-3.0-or-later"
+deps = ["attr"]
+
+[build]
+system = "autotools"

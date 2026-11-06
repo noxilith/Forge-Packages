@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libssl1.1'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_check, pre_configure
+# settings not translated: make_build_args, make_install_target, CFLAGS, configure_script
+[package]
+name = "libssl1.1"
+version = "1.1.1w"
+archive = "https://github.com/openssl/openssl/releases/download/OpenSSL_1_1_1w/openssl-1.1.1w.tar.gz"
+sha256 = "cf3098950cb4d853ad95c0841f1f9c6d3dc102dccfcacd521d93925208b76ac8"
+strip_components = 1
+description = "Toolkit for Secure Sockets Layer and Transport Layer Security  (version 1.1) - SSL/TLS library"
+homepage = "https://openssl-library.org"
+license = "OpenSSL"
+
+[build]
+system = "autotools"
+configure_args = ["--libdir=lib", "shared", "no-ssl3-method", "-Wa,--noexecstack"]
+tools = ["perl"]

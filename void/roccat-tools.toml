@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'roccat-tools'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_install
+# settings not translated: CFLAGS, make_dirs
+# needs, but Forge has no recipe for yet: dbus-glib, lua53
+[package]
+name = "roccat-tools"
+version = "5.8.0"
+archive = "https://downloads.sourceforge.net/sourceforge/roccat/roccat-tools/roccat-tools-5.8.0.tar.bz2"
+sha256 = "181178da305e82267e45bcc6577dc03387322303b8c341be33e574afdf8a213b"
+strip_components = 1
+description = "Roccat mouse and keyboard drivers"
+homepage = "https://roccat.sourceforge.net"
+license = "GPL-2.0-only"
+deps = ["gtk+", "libgaminggear", "libgudev"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDEVICES=arvo;isku;iskufx;kiro;kone;koneplus;konepure;konepuremilitary;konepureoptical;konextd;konextdoptical;kovaplus;kova2016;lua;nyth;pyra;ryosmk;ryosmkfx;ryostkl;savu;skeltr;sova;suora;tyon", "-DWITH_LUA=5.3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

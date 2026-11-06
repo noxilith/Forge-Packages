@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gogglesmm'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, libwebp, sqlite
+[package]
+name = "gogglesmm"
+version = "1.2.5"
+archive = "https://github.com/gogglesmm/gogglesmm/archive/1.2.5.tar.gz"
+sha256 = "fb6a33457a815ad650a81f7bad5233f983647977e401c57c6d396f0de4414283"
+strip_components = 1
+description = "Music Manager and Player"
+homepage = "https://gogglesmm.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "dbus", "faad2", "flac", "glu", "libSM", "libXcursor", "libXft", "libXi", "libXrandr", "libepoxy", "libjpeg-turbo", "libogg", "libpng", "libvorbis", "libxml2", "openssl", "opus", "pulseaudio", "taglib"]
+patches = ["patches/endian.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils"]

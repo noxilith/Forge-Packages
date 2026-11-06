@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qps'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "qps"
+version = "2.13.0"
+archive = "https://github.com/lxqt/qps/archive/2.13.0.tar.gz"
+sha256 = "57d5beb3ecf466c68e2a79706b3a2031ceff59f2e1f2937cc965b6d69f6807bf"
+strip_components = 1
+description = "Qt process manager"
+homepage = "https://lxqt-project.org"
+license = "GPL-2.0-or-later"
+deps = ["liblxqt"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "qt6-base"]

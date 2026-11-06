@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'faac'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "faac"
+version = "1.30"
+archive = "https://github.com/knik0/faac/archive/1_30.tar.gz"
+sha256 = "adc387ce588cca16d98c03b6ec1e58f0ffd9fc6eadb00e254157d6b16203b2d2"
+strip_components = 1
+description = "AAC audio encoder library"
+homepage = "http://www.audiocoding.com/"
+license = "LGPL-2.0-only"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

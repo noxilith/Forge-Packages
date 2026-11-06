@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tlp'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, make_install_target, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: iw, perl, util-linux
+[package]
+name = "tlp"
+version = "1.10.2"
+archive = "https://github.com/linrunner/TLP/archive/1.10.2.tar.gz"
+sha256 = "a0b8bd8193d96853d2876c552b3b2bdf46bd1258fffc9ac598acc67eb73b56d5"
+strip_components = 1
+description = "Advanced power management tool for Linux"
+homepage = "https://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html"
+license = "GPL-2.0-or-later"
+deps = ["ethtool", "hdparm"]
+
+[build]
+system = "make"

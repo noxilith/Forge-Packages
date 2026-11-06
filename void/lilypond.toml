@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'lilypond'. Review before relying on it.
+# hooks not translated: post_extract, pre_configure
+# settings not translated: make_install_args, configure_script
+# needs, but Forge has no recipe for yet: ghostscript, gsfonts
+[package]
+name = "lilypond"
+version = "2.26.0"
+archive = "https://lilypond.org/downloads/sources/v2.26/lilypond-2.26.0.tar.gz"
+sha256 = "bbe82dbeba7f7f99ddcd8d1fa134a0d89cafa6e8f815fde5bb01f4208b06fe05"
+strip_components = 1
+description = "Music engraving program"
+homepage = "https://lilypond.org/"
+license = "GPL-3.0-or-later, GFDL-1.3-or-later"
+deps = ["gc", "guile", "pango"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-documentation", "ac_cv_func_isinf=yes"]
+subdir = "build"
+tools = ["bison", "flex", "perl", "pkg-config"]
+deps = ["autogen", "fontforge", "gettext", "t1utils", "tar", "texinfo", "texlive"]

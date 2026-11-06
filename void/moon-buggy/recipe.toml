@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'moon-buggy'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "moon-buggy"
+version = "1.1.0"
+archive = "https://www.seehuhn.de/programs/moon-buggy/moon-buggy-1.1.0.tar.gz"
+sha256 = "259ae6e7b1838c40532af5c0f20cd7c6173cd5c552ede408114064475bcfc5b6"
+strip_components = 1
+description = "Simple character graphics game"
+homepage = "https://www.seehuhn.de/programs/moon-buggy/"
+license = "GPL-3.0-only"
+patches = ["patches/Makefile.in.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'openvdb'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "openvdb"
+version = "13.0.0"
+archive = "https://github.com/AcademySoftwareFoundation/openvdb/archive/v13.0.0.tar.gz"
+sha256 = "4d6a91df5f347017496fe8d22c3dbb7c4b5d7289499d4eb4d53dd2c75bb454e1"
+strip_components = 1
+description = "Sparse volume data structure and tools"
+homepage = "https://openvdb.org"
+license = "MPL-2.0"
+deps = ["c-blosc", "glfw", "imath", "jemalloc", "libXxf86vm", "openexr", "tbb", "zlib"]
+patches = ["patches/tbb-2023.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DOPENVDB_BUILD_VDB_VIEW=1"]
+tools = ["pkg-config"]

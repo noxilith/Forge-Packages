@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libmatroska'. Review before relying on it.
+[package]
+name = "libmatroska"
+version = "1.7.2"
+archive = "https://github.com/Matroska-Org/libmatroska/archive/refs/tags/release-1.7.2.tar.gz"
+sha256 = "ef1104f1d77971ac95a33ae6184656fc5ddb51232ca542c31c31daaa493fe204"
+strip_components = 1
+description = "Extensible open standard Audio/Video container format"
+homepage = "https://www.matroska.org/downloads/libraries.html"
+license = "LGPL-2.1-or-later"
+deps = ["libebml"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

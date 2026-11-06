@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-kdecoration'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "kf6-kdecoration"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kdecoration-6.7.5.tar.xz"
+sha256 = "7ff1fe2854ca08a21a1ba47f1b0c97d12ea24f1db618631319cba4023ca53d86"
+strip_components = 1
+description = "KDE Plugin based library to create window decorations"
+homepage = "https://invent.kde.org/plasma/kdecoration"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcoreaddons", "kf6-ki18n"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

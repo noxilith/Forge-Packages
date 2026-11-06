@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pam-krb5'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: mit-krb5
+[package]
+name = "pam-krb5"
+version = "4.9"
+archive = "https://archives.eyrie.org/software/kerberos/pam-krb5-4.9.tar.gz"
+sha256 = "c5936d7beb8f98a38f6c03467aae71e4200a3ff39b20b3e70da7f03f6535ff4f"
+strip_components = 1
+description = "Kerberos v5 PAM module"
+homepage = "http://www.eyrie.org/~eagle/software/pam-krb5/"
+license = "BSD-3-Clause"
+deps = ["pam"]
+
+[build]
+system = "autotools"

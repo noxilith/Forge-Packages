@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kauth'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kauth"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kauth-5.116.0.tar.xz"
+sha256 = "ace1ee1ac0aa1b291c4c50c93fc3503b62318eeef0df0ee394a5a08da9691ff4"
+strip_components = 1
+description = "KDE Execute actions as privileged user"
+homepage = "https://invent.kde.org/frameworks/kauth"
+license = "LGPL-2.1-or-later"
+deps = ["kcoreaddons", "polkit-qt5"]
+patches = ["patches/crossbuild-support.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

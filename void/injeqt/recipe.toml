@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'injeqt'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "injeqt"
+version = "1.2.0"
+archive = "https://github.com/vogel/injeqt/archive/1.2.0.tar.gz"
+sha256 = "77540cedb0b26affe993dd18124d796059e34c80a51d9ae6433fdff1860db135"
+strip_components = 1
+description = "Dependency injection framework for Qt"
+homepage = "https://github.com/vogel/injeqt/"
+license = "LGPL-2.1-or-later"
+patches = ["patches/gcc7-fix.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDISABLE_COVERAGE=ON"]
+tools = ["pkg-config"]

@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'ansifilter'. Review before relying on it.
+[package]
+name = "ansifilter"
+version = "2.22"
+archive = "https://gitlab.com/saalen/ansifilter/-/archive/2.22/ansifilter-2.22.tar.gz"
+sha256 = "cf5b95564d95d398e78071f147ee3cbf850e6dc8226a86ecff2de4356f19ff66"
+strip_components = 1
+description = "Remove or convert ANSI codes to another format"
+homepage = "https://gitlab.com/saalen/ansifilter"
+license = "GPL-3.0-only"
+
+[build]
+system = "make"

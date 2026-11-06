@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-ktextwidgets'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-multimedia, qt6-tools
+[package]
+name = "kf6-ktextwidgets"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/ktextwidgets-6.30.0.tar.xz"
+sha256 = "b06b11bb727bf9c3578797b1e40daad5f48e10433e456a337f1c40b4082879c8"
+strip_components = 1
+description = "KDE Text editing widgets"
+homepage = "https://invent.kde.org/frameworks/ktextwidgets"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-sonnet", "qt6-speech"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

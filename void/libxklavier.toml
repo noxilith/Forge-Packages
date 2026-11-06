@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libxklavier'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libxklavier"
+version = "5.4"
+archive = "https://people.freedesktop.org/~svu/libxklavier-5.4.tar.bz2"
+sha256 = "17a34194df5cbcd3b7bfd0f561d95d1f723aa1c87fca56bc2c209514460a9320"
+strip_components = 1
+description = "Library providing high-level API for X Keyboard Extension"
+homepage = "https://freedesktop.org/wiki/Software/LibXklavier/"
+license = "LGPL-2.0-or-later"
+deps = ["glib", "iso-codes", "libXi", "libxkbfile", "libxml2", "xkeyboard-config"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

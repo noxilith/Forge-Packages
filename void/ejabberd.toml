@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ejabberd'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: rebar3
+[package]
+name = "ejabberd"
+version = "25.10"
+archive = "https://github.com/processone/ejabberd/archive/25.10.tar.gz"
+sha256 = "f676b71e7dbf143291728bc0247673afb256e75917da89520795c01df1154598"
+strip_components = 1
+description = "Robust and massively scalable XMPP platform"
+homepage = "https://www.process-one.net/en/ejabberd/"
+license = "GPL-2.0-or-later"
+deps = ["erlang", "expat", "gd", "libyaml", "openssl", "pam", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-odbc", "--enable-mysql", "--enable-pgsql", "--enable-pam", "--enable-redis", "--enable-elixir"]
+deps = ["elixir"]

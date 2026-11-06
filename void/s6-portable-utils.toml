@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 's6-portable-utils'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "s6-portable-utils"
+version = "2.3.1.2"
+archive = "https://skarnet.org/software/s6-portable-utils/s6-portable-utils-2.3.1.2.tar.gz"
+sha256 = "cfb90186d0c0eb204e1e5c6f9379e99413c546bccf38bb6e76177f82371aa3aa"
+strip_components = 1
+description = "Tiny portable generic utilities (s6-cat, s6-chmod, etc.)"
+homepage = "https://skarnet.org/software/s6-portable-utils/"
+license = "ISC"
+deps = ["skalibs"]
+
+[build]
+system = "autotools"

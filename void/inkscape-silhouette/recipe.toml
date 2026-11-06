@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'inkscape-silhouette'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: make_build_target
+# needs, but Forge has no recipe for yet: python3-cssselect, python3-libusb1, python3-lxml, python3-matplotlib, python3-numpy, python3-usb, python3-xmltodict, wxPython
+[package]
+name = "inkscape-silhouette"
+version = "1.29"
+archive = "https://github.com/fablabnbg/inkscape-silhouette/archive/refs/tags/v1.29.tar.gz"
+sha256 = "2fbdf9c8fedff331a87eb4d774359094d9d8628e9b5b3de6a68f25287b532f35"
+strip_components = 1
+description = "Inkscape extension to drive Silhouette vinyl cutters"
+homepage = "https://github.com/fablabnbg/inkscape-silhouette"
+license = "GPL-2.0-only"
+deps = ["inkscape"]
+patches = ["patches/udev-install.patch"]
+
+[build]
+system = "make"
+deps = ["gettext"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pass-update'. Review before relying on it.
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: pass
+[package]
+name = "pass-update"
+version = "2.2.1"
+archive = "https://github.com/roddhjav/pass-update/releases/download/v2.2.1/pass-update-2.2.1.tar.gz"
+sha256 = "d0b0e1b561539847a2ee9ad7ea25c08f8d073abd632b634ce0c6bdf0fc6a7249"
+strip_components = 1
+description = "Pass extension providing an easy flow for updating passwords"
+homepage = "https://github.com/roddhjav/pass-update"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"

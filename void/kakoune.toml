@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kakoune'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "kakoune"
+version = "2026.05.21"
+archive = "https://github.com/mawww/kakoune/releases/download/v2026.05.21/kakoune-2026.05.21.tar.bz2"
+sha256 = "be1deb3fe9808a0733ab1057309da380bb757307e8fdbb22dc478b674b6bad34"
+strip_components = 1
+description = "Selection-based vim-like editor with less keystrokes"
+homepage = "https://kakoune.org"
+license = "Unlicense"
+
+[build]
+system = "make"
+tools = ["pkg-config"]

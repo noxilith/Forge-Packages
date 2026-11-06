@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'polari'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool, telepathy-glib
+[package]
+name = "polari"
+version = "50.0"
+archive = "https://download.gnome.org/sources/polari/50/polari-50.0.tar.xz"
+sha256 = "a52896b9264725fd7d5ad08e629d74afa64a34e4f63e73f610b97ced36e567db"
+strip_components = 1
+description = "GNOME IRC client"
+homepage = "https://apps.gnome.org/Polari"
+license = "GPL-2.0-or-later"
+deps = ["gjs", "gtk4", "libadwaita", "libsecret", "telepathy-idle", "telepathy-mission-control", "tinysparql"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk+3"]

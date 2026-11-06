@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'liblcf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "liblcf"
+version = "0.8.1"
+archive = "https://github.com/EasyRPG/liblcf/archive/0.8.1.tar.gz"
+sha256 = "5ec89082d54f1a29d23fed54de70acab4375036d57828ff0fc7a88b81833d40f"
+strip_components = 1
+description = "Library to handle RPG Maker 2000/2003 and EasyRPG projects"
+homepage = "https://github.com/EasyRPG/liblcf"
+license = "MIT"
+deps = ["expat", "inih", "libicu78"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

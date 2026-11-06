@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fcitx5-chewing'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: doxygen, fcitx5, libchewing
+[package]
+name = "fcitx5-chewing"
+version = "5.1.13"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-chewing/fcitx5-chewing-5.1.13.tar.zst"
+sha256 = "83c48a8625d281a906f4b449582e354ce189205f0eee41a4bbca872c0af8e8da"
+strip_components = 1
+description = "Fcitx5 - chewing engine"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "GPL-3.0-or-later"
+deps = ["fmt"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

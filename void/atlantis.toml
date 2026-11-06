@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'atlantis'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "atlantis"
+version = "0.29.0"
+archive = "https://github.com/runatlantis/atlantis/archive/v0.29.0.tar.gz"
+sha256 = "e20ce010449fff88c2e57e3ca5e337a7f8704df7e6b2ac794019c4a720aeb659"
+strip_components = 1
+description = "Terraform Automation By Pull Request"
+homepage = "https://runatlantis.io"
+license = "Apache-2.0"
+
+[build]
+system = "go"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mosh'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: libutempter, ncurses, perl-IO-Tty
+[package]
+name = "mosh"
+version = "1.4.0"
+archive = "https://github.com/mobile-shell/mosh/releases/download/mosh-1.4.0/mosh-1.4.0.tar.gz"
+sha256 = "872e4b134e5df29c8933dff12350785054d2fd2839b5ae6b5587b14db1465ddd"
+strip_components = 1
+description = "Mobile shell, remote terminal application that allows roaming"
+homepage = "https://mosh.org/"
+license = "GPL-3.0-or-later"
+deps = ["openssl", "protobuf"]
+patches = ["patches/cpp17.patch"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]

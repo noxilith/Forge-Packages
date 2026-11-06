@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libupnp'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "libupnp"
+version = "1.14.24"
+archive = "https://github.com/pupnp/pupnp/releases/download/release-1.14.24/libupnp-1.14.24.tar.bz2"
+sha256 = "8dfde05f63e91644e907dcfb7305955ad064b4cf6e5103cb37a7c57c50d1dd11"
+strip_components = 1
+description = "Portable Open Source UPnP Development Kit"
+homepage = "https://pupnp.github.io/pupnp/"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-reuseaddr", "--disable-blocking-tcp-connections"]
+tools = ["pkg-config"]

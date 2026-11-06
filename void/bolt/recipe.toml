@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'bolt'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "bolt"
+version = "0.9.8"
+archive = "https://gitlab.freedesktop.org/bolt/bolt/-/archive/0.9.8/bolt-0.9.8.tar.gz"
+sha256 = "5a4306aa21ee398e1e9f2a5072748c9469c9360bf5edc7dcec2f12fc17be122e"
+strip_components = 1
+description = "Thunderbolt 3 device manager"
+homepage = "https://gitlab.freedesktop.org/bolt/bolt"
+license = "LGPL-2.1-or-later"
+deps = ["eudev", "glib", "polkit"]
+patches = ["patches/gcc14.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dman=true", "-Dsystemd=false"]
+tools = ["pkg-config"]

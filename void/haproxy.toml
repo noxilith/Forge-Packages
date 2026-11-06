@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'haproxy'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: lua54
+[package]
+name = "haproxy"
+version = "3.4.7"
+archive = "https://www.haproxy.org/download/3.4/src/haproxy-3.4.7.tar.gz"
+sha256 = "ccfd342f3724c2cd659574044d788f44e20b212467c6bd5edbbfc517a2775dca"
+strip_components = 1
+description = "Reliable, high performance TCP/HTTP load balancer"
+homepage = "https://www.haproxy.org"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["openssl", "pcre2"]
+
+[build]
+system = "make"

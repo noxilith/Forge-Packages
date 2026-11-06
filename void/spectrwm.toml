@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'spectrwm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, conf_files
+[package]
+name = "spectrwm"
+version = "3.7.0"
+archive = "https://github.com/conformal/spectrwm/archive/SPECTRWM_3_7_0.tar.gz"
+sha256 = "9541ceb713dd186755643a85b03e9ebe98b9703b00025d229ee92a6ba910c805"
+strip_components = 1
+description = "Small dynamic tiling window manager for X11"
+homepage = "http://spectrwm.org"
+license = "ISC"
+deps = ["libXcursor", "libXft", "libXrandr", "libXt", "libbsd", "xcb-util-keysyms", "xcb-util-wm"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

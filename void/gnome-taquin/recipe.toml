@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-taquin'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-taquin"
+version = "3.38.1"
+archive = "https://download.gnome.org/sources/gnome-taquin/3.38/gnome-taquin-3.38.1.tar.xz"
+sha256 = "96db3d8fad497924a7390ad108a3ef72432a1d62d2456cae5e1934057018814f"
+strip_components = 1
+description = "Computer version of the 15-puzzle and other sliding puzzles"
+homepage = "https://wiki.gnome.org/Apps/Taquin"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gsound", "gtk+3", "librsvg"]
+patches = ["patches/meson-0.61.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cronie'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: run-parts
+[package]
+name = "cronie"
+version = "1.7.2"
+archive = "https://github.com/cronie-crond/cronie/releases/download/cronie-1.7.2/cronie-1.7.2.tar.gz"
+sha256 = "f1da374a15ba7605cf378347f96bc8b678d3d7c0765269c8242cfe5b0789c571"
+strip_components = 1
+description = "Runs specified programs at scheduled times"
+homepage = "https://github.com/cronie-crond/cronie"
+license = "BSD-2-Clause"
+deps = ["pam"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-inotify", "--without-selinux", "--with-pam", "--enable-anacron", "--enable-pie", "--enable-relro"]

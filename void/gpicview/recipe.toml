@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gpicview'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gpicview"
+version = "0.3.1"
+archive = "https://github.com/lxde/gpicview/archive/refs/tags/0.3.1.tar.gz"
+sha256 = "b65dd991368ed2b08645a50cb6d4831e21e3c0d0f7d72394d40105ddba754533"
+strip_components = 1
+description = "Simple and Fast Image Viewer for X"
+homepage = "http://lxde.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "libjpeg-turbo"]
+patches = ["patches/0001-fix-segfault-when-using-under-wayland.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

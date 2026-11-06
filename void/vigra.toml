@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'vigra'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost, fftw
+[package]
+name = "vigra"
+version = "1.11.2"
+archive = "https://github.com/ukoethe/vigra/archive/refs/tags/Version-1-11-2.tar.gz"
+sha256 = "4841936f5c3c137611ec782e293d961df29d3b5b70ade8cb711374de0f4cb5d3"
+strip_components = 1
+description = "Image processing and analysis library"
+homepage = "https://ukoethe.github.io/vigra/"
+license = "MIT"
+deps = ["imath", "libjpeg-turbo", "libpng", "openexr", "tiff", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_OPENEXR=1"]

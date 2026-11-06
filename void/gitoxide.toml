@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gitoxide'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "gitoxide"
+version = "0.55.0"
+archive = "https://github.com/GitoxideLabs/gitoxide/archive/refs/tags/v0.55.0.tar.gz"
+sha256 = "7274b65864995a3a889be69c571507345e5c2a748498e7fdcafb9924c1f89eb2"
+strip_components = 1
+description = "Idiomatic, lean, fast and safe pure Rust implementation of Git"
+homepage = "https://github.com/GitoxideLabs/gitoxide"
+license = "Apache-2.0 OR MIT"
+deps = ["curl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features", "max-control,gix-features/zlib,gitoxide-core-tools-query,gitoxide-core-tools-corpus,gitoxide-core-blocking-client,http-client-curl,sha1"]
+tools = ["pkg-config"]

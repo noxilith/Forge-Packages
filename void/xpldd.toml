@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xpldd'. Review before relying on it.
+[package]
+name = "xpldd"
+version = "0.1.1"
+archive = "https://github.com/NattyNarwhal/xpldd/releases/download/0.1.1/xpldd-0.1.1.tar.gz"
+sha256 = "aa37dc1bc42af0221f0f0c0eee0261ae678a9732bf09bf04fbc3ee570aa46220"
+strip_components = 1
+description = "Cross-architecture ldd"
+homepage = "https://github.com/NattyNarwhal/xpldd"
+license = "GPL-3.0-only"
+deps = ["elfutils"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

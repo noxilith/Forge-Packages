@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fping'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "fping"
+version = "5.5"
+archive = "https://fping.org/dist/fping-5.5.tar.gz"
+sha256 = "15c4e32b6c55ff105bafe03e8c91c7ca1b2eda31bf9a7127326bb87887ee18fe"
+strip_components = 1
+description = "High performance ping"
+homepage = "https://fping.org"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ipv4", "--enable-ipv6"]

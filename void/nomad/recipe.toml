@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nomad'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: go_ldflags, go_build_tags, go_import_path, make_dirs
+# needs, but Forge has no recipe for yet: cni-plugins
+[package]
+name = "nomad"
+version = "2.1.1"
+archive = "https://github.com/hashicorp/nomad/archive/v2.1.1.tar.gz"
+sha256 = "127e23c6590d60299f9b20f91f83c52adb8ea071e2029ea3ed6295684ac860f3"
+strip_components = 1
+description = "Cluster scheduler designed to easily integrate into existing workflows"
+homepage = "https://www.nomadproject.io/"
+license = "BUSL-1.1"
+deps = ["dmidecode"]
+patches = ["patches/nomad-sd.patch"]
+
+[build]
+system = "go"

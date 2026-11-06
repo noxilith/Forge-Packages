@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'vinagre'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: avahi-discover, hicolor-icon-theme, intltool, itstool, telepathy-glib
+[package]
+name = "vinagre"
+version = "3.22.0"
+archive = "https://download.gnome.org/sources/vinagre/3.22/vinagre-3.22.0.tar.xz"
+sha256 = "cd1cdbacca25c8d1debf847455155ee798c3e67a20903df8b228d4ece5505e82"
+strip_components = 1
+description = "VNC client for the GNOME desktop"
+homepage = "http://projects.gnome.org/vinagre"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk-vnc", "libsecret", "libxml2", "openssh", "spice-gtk", "vte3"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-schemas-compile", "--enable-compile-warnings=no"]
+tools = ["pkg-config"]
+deps = ["glib"]

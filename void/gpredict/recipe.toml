@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gpredict'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gpredict"
+version = "2.6"
+archive = "https://github.com/csete/gpredict/releases/download/v2.6/gpredict-2.6.tar.bz2"
+sha256 = "f4e6967cb2eeb6d74b8e8208c90dc8f4b1c00955ae1049753ad8352c927e54a3"
+strip_components = 1
+description = "Real-time satellite tracking and orbit prediction application"
+homepage = "http://gpredict.oz9aec.net/"
+license = "GPL-2.0-or-later"
+deps = ["curl", "glib", "goocanvas", "gtk+3"]
+patches = ["patches/gethostbyname-musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

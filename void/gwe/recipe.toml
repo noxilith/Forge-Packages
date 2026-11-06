@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gwe'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-injector, python3-matplotlib, python3-nvml, python3-peewee, python3-requests, python3-rx, python3-xdg, python3-xlib
+[package]
+name = "gwe"
+version = "0.15.5"
+archive = "https://gitlab.com/leinardi/gwe/-/archive/0.15.5/gwe-0.15.5.tar.gz"
+sha256 = "67c30c735b6160c2f4af61ce353108dc9709b6c850ce8bc21d2d2a506dfa3b70"
+strip_components = 1
+description = "Utility for overclocking NVIDIA cards"
+homepage = "https://gitlab.com/leinardi/gwe"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "libayatana-appindicator", "libdazzle", "python3-gobject"]
+patches = ["patches/use-ayatana-appindicator.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["appstream-glib", "glib", "gobject-introspection"]

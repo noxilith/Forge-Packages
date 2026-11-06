@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libmysofa'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libmysofa"
+version = "1.3.2"
+archive = "https://github.com/hoene/libmysofa/archive/v1.3.2.tar.gz"
+sha256 = "6c5224562895977e87698a64cb7031361803d136057bba35ed4979b69ab4ba76"
+strip_components = 1
+description = "Reader for AES SOFA files to get better HRTFs"
+homepage = "https://github.com/hoene/libmysofa"
+license = "BSD-3-Clause"
+deps = ["zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTS=OFF"]
+tools = ["pkg-config"]

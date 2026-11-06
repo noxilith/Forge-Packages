@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'revive'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "revive"
+version = "1.13.0"
+archive = "https://github.com/mgechev/revive/archive/refs/tags/v1.13.0.tar.gz"
+sha256 = "fff05a782f016171a860bfd4341dd58bcb9f6abac099c5b3a0cf29a6e8ce48ac"
+strip_components = 1
+description = "Drop-in replacement for golint"
+homepage = "https://revive.run/"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'kubefwd'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "kubefwd"
+version = "1.25.16"
+archive = "https://github.com/txn2/kubefwd/archive/v1.25.16.tar.gz"
+sha256 = "a7e34e676dbbfaf97eb133e5601167479f668c777b653a86f267810d3729f9ea"
+strip_components = 1
+description = "Bulk port forwarding Kubernetes services for local development"
+homepage = "https://github.com/txn2/kubefwd"
+license = "Apache-2.0"
+
+[build]
+system = "go"

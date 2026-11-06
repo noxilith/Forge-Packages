@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-connections'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-connections"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gnome-connections/48/gnome-connections-48.0.tar.xz"
+sha256 = "370ef940506b5726c6f2b7cb9796b223d1d6d4285f83cfc3385bd674c3289fd0"
+strip_components = 1
+description = "Remote desktop client for the GNOME desktop environment"
+homepage = "https://gitlab.gnome.org/GNOME/connections/"
+license = "GPL-3.0-or-later"
+deps = ["freerdp", "fuse3", "gnutls", "gtk+3", "gtk-vnc", "libgcrypt", "libhandy1", "libsasl", "libsecret"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "vala"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-jis-misc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-jis-misc"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-jis-misc-1.0.4.tar.gz"
+sha256 = "7ab270255b27061003058ccbfc775d0813d17dca7aa8e07bdccb728f1b713984"
+strip_components = 1
+description = "78dpi PCF versions of the Japanese fixed fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

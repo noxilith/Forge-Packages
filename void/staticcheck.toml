@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'staticcheck'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "staticcheck"
+version = "2026.1"
+archive = "https://github.com/dominikh/go-tools/archive/refs/tags/2026.1.tar.gz"
+sha256 = "4b20d65194e5462264c784f2968de65fcd7aba8e9efa37aa9b1fadc13b29699b"
+strip_components = 1
+description = "Advanced Go linter"
+homepage = "https://staticcheck.dev/"
+license = "MIT"
+
+[build]
+system = "go"

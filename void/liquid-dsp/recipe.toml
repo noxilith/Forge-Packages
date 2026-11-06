@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'liquid-dsp'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: fftw
+[package]
+name = "liquid-dsp"
+version = "1.8.3"
+archive = "https://github.com/jgaeddert/liquid-dsp/archive/v1.8.3.tar.gz"
+sha256 = "18fa83b73db8bb6fe6ea0376e4b5aecf8645970f4604d10d9dadbf609f3f95e2"
+strip_components = 1
+description = "Signal processing library for software-defined radios (SDR)"
+homepage = "http://liquidsdr.org/"
+license = "MIT"
+patches = ["patches/fix-portable-typo.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_AUTOTESTS=OFF", "-DBUILD_BENCHMARKS=OFF"]

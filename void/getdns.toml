@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'getdns'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libev
+[package]
+name = "getdns"
+version = "1.7.3"
+archive = "https://getdnsapi.net/dist/getdns-1.7.3.tar.gz"
+sha256 = "f1404ca250f02e37a118aa00cf0ec2cbe11896e060c6d369c6761baea7d55a2c"
+strip_components = 1
+description = "Modern asynchronous DNS API"
+homepage = "https://getdnsapi.net"
+license = "BSD-3-Clause"
+deps = ["check", "libidn2", "libuv", "unbound"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

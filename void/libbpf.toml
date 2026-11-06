@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libbpf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libbpf"
+version = "1.8.0"
+archive = "https://github.com/libbpf/libbpf/archive/refs/tags/v1.8.0.tar.gz"
+sha256 = "b7a1e685f90f6a63ead0dd85d053694b222975da8d09c1a966041cff6f0055ff"
+strip_components = 1
+description = "Library for working with (e)BPF"
+homepage = "https://github.com/libbpf/libbpf"
+license = "LGPL-2.1-only, BSD-2-Clause"
+deps = ["elfutils"]
+
+[build]
+system = "make"
+subdir = "src"
+tools = ["pkg-config"]

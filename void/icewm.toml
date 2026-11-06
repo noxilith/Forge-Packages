@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'icewm'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_install
+# settings not translated: make_cmd, CXXFLAGS
+# needs, but Forge has no recipe for yet: python3-Markdown
+[package]
+name = "icewm"
+version = "4.0.0"
+archive = "https://github.com/ice-wm/icewm/archive/4.0.0.tar.gz"
+sha256 = "9a2eb74449bf4c2b995fd8b85c392dda06f0da684fae34849d8f04466b2e5943"
+strip_components = 1
+description = "Window Manager designed for speed, usability, and consistency"
+homepage = "https://ice-wm.org/"
+license = "GPL-2.0-or-later"
+deps = ["fribidi", "imlib2", "libSM", "libXcomposite", "libXcursor", "libXdamage", "libXft", "libXinerama", "libXpm", "libXrandr", "libao", "librsvg", "libsndfile", "shared-mime-info"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_LTO=ON", "-DCONFIG_LIBRSVG=ON", "-DENABLE_ALSA=ON", "-DCONFIG_XPM=ON", "-DCONFIG_LIBJPEG=ON"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "mkfontscale"]

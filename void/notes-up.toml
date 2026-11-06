@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'notes-up'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: gtkspell3, hicolor-icon-theme, libmarkdown2, libwebkit2gtk41
+[package]
+name = "notes-up"
+version = "2.0.6"
+archive = "https://github.com/Philip-Scott/Notes-up/archive/2.0.6.tar.gz"
+sha256 = "6e7b6ac4a3a917867a1555db0a6e03e40ccd9955b5d76e980a26fa8e40744f07"
+strip_components = 1
+description = "Markdown notes editor & manager"
+homepage = "https://github.com/Philip-Scott/Notes-up"
+license = "GPL-2.0-or-later, BSD-3-Clause"
+deps = ["granite", "gtksourceview4", "libgee"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

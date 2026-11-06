@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'wl-gammarelay-rs'. Review before relying on it.
+[package]
+name = "wl-gammarelay-rs"
+version = "1.0.1"
+archive = "https://github.com/MaxVerevkin/wl-gammarelay-rs/archive/v1.0.1.tar.gz"
+sha256 = "bbd80f7d7c251a1d29534e3c4957f7179e31fdcde706eebb499400fdea9c48af"
+strip_components = 1
+description = "D-Bus interface to control display temperature and brightness on wayland"
+homepage = "https://github.com/MaxVerevkin/wl-gammarelay-rs"
+license = "GPL-3.0-only"
+
+[build]
+system = "cargo"

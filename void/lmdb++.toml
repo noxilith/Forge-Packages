@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'lmdb++'. Review before relying on it.
+# needs, but Forge has no recipe for yet: lmdb
+[package]
+name = "lmdb++"
+version = "1.0.0"
+archive = "https://github.com/hoytech/lmdbxx/archive/1.0.0.tar.gz"
+sha256 = "5e12eb3aefe9050068af7df2c663edabc977ef34c9e7ba7b9d2c43e0ad47d8df"
+strip_components = 1
+description = "C++11 wrapper for the LMDB database library"
+homepage = "https://github.com/hoytech/lmdbxx/"
+license = "Unlicense"
+
+[build]
+system = "make"

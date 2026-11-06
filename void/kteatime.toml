@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kteatime'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kteatime"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kteatime-26.08.1.tar.xz"
+sha256 = "4b047d3c4682b05a12b8e93f8ec2506b5911e31d812d30755ec24c3a7b1b2572"
+strip_components = 1
+description = "Handy timer for steeping tea"
+homepage = "https://apps.kde.org/kteatime/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-knotifications", "kf6-knotifyconfig", "kf6-kstatusnotifieritem", "kf6-ktextwidgets", "kf6-kxmlgui"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools", "qt6-base"]

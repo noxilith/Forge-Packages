@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lxappearance-obconf'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: dbus-glib, intltool, openbox
+[package]
+name = "lxappearance-obconf"
+version = "0.2.4"
+archive = "https://github.com/lxde/lxappearance-obconf/archive/refs/tags/0.2.4.tar.gz"
+sha256 = "202cede4e56d2f93b24dd945fcfa69d4cea62a8deae9bdd6e5d035edfe5c4df9"
+strip_components = 1
+description = "Plugin for LXAppearance to configure Openbox"
+homepage = "http://lxde.org/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "imlib2", "libSM", "libXft", "libxml2", "lxappearance", "pango"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

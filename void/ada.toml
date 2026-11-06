@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ada'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ada"
+version = "3.4.4"
+archive = "https://github.com/ada-url/ada/archive/refs/tags/v3.4.4.tar.gz"
+sha256 = "77bc5bbc383ed098cc60266ad6ee912de2431bb62d89248c0e17c4e712dcdaf9"
+strip_components = 1
+description = "WHATWG-compliant and fast URL parser written"
+homepage = "https://www.ada-url.com/"
+license = "MIT OR Apache-2.0"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

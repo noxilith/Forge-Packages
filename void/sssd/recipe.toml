@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'sssd'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: bind, docbook-xsl, ldb, mit-krb5, python3-setuptools, talloc, tdb, tevent
+[package]
+name = "sssd"
+version = "2.11.1"
+archive = "https://github.com/SSSD/sssd/releases/download/2.11.1/sssd-2.11.1.tar.gz"
+sha256 = "80935c9f0cffde6e74b2751398c8677c90d31644d2474dade2d336c56ab76d35"
+strip_components = 1
+description = "System Security Services Daemon"
+homepage = "https://sssd.io"
+license = "GPL-3.0-or-later"
+deps = ["c-ares", "curl", "ding-libs", "glib", "jansson", "libcap", "libunistring", "nfs-utils", "openldap", "p11-kit", "pam", "popt"]
+patches = ["patches/configure_cross.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-selinux", "--without-semanage", "--without-oidc-child", "--disable-cifs-idmap-plugin", "--without-samba", "--with-os=fedora", "--with-test-dir=/dev/shm", "--with-python3-bindings"]
+tools = ["pkg-config"]
+deps = ["libxslt"]

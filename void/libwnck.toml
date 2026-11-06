@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libwnck'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libwnck"
+version = "43.2"
+archive = "https://download.gnome.org/sources/libwnck/43/libwnck-43.2.tar.xz"
+sha256 = "55a7444ec1fbb95c086d40967388f231b5c0bbc8cffaa086bf9290ae449e51d5"
+strip_components = 1
+description = "Library for layout and rendering of text"
+homepage = "https://gitlab.gnome.org/GNOME/libwnck/"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+3", "libXres", "startup-notification"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gdk-pixbuf", "gettext", "glib"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'songrec'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "songrec"
+version = "0.8.0"
+archive = "https://github.com/marin-m/SongRec/archive/refs/tags/0.8.0.tar.gz"
+sha256 = "abd2cc74a31c8eb63a5d38c2dee24f56dd559b1fd4cab50d82b66a4b9e164eda"
+strip_components = 1
+description = "Open-source Shazam client"
+homepage = "https://github.com/marin-m/SongRec"
+license = "GPL-3.0-only"
+deps = ["alsa-lib", "dbus", "libadwaita", "libsoup3", "openssl", "pipewire", "pulseaudio"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "gettext", "glib", "llvm22"]

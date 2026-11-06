@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kbd'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+[package]
+name = "kbd"
+version = "2.9.0"
+archive = "https://www.kernel.org/pub/linux/utils/kbd/kbd-2.9.0.tar.xz"
+sha256 = "fb3197f17a99eb44d22a3a1a71f755f9622dd963e66acfdea1a45120951b02ed"
+strip_components = 1
+description = "Linux keyboard utilities"
+homepage = "https://www.kbd-project.org/"
+license = "GPL-2.0-or-later"
+deps = ["pam"]
+patches = ["patches/fix-euro-symbol-es-keymap.patch", "patches/kbd-2.0.2-backspace-1.patch"]
+
+[build]
+system = "autotools"
+tools = ["flex", "pkg-config"]
+deps = ["gettext"]

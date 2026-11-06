@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kew'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: ffmpeg6, fftw, freeimage, opusfile
+[package]
+name = "kew"
+version = "4.4.2"
+archive = "https://github.com/ravachol/kew/archive/refs/tags/v4.4.2.tar.gz"
+sha256 = "eca49c08d96bcbc477a1dee26206ff681ffb2fc8f987cf3d1deeb21f9dd95db7"
+strip_components = 1
+description = "Command-line music player"
+homepage = "https://github.com/ravachol/kew"
+license = "GPL-2.0-only"
+deps = ["chafa", "curl", "faad2", "glib", "libnotify", "libogg", "libvorbis", "opus", "taglib"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

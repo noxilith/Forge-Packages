@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fastd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: libmnl
+[package]
+name = "fastd"
+version = "23"
+archive = "https://github.com/NeoRaider/fastd/releases/download/v23/fastd-23.tar.xz"
+sha256 = "dcab54485c79dda22ce6308a2a48764d53977a518952facd1204ba21af1c86e0"
+strip_components = 1
+description = "Fast and Secure Tunneling Daemon"
+homepage = "https://github.com/NeoRaider/fastd"
+license = "BSD-2-Clause AND BSD-3-Clause"
+deps = ["json-c", "libcap", "libsodium", "libuecc", "openssl"]
+patches = ["patches/fix-segfault.patch"]
+
+[build]
+system = "meson"
+tools = ["bison", "pkg-config"]

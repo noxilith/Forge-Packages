@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fuse3'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "fuse3"
+version = "3.18.3"
+archive = "https://github.com/libfuse/libfuse/releases/download/fuse-3.18.3/fuse-3.18.3.tar.gz"
+sha256 = "bcd19582c5e30f7fe45dd86a5540e998590aa01903afc7ebcbeea6c8ac5421ee"
+strip_components = 1
+description = "Filesystem in Userspace 3.x"
+homepage = "https://github.com/libfuse/libfuse"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["eudev"]
+
+[build]
+system = "meson"
+configure_args = ["--sbindir=bin", "-Db_lto=false", "-Dexamples=false", "-Duseroot=false", "-Dtests=false", "-Ddefault_library=both"]
+tools = ["pkg-config"]

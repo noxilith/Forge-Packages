@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kvantum'. Review before relying on it.
+# hooks not translated: post_build, post_configure, post_install
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt5, qt6-svg, qt6-tools
+[package]
+name = "kvantum"
+version = "1.1.8"
+archive = "https://github.com/tsujan/Kvantum/archive/V1.1.8.tar.gz"
+sha256 = "170c0ad369b7f5cc083969f61241498e11721f3da346c750730c2d0c6f3771f5"
+strip_components = 1
+description = "SVG-based theme engine for Qt5/Qt6, KDE and LXQt"
+homepage = "https://github.com/tsujan/Kvantum"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kwindowsystem", "qt6-base"]
+patches = ["patches/lib32.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_QT5=ON"]
+subdir = "Kvantum"

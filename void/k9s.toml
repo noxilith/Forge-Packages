@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'k9s'. Review before relying on it.
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "k9s"
+version = "0.51.0"
+archive = "https://github.com/derailed/k9s/archive/refs/tags/v0.51.0.tar.gz"
+sha256 = "e2c3851c909b87f9cfafa262e426f4a89023ca4e745cba5cab6d0153f76e7dcd"
+strip_components = 1
+description = "Terminal UI to interact with Kubernetes clusters"
+homepage = "https://k9scli.io/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'apl'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: fftw, ncurses, sqlite
+[package]
+name = "apl"
+version = "2.0"
+archive = "https://ftp.gnu.org/gnu/apl/apl-2.0.tar.gz"
+sha256 = "3ca7ca6b58a65416325cca33bdd92fa0106cc4de6c302fa8228b27603f4ff2e8"
+strip_components = 1
+description = "GNU interpreter for APL (A Programming Language)"
+homepage = "http://www.gnu.org/software/apl"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "libxcb", "pcre2"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["CXX_WERROR=no"]
+tools = ["pkg-config"]

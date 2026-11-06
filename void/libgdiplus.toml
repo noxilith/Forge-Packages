@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libgdiplus'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libgdiplus"
+version = "6.2"
+archive = "https://dl.winehq.org/mono/sources/libgdiplus/libgdiplus-6.2.tar.gz"
+sha256 = "683adb7d99d03f6ee7985173a206a2243f76632682334ced4cae2fcd20c83bc9"
+strip_components = 1
+description = "Open Source Implementation of the GDI+ API"
+homepage = "http://www.mono-project.com/"
+license = "MIT"
+deps = ["cairo", "giflib", "glib", "libexif", "libpng", "tiff"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'lxsession'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme, intltool
+[package]
+name = "lxsession"
+version = "0.5.6"
+archive = "https://github.com/lxde/lxsession/archive/refs/tags/0.5.6.tar.gz"
+sha256 = "af469d7ed6edbd733da6ad01a46fef3eff871483db5b3d8ecc3c856dbcbed12f"
+strip_components = 1
+description = "LXDE X11 Session Manager"
+homepage = "http://lxde.org/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "polkit"]
+patches = ["patches/fix-tests.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-buildin-clipboard", "--enable-buildin-polkit", "--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

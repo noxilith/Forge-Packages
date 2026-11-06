@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mate-themes'. Review before relying on it.
+# needs, but Forge has no recipe for yet: icon-naming-utils, itstool
+[package]
+name = "mate-themes"
+version = "3.22.26"
+archive = "https://pub.mate-desktop.org/releases/themes/3.22/mate-themes-3.22.26.tar.xz"
+sha256 = "224e89d364eb3b73f1cf756d05494a98421a93cbf54349a2c85fc607eb755ed7"
+strip_components = 1
+description = "Default themes for the MATE desktop"
+homepage = "https://mate-desktop.org"
+license = "LGPL-2.1-or-later"
+deps = ["librsvg", "mate-icon-theme"]
+
+[build]
+system = "autotools"
+configure_args = ["THEME_ENGINE_CFLAGS=unused", "THEME_ENGINE_LIBS=unused"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lightsoff'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "lightsoff"
+version = "50.0"
+archive = "https://gitlab.gnome.org/GNOME/lightsoff/-/archive/50.0/lightsoff-50.0.tar.gz"
+sha256 = "4c6aa3cd5049942dda6ad3ac880b3cb10268a23d26b782fe9d3ab64182f8ab5c"
+strip_components = 1
+description = "GNOME puzzlle game where you turn off lights"
+homepage = "https://gitlab.gnome.org/GNOME/lightsoff"
+license = "GPL-2.0-or-later"
+deps = ["libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

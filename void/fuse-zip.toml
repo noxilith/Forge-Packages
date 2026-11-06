@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fuse-zip'. Review before relying on it.
+# settings not translated: make_build_target
+[package]
+name = "fuse-zip"
+version = "0.7.2"
+archive = "https://bitbucket.org/agalanin/fuse-zip/get/0.7.2.tar.gz"
+sha256 = "bba004193db9841a8d9a59e927fffe24f1b92f7ad15a5694c687456617b638a2"
+strip_components = 1
+description = "FUSE file system for ZIP archives"
+homepage = "https://bitbucket.org/agalanin/fuse-zip"
+license = "GPL-3.0-or-later"
+deps = ["fuse", "libzip"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

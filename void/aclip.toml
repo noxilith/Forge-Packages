@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'aclip'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: arcan
+[package]
+name = "aclip"
+version = "0.7.1"
+archive = "https://codeberg.org/letoram/arcan/archive/0.7.1.tar.gz"
+sha256 = "b015dba937a5dc3ef525d09d07cd59f8aeeb8173e37a2f514ff5d19f7bc1ed0c"
+strip_components = 1
+description = "Clipboard manager for Arcan"
+homepage = "https://arcan-fe.com/"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+subdir = "src/tools/aclip"

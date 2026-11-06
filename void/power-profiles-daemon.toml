@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'power-profiles-daemon'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs
+[package]
+name = "power-profiles-daemon"
+version = "0.30"
+archive = "https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/archive/0.30/power-profiles-daemon-0.30.tar.gz"
+sha256 = "90f2c95024861d9f4062abedd514084939224e7a49edd468f001af7260ec8e6c"
+strip_components = 1
+description = "Makes power profiles handling available over D-Bus"
+homepage = "https://gitlab.freedesktop.org/upower/power-profiles-daemon"
+license = "GPL-3.0-or-later"
+deps = ["glib", "libgudev", "polkit", "python3-gobject", "upower"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

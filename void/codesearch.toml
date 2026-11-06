@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'codesearch'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "codesearch"
+version = "1.2.0"
+archive = "https://github.com/google/codesearch/archive/v1.2.0.tar.gz"
+sha256 = "0314f4c0a8c2d4a050cd0b0ad95d489d28bef8bada63ea20fdc59e802ac1126e"
+strip_components = 1
+description = "Fast, indexed regexp search over large file trees"
+homepage = "https://github.com/google/codesearch"
+license = "BSD-3-Clause"
+
+[build]
+system = "go"

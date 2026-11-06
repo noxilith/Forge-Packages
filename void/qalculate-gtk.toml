@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qalculate-gtk'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnuplot
+[package]
+name = "qalculate-gtk"
+version = "5.12.0"
+archive = "https://github.com/Qalculate/qalculate-gtk/releases/download/v5.12.0/qalculate-gtk-5.12.0.tar.gz"
+sha256 = "4225eacefc30354f867dc14b7974efe8e8fcef031117def1098db652e1ad48b7"
+strip_components = 1
+description = "Multi-purpose desktop calculator - GTK+ version"
+homepage = "https://qalculate.github.io"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libqalculate"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

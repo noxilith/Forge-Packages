@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'libgweather'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: tzutils
+[package]
+name = "libgweather"
+version = "4.4.4"
+archive = "https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.4.tar.xz"
+sha256 = "7017677753cdf7d1fdc355e4bfcdb1eba8369793a8df24d241427a939cbf4283"
+strip_components = 1
+description = "GNOME Weather information access library"
+homepage = "https://wiki.gnome.org/Projects/LibGWeather"
+license = "LGPL-2.1-or-later"
+deps = ["geocode-glib", "json-glib", "libsoup3", "libxml2"]
+patches = ["patches/a0834413ad51a2e461f9a1aeb813490dc48f2e22.patch", "patches/cross.patch", "patches/vdsa.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "python3-gobject"]

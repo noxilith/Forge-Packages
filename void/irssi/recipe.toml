@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'irssi'. Review before relying on it.
+# hooks not translated: post_configure, pre_configure
+# settings not translated: LDFLAGS, conf_files
+# needs, but Forge has no recipe for yet: ca-certificates, libotr, ncurses, perl
+[package]
+name = "irssi"
+version = "1.4.5"
+archive = "https://github.com/irssi/irssi/releases/download/1.4.5/irssi-1.4.5.tar.gz"
+sha256 = "31653e8e0c5b1ef9b89905c330a0d77fe3f0592f88d163e504c1923dcd28ac47"
+strip_components = 1
+description = "Secure and modular IRC client with text mode user interface"
+homepage = "https://www.irssi.org"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libgcrypt", "openssl"]
+patches = ["patches/perl-5.42.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--with-proxy", "--enable-true-color", "--with-otr", "--with-perl=module"]
+tools = ["perl", "pkg-config"]

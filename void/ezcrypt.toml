@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ezcrypt'. Review before relying on it.
+[package]
+name = "ezcrypt"
+version = "1.4.1"
+archive = "https://codeberg.org/ezcrypt/ezcrypt/archive/v1.4.1.tar.gz"
+sha256 = "c67c012459733e07978c14e8367cffffa849f3efec36eb17d3aba43c5c2934b6"
+strip_components = 1
+description = "Easy to use tool for strong file encryption"
+homepage = "https://codeberg.org/ezcrypt/ezcrypt"
+license = "Unlicense"
+
+[build]
+system = "cmake"
+subdir = "src"

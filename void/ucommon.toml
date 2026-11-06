@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ucommon'. Review before relying on it.
+[package]
+name = "ucommon"
+version = "7.0.0"
+archive = "https://ftp.gnu.org/gnu/commoncpp/ucommon-7.0.0.tar.gz"
+sha256 = "6ac9f76c2af010f97e916e4bae1cece341dc64ca28e3881ff4ddc3bc334060d7"
+strip_components = 1
+description = "Light-weight C++ library to facilitate using C++ design patterns"
+homepage = "http://www.gnu.org/software/commoncpp/"
+license = "LGPL-3.0-or-later"
+deps = ["gnutls"]
+
+[build]
+system = "autotools"

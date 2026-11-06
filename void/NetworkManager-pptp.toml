@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'NetworkManager-pptp'. Review before relying on it.
+[package]
+name = "NetworkManager-pptp"
+version = "1.2.12"
+archive = "https://download.gnome.org/sources/NetworkManager-pptp/1.2/NetworkManager-pptp-1.2.12.tar.xz"
+sha256 = "e5fa59fe46117f0ee86e9ca62c6943bc063884b04dd2396ccec38a2d1f414982"
+strip_components = 1
+description = "NetworkManager VPN plugin for pptp"
+homepage = "https://wiki.gnome.org/Projects/NetworkManager"
+license = "GPL-2.0-or-later"
+deps = ["NetworkManager", "glib", "gtk+3", "gtk4", "libnma", "libsecret", "ppp", "pptpclient"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-gtk4", "--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext", "libxml2"]

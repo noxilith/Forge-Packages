@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libgudev'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libgudev"
+version = "238"
+archive = "https://download.gnome.org/sources/libgudev/238/libgudev-238.tar.xz"
+sha256 = "61266ab1afc9d73dbc60a8b2af73e99d2fdff47d99544d085760e4fa667b5dd1"
+strip_components = 1
+description = "Library providing GObject bindings for libudev"
+homepage = "http://wiki.gnome.org/Projects/libgudev"
+license = "LGPL-2.1-or-later"
+deps = ["eudev", "glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

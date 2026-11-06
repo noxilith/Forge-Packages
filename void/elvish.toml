@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'elvish'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path, LDFLAGS
+[package]
+name = "elvish"
+version = "0.21.0"
+archive = "https://github.com/elves/elvish/archive/v0.21.0.tar.gz"
+sha256 = "3a4b93c3c99fe2f9847de35d64be24e2d4b9c12d429cd9831b4571993a66bb7a"
+strip_components = 1
+description = "Novel Unix shell"
+homepage = "https://elv.sh/"
+license = "BSD-2-Clause"
+
+[build]
+system = "go"

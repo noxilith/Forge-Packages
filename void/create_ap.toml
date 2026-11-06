@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'create_ap'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: dnsmasq, hostapd, iw, util-linux
+[package]
+name = "create_ap"
+version = "0.4.6"
+archive = "https://github.com/oblique/create_ap/archive/v0.4.6.tar.gz"
+sha256 = "fc86c8ed8fce6543adf15587f9b987fd12d711ad4e5762250abe6f9801e2bbb1"
+strip_components = 1
+description = "Script to create a NATed or Bridged WiFi Access Point"
+homepage = "https://github.com/oblique/create_ap"
+license = "BSD-2-Clause"
+deps = ["iproute2", "iptables", "procps-ng"]
+
+[build]
+system = "make"

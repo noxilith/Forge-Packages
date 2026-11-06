@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-solid'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools, util-linux-common
+[package]
+name = "kf6-solid"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/solid-6.30.0.tar.xz"
+sha256 = "bdbfdc9f26b87e12b951097825af2956f2dee3f14c701d780277b69701f2c74e"
+strip_components = 1
+description = "Hardware integration and detection"
+homepage = "https://invent.kde.org/frameworks/solid"
+license = "LGPL-2.1-or-later"
+deps = ["libimobiledevice", "libplist", "media-player-info", "qt6-base", "udisks2", "upower"]
+
+[build]
+system = "cmake"
+tools = ["flex", "pkg-config"]
+deps = ["extra-cmake-modules"]

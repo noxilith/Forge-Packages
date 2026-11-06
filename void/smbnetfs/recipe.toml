@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'smbnetfs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: samba
+[package]
+name = "smbnetfs"
+version = "0.6.3"
+archive = "https://downloads.sourceforge.net/sourceforge/smbnetfs/smbnetfs-0.6.3.tar.bz2"
+sha256 = "eac37b9769fbe9c3f4baf3eb64c61a6b59ad4f2aa05dfddcba5a1ac4adf4d560"
+strip_components = 1
+description = "Fuse filesystem to mount SMB shares"
+homepage = "http://smbnetfs.sourceforge.net"
+license = "GPL-2.0-only"
+deps = ["attr", "fuse", "glib"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

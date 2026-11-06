@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'maildrop'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "maildrop"
+version = "4.0.4"
+archive = "https://downloads.sourceforge.net/sourceforge/courier/maildrop/4.0.4/maildrop-4.0.4.tar.bz2"
+sha256 = "61f3635957124e24dfaab840956a50946dcb2f6e66d8213a102049bbad1ad861"
+strip_components = 1
+description = "Mail delivery agent with filtering abilities"
+homepage = "http://www.courier-mta.org/maildrop/"
+license = "GPL-3.0-only"
+deps = ["courier-unicode", "gdbm", "libidn2", "pcre2"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-maildrop-uid=", "--enable-maildrop-gid=", "--enable-use-dotlock=1", "--enable-use-flock=1", "--with-locking-method=flock"]
+tools = ["pkg-config"]

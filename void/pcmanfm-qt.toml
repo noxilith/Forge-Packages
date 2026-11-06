@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pcmanfm-qt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools, qt6-translations
+[package]
+name = "pcmanfm-qt"
+version = "2.4.1"
+archive = "https://github.com/lxqt/pcmanfm-qt/archive/2.4.1.tar.gz"
+sha256 = "b78d1a677d260e61d55eba76307e9f987f9479b106d0185c5f76832aad0b3de4"
+strip_components = 1
+description = "Qt port of PCManFM"
+homepage = "https://lxqt-project.org"
+license = "GPL-2.0-or-later"
+deps = ["layer-shell-qt", "libexif", "libfm-qt", "lxqt-menu-data", "menu-cache"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "qt6-base"]

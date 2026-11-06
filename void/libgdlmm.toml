@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libgdlmm'. Review before relying on it.
+[package]
+name = "libgdlmm"
+version = "3.7.3"
+archive = "https://download.gnome.org/sources/gdlmm/3.7/gdlmm-3.7.3.tar.xz"
+sha256 = "e280ed9233877b63ad0a0c8fb04d2c35dc6a29b3312151ee21a15b5932fef79b"
+strip_components = 1
+description = "C++ bindings for the gdl library"
+homepage = "https://git.gnome.org/browse/gdlmm"
+license = "LGPL-2"
+deps = ["gdl", "gtk+3", "gtkmm", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

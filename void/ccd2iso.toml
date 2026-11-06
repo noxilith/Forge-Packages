@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'ccd2iso'. Review before relying on it.
+[package]
+name = "ccd2iso"
+version = "0.3"
+archive = "https://downloads.sourceforge.net/sourceforge/ccd2iso/ccd2iso-0.3.tar.gz"
+sha256 = "f874b8fe26112db2cdb016d54a9f69cf286387fbd0c8a55882225f78e20700fc"
+strip_components = 1
+description = "CloneCD image to ISO image file converter"
+homepage = "https://sourceforge.net/projects/ccd2iso"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

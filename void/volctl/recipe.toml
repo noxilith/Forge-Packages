@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'volctl'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "volctl"
+version = "1.0.0"
+archive = "https://github.com/buzz/volctl/archive/v1.0.0.tar.gz"
+sha256 = "b951f533f95ab2dfa7edb491c118c195dc56c10c924c0f9a5c339c8bcd5b83d3"
+strip_components = 1
+description = "Per-application volume control and OSD for Linux desktops"
+homepage = "https://buzz.github.io/volctl/"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gtk4", "gtk4-layer-shell", "pango", "pulseaudio"]
+patches = ["patches/fix-32bit.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

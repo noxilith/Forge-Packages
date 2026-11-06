@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mate-terminal'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "mate-terminal"
+version = "1.28.1"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-terminal-1.28.1.tar.xz"
+sha256 = "f135eb1a9e2ae22798ecb2dc1914fdb4cfd774e6bb65c0152be37cc6c9469e92"
+strip_components = 1
+description = "MATE Terminal Emulator"
+homepage = "https://mate-desktop.org"
+license = "GPL-3.0-or-later"
+deps = ["dbus", "dconf", "glib", "gtk+3", "libICE", "libSM", "mate-desktop", "vte3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "libxml2"]

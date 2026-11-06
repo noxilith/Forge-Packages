@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-screenshot'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool, libcanberra
+[package]
+name = "gnome-screenshot"
+version = "41.0"
+archive = "https://download.gnome.org/sources/gnome-screenshot/41/gnome-screenshot-41.0.tar.xz"
+sha256 = "4adb7dec926428f74263d5796673cf142e4720b6e768f5468a8d0933f98c9597"
+strip_components = 1
+description = "Screenshot capture utility for GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-screenshot"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "libhandy1"]
+patches = ["patches/meson-0.61.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["appstream-glib", "gettext", "glib"]

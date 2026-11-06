@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mbpfan'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "mbpfan"
+version = "2.4.0"
+archive = "https://github.com/linux-on-mac/mbpfan/archive/v2.4.0.tar.gz"
+sha256 = "e1cdcffaba52be215ae40a8568949190866d500d6ae2a1e96b71ab5372f3580b"
+strip_components = 1
+description = "MacBook Pro fan control daemon"
+homepage = "https://github.com/linux-on-mac/mbpfan"
+license = "GPL-3.0-or-later"
+patches = ["patches/fix_paths_and_remove_systemd.patch"]
+
+[build]
+system = "make"

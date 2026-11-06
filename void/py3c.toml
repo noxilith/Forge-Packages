@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'py3c'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "py3c"
+version = "1.4"
+archive = "https://github.com/encukou/py3c/archive/v1.4.tar.gz"
+sha256 = "abc745079ef906148817f4472c3fb4bc41d62a9ea51a746b53e09819494ac006"
+strip_components = 1
+description = "Python 2/3 compatibility layer for C extensions"
+homepage = "https://py3c.readthedocs.io"
+license = "MIT"
+
+[build]
+system = "make"

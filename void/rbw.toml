@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rbw'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "rbw"
+version = "1.15.0"
+archive = "https://github.com/doy/rbw/archive/1.15.0.tar.gz"
+sha256 = "660cfa4c727711665bef060046c28dd3924ca1e490fdc058d90d35372b2d2cf6"
+strip_components = 1
+description = "Unofficial command-line client for Bitwarden"
+homepage = "https://github.com/doy/rbw"
+license = "MIT"
+deps = ["pinentry"]
+
+[build]
+system = "cargo"

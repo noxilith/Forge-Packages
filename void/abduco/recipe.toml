@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'abduco'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "abduco"
+version = "0.6"
+archive = "https://www.brain-dump.org/projects/abduco/abduco-0.6.tar.gz"
+sha256 = "c90909e13fa95770b5afc3b59f311b3d3d2fdfae23f9569fa4f96a3e192a35f4"
+strip_components = 1
+description = "Session management in a clean and simple way"
+homepage = "https://www.brain-dump.org/projects/abduco/"
+license = "ISC"
+patches = ["patches/0001-Use-fixed-size-integer-types-in-protocol-messages.patch", "patches/0002-Fix-length-of-MSG_RESIZE-packet.patch", "patches/0003-Avoid-use-of-BUFSIZ-to-guarantee-system-independent-.patch", "patches/0004-Correct-EOF-handling-on-client-stdin.patch"]
+
+[build]
+system = "make"

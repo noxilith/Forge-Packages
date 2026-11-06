@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gvfs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: avahi-discover, dbus-glib, docbook-xsl, samba
+[package]
+name = "gvfs"
+version = "1.56.1"
+archive = "https://download.gnome.org/sources/gvfs/1.56/gvfs-1.56.1.tar.xz"
+sha256 = "86731ccec679648f8734e237b1de190ebdee6e4c8c0f56f454c31588e509aa10"
+strip_components = 1
+description = "Userspace virtual filesystem"
+homepage = "https://wiki.gnome.org/Projects/gvfs"
+license = "LGPL-2.1-or-later"
+deps = ["bluez", "fuse3", "gcr4", "glib", "gnome-online-accounts", "gsettings-desktop-schemas", "libarchive", "libbluray", "libcap", "libcdio-paranoia", "libgcrypt", "libgphoto2", "libgudev", "libimobiledevice", "libmtp", "libnfs", "libsecret", "libsoup3", "libxml2", "msgraph", "polkit", "udisks2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystemduserunitdir=no", "-Dtmpfilesdir=no", "-Dlogind=false", "-Dman=true", "-Dgoogle=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "libxslt", "openssh"]

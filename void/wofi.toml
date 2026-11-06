@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'wofi'. Review before relying on it.
+[package]
+name = "wofi"
+version = "1.5.3"
+archive = "https://hg.sr.ht/~scoopta/wofi/archive/v1.5.3.tar.gz"
+sha256 = "6216dc14d93cdb6170f89c1ca3aaacdeaa44862fbc9be947d614be266a9c49f6"
+strip_components = 1
+description = "Program launcher for Wayland compositors"
+homepage = "https://hg.sr.ht/~scoopta/wofi"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "wayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

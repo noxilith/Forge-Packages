@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sandboxfs'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "sandboxfs"
+version = "0.2.0"
+archive = "https://github.com/bazelbuild/sandboxfs/archive/sandboxfs-0.2.0.tar.gz"
+sha256 = "bff68e7d33ae56a3f34a79a74b2576599f5ccc381a237bbc10b5a3c3ea106b60"
+strip_components = 1
+description = "Virtual filesystem for sandboxing"
+homepage = "https://github.com/bazelbuild/sandboxfs"
+license = "Apache-2.0"
+deps = ["fuse"]
+patches = ["patches/32bit.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

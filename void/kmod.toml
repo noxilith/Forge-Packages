@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'kmod'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "kmod"
+version = "34.2"
+archive = "https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.2.tar.xz"
+sha256 = "5a5d5073070cc7e0c7a7a3c6ec2a0e1780850c8b47b3e3892226b93ffcb9cb54"
+strip_components = 1
+description = "Linux kernel module handling"
+homepage = "https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["xz", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dopenssl=disabled"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

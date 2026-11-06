@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dolphin'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "dolphin"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/dolphin-26.08.1.tar.xz"
+sha256 = "f5635feff84e7070d35342d6defb46e9b42ff1c44e3896635f4bd9f43da947c1"
+strip_components = 1
+description = "KDE File manager"
+homepage = "https://kde.org/applications/en/system/org.kde.dolphin"
+license = "GPL-2.0-or-later, GFDL-1.2-or-later"
+deps = ["baloo-widgets", "kf6-baloo", "kf6-kbookmarks", "kf6-kcmutils", "kf6-kcompletion", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kfilemetadata", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-knewstuff", "kf6-knotifications", "kf6-kparts", "kf6-ktextwidgets", "kf6-kuserfeedback", "kf6-kwindowsystem", "kf6-solid", "kio-extras", "phonon", "plasma-activities", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext"]

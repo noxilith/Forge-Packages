@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'sddm'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, post_configure, post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: python3-docutils, qt5, qt6-tools
+[package]
+name = "sddm"
+version = "0.21.0"
+archive = "https://github.com/sddm/sddm/archive/v0.21.0.tar.gz"
+sha256 = "f895de2683627e969e4849dbfbbb2b500787481ca5ba0de6d6dfdae5f1549abf"
+strip_components = 1
+description = "QML based X11 display manager"
+homepage = "https://github.com/sddm/sddm"
+license = "GPL-2.0-or-later, CC-BY-3.0"
+deps = ["dbus", "elogind", "pam", "qt6-declarative"]
+patches = ["patches/0.19.0--default-path.patch", "patches/raise-cmake-minimum-version.patch", "patches/remove-consolekit-detection.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_MAN_PAGES=ON", "-DNO_SYSTEMD=ON", "-DUSE_ELOGIND=ON", "-DDBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf", "-DSDDM_INITIAL_VT=7", "-DBUILD_WITH_QT6=ON"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "qt6-base"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'akonadi-contacts'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "akonadi-contacts"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/akonadi-contacts-26.08.1.tar.xz"
+sha256 = "96894e82adff3e0ff84db4e6ed757a62971d4835c785efb353663a76550050e4"
+strip_components = 1
+description = "Libraries and daemons to implement Contact Management in Akonadi"
+homepage = "https://community.kde.org/KDE_PIM/Akonadi"
+license = "LGPL-2.0-or-later, GPL-2.0-or-later"
+deps = ["akonadi-mime", "kf6-grantleetheme", "kf6-kcontacts", "kf6-kio", "kf6-kmime", "kf6-ktexttemplate", "kf6-ktextwidgets", "kf6-prison", "kf6-syntax-highlighting", "ktextaddons", "libkleo"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

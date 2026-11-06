@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xorg-server-xwayland'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "xorg-server-xwayland"
+version = "24.1.13"
+archive = "https://gitlab.freedesktop.org/xorg/xserver/-/archive/xwayland-24.1.13/xserver-xwayland-24.1.13.tar.gz"
+sha256 = "06be8e2e4c5c388428e31adb82bbc6c6a75c7ee9de10bb71b8f602493ae8b4d0"
+strip_components = 1
+description = "Nested X server that runs as a wayland client"
+homepage = "https://xorg.freedesktop.org"
+license = "MIT"
+deps = ["dbus", "font-util", "libXfont2", "libdecor", "libei", "libepoxy", "libtirpc", "libxcb", "libxcvt", "libxkbfile", "libxshmfence", "nettle", "pixman", "wayland", "wayland-protocols", "xorg-server"]
+
+[build]
+system = "meson"
+configure_args = ["-Dipv6=true", "-Dxvfb=false", "-Dxdmcp=false", "-Dxcsecurity=true", "-Ddri3=true", "-Dglamor=true"]
+tools = ["pkg-config"]

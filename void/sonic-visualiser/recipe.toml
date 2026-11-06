@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sonic-visualiser'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack, libfishsound, liboggz, opusfile, portaudio, qt5, speex
+[package]
+name = "sonic-visualiser"
+version = "4.5.2"
+archive = "https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v4.5.2/sonic-visualiser-4.5.2.tar.gz"
+sha256 = "0816e1ba9e3f97af495ece2554186bccad1cf47090ff8a13f1d08322212db487"
+strip_components = 1
+description = "Viewing and analysing the contents of music audio files"
+homepage = "https://www.sonicvisualiser.org/"
+license = "GPL-2.0-or-later"
+deps = ["capnproto", "libid3tag", "liblo", "liblrdf", "libmad", "libsamplerate", "pulseaudio", "rubberband", "sord", "vamp-plugin-sdk"]
+patches = ["patches/musl-timeval-fix.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

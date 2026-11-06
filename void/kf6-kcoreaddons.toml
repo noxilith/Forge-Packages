@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kcoreaddons'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kcoreaddons"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kcoreaddons-6.30.0.tar.xz"
+sha256 = "cc68fe15beb0fca2036cff8742f468c1345406bf99793fffacbf8f2a3f89bc4b"
+strip_components = 1
+description = "KCoreAddons"
+homepage = "https://invent.kde.org/frameworks/kcoreaddons"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QTMETATYPESDIR=lib/qt6/metatypes"]
+deps = ["extra-cmake-modules"]

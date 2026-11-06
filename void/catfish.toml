@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'catfish'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, python3-packaging-bootstrap, python3-pexpect
+[package]
+name = "catfish"
+version = "4.20.1"
+archive = "https://archive.xfce.org/src/apps/catfish/4.20/catfish-4.20.1.tar.xz"
+sha256 = "fe00d45b163cf86b4c85ebdd23a73d53aa55bc97ba3f691a248ec403d4ade62b"
+strip_components = 1
+description = "Versatile file searching tool"
+homepage = "https://docs.xfce.org/apps/catfish/start"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "glib", "gtk+3", "python3-dbus", "python3-gobject", "xfconf"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

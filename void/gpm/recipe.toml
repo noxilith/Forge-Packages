@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gpm'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "gpm"
+version = "1.20.7"
+archive = "https://www.nico.schottelius.org/software/gpm/archives/gpm-1.20.7.tar.lzma"
+sha256 = "a955053b36556ffa7c628ce18fd6de7d625966573fa412fb08869533d8f7385c"
+strip_components = 1
+description = "Mouse server for the console and xterm"
+homepage = "https://www.nico.schottelius.org/software/gpm/"
+license = "GPL-2.0-or-later"
+deps = ["flex"]
+patches = ["patches/musl-gpm_h.patch", "patches/musl-includes.patch", "patches/musl-linux_major_h.patch", "patches/musl-select.patch", "patches/musl-sigaction.patch"]
+
+[build]
+system = "autotools"
+tools = ["flex"]
+deps = ["texinfo"]

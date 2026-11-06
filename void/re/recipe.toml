@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 're'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "re"
+version = "4.11.0"
+archive = "https://github.com/baresip/re/archive/refs/tags/v4.11.0.tar.gz"
+sha256 = "2a8cbf13719618d879464617512a80fe2c13fe63cd5461cf01a195fbe46b3ca4"
+strip_components = 1
+description = "Portable library for real-time communications"
+homepage = "https://github.com/baresip/re/"
+license = "BSD-3-Clause"
+deps = ["openssl", "zlib"]
+patches = ["patches/resolver.diff"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_OPENSSL=yes"]

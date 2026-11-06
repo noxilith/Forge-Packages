@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libmaxminddb'. Review before relying on it.
+[package]
+name = "libmaxminddb"
+version = "1.9.1"
+archive = "https://github.com/maxmind/libmaxminddb/releases/download/1.9.1/libmaxminddb-1.9.1.tar.gz"
+sha256 = "a80682a89d915fdf60b35d316232fb04ebf36fff27fda9bd39fe8a38d3cd3f12"
+strip_components = 1
+description = "C library for the MaxMind DB file format"
+homepage = "https://maxmind.github.io/libmaxminddb/"
+license = "Apache-2.0"
+
+[build]
+system = "autotools"

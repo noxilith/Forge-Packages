@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'speakersafetyd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "speakersafetyd"
+version = "3.0.0"
+archive = "https://github.com/AsahiLinux/speakersafetyd/archive/refs/tags/3.0.0.tar.gz"
+sha256 = "f83319140e5d2d04dc33f3481bc9710d651d1e9f330512e89ee14874f3154ea0"
+strip_components = 1
+description = "Software Smart Amp implementation"
+homepage = "https://github.com/AsahiLinux/speakersafetyd"
+license = "MIT AND GPL-2.0-only"
+deps = ["alsa-lib"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

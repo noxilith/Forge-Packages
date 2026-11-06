@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'isl15'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "isl15"
+version = "0.19"
+archive = "https://downloads.sourceforge.net/sourceforge/libisl/isl-0.19.tar.bz2"
+sha256 = "d59726f34f7852a081fbd3defd1ab2136f174110fc2e0c8d10bb122173fa9ed8"
+strip_components = 1
+description = "Integer Set Library"
+homepage = "https://libisl.sourceforge.io/"
+license = "MIT"
+deps = ["gmp"]
+
+[build]
+system = "autotools"

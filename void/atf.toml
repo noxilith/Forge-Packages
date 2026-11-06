@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'atf'. Review before relying on it.
+# hooks not translated: post_check, post_install
+[package]
+name = "atf"
+version = "0.23"
+archive = "https://github.com/freebsd/atf/releases/download/atf-0.23/atf-0.23.tar.gz"
+sha256 = "a64e2427d021297f25b3f2e1798f8ec4dc3061ffb01a1cd3f66cc4cee486b10f"
+strip_components = 1
+description = "Automated Testing Framework"
+homepage = "https://github.com/freebsd/atf"
+license = "BSD-2-Clause"
+deps = ["gdb", "xmlcatmgr"]
+
+[build]
+system = "autotools"
+configure_args = ["kyua_cv_getopt_plus=yes", "kyua_cv_attribute_noreturn=yes", "kyua_cv_getcwd_works=yes"]

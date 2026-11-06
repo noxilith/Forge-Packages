@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mate-settings-daemon'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, libcanberra, libmatemixer, nss
+[package]
+name = "mate-settings-daemon"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-settings-daemon-1.28.0.tar.xz"
+sha256 = "4ed7cdadaaa4c99efffc0282b8411703bb76e072c41c4b57989f8c5b40611a3a"
+strip_components = 1
+description = "MATE Settings daemon (pulseaudio)"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["at-spi2-core", "dconf", "fontconfig", "libX11", "libXext", "libXi", "libXt", "libmatekbd", "libnotify", "mate-desktop", "polkit", "pulseaudio", "xorgproto"]
+patches = ["patches/delay-autostart.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-schemas-compile", "--enable-polkit", "--enable-pulse"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rest-server'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path, make_dirs, conf_files
+[package]
+name = "rest-server"
+version = "0.14.0"
+archive = "https://github.com/restic/rest-server/archive/v0.14.0.tar.gz"
+sha256 = "8b3f91d561819ba9bce454505958fcca6d61ecd12e10086954ebfc92ba163ba4"
+strip_components = 1
+description = "HTTP server that implements restic's REST backend API"
+homepage = "https://github.com/restic/rest-server"
+license = "BSD-2-Clause"
+
+[build]
+system = "go"

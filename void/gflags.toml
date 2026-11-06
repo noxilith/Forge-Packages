@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gflags'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "gflags"
+version = "2.3.0"
+archive = "https://github.com/gflags/gflags/archive/v2.3.0.tar.gz"
+sha256 = "f619a51371f41c0ad6837b2a98af9d4643b3371015d873887f7e8d3237320b2f"
+strip_components = 1
+description = "C++ library that implements commandline flags processing"
+homepage = "http://gflags.github.io/gflags"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_STATIC_LIBS=ON", "-DBUILD_SHARED_LIBS=ON", "-DBUILD_TESTING=ON"]

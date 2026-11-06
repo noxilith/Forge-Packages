@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libglibutil'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_build_target, make_install_target
+[package]
+name = "libglibutil"
+version = "1.0.83"
+archive = "https://github.com/sailfishos/libglibutil/archive/refs/tags/1.0.83.tar.gz"
+sha256 = "c9f8fda41c7b5eacd30d261b90e2993e4e0179b473444cc647d0730d2d2fa723"
+strip_components = 1
+description = "Library of glib utilities"
+homepage = "https://github.com/sailfishos/libglibutil"
+license = "BSD-3-Clause"
+deps = ["glib"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

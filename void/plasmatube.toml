@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'plasmatube'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg, yt-dlp
+[package]
+name = "plasmatube"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/plasmatube-26.08.1.tar.xz"
+sha256 = "dac36f533e236663fb39478a1a88c22973a59e0e4a838df97da063f0ec814e12"
+strip_components = 1
+description = "Kirigami YouTube video player based on QtMultimedia and mpv"
+homepage = "https://apps.kde.org/plasmatube"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["kf6-kdbusaddons", "kf6-kdeclarative", "kf6-ki18n", "kf6-kirigami", "kf6-kitemmodels", "kf6-knotifications", "kf6-kwindowsystem", "kf6-purpose", "kf6-qqc2-desktop-style", "kirigami-addons", "mpvqt", "qtkeychain-qt6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base", "qt6-declarative"]

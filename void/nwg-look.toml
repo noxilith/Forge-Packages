@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'nwg-look'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "nwg-look"
+version = "1.1.1"
+archive = "https://github.com/nwg-piotr/nwg-look/archive/refs/tags/v1.1.1.tar.gz"
+sha256 = "568c5efe443892d74ffce6cf8ac7db2aea6071be70d97d3ba7c5efd8b351e601"
+strip_components = 1
+description = "GTK settings editor adapted to work in the wlroots environment"
+homepage = "https://github.com/nwg-piotr/nwg-look"
+license = "MIT"
+deps = ["cairo", "glib", "gtk+3", "pango", "xcur2png"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

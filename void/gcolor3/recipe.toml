@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gcolor3'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "gcolor3"
+version = "2.4.0"
+archive = "https://gitlab.gnome.org/World/gcolor3/-/archive/v2.4.0/gcolor3-v2.4.0.tar.gz"
+sha256 = "d6071390a0980fb8eb8418750766c744cf0bca56f24ab4dbe3f23cb1ffd1973d"
+strip_components = 1
+description = "Color selection dialog written in GTK+3"
+homepage = "https://www.hjdskes.nl/projects/gcolor3/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libportal"]
+patches = ["patches/libportal5.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

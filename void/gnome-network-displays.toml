@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-network-displays'. Review before relying on it.
+# needs, but Forge has no recipe for yet: avahi-discover
+[package]
+name = "gnome-network-displays"
+version = "0.99.0"
+archive = "https://download.gnome.org/sources/gnome-network-displays/0.99/gnome-network-displays-0.99.0.tar.xz"
+sha256 = "1ece4a1bc822c7ebf725e8847b8ce8998b47d1ec1715a4b4ddb9ddd71691ed85"
+strip_components = 1
+description = "Screencasting for GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-network-displays"
+license = "GPL-3.0-or-later"
+deps = ["NetworkManager", "gst-rtsp-server", "libadwaita", "libportal", "libsoup3", "protobuf-c", "pulseaudio"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk4"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fsv'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "fsv"
+version = "0.9.1"
+archive = "https://github.com/mcuelenaere/fsv/archive/fsv-0.9-1.tar.gz"
+sha256 = "aede9d231858016d410eb1cc47f5315055eafc259f80a9e82a5846ea2f682d18"
+strip_components = 1
+description = "GTK2 port of fsv, the filesystem visualizer"
+homepage = "http://fsv.sourceforge.net/"
+license = "LGPL-2.1-or-later"
+deps = ["ftgl", "gtkglarea", "gtkmm"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ckmame'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "ckmame"
+version = "1.0"
+archive = "https://github.com/nih-at/ckmame/archive/rel-1-0.tar.gz"
+sha256 = "9fc5dcf1d2dd75351b2cdf43ce10fecda7d97c8c1a8dd0fe1f653229bb316130"
+strip_components = 1
+description = "Program to check ROM sets for MAME"
+homepage = "https://nih.at/ckmame/"
+license = "BSD-3-clause"
+deps = ["libxml2", "libzip"]
+patches = ["patches/gnu_source.patch", "patches/use-mkstemp.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

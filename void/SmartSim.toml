@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'SmartSim'. Review before relying on it.
+[package]
+name = "SmartSim"
+version = "1.4"
+archive = "https://github.com/ashleynewson/SmartSim/archive/v1.4.tar.gz"
+sha256 = "a0b088d69835fc85bb4410d03f8e91cdced90e362e4216797c3bd19ac8484b33"
+strip_components = 1
+description = "Digital logic circuit design and simulation"
+homepage = "http://www.smartsim.org.uk/"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gtk+3", "librsvg"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["tar"]

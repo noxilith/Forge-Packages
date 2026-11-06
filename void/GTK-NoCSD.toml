@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'GTK-NoCSD'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: make_install_args
+[package]
+name = "GTK-NoCSD"
+version = "4.8"
+archive = "https://codeberg.org/MorsMortium/GTK-NoCSD/archive/4.8.tar.gz"
+sha256 = "2be0214c37a57d1e0bcd7d217310c2af1307955710077f41db928fb40d33fa68"
+strip_components = 1
+description = "LD_PRELOAD library to disable CSD in GTK3/4 apps"
+homepage = "https://codeberg.org/MorsMortium/GTK-NoCSD"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "libadwaita"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

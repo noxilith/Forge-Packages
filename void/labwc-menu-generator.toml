@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'labwc-menu-generator'. Review before relying on it.
+[package]
+name = "labwc-menu-generator"
+version = "0.2.0"
+archive = "https://github.com/labwc/labwc-menu-generator/archive/refs/tags/0.2.0.tar.gz"
+sha256 = "5c66b12234aa7d5797a4d3ebbf7011ea29ad7d66b26ff4c250df08700fdc630d"
+strip_components = 1
+description = "Independent menu generator with Openbox 3.6 formatted output"
+homepage = "https://github.com/labwc/labwc-menu-generator"
+license = "GPL-2.0-only"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

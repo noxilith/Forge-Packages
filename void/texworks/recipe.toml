@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'texworks'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: dejavu-fonts-ttf, lua53, qt6-qt5compat, qt6-tools
+[package]
+name = "texworks"
+version = "0.6.10"
+archive = "https://github.com/texworks/texworks/archive/release-0.6.10.tar.gz"
+sha256 = "bbc29d5aba451355222b29dd02ef318fd7fec55a721a61fc6d9cd933a0abd270"
+strip_components = 1
+description = "TeX editor"
+homepage = "https://www.tug.org/texworks"
+license = "GPL-2.0-or-later"
+deps = ["hunspell", "poppler-qt5", "qt6-base", "qt6-declarative"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DTW_BUILD_ID=Void", "-DWITH_LUA=ON", "-DWITH_PYTHON=ON", "-DQT_DEFAULT_MAJOR_VERSION=6"]
+tools = ["pkg-config"]

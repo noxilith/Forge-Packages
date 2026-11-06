@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'm4rie'. Review before relying on it.
+# hooks not translated: pre_check
+[package]
+name = "m4rie"
+version = "20250128"
+archive = "https://github.com/malb/m4rie/releases/download/20250128/m4rie-20250128.tar.gz"
+sha256 = "96f1adafd50e6a0b51dc3aa1cb56cb6c1361ae7c10d97dc35c3fa70822a55bd7"
+strip_components = 1
+description = "Library for fast arithmetic with dense matrices over GF(2^e)"
+homepage = "https://github.com/malb/m4rie"
+license = "GPL-2.0-or-later"
+deps = ["m4ri"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

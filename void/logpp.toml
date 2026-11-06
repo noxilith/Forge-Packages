@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'logpp'. Review before relying on it.
+[package]
+name = "logpp"
+version = "0.16"
+archive = "https://downloads.sourceforge.net/sourceforge/project/logpp/logpp/0.16/logpp-0.16.tar.gz"
+sha256 = "3aaf5488a5190a59084617c4fbadc61f5a08d5a414d8b9d0a211c0a951bcb35b"
+strip_components = 1
+description = "A tool for preprocessing event logs"
+homepage = "http://logpp.sourceforge.net"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

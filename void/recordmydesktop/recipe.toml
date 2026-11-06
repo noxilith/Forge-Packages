@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'recordmydesktop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libtheora
+[package]
+name = "recordmydesktop"
+version = "0.3.8.1"
+archive = "https://downloads.sourceforge.net/sourceforge/recordmydesktop/recordmydesktop-0.3.8.1.tar.gz"
+sha256 = "33a2e208186ae78e2db2a27b0f5047b50fb7819c47fe15483b0765200b9d738c"
+strip_components = 1
+description = "A X11 desktop session recorder"
+homepage = "http://recordmydesktop.sourceforge.net/about.php"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "libSM", "libXdamage", "libXext", "libvorbis", "zlib"]
+patches = ["patches/sane-theora-defaults.patch", "patches/shmstr-to-shmproto.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

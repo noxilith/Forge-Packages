@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dunelegacy'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "dunelegacy"
+version = "0.96.4"
+archive = "https://downloads.sourceforge.net/sourceforge/dunelegacy/dunelegacy/0.96.4/dunelegacy-0.96.4-src.tar.bz2"
+sha256 = "4740df9e94712b34f5d6fa1ca3c24658c4808b40431aa156ed66c318be9f4de8"
+strip_components = 1
+description = "Modern Dune II reimplementation"
+homepage = "http://dunelegacy.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2_mixer"]
+patches = ["patches/sdl2.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-sdltest"]

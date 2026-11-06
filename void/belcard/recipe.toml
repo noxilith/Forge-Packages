@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'belcard'. Review before relying on it.
+[package]
+name = "belcard"
+version = "5.3.106"
+archive = "https://gitlab.linphone.org/BC/public/belcard/-/archive/5.3.106/belcard-5.3.106.tar.gz"
+sha256 = "5ff5339defc6a91fc756511f1b5266373354d03538b537be3ca6f696c96989c6"
+strip_components = 1
+description = "C++ library to manipulate VCard standard format"
+homepage = "https://linphone.org"
+license = "GPL-3.0-or-later"
+deps = ["bctoolbox", "belr"]
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=TRUE", "-DENABLE_UNIT_TESTS=FALSE"]

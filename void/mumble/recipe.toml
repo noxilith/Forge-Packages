@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'mumble'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_cmd, LDFLAGS
+# needs, but Forge has no recipe for yet: Ice, avahi, boost, mesa, qt5, speex
+[package]
+name = "mumble"
+version = "1.5.939"
+archive = "https://github.com/mumble-voip/mumble/releases/download/v1.5.939/mumble-1.5.939.tar.gz"
+sha256 = "da181098ab062a44ab7f2b65ab2b65926898ebca5d8c665ca2ce50d38cd11414"
+strip_components = 1
+description = "Open source, low-latency, high quality voice chat"
+homepage = "https://mumble.info"
+license = "BSD-3-Clause"
+deps = ["desktop-file-utils", "libcap", "libsndfile", "openssl", "opus", "poco", "protobuf", "pulseaudio", "speech-dispatcher"]
+patches = ["patches/link-overlay-against-libGL.patch", "patches/musl-basename.patch", "patches/struct-padding.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-Doverlay-xcompile=OFF", "-DCMAKE_CXX_STANDARD=17", "-Dbundled-speex=OFF", "-Dupdate=OFF", "-Dbundle-qt-translations=OFF", "-Dwarnings-as-errors=OFF"]
+tools = ["pkg-config"]
+deps = ["which"]

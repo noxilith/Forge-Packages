@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'zcfan'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "zcfan"
+version = "1.4.0"
+archive = "https://github.com/cdown/zcfan/archive/refs/tags/1.4.0.tar.gz"
+sha256 = "33e4944303c778581b6471c79e1273a5668917542e412c8125f028133b684718"
+strip_components = 1
+description = "Zero-configuration fan control for ThinkPad"
+homepage = "https://github.com/cdown/zcfan"
+license = "MIT"
+
+[build]
+system = "make"

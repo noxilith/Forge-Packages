@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'nlopt'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "nlopt"
+version = "2.10.0"
+archive = "https://github.com/stevengj/nlopt/archive/v2.10.0.tar.gz"
+sha256 = "506f83a9e778ad4f204446e99509cb2bdf5539de8beccc260a014bd560237be1"
+strip_components = 1
+description = "FOSS library for nonlinear optimization"
+homepage = "https://nlopt.readthedocs.io"
+license = "MIT"
+
+[build]
+system = "cmake"

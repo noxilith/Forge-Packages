@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'bzmenu'. Review before relying on it.
+[package]
+name = "bzmenu"
+version = "0.4.0"
+archive = "https://github.com/e-tho/bzmenu/archive/refs/tags/v0.4.0.tar.gz"
+sha256 = "d38db4f9d530126ab7d0fc4487f25b2da0b3b7e17ffc2635e92151d9f4a4253f"
+strip_components = 1
+description = "Launcher-driven Bluetooth manager for Linux"
+homepage = "https://github.com/e-tho/bzmenu"
+license = "GPL-3.0-or-later"
+deps = ["bluez", "dbus"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

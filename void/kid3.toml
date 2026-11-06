@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kid3'. Review before relying on it.
+# 8 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: docbook-xsl, hicolor-icon-theme, libreadline8, qt6-multimedia, qt6-tools
+[package]
+name = "kid3"
+version = "3.10.0"
+archive = "https://downloads.sourceforge.net/sourceforge/kid3/kid3-3.10.0.tar.gz"
+sha256 = "e6c21e40bbd9336d15e81b4ff8c4f730bcdfd6f7f000b903ad352d78388558d5"
+strip_components = 1
+description = "MP3, Ogg/Vorbis and FLAC tag editor"
+homepage = "https://kid3.kde.org"
+license = "GPL-2.0-only"
+deps = ["desktop-file-utils", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_WITH_QT6=ON"]
+tools = ["pkg-config"]
+deps = ["libxslt", "qt6-base"]

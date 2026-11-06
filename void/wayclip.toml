@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'wayclip'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wayclip"
+version = "0.5"
+archive = "https://git.sr.ht/~noocsharp/wayclip/archive/0.5.tar.gz"
+sha256 = "a73a6f59bf974f5ad5eafe5ce16921083fca05b5b1ddc979023c082be8dc23e6"
+strip_components = 1
+description = "Wayland clipboard utility"
+homepage = "https://git.sr.ht/~noocsharp/wayclip"
+license = "ISC"
+deps = ["wayland"]
+
+[build]
+system = "make"

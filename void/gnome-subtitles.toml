@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-subtitles'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gtkspell3, intltool
+[package]
+name = "gnome-subtitles"
+version = "1.7.2"
+archive = "https://downloads.sourceforge.net/sourceforge/gnome-subtitles/gnome-subtitles-1.7.2.tar.gz"
+sha256 = "b6bf327998a7863335d9fb4281d18e0e73f3c4f55f56ba06554df859b31804c7"
+strip_components = 1
+description = "Video subtitle editor for GNOME"
+homepage = "http://www.gnomesubtitles.org/"
+license = "GPL-2.0-or-later"
+deps = ["gst-libav", "gst-plugins-base1", "gtk+3", "gtk-sharp", "mono"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-schemas-compile"]
+tools = ["pkg-config"]
+deps = ["glib", "yelp-tools"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tklib'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: tk
+[package]
+name = "tklib"
+version = "0.7"
+archive = "https://github.com/tcltk/tklib/archive/tklib-0.7.tar.gz"
+sha256 = "93890db81a5b0cdb62c386265ec4fcdaab60824e8e6e882c7fecc69ff49afc66"
+strip_components = 1
+description = "Companion to Tcllib, for Tk related packages"
+homepage = "https://core.tcl-lang.org/tklib/home"
+license = "TCL"
+deps = ["tcllib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xkill'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xkill"
+version = "1.0.7"
+archive = "https://www.x.org/releases/individual/app/xkill-1.0.7.tar.xz"
+sha256 = "5ff264bc4eebc0459255a92036dc8dc84b6d48caef8509f88a783beaadea750b"
+strip_components = 1
+description = "Kill a client by its X resource"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11", "libXmu"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

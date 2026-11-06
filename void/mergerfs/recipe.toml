@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mergerfs'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_target
+[package]
+name = "mergerfs"
+version = "2.41.1"
+archive = "https://github.com/trapexit/mergerfs/archive/refs/tags/2.41.1.tar.gz"
+sha256 = "033dd23bef6c87dd7be8776a2ece6f20120cd3ece1feb1fbad6ba54785854aba"
+strip_components = 1
+description = "FUSE union filesystem"
+homepage = "https://github.com/trapexit/mergerfs"
+license = "ISC"
+deps = ["fuse"]
+patches = ["patches/0001-install_fix.patch", "patches/0002-musl1.1-fix.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["which"]

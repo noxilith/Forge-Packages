@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'u2f-hidraw-policy'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "u2f-hidraw-policy"
+version = "1.0.2"
+archive = "https://github.com/amluto/u2f-hidraw-policy/archive/1.0.2.tar.gz"
+sha256 = "50e327a9df3dd3db3b292af41fb119cc4c8d9bc29abddfb442e972053bf5e6d1"
+strip_components = 1
+description = "Udev helper and rule to identify U2F tokens"
+homepage = "https://github.com/amluto/u2f-hidraw-policy"
+license = "LGPL-2.0-or-later"
+deps = ["eudev"]
+patches = ["patches/Makefile.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

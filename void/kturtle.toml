@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kturtle'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-qt5compat, qt6-svg, qt6-tools
+[package]
+name = "kturtle"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kturtle-26.08.1.tar.xz"
+sha256 = "07be25f8754521ddb0d14510133cc0e82227b7a3d659abdc05b2268121df5e1c"
+strip_components = 1
+description = "Educational Programming Environment"
+homepage = "https://www.kde.org/applications/education/kturtle/"
+license = "GPL-2.0-or-later, GFDL-1.2-only"
+deps = ["kf6-kcoreaddons", "kf6-kcrash", "kf6-ki18n", "kf6-kio", "kf6-knewstuff", "kf6-ktextwidgets", "kf6-kxmlgui"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kdoctools", "qt6-base"]

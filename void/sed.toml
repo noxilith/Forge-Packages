@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sed'. Review before relying on it.
+# hooks not translated: post_extract
+[package]
+name = "sed"
+version = "4.10"
+archive = "https://ftp.gnu.org/gnu/sed/sed-4.10.tar.xz"
+sha256 = "b8e72182b2ec96a3574e2998c47b7aaa64cc20ce000d8e9ac313cc07cecf28c7"
+strip_components = 1
+description = "GNU stream editor"
+homepage = "https://www.gnu.org/software/sed"
+license = "GPL-3.0-or-later"
+deps = ["acl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-acl", "gl_cv_func_working_acl_get_file=yes"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'hamlib'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libreadline8, perl, tcl
+[package]
+name = "hamlib"
+version = "4.7.2"
+archive = "https://github.com/Hamlib/Hamlib/releases/download/4.7.2/hamlib-4.7.2.tar.gz"
+sha256 = "ae1fcf2dbc80ea0786ea8f047b09399c3f7737d1930442f61a031708ed33e88f"
+strip_components = 1
+description = "Library to control radio transceivers and receivers"
+homepage = "https://hamlib.github.io"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["gettext", "libusb", "libxml2"]
+patches = ["patches/fix-cross-perl.patch", "patches/unknown-type.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--with-perl-binding", "--with-python-binding", "--with-tcl-binding", "--with-xml-support"]
+tools = ["pkg-config"]
+deps = ["swig"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'GraphicsMagick'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2, ghostscript, libwebp, perl
+[package]
+name = "GraphicsMagick"
+version = "1.3.47"
+archive = "https://downloads.sourceforge.net/sourceforge/graphicsmagick/graphicsmagick/1.3.47/GraphicsMagick-1.3.47.tar.xz"
+sha256 = "95fb682dab0206a9db168d065963f4ffdf5a60b0b2a375aca1f4492fb18d0627"
+strip_components = 1
+description = "GraphicsMagick Image Processing System"
+homepage = "http://www.graphicsmagick.org/"
+license = "MIT"
+deps = ["fontconfig", "freetype", "lcms2", "libICE", "libSM", "libX11", "libXext", "libXt", "libjpeg-turbo", "libpng", "libwmf", "libxml2", "tiff", "xz", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-quantum-depth=16", "--with-modules", "--with-perl", "--without-jp2", "--enable-shared", "--disable-static"]
+tools = ["perl", "pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xob'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "xob"
+version = "0.3"
+archive = "https://github.com/florentc/xob/archive/v0.3.tar.gz"
+sha256 = "ab96717cff59cd0d3b42cbbc293cbd12f94d975584c47111717607779c155122"
+strip_components = 1
+description = "Lightweight overlay bar for the X Window System"
+homepage = "https://github.com/florentc/xob"
+license = "GPL-3.0-or-later"
+deps = ["libX11", "libXrender", "libconfig"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

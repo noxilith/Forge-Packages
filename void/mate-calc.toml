@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mate-calc'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool, mpfr
+[package]
+name = "mate-calc"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-calc-1.28.0.tar.xz"
+sha256 = "804b125d1e2864b1e74af816da9b2ab8b19472b9af974437ee7355ada5e628f5"
+strip_components = 1
+description = "MATE Calculator"
+homepage = "https://mate-desktop.org/"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "libmpc", "libxml2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

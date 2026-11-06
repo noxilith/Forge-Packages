@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'openbsd-file'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "openbsd-file"
+version = "6.2"
+archive = "https://github.com/brynet/file/archive/v6.2.tar.gz"
+sha256 = "f6bf601f513bd83038e343bbd93b7982f373669a2ffa76dc52d48fa7251515b2"
+strip_components = 1
+description = "Portable version of OpenBSD's privsep/sandboxed file(1) utility"
+homepage = "https://github.com/brynet/file/"
+license = "ISC"
+patches = ["patches/glibc.patch", "patches/musl.patch", "patches/no-x86-seccomp.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--program-prefix=openbsd-"]

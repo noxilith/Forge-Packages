@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'rdd'. Review before relying on it.
+[package]
+name = "rdd"
+version = "0.9"
+archive = "https://github.com/leahneukirchen/rdd/archive/v0.9.tar.gz"
+sha256 = "380a85cca133f9f87628408b71c90bfcad78c01981d862764004d168d406baf5"
+strip_components = 1
+description = "Random data dump"
+homepage = "https://github.com/leahneukirchen/rdd"
+license = "Public Domain"
+
+[build]
+system = "make"

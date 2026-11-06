@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'redland'. Review before relying on it.
+# needs, but Forge has no recipe for yet: db, sqlite
+[package]
+name = "redland"
+version = "1.0.17"
+archive = "https://librdf.org/dist/source/redland-1.0.17.tar.gz"
+sha256 = "de1847f7b59021c16bdc72abb4d8e2d9187cd6124d69156f3326dd34ee043681"
+strip_components = 1
+description = "Redland Resource Description Framework (RDF) - Utilities"
+homepage = "https://librdf.org"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later, Apache-2.0"
+deps = ["mariadb", "postgresql18", "rasqal", "unixodbc"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-release", "--with-raptor=system", "--with-rasqal=system", "--with-sqlite=3"]
+tools = ["perl", "pkg-config"]

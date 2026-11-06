@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'openssl'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build, pre_configure
+# settings not translated: make_build_args, make_install_args, make_cmd, CFLAGS, configure_script, conf_files
+[package]
+name = "openssl"
+version = "3.6.5"
+archive = "https://github.com/openssl/openssl/releases/download/openssl-3.6.5/openssl-3.6.5.tar.gz"
+sha256 = "a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98"
+strip_components = 1
+description = "Toolkit for Secure Sockets Layer and Transport Layer Security"
+homepage = "https://openssl-library.org"
+license = "Apache-2.0"
+
+[build]
+system = "autotools"
+configure_args = ["--libdir=lib", "shared", "enable-ktls", "-Wa,--noexecstack"]

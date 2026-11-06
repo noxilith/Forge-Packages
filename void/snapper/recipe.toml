@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'snapper'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: boost, docbook-xsl, ncurses, util-linux-common
+[package]
+name = "snapper"
+version = "0.13.1"
+archive = "https://github.com/openSUSE/snapper/archive/v0.13.1.tar.gz"
+sha256 = "a689ff510663eaf186df33e9a46153b4a56dc1f18a0ca505335ed2dcc9b2d4e0"
+strip_components = 1
+description = "Tool for Linux filesystem snapshot management"
+homepage = "http://snapper.io"
+license = "GPL-2.0-only"
+deps = ["acl", "btrfs-progs", "dbus", "json-c", "libxml2", "pam"]
+patches = ["patches/0001-disable-locale-tests.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-zypp", "--disable-systemd"]
+tools = ["pkg-config"]
+deps = ["gettext", "libxslt"]

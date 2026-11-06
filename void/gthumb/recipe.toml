@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gthumb'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: itstool, libwebp
+[package]
+name = "gthumb"
+version = "3.12.8.2"
+archive = "https://download.gnome.org/sources/gthumb/3.12/gthumb-3.12.8.2.tar.xz"
+sha256 = "abc57b1103165dd691535796f7dbdba7686217c7d069e974ed0f3d800fe88796"
+strip_components = 1
+description = "Image viewer and browser for the GNOME Desktop"
+homepage = "https://wiki.gnome.org/action/show/Apps/Gthumb"
+license = "GPL-2.0-or-later"
+deps = ["colord", "exiv2", "gsettings-desktop-schemas", "gtk+3", "json-glib", "libchamplain", "libheif", "libraw", "librsvg", "libsecret"]
+patches = ["patches/build-order.patch", "patches/cross-x11-check.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dlibchamplain=true"]
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib"]

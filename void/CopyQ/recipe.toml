@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'CopyQ'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "CopyQ"
+version = "13.0.0"
+archive = "https://github.com/hluk/CopyQ/archive/v13.0.0.tar.gz"
+sha256 = "c7e0c9aa95b5653dee547f168d58cf5aae4f66ad5f94856a61741ebe9527ad72"
+strip_components = 1
+description = "Clipboard manager with searchable and editable history"
+homepage = "https://hluk.github.io/CopyQ/"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kguiaddons", "kf6-knotifications", "kf6-kstatusnotifieritem", "libX11", "qt6-base", "qt6-declarative", "wayland"]
+patches = ["patches/qt610.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_QT6=ON"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mousepad'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "mousepad"
+version = "0.7.0"
+archive = "https://archive.xfce.org/src/apps/mousepad/0.7/mousepad-0.7.0.tar.xz"
+sha256 = "e86c59feb08126d4cace368432c16b2dee8e519aaca8a9d2b409ae1cdd200802"
+strip_components = 1
+description = "Simple text editor for Xfce based on Leafpad"
+homepage = "https://xfce.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gspell", "gtksourceview4", "libxfce4ui", "polkit"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

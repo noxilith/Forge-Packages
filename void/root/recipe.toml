@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'root'. Review before relying on it.
+# 10 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: R-cran-RInside, R-cran-Rcpp, libreadline8, python3-numpy, xrootd, zstd
+[package]
+name = "root"
+version = "6.30.06"
+archive = "https://root.cern/download/root_v6.30.06.source.tar.gz"
+sha256 = "300db7ed1b678ed2fb9635ca675921a1945c7c2103da840033b493091f55700c"
+strip_components = 1
+description = "C++ framework for data processing created by CERN"
+homepage = "https://root.cern"
+license = "LGPL-2.1-or-later"
+deps = ["gtest", "libX11", "libXext", "libXft", "libXpm", "libpng", "libvdt", "libxml2", "lz4", "openssl", "pcre", "tbb", "xxHash", "xz"]
+patches = ["patches/lseek-fix.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-Dgnuinstall=ON", "-Druntime_cxxmodules=OFF", "-Dclad=OFF", "-Dr=ON", "-DCMAKE_INSTALL_SYSCONFDIR=libexec/root", "-Dbuiltin_gtest=OFF"]

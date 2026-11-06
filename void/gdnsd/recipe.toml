@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gdnsd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: libev
+[package]
+name = "gdnsd"
+version = "3.8.3"
+archive = "https://github.com/gdnsd/gdnsd/releases/download/v3.8.3/gdnsd-3.8.3.tar.xz"
+sha256 = "16a81836273dcbc17e5527df2214e8664d0545bb18b55f08325710de10c8f64d"
+strip_components = 1
+description = "Authoritative-only DNS server with geographic plugins"
+homepage = "https://gdnsd.org/"
+license = "GPL-3.0-or-later"
+deps = ["libmaxminddb", "libsodium", "libunwind", "liburcu"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-silent-rules"]
+tools = ["pkg-config"]

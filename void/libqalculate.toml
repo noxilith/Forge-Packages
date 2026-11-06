@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libqalculate'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen, libreadline8, mpfr
+[package]
+name = "libqalculate"
+version = "5.12.0"
+archive = "https://github.com/Qalculate/libqalculate/releases/download/v5.12.0/libqalculate-5.12.0.tar.gz"
+sha256 = "f3dfdcf97d5a9e3a5bc0ebe66afd184721b606276eee3ba0ada8c92a5e71d44c"
+strip_components = 1
+description = "Multi-purpose desktop calculator library"
+homepage = "https://qalculate.github.io"
+license = "GPL-2.0-or-later"
+deps = ["cln", "curl", "libicu78", "libxml2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

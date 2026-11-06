@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'SDL3_mixer'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: fluidsynth, opusfile
+[package]
+name = "SDL3_mixer"
+version = "3.2.4"
+archive = "https://www.libsdl.org/projects/SDL_mixer/release/SDL3_mixer-3.2.4.tar.gz"
+sha256 = "182a07c745375e113dc740d43964ff21b0be29f29f59876c4dbc4db3d32f6901"
+strip_components = 1
+description = "Multi-channel audio mixer library (SDL 3.x)"
+homepage = "https://github.com/libsdl-org/SDL_mixer"
+license = "Zlib"
+deps = ["SDL3", "flac", "libgme", "libvorbis", "libxmp", "mpg123", "wavpack"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSDLMIXER_VENDORED=OFF", "-DSDLMIXER_DEPS_SHARED=ON", "-DSDLMIXER_TESTS=OFF", "-DSDLMIXER_EXAMPLES=OFF", "-DSDLMIXER_STRICT=ON"]
+tools = ["pkg-config"]

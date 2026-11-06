@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'stlink'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "stlink"
+version = "1.8.0"
+archive = "https://github.com/stlink-org/stlink/archive/v1.8.0.tar.gz"
+sha256 = "cff760b5c212c2cc480f705b9ca7f3828d6b9c267950c6a547002cd0a1f5f6ac"
+strip_components = 1
+description = "Firmware programmer for STM32 STLINK v1/v2/v3 protocol"
+homepage = "https://github.com/stlink-org/stlink"
+license = "BSD-3-Clause"
+deps = ["gtk+3", "libusb"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

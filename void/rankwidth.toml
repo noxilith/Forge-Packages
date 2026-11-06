@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rankwidth'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rankwidth"
+version = "0.10"
+archive = "https://downloads.sourceforge.net/sourceforge/rankwidth/rw-0.10.tar.gz"
+sha256 = "89a8ed364893ac1b70ab70a152e3e7db3cf348bb69098aa6dbb969639df927db"
+strip_components = 1
+description = "Calculates rank-width and rank-decompositions"
+homepage = "https://sourceforge.net/projects/rankwidth/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-executable"]

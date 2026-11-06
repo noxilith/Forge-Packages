@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libpodofo0.9.7'. Review before relying on it.
+# needs, but Forge has no recipe for yet: lua53
+[package]
+name = "libpodofo0.9.7"
+version = "0.9.7"
+archive = "https://github.com/podofo/podofo/archive/refs/tags/0.9.7.tar.gz"
+sha256 = "42d7eaa3c8ffabf001121447830343c4362e562d0f12192b033a393f334a64a6"
+strip_components = 1
+description = "Library to work with the PDF file format"
+homepage = "https://github.com/podofo/podofo"
+license = "LGPL-2.1-or-later"
+deps = ["fontconfig", "libidn", "openssl", "tiff"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPODOFO_BUILD_SHARED=TRUE", "-DPODOFO_BUILD_LIB_ONLY=TRUE"]
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'wasm-component-ld'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wasm-component-ld"
+version = "0.5.30"
+archive = "https://github.com/bytecodealliance/wasm-component-ld/archive/refs/tags/v0.5.30.tar.gz"
+sha256 = "d5e9b986da0807b3059c32cf56690933b93ef910226ebb08ceb434397446fd0f"
+strip_components = 1
+description = "Command line linker for creating WebAssembly components"
+homepage = "https://github.com/bytecodealliance/wasm-component-ld"
+license = "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT"
+
+[build]
+system = "cargo"

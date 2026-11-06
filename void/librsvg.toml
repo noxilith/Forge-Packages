@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'librsvg'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: cargo-c, gi-docgen, python3-docutils
+[package]
+name = "librsvg"
+version = "2.59.2"
+archive = "https://download.gnome.org/sources/librsvg/2.59/librsvg-2.59.2.tar.xz"
+sha256 = "ecd293fb0cc338c170171bbc7bcfbea6725d041c95f31385dc935409933e4597"
+strip_components = 1
+description = "SVG library for GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/librsvg"
+license = "LGPL-2.1-or-later"
+deps = ["cairo", "dav1d", "freetype", "gdk-pixbuf", "glib", "libcroco", "libxml2", "pango", "vala"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

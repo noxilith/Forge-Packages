@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'diffr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "diffr"
+version = "0.1.5"
+archive = "https://github.com/mookid/diffr/archive/v0.1.5.tar.gz"
+sha256 = "6c5861e5b8f5d798e027fe69cc186452848dc4ae5641326b41b5c160d3e91654"
+strip_components = 1
+description = "Yet another diff highlighting tool"
+homepage = "https://github.com/mookid/diffr"
+license = "MIT"
+
+[build]
+system = "cargo"

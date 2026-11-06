@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'seahorse-nautilus'. Review before relying on it.
+# settings not translated: lib32disabled
+[package]
+name = "seahorse-nautilus"
+version = "3.11.92.2022.10.9"
+archive = "https://gitlab.gnome.org/GNOME/seahorse-nautilus/-/archive/0fd324c191565bff76ca45a01b2da14b4ab7b3bd/seahorse-nautilus-0fd324c191565bff76ca45a01b2da14b4ab7b3bd.tar.gz"
+sha256 = "8f82b1ffef1a38e1b6d40fb463428037e881ff1e5c88292b24afd436ba6740af"
+strip_components = 1
+description = "Nautilus plugin for OpenPGP file encryption/decryption"
+homepage = "http://www.gnome.org/projects/seahorse/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gcr", "gnupg", "gpgme", "gtk+3", "libcryptui", "libnotify", "nautilus"]
+patches = ["patches/gnupg-version.patch", "patches/gpgme-2.0.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

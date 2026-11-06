@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'git-sizer'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "git-sizer"
+version = "1.5.0"
+archive = "https://github.com/github/git-sizer/archive/refs/tags/v1.5.0.tar.gz"
+sha256 = "07a5ac5f30401a17d164a6be8d52d3d474ee9c3fb7f60fd83a617af9f7e902bb"
+strip_components = 1
+description = "Compute various size metrics for a Git repository"
+homepage = "https://github.com/github/git-sizer"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xwininfo'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xwininfo"
+version = "1.1.7"
+archive = "https://www.x.org/releases/individual/app/xwininfo-1.1.7.tar.xz"
+sha256 = "bee14d594cc86cc59aae1015c1b452a71bf60c304131e2716ca1cf0df733b4ac"
+strip_components = 1
+description = "Query information about X windows"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

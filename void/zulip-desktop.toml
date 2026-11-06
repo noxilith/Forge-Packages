@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zulip-desktop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "zulip-desktop"
+version = "0.5.1"
+archive = "https://github.com/zulip/zulip-desktop-legacy/archive/0.5.1.tar.gz"
+sha256 = "2475e5298b7df29c7ee8585da7189f4af8dda279e5e1d6e26c8f3fa08ce31ae5"
+strip_components = 1
+description = "Workplace chat that improves your productivity"
+homepage = "https://www.zulip.org/"
+license = "Apache-2.0"
+deps = ["phonon", "qt5-webkit"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_WITH_QT5=On"]

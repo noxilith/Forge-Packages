@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'efitools'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: gnu-efi-libs, perl-File-Slurp
+[package]
+name = "efitools"
+version = "1.9.2"
+archive = "https://git.kernel.org/pub/scm/linux/kernel/git/jejb/efitools.git/snapshot/efitools-1.9.2.tar.gz"
+sha256 = "0f315b36e7d1ba74bfc97ab9f304f0a3072c47578bbe5e42594acae381f9acfe"
+strip_components = 1
+description = "Tools to manipulate EFI secure boot platforms"
+homepage = "https://git.kernel.org/pub/scm/linux/kernel/git/jejb/efitools.git"
+license = "GPL-2.0-only"
+deps = ["openssl"]
+patches = ["patches/01-gnu-efi-libs-update.patch", "patches/02-libressl-compatibility.patch", "patches/03-makefile-enable-harden-local-files.patch", "patches/04-makefile-keep-freestanding-flag.patch", "patches/05-makefile-remove-useless-problematic-target.patch", "patches/06-makefile-cross-compile.patch", "patches/fix-missing-strptime.patch"]
+
+[build]
+system = "make"

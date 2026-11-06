@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'basu'. Review before relying on it.
+[package]
+name = "basu"
+version = "0.2.1"
+archive = "https://git.sr.ht/~emersion/basu/refs/download/v0.2.1/basu-0.2.1.tar.gz"
+sha256 = "d9b373a9fcb5d5eb5f6c1c56355f76edb7f2f52bc744570e80604e83455a19bd"
+strip_components = 1
+description = "SD-Bus library extracted from systemd"
+homepage = "https://sr.ht/~emersion/basu/"
+license = "LGPL-2.1-only"
+patches = ["patches/uid-nobody.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwerror=false"]
+tools = ["gperf"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'yank'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+[package]
+name = "yank"
+version = "1.3.0"
+archive = "https://github.com/mptre/yank/releases/download/v1.3.0/yank-1.3.0.tar.gz"
+sha256 = "d49c2ed2b84cc24792acb407c6aa3a8d255b90476a2bcd36b103bd0c5e216f1c"
+strip_components = 1
+description = "Yank terminal output to clipboard"
+homepage = "https://github.com/mptre/yank"
+license = "MIT"
+
+[build]
+system = "make"

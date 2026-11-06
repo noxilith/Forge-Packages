@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zproto'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: asciidoc, gsl-ucg
+[package]
+name = "zproto"
+version = "0.0.20170303"
+archive = "https://github.com/zeromq/zproto/archive/3d0f98e3da06058e065efebc5d901608d1924abe.tar.gz"
+sha256 = "6ac24c20388fe52a31f569a647246130b16691fd234a3151c25bdeae96fbb365"
+strip_components = 1
+description = "Protocol framework for ZeroMQ"
+homepage = "https://github.com/zeromq/zproto"
+license = "MIT"
+
+[build]
+system = "autotools"
+deps = ["xmlto"]

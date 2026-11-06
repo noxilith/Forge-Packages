@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mdbook-typst'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mdbook-typst"
+version = "0.1.10"
+archive = "https://github.com/LegNeato/mdbook-typst/archive/refs/tags/v0.1.10.tar.gz"
+sha256 = "18818e3918417290b3aaa2c253671a329a32f3cab559dfe8bf1ed8a4c4a43178"
+strip_components = 1
+description = "Mdbook backend to output Typst markup, pdf, png, or svg"
+homepage = "https://github.com/LegNeato/mdbook-typst"
+license = "MIT OR Apache-2.0"
+deps = ["mdBook", "typst"]
+
+[build]
+system = "cargo"

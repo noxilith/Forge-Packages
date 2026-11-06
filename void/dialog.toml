@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dialog'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "dialog"
+version = "1.3.20260107"
+archive = "https://invisible-mirror.net/archives/dialog/dialog-1.3-20260107.tgz"
+sha256 = "78b3dd18d95e50f0be8f9b9c1e7cffe28c9bf1cdf20d5b3ef17279c4da35c5b5"
+strip_components = 1
+description = "Tool to display dialog boxes from shell scripts"
+homepage = "https://invisible-island.net/dialog/"
+license = "LGPL-2.1-only"
+
+[build]
+system = "autotools"
+configure_args = ["--with-ncursesw", "--disable-nls"]

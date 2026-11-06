@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kImageAnnotator'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "kImageAnnotator"
+version = "0.7.2"
+archive = "https://github.com/ksnip/kImageAnnotator/archive/v0.7.2.tar.gz"
+sha256 = "7eb593d975b1590a184354ef68dbc3c26479d58eaea00de461d73695176f623c"
+strip_components = 1
+description = "Tool for annotating images"
+homepage = "https://github.com/ksnip/kImageAnnotator"
+license = "LGPL-2.0-or-later"
+deps = ["kColorPicker", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTS=OFF", "-DBUILD_EXAMPLE=OFF", "-DBUILD_SHARED_LIBS=ON", "-DBUILD_WITH_QT6=ON"]
+deps = ["extra-cmake-modules"]

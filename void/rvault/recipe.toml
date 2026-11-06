@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'rvault'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "rvault"
+version = "0.4"
+archive = "https://github.com/rmind/rvault/archive/v0.4.tar.gz"
+sha256 = "be729a5add68a1515de856ec88750d0d1ececadc540ac956e8f5730e1f27d47c"
+strip_components = 1
+description = "Secure and authenticated store for secrets and small documents"
+homepage = "https://github.com/rmind/rvault"
+license = "BSD-2-Clause"
+deps = ["curl", "fuse", "libedit", "libscrypt", "mbedtls2"]
+patches = ["patches/missing-include.patch"]
+
+[build]
+system = "make"
+subdir = "src"
+tools = ["pkg-config"]

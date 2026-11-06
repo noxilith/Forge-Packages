@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tflint'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "tflint"
+version = "0.52.0"
+archive = "https://github.com/terraform-linters/tflint/archive/v0.52.0.tar.gz"
+sha256 = "18ccb225df4616b3c91681d5b2ace423e4522c4cc71c68e6d1df665d6f0a7cdd"
+strip_components = 1
+description = "Terraform linter focused on possible errors, best practices, etc"
+homepage = "https://github.com/terraform-linters/tflint"
+license = "MPL-2.0"
+
+[build]
+system = "go"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ymir'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "ymir"
+version = "0.0.8"
+archive = "https://codeberg.org/tranzystorekk/ymir/archive/v0.0.8.tar.gz"
+sha256 = "54cf637874f1a1dd459231b4b65493064f8e8084e5f7d23ea90eeb0f4665a75d"
+strip_components = 1
+description = "Tool for doing bulk test builds of Void Linux packages"
+homepage = "https://codeberg.org/tranzystorekk/ymir"
+license = "MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'spotify-player'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "spotify-player"
+version = "0.22.1"
+archive = "https://github.com/aome510/spotify-player/archive/refs/tags/v0.22.1.tar.gz"
+sha256 = "b09ae88647758003eb7c666d3c2f60e1ff7624a14f9e8244332afe2b46167c4f"
+strip_components = 1
+description = "Command driven spotify player"
+homepage = "https://github.com/aome510/spotify-player"
+license = "MIT"
+deps = ["alsa-lib", "dbus", "libxcb", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]
+deps = ["rust-bindgen"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'OpenOrienteering-Mapper'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: clipper, cups, doxygen, qt5, sqlite
+[package]
+name = "OpenOrienteering-Mapper"
+version = "0.9.6"
+archive = "https://github.com/OpenOrienteering/mapper/archive/v0.9.6.tar.gz"
+sha256 = "8fd306029b89c3dddfe816723e346bb61069354e506657ce66f5fcfc87a6daff"
+strip_components = 1
+description = "Orienteering mapmaking program"
+homepage = "https://www.openorienteering.org/apps/mapper/"
+license = "GPL-3.0-or-later"
+deps = ["libgdal", "proj", "zlib"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kproperty'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kproperty"
+version = "3.2.0"
+archive = "https://download.kde.org/stable/kproperty/src/kproperty-3.2.0.tar.xz"
+sha256 = "67af0c2d74715957bd5373a6a30589ff0a996cb1d267dfd0538dccaa9a768dfa"
+strip_components = 1
+description = "Property editing framework"
+homepage = "https://community.kde.org/KProperty"
+license = "LGPL-2.0-or-later"
+deps = ["kconfig", "kcoreaddons", "kguiaddons", "kwidgetsaddons"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

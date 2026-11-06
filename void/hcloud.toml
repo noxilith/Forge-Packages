@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hcloud'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "hcloud"
+version = "1.70.1"
+archive = "https://github.com/hetznercloud/cli/archive/v1.70.1.tar.gz"
+sha256 = "5b8f1d258a2f96d65f0fbd26ce41b35e6d529432b4bde77fc8b26245d4d01a7d"
+strip_components = 1
+description = "Command-line interface for Hetzner Cloud"
+homepage = "https://github.com/hetznercloud/cli"
+license = "MIT"
+
+[build]
+system = "go"

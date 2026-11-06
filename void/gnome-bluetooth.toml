@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-bluetooth'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "gnome-bluetooth"
+version = "47.1"
+archive = "https://download.gnome.org/sources/gnome-bluetooth/47/gnome-bluetooth-47.1.tar.xz"
+sha256 = "03e3e7403a15108ffc1496210a1da5c2961b2834a5c07eccc7a3f493195daba3"
+strip_components = 1
+description = "GNOME Bluetooth Subsystem"
+homepage = "https://wiki.gnome.org/Projects/GnomeBluetooth"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["bluez", "eudev", "gsound", "gtk4", "libadwaita", "libnotify", "upower"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgtk_doc=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxml2"]

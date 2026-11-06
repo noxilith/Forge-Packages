@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'snapshot'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: glycin
+[package]
+name = "snapshot"
+version = "51.0"
+archive = "https://download.gnome.org/sources/snapshot/51/snapshot-51.0.tar.xz"
+sha256 = "3e64fa4cd1a742ae34b6f6d8e6d9614a2d3eab88a1b0071c11ab53617eb214c2"
+strip_components = 1
+description = "Take pictures and videos"
+homepage = "https://gitlab.gnome.org/GNOME/snapshot"
+license = "GPL-3.0-or-later"
+deps = ["gst-plugins-rs1", "libadwaita", "libseccomp"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk4"]

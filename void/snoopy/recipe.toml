@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'snoopy'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+[package]
+name = "snoopy"
+version = "2.5.2"
+archive = "https://github.com/a2o/snoopy/releases/download/snoopy-2.5.2/snoopy-2.5.2.tar.gz"
+sha256 = "9bee136cc3a676e8a11e5ad23339f32fe1a6aea473abca1cc625beb71ebbafc9"
+strip_components = 1
+description = "Log every executed command to syslog"
+homepage = "https://github.com/a2o/snoopy"
+license = "GPL-2.0-only"
+patches = ["patches/fix-tests.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'websocketd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "websocketd"
+version = "0.4.1"
+archive = "https://github.com/joewalnes/websocketd/archive/v0.4.1.tar.gz"
+sha256 = "6b8fe0fad586d794e002340ee597059b2cfc734ba7579933263aef4743138fe5"
+strip_components = 1
+description = "Turn any program that uses STDIN/STDOUT into a WebSocket server"
+homepage = "https://github.com/joewalnes/websocketd"
+license = "BSD-2-Clause"
+
+[build]
+system = "go"

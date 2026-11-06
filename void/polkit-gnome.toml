@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'polkit-gnome'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "polkit-gnome"
+version = "0.105"
+archive = "https://download.gnome.org/sources/polkit-gnome/0.105/polkit-gnome-0.105.tar.xz"
+sha256 = "1784494963b8bf9a00eedc6cd3a2868fb123b8a5e516e66c5eda48df17ab9369"
+strip_components = 1
+description = "PolicyKit integration for the GNOME desktop"
+homepage = "http://www.freedesktop.org/wiki/Software/PolicyKit"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "polkit"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gobject-introspection"]

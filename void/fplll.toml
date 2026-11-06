@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fplll'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mpfr
+[package]
+name = "fplll"
+version = "5.5.0"
+archive = "https://github.com/fplll/fplll/releases/download/5.5.0/fplll-5.5.0.tar.gz"
+sha256 = "f0af6bdd0ebd5871e87ff3ef7737cb5360b1e38181a4e5a8c1236f3476fec3b2"
+strip_components = 1
+description = "Lattice algorithms using floating-point orthogonalization and LLL"
+homepage = "https://github.com/fplll/fplll"
+license = "LGPL-2.1-or-later"
+deps = ["gmp"]
+
+[build]
+system = "autotools"

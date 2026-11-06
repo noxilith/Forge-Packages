@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bmkdep'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, make_cmd
+# needs, but Forge has no recipe for yet: bmake
+[package]
+name = "bmkdep"
+version = "20140112"
+archive = "https://github.com/trociny/bmkdep/archive/bmkdep-20140112.tar.gz"
+sha256 = "0e63b2e1aa6086e0c928197cc68c66dc180894f18abb159d84e6fe40a259c27f"
+strip_components = 1
+description = "Construct Makefile dependency list"
+homepage = "https://github.com/trociny/bmkdep"
+license = "BSD-2-Clause"
+
+[build]
+system = "make"
+deps = ["groff"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'krdp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "krdp"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/krdp-6.7.5.tar.xz"
+sha256 = "483fb1d9ffd6954e7b12aa4321763a31726e5c0daac10e135cd13a503ced5330"
+strip_components = 1
+description = "Plasma rdp server and library"
+homepage = "https://invent.kde.org/plasma/krdp"
+license = "LGPL-2.0-or-later"
+deps = ["freerdp", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kguiaddons", "kf6-ki18n", "kf6-kstatusnotifieritem", "kirigami-addons", "kpipewire", "libxcb", "libxkbcommon", "pam", "pipewire", "plasma-wayland-protocols", "qt6-base", "qt6-declarative", "qtkeychain-qt6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "wayland"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libtpms'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libtpms"
+version = "0.10.2"
+archive = "https://github.com/stefanberger/libtpms/archive/refs/tags/v0.10.2.tar.gz"
+sha256 = "edac03680f8a4a1c5c1d609a10e3f41e1a129e38ff5158f0c8deaedc719fb127"
+strip_components = 1
+description = "Software emulation of a Trusted Platform Module (TPM 1.2 and TPM 2.0)"
+homepage = "https://github.com/stefanberger/libtpms"
+license = "BSD-3-Clause, custom:IBM"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

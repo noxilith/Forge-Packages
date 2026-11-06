@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'yascreen'. Review before relying on it.
+[package]
+name = "yascreen"
+version = "2.14"
+archive = "https://github.com/bbonev/yascreen/releases/download/v2.14/yascreen-2.14.tar.xz"
+sha256 = "56505c73c64be6f216e4912e6b3245ed2d385c1fdb7039c84aa4c56a7ef7d7a7"
+strip_components = 1
+description = "Yet Another Screen Library"
+homepage = "https://github.com/bbonev/yascreen"
+license = "LGPL-3.0-or-later"
+
+[build]
+system = "make"

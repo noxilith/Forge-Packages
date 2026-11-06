@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'passt'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+[package]
+name = "passt"
+version = "2026.09.25.df90211"
+archive = "https://passt.top/passt/snapshot/passt-2026_09_25.df90211.tar.xz"
+sha256 = "cdf655b5677ce219108cf3df93a55e0ae98a376887be110fe35303ea900d5d68"
+strip_components = 1
+description = "Plug A Simple Socket Transport"
+homepage = "https://passt.top"
+license = "GPL-2.0-or-later AND BSD-3-Clause"
+
+[build]
+system = "make"

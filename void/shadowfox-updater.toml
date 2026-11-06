@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'shadowfox-updater'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "shadowfox-updater"
+version = "2.2.0"
+archive = "https://github.com/SrKomodo/shadowfox-updater/archive/v2.2.0.tar.gz"
+sha256 = "2674bf5cabf3d478c15804164936d3baa06f6a7f96313a69176439c0a60e3bbd"
+strip_components = 1
+description = "Auto-updater for ShadowFox"
+homepage = "https://github.com/SrKomodo/shadowfox-updater"
+license = "MIT"
+
+[build]
+system = "go"

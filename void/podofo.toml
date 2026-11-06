@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'podofo'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: lua53
+[package]
+name = "podofo"
+version = "0.10.5"
+archive = "https://github.com/podofo/podofo/archive/refs/tags/0.10.5.tar.gz"
+sha256 = "49b159e88ba177ad2561b5cf6cbd68ecbe83272f5488bc527e44f97dbf695273"
+strip_components = 1
+description = "Library to work with the PDF file format"
+homepage = "https://github.com/podofo/podofo"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["fontconfig", "freetype", "libidn", "libjpeg-turbo", "libpng", "libxml2", "openssl", "tiff", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPODOFO_BUILD_STATIC=FALSE", "-DPODOFO_BUILD_TOOLS=TRUE", "-DPODOFO_BUILD_TEST=TRUE"]
+tools = ["pkg-config"]

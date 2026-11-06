@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'mdbtools'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "mdbtools"
+version = "1.0.1"
+archive = "https://github.com/mdbtools/mdbtools/archive/v1.0.1.tar.gz"
+sha256 = "750cbf793bf5b7e296fdc359124393a0aef89ee663b7741ba4b1ca2ce30b3b37"
+strip_components = 1
+description = "Library and utilities for reading Microsoft Access Databases"
+homepage = "https://github.com/mdbtools/mdbtools"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-glibtest", "--enable-sql"]
+tools = ["bison", "flex", "pkg-config"]
+deps = ["gettext", "which"]

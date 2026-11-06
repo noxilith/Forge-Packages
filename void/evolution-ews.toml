@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'evolution-ews'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: intltool, libwebkit2gtk41
+[package]
+name = "evolution-ews"
+version = "3.56.2"
+archive = "https://download.gnome.org/sources/evolution-ews/3.56/evolution-ews-3.56.2.tar.xz"
+sha256 = "1eb7eccf94c6b8618d6b45c3202350209db567c489108adc20233c4d19f8f28f"
+strip_components = 1
+description = "MS Exchange integration through Exchange Web Services"
+homepage = "https://wiki.gnome.org/Apps/Evolution"
+license = "LGPL-2.1-or-later"
+deps = ["evolution", "gnome-desktop", "libmspack", "libsoup3"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["glib"]

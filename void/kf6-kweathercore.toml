@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kf6-kweathercore'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-position, qt6-tools
+[package]
+name = "kf6-kweathercore"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kweathercore-26.08.1.tar.xz"
+sha256 = "e89bcad036347f76b39bf4d83b68ab37d903e13cde24347e3d724b0e509ea7fd"
+strip_components = 1
+description = "Library to facilitate retrieval of weather information"
+homepage = "https://invent.kde.org/libraries/kweathercore"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kholidays", "kf6-ki18n", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'rogue'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "rogue"
+version = "5.4.4"
+archive = "https://gitlab.com/philhsmith/rogue/-/archive/v5.4.4/rogue-v5.4.4.tar.gz"
+sha256 = "df9f837817ceeededb77395ba990d83894f992ed7f534f3baab2ca4a80921b63"
+strip_components = 1
+description = "Dungeon crawl game from the 80s"
+homepage = "http://rogue.rogueforge.net/"
+license = "BSD-3-Clause"
+patches = ["patches/desktop-icon.patch"]
+
+[build]
+system = "autotools"

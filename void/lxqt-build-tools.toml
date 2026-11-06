@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lxqt-build-tools'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "lxqt-build-tools"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-build-tools/archive/2.4.0.tar.gz"
+sha256 = "0037e9a276743d9b450a540fdf7714f4be422ef2ebd5cb16dca3579476739c46"
+strip_components = 1
+description = "LXQt build tools"
+homepage = "https://lxqt-project.org"
+license = "BSD-3-Clause"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

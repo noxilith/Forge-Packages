@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'umurmur'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "umurmur"
+version = "0.3.1"
+archive = "https://github.com/umurmur/umurmur/archive/refs/tags/v0.3.1.tar.gz"
+sha256 = "8327dd0b2c5bd187a38d098295e896a6b85d698c9268205bcb27f6244f760a73"
+strip_components = 1
+description = "Minimalistic Mumble server"
+homepage = "https://umurmur.net/"
+license = "BSD-3-Clause"
+deps = ["libconfig", "openssl", "protobuf-c"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSSL=openssl", "-DDUSE_SHAREDMEMORY_API=On"]

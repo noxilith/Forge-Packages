@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'sox'. Review before relying on it.
+# hooks not translated: post_extract
+# needs, but Forge has no recipe for yet: opusfile, sndio
+[package]
+name = "sox"
+version = "14.4.2"
+archive = "https://downloads.sourceforge.net/sourceforge/sox/sox-14.4.2.tar.bz2"
+sha256 = "81a6956d4330e75b5827316e44ae381e6f1e8928003c6aa45896da9041ea149c"
+strip_components = 1
+description = "Sound eXchange, the Swiss Army knife of audio manipulation"
+homepage = "http://sox.sourceforge.net/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["flac", "lame", "libao", "libid3tag", "libmad", "libpng", "libsndfile", "pulseaudio", "wavpack"]
+patches = ["patches/gcc14.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-distro=Void"]
+tools = ["pkg-config"]

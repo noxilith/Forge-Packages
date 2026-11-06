@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kmenuedit'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "kmenuedit"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kmenuedit-6.7.5.tar.xz"
+sha256 = "2d9801b7f89988046472c2b32385d848a0a98095fb178d58d6e3b5090ced9b8b"
+strip_components = 1
+description = "KDE Menu editor"
+homepage = "https://invent.kde.org/plasma/kmenuedit"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kxmlgui", "kf6-sonnet"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-base"]

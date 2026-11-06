@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'fbida'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: fbida-exiftran-2.14_3, fbida-fbi-2.14_3, fbida-fbpdf-2.14_3, libwebp, mesa
+[package]
+name = "fbida"
+version = "2.14"
+archive = "https://www.kraxel.org/releases/fbida/fbida-2.14.tar.gz"
+sha256 = "95b7c01556cb6ef9819f358b314ddfeb8a4cbe862b521a3ed62f03d163154438"
+strip_components = 1
+description = "Display and elementary edit images using fbdev"
+homepage = "https://www.kraxel.org/blog/linux/fbida/"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "curl", "fontconfig", "freetype", "giflib", "glib", "libXpm", "libXt", "libdrm", "libepoxy", "libexif", "libpng", "pixman", "poppler", "sane", "tiff"]
+patches = ["patches/cross.patch", "patches/ida-desktop.patch", "patches/no-cairo-gl.patch"]
+
+[build]
+system = "meson"
+tools = ["perl", "pkg-config"]
+deps = ["libjpeg-turbo"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sxwm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: LDFLAGS
+[package]
+name = "sxwm"
+version = "1.7"
+archive = "https://github.com/uint23/sxwm/archive/refs/tags/v1.7.tar.gz"
+sha256 = "874f28d2a5c625fc4a7d91aae7a96a58760ff64fa223a3398048a18071219570"
+strip_components = 1
+description = "Minimal, fast, and highly configurable tiling window manager for X11"
+homepage = "https://github.com/uint23/sxwm"
+license = "MIT"
+deps = ["libX11", "libXcursor", "libXinerama"]
+
+[build]
+system = "make"

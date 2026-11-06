@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'digikam'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, libjxl, mesa, opencv, qt6-networkauth, qt6-scxml, qt6-svg, qt6-webchannel
+[package]
+name = "digikam"
+version = "9.1.0"
+archive = "https://download.kde.org/stable/digikam/9.1.0/digiKam-9.1.0.tar.xz"
+sha256 = "a7309191e9a4787853cb3ac4136e4f8d7c044b40338dc42c7e422c37625b72e1"
+strip_components = 1
+description = "Advanced digital photo management application"
+homepage = "https://www.digikam.org"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["ImageMagick", "akonadi-contacts", "eigen", "glu", "gpgme-qt6", "jasper", "kf6-kcalendarcore", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kfilemetadata", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-knotifications", "kf6-knotifyconfig", "kf6-kservice", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "kf6-solid", "kf6-threadweaver", "lcms2", "lensfun", "libgphoto2", "libheif", "libjpeg-turbo", "libksane6", "liblqr", "qt6-base", "qt6-declarative", "qt6-pdf", "tiff"]
+patches = ["patches/qstring.patch", "patches/qt610.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DENABLE_AKONADICONTACTSUPPORT=ON", "-DENABLE_KFILEMETADATASUPPORT=ON", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DBUILD_WITH_QT6=ON", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["bison", "flex", "pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

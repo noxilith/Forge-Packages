@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'apcupsd'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_install_args, conf_files
+# needs, but Forge has no recipe for yet: net-snmp
+[package]
+name = "apcupsd"
+version = "3.14.14"
+archive = "https://downloads.sourceforge.net/sourceforge/apcupsd/apcupsd-3.14.14.tar.gz"
+sha256 = "db7748559b6b4c3784f9856561ef6ac6199ef7bd019b3edcd7e0a647bf8f9867"
+strip_components = 1
+description = "APC UPS daemon with integrated tcp/ip remote shutdown"
+homepage = "http://www.apcupsd.org/"
+license = "GPL-2.0-only"
+deps = ["libusb-compat", "nullmailer"]
+patches = ["patches/skip-man-txt-build.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-install-distdir", "--enable-modbus-usb", "--enable-usb", "--with-dev=", "--with-halpolicydir=", "--with-upscable=usb", "--with-upstype=usb"]
+tools = ["pkg-config"]

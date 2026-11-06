@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ofono'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "ofono"
+version = "1.31"
+archive = "https://www.kernel.org/pub/linux/network/ofono/ofono-1.31.tar.xz"
+sha256 = "a15c5d28096c10eb30e47a68b6dc2e7c4a5a99d7f4cfedf0b69624f33d859e9b"
+strip_components = 1
+description = "Infrastructure for building mobile telephony (GMS/UTMS) applications"
+homepage = "https://01.org/ofono"
+license = "GPL-2.0-or-later"
+deps = ["ell", "eudev", "glib", "mobile-broadband-provider-info"]
+patches = ["patches/fix-TEMP_FAILURE_RETRY.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-bluez4", "--enable-external-ell"]
+tools = ["pkg-config"]

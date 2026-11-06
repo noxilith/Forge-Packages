@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'DSView'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, fftw
+[package]
+name = "DSView"
+version = "1.3.2"
+archive = "https://github.com/DreamSourceLab/DSView/archive/refs/tags/v1.3.2.tar.gz"
+sha256 = "da68674c32da7bd212883d599267a137ce152060d28796ea16cc3442695de7ab"
+strip_components = 1
+description = "GUI for various instruments from DreamSourceLab, based on sigrok"
+homepage = "https://github.com/DreamSourceLab/DSView"
+license = "GPL-3.0-or-later"
+deps = ["glib", "libusb", "qt6-base"]
+patches = ["patches/include.patch", "patches/qt6.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

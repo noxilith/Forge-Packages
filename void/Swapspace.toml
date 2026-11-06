@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'Swapspace'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+[package]
+name = "Swapspace"
+version = "1.18.1"
+archive = "https://github.com/Tookmund/Swapspace/archive/v1.18.1/1.18.1.tar.gz"
+sha256 = "8684861e603b68e261605332ae26bfd54bec4f50bea109c0597ae2e25460e32c"
+strip_components = 1
+description = "Dynamic swap manager for Linux"
+homepage = "https://github.com/Tookmund/swapspace"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

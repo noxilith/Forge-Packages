@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kholidays'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kholidays"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kholidays-6.30.0.tar.xz"
+sha256 = "02bfbc33296fe86b364491f6d5cad9d83360bb4fdd2923386a325b309eac0b9b"
+strip_components = 1
+description = "Library to assist determining when holidays occur"
+homepage = "https://invent.kde.org/frameworks/kholidays"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["flex"]
+deps = ["extra-cmake-modules", "qt6-base"]

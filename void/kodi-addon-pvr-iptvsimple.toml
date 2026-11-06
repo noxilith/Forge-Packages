@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kodi-addon-pvr-iptvsimple'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kodi
+[package]
+name = "kodi-addon-pvr-iptvsimple"
+version = "21.11.0"
+archive = "https://github.com/kodi-pvr/pvr.iptvsimple/archive/21.11.0-Omega.tar.gz"
+sha256 = "377fb3c69d39866c0b3b8a3a7d4c790241b15997b140f45443209c4e44e62418"
+strip_components = 1
+description = "IPTV Simple client addon for Kodi"
+homepage = "https://github.com/kodi-pvr/pvr.iptvsimple"
+license = "GPL-2.0-or-later"
+deps = ["kodi-platform", "p8-platform", "pugixml", "xz", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

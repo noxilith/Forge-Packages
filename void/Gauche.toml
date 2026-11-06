@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'Gauche'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "Gauche"
+version = "0.9.15"
+archive = "https://github.com/shirok/Gauche/releases/download/release0.9.15/Gauche-0.9.15.tgz"
+sha256 = "3643e27bc7c8822cfd6fb2892db185f658e8e364938bc2ccfcedb239e35af783"
+strip_components = 1
+description = "Practical Scheme R7RS implementation"
+homepage = "https://practical-scheme.net/gauche/"
+license = "BSD-3-Clause"
+deps = ["libatomic_ops", "libticonv"]
+
+[build]
+system = "autotools"
+deps = ["texinfo"]

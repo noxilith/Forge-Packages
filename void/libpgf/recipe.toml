@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libpgf'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libpgf"
+version = "6.14.12"
+archive = "https://downloads.sourceforge.net/sourceforge/libpgf/libpgf/6.14.12-latest/libpgf-src-6.14.12.tar.gz"
+sha256 = "bda5995d80762966a25fca3f6a9821f4458657aa87d8631c014c166ae09258eb"
+strip_components = 1
+description = "Library for working with PGF (Progresive Graphics File) images"
+homepage = "http://www.libpgf.org"
+license = "LGPL-2.1-or-later"
+patches = ["patches/CVE-2015-6673.patch"]
+
+[build]
+system = "autotools"

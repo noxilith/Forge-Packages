@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'micro'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "micro"
+version = "2.0.15"
+archive = "https://github.com/zyedidia/micro/archive/v2.0.15.tar.gz"
+sha256 = "612c775321c268c8f9e1767505ff378bca9b9ab66f5c41b69ecb2464ecf15084"
+strip_components = 1
+description = "Modern and intuitive terminal-based text editor"
+homepage = "https://micro-editor.github.io"
+license = "MIT"
+
+[build]
+system = "go"

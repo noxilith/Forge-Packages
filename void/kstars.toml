@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kstars'. Review before relying on it.
+# needs, but Forge has no recipe for yet: opencv, qt6-svg, qt6-websockets
+[package]
+name = "kstars"
+version = "3.7.9"
+archive = "https://download.kde.org/stable/kstars/3.7.9/kstars-3.7.9.tar.xz"
+sha256 = "684da0b401b32c171493e1de83e64e30b775c17e9511bad2a719161139a51197"
+strip_components = 1
+description = "Open source, cross-platform Astronomy Software by KDE"
+homepage = "https://edu.kde.org/kstars/"
+license = "GPL-2.0-or-later"
+deps = ["cfitsio", "curl", "eigen", "gsl", "kf6-kconfig", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kio", "kf6-knewstuff", "kf6-knotifications", "kf6-knotifyconfig", "kf6-kplotting", "kf6-kwidgetsaddons", "kf6-kxmlgui", "libnova", "libraw", "libxisf", "qt6-base", "qt6-datavis3d", "qt6-declarative", "qtkeychain-qt6", "stellarsolver", "wcslib", "xplanet", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_WITH_QT6=ON"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

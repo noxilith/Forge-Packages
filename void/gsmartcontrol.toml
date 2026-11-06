@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gsmartcontrol'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "gsmartcontrol"
+version = "2.0.2"
+archive = "https://github.com/ashaduri/gsmartcontrol/archive/refs/tags/v2.0.2.tar.gz"
+sha256 = "7cebd83fd34883d51e143389aa88f8173ea7b67c760b12b7de847f3c3c8cee34"
+strip_components = 1
+description = "GUI to smartmontools"
+homepage = "https://gsmartcontrol.shaduri.dev"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtkmm", "pcre", "smartmontools"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

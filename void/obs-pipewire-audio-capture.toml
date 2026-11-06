@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'obs-pipewire-audio-capture'. Review before relying on it.
+[package]
+name = "obs-pipewire-audio-capture"
+version = "1.2.1"
+archive = "https://github.com/dimtpap/obs-pipewire-audio-capture/archive/1.2.1.tar.gz"
+sha256 = "70107cafd2020437fc0b663fdf6a94598b474942a0582b24719a0e76a9f73a50"
+strip_components = 1
+description = "Audio device and application capture for OBS Studio using PipeWire"
+homepage = "https://github.com/dimtpap/obs-pipewire-audio-capture"
+license = "GPL-2.0-only"
+deps = ["obs", "pipewire", "simde"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xhidecursor'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xhidecursor"
+version = "1.0.0"
+archive = "https://github.com/astier/xhidecursor/archive/refs/tags/1.0.0.tar.gz"
+sha256 = "fbb73860520718c9683ac96537eb6b8ca5e71da83cfd0aa7388871eedd43f255"
+strip_components = 1
+description = "Minimal X-application which hides the cursor on key-press"
+homepage = "https://github.com/astier/xhidecursor"
+license = "MIT"
+deps = ["libX11", "libXfixes", "libXi"]
+
+[build]
+system = "make"

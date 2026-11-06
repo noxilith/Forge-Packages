@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sisl'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sisl"
+version = "4.6.0"
+archive = "https://github.com/SINTEF-Geometry/SISL/archive/SISL-4.6.0.tar.gz"
+sha256 = "b207fe6b4b20775e3064168633256fddd475ff98573408f6f5088a938c086f86"
+strip_components = 1
+description = "SINTEF Spline Library"
+homepage = "https://github.com/SINTEF-Geometry/SISL"
+license = "AGPL-3.0-only"
+patches = ["patches/maxdouble.patch"]
+
+[build]
+system = "cmake"

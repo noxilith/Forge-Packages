@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-nibbles'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-nibbles"
+version = "4.5.2"
+archive = "https://download.gnome.org/sources/gnome-nibbles/4.5/gnome-nibbles-4.5.2.tar.xz"
+sha256 = "76729d3b562cd7862ad30590c3bd40fd251f9d4bb5c53baa84150197f231a5fa"
+strip_components = 1
+description = "GNOME snake eats diamonds game"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-nibbles"
+license = "GPL-3.0-or-later"
+deps = ["gsound", "libadwaita", "libgnome-games-support2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk4", "vala"]

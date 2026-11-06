@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sftpgo'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, make_dirs
+[package]
+name = "sftpgo"
+version = "2.7.6"
+archive = "https://github.com/drakkan/sftpgo/archive/refs/tags/v2.7.6.tar.gz"
+sha256 = "c4e023d926ced068284ac83494e2f51bacb430fe260d3cb2d6807d3bede0608d"
+strip_components = 1
+description = "Fully featured and highly configurable SFTP server"
+homepage = "https://github.com/drakkan/sftpgo"
+license = "AGPL-3.0-only"
+
+[build]
+system = "go"

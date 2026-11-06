@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'genact'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "genact"
+version = "1.5.1"
+archive = "https://github.com/svenstaro/genact/archive/v1.5.1.tar.gz"
+sha256 = "07d62d0c7a41e83bf4ab8b76a1c0754556697faf5aa023b4e34906ff52323a7d"
+strip_components = 1
+description = "Nonsense activity generator"
+homepage = "https://github.com/svenstaro/genact/"
+license = "MIT"
+
+[build]
+system = "cargo"

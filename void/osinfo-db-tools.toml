@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'osinfo-db-tools'. Review before relying on it.
+[package]
+name = "osinfo-db-tools"
+version = "1.12.0"
+archive = "https://releases.pagure.org/libosinfo/osinfo-db-tools-1.12.0.tar.xz"
+sha256 = "f3315f675d18770f25dea8ed04b20b8fc80efb00f60c37ee5e815f9c3776e7f3"
+strip_components = 1
+description = "Tools for managing osinfo database"
+homepage = "https://libosinfo.org"
+license = "GPL-2.0-or-later"
+deps = ["glib", "json-glib", "libarchive", "libsoup3", "libxslt"]
+
+[build]
+system = "meson"
+tools = ["perl", "pkg-config"]
+deps = ["gettext"]

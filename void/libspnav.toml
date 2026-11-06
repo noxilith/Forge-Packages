@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libspnav'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libspnav"
+version = "1.2"
+archive = "https://github.com/FreeSpacenav/libspnav/archive/refs/tags/v1.2.tar.gz"
+sha256 = "e675a2476bd407b8d97a33f93c6651ad3ecdfd422916f260bd620f2aec7ca45f"
+strip_components = 1
+description = "Open source alternative to 3DConnextion drivers"
+homepage = "http://spacenav.sourceforge.net/"
+license = "BSD-3-Clause"
+deps = ["libX11"]
+
+[build]
+system = "autotools"

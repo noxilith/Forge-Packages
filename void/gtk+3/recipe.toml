@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gtk+3'. Review before relying on it.
+# 8 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_check
+# settings not translated: build_helper, conf_files
+[package]
+name = "gtk+3"
+version = "3.24.52"
+archive = "https://download.gnome.org/sources/gtk/3.24/gtk-3.24.52.tar.xz"
+sha256 = "80931fa472a77b9a164f6740e3c0b444fac6770054632d35a7ff9d679e5e7b9f"
+strip_components = 1
+description = "GTK+ toolkit (v3)"
+homepage = "https://www.gtk.org/"
+license = "LGPL-2.1-or-later"
+deps = ["adwaita-icon-theme", "at-spi2-core", "gdk-pixbuf", "iso-codes", "libepoxy", "librsvg", "pango", "shared-mime-info"]
+patches = ["patches/8fb3557bce1fdf9e2c4146e89b43753688d64455.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dman=true", "-Dexamples=false"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "glib", "gtk-doc"]

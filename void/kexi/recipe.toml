@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kexi'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "kexi"
+version = "3.2.0"
+archive = "https://download.kde.org/stable/kexi/src/kexi-3.2.0.tar.xz"
+sha256 = "7a813f9ea815a09c1e733d0e7dc879c64eee85f075389e87e6aab99cf0c1c1ff"
+strip_components = 1
+description = "Visual database applications creator"
+homepage = "http://www.kexi-project.org/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["breeze-icons", "kdb", "kreport", "ktexteditor", "mariadb", "postgresql18", "qt5-webkit"]
+patches = ["patches/3280c5ec9940f329dc75b2b8d9a52285b20209f0.patch", "patches/79894e151a53c1afed55003c2e1faf23ea463ec7.patch", "patches/cmake-4.patch", "patches/ftbfs.patch", "patches/musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kdoctools"]

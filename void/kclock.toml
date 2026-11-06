@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kclock'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-svg, qt6-tools
+[package]
+name = "kclock"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kclock-26.08.1.tar.xz"
+sha256 = "60a1a3048bf5d508dfe6dfbf0cc70f9a6041d33476f579a23dc67325368a8de7"
+strip_components = 1
+description = "Clock app for Plasma Mobile"
+homepage = "https://apps.kde.org/kclock/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-kjobwidgets", "kf6-knotifications", "kf6-kservice", "kf6-kstatusnotifieritem", "kf6-ksvg", "kirigami-addons", "libplasma", "plasma-wayland-protocols", "qt6-base", "qt6-declarative", "wayland-protocols"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

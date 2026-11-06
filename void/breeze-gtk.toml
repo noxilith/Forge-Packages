@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'breeze-gtk'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "breeze-gtk"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/breeze-gtk-6.7.5.tar.xz"
+sha256 = "4e0e913b0515de75492155d028c086c4a522a3f68ebb6f4fab10f8bc646cd518"
+strip_components = 1
+description = "GTK Theme Built to Match KDE's Breeze"
+homepage = "https://invent.kde.org/plasma/breeze-gtk"
+license = "LGPL-2.1-or-later"
+deps = ["breeze-qt6", "libplasma", "qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "python3-cairo", "sassc"]

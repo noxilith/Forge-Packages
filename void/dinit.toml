@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'dinit'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "dinit"
+version = "0.22.1"
+archive = "https://github.com/davmac314/dinit/archive/v0.22.1.tar.gz"
+sha256 = "8907d4f668259c4f66d9d2c7cbbb55d455c28dc433596ab29005d589cb572e1e"
+strip_components = 1
+description = "Service manager and init system"
+homepage = "https://davmac.org/projects/dinit/"
+license = "Apache-2.0"
+deps = ["libcap"]
+
+[build]
+system = "autotools"
+configure_args = ["--shutdown-prefix=dinit-", "--enable-shutdown", "--enable-cgroups", "--enable-capabilities", "--enable-ioprio", "--enable-oom-adj", "--platform=Linux"]
+tools = ["m4"]

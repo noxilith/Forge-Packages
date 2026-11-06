@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'windowchef'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "windowchef"
+version = "0.5.2"
+archive = "https://github.com/tudurom/windowchef/archive/v0.5.2.tar.gz"
+sha256 = "d130b4f2367b4a026c364b20522f34464dba59461943952640af6a7ca65ed2c9"
+strip_components = 1
+description = "Stacking WM that doesn't handle keyboard or pointer inputs"
+homepage = "https://github.com/tudurom/windowchef"
+license = "ISC"
+deps = ["xcb-util-keysyms", "xcb-util-wm"]
+
+[build]
+system = "make"

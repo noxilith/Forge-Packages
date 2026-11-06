@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kodi-addon-inputstream-rtmp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kodi, rtmpdump, tinyxml
+[package]
+name = "kodi-addon-inputstream-rtmp"
+version = "21.1.2"
+archive = "https://github.com/xbmc/inputstream.rtmp/archive/21.1.2-Omega.tar.gz"
+sha256 = "b7223a30d2774e4c7cbd6c4f8a266bf4d186d160590077be627bd0490d80645c"
+strip_components = 1
+description = "RTMP input stream add-on for Kodi"
+homepage = "https://github.com/xbmc/inputstream.rtmp"
+license = "GPL-2.0-or-later"
+deps = ["kodi-platform", "openssl", "p8-platform", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

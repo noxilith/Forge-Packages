@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wlrctl'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wlrctl"
+version = "0.2.2"
+archive = "https://git.sr.ht/~brocellous/wlrctl/archive/v0.2.2.tar.gz"
+sha256 = "b5b3836091c41de09a832df1e5eb4747841d7ae670367e413487d5be7a5f2849"
+strip_components = 1
+description = "Utility for miscellaneous wlroots extensions"
+homepage = "https://git.sr.ht/~brocellous/wlrctl"
+license = "MIT"
+deps = ["libxkbcommon", "wayland"]
+patches = ["patches/fix-ascii-check.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'btop'. Review before relying on it.
+[package]
+name = "btop"
+version = "1.4.7"
+archive = "https://github.com/aristocratos/btop/archive/refs/tags/v1.4.7.tar.gz"
+sha256 = "933de2e4d1b2211a638be463eb6e8616891bfba73aef5d38060bd8319baeefc6"
+strip_components = 1
+description = "Monitor of resources"
+homepage = "https://github.com/aristocratos/btop"
+license = "Apache-2.0"
+
+[build]
+system = "make"
+deps = ["lowdown"]

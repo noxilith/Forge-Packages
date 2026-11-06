@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'adguardian'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "adguardian"
+version = "1.6.0"
+archive = "https://github.com/Lissy93/AdGuardian-Term/archive/1.6.0.tar.gz"
+sha256 = "0bc7671411372b7b1a4439ff8081c4ce28c4db2c32fe9fac38ae3177cd54fea4"
+strip_components = 1
+description = "Terminal-based real-time traffic monitor for AdGuard home instance"
+homepage = "https://github.com/Lissy93/AdGuardian-Term"
+license = "MIT"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pngquant'. Review before relying on it.
+[package]
+name = "pngquant"
+version = "3.0.3"
+archive = "https://static.crates.io/crates/pngquant/pngquant-3.0.3.crate"
+sha256 = "68a12bdd8825f9989f4ee9a6ab0b42727dae57728b939ef63453366697a07232"
+strip_components = 1
+description = "Lossy PNG compressor"
+homepage = "https://pngquant.org/"
+license = "GPL-3.0-or-later"
+deps = ["lcms2", "libpng"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

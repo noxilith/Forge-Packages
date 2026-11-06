@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'swell-foop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "swell-foop"
+version = "48.1"
+archive = "https://download.gnome.org/sources/swell-foop/48/swell-foop-48.1.tar.xz"
+sha256 = "5b9630878fe701aee751ed46ff765c2bcd9f815a4e5582676a3c26b31182031b"
+strip_components = 1
+description = "GNOME puzzle game where you remove similar objects"
+homepage = "https://wiki.gnome.org/Apps/Swell%20Foop"
+license = "GPL-2.0-or-later"
+deps = ["libadwaita", "libgnome-games-support2", "librsvg"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk4", "vala"]

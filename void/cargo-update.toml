@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cargo-update'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: libssh2
+[package]
+name = "cargo-update"
+version = "20.0.0"
+archive = "https://github.com/nabijaczleweli/cargo-update/archive/refs/tags/v20.0.0.tar.gz"
+sha256 = "7e9898ae686fe64c4cf75be5c4e9e6d5f6141371182a12e4bdaa806cfe321806"
+strip_components = 1
+description = "Cargo subcommand for updates to installed executables"
+homepage = "https://github.com/nabijaczleweli/cargo-update"
+license = "MIT"
+deps = ["curl", "libgit2-1.9", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]
+deps = ["go-md2man"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce4-mailwatch-plugin'. Review before relying on it.
+[package]
+name = "xfce4-mailwatch-plugin"
+version = "1.4.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-mailwatch-plugin/1.4/xfce4-mailwatch-plugin-1.4.0.tar.xz"
+sha256 = "5c211025db1096663fa6b8cc41213464a6d71f24e76326499d857ff81ea3861f"
+strip_components = 1
+description = "Mail watcher plugin for Xfce4 panel"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-mailwatch-plugin"
+license = "GPL-2.0-or-later"
+deps = ["exo", "glib", "gnutls", "libgcrypt", "libxfce4ui", "libxfce4util", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

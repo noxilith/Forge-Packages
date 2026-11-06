@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'npapi-sdk'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "npapi-sdk"
+version = "0.27.2"
+archive = "https://github.com/mgorny/npapi-sdk/releases/download/npapi-sdk-0.27.2/npapi-sdk-0.27.2.tar.bz2"
+sha256 = "01bf34bdd0fcaa546ba3d5c96f5d91f91dd117d4ed5ffe13f56bbd5aa566ae77"
+strip_components = 1
+description = "Netscape Plugin API (NPAPI)"
+homepage = "https://github.com/mgorny/npapi-sdk"
+license = "BSD-3-Clause, MPL-1.1, GPL-2.0-or-later, LGPL-2.1-or-later"
+
+[build]
+system = "autotools"

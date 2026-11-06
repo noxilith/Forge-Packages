@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'modrana'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_target, build_helper
+# needs, but Forge has no recipe for yet: pyotherside, qt5
+[package]
+name = "modrana"
+version = "0.57.3"
+archive = "https://github.com/M4rtinK/modrana/archive/dbd558d407abe7a3a4a352c96b618147cade4bd9.tar.gz"
+sha256 = "7f93e4660997a8cba4194709c4566dec667da1c99ae45dd66ea6df71b8c637a6"
+strip_components = 1
+description = "Flexible GPS navigation system for mobile devices"
+homepage = "https://modrana.org"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"
+deps = ["rsync"]

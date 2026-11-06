@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pcsclite'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "pcsclite"
+version = "2.5.3"
+archive = "https://salsa.debian.org/debian/pcsc-lite/-/archive/upstream/2.5.3/pcsc-lite-upstream-2.5.3.tar.gz"
+sha256 = "e8809f610357fef05c18fe2b7d43379d61ebb72db3d0c0d4b10299ccab30d593"
+strip_components = 1
+description = "Middleware to access a smart card using SCard API (PC/SC)"
+homepage = "https://salsa.debian.org/debian/pcsc-lite"
+license = "BSD-2-Clause, GPL-3.0-or-later"
+deps = ["eudev", "libusb"]
+
+[build]
+system = "meson"
+configure_args = ["-Dlibudev=true", "-Dlibsystemd=false", "-Dpolkit=false"]
+tools = ["flex", "perl", "pkg-config"]

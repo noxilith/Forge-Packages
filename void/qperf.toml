@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qperf'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "qperf"
+version = "0.4.11"
+archive = "https://github.com/linux-rdma/qperf/archive/v0.4.11.tar.gz"
+sha256 = "b0ef2ffe050607566d06102b4ef6268aad08fdc52898620d429096e7b0767e75"
+strip_components = 1
+description = "Measure RDMA and TCP/UDP latency and throughput performance"
+homepage = "https://github.com/linux-rdma/qperf"
+license = "GPL-2.0-or-later"
+deps = ["rdma-core"]
+
+[build]
+system = "autotools"

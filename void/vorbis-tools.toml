@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'vorbis-tools'. Review before relying on it.
+# needs, but Forge has no recipe for yet: opusfile, speex
+[package]
+name = "vorbis-tools"
+version = "1.4.3"
+archive = "https://downloads.xiph.org/releases/vorbis/vorbis-tools-1.4.3.tar.gz"
+sha256 = "a1fe3ddc6777bdcebf6b797e7edfe0437954b24756ffcc8c6b816b63e0460dde"
+strip_components = 1
+description = "Tools for Vorbis-Codecs e.g. oggenc and oggdec"
+homepage = "https://xiph.org/vorbis/"
+license = "GPL-2.0-only"
+deps = ["curl", "flac", "libao", "libogg", "libvorbis"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

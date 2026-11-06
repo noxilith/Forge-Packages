@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ksuperkey'. Review before relying on it.
+[package]
+name = "ksuperkey"
+version = "0.4"
+archive = "https://github.com/hanschen/ksuperkey/archive/v0.4.tar.gz"
+sha256 = "0d202c0c7bc9a6eab5ce4f4049545df5ed277af9448361d94a5b725b864fcbbe"
+strip_components = 1
+description = "Allows you to open the application launcher in KDE using the Super key"
+homepage = "https://github.com/hanschen/ksuperkey"
+license = "GPL-3.0-or-later"
+deps = ["libX11", "libXtst"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

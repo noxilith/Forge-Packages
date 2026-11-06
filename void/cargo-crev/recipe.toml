@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cargo-crev'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "cargo-crev"
+version = "0.25.5"
+archive = "https://github.com/crev-dev/cargo-crev/archive/refs/tags/v0.25.5.tar.gz"
+sha256 = "3c26e9abb31ad008f2e1ced8c7b9b859027ce09d4b34fdf363dbf3a07626dca4"
+strip_components = 1
+description = "Cryptographically verifiable code review system for cargo"
+homepage = "https://github.com/crev-dev/cargo-crev"
+license = "MPL-2.0, MIT, Apache-2.0"
+deps = ["nghttp2", "openssl"]
+patches = ["patches/0001-fix-index-guix-dependency-of-crevette.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

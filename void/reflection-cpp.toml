@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'reflection-cpp'. Review before relying on it.
+[package]
+name = "reflection-cpp"
+version = "0.4.0"
+archive = "https://github.com/contour-terminal/reflection-cpp/archive/refs/tags/v0.4.0.tar.gz"
+sha256 = "898e0d653860f996b0b4881d3715a4d236a25e3e82548426c6079ed5192fea08"
+strip_components = 1
+description = "C++ static reflection support library"
+homepage = "https://github.com/contour-terminal/reflection-cpp"
+license = "C++ static reflection support library"
+
+[build]
+system = "cmake"

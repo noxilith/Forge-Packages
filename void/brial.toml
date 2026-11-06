@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'brial'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "brial"
+version = "1.2.15"
+archive = "https://github.com/BRiAl/BRiAl/releases/download/1.2.15/brial-1.2.15.tar.bz2"
+sha256 = "1d0e7de01b1b60ad892dee6c02503f5932e2ed211f3f8dbdf1a3216c696ef201"
+strip_components = 1
+description = "BRiAl (Boolean Ring Algebra) is the successor to PolyBoRi"
+homepage = "https://github.com/BRiAl/BRiAl"
+license = "GPL-2.0-or-later"
+deps = ["m4ri"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

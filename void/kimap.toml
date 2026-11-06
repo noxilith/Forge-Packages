@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kimap'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kimap"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kimap-26.08.1.tar.xz"
+sha256 = "dadca1d3090bc600998333bae006d8062e374ef46d699fa308f52eee00e96f01"
+strip_components = 1
+description = "Job-based API for interacting with IMAP servers"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["cyrus-sasl", "kf6-kio", "kf6-kmime"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

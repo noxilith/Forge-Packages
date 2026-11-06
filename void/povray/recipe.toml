@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'povray'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, CXXFLAGS, LDFLAGS, conf_files
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "povray"
+version = "3.7.0.8"
+archive = "https://github.com/POV-Ray/povray/archive/v3.7.0.8.tar.gz"
+sha256 = "53d11ebd2972fc452af168a00eb83aefb61387662c10784e81b63e44aa575de4"
+strip_components = 1
+description = "Script-based raytracer for 3D graphic production"
+homepage = "http://povray.org/"
+license = "AGPL-3.0-or-later"
+deps = ["libpng", "openexr", "sdl12-compat", "tiff"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["COMPILED_BY=Void", "--disable-optimiz-arch"]

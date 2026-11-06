@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mosquitto'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_check, pre_install
+# settings not translated: make_build_args, make_install_args, CFLAGS, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: uthash
+[package]
+name = "mosquitto"
+version = "2.0.18"
+archive = "https://mosquitto.org/files/source/mosquitto-2.0.18.tar.gz"
+sha256 = "d665fe7d0032881b1371a47f34169ee4edab67903b2cd2b4c083822823f4448a"
+strip_components = 1
+description = "MQTT version 3.1/3.1.1/5.0 compatible message broker"
+homepage = "https://mosquitto.org"
+license = "EPL-1.0, BSD-3-Clause-Attribution"
+deps = ["c-ares", "cJSON", "libwebsockets", "openssl"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "make"

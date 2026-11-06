@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dosbox'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL_net, SDL_sound
+[package]
+name = "dosbox"
+version = "0.74pl3"
+archive = "https://downloads.sourceforge.net/sourceforge/dosbox/dosbox-0.74-3.tar.gz"
+sha256 = "c0d13dd7ed2ed363b68de615475781e891cd582e8162b5c3669137502222260a"
+strip_components = 1
+description = "DOS x86 emulator with Tandy/Herc/CGA/EGA/VGA/SVGA graphics and sound"
+homepage = "http://www.dosbox.com"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "libpng"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

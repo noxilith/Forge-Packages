@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libiodbc'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "libiodbc"
+version = "3.52.12"
+archive = "https://downloads.sourceforge.net/sourceforge/iodbc/libiodbc-3.52.12.tar.gz"
+sha256 = "51c5ff3a7d9a54202486cb77a3514e0e379a135beefcd5d12b96d1901f9dfb62"
+strip_components = 1
+description = "Independent Open DataBase Connectivity"
+homepage = "http://www.iodbc.org/dataspace/iodbc/wiki/iODBC/"
+license = "LGPL-2.1"
+patches = ["patches/musl-remove-wchar_t-check.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-gui", "--disable-libodbc"]
+deps = ["chrpath"]

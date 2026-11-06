@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'appstream-glib'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "appstream-glib"
+version = "0.8.1"
+archive = "https://people.freedesktop.org/~hughsient/appstream-glib/releases/appstream-glib-0.8.1.tar.xz"
+sha256 = "68a3d007f5b3aa84592dbef07950d9acf327da97ec8a6e88a90575d9055ddf6d"
+strip_components = 1
+description = "Install and update applications"
+homepage = "https://people.freedesktop.org/~hughsient/appstream-glib/"
+license = "LGPL-2.1-or-later"
+deps = ["curl", "gcab", "gtk+3", "json-glib", "libarchive", "libyaml"]
+patches = ["patches/rfc9512.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgtk-doc=false", "-Drpm=false", "-Dstemmer=false"]
+tools = ["gperf", "pkg-config"]
+deps = ["gettext", "glib"]

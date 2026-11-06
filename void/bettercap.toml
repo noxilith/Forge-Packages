@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bettercap'. Review before relying on it.
+# settings not translated: go_import_path, LDFLAGS
+# needs, but Forge has no recipe for yet: libnetfilter_queue
+[package]
+name = "bettercap"
+version = "2.41.5"
+archive = "https://github.com/bettercap/bettercap/archive/refs/tags/v2.41.5.tar.gz"
+sha256 = "85513871e105a182eb92f80ba9563ac37cb8a48bcfa98d30e1197e74c42ff15a"
+strip_components = 1
+description = "Network attack and monitoring framework"
+homepage = "https://github.com/bettercap/bettercap"
+license = "GPL-3.0-only"
+deps = ["libpcap", "libusb"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

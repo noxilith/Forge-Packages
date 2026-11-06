@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mate-session-manager'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib
+[package]
+name = "mate-session-manager"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-session-manager-1.28.0.tar.xz"
+sha256 = "d32ce4595ba1da65290777203f2bc82bd973b214a3a04080a1ef5c68990a2d7b"
+strip_components = 1
+description = "MATE Session Manager"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "libICE", "libSM", "libX11", "libXau", "libXcomposite", "libXext", "libXtst", "libepoxy", "libglvnd", "xtrans"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--with-elogind", "--without-systemd"]
+tools = ["pkg-config"]
+deps = ["elogind", "gettext"]

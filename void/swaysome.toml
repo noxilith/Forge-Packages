@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'swaysome'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "swaysome"
+version = "2.3.2"
+archive = "https://gitlab.com/hyask/swaysome/-/archive/2.3.2/swaysome-2.3.2.tar.gz"
+sha256 = "fb3c23bb1a07e9b4f1c6510287086228f0e0aaee4e63690b0b197725a24a4891"
+strip_components = 1
+description = "Awesome WM like workspaces"
+homepage = "https://gitlab.com/hyask/swaysome"
+license = "MIT"
+
+[build]
+system = "cargo"

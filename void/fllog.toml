@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fllog'. Review before relying on it.
+[package]
+name = "fllog"
+version = "1.2.8"
+archive = "https://downloads.sourceforge.net/sourceforge/fldigi/fllog/fllog-1.2.8.tar.gz"
+sha256 = "9092dbd627ddf2c50ec0680db081269611f6f5f40b7537c332328baf32bbaf52"
+strip_components = 1
+description = "Amateur Radio logging software, part of fldigi suite"
+homepage = "http://www.w1hkj.com/"
+license = "GPL-2.0-or-later"
+deps = ["fltk"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'megatools'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "megatools"
+version = "1.11.5"
+archive = "https://xff.cz/megatools/builds/megatools-1.11.5.20250706.tar.gz"
+sha256 = "51f78a03748a64b1066ce28a2ca75d98dbef5f00fe9789dc894827f9a913b362"
+strip_components = 1
+description = "Command line client for Mega.nz file sharing service"
+homepage = "https://xff.cz/megatools/"
+license = "GPL-2.0-or-later"
+deps = ["curl", "fuse", "glib", "glib-networking", "gobject-introspection", "libsodium", "openssl"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["docbook2x"]

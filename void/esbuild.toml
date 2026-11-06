@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'esbuild'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "esbuild"
+version = "0.28.0"
+archive = "https://github.com/evanw/esbuild/archive/refs/tags/v0.28.0.tar.gz"
+sha256 = "7aae83b197db3fd695e6f378d30fd6cbddeb93e4b1057b2c41d36ecb1dfebbc2"
+strip_components = 1
+description = "Extremely fast bundler for the web"
+homepage = "https://esbuild.github.io/"
+license = "MIT"
+
+[build]
+system = "go"
+deps = ["nodejs"]

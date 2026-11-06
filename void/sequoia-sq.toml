@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'sequoia-sq'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: llvm, sqlite
+[package]
+name = "sequoia-sq"
+version = "1.3.1"
+archive = "https://gitlab.com/sequoia-pgp/sequoia-sq/-/archive/v1.3.1/sequoia-sq-v1.3.1.tar.gz"
+sha256 = "9f112096f413e195ec737c81abb5649604f16e1f6dbe64a8accc5bb3ad39e239"
+strip_components = 1
+description = "Command-line frontend for Sequoia, a new OpenPGP implementation"
+homepage = "https://sequoia-pgp.org/projects/#sq"
+license = "GPL-2.0-or-later"
+deps = ["capnproto", "openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features", "crypto-openssl"]
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-secrets'. Review before relying on it.
+# hooks not translated: pre_check
+# needs, but Forge has no recipe for yet: python3-pyhibp, python3-pykcs11, python3-pykeepass, python3-pyotp, python3-validators, python3-zxcvbn-rs-py
+[package]
+name = "gnome-secrets"
+version = "13.0.1"
+archive = "https://gitlab.gnome.org/World/secrets/-/archive/13.0.1/secrets-13.0.1.tar.gz"
+sha256 = "68faa285de9cf6bdb7c1ad07e08dbfc4c423a9cb57b04e2715a1f1dbdfe73184"
+strip_components = 1
+description = "Keepass compatible password manager for GNOME"
+homepage = "https://gitlab.gnome.org/World/secrets"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gtk4", "gtksourceview5", "libadwaita", "python3-gobject"]
+patches = ["patches/01-remove-yubico.patch", "patches/02-cross-build-python-modules.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gobject-introspection", "gtk+3"]

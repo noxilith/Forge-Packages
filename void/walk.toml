@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'walk'. Review before relying on it.
+# settings not translated: make_install_args
+[package]
+name = "walk"
+version = "1.0.0"
+archive = "https://github.com/bbarenblat/walk/archive/refs/tags/v1.0.0.tar.gz"
+sha256 = "7d733cc106ca81390197f772efd4243ab798fe12ee7de30ceec3ce92cb762375"
+strip_components = 1
+description = "Two utilities collectively replacing find: walk and sor"
+homepage = "https://github.com/bbarenblat/walk"
+license = "Apache-2.0"
+
+[build]
+system = "make"
+deps = ["gzip"]

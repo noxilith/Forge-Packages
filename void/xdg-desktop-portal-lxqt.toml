@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xdg-desktop-portal-lxqt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "xdg-desktop-portal-lxqt"
+version = "1.4.0"
+archive = "https://github.com/lxqt/xdg-desktop-portal-lxqt/archive/1.4.0.tar.gz"
+sha256 = "d6155f64377079340a884c4cb826aab62a70a5e979ac8d31310e21d77c59a657"
+strip_components = 1
+description = "Backend implementation for xdg-desktop-portal using KF6"
+homepage = "https://github.com/lxqt/xdg-desktop-portal-lxqt"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kwindowsystem", "libexif", "libfm-qt", "menu-cache", "qt6-base"]
+
+[build]
+system = "cmake"

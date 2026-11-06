@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'acbuild'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "acbuild"
+version = "0.4.0"
+archive = "https://github.com/appc/acbuild/archive/v0.4.0.tar.gz"
+sha256 = "88d99a002eb53212752d6f405d9e02555512b27c5b84e8ef5828607ee9774ed4"
+strip_components = 1
+description = "Build tool for ACIs"
+homepage = "https://github.com/appc/acbuild"
+license = "Apache-2.0"
+
+[build]
+system = "go"

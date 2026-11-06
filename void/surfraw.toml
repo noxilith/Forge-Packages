@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'surfraw'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "surfraw"
+version = "2.3.0"
+archive = "https://gitlab.com/surfraw/Surfraw/-/archive/surfraw-2.3.0/Surfraw-surfraw-2.3.0.tar.gz"
+sha256 = "b5e2b451a822ed437b165a5c81d8448570ee590db902fcd8174d6c51fcc4a16d"
+strip_components = 1
+description = "Command line interface to variety of search engines"
+homepage = "https://gitlab.com/surfraw/Surfraw"
+license = "Public Domain"
+
+[build]
+system = "autotools"
+tools = ["perl"]

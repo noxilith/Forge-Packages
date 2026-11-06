@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'apr'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "apr"
+version = "1.7.6"
+archive = "https://archive.apache.org/dist/apr/apr-1.7.6.tar.bz2"
+sha256 = "49030d92d2575da735791b496dc322f3ce5cff9494779ba8cc28c7f46c5deb32"
+strip_components = 1
+description = "Apache Portable Runtime Library"
+homepage = "https://apr.apache.org/"
+license = "Apache-2.0"
+deps = ["expat"]
+patches = ["patches/fix-musl-32bit-strerror_r-conversion.patch", "patches/partial-disable-test.patch"]
+
+[build]
+system = "autotools"

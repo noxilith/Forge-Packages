@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nvidia-vaapi-driver'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "nvidia-vaapi-driver"
+version = "0.0.16"
+archive = "https://github.com/elFarto/nvidia-vaapi-driver/archive/refs/tags/v0.0.16.tar.gz"
+sha256 = "799244cab5ace62b6354e429bd56faa83045470c438fbea13690b4d06754eb8b"
+strip_components = 1
+description = "VA-API implementation using NVIDIA's NVDEC"
+homepage = "https://github.com/elFarto/nvidia-vaapi-driver"
+license = "MIT"
+deps = ["gst-plugins-bad1", "libglvnd", "libva", "nv-codec-headers"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'liferea'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper, lib32disabled
+# needs, but Forge has no recipe for yet: intltool, libwebkit2gtk41, sqlite
+[package]
+name = "liferea"
+version = "1.16.5"
+archive = "https://github.com/lwindolf/liferea/releases/download/v1.16.5/liferea-1.16.5.tar.bz2"
+sha256 = "b07e10da62f42f18d1539e204037d32cb63b433bc68a2f8836c25bbd1098e0a5"
+strip_components = 1
+description = "GTK news aggregator"
+homepage = "https://lzone.de/liferea/"
+license = "GPL-2.0-or-later"
+deps = ["gsettings-desktop-schemas", "json-glib", "libpeas2", "libsoup3", "libxslt"]
+patches = ["patches/fix-plugin-requires.patch", "patches/time32.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

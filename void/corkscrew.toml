@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'corkscrew'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "corkscrew"
+version = "2.0"
+archive = "https://github.com/bryanpkc/corkscrew/archive/refs/tags/v2.0.tar.gz"
+sha256 = "09d70daaa3145070a1e463dbab6ae1cbc62449b1e09c94e158f6017e7c79c9f6"
+strip_components = 1
+description = "Corkscrew is a tool for tunneling SSH through HTTP proxies"
+homepage = "https://github.com/bryanpkc/corkscrew"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

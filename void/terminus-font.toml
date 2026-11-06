@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'terminus-font'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_install_target
+[package]
+name = "terminus-font"
+version = "4.49.1"
+archive = "https://downloads.sourceforge.net/sourceforge/terminus-font/terminus-font-4.49.1.tar.gz"
+sha256 = "d961c1b781627bf417f9b340693d64fc219e0113ad3a3af1a3424c7aa373ef79"
+strip_components = 1
+description = "Clean, fixed width bitmap font"
+homepage = "http://terminus-font.sourceforge.net/"
+license = "OFL-1.1, GPL-2.0-or-later"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+deps = ["bdftopcf"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mtd-utils'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: util-linux-common, zstd
+[package]
+name = "mtd-utils"
+version = "2.3.1"
+archive = "https://github.com/sigma-star/mtd-utils/archive/refs/tags/v2.3.1.tar.gz"
+sha256 = "f53cde04802439fa6ac2ffbd80955f2b790262c02bd6fa2f7783a19fdc33716d"
+strip_components = 1
+description = "Memory Technology Device Utilities"
+homepage = "https://www.linux-mtd.infradead.org/"
+license = "GPL-2.0-or-later"
+deps = ["acl", "lzo", "openssl", "xz", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

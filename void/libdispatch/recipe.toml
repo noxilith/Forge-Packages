@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libdispatch'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "libdispatch"
+version = "5.10.1"
+archive = "https://github.com/apple/swift-corelibs-libdispatch/archive/refs/tags/swift-5.10.1-RELEASE.tar.gz"
+sha256 = "affa3544b0fdb60f8f175bc0d2846177436d5848ef8ca73e3e560d23986f38b3"
+strip_components = 1
+description = "Concurrent multicore library"
+homepage = "https://github.com/apple/swift-corelibs-libdispatch"
+license = "Apache-2.0"
+patches = ["patches/musl.patch", "patches/werror.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_C_COMPILER=clang", "-DCMAKE_CXX_COMPILER=clang++"]

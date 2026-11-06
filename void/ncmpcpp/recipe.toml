@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'ncmpcpp'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, fftw, libreadline8
+[package]
+name = "ncmpcpp"
+version = "0.10.1"
+archive = "https://github.com/ncmpcpp/ncmpcpp/archive/refs/tags/0.10.1.tar.gz"
+sha256 = "ddc89da86595d272282ae8726cc7913867b9517eec6e765e66e6da860b58e2f9"
+strip_components = 1
+description = "Ncurses mpd client inspired by ncmpc"
+homepage = "https://rybczak.net/ncmpcpp"
+license = "GPL-2.0-or-later"
+deps = ["curl", "libicu78", "libmpdclient", "taglib"]
+patches = ["patches/fix-cxxflags.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-clock", "--enable-outputs", "--enable-unicode", "boost_cv_lib_system=yes", "boost_cv_lib_date_time=yes", "boost_cv_lib_regex=yes", "--enable-visualizer", "--with-curl", "--with-taglib", "--with-fftw"]
+tools = ["pkg-config"]

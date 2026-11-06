@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'lxpanel'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: intltool, wireless_tools
+[package]
+name = "lxpanel"
+version = "0.11.1"
+archive = "https://github.com/lxde/lxpanel/archive/refs/tags/0.11.1.tar.gz"
+sha256 = "24334dde6ed37d32bb021f902dbd54a1e6cdd01f35a778d80fcd3acd23a0e93b"
+strip_components = 1
+description = "LXDE Standard panel"
+homepage = "http://lxde.org/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "curl", "gtk+3", "libfm", "libfm-extra", "libkeybinder3", "libwnck", "libxml2", "lxmenu-data", "menu-cache"]
+patches = ["patches/10-devproc-lxpanel.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

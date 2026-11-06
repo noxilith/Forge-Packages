@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'remwharead'. Review before relying on it.
+# needs, but Forge has no recipe for yet: asciidoc, boost
+[package]
+name = "remwharead"
+version = "0.10.0"
+archive = "https://github.com/tastytea/remwharead/archive/refs/tags/0.10.0.tar.gz"
+sha256 = "87f14a611e3ae9f9babe2dff8e4a6c4f5495fa2883393edb36e796af3f19fb30"
+strip_components = 1
+description = "Saves URIs of things you want to remember in a database"
+homepage = "https://schlomp.space/tastytea/remwharead"
+license = "GPL-3.0-only"
+deps = ["poco"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

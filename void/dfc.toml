@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dfc'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "dfc"
+version = "3.1.1"
+archive = "https://github.com/Rolinh/dfc/archive/v3.1.1.tar.gz"
+sha256 = "cea18fab1f053eddc359530816712edd1f497c556035a7c4d63ac87a4abc4b28"
+strip_components = 1
+description = "Display file system space usage using graphs and colors"
+homepage = "https://github.com/Rolinh/dfc"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+deps = ["gettext"]

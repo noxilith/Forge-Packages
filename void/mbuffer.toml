@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mbuffer'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "mbuffer"
+version = "20250809"
+archive = "https://www.maier-komor.de/software/mbuffer/mbuffer-20250809.tgz"
+sha256 = "9865dae42452437a19ae448467810a03aa46d4f25e29995eb6d6d4f39c67cd1e"
+strip_components = 1
+description = "Buffer data streams with many additional functions"
+homepage = "https://www.maier-komor.de/mbuffer.html"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+deps = ["which"]

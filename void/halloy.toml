@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'halloy'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "halloy"
+version = "2026.10"
+archive = "https://github.com/squidowl/halloy/archive/refs/tags/2026.10.tar.gz"
+sha256 = "19b77a7e09cf66ef518bfa5b1e8b3c07713373d7468d30500b093e327729a00b"
+strip_components = 1
+description = "IRC application"
+homepage = "https://github.com/squidowl/halloy"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "libxcb"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features"]
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gtk-engine-equinox'. Review before relying on it.
+# hooks not translated: post_extract, pre_configure
+[package]
+name = "gtk-engine-equinox"
+version = "1.50"
+archive = "https://launchpad.net/~tiheum/+archive/ubuntu/equinox/+files/gtk2-engines-equinox_1.50.tar.gz"
+sha256 = "319e81644c307c15637e7751bad157d55f4e8d485805f8b0734389cf1909c43e"
+strip_components = 1
+description = "Heavily modified version of the beautiful Aurora engine"
+homepage = "https://www.gnome-look.org/p/1080263/"
+license = "GPL-2.0-only"
+deps = ["gtk+"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-animation"]
+tools = ["pkg-config"]

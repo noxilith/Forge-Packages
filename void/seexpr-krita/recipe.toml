@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'seexpr-krita'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "seexpr-krita"
+version = "4.0.4.0"
+archive = "https://download.kde.org/stable/kseexpr/4.0.4/kseexpr-4.0.4.0.tar.gz"
+sha256 = "ea4f6a8e820e6cc12d2a1e6977e96ea5457f37729fe0bc4ee8cc62d4c26c36ae"
+strip_components = 1
+description = "Embeddable expression evaluation engine (Krita fork)"
+homepage = "https://krita.org"
+license = "GPL-3.0-or-later"
+deps = ["ki18n"]
+patches = ["patches/cmake-build-type-none.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DEMOS=OFF"]
+deps = ["extra-cmake-modules", "gettext"]

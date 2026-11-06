@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nitroshare'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "nitroshare"
+version = "0.3.4"
+archive = "https://github.com/nitroshare/nitroshare-desktop/archive/0.3.4.tar.gz"
+sha256 = "29874e5909c29211a3c9e13f8c0f49b901ec2996e5d60d80af80d2fb80c3d7ec"
+strip_components = 1
+description = "Network file transfer application"
+homepage = "http://nitroshare.net"
+license = "MIT"
+deps = ["libnotify", "qhttpengine", "qmdnsengine"]
+patches = ["patches/fix-build-with-qt-5-11.patch", "patches/python3.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

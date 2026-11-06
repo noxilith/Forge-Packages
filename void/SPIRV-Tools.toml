@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'SPIRV-Tools'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: LDFLAGS
+[package]
+name = "SPIRV-Tools"
+version = "2026.4"
+archive = "https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/v2026.4.tar.gz"
+sha256 = "92df4c377603f086c3d2a1eb2bd9b8f883a73ca890fb939d78a0cecdcc01686c"
+strip_components = 1
+description = "API and commands for processing SPIR-V modules"
+homepage = "https://github.com/KhronosGroup/SPIRV-Tools"
+license = "Apache-2.0"
+deps = ["SPIRV-Headers"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSPIRV_SKIP_TESTS=ON", "-DSPIRV_WERROR=OFF"]

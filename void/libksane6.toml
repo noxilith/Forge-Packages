@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libksane6'. Review before relying on it.
+[package]
+name = "libksane6"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libksane-26.08.1.tar.xz"
+sha256 = "95281efd9a8754d152889958336deb9e16291ef77280bb29f8d48e9ed926fc07"
+strip_components = 1
+description = "Image scanning library"
+homepage = "https://kde.org/applications/graphics"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-ki18n", "kf6-ktextwidgets", "ksanecore6", "qt6-base", "sane"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_WITH_QT6=ON"]
+deps = ["extra-cmake-modules", "gettext"]

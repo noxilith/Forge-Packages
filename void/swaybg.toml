@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'swaybg'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "swaybg"
+version = "1.2.2"
+archive = "https://github.com/swaywm/swaybg/archive/refs/tags/v1.2.2.tar.gz"
+sha256 = "94e5c06a765d969e554b0f321f9cdf9c283a3fdaf70ad4e3d28163b21bd4d240"
+strip_components = 1
+description = "Wallpaper tool for Wayland compositors"
+homepage = "https://swaywm.org"
+license = "MIT"
+deps = ["cairo", "gdk-pixbuf", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

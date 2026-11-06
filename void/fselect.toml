@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fselect'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "fselect"
+version = "0.10.3"
+archive = "https://github.com/jhspetersson/fselect/archive/refs/tags/0.10.3.tar.gz"
+sha256 = "e2dc2d40c58c273a6e9efece80ad14dc05f07ad01bbafd0fba5da3ebd73464e1"
+strip_components = 1
+description = "Find files with SQL-like queries"
+homepage = "https://fselect.rocks"
+license = "Apache-2.0 OR MIT"
+deps = ["libgit2-1.9", "openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features=users,git,interactive"]
+tools = ["pkg-config"]

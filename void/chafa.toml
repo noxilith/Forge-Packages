@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'chafa'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: docbook-xml, docbook-xsl, libavif, libjxl, libwebp
+[package]
+name = "chafa"
+version = "1.18.3"
+archive = "https://hpjansson.org/chafa/releases/chafa-1.18.3.tar.xz"
+sha256 = "fb995ef21dce6c73dd0dd454ba3e0f7fac08e053ea16060a2e5ce69a3746ee27"
+strip_components = 1
+description = "Versatile and fast Unicode/ASCII/ANSI graphics renderer"
+homepage = "https://hpjansson.org/chafa/"
+license = "LGPL-3.0-or-later"
+deps = ["glib", "libXext", "libheif", "librsvg", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-man"]
+tools = ["pkg-config"]
+deps = ["libxslt"]

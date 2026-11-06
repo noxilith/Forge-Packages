@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wildmidi'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "wildmidi"
+version = "0.5.0"
+archive = "https://github.com/Mindwerks/wildmidi/archive/wildmidi-0.5.0.tar.gz"
+sha256 = "2164396d5fe80153fd2af9764fcd991883d06fbf1fdfd96efbc99eed21ed1a2f"
+strip_components = 1
+description = "Simple software midi player and core softsynth library"
+homepage = "https://github.com/Mindwerks/wildmidi"
+license = "GPL-3.0-or-later, LGPL-3.0-only"
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

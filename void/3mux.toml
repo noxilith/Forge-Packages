@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for '3mux'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "3mux"
+version = "1.1.0"
+archive = "https://github.com/aaronjanse/3mux/archive/v1.1.0.tar.gz"
+sha256 = "0f4dae181914c73eaa91bdb21ee0875f21b5da64c7c9d478f6d52a2d0aa2c0ea"
+strip_components = 1
+description = "Terminal multiplexer inspired by i3"
+homepage = "https://github.com/aaronjanse/3mux"
+license = "MIT"
+
+[build]
+system = "go"

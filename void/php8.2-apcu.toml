@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'php8.2-apcu'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure, pre_install
+# needs, but Forge has no recipe for yet: php8.2
+[package]
+name = "php8.2-apcu"
+version = "5.1.24"
+archive = "https://pecl.php.net/get/apcu-5.1.24.tgz"
+sha256 = "5c28a55b27082c69657e25b7ecf553e2cf6b74ec3fa77d6b76f4fb982e001e43"
+strip_components = 1
+description = "In-memory key-value store for PHP"
+homepage = "https://pecl.php.net/package/APCu"
+license = "PHP-3.01"
+deps = ["pcre2"]
+
+[build]
+system = "autotools"

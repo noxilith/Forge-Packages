@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'immer'. Review before relying on it.
+[package]
+name = "immer"
+version = "0.9.1"
+archive = "https://github.com/arximboldi/immer/archive/refs/tags/v0.9.1.tar.gz"
+sha256 = "b18b92ba60ec3186dc36ef671d3c2ae542cbb63eb6dc0e258476c6111a67c971"
+strip_components = 1
+description = "Immutable and persistent data structures for C++"
+homepage = "https://github.com/arximboldi/immer"
+license = "BSL-1.0"
+
+[build]
+system = "cmake"
+configure_args = ["-Dimmer_BUILD_TESTS=OFF", "-Dimmer_BUILD_EXAMPLES=OFF"]

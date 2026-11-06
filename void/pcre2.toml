@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pcre2'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2, libreadline8
+[package]
+name = "pcre2"
+version = "10.49"
+archive = "https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.49/pcre2-10.49.tar.bz2"
+sha256 = "53c156e1ba416a20da8e65395daa132da0d80e76910424caca3fcdae7831d384"
+strip_components = 1
+description = "Perl Compatible Regular Expressions (2nd version)"
+homepage = "https://www.pcre.org/"
+license = "BSD-3-Clause"
+deps = ["zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-pic", "--enable-pcre2-16", "--enable-pcre2-32", "--enable-pcre2test-libreadline", "--enable-pcre2grep-libz", "--enable-pcre2grep-libbz2", "--enable-newline-is-anycrlf", "--enable-jit", "--enable-static", "--disable-symvers"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lbreakouthd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: SDL2_image, hicolor-icon-theme
+[package]
+name = "lbreakouthd"
+version = "1.2.3"
+archive = "https://downloads.sourceforge.net/sourceforge/lgames/lbreakouthd-1.2.3.tar.gz"
+sha256 = "effca8b96e4a87dfbc92ca1570f4e306e3fcc34efff7451eca11b4b72d1519c8"
+strip_components = 1
+description = "Scalable 16:9 remake of LBreakout2"
+homepage = "https://lgames.sourceforge.net/LBreakoutHD/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_mixer", "SDL2_ttf", "desktop-file-utils"]
+patches = ["patches/uint.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libigloo'. Review before relying on it.
+[package]
+name = "libigloo"
+version = "0.9.5"
+archive = "https://downloads.xiph.org/releases/igloo/libigloo-0.9.5.tar.gz"
+sha256 = "ea22e9119f7a2188810f99100c5155c6762d4595ae213b9ac29e69b4f0b87289"
+strip_components = 1
+description = "Generic C framework used and developed by the Icecast project"
+homepage = "https://gitlab.xiph.org/xiph/icecast-libigloo"
+license = "GPL-2.0-or-later"
+deps = ["rhash"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

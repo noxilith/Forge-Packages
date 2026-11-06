@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'go-jira'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "go-jira"
+version = "1.0.28"
+archive = "https://github.com/go-jira/jira/archive/v1.0.28.tar.gz"
+sha256 = "179abe90458281175a482cbd2e1ad662bdf563ef5acfc2cadf215ae32e0bd1e6"
+strip_components = 1
+description = "Simple jira command line client in Go"
+homepage = "https://github.com/go-jira/jira"
+license = "Apache-2.0"
+
+[build]
+system = "go"
+deps = ["dep"]

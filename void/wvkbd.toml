@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wvkbd'. Review before relying on it.
+[package]
+name = "wvkbd"
+version = "0.19.4"
+archive = "https://git.sr.ht/~proycon/wvkbd/archive/v0.19.4.tar.gz"
+sha256 = "d4975881700a86e67f1baadf343785580ca01cdc16aa7b65ae7c20e5e26bf241"
+strip_components = 1
+description = "On-screen keyboard for wlroots"
+homepage = "https://git.sr.ht/~proycon/wvkbd"
+license = "GPL-3.0-only"
+deps = ["libxkbcommon", "pango", "wayland"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["scdoc"]

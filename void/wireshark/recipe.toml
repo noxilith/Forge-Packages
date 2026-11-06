@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'wireshark'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_check
+# settings not translated: CFLAGS, CXXFLAGS
+# needs, but Forge has no recipe for yet: lua54, mit-krb5, qt6-multimedia, qt6-qt5compat, qt6-svg, qt6-tools, ruby-asciidoctor, speexdsp, sqlite, zstd
+[package]
+name = "wireshark"
+version = "4.6.9"
+archive = "https://www.wireshark.org/download/src/all-versions/wireshark-4.6.9.tar.xz"
+sha256 = "d062d416a1ab3a49975aafe3a671c882dde0562ccd71b078808ceb59d465fc0f"
+strip_components = 1
+description = "Network protocol analyzer"
+homepage = "https://www.wireshark.org"
+license = "GPL-2.0-or-later"
+deps = ["bcg729", "brotli", "c-ares", "glib", "gnutls", "libcap", "libgcrypt", "libilbc", "libmaxminddb", "libnl3", "libpcap", "libsmi", "libssh", "libxml2", "lz4", "minizip", "nghttp2", "nghttp3", "opencore-amr", "opus", "pcre2", "qt6-base", "sbc", "snappy", "spandsp", "tiff", "xxHash", "zlib"]
+patches = ["patches/install-pkgconfig.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DHAVE_C99_VSNPRINTF=ON"]
+tools = ["flex", "perl", "pkg-config"]
+deps = ["gettext", "libxslt"]

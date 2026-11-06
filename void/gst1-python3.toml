@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gst1-python3'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-packaging-bootstrap
+[package]
+name = "gst1-python3"
+version = "1.28.6"
+archive = "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.28.6.tar.xz"
+sha256 = "34d58440c53b5495a123d0a4b7b7abbc6e9792a5b21954db86a0791b16f6e012"
+strip_components = 1
+description = "Python3 bindings for GStreamer 1.x"
+homepage = "https://gstreamer.freedesktop.org"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "gst-plugins-bad1", "gst-plugins-base1", "gst-rtsp-server", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

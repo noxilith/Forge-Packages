@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cairo-dock'. Review before relying on it.
+# settings not translated: CFLAGS, CXXFLAGS, lib32disabled
+# needs, but Forge has no recipe for yet: dbus-glib
+[package]
+name = "cairo-dock"
+version = "3.6.2"
+archive = "https://github.com/Cairo-Dock/cairo-dock-core/archive/refs/tags/3.6.2.tar.gz"
+sha256 = "71e351d904d86f04d489e5b58c510fe2276ab129aee9ba98308508abf2dcfa87"
+strip_components = 1
+description = "Light eye-candy fully themable animated dock"
+homepage = "http://glx-dock.org/"
+license = "GPL-3.0-or-later"
+deps = ["cairo", "curl", "dbus", "desktop-file-utils", "glib", "glu", "gtk+3", "gtk-layer-shell", "json-c", "libX11", "libXcomposite", "libXinerama", "libXrandr", "libXrender", "libXtst", "libglvnd", "librsvg", "libxml2", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-Denable-desktop-manager=ON", "-Denable-egl-support=ON", "-Denable-systemd-service=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "wayland-protocols"]

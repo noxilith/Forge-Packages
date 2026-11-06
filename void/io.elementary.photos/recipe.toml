@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'io.elementary.photos'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebp, python3-scour, sqlite
+[package]
+name = "io.elementary.photos"
+version = "2.7.5"
+archive = "https://github.com/elementary/photos/archive/2.7.5.tar.gz"
+sha256 = "dbf1161fa88635fff7b890605ed5d753e581a7efd691b3c9c4ad33d424e06974"
+strip_components = 1
+description = "Photo viewer and organizer designed for elementary OS"
+homepage = "https://github.com/elementary/photos"
+license = "LGPL-2.1-or-later"
+deps = ["desktop-file-utils", "geocode-glib", "glib", "granite", "gsettings-desktop-schemas", "gst-plugins-base1", "gstreamer1", "gtk+3", "libaccounts-glib", "libexif", "libgee", "libgexiv2", "libgphoto2", "libgudev", "libhandy1", "libnotify", "libraw", "vte3"]
+patches = ["patches/rm-publishing.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["AppStream", "gettext", "vala"]

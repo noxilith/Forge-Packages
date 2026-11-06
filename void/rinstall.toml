@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'rinstall'. Review before relying on it.
+[package]
+name = "rinstall"
+version = "0.2.0"
+archive = "https://github.com/danyspin97/rinstall/archive/refs/tags/0.2.0.tar.gz"
+sha256 = "386ae4d52ad62b03304596d5dfc7bb273492ac3fed54f1110d0da8dc1847e4c6"
+strip_components = 1
+description = "Declarative install for programs"
+homepage = "https://github.com/danyspin97/rinstall"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

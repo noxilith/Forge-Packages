@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'myrepos'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mercurial, perl
+[package]
+name = "myrepos"
+version = "1.20180726"
+archive = "https://git.joeyh.name/index.cgi/myrepos.git/snapshot/myrepos-1.20180726.tar.gz"
+sha256 = "bfb909037da678a1668f3f7f86efee7ee31f2bc66d90b83dd9e6b6a5f998c4e2"
+strip_components = 1
+description = "Multiple Repository management tool"
+homepage = "https://myrepos.branchable.com"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"
+tools = ["perl"]

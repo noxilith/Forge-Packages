@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'modsecurity'. Review before relying on it.
+# hooks not translated: pre_build, pre_configure
+# needs, but Forge has no recipe for yet: lmdb, lua54, perl-LWP
+[package]
+name = "modsecurity"
+version = "3.0.14"
+archive = "https://github.com/SpiderLabs/ModSecurity/releases/download/v3.0.14/modsecurity-v3.0.14.tar.gz"
+sha256 = "f7599057b35e67ab61764265daddf9ab03c35cee1e55527547afb073ce8f04e8"
+strip_components = 1
+description = "Rule based web application firewall (WAF)"
+homepage = "https://www.modsecurity.org"
+license = "Apache-2.0"
+deps = ["apache", "curl", "gdbm", "libicu78", "libxml2", "pcre", "yajl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-standalone-module", "--enable-htaccess-config"]
+tools = ["pkg-config"]

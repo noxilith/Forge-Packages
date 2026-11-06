@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lite-xl'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: lua54
+[package]
+name = "lite-xl"
+version = "2.1.8"
+archive = "https://github.com/lite-xl/lite-xl/archive/refs/tags/v2.1.8.tar.gz"
+sha256 = "fcaffb946bc60583369cb040d533a4ac18075a6d474d49a2a5ff4bf87e2e9a10"
+strip_components = 1
+description = "Lightweight text editor written in Lua"
+homepage = "https://lite-xl.com/"
+license = "MIT"
+deps = ["SDL3", "freetype", "pcre2"]
+
+[build]
+system = "meson"
+configure_args = ["-Duse_system_lua=true", "-Drenderer=true"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'arp-scan'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "arp-scan"
+version = "1.10.0"
+archive = "https://github.com/royhills/arp-scan/archive/1.10.0/arp-scan-1.10.0.tar.gz"
+sha256 = "204b13487158b8e46bf6dd207757a52621148fdd1d2467ebd104de17493bab25"
+strip_components = 1
+description = "Tool that uses ARP to discover IP hosts on the local network"
+homepage = "https://github.com/royhills/arp-scan"
+license = "GPL-3.0-or-later"
+deps = ["libpcap"]
+
+[build]
+system = "autotools"

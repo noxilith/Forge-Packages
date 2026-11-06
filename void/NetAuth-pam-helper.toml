@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'NetAuth-pam-helper'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "NetAuth-pam-helper"
+version = "0.1.5"
+archive = "https://www.github.com/netauth/pam-helper/archive/v0.1.5.tar.gz"
+sha256 = "1f4fd5e914e6a423ba51911c89b105736b595a2328946e298a31e9dc144d1998"
+strip_components = 1
+description = "Helper executable to use with pam_exec"
+homepage = "https://www.github.com/netauth/pam-helper"
+license = "MIT"
+
+[build]
+system = "go"

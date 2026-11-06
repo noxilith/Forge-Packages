@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'go-for-it'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libcanberra
+[package]
+name = "go-for-it"
+version = "1.9.6"
+archive = "https://github.com/JMoerman/Go-For-It/archive/1.9.6.tar.gz"
+sha256 = "bd85f2ad839a5e547f2152a5d1e98786a5d3ba75169ccbdc34ad322f860a73ca"
+strip_components = 1
+description = "ToDo-list and productivity app"
+homepage = "https://github.com/JMoerman/Go-For-It"
+license = "GPL-3.0-only"
+deps = ["libnotify"]
+patches = ["patches/vala-0.56.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

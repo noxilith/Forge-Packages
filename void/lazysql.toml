@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lazysql'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "lazysql"
+version = "0.7.0"
+archive = "https://github.com/jorgerojas26/lazysql/archive/refs/tags/v0.7.0.tar.gz"
+sha256 = "735b5a987c8a84a699d34d0cba1a3bcce6d65a46cf608d96758df6257ca353f7"
+strip_components = 1
+description = "Simple terminal UI for SQL database management"
+homepage = "https://github.com/jorgerojas26/lazysql"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'SoapyHackRF'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "SoapyHackRF"
+version = "0.3.4"
+archive = "https://github.com/pothosware/SoapyHackRF/archive/soapy-hackrf-0.3.4.tar.gz"
+sha256 = "c7a1b8aee7af9d9e11e42aa436eae8508f19775cdc8bc52e565a5d7f2e2e43ed"
+strip_components = 1
+description = "SoapySDR module for HackRF"
+homepage = "https://github.com/pothosware/SoapyHackRF"
+license = "MIT"
+deps = ["SoapySDR", "hackrf"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

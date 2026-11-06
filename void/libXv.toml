@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXv'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXv"
+version = "1.0.13"
+archive = "https://www.x.org/releases/individual/lib/libXv-1.0.13.tar.xz"
+sha256 = "7d34910958e1c1f8d193d828fea1b7da192297280a35437af0692f003ba03755"
+strip_components = 1
+description = "Xv Extension library"
+homepage = "https://www.x.org/releases/individual"
+license = "MIT"
+deps = ["libX11", "libXext", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]

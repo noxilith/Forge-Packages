@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'exiv2'. Review before relying on it.
+# hooks not translated: pre_check
+[package]
+name = "exiv2"
+version = "0.28.9"
+archive = "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.9.tar.gz"
+sha256 = "700b76b97695b2fab4ef8c79619c68ae57d09e0c130724791cafbd39e0eb4aef"
+strip_components = 1
+description = "Image metadata manipulation"
+homepage = "https://exiv2.org"
+license = "GPL-2.0-or-later"
+deps = ["brotli", "expat", "inih", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DEXIV2_BUILD_SAMPLES=OFF", "-DEXIV2_ENABLE_BMFF=ON"]

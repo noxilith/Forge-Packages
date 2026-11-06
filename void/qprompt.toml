@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qprompt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-shadertools, qt6-svg, qt6-tools
+[package]
+name = "qprompt"
+version = "2.0.3"
+archive = "https://github.com/Cuperino/QPrompt/archive/refs/tags/v2.0.3.tar.gz"
+sha256 = "a542c9ef95ddb4cf5a6f3603964cceabfdba578b7e37d349be332a30aede7cc2"
+strip_components = 1
+description = "Teleprompter software for all video creators"
+homepage = "https://qprompt.app/"
+license = "GPL-3.0-or-later"
+deps = ["QHotkey", "kf6-kcoreaddons", "kf6-kirigami", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSOURCE_DEPENDENCIES_EXCLUSIVELY_FROM_SYSTEM=ON"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-declarative"]

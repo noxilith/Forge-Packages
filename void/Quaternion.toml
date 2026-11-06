@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'Quaternion'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-tools
+[package]
+name = "Quaternion"
+version = "0.0.97.1"
+archive = "https://github.com/quotient-im/Quaternion/archive/0.0.97.1.tar.gz"
+sha256 = "1d19374124a3a266390f0d1519b970ece4c2efb6921b31de747852a57f34c1ca"
+strip_components = 1
+description = "Qt-based IM client for the Matrix protocol"
+homepage = "https://github.com/quotient-im/Quaternion"
+license = "GPL-3.0-or-later"
+deps = ["libQuotient", "olm", "qt6-base", "qt6-declarative", "qtkeychain-qt6"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'appres'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "appres"
+version = "1.0.7"
+archive = "https://www.x.org/releases/individual/app/appres-1.0.7.tar.xz"
+sha256 = "1114b189239fd87a8d1db433edcb4486346d29912132b91eaeee5667f13b819f"
+strip_components = 1
+description = "List X application resource database"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXt"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

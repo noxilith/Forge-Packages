@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xrefresh'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xrefresh"
+version = "1.1.1"
+archive = "https://www.x.org/releases/individual/app/xrefresh-1.1.1.tar.gz"
+sha256 = "59b685a378e55da7b554199f41b4f5a423ed1d86b4d2dfa2290751aa71b4e2ea"
+strip_components = 1
+description = "Refresh all or part of an X screen"
+homepage = "https://gitlab.freedesktop.org/xorg/app/xrefresh"
+license = "MIT"
+deps = ["libX11"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

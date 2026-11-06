@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libite'. Review before relying on it.
+# hooks not translated: post_install, pre_check, pre_configure
+[package]
+name = "libite"
+version = "2.6.2"
+archive = "https://github.com/troglobit/libite/archive/v2.6.2.tar.gz"
+sha256 = "47346fac08ac69cb64eec34478d5aec5787ec96524209d1394417e32d66213b4"
+strip_components = 1
+description = "Lightweight library of frog DNA"
+homepage = "https://github.com/troglobit/libite"
+license = "MIT AND ISC AND BSD-2-Clause AND BSD-3-Clause"
+
+[build]
+system = "autotools"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'SPIRV-LLVM-Translator22'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "SPIRV-LLVM-Translator22"
+version = "22.1.7"
+archive = "https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/refs/tags/v22.1.7.tar.gz"
+sha256 = "2b46118831851f1d43eaf20f05ae9cec4088a666e169d9fe4762b9b21826842b"
+strip_components = 1
+description = "LLVM/SPIR-V bi-directional translator - LLVM 22"
+homepage = "https://github.com/KhronosGroup/SPIRV-LLVM-Translator"
+license = "NCSA"
+deps = ["SPIRV-Headers", "SPIRV-Tools", "llvm22"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_SKIP_RPATH=ON", "-DLLVM_LINK_LLVM_DYLIB=ON", "-DLLVM_SPIRV_ENABLE_LIBSPIRV_DIS=ON", "-DLLVM_SPIRV_INCLUDE_TESTS=OFF"]
+tools = ["pkg-config"]

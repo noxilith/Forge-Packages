@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'quazip'. Review before relying on it.
+# hooks not translated: post_build, post_check, post_configure, post_install
+# needs, but Forge has no recipe for yet: bzip2, qt5, qt6-qt5compat, qt6-tools
+[package]
+name = "quazip"
+version = "1.7.2"
+archive = "https://github.com/stachenov/quazip/archive/v1.7.2.tar.gz"
+sha256 = "5240f4a3475648773ba10af8b0ebe549cbfc5d6de00470a517330a80068a4f78"
+strip_components = 1
+description = "Qt5/C++ wrapper for the Gilles Vollant's ZIP/UNZIP C package"
+homepage = "https://github.com/stachenov/quazip"
+license = "LGPL-2.1-only"
+deps = ["qt6-base", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQUAZIP_QT_MAJOR_VERSION=5"]

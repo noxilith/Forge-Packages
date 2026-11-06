@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'pulseaudio'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: doxygen, fftw, jack, libasyncns, orc, perl-XML-Parser, speex, tdb
+[package]
+name = "pulseaudio"
+version = "16.1"
+archive = "https://www.freedesktop.org/software/pulseaudio/releases/pulseaudio-16.1.tar.xz"
+sha256 = "8eef32ce91d47979f95fd9a935e738cd7eb7463430dabc72863251751e504ae4"
+strip_components = 1
+description = "Featureful, general-purpose sound server"
+homepage = "https://www.freedesktop.org/wiki/Software/PulseAudio"
+license = "LGPL-2.1-or-later"
+deps = ["bluez", "check", "elogind", "eudev", "glib", "libSM", "libXtst", "libcap", "libsndfile", "libsoxr", "openssl", "rtkit", "sbc", "webrtc-audio-processing", "xcb-util"]
+patches = ["patches/webrtc-audio-processing-1.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Djack=enabled", "-Dlirc=disabled", "-Dhal-compat=false", "-Dorc=enabled", "-Dgtk=disabled", "-Dsystemd=disabled", "-Dwebrtc-aec=enabled", "-Dgsettings=enabled", "-Dbluez5=enabled", "-Dbluez5-ofono-headset=false", "-Dbluez5-native-headset=true", "-Delogind=enabled", "-Dcpp_std=c++17"]
+tools = ["m4", "pkg-config"]
+deps = ["gettext"]

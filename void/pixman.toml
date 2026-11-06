@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pixman'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: LDFLAGS
+[package]
+name = "pixman"
+version = "0.46.4"
+archive = "https://www.cairographics.org/releases/pixman-0.46.4.tar.gz"
+sha256 = "d09c44ebc3bd5bee7021c79f922fe8fb2fb57f7320f55e97ff9914d2346a591c"
+strip_components = 1
+description = "Library of low-level pixel manipulation routines"
+homepage = "http://pixman.org/"
+license = "MIT"
+deps = ["libpng"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgnu-inline-asm=enabled", "-Dlibpng=enabled", "-Drvv=disabled", "-Dopenmp=disabled", "-Dgtk=disabled"]
+tools = ["perl", "pkg-config"]

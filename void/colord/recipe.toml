@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'colord'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, make_dirs
+# needs, but Forge has no recipe for yet: docbook-xsl-ns, sqlite
+[package]
+name = "colord"
+version = "1.4.7"
+archive = "https://www.freedesktop.org/software/colord/releases/colord-1.4.7.tar.xz"
+sha256 = "de02d9910634ae159547585cec414e450f711c27235453b4f9b38a9f2361a653"
+strip_components = 1
+description = "System daemon for managing color devices"
+homepage = "https://www.freedesktop.org/software/colord"
+license = "GPL-2.0-only"
+deps = ["bash-completion", "lcms2", "libgudev", "libgusb", "polkit", "sane"]
+patches = ["patches/use-host-utils.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystemd=false", "-Dsane=true", "-Dargyllcms_sensor=false", "-Ddaemon_user=colord", "-Ddocs=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxslt"]

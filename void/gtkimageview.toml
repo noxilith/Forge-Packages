@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gtkimageview'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "gtkimageview"
+version = "1.6.4"
+archive = "https://repo-default.voidlinux.org/distfiles/gtkimageview-77abd2122c19d2eca21599404a2d3aece35081e2.tar.gz"
+sha256 = "2d61c9957500e515419b2b3b0d9a3d5efb67a6a8384743926121dcd618a9ef35"
+strip_components = 1
+description = "Widget that provides a zoomable and panable view of a GdkPixbuf"
+homepage = "https://wiki.gnome.org/Projects/GTK/GtkImageView"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["glib", "gtk-doc"]

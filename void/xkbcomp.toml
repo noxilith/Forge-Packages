@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xkbcomp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xkbcomp"
+version = "1.5.0"
+archive = "https://www.x.org/releases/individual/app/xkbcomp-1.5.0.tar.xz"
+sha256 = "2ac31f26600776db6d9cd79b3fcd272263faebac7eb85fb2f33c7141b8486060"
+strip_components = 1
+description = "XKBD keymap compiler"
+homepage = "https://gitlab.freedesktop.org/xorg/app/xkbcomp"
+license = "MIT"
+deps = ["libX11", "libxkbfile"]
+
+[build]
+system = "meson"
+tools = ["bison", "pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'winegui'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: 7zip, unzip, util-linux, wine
+[package]
+name = "winegui"
+version = "4.5.1"
+archive = "https://github.com/winegui/WineGUI/releases/download/v4.5.1/WineGUI-Source-v4.5.1.tar.gz"
+sha256 = "f577fd1a83821650447aa997ee59d72c1e93ef4ff5ca5839d1ede87c9b5614f0"
+strip_components = 1
+description = "User-friendly WINE manager"
+homepage = "https://gitlab.melroy.org/melroy/winegui"
+license = "AGPL-3.0-only"
+deps = ["cabextract", "gtkmm4", "json-c++", "tar", "wget", "xz", "zenity"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCHECK_FOR_UPDATE=OFF"]
+tools = ["pkg-config"]

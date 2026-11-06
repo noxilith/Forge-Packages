@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cloudflared'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "cloudflared"
+version = "2026.10.7"
+archive = "https://github.com/cloudflare/cloudflared/archive/2026.10.7.tar.gz"
+sha256 = "d268031cb8906675b6b6353f18a007e6fc028f170094c5ac9220493bc8147016"
+strip_components = 1
+description = "Cloudflare Tunnel client"
+homepage = "https://developers.cloudflare.com/argo-tunnel/"
+license = "Apache-2.0"
+patches = ["patches/fix32bitfailure.patch"]
+
+[build]
+system = "go"

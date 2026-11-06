@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'spandsp'. Review before relying on it.
+[package]
+name = "spandsp"
+version = "0.0.6"
+archive = "https://ftp.debian.org/debian/pool/main/s/spandsp/spandsp_0.0.6+dfsg.orig.tar.xz"
+sha256 = "3dcdc611b8a119f1f26540d05e6279c4c1e5cd576271f6d45df431359fc190f9"
+strip_components = 1
+description = "Library of many DSP functions for telephony"
+homepage = "https://www.soft-switch.org/"
+license = "LGPL-2.1-only, GPL-2.0-only"
+deps = ["tiff"]
+
+[build]
+system = "autotools"

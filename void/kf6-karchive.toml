@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-karchive'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, kf6-base, qt6-tools, zstd
+[package]
+name = "kf6-karchive"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/karchive-6.30.0.tar.xz"
+sha256 = "4cf89d91e429d2ece3110e78f7ef7011952b0412cb15011329516b46f21e98e2"
+strip_components = 1
+description = "Qt addon providing access to numerous types of archives"
+homepage = "https://invent.kde.org/frameworks/karchive"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base", "xz", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

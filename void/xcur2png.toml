@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xcur2png'. Review before relying on it.
+[package]
+name = "xcur2png"
+version = "0.7.1"
+archive = "https://github.com/eworm-de/xcur2png/archive/0.7.1.tar.gz"
+sha256 = "3874e8bd4f287dbd8b6d4a16ee1f450970965fd773288d85bb53143e2e631add"
+strip_components = 1
+description = "Convert X cursors to PNG images"
+homepage = "https://github.com/eworm-de/xcur2png"
+license = "GPL-3.0-or-later"
+deps = ["libXcursor", "libXrender", "libpng"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

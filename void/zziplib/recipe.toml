@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'zziplib'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zip
+[package]
+name = "zziplib"
+version = "0.13.80"
+archive = "https://github.com/gdraheim/zziplib/archive/v0.13.80.tar.gz"
+sha256 = "21f40d111c0f7a398cfee3b0a30b20c5d92124b08ea4290055fbfe7bdd53a22c"
+strip_components = 1
+description = "Lightweight library to extract data from zip files"
+homepage = "https://github.com/gdraheim/zziplib"
+license = "LGPL-2.1-or-later, MPL-1.1"
+deps = ["zlib"]
+patches = ["patches/cmake-build-type-none-soname.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DZZIP_LIBLATEST=ON"]
+tools = ["pkg-config"]
+deps = ["tar"]

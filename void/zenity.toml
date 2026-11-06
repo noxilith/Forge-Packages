@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'zenity'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "zenity"
+version = "4.0.5"
+archive = "https://download.gnome.org/sources/zenity/4.0/zenity-4.0.5.tar.xz"
+sha256 = "8a3ffe7751bed497a758229ece07be9114ad4e46a066abae4e5f31d6da4c0e9e"
+strip_components = 1
+description = "Display GNOME dialogs from the command line"
+homepage = "https://help.gnome.org/users/zenity/"
+license = "LGPL-2.0-or-later"
+deps = ["libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3", "help2man"]

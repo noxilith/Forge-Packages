@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'taralli'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "taralli"
+version = "0.0.0.20140628"
+archive = "https://github.com/joshumax/taralli/archive/974d7404901a94944a7fddc6a019a87789c9c857.tar.gz"
+sha256 = "77f4a5e0b52b2c1e4de8e39cb77187863883d22ee049c873d57c3bc36719f84a"
+strip_components = 1
+description = "Screen edge pointer wrapping for X"
+homepage = "https://github.com/joshumax/taralli"
+license = "BSD-3-Clause"
+deps = ["libXi"]
+
+[build]
+system = "autotools"

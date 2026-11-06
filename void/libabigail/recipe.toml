@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libabigail'. Review before relying on it.
+# hooks not translated: post_build, post_install, pre_configure
+# needs, but Forge has no recipe for yet: python3-Sphinx
+[package]
+name = "libabigail"
+version = "3.0"
+archive = "https://mirrors.kernel.org/sourceware/libabigail/libabigail-3.0.tar.xz"
+sha256 = "d34ea7c4b150f61e22edb1d16157e12c43fd18f8e8f09abce053d82ccaf92e06"
+strip_components = 1
+description = "ABI Generic Analysis and Instrumentation Library"
+homepage = "https://www.sourceware.org/libabigail/"
+license = "LGPL-3.0-or-later"
+deps = ["elfutils", "libbpf", "libxml2", "xxHash"]
+patches = ["patches/xbps.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["cpio", "dpkg", "tar", "texinfo"]

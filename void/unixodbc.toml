@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'unixodbc'. Review before relying on it.
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "unixodbc"
+version = "2.3.12"
+archive = "https://www.unixodbc.org/unixODBC-2.3.12.tar.gz"
+sha256 = "f210501445ce21bf607ba51ef8c125e10e22dffdffec377646462df5f01915ec"
+strip_components = 1
+description = "Basic ODBC tools"
+homepage = "https://www.unixodbc.org"
+license = "GPL-2.0-only, LGPL-2.1-or-later"
+
+[build]
+system = "autotools"

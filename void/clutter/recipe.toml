@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'clutter'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "clutter"
+version = "1.26.4"
+archive = "https://download.gnome.org/sources/clutter/1.26/clutter-1.26.4.tar.xz"
+sha256 = "8b48fac159843f556d0a6be3dbfc6b083fc6d9c58a20a49a6b4919ab4263c4e6"
+strip_components = 1
+description = "OpenGL based interactive canvas library"
+homepage = "http://www.clutter-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["at-spi2-core", "cogl", "eudev", "gtk+3", "json-glib", "libXcomposite", "libXi", "libevdev", "libgudev", "libinput", "libxkbcommon", "pango"]
+patches = ["patches/clutter-x11-startup-error.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-evdev", "--enable-evdev-input", "--enable-wayland-backend", "--enable-egl-backend", "--enable-wayland-compositor", "--enable-gdk-backend"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc"]

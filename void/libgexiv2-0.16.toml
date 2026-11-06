@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libgexiv2-0.16'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libgexiv2-0.16"
+version = "0.16.0"
+archive = "https://download.gnome.org/sources/gexiv2/0.16/gexiv2-0.16.0.tar.xz"
+sha256 = "d96f895f24539f966f577b2bb2489ae84f8232970a8d0c064e4a007474a77bbb"
+strip_components = 1
+description = "GObject-based wrapper around the Exiv2 library"
+homepage = "https://wiki.gnome.org/Projects/gexiv2"
+license = "GPL-2.0-or-later"
+deps = ["exiv2", "glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["python3-gobject"]

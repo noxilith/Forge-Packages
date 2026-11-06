@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rapidfuzz-cpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rapidfuzz-cpp"
+version = "3.3.4"
+archive = "https://github.com/maxbachmann/rapidfuzz-cpp/archive/v3.3.4.tar.gz"
+sha256 = "a0dd2ef361cac165e12076696e7c7e8d069a2908abd9599ad4bd190de33f9881"
+strip_components = 1
+description = "Rapid fuzzy string matching in C++ using the Levenshtein Distance"
+homepage = "https://github.com/maxbachmann/rapidfuzz-cpp"
+license = "MIT"
+
+[build]
+system = "cmake"

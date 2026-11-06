@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-autoar'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: build_helper
+[package]
+name = "gnome-autoar"
+version = "0.4.5"
+archive = "https://download.gnome.org/sources/gnome-autoar/0.4/gnome-autoar-0.4.5.tar.xz"
+sha256 = "838c5306fc38bfaa2f23abe24262f4bf15771e3303fb5dcb74f5b9c7a615dabe"
+strip_components = 1
+description = "Automatic archives creating and extracting library"
+homepage = "https://wiki.gnome.org/TingweiLan/GSoC2013Final"
+license = "LGPL-2.1-only"
+deps = ["glib", "gtk+3", "libarchive"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

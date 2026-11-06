@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libgusb'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libgusb"
+version = "0.4.9"
+archive = "https://github.com/hughsie/libgusb/releases/download/0.4.9/libgusb-0.4.9.tar.xz"
+sha256 = "9df5ef301d6a4b361002aa52cce1165a87a89744055879bdbab31e7e86f1e846"
+strip_components = 1
+description = "GLib wrapper around libusb1"
+homepage = "https://github.com/hughsie/libgusb"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "json-glib", "libgudev", "libusb", "usbutils"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddocs=false"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libwm'. Review before relying on it.
+[package]
+name = "libwm"
+version = "1.2"
+archive = "https://github.com/wmutils/libwm/archive/v1.2.tar.gz"
+sha256 = "db80ef40d6b105f046c1d0bc138470b3e23e7bd1000afc3163d9e62f403f0f6a"
+strip_components = 1
+description = "Small library for X windows manipulation"
+homepage = "https://github.com/wmutils/libwm"
+license = "GPL-3.0-or-later"
+deps = ["libxcb", "xcb-util-cursor"]
+patches = ["patches/wm-reg-event.patch"]
+
+[build]
+system = "make"

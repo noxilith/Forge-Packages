@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'varnish'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: libreadline8, python3-Sphinx, python3-docutils
+[package]
+name = "varnish"
+version = "7.3.0"
+archive = "https://varnish-cache.org/_downloads/varnish-7.3.0.tgz"
+sha256 = "e2dbbb0ec270a90647c386866e6e226993aed46e48de751a72bb819737f14ae7"
+strip_components = 1
+description = "Fast caching HTTP reverse proxy"
+homepage = "https://varnish-cache.org/"
+license = "BSD-2-Clause"
+deps = ["pcre2"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--cache-file=config.void", "--disable-static"]
+tools = ["pkg-config"]

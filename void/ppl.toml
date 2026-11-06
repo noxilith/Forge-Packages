@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ppl'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "ppl"
+version = "1.2"
+archive = "https://ftp.debian.org/debian/pool/main/p/ppl/ppl_1.2.orig.tar.xz"
+sha256 = "691f0d5a4fb0e206f4e132fc9132c71d6e33cdda168470d40ac3cf62340e9a60"
+strip_components = 1
+description = "The Parma Polyhedra Library"
+homepage = "http://www.bugseng.com/parma-polyhedra-library"
+license = "GPL-3"
+deps = ["gmp"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-interfaces=c,cxx"]
+deps = ["tar"]

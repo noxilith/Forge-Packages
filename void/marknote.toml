@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'marknote'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg
+[package]
+name = "marknote"
+version = "1.6.0"
+archive = "https://download.kde.org/stable/marknote/marknote-1.6.0.tar.xz"
+sha256 = "d3bb39614e22fd1a8ddd74bcfb4c384cbffe25685ec01116f694e470816284a9"
+strip_components = 1
+description = "Simple markdown note management app"
+homepage = "https://apps.kde.org/marknote/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-kmime", "kf6-knotifications", "kf6-kxmlgui", "kirigami-addons", "md4c", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext"]

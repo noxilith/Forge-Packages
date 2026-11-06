@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-user-docs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-user-docs"
+version = "48.2"
+archive = "https://download.gnome.org/sources/gnome-user-docs/48/gnome-user-docs-48.2.tar.xz"
+sha256 = "67829f764ba672d7f99ff72ef6513b40cc931fb401bf7bd7db5f805e7bfa3db9"
+strip_components = 1
+description = "User documentation for GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-user-docs"
+license = "CC-BY-3.0"
+deps = ["yelp"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

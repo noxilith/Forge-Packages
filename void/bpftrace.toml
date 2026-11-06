@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bpftrace'. Review before relying on it.
+# needs, but Forge has no recipe for yet: blazesym, ruby-asciidoctor, vim
+[package]
+name = "bpftrace"
+version = "0.27.1"
+archive = "https://github.com/iovisor/bpftrace/archive/v0.27.1.tar.gz"
+sha256 = "52a923555b6e16fe13a285b6713637bfaab30a5efa60f44c03134bd832342012"
+strip_components = 1
+description = "High-level tracing language for Linux eBPF"
+homepage = "https://github.com/iovisor/bpftrace/"
+license = "Apache-2.0"
+deps = ["bcc", "cereal", "elfutils", "libbpf", "libpcap", "libxml2", "llvm23"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_SYSTEM_LIBBPF=ON", "-DBUILD_TESTING=OFF"]
+tools = ["flex", "pkg-config"]

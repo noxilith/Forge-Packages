@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libgedit-gfls'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch
+# settings not translated: build_helper
+[package]
+name = "libgedit-gfls"
+version = "0.4.0"
+archive = "https://gitlab.gnome.org/World/gedit/libgedit-gfls/-/archive/0.4.0/libgedit-gfls-0.4.0.tar.gz"
+sha256 = "091952cb178430427b18ea62a4e4de5bde6335c00b7ab7eda58f31602ca33883"
+strip_components = 1
+description = "Module dedicated to file loading and saving"
+homepage = "https://gitlab.gnome.org/World/gedit/libgedit-gfls"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qmidiarp'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: jack, qt6-tools
+[package]
+name = "qmidiarp"
+version = "0.7.5"
+archive = "https://downloads.sourceforge.net/sourceforge/project/qmidiarp/qmidiarp/0.7.5/qmidiarp-0.7.5.tar.bz2"
+sha256 = "a35114400f29a63e8c509a5d630abfccdfd56ec45396f102e551d1bd10d1d7b0"
+strip_components = 1
+description = "MIDI arpeggiator and LFO"
+homepage = "http://qmidiarp.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "lv2", "qt6-base"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

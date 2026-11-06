@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gnome-browser-connector'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnome-shell
+[package]
+name = "gnome-browser-connector"
+version = "42.1"
+archive = "https://gitlab.gnome.org/nE0sIghT/gnome-browser-connector/-/archive/v42.1/gnome-browser-connector-v42.1.tar.gz"
+sha256 = "b624f53ce329a667746a0f3771b44a704d26b58e6ee93d76896ca7a8df512b2c"
+strip_components = 1
+description = "GNOME Shell integration for browsers"
+homepage = "https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/"
+license = "GPL-3.0-or-later"
+deps = ["dbus", "python3-gobject"]
+
+[build]
+system = "meson"

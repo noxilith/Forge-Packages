@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'FeatherPad'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "FeatherPad"
+version = "1.6.4"
+archive = "https://github.com/tsujan/FeatherPad/archive/V1.6.4.tar.gz"
+sha256 = "1442f14aefdb0de26822562d69c446b0e2b4e607597925a2e0c2c7b063e1654e"
+strip_components = 1
+description = "Lightweight Qt6 plain-text editor for Linux"
+homepage = "https://github.com/tsujan/FeatherPad"
+license = "GPL-3.0-or-later"
+deps = ["hunspell", "libX11", "libXext"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["qt6-base"]

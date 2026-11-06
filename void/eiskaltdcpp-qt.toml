@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'eiskaltdcpp-qt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, lua52, qt5
+[package]
+name = "eiskaltdcpp-qt"
+version = "2.4.2"
+archive = "https://github.com/eiskaltdcpp/eiskaltdcpp/archive/v2.4.2.tar.gz"
+sha256 = "2ed853a57c57aab0e87fdea273a01707184ee425a2aaf9fcd2e0a32c57a2de2c"
+strip_components = 1
+description = "EiskaltDC++ is a file sharing program using Direct Connect protocols"
+homepage = "https://github.com/eiskaltdcpp/eiskaltdcpp"
+license = "GPL-3.0-or-later"
+deps = ["libidn", "miniupnpc", "openssl", "pcre", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_QT5=ON", "-DUSE_QT=OFF", "-DUSE_ASPELL=OFF", "-DLINK=STATIC"]
+tools = ["pkg-config"]
+deps = ["gettext"]

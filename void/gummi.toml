@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gummi'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: gtkspell3, intltool
+[package]
+name = "gummi"
+version = "0.8.3"
+archive = "https://github.com/alexandervdm/gummi/releases/download/0.8.3/gummi-0.8.3.tar.gz"
+sha256 = "c1769fea45c23bf892bdbf524c92ddf83eae21b1ddba358d4173155aadea898e"
+strip_components = 1
+description = "Simple LaTeX editor"
+homepage = "https://github.com/alexandervdm/gummi/"
+license = "MIT"
+deps = ["gettext", "glib", "gtk+3", "gtksourceview", "poppler", "texlive"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

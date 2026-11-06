@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'whowatch'. Review before relying on it.
+# hooks not translated: post_configure, post_install, pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "whowatch"
+version = "1.8.6"
+archive = "https://github.com/mtsuszycki/whowatch/archive/whowatch-1.8.6.tar.gz"
+sha256 = "1b8d54e3de4d8325c47a0fb8765cbaaeee8744359b5dacd4bdb3e40b4e31797e"
+strip_components = 1
+description = "Displays information about the users currently logged on in real time"
+homepage = "https://github.com/mtsuszycki/whowatch"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

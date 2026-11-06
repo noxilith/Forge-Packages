@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'aha'. Review before relying on it.
+[package]
+name = "aha"
+version = "0.5.1"
+archive = "https://github.com/theZiz/aha/archive/0.5.1.tar.gz"
+sha256 = "6aea13487f6b5c3e453a447a67345f8095282f5acd97344466816b05ebd0b3b1"
+strip_components = 1
+description = "Converts SGR-colored Input to W3C conform HTML-Code"
+homepage = "https://github.com/theZiz/aha"
+license = "LGPL-2.0-or-later, MPL-1.1"
+
+[build]
+system = "make"

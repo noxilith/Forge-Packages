@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'moe'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: lzip, ncurses
+[package]
+name = "moe"
+version = "1.16"
+archive = "https://ftp.gnu.org/gnu/moe/moe-1.16.tar.lz"
+sha256 = "4c25cd78919272aebec0a7f8c126011bb5a4b5d87422807a3423216f0a17a868"
+strip_components = 1
+description = "Powerful and user-friendly text editor"
+homepage = "https://www.gnu.org/software/moe/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

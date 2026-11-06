@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kidentitymanagement'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kidentitymanagement"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kidentitymanagement-26.08.1.tar.xz"
+sha256 = "afd285bac8ce85e87b9f06672423311e299ce75ce1baf4720a59c65e4b4d235a"
+strip_components = 1
+description = "KDE PIM libraries"
+homepage = "https://invent.kde.org/pim/kidentitymanagement"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcompletion", "kf6-kcoreaddons", "kf6-kio", "kf6-ktextwidgets", "kf6-kxmlgui", "kirigami-addons", "kpimtextedit", "ktextaddons", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-declarative"]

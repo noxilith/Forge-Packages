@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tailscale'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_build_tags, go_package, go_import_path, build_helper, make_dirs
+[package]
+name = "tailscale"
+version = "1.104.5"
+archive = "https://github.com/tailscale/tailscale/archive/v1.104.5.tar.gz"
+sha256 = "0704fa4ce8624463ce421f45f0d20ae8d710b9ee7354eaa1f4a772e9a3cd4ded"
+strip_components = 1
+description = "Easy, secure, cross platform WireGuard, oauth2, and 2FA/SSO"
+homepage = "https://tailscale.com"
+license = "BSD-3-Clause"
+
+[build]
+system = "go"

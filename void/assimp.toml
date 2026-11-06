@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'assimp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "assimp"
+version = "5.2.5"
+archive = "https://github.com/assimp/assimp/archive/v5.2.5.tar.gz"
+sha256 = "b5219e63ae31d895d60d98001ee5bb809fb2c7b2de1e7f78ceeb600063641e1a"
+strip_components = 1
+description = "Import library for various well-known 3D model formats"
+homepage = "https://github.com/assimp/assimp"
+license = "BSD-3-Clause"
+deps = ["devil", "minizip", "zziplib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DASSIMP_BUILD_SAMPLES=OFF", "-DASSIMP_WARNINGS_AS_ERRORS=OFF"]
+tools = ["pkg-config"]

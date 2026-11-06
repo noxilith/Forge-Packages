@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ii'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ii"
+version = "2.0"
+archive = "https://dl.suckless.org/tools/ii-2.0.tar.gz"
+sha256 = "4f67afcd208c07939b88aadbf21497a702ad0a07f9b5a6ce861f9f39ffe5425b"
+strip_components = 1
+description = "Minimalist FIFO IRC client"
+homepage = "https://tools.suckless.org/ii"
+license = "MIT"
+
+[build]
+system = "make"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'zellij'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "zellij"
+version = "0.45.1"
+archive = "https://github.com/zellij-org/zellij/archive/refs/tags/v0.45.1.tar.gz"
+sha256 = "5cbe711437d2a61afd9287165f6aca0bcccb9ab1473633665a5b11ed55467852"
+strip_components = 1
+description = "Terminal workspace with batteries included"
+homepage = "https://zellij.dev"
+license = "MIT"
+deps = ["curl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features=plugins_from_target,web_server_capability"]
+tools = ["pkg-config"]

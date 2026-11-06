@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ivykis'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "ivykis"
+version = "0.43.2"
+archive = "https://github.com/buytenh/ivykis/archive/refs/tags/v0.43.2.tar.gz"
+sha256 = "5a81cb5ff94e2b9c289682204aecc675bd726d6db822c592ed9f0e3e493d488e"
+strip_components = 1
+description = "Library for asynchronous I/O readiness notification"
+homepage = "https://github.com/buytenh/ivykis"
+license = "LGPL-2.0-or-later"
+
+[build]
+system = "autotools"

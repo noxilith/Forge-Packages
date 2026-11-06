@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'shortwave'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: glycin
+[package]
+name = "shortwave"
+version = "5.1.0"
+archive = "https://gitlab.gnome.org/World/Shortwave/-/archive/5.1.0/shortwave-5.1.0.tar.gz"
+sha256 = "028cc58fb4a9144a6298c580ec62ad5f408ee9b40837a031986a835daeb52937"
+strip_components = 1
+description = "Listen to internet radio"
+homepage = "https://gitlab.gnome.org/World/Shortwave"
+license = "GPL-3.0-or-later"
+deps = ["gst-plugins-good1", "lcms2", "libadwaita", "libseccomp", "libshumate"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk4"]

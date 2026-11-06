@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'toluapp'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: lua51
+[package]
+name = "toluapp"
+version = "1.0.93"
+archive = "https://github.com/LuaDist/toluapp/archive/1.0.93.tar.gz"
+sha256 = "0a1ff87cb74e7531aec57e2a7cfdf282116647dea3b46223e3cc7c362b55b5bb"
+strip_components = 1
+description = "Tool to integrate C and C++ code with Lua5.1"
+homepage = "https://github.com/LuaDist/toluapp"
+license = "MIT"
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

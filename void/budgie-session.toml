@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'budgie-session'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "budgie-session"
+version = "1.0.1"
+archive = "https://github.com/BuddiesOfBudgie/budgie-session/releases/download/v1.0.1/budgie-session-v1.0.1.tar.xz"
+sha256 = "e6d0bf94979af5ab8aa478fd99fcd38bff51616ecdee4b36e5c9ddcb4af8f604"
+strip_components = 1
+description = "Stable session manager for Budgie 10.x"
+homepage = "https://github.com/BuddiesOfBudgie/budgie-session"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["dconf", "desktop-file-utils", "elogind", "glib", "gnome-desktop", "gsettings-desktop-schemas", "gtk+3", "json-glib", "libICE", "libSM", "polkit", "xtrans"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "xmlto"]

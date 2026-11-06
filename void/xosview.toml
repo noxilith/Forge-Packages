@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'xosview'. Review before relying on it.
+[package]
+name = "xosview"
+version = "1.25"
+archive = "https://www.pogo.org.uk/~mark/xosview/releases/xosview-1.25.tar.gz"
+sha256 = "e5f5ec03a0611397f8aafd07f05d4763726d9911139d9e267c5f308af9a6955b"
+strip_components = 1
+description = "Classic system monitoring tool"
+homepage = "https://www.pogo.org.uk/~mark/xosview"
+license = "GPL-2.0-or-later"
+deps = ["libXpm"]
+
+[build]
+system = "make"

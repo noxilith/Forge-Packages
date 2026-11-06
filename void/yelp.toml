@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'yelp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, hicolor-icon-theme, itstool, libwebkit2gtk41, sqlite
+[package]
+name = "yelp"
+version = "42.3"
+archive = "https://download.gnome.org/sources/yelp/42/yelp-42.3.tar.xz"
+sha256 = "26ccc422679a9e6a7a3aa083d90fcdb347f5f2300be3e01431a30d0cdd2a89a3"
+strip_components = 1
+description = "Help browser for GNOME desktop"
+homepage = "https://wiki.gnome.org/Apps/Yelp"
+license = "GPL-2.0-or-later"
+deps = ["dconf", "desktop-file-utils", "glib", "gtk+3", "libgcrypt", "libhandy1", "libxml2", "libxslt", "xz", "yelp-xsl"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'stk'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: jack, libstk-4.6.1_5, stk-data-4.6.1_5
+[package]
+name = "stk"
+version = "4.6.1"
+archive = "https://github.com/thestk/stk/archive/4.6.1.tar.gz"
+sha256 = "8e0c362dd82421bae8f3e789d238a1c27aeac1a2697d7830eb51abc90fc17281"
+strip_components = 1
+description = "Synthesis ToolKit in C++"
+homepage = "https://ccrma.stanford.edu/software/stk/"
+license = "custom:MIT-like"
+deps = ["alsa-lib"]
+patches = ["patches/lib-include-dir.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-alsa", "--with-jack"]
+tools = ["pkg-config"]

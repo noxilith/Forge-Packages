@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libxmp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libxmp"
+version = "4.7.2"
+archive = "https://downloads.sourceforge.net/sourceforge/xmp/libxmp/4.7.2/libxmp-4.7.2.tar.gz"
+sha256 = "510a96eefd79e4558fb1fa41fb5494870328776b3f77563f94f61f241f64bde1"
+strip_components = 1
+description = "Library that renders module files to PCM data"
+homepage = "http://xmp.sourceforge.net"
+license = "MIT"
+
+[build]
+system = "autotools"

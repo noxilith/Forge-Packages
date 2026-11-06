@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'dtrace-utils'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: cross-bpf-gcc, libpfm4, shadow
+[package]
+name = "dtrace-utils"
+version = "2.0.7"
+archive = "https://github.com/oracle/dtrace/archive/refs/tags/2.0.7.tar.gz"
+sha256 = "c155df58c954d9b40782e060eb113e7967511fafbab3a291c6671e4f5d222d30"
+strip_components = 1
+description = "Linux version of the DTrace tracing tool"
+homepage = "https://github.com/oracle/dtrace"
+license = "UPL-1.0"
+deps = ["elfutils", "fuse", "libbpf", "libpcap", "valgrind"]
+patches = ["patches/configure.patch"]
+
+[build]
+system = "autotools"
+tools = ["flex", "pkg-config"]
+deps = ["cross-bpf-binutils"]

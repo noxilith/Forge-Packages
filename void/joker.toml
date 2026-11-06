@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'joker'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: go_import_path
+[package]
+name = "joker"
+version = "1.5.8"
+archive = "https://github.com/candid82/joker/archive/refs/tags/v1.5.8.tar.gz"
+sha256 = "e924fe89d6cde89c8c50937ac898487d70977ef059d5fc6f3a3b57b1fca915b8"
+strip_components = 1
+description = "Interpreted dialect of Clojure written in Go and Clojure(Script) linter"
+homepage = "https://joker-lang.org/"
+license = "EPL-1.0"
+
+[build]
+system = "go"

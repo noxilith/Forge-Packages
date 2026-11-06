@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cdogs-sdl'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: SDL2_image, python3-protobuf
+[package]
+name = "cdogs-sdl"
+version = "2.4.0"
+archive = "https://github.com/cxong/cdogs-sdl/archive/2.4.0.tar.gz"
+sha256 = "0fde6aaf07db2156e5d4c8e448f0ddb4608ed3b92b89aae1e2c87b20866e451c"
+strip_components = 1
+description = "Classic overhead run-and-gun game"
+homepage = "https://cxong.github.io/cdogs-sdl/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_mixer", "SDL2_net", "gtk+3", "protobuf"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

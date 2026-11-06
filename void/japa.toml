@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'japa'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, jack
+[package]
+name = "japa"
+version = "0.9.4"
+archive = "https://kokkinizita.linuxaudio.org/linuxaudio/downloads/japa-0.9.4.tar.bz2"
+sha256 = "b7dc2566bfa9139bbac93a404d60d0b1e0bfadfe1315bb46d17f6d9d376407c2"
+strip_components = 1
+description = "JACK and ALSA Perceptual Analyser"
+homepage = "https://kokkinizita.linuxaudio.org/linuxaudio/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "clthreads", "clxclient", "libX11", "libXft", "zita-alsa-pcmi"]
+
+[build]
+system = "make"
+subdir = "source"
+tools = ["pkg-config"]

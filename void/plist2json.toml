@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'plist2json'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "plist2json"
+version = "1"
+archive = "https://github.com/xtraeme/plist2json/archive/1.tar.gz"
+sha256 = "0d1c41a78af87d432596262895c02e9b3b99b460c1fd3d5979d0c03d6d40ab42"
+strip_components = 1
+description = "Converts NetBSD's plist input to JSON"
+homepage = "https://github.com/xtraeme/plist2json"
+license = "BSD-2-Clause"
+deps = ["proplib"]
+
+[build]
+system = "make"

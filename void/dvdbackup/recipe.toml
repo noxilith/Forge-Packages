@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'dvdbackup'. Review before relying on it.
+[package]
+name = "dvdbackup"
+version = "0.4.2"
+archive = "https://downloads.sourceforge.net/sourceforge/dvdbackup/dvdbackup-0.4.2.tar.xz"
+sha256 = "ef8c56fbb82b15b7eef00d2d3118c8253f9770009ed7bb2a5d4849acf88183e6"
+strip_components = 1
+description = "Tool to rip video DVDs from the command line"
+homepage = "http://dvdbackup.sourceforge.net/"
+license = "GPL-3.0-or-later"
+deps = ["libdvdread"]
+patches = ["patches/dvdbackup-dvdread-6.1.patch"]
+
+[build]
+system = "autotools"

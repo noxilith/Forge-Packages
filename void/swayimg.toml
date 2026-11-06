@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'swayimg'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: LuaJIT, libavif, libjxl, libwebp
+[package]
+name = "swayimg"
+version = "5.6"
+archive = "https://github.com/artemsen/swayimg/archive/v5.6.tar.gz"
+sha256 = "0f70cbc665217a747e8a098e1a881239e96df270930f47c262ab2ecff290e428"
+strip_components = 1
+description = "Image viewer for Sway/Wayland"
+homepage = "https://github.com/artemsen/swayimg"
+license = "MIT"
+deps = ["cairo", "freetype", "giflib", "json-c", "libdrm", "libexif", "libheif", "libjpeg-turbo", "libpng", "libraw", "librsvg", "libsixel", "libxkbcommon", "openexr", "tiff", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+configure_args = ["-D", "version=5.6"]
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libopenshot'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen, ffmpeg6, python3-setuptools, qt5
+[package]
+name = "libopenshot"
+version = "0.4.0"
+archive = "https://github.com/OpenShot/libopenshot/archive/v0.4.0.tar.gz"
+sha256 = "be0e760d81275543f7fbbf87863645748c3fe8aa8f4b5b771ff45a5d026bc9cc"
+strip_components = 1
+description = "Library files for the OpenShot video editor"
+homepage = "https://github.com/OpenShot/libopenshot"
+license = "LGPL-3.0-or-later"
+deps = ["ImageMagick", "cppzmq", "jsoncpp", "libopenshot-audio", "unittest-cpp", "zeromq"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_RUBY=OFF", "-DUSE_SYSTEM_JSONCPP=ON"]
+tools = ["pkg-config"]
+deps = ["ruby", "swig"]

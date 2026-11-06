@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'swaykbdd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "swaykbdd"
+version = "1.4"
+archive = "https://github.com/artemsen/swaykbdd/archive/v1.4.tar.gz"
+sha256 = "63c331213f55db9acad2fb2ef41ae7f9091082fb02153cb19d4abf24609a256e"
+strip_components = 1
+description = "Per-window keyboard layout switcher for Sway"
+homepage = "https://github.com/artemsen/swaykbdd"
+license = "MIT"
+deps = ["json-c"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

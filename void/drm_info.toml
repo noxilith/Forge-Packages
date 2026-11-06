@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'drm_info'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "drm_info"
+version = "2.10.0"
+archive = "https://gitlab.freedesktop.org/emersion/drm_info/-/archive/v2.10.0/drm_info-v2.10.0.tar.bz2"
+sha256 = "bec22a3836da30cb00a23fde80b816b7753dbf4103edf5b68fd0dbe37818f842"
+strip_components = 1
+description = "Small utility to dump info about DRM devices"
+homepage = "https://gitlab.freedesktop.org/emersion/drm_info"
+license = "MIT"
+deps = ["json-c", "libdrm"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

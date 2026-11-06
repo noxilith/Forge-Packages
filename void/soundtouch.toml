@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'soundtouch'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "soundtouch"
+version = "2.4.1"
+archive = "https://codeberg.org/soundtouch/soundtouch/archive/2.4.1.tar.gz"
+sha256 = "e07abf20ce8f95850c280132e1f61ad400fc1f4011b7fac698a503de6aab6733"
+strip_components = 1
+description = "SoundTouch Audio Processing Library"
+homepage = "https://www.surina.net/soundtouch"
+license = "LGPL-2.1-only"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-openmp"]
+tools = ["pkg-config"]

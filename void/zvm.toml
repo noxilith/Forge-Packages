@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'zvm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_build_tags, go_import_path, build_helper
+[package]
+name = "zvm"
+version = "0.9.4"
+archive = "https://github.com/tristanisham/zvm/archive/refs/tags/v0.9.4.tar.gz"
+sha256 = "90be104398c71959939decd4a924af87a53f27577aff069fe68eb4f090b4d18b"
+strip_components = 1
+description = "Zig version manager"
+homepage = "https://www.zvm.app"
+license = "MIT"
+
+[build]
+system = "go"

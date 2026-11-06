@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kwallet'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kwallet"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kwallet-5.116.0.tar.xz"
+sha256 = "1ece8b5ecb2bc86ac6d9f55c7fa60f3099513732b6ed367895ec36b5bccd448b"
+strip_components = 1
+description = "KDE Safe desktop-wide storage for passwords"
+homepage = "https://invent.kde.org/frameworks/kwallet"
+license = "LGPL-2.1-or-later"
+deps = ["gpgme-qt6", "gpgmepp", "kdoctools", "kf6-kwallet", "kiconthemes", "knotifications", "kservice", "libgcrypt", "qca-qt5"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=ON", "-DBUILD_KWALLET_QUERY=OFF"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

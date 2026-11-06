@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libvidstab'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: orc
+[package]
+name = "libvidstab"
+version = "1.1.0"
+archive = "https://github.com/georgmartius/vid.stab/archive/v1.1.0.tar.gz"
+sha256 = "14d2a053e56edad4f397be0cb3ef8eb1ec3150404ce99a426c4eb641861dc0bb"
+strip_components = 1
+description = "Video stabilization library"
+homepage = "http://public.hronopik.de/vid.stab/"
+license = "GPL-2.0-or-later"
+patches = ["patches/fix-cflags.patch"]
+
+[build]
+system = "cmake"

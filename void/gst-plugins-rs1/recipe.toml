@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gst-plugins-rs1'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: cargo-c, libwebp
+[package]
+name = "gst-plugins-rs1"
+version = "0.13.4"
+archive = "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/0.13.4/gst-plugins-rs-0.13.4.tar.gz"
+sha256 = "547ac671c3c5ac4b7ee0b3c7ae5c89084abe15848ba4d15967f0fc38746bc06b"
+strip_components = 1
+description = "GStreamer plugins and elements written in the Rust programming language"
+homepage = "https://gstreamer.freedesktop.org"
+license = "LGPL-2.1-or-later, MIT, Apache-2.0, MPL-2.0"
+deps = ["dav1d", "gst-plugins-bad1", "gst-plugins-base1", "gstreamer1", "gtk4", "libsodium", "openssl", "pango"]
+patches = ["patches/0002-dylib.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddoc=disabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

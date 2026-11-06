@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'luksmeta'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "luksmeta"
+version = "9"
+archive = "https://github.com/latchset/luksmeta/archive/v9/luksmeta-9.tar.gz"
+sha256 = "0eea7d50a0411e0c1e383fd47073806ed7d435b27410504e33bfbc792a1688fc"
+strip_components = 1
+description = "Store metadata in the LUKSv1 header"
+homepage = "https://github.com/latchset/luksmeta"
+license = "LGPL-2.0-or-later"
+deps = ["cryptsetup"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

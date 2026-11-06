@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libgnomecanvas'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "libgnomecanvas"
+version = "2.30.3"
+archive = "https://download.gnome.org/sources/libgnomecanvas/2.30/libgnomecanvas-2.30.3.tar.bz2"
+sha256 = "859b78e08489fce4d5c15c676fec1cd79782f115f516e8ad8bed6abcb8dedd40"
+strip_components = 1
+description = "GNOME Canvas library"
+homepage = "http://gnome.org/"
+license = "LGPL-2.0-or-later"
+deps = ["gtk+", "libart"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["glib"]

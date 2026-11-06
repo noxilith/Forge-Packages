@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'typstfmt'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "typstfmt"
+version = "0.2.10"
+archive = "https://github.com/astrale-sharp/typstfmt/archive/refs/tags/0.2.10.tar.gz"
+sha256 = "5a3f413a428b2590552c2d0ab0ab04c7a745e1cca128844b7b82ea49326d65c4"
+strip_components = 1
+description = "Formatter for Typst"
+homepage = "https://github.com/astrale-sharp/typstfmt"
+license = "MIT"
+
+[build]
+system = "cargo"

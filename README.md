@@ -1,21 +1,28 @@
 # Forge recipes
 
-A [Forge](https://github.com/noxilith/Forge) tap: build recipes for packages that
-need other Forge packages, or special isolation settings. Small, self-contained
-projects (fastfetch and the like) don't belong here; `forge install <git-url>`
-handles those on its own with auto-detection.
+The package repository for [Forge](https://github.com/noxilith/Forge): what
+`forge install <name>` installs from. Forge sets it up by itself on first use.
 
 ```
-forge tap add https://github.com/noxilith/Forge-Packages
 forge install hyprland                            # by name
-forge install https://github.com/hyprwm/Hyprland  # by URL: uses the recipe here
-forge install --ignore-taps <url>                 # ignore recipes, auto-detect
-forge tap update                                  # fetch newer recipes
+forge build https://github.com/hyprwm/Hyprland    # by link: uses the recipe here
+forge build --ignore-repo <link>                  # ignore recipes, auto-detect
+forge sync                                        # fetch newer recipes
 ```
+
+Two directories, looked up in this order:
+
+* `recipes/`: written and kept up by hand (the packages below).
+* `void/`: about 5,200 recipes generated from
+  [Void Linux](https://voidlinux.org)'s templates (see `void/REPORT.md` for what was
+  skipped and why, and `void/IMPORTED_FROM` for the Void commit). Regenerate with
+  `forge-import void <void-packages> --out void`. **Never built**: each recipe's
+  header lists what the importer could not carry over. The Void templates are
+  BSD-2-Clause licensed; `void/LICENSE-void-packages` has their notice.
 
 Recipes are build instructions that run in Forge's sandbox, but they are still
-code you are choosing to run, so only add taps you trust. Every project is pinned
-to a release tag (or a commit), so builds are repeatable.
+code you are choosing to run. Hand-written recipes pin a release tag (or a
+commit); imported ones pin a source archive by SHA-256, so builds are repeatable.
 
 ## What is here
 

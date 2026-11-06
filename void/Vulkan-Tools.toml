@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'Vulkan-Tools'. Review before relying on it.
+[package]
+name = "Vulkan-Tools"
+version = "1.4.363.0"
+archive = "https://github.com/KhronosGroup/Vulkan-Tools/archive/vulkan-sdk-1.4.363.0.tar.gz"
+sha256 = "6cbeb83294434e636a0c78760f1a6dfe3e50c1bab0cffa154603ce73e70508f1"
+strip_components = 1
+description = "Official Vulkan tools and utilities"
+homepage = "https://www.khronos.org/vulkan/"
+license = "Apache-2.0"
+deps = ["Vulkan-Headers", "libX11", "libXrandr", "libxcb", "vulkan-loader", "wayland", "wayland-protocols"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

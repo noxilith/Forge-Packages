@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kweather'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-charts, qt6-svg, qt6-tools
+[package]
+name = "kweather"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kweather-26.08.1.tar.xz"
+sha256 = "21b61ca4a29f49c2ab717624605e9dbe0abd8054aac2fd26098492f29c871cfa"
+strip_components = 1
+description = "Weather application for Plasma Mobile"
+homepage = "https://apps.kde.org/kweather/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-ki18n", "kf6-kirigami", "kf6-knotifications", "kf6-krunner", "kf6-ksvg", "kf6-kweathercore", "kf6-qqc2-desktop-style", "kirigami-addons", "libplasma", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

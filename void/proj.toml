@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'proj'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "proj"
+version = "9.5.1"
+archive = "https://download.osgeo.org/proj/proj-9.5.1.tar.gz"
+sha256 = "a8395f9696338ffd46b0feb603edbb730fad6746fba77753c77f7f997345e3d3"
+strip_components = 1
+description = "Cartographic Projections Library"
+homepage = "https://proj.org"
+license = "MIT"
+deps = ["curl", "gtest", "tiff"]
+
+[build]
+system = "cmake"

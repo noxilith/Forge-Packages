@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'chrono-date'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "chrono-date"
+version = "3.0.1"
+archive = "https://github.com/HowardHinnant/date/archive/v3.0.1.tar.gz"
+sha256 = "7a390f200f0ccd207e8cff6757e04817c1a0aec3e327b006b7eb451c57ee3538"
+strip_components = 1
+description = "Date and time library based on the C++11/14/17 <chrono> header"
+homepage = "https://howardhinnant.github.io/date/date.html"
+license = "MIT"
+patches = ["patches/538_output_date_pc_for_pkg_config.patch", "patches/disable_buggy_libstdc++_tests.patch", "patches/get_info.patch", "patches/sys_info.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=true", "-DBUILD_TZ_LIB=true", "-DUSE_SYSTEM_TZ_DB=true", "-DENABLE_DATE_TESTING=false"]

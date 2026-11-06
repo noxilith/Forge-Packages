@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'thermald'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: dbus-glib
+[package]
+name = "thermald"
+version = "2.5.13"
+archive = "https://github.com/intel/thermal_daemon/releases/download/v2.5.13/thermal_daemon-2.5.13.tar.gz"
+sha256 = "5456f60aed52e9a14f88dde9b2e2875e5e3d0cc3d1e7bf742d7ea4b22ff6a995"
+strip_components = 1
+description = "Thermal daemon for IA"
+homepage = "https://github.com/intel/thermal_daemon"
+license = "GPL-2.0-or-later"
+deps = ["dbus", "glib", "libevdev", "libxml2", "upower"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-werror"]
+tools = ["pkg-config"]
+deps = ["autoconf-archive", "gtk-doc"]

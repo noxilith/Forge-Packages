@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'buildah'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_build_tags, go_package, go_import_path
+# needs, but Forge has no recipe for yet: containers.image, containers.storage
+[package]
+name = "buildah"
+version = "1.45.1"
+archive = "https://github.com/podman-container-tools/buildah/archive/refs/tags/v1.45.1.tar.gz"
+sha256 = "b48e701c75a2bd30dfe63fda5f886c8a7e0c3dd17b6aa0feb74cc93099254ca4"
+strip_components = 1
+description = "Dockerfile compatible OCI image building tool"
+homepage = "https://buildah.io/"
+license = "Apache-2.0"
+deps = ["btrfs-progs", "containers-common", "gpgme", "libassuan", "libseccomp", "runc"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]
+deps = ["go-md2man"]

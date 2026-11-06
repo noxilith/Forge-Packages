@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gst-plugins-bad1'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: ffmpeg6, fluidsynth, ladspa-sdk, libaom, libgsm, libmpcdec, libvpx, libwebp, orc, rtmpdump
+[package]
+name = "gst-plugins-bad1"
+version = "1.28.6"
+archive = "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.28.6.tar.xz"
+sha256 = "6636f2c2289ceda52c4aba971338c81e2b5780d3381bd3673c1c116ec87587c3"
+strip_components = 1
+description = "GStreamer plugins from the bad set (v1.x)"
+homepage = "https://gstreamer.freedesktop.org"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["alsa-lib", "bluez", "celt", "chromaprint", "curl", "exempi", "faac", "faad2", "fdk-aac", "flite", "gst-plugins-base1", "gtk+3", "jasper", "lcms2", "libass", "libbs2b", "libdca", "libdvdnav", "libdvdread", "libexif", "libgudev", "liblrdf", "libmms", "libmodplug", "libnice", "libopenal", "libpng", "librsvg", "libsndfile", "libsrtp", "libusb", "libva", "libvdpau", "lilv", "lv2", "nv-codec-headers", "openh264", "openjpeg2", "openssl", "opus", "sbc", "sdl12-compat", "soundtouch", "spandsp", "srt", "vulkan-loader", "webrtc-audio-processing", "x265", "xvidcore", "zbar"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpackage-origin=https://voidlinux.org", "-Ddoc=disabled", "-Dopencv=disabled", "-Dmsdk=disabled", "-Dopensles=disabled", "-Dtinyalsa=disabled", "-Dwasapi=disabled", "-Ddc1394=disabled", "-Diqa=disabled", "-Dlibde265=disabled", "-Dmpeg2enc=disabled", "-Dmplex=disabled", "-Dmusepack=disabled", "-Dopenexr=disabled", "-Dopenmpt=disabled", "-Dopenni2=disabled", "-Dsctp=disabled", "-Dsrt=disabled", "-Dteletext=disabled", "-Dvoaacenc=disabled", "-Dvoamrwbenc=disabled", "-Dwildmidi=disabled", "-Dwpe=disabled", "-Ddirectfb=disabled", "-Dgpl=enabled", "-Dneon=disabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

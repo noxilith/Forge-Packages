@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lighttpd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: lua53, mit-krb5, sqlite
+[package]
+name = "lighttpd"
+version = "1.4.85"
+archive = "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.85.tar.xz"
+sha256 = "18de51b393bac4a6827879e1a7ff377c169e414bae92cd245091d80fc2601d13"
+strip_components = 1
+description = "Secure, fast, compliant and very flexible web-server"
+homepage = "https://lighttpd.net"
+license = "BSD-3-Clause"
+deps = ["libxml2", "pcre2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith_brotli=disabled", "-Dwith_bzip=disabled", "-Dwith_krb5=enabled", "-Dwith_ldap=enabled", "-Dwith_libunwind=disabled", "-Dwith_lua=true", "-Dwith_mysql=disabled", "-Dwith_openssl=true", "-Dwith_pcre2=true", "-Dwith_pgsql=disabled", "-Dwith_sasl=disabled", "-Dwith_webdav_props=enabled", "-Dwith_webdav_locks=enabled", "-Dwith_xattr=true", "-Dwith_zlib=enabled", "-Dwith_zstd=disabled", "-Dwith_dbi=disabled", "-Dmoduledir=lib/lighttpd/modules"]
+tools = ["pkg-config"]

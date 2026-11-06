@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hexedit'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "hexedit"
+version = "1.6"
+archive = "https://github.com/pixel/hexedit/archive/1.6.tar.gz"
+sha256 = "598906131934f88003a6a937fab10542686ce5f661134bc336053e978c4baae3"
+strip_components = 1
+description = "View and edit files in hexadecimal or in ASCII"
+homepage = "https://rigaux.org/hexedit.html"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

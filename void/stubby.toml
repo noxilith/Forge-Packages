@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'stubby'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "stubby"
+version = "0.4.3"
+archive = "https://github.com/getdnsapi/stubby/archive/v0.4.3.tar.gz"
+sha256 = "99291ab4f09bce3743000ed3ecbf58961648a35ca955889f1c41d36810cc4463"
+strip_components = 1
+description = "DNS Privacy stub resolver"
+homepage = "https://github.com/getdnsapi/stubby"
+license = "BSD-3-Clause"
+deps = ["getdns", "libcap", "libyaml", "openssl"]
+
+[build]
+system = "cmake"

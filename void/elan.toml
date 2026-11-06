@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'elan'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "elan"
+version = "4.2.2"
+archive = "https://github.com/leanprover/elan/archive/refs/tags/v4.2.2.tar.gz"
+sha256 = "b1f151659be6f2a9c840049ec40bff126847de0fcceef7c42da04627e34b1712"
+strip_components = 1
+description = "Lean version manager"
+homepage = "https://github.com/leanprover/elan"
+license = "Apache-2.0 OR MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

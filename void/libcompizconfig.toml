@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libcompizconfig'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "libcompizconfig"
+version = "0.8.18"
+archive = "https://github.com/compiz-reloaded/libcompizconfig/archive/v0.8.18.tar.gz"
+sha256 = "8ab9b54d1c3fdba84de9c793ecb201d946a7118cce19d50f691def169b2ab396"
+strip_components = 1
+description = "Compiz Reloaded configuration system library"
+homepage = "https://github.com/compiz-reloaded"
+license = "GPL-2.0-or-later"
+deps = ["compiz-core", "libSM", "libxml++", "protobuf", "startup-notification"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext"]

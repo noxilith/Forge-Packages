@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'clxclient'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_install_args, CXXFLAGS
+[package]
+name = "clxclient"
+version = "3.9.2"
+archive = "https://kokkinizita.linuxaudio.org/linuxaudio/downloads/clxclient-3.9.2.tar.bz2"
+sha256 = "8501e964f0e0746abc5083a0b75fe3b937281cc4a9f7d1450ff98e86bc337881"
+strip_components = 1
+description = "C++ wrapper library around the X Window System API"
+homepage = "https://kokkinizita.linuxaudio.org/linuxaudio/"
+license = "LGPL-2.1-or-later"
+deps = ["clthreads", "freetype", "libX11", "libXft"]
+
+[build]
+system = "make"
+subdir = "source"
+tools = ["pkg-config"]

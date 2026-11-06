@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'vali'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "vali"
+version = "0.1.1"
+archive = "https://gitlab.freedesktop.org/emersion/vali/-/archive/v0.1.1/vali-v0.1.1.tar.gz"
+sha256 = "4d3e91ad7c12f51e5aeea6a290142cec99131ecfe6751cd35ef36f956ee946dd"
+strip_components = 1
+description = "C library and code generator for Varlink"
+homepage = "https://gitlab.freedesktop.org/emersion/vali"
+license = "MIT"
+deps = ["aml", "json-c"]
+patches = ["patches/missing-include.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

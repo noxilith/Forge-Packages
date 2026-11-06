@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'make-ca'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "make-ca"
+version = "1.16.1"
+archive = "https://github.com/lfs-book/make-ca/archive/refs/tags/v1.16.1.tar.gz"
+sha256 = "98c7e6fded1938b972d0177b5d5e925d318be87f84ee9e4cad680656a8c29414"
+strip_components = 1
+description = "PKI setup script for LFS (and others)"
+homepage = "https://github.com/lfs-book/make-ca"
+license = "GPL-3.0-or-later OR MIT"
+deps = ["openssl", "p11-kit"]
+
+[build]
+system = "make"
+deps = ["help2man"]

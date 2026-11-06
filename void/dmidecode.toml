@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'dmidecode'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "dmidecode"
+version = "3.7"
+archive = "https://download-mirror.savannah.gnu.org/releases/dmidecode/dmidecode-3.7.tar.xz"
+sha256 = "2c3aed12c85a1e6a9410d406d5e417c455466dc1bc7c89278bb32cf7cad91e8a"
+strip_components = 1
+description = "Desktop Management Interface table related utilities"
+homepage = "https://www.nongnu.org/dmidecode"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

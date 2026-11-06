@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'recutils'. Review before relying on it.
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "recutils"
+version = "1.9"
+archive = "https://ftp.gnu.org/gnu/recutils/recutils-1.9.tar.gz"
+sha256 = "6301592b0020c14b456757ef5d434d49f6027b8e5f3a499d13362f205c486e0e"
+strip_components = 1
+description = "Utilities to deal with recfiles"
+homepage = "https://www.gnu.org/software/recutils/"
+license = "GPL-3.0-or-later"
+deps = ["acl", "curl", "libgcrypt"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-bash-headers", "--disable-rpath"]
+tools = ["pkg-config"]

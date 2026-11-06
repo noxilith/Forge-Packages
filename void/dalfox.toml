@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'dalfox'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "dalfox"
+version = "3.2.4"
+archive = "https://github.com/hahwul/dalfox/archive/refs/tags/v3.2.4.tar.gz"
+sha256 = "d86cae222a4db6c8a335013c980d0c6d672b3abee8cfb44da6ce1b489e4d3a9b"
+strip_components = 1
+description = "XSS scanner and utility focused on automation"
+homepage = "https://github.com/hahwul/dalfox"
+license = "MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Minder'. Review before relying on it.
+# needs, but Forge has no recipe for yet: discount
+[package]
+name = "Minder"
+version = "2.0.9"
+archive = "https://github.com/phase1geo/Minder/archive/2.0.9.tar.gz"
+sha256 = "20443dacbcf13d04640fcbd170286ff1294f308984008e8633872c2cf5ac7c5e"
+strip_components = 1
+description = "Mind-mapping application designed for Pantheon"
+homepage = "https://github.com/phase1geo/Minder"
+license = "GPL-3.0-or-later"
+deps = ["cairo", "granite7", "gtk4", "gtksourceview5", "json-glib", "libadwaita", "libarchive", "libgee", "libxml2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk+3", "vala"]

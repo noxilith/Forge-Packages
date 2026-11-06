@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bochs'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "bochs"
+version = "2.7"
+archive = "https://downloads.sourceforge.net/sourceforge/bochs/bochs-2.7.tar.gz"
+sha256 = "a010ab1bfdc72ac5a08d2e2412cd471c0febd66af1d9349bc0d796879de5b17a"
+strip_components = 1
+description = "Highly portable open source x86(_64) PC emulator"
+homepage = "https://bochs.sourceforge.net/"
+license = "LGPL-2.1-only"
+deps = ["SDL2", "libX11", "libXrandr"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-sdl2", "--enable-all-optimizations", "--enable-e1000", "--disable-readline", "--enable-x86-64", "--enable-smp", "--enable-avx", "--enable-evex", "--enable-x86-debugger", "--enable-usb", "--enable-usb-ohci", "--enable-usb-ehci", "--enable-usb-xhci", "--enable-debugger", "--enable-debugger-gui"]
+tools = ["pkg-config"]

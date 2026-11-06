@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'portage'. Review before relying on it.
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "portage"
+version = "3.0.77"
+archive = "https://github.com/gentoo/portage/archive/portage-3.0.77.tar.gz"
+sha256 = "cf3fdb81dfc0522689c29180a7a78649e4b86a62bd5513ae291ab9f4bd07d059"
+strip_components = 1
+description = "Gentoo's package management system"
+homepage = "https://wiki.gentoo.org/wiki/Portage"
+license = "GPL-2.0-only"
+deps = ["eselect", "rsync", "tar", "xmlto"]
+patches = ["patches/gtar-is-tar.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gobject-introspection'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libffi, python3-Mako, python3-Markdown, python3-setuptools
+[package]
+name = "gobject-introspection"
+version = "1.86.0"
+archive = "https://download.gnome.org/sources/gobject-introspection/1.86/gobject-introspection-1.86.0.tar.xz"
+sha256 = "920d1a3fcedeadc32acff95c2e203b319039dd4b4a08dd1a2dfd283d19c0b9ae"
+strip_components = 1
+description = "Introspection system for GObject-based libraries"
+homepage = "https://wiki.gnome.org/Projects/GObjectIntrospection"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["glib"]
+patches = ["patches/0002-Relocate-the-repository-directory-for-native-builds.patch", "patches/0006-giscanner-ignore-error-return-codes-from-ldd-wrapper.patch", "patches/0011-giscanner-ld-library-path.patch"]
+
+[build]
+system = "meson"
+tools = ["flex", "pkg-config"]

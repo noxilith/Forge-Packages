@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'hostaliases'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "hostaliases"
+version = "2"
+archive = "https://github.com/thypon/hostaliases/archive/v2.tar.gz"
+sha256 = "a29411e576fa485742d7b16ed838b960a462cdd862086fcd3250c7175d19ba93"
+strip_components = 1
+description = "HOSTALIASES libc independent support"
+homepage = "https://github.com/thypon/hostaliases"
+license = "MIT"
+
+[build]
+system = "make"

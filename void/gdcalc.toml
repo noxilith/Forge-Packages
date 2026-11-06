@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gdcalc'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "gdcalc"
+version = "3.4"
+archive = "https://gitlab.com/wef/gdcalc/-/archive/3.4/gdcalc-3.4.tar.gz"
+sha256 = "c6d10a78e00c6d2d1f79771563fe1be6080d0d36e459451e1ab47dd935e7b4db"
+strip_components = 1
+description = "Financial, statistics, scientific and programmers calculator for GTK+"
+homepage = "https://gitlab.com/wef/gdcalc"
+license = "GPL-2.0-only"
+deps = ["gtk+3", "units"]
+
+[build]
+system = "autotools"
+tools = ["bison", "pkg-config"]

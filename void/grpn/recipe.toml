@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'grpn'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+[package]
+name = "grpn"
+version = "1.4.1"
+archive = "https://ftp.debian.org/debian/pool/main/g/grpn/grpn_1.4.1.orig.tar.gz"
+sha256 = "1e43c507795a9107bfb1e4f16c1da706579a22f254ef81422418121bebe60345"
+strip_components = 1
+description = "GTK+ RPN Calculator"
+homepage = "https://tracker.debian.org/pkg/grpn"
+license = "GPL-2.0-only"
+deps = ["gtk+"]
+patches = ["patches/gcc14.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

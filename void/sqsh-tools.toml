@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sqsh-tools'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "sqsh-tools"
+version = "1.6.0"
+archive = "https://codeberg.org/Gottox/sqsh-tools/releases/download/v1.6.0/sqsh-tools-1.6.0.tar.xz"
+sha256 = "f899eb198602e58544c7c08ddf380e2ea2e37e8be87d7fe9edde08639acc3c90"
+strip_components = 1
+description = "Fresh squashfs implementation"
+homepage = "https://gottox.de/sqsh-tools/"
+license = "BSD-2-Clause"
+deps = ["curl", "fuse3", "lz4", "xz", "zlib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

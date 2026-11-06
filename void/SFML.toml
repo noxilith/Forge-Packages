@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'SFML'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen, glew, mesa
+[package]
+name = "SFML"
+version = "2.6.2"
+archive = "https://github.com/SFML/SFML/archive/2.6.2.tar.gz"
+sha256 = "15ff4d608a018f287c6a885db0a2da86ea389e516d2323629e4d4407a7ce047f"
+strip_components = 1
+description = "Simple and Fast Multimedia Library"
+homepage = "http://www.sfml-dev.org/"
+license = "Zlib"
+deps = ["freetype", "glu", "libXcursor", "libXrandr", "libjpeg-turbo", "libopenal", "libsndfile", "xcb-util-image"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSFML_BUILD_EXAMPLES=0", "-DSFML_BUILD_DOC=1", "-DSFML_INSTALL_PKGCONFIG_FILES=1"]

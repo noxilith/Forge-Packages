@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'psensor'. Review before relying on it.
+# hooks not translated: post_extract, pre_configure
+# needs, but Forge has no recipe for yet: libatasmart
+[package]
+name = "psensor"
+version = "1.2.1"
+archive = "https://wpitchoune.net/psensor/files/psensor-1.2.1.tar.gz"
+sha256 = "084f785d169f533d3010e50c5933436ed427afc70d41740b762f1db5034833ab"
+strip_components = 1
+description = "Graphical hardware temperature monitor for Linux"
+homepage = "https://wpitchoune.net/psensor"
+license = "GPL-2.0-only"
+deps = ["curl", "gtk+3", "json-c", "libayatana-appindicator", "libgtop", "libmicrohttpd", "libnotify", "lm_sensors", "udisks2"]
+patches = ["patches/18.patch", "patches/microhttpd-0.9.71.patch", "patches/use-ayatana-appindicator.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'io.elementary.videos'. Review before relying on it.
+[package]
+name = "io.elementary.videos"
+version = "2.9.1"
+archive = "https://github.com/elementary/videos/archive/2.9.1.tar.gz"
+sha256 = "11204b2bc4cedb8561dfb4d9906a2b9a747f551b25f88a0472436daf60e8d4e4"
+strip_components = 1
+description = "Video player and library app designed for elementary OS"
+homepage = "https://github.com/elementary/videos"
+license = "GPL-3.0-or-later"
+deps = ["clutter-gst3", "clutter-gtk", "granite", "gst-plugins-base1", "gstreamer1", "libhandy1"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["AppStream", "gettext", "vala"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'awesome-appmenu'. Review before relying on it.
+[package]
+name = "awesome-appmenu"
+version = "1.1"
+archive = "https://github.com/sharedordaz/Shared-AwesomeAppMenu/archive/refs/tags/1.1.tar.gz"
+sha256 = "b9635dd20c80ccca44538e44fc7e06b3c2ce40ffc01f0baae7e943e20302b1b3"
+strip_components = 1
+description = "Create a menu of installed applications for the awesome window manager"
+homepage = "https://github.com/sharedordaz/Shared-AwesomeAppMenu"
+license = "GPL-3.0-or-later"
+deps = ["awesome"]
+
+[build]
+system = "make"

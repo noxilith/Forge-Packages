@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'm4'. Review before relying on it.
+# hooks not translated: pre_check
+[package]
+name = "m4"
+version = "1.4.21"
+archive = "https://ftp.gnu.org/gnu/m4/m4-1.4.21.tar.xz"
+sha256 = "f25c6ab51548a73a75558742fb031e0625d6485fe5f9155949d6486a2408ab66"
+strip_components = 1
+description = "GNU version of UNIX m4 macro language processor"
+homepage = "https://www.gnu.org/software/m4/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-changeword", "--enable-threads"]

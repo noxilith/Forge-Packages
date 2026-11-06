@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'j4status'. Review before relying on it.
+# hooks not translated: post_extract
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "j4status"
+version = "0.1"
+archive = "https://github.com/sardemff7/j4status/releases/download/v0.1/j4status-0.1.tar.xz"
+sha256 = "2ce80e460d6e4091deb28b663be87eceeb5cd533f40db6c5fba44a6adb995341"
+strip_components = 1
+description = "Provides a status line to retrieve information from your computer"
+homepage = "https://sardemff7.github.io/j4status/"
+license = "GPL-3.0-or-later"
+deps = ["NetworkManager", "glib", "libmpdclient", "lm_sensors", "pulseaudio", "upower", "yajl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-mpd-input", "--disable-nm-input"]
+tools = ["pkg-config"]
+deps = ["libxslt"]

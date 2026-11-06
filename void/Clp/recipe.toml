@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Clp'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "Clp"
+version = "1.17.11"
+archive = "https://github.com/coin-or/Clp/archive/refs/tags/releases/1.17.11.tar.gz"
+sha256 = "2c078e174dc1a7a308e091b6256fb34b4017897fc140ea707ba207b2913ea46d"
+strip_components = 1
+description = "COIN-OR linear programming solver"
+homepage = "https://github.com/coin-or/Clp"
+license = "EPL-2.0"
+deps = ["coin-or-osi", "coin-or-sample", "coin-or-utils"]
+patches = ["patches/disable-avx.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

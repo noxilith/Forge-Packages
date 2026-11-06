@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'necho'. Review before relying on it.
+[package]
+name = "necho"
+version = "0.1"
+archive = "https://github.com/leahneukirchen/necho/archive/v0.1.tar.gz"
+sha256 = "eaa41ef7230d11cfaca7bfdb3a42824f1236204bd8df2e8c323eec33caa6a306"
+strip_components = 1
+description = "minimal, sensible alternatives to echo(1)"
+homepage = "https://github.com/leahneukirchen/necho"
+license = "Public Domain"
+
+[build]
+system = "make"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wavemon'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "wavemon"
+version = "0.9.7"
+archive = "https://github.com/uoaerg/wavemon/archive/v0.9.7.tar.gz"
+sha256 = "768d7c580fcc592efcacac924dcfd2ebe131608f5c8ac67d36e35731e1ac683a"
+strip_components = 1
+description = "Ncurses-based monitoring application for wireless network devices"
+homepage = "https://github.com/uoaerg/wavemon"
+license = "GPL-2.0-or-later"
+deps = ["libnl3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

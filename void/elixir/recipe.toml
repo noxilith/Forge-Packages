@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'elixir'. Review before relying on it.
+[package]
+name = "elixir"
+version = "1.19.5"
+archive = "https://github.com/elixir-lang/elixir/archive/v1.19.5.tar.gz"
+sha256 = "10750b8bd74b10ac1e25afab6df03e3d86999890fa359b5f02aa81de18a78e36"
+strip_components = 1
+description = "Functional, concurrent, general-purpose programming language"
+homepage = "https://elixir-lang.org/"
+license = "Apache-2.0"
+deps = ["erlang"]
+patches = ["patches/workout-test.patch"]
+
+[build]
+system = "make"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fan2go'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "fan2go"
+version = "0.15.0"
+archive = "https://github.com/markusressel/fan2go/archive/refs/tags/0.15.0.tar.gz"
+sha256 = "0bf10cd608c0a2fa55b9237267a7ff2c835697b77110a8d53a1711c07a067c0c"
+strip_components = 1
+description = "Dynamic fan speed control daemon"
+homepage = "https://github.com/markusressel/fan2go"
+license = "AGPL-3.0-or-later"
+deps = ["lm_sensors"]
+
+[build]
+system = "go"

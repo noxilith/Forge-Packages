@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'hut'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, build_helper
+[package]
+name = "hut"
+version = "0.8.0"
+archive = "https://git.sr.ht/~xenrox/hut/archive/v0.8.0.tar.gz"
+sha256 = "f7994375673f253705ed7499f44b712b2d9fcec8a5a42f1d0408002552b7d0e7"
+strip_components = 1
+description = "CLI tool for sr.ht"
+homepage = "https://git.sr.ht/~xenrox/hut"
+license = "AGPL-3.0-only"
+
+[build]
+system = "go"
+deps = ["scdoc"]

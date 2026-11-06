@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xseticon'. Review before relying on it.
+[package]
+name = "xseticon"
+version = "0.1+bzr13"
+archive = "https://github.com/xeyownt/xseticon/archive/0.1+bzr13.tar.gz"
+sha256 = "d34c349ff09ea42393fb3bac3fd2be0e7b9a244388e2f4b32cc92636967a4a2c"
+strip_components = 1
+description = "Set the X11 window icon for any given window"
+homepage = "https://github.com/xeyownt/xseticon"
+license = "GPL-2.0-or-later"
+deps = ["gd", "glib", "libXmu"]
+patches = ["patches/fix-makefile.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

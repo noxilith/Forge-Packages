@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lxtask'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "lxtask"
+version = "0.1.12"
+archive = "https://github.com/lxde/lxtask/archive/refs/tags/0.1.12.tar.gz"
+sha256 = "f9d97ebdd8402fe7d9533b6173d0f553d5f9987f5c2885f7d2ee070e80300ab3"
+strip_components = 1
+description = "LXDE Task Manager"
+homepage = "http://lxde.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xnots'. Review before relying on it.
+# settings not translated: make_build_args
+[package]
+name = "xnots"
+version = "0.2.1"
+archive = "https://downloads.sourceforge.net/sourceforge/project/xnots/xnots/xnots-0.2.1/xnots-0.2.1.tar.gz"
+sha256 = "80bbab0334880f79aa12cf17ebffc5730a85dc537e8e6208169720656ecd72ca"
+strip_components = 1
+description = "Desktop sticky notes application for Unix geeks"
+homepage = "http://xnots.sourceforge.net/"
+license = "GPL-2.0-only"
+deps = ["libX11", "libXrandr", "pango"]
+patches = ["patches/Add-aarch64.patch", "patches/compiler.patch", "patches/inline.patch"]
+
+[build]
+system = "make"
+tools = ["perl", "pkg-config"]

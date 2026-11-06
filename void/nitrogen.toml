@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nitrogen'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, intltool
+[package]
+name = "nitrogen"
+version = "1.6.1"
+archive = "https://github.com/l3ib/nitrogen/releases/download/1.6.1/nitrogen-1.6.1.tar.gz"
+sha256 = "f40213707b7a3be87e556f65521cef8795bd91afda13dfac8f00c3550375837d"
+strip_components = 1
+description = "Background browser and setter for X with support for Xinerama"
+homepage = "https://github.com/l3ib/nitrogen"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtkmm2", "libXinerama"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

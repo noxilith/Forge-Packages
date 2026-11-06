@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'knighttime'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-position, qt6-tools
+[package]
+name = "knighttime"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/knighttime-6.7.5.tar.xz"
+sha256 = "5cb23e736e4be4952e63c855cfb45850e1085d650e67b7cae3cbf9721921cb9f"
+strip_components = 1
+description = "Helpers for scheduling the dark-light cycle"
+homepage = "https://invent.kde.org/plasma/knighttime"
+license = "LGPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kholidays", "kf6-ki18n", "qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'sysexxer-ng'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost, jack, libev, ncurses
+[package]
+name = "sysexxer-ng"
+version = "1.0"
+archive = "https://github.com/linuxmao-org/sysexxer-ng/releases/download/v1.0/sysexxer-ng-1.0.tar.gz"
+sha256 = "66e2eb66b7ab34b8287bba3230009a311b7db1870c47911049666c523fced5a9"
+strip_components = 1
+description = "Universal tool to exchange MIDI system-exclusive data"
+homepage = "https://github.com/linuxmao-org/sysexxer-ng"
+license = "BSL-1.0"
+deps = ["fltk", "rtmidi"]
+patches = ["patches/fix-std_string.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

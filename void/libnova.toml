@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libnova'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "libnova"
+version = "0.15.0"
+archive = "https://downloads.sourceforge.net/sourceforge/libnova/libnova-0.15.0.tar.gz"
+sha256 = "7c5aa33e45a3e7118d77df05af7341e61784284f1e8d0d965307f1663f415bb1"
+strip_components = 1
+description = "A double precision astrometry and astrodynamics library"
+homepage = "http://libnova.sourceforge.net/"
+license = "LGPL-2.0-or-later"
+
+[build]
+system = "autotools"

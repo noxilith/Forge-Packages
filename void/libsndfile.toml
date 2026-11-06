@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libsndfile'. Review before relying on it.
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "libsndfile"
+version = "1.2.2"
+archive = "https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2.tar.xz"
+sha256 = "3799ca9924d3125038880367bf1468e53a1b7e3686a934f098b7e1d286cdb80e"
+strip_components = 1
+description = "C library for reading and writing files containing sampled sound"
+homepage = "https://libsndfile.github.io/libsndfile/"
+license = "LGPL-2.1-or-later"
+deps = ["alsa-lib", "flac", "lame", "libvorbis", "mpg123", "opus"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static"]
+tools = ["pkg-config"]

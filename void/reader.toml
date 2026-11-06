@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'reader'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "reader"
+version = "0.6.0"
+archive = "https://github.com/mrusme/reader/archive/refs/tags/v0.6.0.tar.gz"
+sha256 = "d71448bbeae5054cf8ec31856a29782ecc37be50a7722d99b747e3952186ac45"
+strip_components = 1
+description = "Lightweight CLI tool offering better readability of web pages"
+homepage = "https://github.com/mrusme/reader"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

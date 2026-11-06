@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'forgejo-cli'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libssh2
+[package]
+name = "forgejo-cli"
+version = "0.7.0"
+archive = "https://codeberg.org/forgejo-contrib/forgejo-cli/archive/v0.7.0.tar.gz"
+sha256 = "748ce60eb18e72af83ef3956910933b1e091abf673f12ff9777aea214f6eae40"
+strip_components = 1
+description = "CLI application for interacting with Forgejo"
+homepage = "https://codeberg.org/forgejo-contrib/forgejo-cli"
+license = "Apache-2.0 OR MIT"
+deps = ["libgit2-1.9", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

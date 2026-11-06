@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'zmap'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: conf_files
+[package]
+name = "zmap"
+version = "4.4.0"
+archive = "https://github.com/zmap/zmap/archive/v4.4.0.tar.gz"
+sha256 = "be4521fdac10eddc9ba046399149064ca23d4630b7987301abdee9e0044b8d5c"
+strip_components = 1
+description = "Fast network scanner designed for Internet-wide network surveys"
+homepage = "https://zmap.io"
+license = "Apache-2.0"
+deps = ["gmp", "json-c", "judy", "libpcap", "libunistring"]
+
+[build]
+system = "cmake"
+tools = ["flex", "pkg-config"]
+deps = ["byacc", "gengetopt"]

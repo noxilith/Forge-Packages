@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libxisf'. Review before relying on it.
+[package]
+name = "libxisf"
+version = "0.2.9"
+archive = "https://gitea.nouspiro.space/nou/libXISF/archive/v0.2.9.tar.gz"
+sha256 = "d3d911ed0e01ef1d99868742ed895694d53b1b0ee208e403113879e9551e314e"
+strip_components = 1
+description = "Library to load and write XISF format from PixInsight"
+homepage = "https://nouspiro.space/?page_id=306"
+license = "GPL-3.0-or-later"
+deps = ["lz4", "pugixml", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_BUNDLED_LIBS=OFF"]
+tools = ["pkg-config"]

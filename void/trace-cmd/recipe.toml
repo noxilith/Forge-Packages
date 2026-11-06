@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'trace-cmd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, make_build_target, make_install_target
+# needs, but Forge has no recipe for yet: asciidoc, zstd
+[package]
+name = "trace-cmd"
+version = "3.4"
+archive = "https://git.kernel.org/pub/scm/utils/trace-cmd/trace-cmd.git/snapshot/trace-cmd-v3.4.tar.gz"
+sha256 = "604085ab395cc2cb84397dc3d209ea0d0b15ae506f8ea91ff45c86e5a050213c"
+strip_components = 1
+description = "Tools to use ftrace Linux kernel internal tracer"
+homepage = "https://trace-cmd.org"
+license = "GPL-2.0-or-later, LGPL-2.1-only"
+deps = ["libtraceevent", "libtracefs"]
+patches = ["patches/musl-__bswap64.patch", "patches/musl-limits_h.patch", "patches/no-rpath.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["source-highlight", "xmlto"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'arti'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: sqlite, zstd
+[package]
+name = "arti"
+version = "2.2.0"
+archive = "https://gitlab.torproject.org/tpo/core/arti/-/archive/arti-v2.2.0/arti-arti-v2.2.0.tar.gz"
+sha256 = "db4b8c4ae62e585bc1d49c2baa7e467354037b0b177d71670b2cd7d3369b2f8e"
+strip_components = 1
+description = "Tor implementation in Rust"
+homepage = "https://gitlab.torproject.org/tpo/core/arti"
+license = "Apache-2.0, MIT"
+deps = ["openssl"]
+patches = ["patches/fix-32bit-tests.patch", "patches/fix-test-on-musl.patch", "patches/fix-tests-on-machines-below-4GiB.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

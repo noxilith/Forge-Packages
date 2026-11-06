@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kdesu'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kdesu"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kdesu-6.30.0.tar.xz"
+sha256 = "9bf244884b09ce38ad84d00e5879e798b02e1610ec8f3d9ee6c93e7502b356e2"
+strip_components = 1
+description = "KDE User interface for running shell commands with root privileges"
+homepage = "https://invent.kde.org/frameworks/kdesu"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kpty", "qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext"]

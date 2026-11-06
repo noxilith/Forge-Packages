@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'konquest'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt6-scxml, qt6-tools
+[package]
+name = "konquest"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/konquest-26.08.1.tar.xz"
+sha256 = "ff2eb6e383b4d8e9c4091f24d5bd630b953dc797f3c06707c8be548b550babeb"
+strip_components = 1
+description = "KDE galactic conquest game"
+homepage = "https://kde.org/applications/en/games/org.kde.konquest"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "libkdegames"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

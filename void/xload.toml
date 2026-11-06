@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xload'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xload"
+version = "1.2.2"
+archive = "https://www.x.org/releases/individual/app/xload-1.2.2.tar.xz"
+sha256 = "112a75e481783b52a20d37367f57983d60919f78059f0e107458dde236804131"
+strip_components = 1
+description = "System load average display for X"
+homepage = "http://www.x.org/archive/X11R6.8.1/doc/xload.1.html"
+license = "X11, MIT"
+deps = ["libXaw"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "xorg-util-macros"]

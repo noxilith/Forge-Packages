@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'megapixels'. Review before relying on it.
+[package]
+name = "megapixels"
+version = "1.5.2"
+archive = "https://gitlab.com/postmarketOS/megapixels/-/archive/1.5.2/megapixels-1.5.2.tar.gz"
+sha256 = "1c719eaf574ed3d87ca7f42fdc830cad709c7fd0157eca4323ecd8da5cc79abd"
+strip_components = 1
+description = "GTK4 camera app for ARM devices"
+homepage = "https://gitlab.com/postmarketOS/megapixels"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "zbar"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

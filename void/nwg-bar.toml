@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'nwg-bar'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "nwg-bar"
+version = "0.1.6"
+archive = "https://github.com/nwg-piotr/nwg-bar/archive/refs/tags/v0.1.6.tar.gz"
+sha256 = "badc232f9eef1a225776c7f0fe2534b49ac0a957f1a81dc24acb8f341b7719d4"
+strip_components = 1
+description = "GTK3-based button bar for wlroots-based compositors"
+homepage = "https://github.com/nwg-piotr/nwg-bar"
+license = "MIT"
+deps = ["gtk+3", "gtk-layer-shell"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

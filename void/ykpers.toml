@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ykpers'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "ykpers"
+version = "1.20.0"
+archive = "https://developers.yubico.com/yubikey-personalization/Releases/ykpers-1.20.0.tar.gz"
+sha256 = "0ec84d0ea862f45a7d85a1a3afe5e60b8da42df211bb7d27a50f486e31a79b93"
+strip_components = 1
+description = "Yubikey Personalization Tools cmdline"
+homepage = "https://developers.yubico.com/yubikey-personalization/"
+license = "BSD-2-Clause"
+deps = ["libusb-compat", "libyubikey"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-rpath", "--with-backend=libusb"]
+tools = ["pkg-config"]

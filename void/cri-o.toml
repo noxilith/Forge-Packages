@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cri-o'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_build_tags, go_package, go_import_path, build_helper, conf_files
+# needs, but Forge has no recipe for yet: apparmor, conmon
+[package]
+name = "cri-o"
+version = "1.36.3"
+archive = "https://github.com/cri-o/cri-o/archive/v1.36.3.tar.gz"
+sha256 = "8f5a4e258729518a598f05e0733b540df4c6bd889b6cd9a783a868cdb5345399"
+strip_components = 1
+description = "OCI-based implementation of Kubernetes Container Runtime Interface"
+homepage = "https://github.com/cri-o/cri-o"
+license = "Apache-2.0"
+deps = ["glib", "gpgme", "libseccomp", "lvm2"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]
+deps = ["go-md2man"]

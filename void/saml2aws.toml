@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'saml2aws'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+# needs, but Forge has no recipe for yet: aws-cli
+[package]
+name = "saml2aws"
+version = "2.36.9"
+archive = "https://github.com/Versent/saml2aws/archive/v2.36.9.tar.gz"
+sha256 = "a2ccc55d2ee9e572b46f6b508dc6f474550ae103d20961994c6cf58cdcba5006"
+strip_components = 1
+description = "Get AWS temporary credentials from SAML provider"
+homepage = "https://github.com/Versent/saml2aws"
+license = "MIT"
+
+[build]
+system = "go"

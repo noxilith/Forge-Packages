@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-kcodecs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kcodecs"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kcodecs-6.30.0.tar.xz"
+sha256 = "a42c79ff3237b73789d1c63cdfd848c0d59671ce5e93723a2efa128f00cb3450"
+strip_components = 1
+description = "Collection of methods to manipulate strings using various encodings"
+homepage = "https://invent.kde.org/frameworks/kcodecs"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["gperf"]
+deps = ["extra-cmake-modules"]

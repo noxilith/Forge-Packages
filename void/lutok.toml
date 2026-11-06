@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lutok'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen, lua54
+[package]
+name = "lutok"
+version = "0.6.3"
+archive = "https://github.com/freebsd/lutok/releases/download/lutok-0.6.3/lutok-0.6.3.tar.gz"
+sha256 = "5f33fdf8be36c2d95b866947ff49aa4a90ffd6f10a6172d9ed9243f6a6b42f18"
+strip_components = 1
+description = "Lightweight C++ API for Lua"
+homepage = "https://github.com/freebsd/lutok"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+configure_args = ["--with-doxygen"]
+tools = ["pkg-config"]
+deps = ["tar"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fcitx5-table-other'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fcitx5, libime
+[package]
+name = "fcitx5-table-other"
+version = "5.1.7"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-table-other/fcitx5-table-other-5.1.7.tar.zst"
+sha256 = "ac75ca9e5fd45289b17fda786de70d55139b09c21e9fcf9af06bd20b030e48c7"
+strip_components = 1
+description = "Fcitx5 - non-Chinese table"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gatling'. Review before relying on it.
+# hooks not translated: pre_build, pre_install
+# settings not translated: make_install_args, make_build_target, CFLAGS
+# needs, but Forge has no recipe for yet: libowfat
+[package]
+name = "gatling"
+version = "0.16"
+archive = "https://www.fefe.de/gatling/gatling-0.16.tar.xz"
+sha256 = "5f96438ee201d7f1f6c2e0849ff273b196bdc7493f29a719ce8ed08c8be6365b"
+strip_components = 1
+description = "High performance web server"
+homepage = "http://www.fefe.de/gatling"
+license = "GPL-2.0-only"
+deps = ["openssl", "zlib"]
+patches = ["patches/gatling.c.patch"]
+
+[build]
+system = "make"

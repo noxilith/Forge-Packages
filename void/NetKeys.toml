@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'NetKeys'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "NetKeys"
+version = "0.5.5"
+archive = "https://github.com/NetAuth/NetKeys/archive/v0.5.5.tar.gz"
+sha256 = "1a82b2d415b77a63bd1cf7b2f79db454aea11811f268166dc004b75f38b9a791"
+strip_components = 1
+description = "Key retrieval daemon for NetAuth"
+homepage = "https://netauth.org"
+license = "MIT"
+
+[build]
+system = "go"

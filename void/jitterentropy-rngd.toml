@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jitterentropy-rngd'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "jitterentropy-rngd"
+version = "1.2.8"
+archive = "https://www.chronox.de/jent/jitterentropy-rngd-1.2.8.tar.xz"
+sha256 = "c4480c67d888fd9c6c9c3bcf06c785578ad81984ec978da3c33d16aa019664fb"
+strip_components = 1
+description = "Jitter RNG Daemon"
+homepage = "https://www.chronox.de/jent.html"
+license = "BSD-3-Clause, GPL-2.0-only"
+
+[build]
+system = "make"

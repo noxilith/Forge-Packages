@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'toxcore'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: libvpx
+[package]
+name = "toxcore"
+version = "0.2.24"
+archive = "https://github.com/TokTok/c-toxcore/releases/download/v0.2.24/c-toxcore-v0.2.24.tar.gz"
+sha256 = "c07658e6f4d195b659941aa8dcc20a8499435e6cdfd036bbb3f2ab2cbf03bd7c"
+strip_components = 1
+description = "Encrypted peer-to-peer instant messenger protocol library"
+homepage = "https://tox.chat"
+license = "GPL-3.0-or-later"
+deps = ["libconfig", "libsodium", "opus"]
+
+[build]
+system = "cmake"
+configure_args = ["-DMUST_BUILD_TOXAV=ON", "-DBUILD_TOXAV=ON", "-DDHT_BOOTSTRAP=OFF", "-DBOOTSTRAP_DAEMON=ON", "-DTEST_TIMEOUT_SECONDS=10"]
+tools = ["pkg-config"]

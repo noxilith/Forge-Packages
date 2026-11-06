@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'remindcal'. Review before relying on it.
+# settings not translated: go_import_path
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "remindcal"
+version = "0.1.1"
+archive = "https://github.com/realsirjoe/remindcal/archive/v0.1.1.tar.gz"
+sha256 = "b3e0a0a618bf0498533eba7367e0748fa109392ccc307888f4e3346549f80522"
+strip_components = 1
+description = "TUI front-end for Remind"
+homepage = "https://github.com/realsirjoe/remindcal"
+license = "Unlicense"
+deps = ["remind"]
+
+[build]
+system = "go"

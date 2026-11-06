@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'powerstat'. Review before relying on it.
+[package]
+name = "powerstat"
+version = "0.04.03"
+archive = "https://github.com/ColinIanKing/powerstat/archive/refs/tags/V0.04.03.tar.gz"
+sha256 = "f7612bb5af9c1355bda30b0441aaab34e0b125bd867e7feac98671fd39de9b17"
+strip_components = 1
+description = "Measures the power consumption using the ACPI battery information"
+homepage = "https://github.com/ColinIanKing/powerstat"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

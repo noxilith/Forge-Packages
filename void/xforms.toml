@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xforms'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "xforms"
+version = "1.2.4"
+archive = "https://download.savannah.nongnu.org/releases/xforms/xforms-1.2.4.tar.gz"
+sha256 = "78cc6b07071bbeaa1f906e0a22d5e9980e48f8913577bc082d661afe5cb75696"
+strip_components = 1
+description = "Graphical uesr interface toolkit for X11"
+homepage = "http://xforms-toolkit.org/"
+license = "LGPL-2.1-only"
+deps = ["libSM", "libXpm", "libjpeg-turbo"]
+
+[build]
+system = "autotools"

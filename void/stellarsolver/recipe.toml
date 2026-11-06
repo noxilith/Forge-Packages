@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'stellarsolver'. Review before relying on it.
+# settings not translated: build_helper, CFLAGS, CXXFLAGS
+[package]
+name = "stellarsolver"
+version = "2.7"
+archive = "https://github.com/rlancaste/stellarsolver/archive/refs/tags/2.7.tar.gz"
+sha256 = "36ff495f325920b9a23b7c3f7453a99c8d405e0984d4b27da7568625cb6c76c9"
+strip_components = 1
+description = "Sextractor and Internal Astrometric Solver"
+homepage = "https://github.com/rlancaste/stellarsolver"
+license = "GPL-3.0-or-later"
+deps = ["cfitsio", "gsl", "qt6-base", "wcslib"]
+patches = ["patches/config.patch", "patches/qsort_r.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_QT5=OFF"]
+tools = ["pkg-config"]

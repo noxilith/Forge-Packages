@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'eb'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "eb"
+version = "4.4.3"
+archive = "https://github.com/mistydemeo/eb/archive/refs/tags/v4.4.3.tar.gz"
+sha256 = "74448639360a35098f2645c934e4fa77008086938fc15587b26cb36a6365aecb"
+strip_components = 1
+description = "C library and tools for accessing CD-ROM books"
+homepage = "https://www.mistys-internet.website/eb/index-en.html"
+license = "BSD-3-Clause"
+deps = ["zlib"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["perl"]

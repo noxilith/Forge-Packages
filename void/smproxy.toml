@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'smproxy'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "smproxy"
+version = "1.0.8"
+archive = "https://www.x.org/releases/individual/app/smproxy-1.0.8.tar.xz"
+sha256 = "fee584eae2ec1ce2d178d72d3b484920271ba68a27935769cefbafbc3a2ff6c8"
+strip_components = 1
+description = "X11R6 session management application"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libSM", "libXmu", "libXt"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

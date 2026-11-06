@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'helix'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: make_install_args
+[package]
+name = "helix"
+version = "25.07.1"
+archive = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-source.tar.xz"
+sha256 = "2d0cf264ac77f8c25386a636e2b3a09a23dec555568cc9a5b2927f84322f544e"
+strip_components = 1
+description = "Post-modern modal text editor"
+homepage = "https://helix-editor.com/"
+license = "MPL-2.0"
+patches = ["patches/skip_grammar_fetch.patch"]
+
+[build]
+system = "cargo"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnote'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: itstool, util-linux-common
+[package]
+name = "gnote"
+version = "48.1"
+archive = "https://download.gnome.org/sources/gnote/48/gnote-48.1.tar.xz"
+sha256 = "e4851ee6a5bc2f5c07d1c6ff4d69ba0471c24caa7d8204bd2a1098dc7187bedf"
+strip_components = 1
+description = "GNOME note taking application"
+homepage = "https://wiki.gnome.org/Apps/Gnote"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "gtkmm4", "libadwaita", "libsecret", "libxml2", "libxslt"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "gtk+3"]

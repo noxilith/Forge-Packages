@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kwayland'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, mesa, qt6-tools
+[package]
+name = "kf6-kwayland"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kwayland-6.7.5.tar.xz"
+sha256 = "8d4c83524919dc87b5dec546d0fb14c591c03957888cb7b240a4a9d1bbdc8269"
+strip_components = 1
+description = "Qt-style client and server library wrapper for Wayland libraries"
+homepage = "https://invent.kde.org/plasma/kwayland"
+license = "LGPL-2.1-or-later"
+deps = ["libxkbcommon", "plasma-wayland-protocols", "qt6-base", "wayland", "wayland-protocols"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "kf6-kcoreaddons"]

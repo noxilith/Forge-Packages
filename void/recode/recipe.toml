@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'recode'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS, LDFLAGS
+[package]
+name = "recode"
+version = "3.7.15"
+archive = "https://github.com/rrthomas/recode/releases/download/v3.7.15/recode-3.7.15.tar.gz"
+sha256 = "f590407fc51badb351973fc1333ee33111f05ec83a8f954fd8cf0c5e30439806"
+strip_components = 1
+description = "Character set conversion utility"
+homepage = "https://github.com/rrthomas/Recode"
+license = "GPL-2.0-or-later"
+deps = ["libiconv"]
+patches = ["patches/fclose.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--disable-static"]
+deps = ["gettext", "texinfo"]

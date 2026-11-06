@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xdelta3'. Review before relying on it.
+# hooks not translated: post_extract
+[package]
+name = "xdelta3"
+version = "3.1.0"
+archive = "https://github.com/jmacd/xdelta-devel/releases/download/v3.1.0/xdelta3-3.1.0.tar.gz"
+sha256 = "114543336ab6cee3764e3c03202701ef79d7e5e8e4863fe64811e4d9e61884dc"
+strip_components = 1
+description = "Delta/differential compression tools, VCDIFF/RFC 3284 delta compression"
+homepage = "http://xdelta.org"
+license = "GPL-2.0-or-later"
+deps = ["xz"]
+
+[build]
+system = "autotools"

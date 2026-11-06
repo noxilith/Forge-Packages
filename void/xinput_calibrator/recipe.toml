@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xinput_calibrator'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xinput_calibrator"
+version = "0.8.0"
+archive = "https://xorg.freedesktop.org/archive/individual/app/xinput_calibrator-0.8.0.tar.xz"
+sha256 = "0508bf9705c0945f746b8c81bfc8d583a347dd067b58fa76b1aed4225e4b8b40"
+strip_components = 1
+description = "Utility to calibrate X input devices"
+homepage = "https://www.freedesktop.org/wiki/Software/xinput_calibrator"
+license = "X11"
+deps = ["libXi", "libXrandr"]
+patches = ["patches/no-update-desktopdb.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

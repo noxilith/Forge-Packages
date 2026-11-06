@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'jwm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "jwm"
+version = "2.4.6"
+archive = "https://github.com/joewing/jwm/releases/download/v2.4.6/jwm-2.4.6.tar.xz"
+sha256 = "b5871ec28317594b3fa22b83ed5524cc911d498c455eaab3ae68def195dd802d"
+strip_components = 1
+description = "Light-weight window manager for the X11 Window System"
+homepage = "http://joewing.net/projects/jwm"
+license = "MIT"
+deps = ["fribidi", "libXext", "libXft", "libXinerama", "libXmu", "libXpm", "libXrender", "libjpeg-turbo", "libpng", "librsvg", "pango"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "which"]

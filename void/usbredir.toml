@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'usbredir'. Review before relying on it.
+[package]
+name = "usbredir"
+version = "0.15.0"
+archive = "https://gitlab.freedesktop.org/spice/usbredir/-/archive/usbredir-0.15.0/usbredir-usbredir-0.15.0.tar.bz2"
+sha256 = "e3966c5d0221173867b3668a1ecc4d11506e8848ef9750a157723b8c9b7f1421"
+strip_components = 1
+description = "USB traffic redirection protocol"
+homepage = "https://spice-space.org"
+license = "GPL-2.0-or-later,LGPL-2.1-or-later"
+deps = ["glib", "libusb"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

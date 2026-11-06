@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xev'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xev"
+version = "1.2.6"
+archive = "https://www.x.org/releases/individual/app/xev-1.2.6.tar.xz"
+sha256 = "61e1c5e008ac9973aca7cdddf36e9df7410e77083b030eb04f4dc737c51807d7"
+strip_components = 1
+description = "Display X events"
+homepage = "https://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXrandr"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

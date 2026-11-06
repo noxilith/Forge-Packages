@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libevdevPlus'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libevdevPlus"
+version = "0.1.1"
+archive = "https://github.com/YukiWorkshop/libevdevPlus/archive/v0.1.1.tar.gz"
+sha256 = "c941b6b45f784c1e6c6f316f59256fabd604ac392db405cf7fd99de2686aaab0"
+strip_components = 1
+description = "Easy-to-use event device library in C++"
+homepage = "https://github.com/YukiWorkshop/libevdevPlus"
+license = "MIT"
+patches = ["patches/time64.patch"]
+
+[build]
+system = "cmake"

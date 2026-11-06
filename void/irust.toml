@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'irust'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "irust"
+version = "1.76.1"
+archive = "https://github.com/sigmaSd/IRust/archive/refs/tags/irust@1.76.1.tar.gz"
+sha256 = "67b284bb9c356555a1f7cbf95626d6c64e0e3e5bf2fbafae7a91316057058b68"
+strip_components = 1
+description = "Cross Platform Rust Repl"
+homepage = "https://github.com/sigmaSd/IRust"
+license = "MIT"
+
+[build]
+system = "cargo"

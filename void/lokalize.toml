@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lokalize'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt6-tools
+[package]
+name = "lokalize"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/lokalize-26.08.1.tar.xz"
+sha256 = "085526120fbcd7335a48373ef6305612a5e8a41c063710f282abe3f90da7417e"
+strip_components = 1
+description = "Computer-aided translation system"
+homepage = "https://apps.kde.org/lokalize"
+license = "LGPL-2.0-or-later"
+deps = ["hunspell", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-knotifications", "kf6-ktextwidgets", "kf6-kxmlgui", "kf6-sonnet", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lxqt-admin'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-admin"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-admin/archive/2.4.0.tar.gz"
+sha256 = "0adb2195139fdc1b5596480e2ed62c87b48d10043147da986053ec41eafb5848"
+strip_components = 1
+description = "LXQt system administration tool"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["liblxqt"]
+patches = ["patches/systemd.patch"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "polkit-qt6", "qt6-base"]

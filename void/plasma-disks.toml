@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'plasma-disks'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "plasma-disks"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-disks-6.7.5.tar.xz"
+sha256 = "34125cd31e559d4d0fef49bb33a6ffc1803112a17495ae1bfbcf5e8beda464c4"
+strip_components = 1
+description = "Hard disk health monitoring for KDE Plasma"
+homepage = "https://invent.kde.org/plasma/plasma-disks"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kauth", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kio", "kf6-knotifications", "kf6-kservice", "kf6-solid", "libICE", "libX11", "libplasma", "qt6-base", "smartmontools"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext"]

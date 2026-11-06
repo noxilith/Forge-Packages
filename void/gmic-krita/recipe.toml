@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gmic-krita'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, qt5
+[package]
+name = "gmic-krita"
+version = "3.5.0.1"
+archive = "https://files.kde.org/krita/build/dependencies/gmic-3.5.0.1-patched.tar.gz"
+sha256 = "1ae8ca0d368615af6ebdf1cbff005cb20868e1032b9d2c016ce7af91c9582392"
+strip_components = 1
+description = "GREYC's Magic for Image Computing - Krita plugin"
+homepage = "http://gmic.eu/"
+license = "CECILL-2.1"
+deps = ["kcoreaddons", "krita"]
+patches = ["patches/conflict.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DGMIC_QT_HOST=krita-plugin", "-DENABLE_SYSTEM_GMIC=no", "-DCMAKE_BUILD_TYPE=RelWithDebInfo"]
+subdir = "gmic-qt"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

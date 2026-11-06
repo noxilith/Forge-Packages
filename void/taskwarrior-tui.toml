@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'taskwarrior-tui'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "taskwarrior-tui"
+version = "0.25.4"
+archive = "https://github.com/kdheepak/taskwarrior-tui/archive/refs/tags/v0.25.4.tar.gz"
+sha256 = "86a00c0c33f825824ac432c50e57a9bac150c3ba9e3d06e6d86f65790a99a458"
+strip_components = 1
+description = "Terminal user interface for taskwarrior"
+homepage = "https://kdheepak.com/taskwarrior-tui/"
+license = "MIT"
+deps = ["task"]
+
+[build]
+system = "cargo"

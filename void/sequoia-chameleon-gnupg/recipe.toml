@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sequoia-chameleon-gnupg'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_build
+# needs, but Forge has no recipe for yet: bzip2, llvm, sqlite
+[package]
+name = "sequoia-chameleon-gnupg"
+version = "0.13.1"
+archive = "https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg/-/archive/v0.13.1/sequoia-chameleon-gnupg-v0.13.1.tar.gz"
+sha256 = "9fe7b06b6cbdb5282adfb102cc5bdc09b3c8b1f3a7399e225e3ae8127db7078d"
+strip_components = 1
+description = "Re-implementation of gpg and gpgv from Sequoia OpenPGP"
+homepage = "https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg"
+license = "GPL-3.0-or-later"
+deps = ["nettle", "openssl"]
+patches = ["patches/fix-tests.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

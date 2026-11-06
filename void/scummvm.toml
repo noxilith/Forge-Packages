@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'scummvm'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CFLAGS, CXXFLAGS
+# needs, but Forge has no recipe for yet: fluidsynth, glew, libmpeg2, libtheora, libvpx
+[package]
+name = "scummvm"
+version = "2026.1.0"
+archive = "https://downloads.scummvm.org/frs/scummvm/2026.1.0/scummvm-2026.1.0.tar.xz"
+sha256 = "e15b8650c2bd9e11b69b49eef9dea1eedccc5b1c191748b15c34167614d77b66"
+strip_components = 1
+description = "Free implementation of LucasArts' SCUMM interpreter"
+homepage = "https://www.scummvm.org/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_net", "curl", "faad2", "flac", "freetype", "fribidi", "giflib", "gtk+3", "liba52", "libjpeg-turbo", "libmad", "libmikmod", "libogg", "libpng", "libvorbis", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-release-mode", "--enable-all-engines"]
+tools = ["nasm", "pkg-config"]

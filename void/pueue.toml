@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pueue'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, build_helper
+[package]
+name = "pueue"
+version = "4.0.1"
+archive = "https://github.com/Nukesor/pueue/archive/refs/tags/v4.0.1.tar.gz"
+sha256 = "7bbe552700041b2e9cd360b69c328d6932ad57d0e0a480a8992fab3a2737cdf8"
+strip_components = 1
+description = "Command-line tool for managing long-running tasks"
+homepage = "https://github.com/Nukesor/pueue"
+license = "MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libwpg'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "libwpg"
+version = "0.3.4"
+archive = "https://downloads.sourceforge.net/sourceforge/libwpg/libwpg-0.3.4.tar.xz"
+sha256 = "b55fda9440d1e070630eb2487d8b8697cf412c214a27caee9df69cec7c004de3"
+strip_components = 1
+description = "Library for importing WordPerfect Graphics"
+homepage = "http://libwpg.sourceforge.net/"
+license = "MPL-2.0, LGPL-2.1-or-later"
+deps = ["librevenge", "libwpd"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

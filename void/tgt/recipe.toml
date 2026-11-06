@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tgt'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_install_args, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: docbook-xsl, perl-Config-General
+[package]
+name = "tgt"
+version = "1.0.97"
+archive = "https://github.com/fujita/tgt/archive/v1.0.97.tar.gz"
+sha256 = "459a3ee133fbd850519cde15784664934d29e5dc9680f21142247746e62d9082"
+strip_components = 1
+description = "Linux SCSI target framework"
+homepage = "https://github.com/fujita/tgt"
+license = "GPL-2.0-only"
+patches = ["patches/musl-__wordsize.patch"]
+
+[build]
+system = "make"
+deps = ["libxslt"]

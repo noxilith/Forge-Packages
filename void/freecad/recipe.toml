@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'freecad'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch, pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, glew, python3-GitPython, python3-Markdown, python3-matplotlib, python3-pybind11, python3-pyside6, python3-yaml, qt6-svg, qt6-tools, vtk, xerces-c
+[package]
+name = "freecad"
+version = "1.1.4"
+archive = "https://github.com/FreeCAD/FreeCAD/releases/download/1.1.4/freecad_source_1.1.4.tar.gz"
+sha256 = "674f2c42dc060b71c8b052c70b04a9a995dde6cb868fe568615d3ff3f2717748"
+strip_components = 1
+description = "General purpose 3D CAD modeler"
+homepage = "https://www.freecad.org"
+license = "GPL-2.0-or-later"
+deps = ["coin3", "double-conversion", "eigen", "guidelines-support-library", "hdf5", "libspnav", "lz4", "med", "netcdf", "occt", "python3-pivy", "qt6-base", "yaml-cpp", "zlib"]
+patches = ["patches/includes.patch", "patches/lrelease-cross-compile.patch", "patches/pyregex.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_GUI=ON", "-DFREECAD_QT_VERSION=6", "-DBUILD_FEM_NETGEN=OFF", "-DBUILD_FLAT_MESH=ON", "-DFREECAD_CHECK_PIVY=OFF", "-DENABLE_DEVELOPER_TESTS=OFF", "-DBUILD_TEST=OFF", "-DFREECAD_USE_EXTERNAL_PIVY=ON"]
+tools = ["pkg-config"]
+deps = ["swig"]

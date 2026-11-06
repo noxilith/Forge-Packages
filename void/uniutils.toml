@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'uniutils'. Review before relying on it.
+[package]
+name = "uniutils"
+version = "2.27"
+archive = "https://billposer.org/Software/Downloads/uniutils-2.27.tar.bz2"
+sha256 = "08c4dc4b37509e279554046ea68bcd441d432a58fa0f8f893dfd1dc4412881a7"
+strip_components = 1
+description = "Programs for manipulating and analyzing Unicode text"
+homepage = "https://billposer.org/Software/unidesc.html"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

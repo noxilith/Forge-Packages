@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'openbabel'. Review before relying on it.
+# settings not translated: build_helper, CXXFLAGS
+[package]
+name = "openbabel"
+version = "3.2.1"
+archive = "https://github.com/openbabel/openbabel/archive/openbabel-3-2-1.tar.gz"
+sha256 = "e140c25480fe1678d00b9a52462368fa4e7805fba67b12ee496784437f3e239e"
+strip_components = 1
+description = "Open Source Chemistry Toolbox"
+homepage = "http://openbabel.org"
+license = "GPL-2.0-only"
+deps = ["cairo", "eigen3.2", "libxml2", "rapidjson", "wxWidgets-gtk3"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]

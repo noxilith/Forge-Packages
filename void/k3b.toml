@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'k3b'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: dvd+rw-tools, ffmpeg6, libmpcdec, schilytools
+[package]
+name = "k3b"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/k3b-26.08.1.tar.xz"
+sha256 = "84ca4a064553587e7c6a93ff9b29a36bf05c07dd08269bea43f1ab5ff92374f3"
+strip_components = 1
+description = "CD/DVD Kreator for Linux"
+homepage = "https://kde.org/applications/en/multimedia/org.kde.k3b"
+license = "GPL-2.0-or-later"
+deps = ["cdrdao", "flac", "kf6-karchive", "kf6-kauth", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kfilemetadata", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kjobwidgets", "kf6-knewstuff", "kf6-knotifications", "kf6-knotifyconfig", "kf6-kwidgetsaddons", "kf6-kxmlgui", "kf6-solid", "lame", "libXft", "libcddb", "libdvdread", "libkcddb6", "libmad", "libmusicbrainz5", "libsamplerate", "libsndfile", "taglib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DQT_MAJOR_VERSION=6", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools", "qt6-base"]

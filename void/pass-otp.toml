@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pass-otp'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: oath-toolkit, pass
+[package]
+name = "pass-otp"
+version = "1.2.0"
+archive = "https://github.com/tadfisher/pass-otp/archive/v1.2.0.tar.gz"
+sha256 = "5720a649267a240a4f7ba5a6445193481070049c1d08ba38b00d20fc551c3a67"
+strip_components = 1
+description = "Pass extension for managing one-time-password (OTP) tokens"
+homepage = "https://github.com/tadfisher/pass-otp"
+license = "GPL-3.0-or-later"
+deps = ["qrencode"]
+
+[build]
+system = "make"

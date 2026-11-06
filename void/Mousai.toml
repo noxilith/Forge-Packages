@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Mousai'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-requests
+[package]
+name = "Mousai"
+version = "0.6.6"
+archive = "https://github.com/SeaDve/Mousai/archive/refs/tags/v0.6.6.tar.gz"
+sha256 = "a1e5cb29ad16405abcab8b5e1eec82fc170e5f535f8c55b57f18c80acb18a0ae"
+strip_components = 1
+description = "Identify any songs in seconds"
+homepage = "https://github.com/SeaDve/Mousai"
+license = "GPL-3.0-or-later"
+deps = ["libadwaita", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

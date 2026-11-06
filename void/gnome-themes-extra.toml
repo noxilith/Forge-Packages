@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-themes-extra'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cantarell-fonts, intltool
+[package]
+name = "gnome-themes-extra"
+version = "3.28"
+archive = "https://download.gnome.org/sources/gnome-themes-extra/3.28/gnome-themes-extra-3.28.tar.xz"
+sha256 = "7c4ba0bff001f06d8983cfc105adaac42df1d1267a2591798a780bac557a5819"
+strip_components = 1
+description = "Extra GNOME themes"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-themes-extra"
+license = "LGPL-2.1-or-later"
+deps = ["adwaita-icon-theme", "gtk+", "gtk+3", "librsvg"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["glib", "which"]

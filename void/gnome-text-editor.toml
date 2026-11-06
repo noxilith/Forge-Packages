@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-text-editor'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-text-editor"
+version = "50.1"
+archive = "https://download.gnome.org/sources/gnome-text-editor/50/gnome-text-editor-50.1.tar.xz"
+sha256 = "f68036b09d378faa883bfe936e479c6ff37027c2ffed101daf912df70c51d0e6"
+strip_components = 1
+description = "Simple text editor"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-text-editor"
+license = "GPL-3.0-or-later"
+deps = ["editorconfig", "glib", "gtk4", "gtksourceview5", "libadwaita", "libspelling"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext"]

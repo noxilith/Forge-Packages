@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'flameshot'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "flameshot"
+version = "13.3.0"
+archive = "https://github.com/flameshot-org/flameshot/archive/refs/tags/v13.3.0.tar.gz"
+sha256 = "bd1666313c875400e9588b47eb3fd2f4d0828460b3705a215b97746ea654c1b4"
+strip_components = 1
+description = "Powerful yet simple to use screenshot software for GNU/Linux"
+homepage = "https://github.com/flameshot-org/flameshot"
+license = "GPL-3.0-or-later"
+deps = ["KDSingleApplication", "desktop-file-utils", "kf6-kguiaddons", "kguiaddons"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_WAYLAND_CLIPBOARD=1", "-DDISABLE_UPDATE_CHECKER=1", "-DUSE_BUNDLED_KDSINGLEAPPLICATION=OFF"]
+deps = ["qt6-base"]

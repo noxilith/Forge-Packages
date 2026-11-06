@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'opendoas'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+[package]
+name = "opendoas"
+version = "6.8.2"
+archive = "https://github.com/Duncaen/OpenDoas/archive/v6.8.2.tar.gz"
+sha256 = "6da058a0e70b7543bc60624389b0b00b686189ec933828c522bf8b2600495a67"
+strip_components = 1
+description = "Portable OpenBSD doas to execute commands as another user"
+homepage = "https://github.com/Duncaen/OpenDoas"
+license = "ISC, BSD-3-Clause"
+
+[build]
+system = "autotools"
+tools = ["bison"]

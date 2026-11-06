@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libfprint'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: nss
+[package]
+name = "libfprint"
+version = "1.94.9"
+archive = "https://gitlab.freedesktop.org/libfprint/libfprint/-/archive/v1.94.9/libfprint-v1.94.9.tar.bz2"
+sha256 = "6f51d9b154c1874b22fff50c288a86584a59dd23b0f6b0a9aa4cdaffb3847ab1"
+strip_components = 1
+description = "Support for consumer fingerprint reader devices"
+homepage = "http://www.freedesktop.org/wiki/Software/fprint/"
+license = "LGPL-2.1-or-later"
+deps = ["gdk-pixbuf", "glib", "libgusb", "libusb", "openssl", "pixman"]
+
+[build]
+system = "meson"
+configure_args = ["-Dudev_rules=disabled", "-Dgtk-examples=false", "-Ddoc=false"]
+tools = ["pkg-config"]

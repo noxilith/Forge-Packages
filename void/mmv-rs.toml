@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mmv-rs'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mmv-rs"
+version = "1.4.0"
+archive = "https://git.sr.ht/~mango/mmv/archive/v1.4.0.tar.gz"
+sha256 = "c0405651dd09062b2c93c5791f05f8fe8bc2b017696829fbffaaf36d702bff74"
+strip_components = 1
+description = "Minimal cli utility for safe mass moving/renaming of files"
+homepage = "https://sr.ht/~mango/mmv"
+license = "0BSD"
+
+[build]
+system = "cargo"

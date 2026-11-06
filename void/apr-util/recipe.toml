@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'apr-util'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_configure, post_install, pre_configure
+# needs, but Forge has no recipe for yet: db, sqlite
+[package]
+name = "apr-util"
+version = "1.6.3"
+archive = "https://archive.apache.org/dist/apr/apr-util-1.6.3.tar.bz2"
+sha256 = "a41076e3710746326c3945042994ad9a4fcac0ce0277dd8fea076fec3c9772b5"
+strip_components = 1
+description = "Apache Portable Runtime Utility Library"
+homepage = "https://apr.apache.org/"
+license = "Apache-2.0"
+deps = ["apr", "expat", "gdbm", "mariadb", "openldap", "openssl", "postgresql18", "unixodbc", "zlib"]
+patches = ["patches/fix-cross-libtool.patch", "patches/implicit-int.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-pgsql", "--with-ldap", "--with-dbm=db53", "--with-crypto", "--with-openssl", "--without-oracle", "--enable-util-dso"]

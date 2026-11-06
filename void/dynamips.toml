@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dynamips'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: iouyap
+[package]
+name = "dynamips"
+version = "0.2.23"
+archive = "https://github.com/GNS3/dynamips/archive/v0.2.23.tar.gz"
+sha256 = "503bbb52c03f91900ea8dbe8bd0b804b76e2e28d0b7242624e0d3c52dda441a1"
+strip_components = 1
+description = "Hardware emulation for Cisco IOS capable devices"
+homepage = "https://github.com/GNS3/dynamips"
+license = "GPL-2.0-or-later"
+deps = ["elfutils", "libpcap"]
+
+[build]
+system = "cmake"

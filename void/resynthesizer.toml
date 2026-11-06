@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'resynthesizer'. Review before relying on it.
+[package]
+name = "resynthesizer"
+version = "3.0"
+archive = "https://github.com/bootchk/resynthesizer/archive/refs/tags/v3.0.tar.gz"
+sha256 = "d0f459e551d428e3cd3fec4c3ebfe448e6e2947d9b24553373308d6d41ddd580"
+strip_components = 1
+description = "Suite of gimp plugins for texture synthesis"
+homepage = "https://github.com/bootchk/resynthesizer"
+license = "GPL-3.0-or-later"
+deps = ["gimp", "glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

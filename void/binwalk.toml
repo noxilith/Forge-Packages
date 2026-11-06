@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'binwalk'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "binwalk"
+version = "3.1.0"
+archive = "https://github.com/ReFirmLabs/binwalk/archive/refs/tags/v3.1.0.tar.gz"
+sha256 = "06f595719417b70a592580258ed980237892eadc198e02363201abe6ca59e49a"
+strip_components = 1
+description = "Easy tool for analyzing/reversing/extracting firmware images"
+homepage = "https://github.com/ReFirmLabs/binwalk"
+license = "MIT"
+deps = ["fontconfig"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

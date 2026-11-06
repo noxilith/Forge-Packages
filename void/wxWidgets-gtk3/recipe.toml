@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'wxWidgets-gtk3'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: CXXFLAGS, cmake_builddir
+# needs, but Forge has no recipe for yet: libwebkit2gtk41
+[package]
+name = "wxWidgets-gtk3"
+version = "3.2.11"
+archive = "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.11/wxWidgets-3.2.11.tar.bz2"
+sha256 = "6a129015bce2e914e4bf61ec4411854ad962801d47e92f2eb8340adb6a90af08"
+strip_components = 1
+description = "Cross-platform GUI library (built with GTK+ 3.0)"
+homepage = "https://www.wxwidgets.org"
+license = "custom:wxWindows"
+deps = ["SDL2", "curl", "expat", "glu", "gspell", "gst-plugins-bad1", "gst-plugins-base1", "gstreamer1", "gtk+3", "libmspack", "libnotify", "libpng", "libsecret", "pcre2", "tiff", "xz", "zlib"]
+patches = ["patches/invalid-header-syntax.patch", "patches/largefile.patch", "patches/no-cross-suffix.patch", "patches/nonfatal-abi-check.patch", "patches/wx-config.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DwxBUILD_TOOLKIT=gtk3", "-DwxUSE_OPENGL=ON", "-DwxUSE_LIBMSPACK=ON", "-DwxUSE_GTKPRINT=ON", "-DwxUSE_UNICODE=ON", "-DwxUSE_MEDIACTRL=ON", "-DwxUSE_PRIVATE_FONTS=ON", "-DwxUSE_REGEX=sys", "-DwxUSE_ZLIB=sys", "-DwxUSE_EXPAT=sys", "-DwxUSE_LIBJPEG=sys", "-DwxUSE_LIBPNG=sys", "-DwxUSE_LIBTIFF=sys", "-DwxUSE_LIBLZMA=sys", "-DwxUSE_LIBNOTIFY=sys", "-DwxUSE_LIBSDL=sys"]
+tools = ["pkg-config"]

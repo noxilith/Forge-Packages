@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'compiz-bcop'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "compiz-bcop"
+version = "0.8.18"
+archive = "https://github.com/compiz-reloaded/compiz-bcop/archive/v0.8.18.tar.gz"
+sha256 = "144f93665e36379a72c0d126131bd5388bca58489013f42061cd5c6caf1907f2"
+strip_components = 1
+description = "Compiz Reloaded bcop module"
+homepage = "https://github.com/compiz-reloaded"
+license = "GPL-2.0-or-later"
+deps = ["libxslt"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

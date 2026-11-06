@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'openresolv'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: runit
+[package]
+name = "openresolv"
+version = "3.17.4"
+archive = "https://github.com/NetworkConfiguration/openresolv/archive/refs/tags/v3.17.4.tar.gz"
+sha256 = "506937359aff4f5bb40f8646945aaf5647537f4040ec4988e334e03c3c126f6e"
+strip_components = 1
+description = "Management framework for resolv.conf"
+homepage = "https://roy.marples.name/projects/openresolv"
+license = "BSD-2-Clause"
+
+[build]
+system = "autotools"

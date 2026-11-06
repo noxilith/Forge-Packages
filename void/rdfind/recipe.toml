@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rdfind'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "rdfind"
+version = "1.8.0"
+archive = "https://rdfind.pauldreik.se/rdfind-1.8.0.tar.gz"
+sha256 = "0a2d0d32002cc2dc0134ee7b649bcc811ecfb2f8d9f672aa476a851152e7af35"
+strip_components = 1
+description = "Program that finds duplicate files"
+homepage = "https://rdfind.pauldreik.se"
+license = "GPL-2.0-or-later"
+deps = ["nettle"]
+patches = ["patches/61877de88d782b63b17458a61fcc078391499b29.patch"]
+
+[build]
+system = "autotools"

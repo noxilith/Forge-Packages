@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tpm2-tools'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: pandoc
+[package]
+name = "tpm2-tools"
+version = "5.8"
+archive = "https://github.com/tpm2-software/tpm2-tools/releases/download/5.8/tpm2-tools-5.8.tar.gz"
+sha256 = "1cb73185cae814b4e15c7c2d0b22642d640faf48775f4156a1fd92edf84bef73"
+strip_components = 1
+description = "Trusted Platform Module (TPM2.0) tools"
+homepage = "https://github.com/tpm2-software/tpm2-tools/"
+license = "BSD-3-Clause"
+deps = ["curl", "efivar", "openssl", "tpm2-tss"]
+patches = ["patches/bootstrap-no-git.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

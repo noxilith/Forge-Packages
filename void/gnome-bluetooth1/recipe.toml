@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'gnome-bluetooth1'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libcanberra
+[package]
+name = "gnome-bluetooth1"
+version = "3.34.5"
+archive = "https://download.gnome.org/sources/gnome-bluetooth/3.34/gnome-bluetooth-3.34.5.tar.xz"
+sha256 = "6c949e52c8becc2054daacd604901f66ce5cf709a5fa91c4bb7cacc939b53ea9"
+strip_components = 1
+description = "GNOME Bluetooth Subsystem"
+homepage = "https://wiki.gnome.org/Projects/GnomeBluetooth"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["bluez", "dconf", "desktop-file-utils", "eudev", "gtk+3", "gvfs", "libXi", "libnotify"]
+patches = ["patches/meson-0.61.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgtk_doc=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

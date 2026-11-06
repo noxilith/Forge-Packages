@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'radvd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "radvd"
+version = "2.21"
+archive = "https://github.com/radvd-project/radvd/releases/download/v2.21/radvd-2.21.tar.xz"
+sha256 = "91df2ed7faca0716bbd726a17d6467ed92fcb2b6e45b57d9e619f9686ab99e1b"
+strip_components = 1
+description = "IPv6 Router Advertisement Daemon"
+homepage = "http://www.litech.org/radvd/"
+license = "radvd"
+
+[build]
+system = "autotools"
+tools = ["flex", "pkg-config"]

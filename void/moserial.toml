@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'moserial'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool, itstool
+[package]
+name = "moserial"
+version = "3.0.21"
+archive = "https://download.gnome.org/sources/moserial/3.0/moserial-3.0.21.tar.xz"
+sha256 = "788b29f256502b83536116c90795383961b26338a04d32c8ed35e53da4284aad"
+strip_components = 1
+description = "Clean, friendly gtk-based serial terminal for the gnome desktop"
+homepage = "https://wiki.gnome.org/action/show/Apps/Moserial"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

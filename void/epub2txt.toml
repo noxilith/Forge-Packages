@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'epub2txt'. Review before relying on it.
+[package]
+name = "epub2txt"
+version = "2.08"
+archive = "https://github.com/kevinboone/epub2txt2/archive/v2.08.tar.gz"
+sha256 = "0936a6344754881543ec6b9d79ca2a0f89c3348f82688f485283e547c5fecfe1"
+strip_components = 1
+description = "CLI utility for extracting text from EPUB documents"
+homepage = "https://github.com/kevinboone/epub2txt2"
+license = "GPL-3.0-only"
+
+[build]
+system = "make"

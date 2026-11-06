@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'shared-mime-info'. Review before relying on it.
+[package]
+name = "shared-mime-info"
+version = "2.4"
+archive = "https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.4/shared-mime-info-2.4.tar.gz"
+sha256 = "531291d0387eb94e16e775d7e73788d06d2b2fdd8cd2ac6b6b15287593b6a2de"
+strip_components = 1
+description = "Core database of common types"
+homepage = "https://freedesktop.org/Software/shared-mime-info"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libxml2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dupdate-mimedb=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "xmlto"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'poppler'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract
+# settings not translated: build_helper, skip_extraction
+# needs, but Forge has no recipe for yet: harfbuzz, nss
+[package]
+name = "poppler"
+version = "26.10.0"
+archive = "https://poppler.freedesktop.org/poppler-26.10.0.tar.xz"
+sha256 = "6792cb7c69205007ad87d2e936cecc5b3a31fac29ab54ffc3175fdb6b2a6ce35"
+strip_components = 1
+description = "PDF rendering library"
+homepage = "https://poppler.freedesktop.org"
+license = "GPL-2.0-or-later, GPL-3.0-or-later"
+deps = ["cairo", "curl", "fontconfig", "freetype", "glib", "gpgmepp", "lcms2", "libgpg-error", "libjpeg-turbo", "libpng", "openjpeg2", "tiff", "zlib"]
+patches = ["patches/cmake-build-type-none.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_UNSTABLE_API_ABI_HEADERS=ON", "-DENABLE_CPP=ON", "-DENABLE_GLIB=ON", "-DENABLE_QT5=OFF", "-DENABLE_QT6=OFF", "-DENABLE_UTILS=ON"]
+tools = ["pkg-config"]

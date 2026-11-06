@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libshumate'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "libshumate"
+version = "1.6.1"
+archive = "https://download.gnome.org/sources/libshumate/1.6/libshumate-1.6.1.tar.xz"
+sha256 = "b36aad34500791785f546684d0f2ed644e4819ff4e85ae67a2245f159eccb2d4"
+strip_components = 1
+description = "C library providing a GtkWidget to display maps"
+homepage = "https://wiki.gnome.org/Projects/libshumate"
+license = "LGPL-2.1-or-later"
+deps = ["cairo", "glib", "gtk4", "libsoup3", "protobuf-c"]
+
+[build]
+system = "meson"
+tools = ["gperf", "pkg-config"]
+deps = ["gettext"]

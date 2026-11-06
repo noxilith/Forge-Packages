@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sshguard'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "sshguard"
+version = "2.5.1"
+archive = "https://downloads.sourceforge.net/sourceforge/sshguard/sshguard-2.5.1.tar.gz"
+sha256 = "997a1e0ec2b2165b4757c42f8948162eb534183946af52efc406885d97cb89fc"
+strip_components = 1
+description = "Protects networked hosts from brute force attacks"
+homepage = "https://www.sshguard.net/"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+tools = ["flex"]

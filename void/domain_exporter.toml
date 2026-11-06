@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'domain_exporter'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "domain_exporter"
+version = "0.1.24"
+archive = "https://github.com/shift/domain_exporter/archive/v0.1.24.tar.gz"
+sha256 = "62262d3234f7404859b21647dbb3661e425eeb44b9fad8e5368ddc4bd91364f2"
+strip_components = 1
+description = "Prometheus WHOIS domain details exporter"
+homepage = "https://github.com/shift/domain_exporter"
+license = "Apache-2.0"
+
+[build]
+system = "go"

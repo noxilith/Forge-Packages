@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'compiz-core'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "compiz-core"
+version = "0.8.18"
+archive = "https://github.com/compiz-reloaded/compiz/archive/v0.8.18.tar.gz"
+sha256 = "bb5af1f646c610ebbc686a5cef9bbcaab13f9d14e18f1463c1e96df4c4a9b80a"
+strip_components = 1
+description = "Compiz Reloaded core module"
+homepage = "https://github.com/compiz-reloaded"
+license = "MIT, LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["fuse", "gettext", "glib", "glu", "inotify-tools", "libSM", "libXcomposite", "libXcursor", "libXdamage", "libXi", "libXinerama", "libXrandr", "librsvg", "libxml++", "libxslt", "startup-notification"]
+patches = ["patches/gcc14.patch", "patches/librsvg-2.51.0.patch", "patches/libxml2-2.12.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

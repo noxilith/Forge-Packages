@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'winetricks'. Review before relying on it.
+# needs, but Forge has no recipe for yet: unzip
+[package]
+name = "winetricks"
+version = "20260125"
+archive = "https://github.com/Winetricks/winetricks/archive/20260125.tar.gz"
+sha256 = "2890bd9fbbade4638e58b4999a237273192df03b58516ae7b8771e09c22d2f56"
+strip_components = 1
+description = "Script to install various redistributable runtime libraries in Wine"
+homepage = "https://gitlab.winehq.org/wine/wine/-/wikis/Winetricks"
+license = "LGPL-3.0-or-later"
+deps = ["cabextract", "xmessage"]
+
+[build]
+system = "make"

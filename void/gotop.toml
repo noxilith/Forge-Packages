@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gotop'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "gotop"
+version = "4.2.0"
+archive = "https://github.com/xxxserxxx/gotop/archive/v4.2.0.tar.gz"
+sha256 = "e9d9041903acb6bd3ffe94e0a02e69eea53f1128274da1bfe00fe44331ccceb1"
+strip_components = 1
+description = "Terminal based graphical activity monitor"
+homepage = "https://github.com/xxxserxxx/gotop"
+license = "MIT"
+
+[build]
+system = "go"

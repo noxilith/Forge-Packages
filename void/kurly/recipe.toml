@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kurly'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "kurly"
+version = "1.2.2"
+archive = "https://gitlab.com/davidjpeacock/kurly/-/archive/v1.2.2/kurly-v1.2.2.tar.gz"
+sha256 = "74c36fe09e1e321cdd85835191cbae880f70fa5b92211564cd3b2d1b9d66d4a5"
+strip_components = 1
+description = "Alternative to the widely popular curl program"
+homepage = "https://gitlab.com/davidjpeacock/kurly"
+license = "Apache-2.0"
+patches = ["patches/gomodsum.patch"]
+
+[build]
+system = "go"

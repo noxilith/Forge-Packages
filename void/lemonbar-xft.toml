@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lemonbar-xft'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "lemonbar-xft"
+version = "1.0.20161107"
+archive = "https://github.com/krypt-n/bar/archive/043ad4757cc079666f50212ee0a2ef0729ecac6b.tar.gz"
+sha256 = "ec7705009e02094aef3bb22814b5764dae53b9bd719de0b6aa5002ee6e532994"
+strip_components = 1
+description = "Lightweight xcb based bar with xft support"
+homepage = "https://github.com/krypt-n/bar"
+license = "MIT"
+deps = ["libXft"]
+
+[build]
+system = "make"
+tools = ["perl"]

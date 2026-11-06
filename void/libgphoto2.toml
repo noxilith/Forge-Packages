@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libgphoto2'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libgphoto2"
+version = "2.5.34"
+archive = "https://github.com/gphoto/libgphoto2/releases/download/v2.5.34/libgphoto2-2.5.34.tar.bz2"
+sha256 = "5df9e774eb4ab6087a193afff84dcafe9f666e3443fe29e73e6779f659ff7f28"
+strip_components = 1
+description = "Digital camera access library"
+homepage = "http://www.gphoto.org"
+license = "LGPL-2.1-or-later"
+deps = ["gd", "libexif", "libusb-compat", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-rpath"]
+tools = ["pkg-config"]
+deps = ["gettext"]

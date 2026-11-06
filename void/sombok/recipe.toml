@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sombok'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: libthai
+[package]
+name = "sombok"
+version = "2.4.0"
+archive = "https://github.com/hatukanezumi/sombok/archive/sombok-2.4.0.tar.gz"
+sha256 = "14d9dcd3621bf9d591a7158aeac99b4d4a60296558173be51d57b54b8f9d70a2"
+strip_components = 1
+description = "Line Breaking Algorithm described in Unicode Standard Annex UAX #14"
+homepage = "https://github.com/hatukanezumi/sombok"
+license = "Artistic, GPL-1"
+patches = ["patches/cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["autogen"]

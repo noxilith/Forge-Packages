@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'pilot-link'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_configure, post_install, pre_configure
+# settings not translated: CFLAGS, LDFLAGS
+# needs, but Forge has no recipe for yet: libreadline8, tcl, tk
+[package]
+name = "pilot-link"
+version = "0.12.5"
+archive = "https://mirrors.slackware.com/slackware/slackware-14.1/source/l/pilot-link/pilot-link-0.12.5.tar.bz2"
+sha256 = "d3f99ec04016b38995fb370265200254710318105c792c017d3aaccfb97a84b2"
+strip_components = 1
+description = "Suite of tools to connect your Palm or PalmOS® handheld"
+homepage = "http://www.pilot-link.org/"
+license = "GPL-2"
+deps = ["bluez", "libpng", "libusb", "popt"]
+patches = ["patches/autoconf-2.71.patch", "patches/fix-ai_non_const.patch", "patches/fix-const_uchar.patch", "patches/fix-ifdef_syntax.patch", "patches/fix-linuxusb_return_types.patch", "patches/fix-strncat_overrun.patch", "patches/fix-swig_const_char_ptr.patch", "patches/fix-unused_result.patch", "patches/musl-matherr.patch", "patches/pilot-link-png14.diff", "patches/refactor-iconv_const_char_ptr.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-conduits", "--enable-libusb", "--enable-threads", "--disable-static", "--disable-compile-werror"]
+tools = ["perl", "pkg-config"]

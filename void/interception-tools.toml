@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'interception-tools'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "interception-tools"
+version = "0.6.7"
+archive = "https://gitlab.com/interception/linux/tools/-/archive/v0.6.7/tools-v0.6.7.tar.gz"
+sha256 = "58a388899c7bb765c5d35306b57894fb220dc8ab4d37475a33898bb2934bca81"
+strip_components = 1
+description = "Small set of utilities for operating on input events of evdev devices"
+homepage = "https://gitlab.com/interception/linux/tools"
+license = "GPL-3.0-only"
+deps = ["eudev", "libevdev", "yaml-cpp"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

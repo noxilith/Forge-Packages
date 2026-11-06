@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jpeginfo'. Review before relying on it.
+# hooks not translated: pre_install
+[package]
+name = "jpeginfo"
+version = "1.7.1"
+archive = "https://github.com/tjko/jpeginfo/archive/refs/tags/v1.7.1.tar.gz"
+sha256 = "274f6be23fd089bd9e8715b67643a66ca2f63a503028bdea3e571228d50b669e"
+strip_components = 1
+description = "Prints information and tests integrity of JPEG/JFIF files"
+homepage = "https://github.com/tjko/jpeginfo"
+license = "GPL-3.0-or-later"
+deps = ["libjpeg-turbo"]
+
+[build]
+system = "autotools"

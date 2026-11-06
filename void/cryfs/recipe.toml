@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cryfs'. Review before relying on it.
+# hooks not translated: post_patch, pre_configure
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "cryfs"
+version = "1.0.3"
+archive = "https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.tar.xz"
+sha256 = "1f30cc406e5c811490ba14174518a797a80442bfff317a2fdfbc5d21205b9dfe"
+strip_components = 1
+description = "Cryptographic filesystem for the cloud"
+homepage = "https://www.cryfs.org"
+license = "LGPL-3.0-only"
+deps = ["crypto++", "curl", "fmt", "fuse", "gtest", "range-v3", "spdlog"]
+patches = ["patches/0001-allow-cmake-DCMAKE_BUILD_TYPE-None-for-void.patch", "patches/0002-de-vendor-crypto-for-void.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBoost_USE_STATIC_LIBS=OFF", "-DCRYFS_UPDATE_CHECKS=off", "-DBUILD_TESTING=ON", "-DDEPENDENCY_CONFIG=../cmake-utils/DependenciesFromLocalSystem.cmake"]
+tools = ["pkg-config"]

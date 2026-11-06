@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'powerline-go'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "powerline-go"
+version = "1.25"
+archive = "https://github.com/justjanne/powerline-go/archive/refs/tags/v1.25.tar.gz"
+sha256 = "64cb194bbf08536320d0f4c24ef9524fdf486f579147cacdb0b6dc0afc1134e2"
+strip_components = 1
+description = "Beautiful and useful low-latency prompt for your shell, written in go"
+homepage = "https://github.com/justjanne/powerline-go"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

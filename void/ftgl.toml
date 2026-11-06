@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ftgl'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "ftgl"
+version = "2.1.3rc5"
+archive = "https://downloads.sourceforge.net/sourceforge/ftgl/ftgl-2.1.3-rc5.tar.bz2"
+sha256 = "521ff7bd62c459ff5372e269c223e2a6107a6a99a36afdc2ae634a973af70c59"
+strip_components = 1
+description = "OpenGL library to use arbitrary fonts"
+homepage = "https://sourceforge.net/projects/ftgl/"
+license = "MIT-advertising"
+deps = ["freetype", "glu", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

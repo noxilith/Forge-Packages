@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mcpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mcpp"
+version = "2.7.2"
+archive = "https://downloads.sourceforge.net/sourceforge/mcpp/mcpp-2.7.2.tar.gz"
+sha256 = "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864"
+strip_components = 1
+description = "Portable C preprocessor"
+homepage = "https://mcpp.sourceforge.net/"
+license = "BSD-2-Clause"
+patches = ["patches/gcc14.patch", "patches/libc-feature-macros.patch", "patches/mbchar.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-mcpplib"]

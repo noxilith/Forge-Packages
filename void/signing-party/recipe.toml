@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'signing-party'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: perl-Class-MethodMaker, perl-GnuPG-Interface, perl-MIME-tools, perl-MailTools, perl-Net-IDN-Encode, perl-Term-ReadKey, perl-Text-Template
+[package]
+name = "signing-party"
+version = "2.11"
+archive = "https://salsa.debian.org/signing-party-team/signing-party/-/archive/v2.11/signing-party-v2.11.tar.gz"
+sha256 = "e339cfea9af6f12bf09de8aa6c8972c168d2eb712cb72a8a7415e3f7ecb43cf2"
+strip_components = 1
+description = "OpenPGP tools for signing keys, keyring analysis, and party preparation"
+homepage = "https://salsa.debian.org/signing-party-team/signing-party"
+license = "BSD-3-Clause, GPL-2.0-or-later, GPL-2.0-only, MIT, BSD-2-Clause, GPL-3.0-or-later"
+deps = ["libmd", "qprint"]
+patches = ["patches/makefiles.patch"]
+
+[build]
+system = "make"
+tools = ["perl"]

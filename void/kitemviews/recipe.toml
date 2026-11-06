@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kitemviews'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kitemviews"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kitemviews-5.116.0.tar.xz"
+sha256 = "6c0efbf408dab60c58bb13bb3a7488827283a5eea947ef3cfd0fbcb4f09e01eb"
+strip_components = 1
+description = "Set of item views extending the Qt model-view framework"
+homepage = "https://invent.kde.org/frameworks/kitemviews"
+license = "LGPL-2.0-only, LGPL-2.0-or-later"
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DESIGNERPLUGIN=ON"]
+deps = ["extra-cmake-modules", "kcoreaddons"]

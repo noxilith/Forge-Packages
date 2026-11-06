@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'usbrelay'. Review before relying on it.
+# settings not translated: LDFLAGS
+[package]
+name = "usbrelay"
+version = "0.4"
+archive = "https://github.com/darrylb123/usbrelay/archive/v0.4.tar.gz"
+sha256 = "d6e1b6ae4bf0a57d3280385f11ebda981052c5c50db68127b5f276d5c2f20bbf"
+strip_components = 1
+description = "Control usb relay - based on hidapi"
+homepage = "https://github.com/darrylb123/usbrelay"
+license = "GPL-2.0-or-later"
+deps = ["hidapi"]
+
+[build]
+system = "make"

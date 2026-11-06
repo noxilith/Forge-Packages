@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-remote-desktop'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "gnome-remote-desktop"
+version = "48.1"
+archive = "https://download.gnome.org/sources/gnome-remote-desktop/48/gnome-remote-desktop-48.1.tar.xz"
+sha256 = "bcf3770fca0faeda2fae3b1a3ff6f2e90a02778f76a42e8fd103cae18628f4f2"
+strip_components = 1
+description = "GNOME remote desktop server"
+homepage = "https://wiki.gnome.org/Projects/Mutter/RemoteDesktop"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "fdk-aac", "freerdp", "fuse3", "glib", "libdrm", "libei", "libepoxy", "libgudev", "libnotify", "libsecret", "libva", "libvncserver", "libxkbcommon", "nv-codec-headers", "opus", "pipewire", "polkit", "tpm2-tss", "vulkan-loader"]
+
+[build]
+system = "meson"
+configure_args = ["-Drdp=true", "-Dvnc=true", "-Dsystemd=false", "-Dtests=false"]
+tools = ["pkg-config"]
+deps = ["SPIRV-Tools", "gettext", "shaderc"]

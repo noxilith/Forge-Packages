@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libvpl'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libvpl"
+version = "2.17.0"
+archive = "https://github.com/intel/libvpl/archive/refs/tags/v2.17.0.tar.gz"
+sha256 = "4de3e2faf1e8307fb282e4a43f443191810f6a6b0a484fffa7995ba1c814c6ec"
+strip_components = 1
+description = "Intel Video Processing Library (Intel VPL)"
+homepage = "https://github.com/intel/libvpl"
+license = "MIT"
+deps = ["libX11", "libva"]
+patches = ["patches/cross-pc.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

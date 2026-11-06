@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for '9base'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: CFLAGS
+[package]
+name = "9base"
+version = "6.0.20190911"
+archive = "https://repo-default.voidlinux.org/distfiles/9base-63916da7bd6d73d9a405ce83fc4ca34845667cce.tar.gz"
+sha256 = "b315509470c25db88595bd0e9478428dea54d7836fe2ba9d07279ae9496366fb"
+strip_components = 1
+description = "Revived minimalist port of Plan 9 userland to Unix"
+homepage = "http://git.suckless.org/9base"
+license = "custom:Plan9"
+patches = ["patches/yydebug.patch"]
+
+[build]
+system = "make"
+deps = ["byacc"]

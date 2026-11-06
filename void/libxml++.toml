@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libxml++'. Review before relying on it.
+# hooks not translated: pre_install
+[package]
+name = "libxml++"
+version = "2.40.1"
+archive = "https://download.gnome.org/sources/libxml++/2.40/libxml++-2.40.1.tar.xz"
+sha256 = "4ad4abdd3258874f61c2e2a41d08e9930677976d303653cd1670d3e9f35463e9"
+strip_components = 1
+description = "C++ bindings for libxml2"
+homepage = "http://libxmlplusplus.sourceforge.net/"
+license = "LGPL-2.1"
+deps = ["glib", "glibmm", "libsigc++", "libxml2"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]

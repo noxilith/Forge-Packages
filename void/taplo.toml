@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'taplo'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "taplo"
+version = "0.10.0"
+archive = "https://github.com/tamasfe/taplo/archive/refs/tags/release-taplo-cli-0.10.0.tar.gz"
+sha256 = "eaec8435bfb5ccd89f7b4dd09385b6be25c2ff00aa25417cb82c88a59d4ccde0"
+strip_components = 1
+description = "TOML toolkit written in Rust"
+homepage = "https://taplo.tamasfe.dev/"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features", "completions,lint,lsp,native-tls"]
+subdir = "crates/taplo-cli"
+tools = ["pkg-config"]

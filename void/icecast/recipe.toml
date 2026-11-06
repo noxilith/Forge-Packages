@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'icecast'. Review before relying on it.
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libtheora, speex
+[package]
+name = "icecast"
+version = "2.5.0"
+archive = "https://downloads.xiph.org/releases/icecast/icecast-2.5.0.tar.gz"
+sha256 = "d9aa07c7429aec19d950ff6fd425c371f77158cd34ff220fc191b2c186c67c7a"
+strip_components = 1
+description = "Free server software for streaming multimedia"
+homepage = "http://www.icecast.org/"
+license = "GPL-2.0-only"
+deps = ["curl", "libigloo", "libvorbis", "libxslt", "openssl", "rhash"]
+patches = ["patches/no-group.patch", "patches/sigsegv.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["libxml2"]

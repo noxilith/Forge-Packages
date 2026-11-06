@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'openxr'. Review before relying on it.
+# needs, but Forge has no recipe for yet: glslang
+[package]
+name = "openxr"
+version = "1.1.57"
+archive = "https://github.com/KhronosGroup/OpenXR-SDK/archive/refs/tags/release-1.1.57.tar.gz"
+sha256 = "09f007863f1b9d8de95118ea8a9567d015a7a9dd19351ca5b2d16d1a266ff1e4"
+strip_components = 1
+description = "SDK for AR and VR devices and applications"
+homepage = "https://www.khronos.org/openxr/"
+license = "Apache-2.0"
+deps = ["jsoncpp", "libX11", "libglvnd", "libxcb", "vulkan-loader", "wayland"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["shaderc"]

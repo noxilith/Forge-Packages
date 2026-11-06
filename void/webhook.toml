@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'webhook'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, conf_files
+[package]
+name = "webhook"
+version = "2.8.3"
+archive = "https://github.com/adnanh/webhook/archive/2.8.3.tar.gz"
+sha256 = "5bfb3d9efd75d33bfee81fb8dae935178f42689fe0165fc1f5c5a312a0162541"
+strip_components = 1
+description = "Lightweight incoming webhook server to run shell commands"
+homepage = "https://github.com/adnanh/webhook"
+license = "MIT"
+
+[build]
+system = "go"

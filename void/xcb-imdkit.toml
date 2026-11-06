@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xcb-imdkit'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: uthash
+[package]
+name = "xcb-imdkit"
+version = "1.0.9"
+archive = "https://download.fcitx-im.org/fcitx5/xcb-imdkit/xcb-imdkit-1.0.9.tar.zst"
+sha256 = "74283bacef4d53655d3ddd6e3b969a787f77ee9d66b6ef256a2012a6ba2d1104"
+strip_components = 1
+description = "Implementation of xim protocol in xcb"
+homepage = "https://github.com/fcitx/xcb-imdkit"
+license = "LGPL-2.1-only"
+deps = ["xcb-util", "xcb-util-keysyms"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

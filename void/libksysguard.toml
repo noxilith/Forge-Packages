@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libksysguard'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools, qt6-webchannel
+[package]
+name = "libksysguard"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/libksysguard-6.7.5.tar.xz"
+sha256 = "9069bcf3fe4e491ea774d0d70eb17f99b567299871045a38543fcabcdb56dfc4"
+strip_components = 1
+description = "KDE libksysguard"
+homepage = "https://invent.kde.org/plasma/libksysguard"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kauth", "kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-knewstuff", "kf6-kpackage", "kf6-kservice", "kf6-solid", "libcap", "libdrm", "libnl3", "libpcap", "lm_sensors", "qt6-base", "qt6-declarative", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

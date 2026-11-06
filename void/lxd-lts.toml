@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lxd-lts'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_build_tags, go_package, go_import_path
+# needs, but Forge has no recipe for yet: dnsmasq
+[package]
+name = "lxd-lts"
+version = "5.0.2"
+archive = "https://github.com/canonical/lxd/archive/refs/tags/lxd-5.0.2.tar.gz"
+sha256 = "6ea9272b39f078422c9520c05d0fa01a043028ad8ce61c2957380727a6fab914"
+strip_components = 1
+description = "Next generation system container manager (long term support channel)"
+homepage = "https://linuxcontainers.org/lxd"
+license = "Apache-2.0"
+deps = ["acl", "attr", "dqlite", "eudev", "iptables", "lxc", "rsync", "squashfs-tools", "xz"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

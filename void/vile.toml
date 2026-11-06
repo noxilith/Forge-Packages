@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'vile'. Review before relying on it.
+# hooks not translated: post_configure, post_extract
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "vile"
+version = "9.8zb"
+archive = "https://invisible-mirror.net/archives/vile/current/vile-9.8zb.tgz"
+sha256 = "d6239e6b728fa9d0b49f526d8f0998d2db4b7a7dfc317273dbff7aea2a09ea31"
+strip_components = 1
+description = "Text editor which is extremely compatible with vi like emacs"
+homepage = "https://invisible-island.net/vile/vile.html"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-stripping"]
+tools = ["flex"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'groff'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+# needs, but Forge has no recipe for yet: ghostscript
+[package]
+name = "groff"
+version = "1.24.2"
+archive = "https://ftp.gnu.org/gnu/groff/groff-1.24.2.tar.gz"
+sha256 = "f9c1efd5bebbe37fc6e1063db7473ce8df1e3e0be4ff0f43ce04fce57e9c5dd9"
+strip_components = 1
+description = "GNU troff text-formatting system"
+homepage = "https://www.gnu.org/software/groff/groff.html"
+license = "GPL-3.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-x", "--disable-rpath"]
+tools = ["bison", "perl"]

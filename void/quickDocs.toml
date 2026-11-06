@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'quickDocs'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: libwebkit2gtk41
+[package]
+name = "quickDocs"
+version = "2.2.6"
+archive = "https://github.com/mdh34/quickDocs/archive/2.2.6.tar.gz"
+sha256 = "a973b41cfbd2af088c53e7085208e215c49372e080f11385b339b43418ce771d"
+strip_components = 1
+description = "Fast developer docs reader"
+homepage = "https://github.com/mdh34/quickDocs"
+license = "GPL-3.0-or-later"
+deps = ["devhelp", "granite", "gtk+3", "libarchive", "libgee"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

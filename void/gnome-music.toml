@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-music'. Review before relying on it.
+# settings not translated: build_helper, lib32disabled
+# needs, but Forge has no recipe for yet: itstool, python3-requests, xdg-user-dirs
+[package]
+name = "gnome-music"
+version = "50.0"
+archive = "https://download.gnome.org/sources/gnome-music/50/gnome-music-50.0.tar.xz"
+sha256 = "c72890ca7e5809cefeb876b01199f8b197146b5c25e9d5745301a284c0f3cdaa"
+strip_components = 1
+description = "GNOME music playing application"
+homepage = "https://apps.gnome.org/Music"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gnome-desktop", "gnome-online-accounts", "grilo", "grilo-plugins", "gst-plugins-good1", "gtk4", "libadwaita", "libmediaart", "localsearch", "python3-cairo", "python3-dbus", "python3-gobject", "tinysparql"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxml2"]

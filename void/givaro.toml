@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'givaro'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "givaro"
+version = "4.2.2"
+archive = "https://github.com/linbox-team/givaro/releases/download/v4.2.2/givaro-4.2.2.tar.gz"
+sha256 = "53e9fb290deb0e20799c62d250d65c2226013d60b4cebe6b0b54c73000cb8fff"
+strip_components = 1
+description = "C++ library for arithmetic and algebraic computations"
+homepage = "https://github.com/linbox-team/givaro"
+license = "CECILL-B"
+deps = ["gmp"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-archiver'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-archiver"
+version = "1.4.0"
+archive = "https://github.com/lxqt/lxqt-archiver/archive/1.4.0.tar.gz"
+sha256 = "45d9cccb4083f8262c110a573d9e5b05537da0d456e86746f8fe33062551a609"
+strip_components = 1
+description = "Simple & lightweight desktop-agnostic Qt file archiver"
+homepage = "https://lxqt-project.org"
+license = "GPL-2.0-or-later"
+deps = ["json-glib", "libexif", "libfm-qt", "menu-cache"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools", "qt6-base"]

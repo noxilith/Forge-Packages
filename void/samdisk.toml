@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'samdisk'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2
+[package]
+name = "samdisk"
+version = "0.0.0.20220725"
+archive = "https://github.com/simonowen/samdisk/archive/refs/tags/20220725.tar.gz"
+sha256 = "5218f9dab0a86c7e80c51b0a9265c1e57ec5d4553011dc7169141ec291ce067e"
+strip_components = 1
+description = "Disk image utility, specialising in copy-protected PC-compatible format"
+homepage = "https://simonowen.com/samdisk/"
+license = "MIT"
+deps = ["libusb", "xz", "zlib"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'memcached'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "memcached"
+version = "1.6.42"
+archive = "https://memcached.org/files/memcached-1.6.42.tar.gz"
+sha256 = "50f08b879d4f9d36dea9d905e9eaade15c708e38db7e9a73fc21dc8b45395de7"
+strip_components = 1
+description = "Distributed memory object caching system"
+homepage = "http://www.memcached.org"
+license = "BSD-3-Clause"
+deps = ["libevent", "libseccomp"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-seccomp"]
+tools = ["pkg-config"]

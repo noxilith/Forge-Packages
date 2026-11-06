@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xcb-util-cursor'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcb-util-cursor"
+version = "0.1.4"
+archive = "https://xcb.freedesktop.org/dist/xcb-util-cursor-0.1.4.tar.xz"
+sha256 = "28dcfe90bcab7b3561abe0dd58eb6832aa9cc77cfe42fcdfa4ebe20d605231fb"
+strip_components = 1
+description = "XCB cursor library (libxcursor port)"
+homepage = "https://xcb.freedesktop.org"
+license = "MIT"
+deps = ["xcb-util-image", "xcb-util-renderutil"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["gperf", "m4", "pkg-config"]

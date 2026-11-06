@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'handlr'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "handlr"
+version = "0.6.4"
+archive = "https://github.com/chmln/handlr/archive/v0.6.4.tar.gz"
+sha256 = "7aae79775a08fdeb822eb0dafe90fdedffb97063649c9a950e9a8b8e6bf8e5ba"
+strip_components = 1
+description = "Alternative to xdg-utils for ease of use"
+homepage = "https://github.com/chmln/handlr"
+license = "MIT"
+deps = ["shared-mime-info"]
+
+[build]
+system = "cargo"

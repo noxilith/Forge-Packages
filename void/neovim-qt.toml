@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'neovim-qt'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: qt6-svg
+[package]
+name = "neovim-qt"
+version = "0.2.20"
+archive = "https://github.com/equalsraf/neovim-qt/archive/v0.2.20.tar.gz"
+sha256 = "1ba4da6594a22c7fd950876329ca55cc483a37bfc87f586b1226eb34b8f3ce9d"
+strip_components = 1
+description = "Neovim client library and GUI, in Qt6"
+homepage = "https://github.com/equalsraf/neovim-qt"
+license = "ISC"
+deps = ["msgpack", "neovim", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTS=OFF", "-DUSE_SYSTEM_MSGPACK=ON"]

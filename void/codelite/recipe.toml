@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'codelite'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: mesa, sqlite
+[package]
+name = "codelite"
+version = "17.0.0"
+archive = "https://github.com/eranif/codelite/releases/download/17.0.0/codelite-17.0.0.tar.gz"
+sha256 = "c0dfe6df38426d761ef5622b7a9ab91481244a09ad751f5daafa37bb9b611d57"
+strip_components = 1
+description = "Open-source, cross platform IDE for the C/C++ programming languages"
+homepage = "http://www.codelite.org"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "wxWidgets-gtk3"]
+patches = ["patches/ctags-cross.patch", "patches/musl.patch", "patches/pango144.patch", "patches/wx-master.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_PCH=0", "-DWITH_WX_CONFIG=wx-config-gtk3"]
+tools = ["pkg-config"]
+deps = ["which"]

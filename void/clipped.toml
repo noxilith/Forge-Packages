@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'clipped'. Review before relying on it.
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "clipped"
+version = "1.1.1"
+archive = "https://github.com/davidmhewitt/clipped/archive/1.1.1.tar.gz"
+sha256 = "4f9d35fc5c3ad2283bbbf994da439235ec76320433ce78ec4375274b8b1b419e"
+strip_components = 1
+description = "Clipboard manager"
+homepage = "https://github.com/davidmhewitt/clipped"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libXtst", "libgee"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

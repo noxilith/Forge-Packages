@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'better-control'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-Pillow, python3-qrcode, python3-requests, python3-setproctitle
+[package]
+name = "better-control"
+version = "6.12.1"
+archive = "https://github.com/better-ecosystem/better-control/archive/refs/tags/v6.12.1.tar.gz"
+sha256 = "633d53dfbeb841a3a7bc7732fbb4163dd5ce55ec978389d2c342f823fd935cb5"
+strip_components = 1
+description = "Simple control panel for linux based on the GTK framework"
+homepage = "https://github.com/better-ecosystem/better-control"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "python3-dbus", "python3-gobject"]
+
+[build]
+system = "make"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tinyramfs'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: util-linux
+[package]
+name = "tinyramfs"
+version = "0.3.0"
+archive = "https://github.com/illiliti/tinyramfs/archive/refs/tags/0.3.0.tar.gz"
+sha256 = "e4d4780d48c97e5b86235327c9867685d1f63d1babe6ee30e3e05d9f94b31786"
+strip_components = 1
+description = "Tiny initramfs written in POSIX shell"
+homepage = "https://github.com/illiliti/tinyramfs"
+license = "GPL-3.0-only"
+deps = ["cpio", "kmod"]
+
+[build]
+system = "make"

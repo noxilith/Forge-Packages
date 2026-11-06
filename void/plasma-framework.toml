@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'plasma-framework'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "plasma-framework"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/plasma-framework-5.116.0.tar.xz"
+sha256 = "7e932c4da5f527206ce07d3b145231ef396a3d22441edcd24deeaf9dac509f4f"
+strip_components = 1
+description = "Foundational libraries, components, and tools of the Plasma workspaces"
+homepage = "https://invent.kde.org/frameworks/plasma-framework"
+license = "LGPL-2.1-or-later"
+deps = ["kactivities5", "kconfig", "kdeclarative", "kdoctools", "kirigami2", "libplasma"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DESKTOPTHEMES=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons", "kpackage"]

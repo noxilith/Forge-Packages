@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'polybar'. Review before relying on it.
+# 6 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: python3-Sphinx, python3-packaging
+[package]
+name = "polybar"
+version = "3.7.2"
+archive = "https://github.com/polybar/polybar/releases/download/3.7.2/polybar-3.7.2.tar.gz"
+sha256 = "e2feacbd02e7c94baed7f50b13bcbf307d95df0325c3ecae443289ba5b56af29"
+strip_components = 1
+description = "Fast and easy-to-use status bar"
+homepage = "https://github.com/polybar/polybar"
+license = "MIT"
+deps = ["cairo", "libuv", "libxcb", "xcb-proto", "xcb-util-cursor", "xcb-util-image", "xcb-util-renderutil", "xcb-util-wm", "xcb-util-xrm", "zlib"]
+patches = ["patches/battery-rate.patch", "patches/file-readable.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DOC_HTML=OFF"]
+tools = ["pkg-config"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'zabbix'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: ca-certificates, net-snmp
+[package]
+name = "zabbix"
+version = "7.4.6"
+archive = "https://cdn.zabbix.com/zabbix/sources/stable/7.4/zabbix-7.4.6.tar.gz"
+sha256 = "ccc1b0d69b04173b0e7aeeca9478bb6f5d4999c71d4ed50f817351bf011a698b"
+strip_components = 1
+description = "IT Infrastructure components availability and performance monitoring"
+homepage = "https://www.zabbix.com"
+license = "GPL-2.0-or-later"
+deps = ["curl", "fping", "gnutls", "libevent", "libxml2", "mariadb", "pcre2"]
+patches = ["patches/cacert.patch", "patches/fix-libxml2_m4.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-gnutls", "--with-libcurl", "--with-libxml2=yes", "--with-net-snmp", "--with-mysql", "--enable-server", "--enable-ipv6", "--with-ssh2", "--enable-agent", "--enable-proxy", "--with-libpcre2"]
+tools = ["pkg-config"]
+deps = ["which"]

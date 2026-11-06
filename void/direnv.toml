@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'direnv'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "direnv"
+version = "2.37.1"
+archive = "https://github.com/direnv/direnv/archive/refs/tags/v2.37.1.tar.gz"
+sha256 = "4142fbb661f3218913fac08d327c415e87b3e66bd0953185294ff8f3228ead24"
+strip_components = 1
+description = "Environment switcher for the shell"
+homepage = "https://direnv.net/"
+license = "MIT"
+
+[build]
+system = "go"

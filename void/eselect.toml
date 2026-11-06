@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'eselect'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "eselect"
+version = "1.4.20"
+archive = "https://gitweb.gentoo.org/proj/eselect.git/snapshot/eselect-1.4.20.tar.gz"
+sha256 = "db3553ace0841095a17014a9d9fb7ecd0fffc3c64d09bed973218ceb19676f6c"
+strip_components = 1
+description = "Modular configuration framework for Gentoo systems"
+homepage = "https://wiki.gentoo.org/wiki/Project:Eselect"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

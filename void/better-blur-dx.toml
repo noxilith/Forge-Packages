@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'better-blur-dx'. Review before relying on it.
+# hooks not translated: post_build, post_configure, post_install
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "better-blur-dx"
+version = "2.6.0"
+archive = "https://github.com/xarblu/kwin-effects-better-blur-dx/archive/refs/tags/v2.6.0.tar.gz"
+sha256 = "ab205ef7ca700cfe8cdb8201934b59a9d734ddf3a98afc5cdf65b153538fe497"
+strip_components = 1
+description = "Plasma 6 blur effect with additional features"
+homepage = "https://github.com/xarblu/kwin-effects-better-blur-dx"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdecoration", "kf6-kglobalaccel", "kf6-kguiaddons", "kf6-ki18n", "kf6-kio", "kf6-knotifications", "kf6-kservice", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kwin", "kwin-x11", "plasma-desktop", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

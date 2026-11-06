@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'iprange'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "iprange"
+version = "1.0.4"
+archive = "https://github.com/firehol/iprange/archive/v1.0.4.tar.gz"
+sha256 = "17732630a014d233807a20a4abbd7cdf2a930c92fcc1b4e5ca2a55e9c0ea4973"
+strip_components = 1
+description = "Manage IP ranges"
+homepage = "https://github.com/firehol/iprange/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-man"]

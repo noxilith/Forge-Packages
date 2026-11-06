@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libphonenumber'. Review before relying on it.
+# settings not translated: build_helper, CXXFLAGS
+[package]
+name = "libphonenumber"
+version = "9.0.13"
+archive = "https://github.com/google/libphonenumber/archive/refs/tags/v9.0.13.tar.gz"
+sha256 = "46400323d2df4fdefd57bc46a34111dc2c4612da62ecd0cedebff5ad94e49b0b"
+strip_components = 1
+description = "Google's common library for handling international phone numbers"
+homepage = "https://github.com/googlei18n/libphonenumber"
+license = "Apache-2.0"
+deps = ["gtest", "libicu78", "protobuf"]
+patches = ["patches/32bit.patch", "patches/boost-1.89.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DREGENERATE_METADATA=OFF", "-DUSE_BOOST=OFF", "-DUSE_STDMUTEX=ON"]
+subdir = "cpp"
+tools = ["pkg-config"]

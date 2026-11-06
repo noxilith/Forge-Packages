@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'chroot-util-linux'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "chroot-util-linux"
+version = "2.40.2"
+archive = "https://www.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.2.tar.xz"
+sha256 = "d78b37a66f5922d70edf3bdfb01a6b33d34ed3c3cafd6628203b2a2b67c8e8b3"
+strip_components = 1
+description = "Miscellaneous linux utilities -- for xbps-src use"
+homepage = "http://userweb.kernel.org/~kzak/util-linux-ng"
+license = "GPL-2.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-ncurses", "--without-ncursesw", "--without-udev", "--without-systemd", "--disable-libuuid", "--disable-libblkid", "--disable-libmount", "--disable-mount", "--disable-losetup", "--disable-fsck", "--disable-partx", "--disable-uuidd", "--disable-mountpoint", "--disable-fallocate", "--disable-unshare", "--disable-nls", "--disable-wall", "--disable-chfn-chsh-password", "--disable-su", "--disable-sulogin", "--disable-login", "--disable-runuser", "--disable-setpriv", "--disable-libsmartcols", "--disable-liblastlog2", "--without-readline", "scanf_cv_alloc_modifier=as"]

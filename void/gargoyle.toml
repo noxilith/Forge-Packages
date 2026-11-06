@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gargoyle'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "gargoyle"
+version = "2026.1.1"
+archive = "https://github.com/garglk/garglk/archive/refs/tags/2026.1.1.tar.gz"
+sha256 = "14e904d70d2968be3f6be298ffd14fd124a060d5176f5b0158749acbb90149f4"
+strip_components = 1
+description = "Interactive fiction player that supports all the major IF formats"
+homepage = "https://ccxvii.net/gargoyle/"
+license = "Artistic-2.0, BSD-2-Clause, BSD-3-Clause, GPL-2.0-only, MIT, OFL-1.1"
+deps = ["SDL2", "SDL2_mixer", "fmt", "fontconfig", "freetype", "libjpeg-turbo", "libpng", "speech-dispatcher", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_TTS=DYNAMIC"]
+tools = ["pkg-config"]

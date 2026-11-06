@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'yggdrasil'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "yggdrasil"
+version = "0.5.15"
+archive = "https://github.com/yggdrasil-network/yggdrasil-go/archive/v0.5.15.tar.gz"
+sha256 = "f1b2202d27e7a250eead4f76e4f83c3e9d9eee7ca5b148c3ae1504d430e7c7ee"
+strip_components = 1
+description = "Experiment in scalable routing as an encrypted IPv6 overlay network"
+homepage = "https://yggdrasil-network.github.io/"
+license = "LGPL-3.0-only"
+
+[build]
+system = "go"

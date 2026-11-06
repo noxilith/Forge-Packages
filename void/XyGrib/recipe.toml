@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'XyGrib'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "XyGrib"
+version = "1.2.6.1"
+archive = "https://github.com/opengribs/XyGrib/archive/v1.2.6.1.tar.gz"
+sha256 = "2dc6099293ae6f7a4bfbfc0cab590cf7ad48241d608e6d7a76e35961b9fc2157"
+strip_components = 1
+description = "Weather data visulization"
+homepage = "https://opengribs.org/"
+license = "GPL-3.0-or-later"
+deps = ["jasper", "libnova", "nettle", "openjpeg2", "proj"]
+patches = ["patches/openjpeg-2.5.patch", "patches/proj8_port.patch", "patches/qt5-5.15.0.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

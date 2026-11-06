@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'horizon'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "horizon"
+version = "2.7.1"
+archive = "https://github.com/horizon-eda/horizon/archive/v2.7.1.tar.gz"
+sha256 = "499102738195691d55570d743ece77422c7fa4cc946f6cb76df956d9ff6ae42f"
+strip_components = 1
+description = "Free EDA package"
+homepage = "https://horizon-eda.org/"
+license = "GPL-3.0-only"
+deps = ["cairomm", "cppzmq", "curl", "glm", "gtkmm", "libarchive", "libepoxy", "libgit2", "libpodofo0.9.7", "librsvg", "libsodium", "libspnav", "libzip", "occt"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kitinerary'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kitinerary"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kitinerary-26.08.1.tar.xz"
+sha256 = "0969f558a912506d52a06a4ca10a52f3b400e8671fd1451efe1b74b2b5bec907"
+strip_components = 1
+description = "Data model and extraction system for travel reservation information"
+homepage = "https://kontact.kde.org"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-karchive", "kf6-kcalendarcore", "kf6-kcontacts", "kf6-kdeclarative", "kf6-kmime", "kpkpass", "libphonenumber", "libxml2", "poppler", "qt6-base", "zxing-cpp"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons"]

@@ -1,0 +1,23 @@
+# Imported from Void Linux's template for 'texlive'. Review before relying on it.
+# 6 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install, pre_build
+# settings not translated: configure_script
+# needs, but Forge has no recipe for yet: ghostscript, harfbuzz, lua52-BitOp, mpfr, perl-Tk, texlive-core, xbps-triggers
+[package]
+name = "texlive"
+version = "20260301"
+archive = "https://github.com/TeX-Live/texlive-source/archive/refs/tags/svn78399.tar.gz"
+sha256 = "f28373c92760228b79bb99994d4dfdaa0a143fd9ef8f78b6706aca53f0d60114"
+strip_components = 1
+description = "TeX Live"
+homepage = "https://tug.org/texlive/"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "dialog", "freetype", "gd", "gmp", "graphite", "libXaw", "libicu78", "libpaper", "libpng", "pixman", "teckit", "zlib", "zziplib"]
+patches = ["patches/kpsewhich-default-progname.patch", "patches/updmap.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-biber", "--enable-dvipng", "--enable-dvipsk", "--enable-epsfwin", "--enable-ipc", "--enable-luahbtex", "--enable-luatex", "--enable-mflua", "--enable-mftalkwin", "--enable-ps2eps", "--enable-psutils", "--enable-regiswin", "--enable-shared", "--enable-tektronixwin", "--enable-unitermwin", "--enable-xetex", "--disable-bibtex-x", "--disable-chktex", "--disable-cjkutils", "--disable-detex", "--disable-dialog", "--disable-dvi2tty", "--disable-dvisvgm", "--disable-largefile", "--disable-lcdf-typetools", "--disable-multiplatform", "--disable-native-texlive-build", "--disable-pdfopen", "--disable-ps2pkm", "--disable-t1utils", "--disable-tex4htk", "--disable-ttf2pk2", "--disable-vlna", "--disable-xindy", "--disable-xpdfopen", "--with-banner-add=/VoidLinux", "--with-ps=gs", "--with-system-cairo", "--with-system-freetype2", "--with-system-gd", "--with-system-gmp", "--with-system-graphite2", "--with-system-harfbuzz", "--with-system-icu", "--with-system-libpaper", "--with-system-libpng", "--with-system-mpfr", "--with-system-pixman", "--with-system-teckit", "--with-system-zlib", "--with-system-zziplib", "--with-xdvi-x-toolkit=Xaw"]
+subdir = "build"
+tools = ["perl", "pkg-config"]
+deps = ["texinfo"]

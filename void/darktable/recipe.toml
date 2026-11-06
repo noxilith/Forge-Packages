@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'darktable'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, intltool, libjxl, libwebp, lua54, sqlite
+[package]
+name = "darktable"
+version = "5.6.0"
+archive = "https://github.com/darktable-org/darktable/releases/download/release-5.6.0/darktable-5.6.0.tar.xz"
+sha256 = "157d6d3847af8afcabe78944454786f73a886e08a504b4bd6114c2065fe006e4"
+strip_components = 1
+description = "Virtual lighttable and darkroom for photographers"
+homepage = "https://www.darktable.org/"
+license = "GPL-3.0-or-later"
+deps = ["GraphicsMagick", "adwaita-icon-theme", "colord-gtk", "curl", "exiv2", "glib", "gtk+3", "json-glib", "lensfun", "libgphoto2", "libheif", "libosmgpsmap", "librsvg", "libsecret", "libxslt", "openexr", "openjpeg2", "portmidi", "potrace", "pugixml"]
+patches = ["patches/cmake-build-type-none.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBINARY_PACKAGE_BUILD=ON", "-DBUILD_NOISE_TOOLS=ON", "-DRAWSPEED_ENABLE_LTO=ON", "-DUSE_GMIC=OFF"]
+tools = ["pkg-config"]
+deps = ["desktop-file-utils"]

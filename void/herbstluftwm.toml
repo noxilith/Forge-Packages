@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'herbstluftwm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "herbstluftwm"
+version = "0.9.6"
+archive = "https://herbstluftwm.org/tarballs/herbstluftwm-0.9.6.tar.gz"
+sha256 = "e38c9721cd5c835ec1d461ab55c9dabcacea8c42eb37aeb782be7b138c91c6eb"
+strip_components = 1
+description = "Manual tiling window manager for X"
+homepage = "https://herbstluftwm.org"
+license = "BSD-2-Clause"
+deps = ["freetype", "glib", "libXfixes", "libXft", "libXinerama", "libXrandr", "libXrender"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

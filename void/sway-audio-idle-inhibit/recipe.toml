@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sway-audio-idle-inhibit'. Review before relying on it.
+[package]
+name = "sway-audio-idle-inhibit"
+version = "0.2.0"
+archive = "https://github.com/ErikReider/SwayAudioIdleInhibit/archive/refs/tags/v0.2.0.tar.gz"
+sha256 = "8c832ca0904ae9c1423d9744d6d14555cbc26237da81c4dc8e9e8b963e9a4d68"
+strip_components = 1
+description = "Prevent swayidle from sleeping when audio is playing"
+homepage = "https://github.com/ErikReider/SwayAudioIdleInhibit"
+license = "GPL-3.0-or-later"
+deps = ["elogind", "pulseaudio"]
+patches = ["patches/fix-undef.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dlogind-provider=elogind"]
+tools = ["pkg-config"]
+deps = ["wayland"]

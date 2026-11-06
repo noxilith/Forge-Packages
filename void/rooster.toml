@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rooster'. Review before relying on it.
+[package]
+name = "rooster"
+version = "2.12.0"
+archive = "https://static.crates.io/crates/rooster/rooster-2.12.0.crate"
+sha256 = "13286b54953237182b008390753ff0b201a1ff78c278c199ce3e6957a8efe9f7"
+strip_components = 1
+description = "Simple password manager for geeks"
+homepage = "https://crates.io/crates/rooster"
+license = "Apache-2.0"
+deps = ["libX11", "libXmu"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

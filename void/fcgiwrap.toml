@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fcgiwrap'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "fcgiwrap"
+version = "1.1.0"
+archive = "https://github.com/gnosek/fcgiwrap/archive/1.1.0.tar.gz"
+sha256 = "4c7de0db2634c38297d5fcef61ab4a3e21856dd7247d49c33d9b19542bd1c61f"
+strip_components = 1
+description = "Simple server for running CGI applications over FastCGI"
+homepage = "https://github.com/gnosek/fcgiwrap"
+license = "MIT"
+deps = ["fcgi"]
+
+[build]
+system = "autotools"
+configure_args = ["--prefix=/"]
+tools = ["pkg-config"]

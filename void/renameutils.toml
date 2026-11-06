@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'renameutils'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "renameutils"
+version = "0.12.0"
+archive = "https://download.savannah.nongnu.org/releases/renameutils/renameutils-0.12.0.tar.gz"
+sha256 = "cbd2f002027ccf5a923135c3f529c6d17fabbca7d85506a394ca37694a9eb4a3"
+strip_components = 1
+description = "Programs designed to make renaming of files faster and less cumbersome"
+homepage = "https://www.nongnu.org/renameutils/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

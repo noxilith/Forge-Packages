@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'catgirl'. Review before relying on it.
+# settings not translated: make_build_target
+# needs, but Forge has no recipe for yet: libtls, ncurses
+[package]
+name = "catgirl"
+version = "2.2a"
+archive = "https://git.causal.agency/catgirl/snapshot/catgirl-2.2a.tar.gz"
+sha256 = "c6d760aaee134e052586def7a9103543f7281fde6531fbcb41086470794297c2"
+strip_components = 1
+description = "TLS-only terminal IRC client"
+homepage = "https://git.causal.agency/catgirl/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

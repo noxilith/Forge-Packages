@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'chayang'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "chayang"
+version = "0.1.0"
+archive = "https://git.sr.ht/~emersion/chayang/archive/v0.1.0.tar.gz"
+sha256 = "61aa0e2955e8b5cf321ef14a5fd72f0e953da51a390d456e929b74fc5efcb74a"
+strip_components = 1
+description = "Gradually dim the screen"
+homepage = "https://git.sr.ht/~emersion/chayang"
+license = "MIT"
+deps = ["wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

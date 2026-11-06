@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'encfs'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_target
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "encfs"
+version = "1.9.5"
+archive = "https://github.com/vgough/encfs/releases/download/v1.9.5/encfs-1.9.5.tar.gz"
+sha256 = "4709f05395ccbad6c0a5b40a4619d60aafe3473b1a79bafb3aa700b1f756fd63"
+strip_components = 1
+description = "Encrypted filesystem in user-space"
+homepage = "http://www.arg0.net/encfs"
+license = "GPL-2.0-or-later, LGPL-3.0-or-later"
+deps = ["fuse", "gettext", "openssl", "tinyxml2"]
+patches = ["patches/openssl-3.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_INTERNAL_TINYXML=OFF"]
+tools = ["perl", "pkg-config"]

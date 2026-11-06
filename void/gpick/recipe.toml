@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gpick'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost, lua52, ragel
+[package]
+name = "gpick"
+version = "0.3"
+archive = "https://github.com/thezbyg/gpick/releases/download/v0.3/gpick-0.3.tar.gz"
+sha256 = "90b03ce10d2f3e211a3f37d262596e4ae40d05cbd633aa0560d0891562c93474"
+strip_components = 1
+description = "Advanced color picker written in C++ using GTK+ toolkit"
+homepage = "https://github.com/thezbyg/gpick"
+license = "BSD-3-Clause"
+deps = ["expat", "gtk+3"]
+patches = ["patches/boost-1.84.patch", "patches/cmake.patch", "patches/revert-cpp-lua.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

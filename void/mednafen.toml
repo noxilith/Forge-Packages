@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mednafen'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "mednafen"
+version = "1.32.1"
+archive = "https://mednafen.github.io/releases/files/mednafen-1.32.1.tar.xz"
+sha256 = "de7eb94ab66212ae7758376524368a8ab208234b33796625ca630547dbc83832"
+strip_components = 1
+description = "Portable, argument(command-line)-driven multi-system emulator"
+homepage = "https://mednafen.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "glu", "libsndfile", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-libsndfile", "--enable-alsa", "ac_cv_sizeof_off_t=8"]
+tools = ["pkg-config"]
+deps = ["gettext"]

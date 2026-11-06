@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'json-c++'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "json-c++"
+version = "3.12.0"
+archive = "https://github.com/nlohmann/json/archive/v3.12.0.tar.gz"
+sha256 = "4b92eb0c06d10683f7447ce9406cb97cd4b453be18d7279320f7b2f025c10187"
+strip_components = 1
+description = "JSON for modern C++"
+homepage = "https://github.com/nlohmann/json"
+license = "MIT"
+patches = ["patches/char8_t_support_fallback.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DJSON_MultipleHeaders=ON"]

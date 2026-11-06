@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'eclib'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, ntl
+[package]
+name = "eclib"
+version = "20250627"
+archive = "https://github.com/JohnCremona/eclib/releases/download/20250627/eclib-20250627.tar.bz2"
+sha256 = "b88d4b52612e491c5415946d9e35f2062ca1015ee7fbbe0b61f158fa74cb4bc9"
+strip_components = 1
+description = "Elliptic curve library, includes mwrank"
+homepage = "https://github.com/JohnCremona/eclib"
+license = "GPL-2.0-or-later"
+deps = ["flintlib", "pari"]
+patches = ["patches/fix-test-i686.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-flint", "--with-boost", "--with-boost-system=c"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libtraceevent'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args, make_build_target, make_install_target
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "libtraceevent"
+version = "1.9.0"
+archive = "https://git.kernel.org/pub/scm/libs/libtrace/libtraceevent.git/snapshot/libtraceevent-1.9.0.tar.gz"
+sha256 = "e6d82cb2392d04866203387fa092692e4282ccc36c8235dc129afd1ceba12684"
+strip_components = 1
+description = "Linux kernel trace event library"
+homepage = "https://git.kernel.org/pub/scm/libs/libtrace/libtraceevent.git/"
+license = "GPL-2.0-only, LGPL-2.1-only"
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["source-highlight", "xmlto"]

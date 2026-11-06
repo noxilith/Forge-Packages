@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'vimb'. Review before relying on it.
+# settings not translated: make_build_target
+# needs, but Forge has no recipe for yet: libwebkit2gtk41
+[package]
+name = "vimb"
+version = "4.0.0"
+archive = "https://github.com/fanglingsu/vimb/archive/refs/tags/4.0.0.tar.gz"
+sha256 = "4ae8c296430f023d6b556f8dd7a21d0df30aa4e3c6f5402510cc0cfe747c13bd"
+strip_components = 1
+description = "Fast and lightweight web browser based on WebKit/GTK+"
+homepage = "https://fanglingsu.github.io/vimb/"
+license = "GPL-3.0-or-later"
+deps = ["glib", "libsoup3"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'pcmanfm'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "pcmanfm"
+version = "1.4.0"
+archive = "https://github.com/lxde/pcmanfm/archive/refs/tags/1.4.0.tar.gz"
+sha256 = "cda4f5ad7e049dcdf3b051b9de4c779adcd55bd720e9c96c45275389aa84264e"
+strip_components = 1
+description = "LXDE file manager"
+homepage = "https://github.com/lxde/pcmanfm"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "libfm", "lxmenu-data"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-gtk=3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

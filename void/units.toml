@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'units'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: libreadline8, python3-Unidecode, python3-requests
+[package]
+name = "units"
+version = "2.27"
+archive = "https://ftp.gnu.org/gnu/units/units-2.27.tar.gz"
+sha256 = "e1bbdb09672e7c08eee986749e7a1629eb84a6bdf41f5a2a79d6804444abbe10"
+strip_components = 1
+description = "Converts between different units"
+homepage = "https://www.gnu.org/software/units/units.html"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fooyin'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, qt6-svg, qt6-tools
+[package]
+name = "fooyin"
+version = "0.13.1"
+archive = "https://github.com/fooyin/fooyin/archive/v0.13.1.tar.gz"
+sha256 = "ebd630c6d7b2811498fcae33e030caf6b2fccb6c98e93497c00628876684ba83"
+strip_components = 1
+description = "Customisable music player"
+homepage = "https://www.fooyin.org/"
+license = "GPL-3.0-only"
+deps = ["KDSingleApplication", "SDL2", "alsa-lib", "libarchive", "libebur128", "libgme", "libicu78", "libopenmpt", "libsndfile", "pipewire", "qcoro-qt6", "qt6-base", "taglib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_PCH=ON", "-DBUILD_WERROR=OFF"]
+tools = ["pkg-config"]

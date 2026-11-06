@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-mutt-misc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-mutt-misc"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-mutt-misc-1.0.4.tar.gz"
+sha256 = "9a9bc19088c6c9456c567e8f54d7a8e5e96b0d085066d9dcfe3ac8d898dd7c03"
+strip_components = 1
+description = "100dpi PCF versions of the ClearlyU fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

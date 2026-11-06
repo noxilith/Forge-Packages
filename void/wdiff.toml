@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'wdiff'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "wdiff"
+version = "1.2.2"
+archive = "https://ftp.gnu.org/gnu/wdiff/wdiff-1.2.2.tar.gz"
+sha256 = "34ff698c870c87e6e47a838eeaaae729fa73349139fc8db12211d2a22b78af6b"
+strip_components = 1
+description = "Front-end to GNU diff for word-by-word diffing"
+homepage = "https://www.gnu.org/software/wdiff/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+deps = ["texinfo"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pam-gnupg'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "pam-gnupg"
+version = "0.4"
+archive = "https://github.com/cruegge/pam-gnupg/archive/v0.4.tar.gz"
+sha256 = "d7d266ffaa493fee087d373d70ae5f25a8afb145bc9b7c3cc60b7a448dd65756"
+strip_components = 1
+description = "PAM module to unlock GPG agent"
+homepage = "https://github.com/cruegge/pam-gnupg"
+license = "GPL-3.0-only"
+deps = ["gnupg", "pam"]
+
+[build]
+system = "autotools"

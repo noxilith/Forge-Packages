@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'slurp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "slurp"
+version = "1.5.0"
+archive = "https://github.com/emersion/slurp/archive/v1.5.0.tar.gz"
+sha256 = "0fa880d4a93e1c795e3b5929fbea47546df0955bea34fc2f7ffeb1751678f663"
+strip_components = 1
+description = "Select a region in a Wayland compositor"
+homepage = "https://wayland.emersion.fr/slurp/"
+license = "MIT"
+deps = ["cairo", "libxkbcommon", "wayland", "wayland-protocols"]
+patches = ["patches/fix-frame-callback-use-after-free.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fwknop'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CFLAGS
+[package]
+name = "fwknop"
+version = "2.6.10"
+archive = "https://www.cipherdyne.org/fwknop//download/fwknop-2.6.10.tar.gz"
+sha256 = "2b15050bae92ec5210fcac944a7aa4bf9c651333a2b2960aabcd5cfc1d527cf1"
+strip_components = 1
+description = "Single Packet Authorization (SPA) implementation"
+homepage = "https://www.cipherdyne.org/fwknop/"
+license = "GPL-2.0-only"
+deps = ["gpgme", "libpcap"]
+
+[build]
+system = "autotools"
+deps = ["iptables"]

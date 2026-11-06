@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'makefile2graph'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "makefile2graph"
+version = "2021.11.06"
+archive = "https://github.com/lindenb/makefile2graph/archive/refs/tags/2021.11.06.tar.gz"
+sha256 = "5be8e528fa2945412357a8ef233e68fa3729639307ec1c38fd63768aad642c41"
+strip_components = 1
+description = "Creates a graph of dependencies from GNU-Make"
+homepage = "https://github.com/lindenb/makefile2graph"
+license = "MIT"
+
+[build]
+system = "make"

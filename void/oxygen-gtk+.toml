@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'oxygen-gtk+'. Review before relying on it.
+[package]
+name = "oxygen-gtk+"
+version = "1.4.6"
+archive = "https://download.kde.org/stable/oxygen-gtk+/1.4.6/src/oxygen-gtk+-1.4.6.tar.bz2"
+sha256 = "a289434347cc96054c75d1e4e4408b84adc2e8c7862f0be4e2da8fafbf26bf26"
+strip_components = 1
+description = "Port of the default KDE widget theme (Oxygen) to GTK2"
+homepage = "https://projects.kde.org/projects/playground/artwork/oxygen-gtk/"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

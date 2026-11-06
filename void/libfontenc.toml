@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libfontenc'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "libfontenc"
+version = "1.1.9"
+archive = "https://www.x.org/releases/individual/lib/libfontenc-1.1.9.tar.xz"
+sha256 = "9d8392705cb10803d5fe1d27d236cbab3f664e26841ce01916bbbe430cf273e2"
+strip_components = 1
+description = "Fontenc Library from X.org"
+homepage = "https://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["xorgproto", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

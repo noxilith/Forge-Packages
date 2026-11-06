@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hex-a-hop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: SDL_mixer, SDL_ttf
+[package]
+name = "hex-a-hop"
+version = "1.1.0"
+archive = "https://downloads.sourceforge.net/sourceforge/hexahop/hex-a-hop-1.1.0.tar.gz"
+sha256 = "80bf19d936a8430cab5bc468ee6827c38052e026c609eb7ece16317e7932a0d6"
+strip_components = 1
+description = "Hex-a-Hop is an hexagonal tile-based puzzle game"
+homepage = "http://hexahop.sourceforge.net"
+license = "GPL-2.0-only"
+deps = ["sdl12-compat"]
+
+[build]
+system = "autotools"

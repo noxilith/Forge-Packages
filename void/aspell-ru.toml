@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-ru'. Review before relying on it.
+[package]
+name = "aspell-ru"
+version = "0.99f7"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/ru/aspell6-ru-0.99f7-1.tar.bz2"
+sha256 = "5c29b6ccce57bc3f7c4fb0510d330446b9c769e59c92bdfede27333808b6e646"
+strip_components = 1
+description = "Russian dictionary for aspell"
+homepage = "http://aspell.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

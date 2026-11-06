@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libgnt'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "libgnt"
+version = "2.14.3"
+archive = "https://downloads.sourceforge.net/sourceforge/pidgin/libgnt/2.14.3/libgnt-2.14.3.tar.xz"
+sha256 = "57f5457f72999d0bb1a139a37f2746ec1b5a02c094f2710a339d8bcea4236123"
+strip_components = 1
+description = "GLib Ncurses Toolkit"
+homepage = "https://keep.imfreedom.org/libgnt/"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk-doc", "libxml2"]
+patches = ["patches/cross-fix.diff", "patches/fix-ncurses6.5.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpython2=false"]
+tools = ["pkg-config"]

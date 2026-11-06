@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'faba-icon-theme'. Review before relying on it.
+[package]
+name = "faba-icon-theme"
+version = "4.3"
+archive = "https://github.com/snwh/faba-icon-theme/archive/v4.3.tar.gz"
+sha256 = "c87ce7dae8df6b25228297baa1be96cfad06c5c109ff60fedf1f0343bb0196a2"
+strip_components = 1
+description = "Sexy, modern FreeDesktop icon set with Tango and elementary influences"
+homepage = "https://github.com/snwh/faba-icon-theme"
+license = "CC-BY-SA-4.0"
+
+[build]
+system = "meson"

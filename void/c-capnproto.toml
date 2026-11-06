@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'c-capnproto'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "c-capnproto"
+version = "0.3"
+archive = "https://github.com/opensourcerouting/c-capnproto/releases/download/c-capnproto-0.3/c-capnproto-0.3.tar.xz"
+sha256 = "215bc921b5196d0e52a2a8a65d99b80f6a3c0c4413300736fd961c174cf79937"
+strip_components = 1
+description = "C plugin for Cap'n Proto"
+homepage = "https://github.com/opensourcerouting/c-capnproto"
+license = "MIT"
+deps = ["capnproto"]
+
+[build]
+system = "autotools"

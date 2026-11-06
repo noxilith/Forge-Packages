@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'geany'. Review before relying on it.
+# hooks not translated: pre_check
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "geany"
+version = "2.1"
+archive = "https://download.geany.org/geany-2.1.tar.bz2"
+sha256 = "6b96a8844463300c10b9692a0a5edad8236eec9e84342f575f83d4fc89331228"
+strip_components = 1
+description = "Fast and lightweight IDE"
+homepage = "https://www.geany.org"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-vte", "--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext"]

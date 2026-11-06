@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cscope'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "cscope"
+version = "15.9"
+archive = "https://downloads.sourceforge.net/sourceforge/cscope/cscope-15.9.tar.gz"
+sha256 = "c5505ae075a871a9cd8d9801859b0ff1c09782075df281c72c23e72115d9f159"
+strip_components = 1
+description = "Interactively examine a C program"
+homepage = "https://cscope.sourceforge.net/"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'minizip-ng'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "minizip-ng"
+version = "4.0.10"
+archive = "https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.0.10/minizip-ng-4.0.10.tar.gz"
+sha256 = "c362e35ee973fa7be58cc5e38a4a6c23cc8f7e652555daf4f115a9eb2d3a6be7"
+strip_components = 1
+description = "Zlib-ng fork of minizip"
+homepage = "https://github.com/zlib-ng/minizip-ng"
+license = "Zlib"
+deps = ["gtest", "openssl", "xz", "zlib-ng"]
+
+[build]
+system = "cmake"
+configure_args = ["-DMZ_COMPAT=OFF", "-DBUILD_SHARED_LIBS=ON", "-DSKIP_INSTALL_BINARIES=ON", "-DMZ_BUILD_TESTS=ON", "-DMZ_BUILD_UNIT_TESTS=ON"]
+tools = ["pkg-config"]

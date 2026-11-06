@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libbaseencode'. Review before relying on it.
+[package]
+name = "libbaseencode"
+version = "1.0.15"
+archive = "https://github.com/paolostivanin/libbaseencode/archive/v1.0.15.tar.gz"
+sha256 = "1b797b1b403358949201049675f70a495dee8e338df52f7790c7ad6e6a0027fa"
+strip_components = 1
+description = "Library for encoding decoding data use base32 or base64"
+homepage = "https://github.com/paolostivanin/libbaseencode"
+license = "Apache-2.0"
+patches = ["patches/fix-cflags.patch"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'nautilus'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: glycin, harfbuzz, hicolor-icon-theme
+[package]
+name = "nautilus"
+version = "50.2.2"
+archive = "https://download.gnome.org/sources/nautilus/50/nautilus-50.2.2.tar.xz"
+sha256 = "e1e285efddf42ed30dda5b29f7f8d242dab4bc1409a9054863b367bad4b34d5a"
+strip_components = 1
+description = "GNOME file manager"
+homepage = "https://wiki.gnome.org/Nautilus"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["desktop-file-utils", "exempi", "glib", "gnome-autoar", "gnome-desktop", "gsettings-desktop-schemas", "gst-plugins-base1", "gtk4", "gvfs", "libadwaita", "libexif", "libgexiv2-0.16", "libnotify", "libportal", "libseccomp", "libselinux", "libxml2", "localsearch", "tinysparql"]
+patches = ["patches/skip-thumbnails-test.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtests=headless", "-Dselinux=disabled"]
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "gettext", "libxslt", "wayland"]

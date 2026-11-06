@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'bento4'. Review before relying on it.
+[package]
+name = "bento4"
+version = "1.6.0+641"
+archive = "https://github.com/axiomatic-systems/Bento4/archive/v1.6.0-641.tar.gz"
+sha256 = "e6575877708526e399cff752b4ee23cb1e2ac32fb251e2ca0a1e8d691fd172a7"
+strip_components = 1
+description = "Full-featured MP4 format, MPEG DASH, HLS, CMAF SDK and tools"
+homepage = "https://www.bento4.com/"
+license = "GPL-2.0-only"
+
+[build]
+system = "cmake"

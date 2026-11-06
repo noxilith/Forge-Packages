@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'chroot-gawk'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_check
+[package]
+name = "chroot-gawk"
+version = "5.3.2"
+archive = "https://ftp.gnu.org/gnu/gawk/gawk-5.3.2.tar.xz"
+sha256 = "f8c3486509de705192138b00ef2c00bbbdd0e84c30d5c07d23fc73a9dc4cc9cc"
+strip_components = 1
+description = "GNU awk utility -- for xbps-src use"
+homepage = "https://directory.fsf.org/wiki/Gawk"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-nls", "--without-readline", "--disable-pma"]

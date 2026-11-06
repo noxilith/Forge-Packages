@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'zk'. Review before relying on it.
+# settings not translated: go_ldflags, go_build_tags, go_import_path
+[package]
+name = "zk"
+version = "0.15.6"
+archive = "https://github.com/zk-org/zk/archive/refs/tags/v0.15.6.tar.gz"
+sha256 = "ac4e1744655bc5c42caf132ca667e0d882dda2e05ba08762f9f49dd784bec115"
+strip_components = 1
+description = "Plain text note-taking assistant"
+homepage = "https://zk-org.github.io/zk/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

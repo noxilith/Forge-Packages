@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'nemo'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: cinnamon-translations
+[package]
+name = "nemo"
+version = "6.6.4"
+archive = "https://github.com/linuxmint/nemo/archive/6.6.4.tar.gz"
+sha256 = "258807feb2e7bac523707d6b3daf2d9439e7135123cbe795183d5aaa6fd691ed"
+strip_components = 1
+description = "Cinnamon file manager (nautilus fork)"
+homepage = "https://github.com/linuxmint/nemo"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["cinnamon-desktop", "dconf", "exempi", "gtk+3", "gvfs", "libexif", "libgsf", "libnotify", "libxml2", "xapp", "xapp-symbolic-icons"]
+patches = ["patches/no-intltool.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

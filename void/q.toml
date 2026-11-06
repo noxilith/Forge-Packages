@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'q'. Review before relying on it.
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "q"
+version = "0.19.12"
+archive = "https://github.com/natesales/q/archive/refs/tags/v0.19.12.tar.gz"
+sha256 = "1f56ebfb93fd380dee734cca9227149de2491c49db7b2c0f21019fd463081e4c"
+strip_components = 1
+description = "Tiny command line DNS client with support for many transport protocols"
+homepage = "https://github.com/natesales/q"
+license = "GPL-3.0-only"
+
+[build]
+system = "go"

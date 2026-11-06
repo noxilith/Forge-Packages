@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ugdb'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ugdb"
+version = "0.1.11"
+archive = "https://github.com/ftilde/ugdb/archive/0.1.11.tar.gz"
+sha256 = "d092356534774505b6b081b82db71d1fab1fbccdb814a44d4c435bafe5efd312"
+strip_components = 1
+description = "Alternative TUI for gdb"
+homepage = "https://github.com/ftilde/ugdb"
+license = "MIT"
+deps = ["oniguruma"]
+patches = ["patches/0001-unbreak-i128-support.patch", "patches/0002-fix-build-on-platforms-without-64-bit-atomics.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

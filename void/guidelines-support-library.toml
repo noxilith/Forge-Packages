@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'guidelines-support-library'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "guidelines-support-library"
+version = "4.0.0"
+archive = "https://github.com/microsoft/GSL/archive/refs/tags/v4.0.0.tar.gz"
+sha256 = "f0e32cb10654fea91ad56bde89170d78cfbf4363ee0b01d8f097de2ba49f6ce9"
+strip_components = 1
+description = "C++ Guidelines Support Library"
+homepage = "https://github.com/microsoft/GSL"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DGSL_TEST:BOOL=OFF"]

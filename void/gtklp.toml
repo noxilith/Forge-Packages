@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gtklp'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: cups
+[package]
+name = "gtklp"
+version = "1.3.4"
+archive = "https://downloads.sourceforge.net/sourceforge/gtklp/1.3.4/gtklp-1.3.4.src.tar.gz"
+sha256 = "be07609042595fa932034e3b2d7038cef33901ec0863fcedbb5188acb6b53bab"
+strip_components = 1
+description = "Gtk frontend to cups - IPP support"
+homepage = "http://gtklp.sirtobi.com/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ssl"]
+tools = ["pkg-config"]
+deps = ["gettext"]

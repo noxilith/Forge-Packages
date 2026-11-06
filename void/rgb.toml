@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rgb'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rgb"
+version = "1.1.1"
+archive = "https://www.x.org/releases/individual/app/rgb-1.1.1.tar.xz"
+sha256 = "c80ff280a02f56c30fadc2dfa210fc6979c4ab968afa315278cb97768b64ecab"
+strip_components = 1
+description = "Xorg color name database & tools"
+homepage = "https://gitlab.freedesktop.org/xorg/app/rgb"
+license = "MIT"
+deps = ["xorgproto"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

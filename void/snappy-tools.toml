@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'snappy-tools'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "snappy-tools"
+version = "1"
+archive = "https://git.sr.ht/~nabijaczleweli/snappy-tools/archive/1.tar.gz"
+sha256 = "d8d9eef3d4ab03be6c885ef91ba4241a4a0572580c7e84cc5f2bd4055d0161c2"
+strip_components = 1
+description = "Snappy compression and decompression with and without framing"
+homepage = "https://git.sr.ht/~nabijaczleweli/snappy-tools"
+license = "0BSD"
+deps = ["snappy"]
+
+[build]
+system = "make"

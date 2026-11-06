@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mate-screensaver'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: dbus-glib, itstool
+[package]
+name = "mate-screensaver"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-screensaver-1.28.0.tar.xz"
+sha256 = "6a0f24a8f84a2f95e10114ab53e63fd4aca688a55fdc503ed650e0a410e3ea70"
+strip_components = 1
+description = "Screensaver for MATE"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["elogind", "libXScrnSaver", "libmatekbd", "libnotify", "mate-desktop", "mate-menus", "mate-session-manager", "pam"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-console-kit", "--without-systemd", "--with-elogind"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

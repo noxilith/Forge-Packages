@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rocq-stdlib'. Review before relying on it.
+# needs, but Forge has no recipe for yet: rocq
+[package]
+name = "rocq-stdlib"
+version = "9.0.0"
+archive = "https://github.com/rocq-prover/stdlib/releases/download/V9.0.0/stdlib-9.0.0.tar.gz"
+sha256 = "1ab6adc42dfc651ddc909604bae1a54ff5623cda837f93677a8b12aab9eec711"
+strip_components = 1
+description = "Standard library for the Rocq Prover"
+homepage = "https://github.com/rocq-prover/stdlib"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"
+deps = ["ocaml", "ocaml-zarith"]

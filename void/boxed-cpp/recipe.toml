@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'boxed-cpp'. Review before relying on it.
+[package]
+name = "boxed-cpp"
+version = "1.4.3"
+archive = "https://github.com/contour-terminal/boxed-cpp/archive/refs/tags/v1.4.3.tar.gz"
+sha256 = "75afd9c1627846ed350253b0885a71207a0c2d52f350ded86daa5d18712bad93"
+strip_components = 1
+description = "Boxing primitive types in C++"
+homepage = "https://github.com/contour-terminal/boxed-cpp"
+license = "Apache-2.0"
+patches = ["patches/fmt.patch"]
+
+[build]
+system = "cmake"

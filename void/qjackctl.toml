@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qjackctl'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, jack, portaudio, qt6-svg, qt6-tools
+[package]
+name = "qjackctl"
+version = "1.0.6"
+archive = "https://github.com/rncbc/qjackctl/archive/refs/tags/v1.0.6.tar.gz"
+sha256 = "5ab87a01811d5a5838c32b67a3b04077548348356c64bbbaed8ce28c563e6726"
+strip_components = 1
+description = "JACK Audio Connection Kit - Qt GUI Interface"
+homepage = "https://qjackctl.sourceforge.io"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "desktop-file-utils", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

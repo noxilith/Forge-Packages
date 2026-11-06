@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'paprefs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme, lynx
+[package]
+name = "paprefs"
+version = "1.2"
+archive = "https://www.freedesktop.org/software/pulseaudio/paprefs/paprefs-1.2.tar.xz"
+sha256 = "b3f21e40dc3936d15e3ffc910fb0c07c14b88e8c287715b456a948c17638f633"
+strip_components = 1
+description = "Editor for pulseaudio settings"
+homepage = "http://0pointer.de/lennart/projects/paprefs/"
+license = "GPL-3.0-or-later"
+deps = ["glibmm", "gtkmm", "libsigc++", "pulseaudio"]
+
+[build]
+system = "meson"
+configure_args = ["-Dlynx=true"]
+tools = ["pkg-config"]
+deps = ["gettext"]

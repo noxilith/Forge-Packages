@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fontconfig'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "fontconfig"
+version = "2.18.3"
+archive = "https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/2.18.3/fontconfig-2.18.3.tar.xz"
+sha256 = "4f7b554a38cdf78c033f666c8871f3749e14a094f65a07f630c91ed0b43d35e3"
+strip_components = 1
+description = "Library for configuring and customizing font access"
+homepage = "http://www.fontconfig.org"
+license = "MIT"
+deps = ["expat", "freetype"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static", "--enable-docs"]
+tools = ["gperf", "pkg-config"]

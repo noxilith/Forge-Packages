@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'Kooha'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+[package]
+name = "Kooha"
+version = "2.3.1"
+archive = "https://github.com/SeaDve/Kooha/archive/refs/tags/v2.3.1.tar.gz"
+sha256 = "33fa92fdd4f5d315f74d59f12fb30cc38c23238b29eb7cad306e8a9b55dd9155"
+strip_components = 1
+description = "Simple screen recorder with a minimal interface"
+homepage = "https://github.com/SeaDve/Kooha"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gst-plugins-bad1", "gst-plugins-base1", "gstreamer1", "gtk4", "libadwaita", "pipewire", "pulseaudio", "xdg-desktop-portal"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk+3"]

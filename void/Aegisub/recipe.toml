@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'Aegisub'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: LuaJIT, boost, ffmpeg6, fftw, mesa, portaudio
+[package]
+name = "Aegisub"
+version = "3.4.2"
+archive = "https://github.com/TypesettingTools/Aegisub/archive/v3.4.2.tar.gz"
+sha256 = "38731ec76392fe763ce34e34cda6ee233802cf20ef3f380a3998da35a893a5c4"
+strip_components = 1
+description = "Cross-platform advanced subtitle editor"
+homepage = "https://github.com/TypesettingTools/Aegisub"
+license = "BSD-3-Clause"
+deps = ["alsa-lib", "curl", "ffms2", "fontconfig", "gtest", "hunspell", "libass", "libicu78", "libopenal", "pulseaudio", "uchardet", "wxWidgets-gtk3", "zlib"]
+patches = ["patches/01-no-iconv-tests.patch", "patches/02-luajit-5.2.patch", "patches/boost-1.89.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystem_luajit=true"]
+tools = ["pkg-config"]
+deps = ["gettext"]

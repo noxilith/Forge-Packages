@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'aspell'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ncurses, perl
+[package]
+name = "aspell"
+version = "0.60.8.2"
+archive = "https://ftp.gnu.org/gnu/aspell/aspell-0.60.8.2.tar.gz"
+sha256 = "57fe4863eae6048f72245a8575b44b718fb85ca14b9f8c0afc41b254dfd76919"
+strip_components = 1
+description = "Spell checker with good multi-language support"
+homepage = "http://aspell.net/"
+license = "LGPL-2.1-only"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-compile-in-filters", "--enable-32-bit-hash-fun"]
+tools = ["perl"]
+deps = ["gettext"]

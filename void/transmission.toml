@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'transmission'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: dbus-glib, libb64, libnatpmp, qt6-svg, qt6-tools
+[package]
+name = "transmission"
+version = "4.1.4"
+archive = "https://github.com/transmission/transmission/releases/download/4.1.4/transmission-4.1.4.tar.xz"
+sha256 = "86e7aa020cdf64826447034bc85f4d3b7c848d8c0891d9dc9b9fddfb2c805d22"
+strip_components = 1
+description = "Fast, easy and free BitTorrent client"
+homepage = "https://www.transmissionbt.com"
+license = "MIT, GPL-2.0-or-later"
+deps = ["curl", "glibmm2.68", "gtk4", "gtkmm4", "libdeflate", "libevent", "libglvnd", "libpsl", "miniupnpc", "openssl"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_CLI=ON", "-DENABLE_GTK=ON", "-DENABLE_QT=ON", "-DUSE_QT_VERSION=6", "-DWITH_SYSTEMD=OFF", "-DENABLE_MAC=OFF"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "qt6-base"]

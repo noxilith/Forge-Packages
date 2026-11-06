@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'bibiman'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bibiman"
+version = "0.17.1"
+archive = "https://codeberg.org/lukeflo/bibiman/archive/v0.17.1.tar.gz"
+sha256 = "2aa25f6260581957d6d53896ca140eae8e7237be06abff0f972f03097efe8e44"
+strip_components = 1
+description = "TUI for managing and working with BibLaTeX files"
+homepage = "https://codeberg.org/lukeflo/bibiman"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

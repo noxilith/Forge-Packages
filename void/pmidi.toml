@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'pmidi'. Review before relying on it.
+[package]
+name = "pmidi"
+version = "1.7.1"
+archive = "https://downloads.sourceforge.net/sourceforge/pmidi/1.7.1/pmidi-1.7.1.tar.gz"
+sha256 = "a500d9e41235ea741ffccce9541df9f74318663a62ec18d8081eb1119cd93514"
+strip_components = 1
+description = "Command line midi player for ALSA"
+homepage = "https://www.parabola.me.uk/alsa/pmidi.html"
+license = "GPL-2.0-only"
+deps = ["alsa-lib"]
+
+[build]
+system = "autotools"

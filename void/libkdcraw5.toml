@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libkdcraw5'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "libkdcraw5"
+version = "25.12.3"
+archive = "https://download.kde.org/stable/release-service/25.12.3/src/libkdcraw-25.12.3.tar.xz"
+sha256 = "23b220f14bbaa21858b6f8e18169499389835b6693e73a877f8e0d788f4499af"
+strip_components = 1
+description = "C++ interface around LibRaw library used to decode RAW"
+homepage = "https://www.kde.org/applications/graphics/"
+license = "GPL-2.0-or-later"
+deps = ["libraw"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

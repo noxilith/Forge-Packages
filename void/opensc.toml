@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'opensc'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: docbook-xsl, libreadline8
+[package]
+name = "opensc"
+version = "0.27.1"
+archive = "https://github.com/OpenSC/OpenSC/releases/download/0.27.1/opensc-0.27.1.tar.gz"
+sha256 = "976f4a23eaf3397a1a2c3a7aac80bf971a8c3d829c9a79f06145bfaeeae5eca7"
+strip_components = 1
+description = "Tools and libraries for smart cards"
+homepage = "https://github.com/OpenSC/OpenSC/wiki"
+license = "LGPL-2.1-or-later"
+deps = ["openssl", "pcsclite", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static=no", "--enable-doc", "--enable-man"]
+tools = ["pkg-config"]
+deps = ["libxslt"]

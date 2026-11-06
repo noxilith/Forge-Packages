@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'minizip'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "minizip"
+version = "1.3"
+archive = "https://www.zlib.net/fossils/zlib-1.3.tar.gz"
+sha256 = "ff0ba4c292013dbc27530b3a81e1f9a813cd39de01ca5e0f8bf355702efa593e"
+strip_components = 1
+description = "Zip file manipulation library"
+homepage = "https://www.winimage.com/zLibDll/minizip.html"
+license = "Zlib"
+deps = ["zlib"]
+patches = ["patches/CVE-2023-45853.patch"]
+
+[build]
+system = "autotools"
+subdir = "contrib/minizip"

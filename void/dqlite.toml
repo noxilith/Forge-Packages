@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dqlite'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "dqlite"
+version = "1.15.1"
+archive = "https://github.com/canonical/dqlite/archive/v1.15.1.tar.gz"
+sha256 = "f5bb8bf2de732fe188bfcbb09c3c4fd02707d267734043dbb27d1215da68af4e"
+strip_components = 1
+description = "Distributed SQLite database using the Raft algorithm"
+homepage = "https://github.com/canonical/dqlite"
+license = "LGPL-3.0-only, LGPL-3.0-linking-exception"
+deps = ["raft"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

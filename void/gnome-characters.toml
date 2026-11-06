@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-characters'. Review before relying on it.
+# settings not translated: build_helper, lib32disabled
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-characters"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gnome-characters/48/gnome-characters-48.0.tar.xz"
+sha256 = "a2c32ca54d911db2404420350d3442e691a2dce8b0f5d00899f66cff8c3c8d71"
+strip_components = 1
+description = "Utility to find and insert unusual characters for GNOME"
+homepage = "https://wiki.gnome.org/Design/Apps/CharacterMap"
+license = "GPL-2.0-or-later"
+deps = ["gjs", "glib", "gnome-desktop", "gtk4", "libadwaita", "libunistring"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk+3"]

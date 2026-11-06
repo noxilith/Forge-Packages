@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kdav'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kdav"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kdav-6.30.0.tar.xz"
+sha256 = "08d95cf546c941dbe21a76fbc8b88a466f276ab29e866600994f4f60d604c7f4"
+strip_components = 1
+description = "DAV protocol implementation with KJobs"
+homepage = "https://invent.kde.org/frameworks/kdav"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-ki18n", "kf6-kio", "qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig"]

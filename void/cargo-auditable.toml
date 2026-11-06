@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cargo-auditable'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cargo-auditable"
+version = "0.7.7"
+archive = "https://github.com/rust-secure-code/cargo-auditable/archive/refs/tags/v0.7.7.tar.gz"
+sha256 = "cab2a4b65cfde0734c98416740d24d4e3f03441ea8a0b385f0431e35244a05aa"
+strip_components = 1
+description = "Tool for embedding dependency information in rust binaries"
+homepage = "https://github.com/rust-secure-code/cargo-auditable"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "cargo"
+subdir = "cargo-auditable"
+deps = ["cargo-auditable-bootstrap"]

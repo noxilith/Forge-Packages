@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xapian-omega'. Review before relying on it.
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "xapian-omega"
+version = "1.4.7"
+archive = "https://oligarchy.co.uk/xapian/1.4.7/xapian-omega-1.4.7.tar.xz"
+sha256 = "d1b029c62cd4e3c6216515e22c72c9d45018135cd4f50ce336b21b2046045323"
+strip_components = 1
+description = "Document indexer based on Xapian"
+homepage = "https://xapian.org/"
+license = "GPL-2.0-or-later"
+deps = ["file", "pcre", "xapian-core", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["perl"]

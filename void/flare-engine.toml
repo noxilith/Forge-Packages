@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'flare-engine'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: SDL2_image, hicolor-icon-theme
+[package]
+name = "flare-engine"
+version = "1.14"
+archive = "https://github.com/flareteam/flare-engine/archive/refs/tags/v1.14.tar.gz"
+sha256 = "2c1bafeaa5ac26c10449bfcb7151b06e8a22547aa7364d2a39bbcb135aa50a09"
+strip_components = 1
+description = "Free/libre action roleplaying engine (engine only)"
+homepage = "http://flarerpg.org/"
+license = "GPL-3.0-or-later"
+deps = ["SDL2_mixer", "SDL2_ttf", "desktop-file-utils"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDATADIR=share/flare"]

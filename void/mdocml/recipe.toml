@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mdocml'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_configure
+# settings not translated: make_build_args, CFLAGS, conf_files
+[package]
+name = "mdocml"
+version = "1.14.6"
+archive = "https://mandoc.bsd.lv/snapshots/mandoc-1.14.6.tar.gz"
+sha256 = "8bf0d570f01e70a6e124884088870cbed7537f36328d512909eb10cd53179d9c"
+strip_components = 1
+description = "UNIX manpage compiler toolset (mandoc)"
+homepage = "https://mandoc.bsd.lv"
+license = "ISC"
+deps = ["less", "zlib"]
+patches = ["patches/cgi-gz.patch", "patches/cgi-head.patch", "patches/cgi-trim.patch", "patches/cross.patch", "patches/fix-env-clobber.patch", "patches/stress-ng-hang.patch"]
+
+[build]
+system = "autotools"

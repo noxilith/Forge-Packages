@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'mash'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "mash"
+version = "0.2.0"
+archive = "https://github.com/clutter-project/mash/archive/refs/tags/0.2.0.tar.gz"
+sha256 = "a5f91f0828c3c63a845800443ab347417cb34882db3b6672b42f6d68355ddab8"
+strip_components = 1
+description = "Small library for using 3D models within a Clutter scene"
+homepage = "https://clutter-project.github.io/mash/"
+license = "LGPL-2.1-or-later"
+deps = ["clutter"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-gtk-doc"]
+tools = ["pkg-config"]
+deps = ["glib", "gtk-doc"]

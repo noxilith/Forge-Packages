@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-diskperf-plugin'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xfce4-diskperf-plugin"
+version = "2.8.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.8/xfce4-diskperf-plugin-2.8.0.tar.xz"
+sha256 = "3833920a3a4a81b3c676c4fab6dd178f4a222d66f316a0783a9149a0153b7fb6"
+strip_components = 1
+description = "Plugin for the Xfce4 panel displaying disk/partition performance"
+homepage = "https://docs.xfce.org/panel-plugins/xfce4-diskperf-plugin/start"
+license = "BSD-2-Clause"
+deps = ["xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

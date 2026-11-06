@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'baobab'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool
+[package]
+name = "baobab"
+version = "48.0"
+archive = "https://download.gnome.org/sources/baobab/48/baobab-48.0.tar.xz"
+sha256 = "54592504d49d807f23591be7e7eef10c6c9dfcb7ac527b81c3acd58787b26fda"
+strip_components = 1
+description = "Graphical directory tree analyzer for GNOME"
+homepage = "https://wiki.gnome.org/action/show/Apps/DiskUsageAnalyzer"
+license = "GPL-2.0-or-later, GFDL-1.1-or-later"
+deps = ["desktop-file-utils", "gsettings-desktop-schemas", "gtk4", "libadwaita", "vala"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3"]

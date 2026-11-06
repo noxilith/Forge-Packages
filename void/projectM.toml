@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'projectM'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: glew, jack, mesa, qt5
+[package]
+name = "projectM"
+version = "3.1.12"
+archive = "https://github.com/projectM-visualizer/projectm/releases/download/v3.1.12/projectM-3.1.12.tar.gz"
+sha256 = "b6b99dde5c8f0822ae362606a0429628ee478f4ec943a156723841b742954707"
+strip_components = 1
+description = "Music visualization"
+homepage = "https://github.com/projectM-visualizer/projectm"
+license = "LGPL-2.1-or-later"
+deps = ["SDL2", "alsa-lib", "ftgl", "glm", "glu", "gtkglext", "libXext", "libvisual", "pulseaudio"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-qt", "--enable-pulseaudio", "--enable-jack", "--enable-sdl"]
+tools = ["pkg-config"]
+deps = ["which"]

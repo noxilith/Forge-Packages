@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'docbook2mdoc'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: CFLAGS
+[package]
+name = "docbook2mdoc"
+version = "1.1.0"
+archive = "https://mandoc.bsd.lv/docbook2mdoc/snapshots/docbook2mdoc-1.1.0.tgz"
+sha256 = "9fc6411cf041ff10e76f19a50a142075a8df9d343f248e20d8fc98bf8e547c71"
+strip_components = 1
+description = "Converter from DocBook V4.x and v5.x XML into mdoc"
+homepage = "https://mandoc.bsd.lv/docbook2mdoc"
+license = "ISC"
+deps = ["libbsd", "libmd"]
+patches = ["patches/Makefile.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

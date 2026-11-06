@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'jgmenu'. Review before relying on it.
+[package]
+name = "jgmenu"
+version = "4.5.0"
+archive = "https://www.github.com/johanmalm/jgmenu/archive/v4.5.0.tar.gz"
+sha256 = "523d7f7a2225f4d2cc9772c44bcc661518d99ccc478bd0d099b0b157917304b1"
+strip_components = 1
+description = "Small X11 menu intended to be used with openbox and tint2"
+homepage = "https://www.github.com/johanmalm/jgmenu"
+license = "GPL-2.0-only"
+deps = ["desktop-file-utils", "libXrandr", "librsvg", "libxml2", "menu-cache", "pango"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-lx", "--with-pmenu"]
+tools = ["pkg-config"]

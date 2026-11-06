@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'higan'. Review before relying on it.
+# hooks not translated: pre_install
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: mesa, unzip
+[package]
+name = "higan"
+version = "110"
+archive = "https://github.com/higan-emu/higan/archive/refs/tags/v110.tar.gz"
+sha256 = "18457ac2608ab548983c3266ae38e6397d1801773969a796a672e2d9c56c69c5"
+strip_components = 1
+description = "Multi-system emulator (SNES/Game Boy/Mega Drive/PC Engine/WonderSwan)"
+homepage = "https://github.com/higan-emu/higan"
+license = "GPL-3.0-or-later, ISC"
+deps = ["SDL2", "alsa-lib", "gtk+", "gtksourceview2", "libXv", "libao", "libopenal", "pulseaudio"]
+patches = ["patches/higan-paths.patch", "patches/makefile-fixes.patch", "patches/makefile-root.patch", "patches/stdexcept.patch"]
+
+[build]
+system = "make"
+subdir = "higan"
+tools = ["pkg-config"]

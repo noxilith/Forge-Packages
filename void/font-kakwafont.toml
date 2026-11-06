@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-kakwafont'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "font-kakwafont"
+version = "0.1.1"
+archive = "https://github.com/kakwa/kakwafont/archive/0.1.1.tar.gz"
+sha256 = "73643ab99029641ff551d41bc83d9b7d8623a2dd49275b0183ef91a57b22426b"
+strip_components = 1
+description = "Another 12px monospace bitmap font"
+homepage = "https://github.com/kakwa/kakwafont"
+license = "OFL-1.1"
+deps = ["font-util"]
+
+[build]
+system = "make"
+deps = ["bdftopcf"]

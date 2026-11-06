@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libdbi-drivers'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: docbook, docbook-dsssl, sqlite
+[package]
+name = "libdbi-drivers"
+version = "0.9.0"
+archive = "https://downloads.sourceforge.net/sourceforge/libdbi-drivers/libdbi-drivers-0.9.0.tar.gz"
+sha256 = "43d2eacd573a4faff296fa925dd97fbf2aedbf1ae35c6263478210c61004c854"
+strip_components = 1
+description = "Database drivers for libdbi (MySQL, PostgreSQL, and SQLite)"
+homepage = "https://libdbi-drivers.sourceforge.net/"
+license = "LGPL-2.1-only"
+deps = ["libdbi", "mariadb", "postgresql18", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-mysql", "--with-pgsql", "--with-sqlite3"]
+deps = ["openjade"]

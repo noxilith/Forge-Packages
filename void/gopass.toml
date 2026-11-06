@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gopass'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "gopass"
+version = "1.16.1"
+archive = "https://github.com/gopasspw/gopass/archive/refs/tags/v1.16.1.tar.gz"
+sha256 = "33451a782b66266c59560a5ec7f4e34c104c501a36b445fc574fad71e3b3d884"
+strip_components = 1
+description = "Slightly more awesome standard unix password manager for teams"
+homepage = "https://www.gopass.pw/"
+license = "MIT"
+deps = ["gnupg"]
+
+[build]
+system = "go"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'scheme-bytestructures'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "scheme-bytestructures"
+version = "2.0.2"
+archive = "https://github.com/TaylanUB/scheme-bytestructures/releases/download/v2.0.2/bytestructures-2.0.2.tar.gz"
+sha256 = "515029be70c0e4d57b0285c2bae6e52501f3dd38c834b1771a668eb3aafad11d"
+strip_components = 1
+description = "Structured access to bytevector contents"
+homepage = "https://github.com/TaylanUB/scheme-bytestructures"
+license = "GPL-3.0-or-later"
+deps = ["guile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

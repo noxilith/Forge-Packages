@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'telegram-desktop'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: boost, ffmpeg6, mesa, qt6-imageformats, qt6-qt5compat, qt6-shadertools, qt6-svg, rnnoise, tg_owt, ttf-opensans
+[package]
+name = "telegram-desktop"
+version = "7.0.4"
+archive = "https://github.com/telegramdesktop/tdesktop/releases/download/v7.0.4/tdesktop-7.0.4-full.tar.gz"
+sha256 = "9b805d85cc9d36b4a8e3cab78d8f4137fa82ec70d5c6dbfef4beb4f449e14eb9"
+strip_components = 1
+description = "Telegram Desktop messaging app"
+homepage = "https://desktop.telegram.org/"
+license = "GPL-3.0-or-later, OpenSSL"
+deps = ["ada", "alsa-lib", "fmt", "glib", "glibmm2.68", "gobject-introspection", "hunspell", "jemalloc", "kf6-kcoreaddons", "libdbusmenu-glib", "libdispatch", "libopenal", "libtd", "libva", "lz4", "minizip", "opus", "protobuf", "pulseaudio", "qt6-base", "qt6-declarative", "qt6-wayland", "range-v3", "rapidjson", "xcb-util-keysyms", "xxHash", "xz"]
+patches = ["patches/cve-2026-107181.patch", "patches/qt610.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DTDESKTOP_API_ID=209235", "-DTDESKTOP_API_HASH=169ee702e1df4b6e66d80311db36cc43", "-DDESKTOP_APP_DISABLE_CRASH_REPORTS=ON"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "wayland"]

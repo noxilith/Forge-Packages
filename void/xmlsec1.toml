@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xmlsec1'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: nss
+[package]
+name = "xmlsec1"
+version = "1.3.12"
+archive = "https://github.com/lsh123/xmlsec/releases/download/1.3.12/xmlsec1-1.3.12.tar.gz"
+sha256 = "24045199af12d93fe5fdbbbf7e386e823e4842071e9432e2b90ac108b889a923"
+strip_components = 1
+description = "XML Security Library is a C library based on LibXML2"
+homepage = "https://www.aleksey.com/xmlsec/"
+license = "MIT"
+deps = ["gnutls", "libgcrypt", "libxslt", "nspr"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cc65'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "cc65"
+version = "2.19"
+archive = "https://github.com/cc65/cc65/archive/V2.19.tar.gz"
+sha256 = "157b8051aed7f534e5093471e734e7a95e509c577324099c3c81324ed9d0de77"
+strip_components = 1
+description = "Freeware C compiler for 6502 based systems"
+homepage = "https://cc65.github.io/"
+license = "Zlib"
+
+[build]
+system = "make"

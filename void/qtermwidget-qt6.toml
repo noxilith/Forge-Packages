@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'qtermwidget-qt6'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "qtermwidget-qt6"
+version = "2.4.0"
+archive = "https://github.com/lxqt/qtermwidget/archive/2.4.0.tar.gz"
+sha256 = "4595bf4be80fbb197c97aae5d054e82067ca741ffe4351f376fb1df3adc9df8b"
+strip_components = 1
+description = "Terminal widget for QTerminal"
+homepage = "https://lxqt-project.org"
+license = "GPL-2.0-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["lxqt-build-tools"]

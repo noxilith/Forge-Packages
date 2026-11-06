@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'goimapnotify'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "goimapnotify"
+version = "2.5.8"
+archive = "https://gitlab.com/shackra/goimapnotify/-/archive/2.5.8/goimapnotify-2.5.8.tar.gz"
+sha256 = "616aae1f48fbe4e2afffd968e7c393d32075365a0a94aa7654ab7abe4b4ac1c6"
+strip_components = 1
+description = "Execute scripts on IMAP idle notifications (Go version)"
+homepage = "https://gitlab.com/shackra/goimapnotify"
+license = "GPL-3.0-only"
+
+[build]
+system = "go"

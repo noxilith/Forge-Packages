@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'wmbatteries'. Review before relying on it.
+[package]
+name = "wmbatteries"
+version = "0.1.6"
+archive = "https://github.com/tarjanm-movidius/wmbatteries/archive/0.1.6.tar.gz"
+sha256 = "4f58646a9922dbee03789044ad41832f86a0d8a5f5dbcc3e9cd78a0a0c556c31"
+strip_components = 1
+description = "Dockapp based on wmacpiload, monitors up to 2 battery capacities"
+homepage = "https://github.com/tarjanm-movidius/wmbatteries"
+license = "GPL-2.0-or-later"
+deps = ["libXext", "libXpm"]
+
+[build]
+system = "autotools"

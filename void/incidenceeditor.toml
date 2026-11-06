@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'incidenceeditor'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "incidenceeditor"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/incidenceeditor-26.08.1.tar.xz"
+sha256 = "b638e343d4293164ac8bd290a64fc199542488c417c4acd1d2c10ee198d5cd7f"
+strip_components = 1
+description = "KDE PIM incidence editor"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later"
+deps = ["calendarsupport", "eventviews", "kdiagram6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

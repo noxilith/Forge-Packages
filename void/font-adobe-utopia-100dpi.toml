@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-adobe-utopia-100dpi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-adobe-utopia-100dpi"
+version = "1.0.5"
+archive = "https://www.x.org/releases/individual/font/font-adobe-utopia-100dpi-1.0.5.tar.gz"
+sha256 = "1a67e926dc13e46181ad6106dc0cdc4d1767500865444709dc28e9262a640f4f"
+strip_components = 1
+description = "100dpi Adobe Utopia PCF fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

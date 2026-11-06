@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'jimtcl'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install, pre_configure
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "jimtcl"
+version = "0.82"
+archive = "https://github.com/msteveb/jimtcl/archive/0.82.tar.gz"
+sha256 = "e8af929b815e4d30e54ff116b2b933e56c00a02b9110529d1a58660b2469aea7"
+strip_components = 1
+description = "Small footprint implementation of the Tcl programming language"
+homepage = "http://jim.tcl.tk/"
+license = "BSD"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--full", "--shared", "--with-ext=sqlite3"]

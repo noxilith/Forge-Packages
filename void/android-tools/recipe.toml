@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'android-tools'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "android-tools"
+version = "36.0.1"
+archive = "https://github.com/nmeum/android-tools/releases/download/36.0.1/android-tools-36.0.1.tar.xz"
+sha256 = "38e8a84b739480141de0836bf6d581b3339ac7d53d0f7ce8c044a3368c8c2f8f"
+strip_components = 1
+description = "Android platform tools (adb and fastboot)"
+homepage = "https://developer.android.com/tools/help/adb.html"
+license = "Apache-2.0, ISC, GPL-2.0-only, MIT"
+deps = ["abseil-cpp", "brotli", "fmt", "gtest", "libusb", "lz4", "pcre2", "protobuf", "zlib"]
+patches = ["patches/fix-build-ppc.patch", "patches/link-absl.patch", "patches/musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["samurai"]

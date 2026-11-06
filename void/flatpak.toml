@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'flatpak'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xml, docbook-xsl, python3-parsing
+[package]
+name = "flatpak"
+version = "1.18.4"
+archive = "https://github.com/flatpak/flatpak/releases/download/1.18.4/flatpak-1.18.4.tar.xz"
+sha256 = "b899a7a00c48d2c626cb8ec33fe556720b376c25805d7222430c0fdca4c6ac8d"
+strip_components = 1
+description = "Application sandboxing and distribution framework"
+homepage = "https://flatpak.org/"
+license = "LGPL-2.1-or-later"
+deps = ["AppStream", "bubblewrap", "curl", "dconf", "fuse3", "gdk-pixbuf", "gnupg", "gpgme", "json-glib", "libarchive", "libcap", "libseccomp", "libxml2", "ostree", "polkit", "xdg-dbus-proxy"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystem_bubblewrap=bwrap", "-Dsystem_dbus_proxy=xdg-dbus-proxy", "-Dsystem_helper_user=_flatpak", "-Dselinux_module=disabled", "-Dgdm_env_file=true"]
+tools = ["bison", "pkg-config"]
+deps = ["gettext", "glib", "libxslt", "xmlto"]

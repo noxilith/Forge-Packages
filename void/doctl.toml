@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'doctl'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "doctl"
+version = "1.166.0"
+archive = "https://github.com/digitalocean/doctl/archive/v1.166.0.tar.gz"
+sha256 = "6a8c7ea59105f6274be9efeda947c275cd64b0e1f9f3112c9b2d6385d7994007"
+strip_components = 1
+description = "Command line tool for DigitalOcean services"
+homepage = "https://github.com/digitalocean/doctl"
+license = "Apache-2.0"
+
+[build]
+system = "go"

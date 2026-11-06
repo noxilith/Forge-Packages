@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-sudoku'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: itstool, qqwing
+[package]
+name = "gnome-sudoku"
+version = "49.2"
+archive = "https://download.gnome.org/sources/gnome-sudoku/49/gnome-sudoku-49.2.tar.xz"
+sha256 = "ca670fac73d9e5c3e7833fda3556710b4220db6433e7bec50a710560da7db840"
+strip_components = 1
+description = "GNOME Sudoku Japanese logic game"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-sudoku/-/wikis/home"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "json-glib", "libadwaita", "libgee"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils", "gettext", "glib", "vala"]

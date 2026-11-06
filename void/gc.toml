@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "gc"
+version = "8.2.12"
+archive = "https://github.com/bdwgc/bdwgc/releases/download/v8.2.12/gc-8.2.12.tar.gz"
+sha256 = "42e5194ad06ab6ffb806c83eb99c03462b495d979cda782f3c72c08af833cd4e"
+strip_components = 1
+description = "Garbage collector for C and C++"
+homepage = "https://www.hboehm.info/gc/"
+license = "MIT"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static", "--with-libatomic-ops=none"]
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ocl-icd'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "ocl-icd"
+version = "2.3.5"
+archive = "https://github.com/OCL-dev/ocl-icd/archive/v2.3.5.tar.gz"
+sha256 = "cdd7984425fa92d37273eee4180b5f57b047eda6dd8fd623e58498f844b09b75"
+strip_components = 1
+description = "Generic OpenCL ICD loader/demultiplexer"
+homepage = "https://github.com/OCL-dev/ocl-icd"
+license = "BSD-2-Clause"
+deps = ["OpenCL-Headers"]
+
+[build]
+system = "autotools"
+deps = ["ruby", "xmlto"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lsd'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: pandoc
+[package]
+name = "lsd"
+version = "1.2.0"
+archive = "https://github.com/lsd-rs/lsd/archive/refs/tags/v1.2.0.tar.gz"
+sha256 = "dae8d43087686a4a1de0584922608e9cbab00727d0f72e4aa487860a9cbfeefa"
+strip_components = 1
+description = "Next gen ls command with lots of pretty colors and awesome icons"
+homepage = "https://github.com/lsd-rs/lsd"
+license = "Apache-2.0"
+deps = ["libgit2-1.9"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

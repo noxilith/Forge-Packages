@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'diff-pdf'. Review before relying on it.
+# settings not translated: CXXFLAGS
+[package]
+name = "diff-pdf"
+version = "0.5.3"
+archive = "https://github.com/vslavik/diff-pdf/releases/download/v0.5.3/diff-pdf-0.5.3.tar.gz"
+sha256 = "dc4004fe1199eebf381b5e0f2a60b6b59ff73434730e4f0aae1e0d02fa171b98"
+strip_components = 1
+description = "Simple tool for visually comparing two PDF files"
+homepage = "https://vslavik.github.io/diff-pdf/"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "poppler", "wxWidgets-gtk3"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-wx-config=wx-config-gtk3"]
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libpurple-telegram'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebp
+[package]
+name = "libpurple-telegram"
+version = "1.4.3"
+archive = "https://github.com/majn/telegram-purple/releases/download/v1.4.3/telegram-purple_1.4.3.orig.tar.gz"
+sha256 = "a8d91a0951453487315072b6ad0728ea846e4a75e40bbbc02047ad46cd000698"
+strip_components = 1
+description = "Telegram plugin for libpurple"
+homepage = "https://github.com/majn/telegram-purple"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libgcrypt", "libpng", "pidgin"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "which"]

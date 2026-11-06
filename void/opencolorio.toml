@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'opencolorio'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: glew, python3-packaging-bootstrap, python3-pybind11
+[package]
+name = "opencolorio"
+version = "2.5.0"
+archive = "https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/v2.5.0.tar.gz"
+sha256 = "124e2bfa8a9071959d6ddbb64ffbf78d3f6fe3c923ae23e96a6bbadde1af55b6"
+strip_components = 1
+description = "Complete color management solution"
+homepage = "https://opencolorio.org"
+license = "custom:openimageio"
+deps = ["expat", "imath", "lcms2", "libfreeglut", "minizip-ng", "openexr", "pystring", "yaml-cpp"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_CONFIGURATION_TYPES=None", "-DOCIO_INSTALL_EXT_PACKAGES=NONE", "-DOCIO_BUILD_TESTS=OFF", "-DOCIO_BUILD_GPU_TESTS=OFF"]
+tools = ["pkg-config"]

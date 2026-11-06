@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'tofi'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: harfbuzz
+[package]
+name = "tofi"
+version = "0.9.1"
+archive = "https://github.com/philj56/tofi/archive/refs/tags/v0.9.1.tar.gz"
+sha256 = "dd55347b509af786f133def64f3a86f1db258b5e196de80e53d62827bdcc37bc"
+strip_components = 1
+description = "Tiny dynamic menu for wayland"
+homepage = "https://github.com/philj56/tofi"
+license = "MIT"
+deps = ["cairo", "freetype", "libxkbcommon", "pango", "wayland"]
+patches = ["patches/fix-32bit-tests.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc", "wayland-protocols"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gtkwave'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: tk
+[package]
+name = "gtkwave"
+version = "3.3.121"
+archive = "https://gtkwave.sourceforge.net/gtkwave-gtk3-3.3.121.tar.gz"
+sha256 = "54aa45788d6d52afb659c3aef335aafde0ef2c8990a7770f8eaa64e57f227346"
+strip_components = 1
+description = "Fully featured GTK+ based wave viewer"
+homepage = "https://gtkwave.sourceforge.net/"
+license = "GPL-2.0-or-later, MIT"
+deps = ["gtk+3"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gtk3"]
+tools = ["gperf", "pkg-config"]

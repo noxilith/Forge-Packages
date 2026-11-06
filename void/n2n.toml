@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'n2n'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "n2n"
+version = "3.0"
+archive = "https://github.com/ntop/n2n/archive/refs/tags/3.0.tar.gz"
+sha256 = "25fcabba7bfcf25f4c9cd7fecc7ce11de48beb0b0f3506053d8485604ea8f50d"
+strip_components = 1
+description = "Light VPN software"
+homepage = "https://github.com/ntop/n2n"
+license = "GPL-3.0-only"
+
+[build]
+system = "autotools"
+configure_args = ["CFLAGS=-O3"]
+tools = ["pkg-config"]

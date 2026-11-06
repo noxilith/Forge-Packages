@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'raft'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "raft"
+version = "0.22.1"
+archive = "https://github.com/cowsql/raft/archive/v0.22.1.tar.gz"
+sha256 = "385f91a0b542ebe8b81c8f8500310dcd575fd028ea0cd2ede8807fa920dcf604"
+strip_components = 1
+description = "C implementation of the Raft consensus protocol"
+homepage = "https://raft.readthedocs.io"
+license = "custom:LGPL-3.0-only-linking-exception"
+deps = ["libuv", "lz4"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-example=no"]
+tools = ["pkg-config"]

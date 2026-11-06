@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fyi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "fyi"
+version = "1.0.4"
+archive = "https://codeberg.org/dnkl/fyi/archive/1.0.4.tar.gz"
+sha256 = "584fc3966a21949dbcc655d8693497384dade382d332be1cf92eae958336a145"
+strip_components = 1
+description = "Command line utility to send desktop notifications"
+homepage = "https://codeberg.org/dnkl/fyi"
+license = "MIT"
+deps = ["dbus"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

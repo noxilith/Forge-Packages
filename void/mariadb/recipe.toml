@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'mariadb'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, CFLAGS, CXXFLAGS, make_dirs, lib32disabled
+# needs, but Forge has no recipe for yet: boost, libaio, ncurses, perl
+[package]
+name = "mariadb"
+version = "12.3.2"
+archive = "https://archive.mariadb.org/mariadb-12.3.2/source/mariadb-12.3.2.tar.gz"
+sha256 = "82798714baf2f3456ed2f311fc803dc120f2bf3b82358e773847d628cdb4b670"
+strip_components = 1
+description = "Fast SQL database server, drop-in replacement for MySQL"
+homepage = "https://mariadb.com"
+license = "GPL-2.0-only"
+deps = ["fmt", "gnutls", "liburing", "libxml2", "pam", "pcre2", "zlib"]
+patches = ["patches/fix-gcc13.patch", "patches/fix-install-layout.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=RelWithDebInfo", "-DCOMPILATION_COMMENT=Void Linux", "-DINSTALL_SCRIPTDIR=bin", "-DINSTALL_INCLUDEDIR=include/mysql", "-DINSTALL_PLUGINDIR=lib/mysql/plugin", "-DINSTALL_INFODIR=share/info", "-DINSTALL_SUPPORTFILESDIR=share/mysql", "-DINSTALL_MYSQLSHAREDIR=share/mysql", "-DINSTALL_DOCREADMEDIR=share/doc/mysql", "-DINSTALL_DOCDIR=share/doc/mysql", "-DINSTALL_MANDIR=share/man", "-DDEFAULT_CHARSET=utf8mb4", "-DDEFAULT_COLLATION=utf8mb4_unicode_ci", "-DENABLED_LOCAL_INFILE=OFF", "-DWITH_EMBEDDED_SERVER=ON", "-DWITH_EXTRA_CHARSETS=complex", "-DWITH_LIBWRAP=OFF", "-DWITH_PCRE=system", "-DWITH_READLINE=ON", "-DWITH_SSL=system", "-DWITH_SYSTEMD=no", "-DWITH_ZLIB=system", "-DWITH_READLINE=ON", "-DWITH_SYSTEMD=no"]
+tools = ["bison", "flex", "perl", "pkg-config"]

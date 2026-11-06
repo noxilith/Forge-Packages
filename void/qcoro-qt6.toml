@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qcoro-qt6'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-tools, qt6-websockets
+[package]
+name = "qcoro-qt6"
+version = "0.12.0"
+archive = "https://github.com/danvratil/qcoro/archive/refs/tags/v0.12.0.tar.gz"
+sha256 = "809afafab61593f994c005ca6e242300e1e3e7f4db8b5d41f8c642aab9450fbc"
+strip_components = 1
+description = "C++ Coroutines for Qt6"
+homepage = "https://qcoro.dvratil.cz/"
+license = "MIT"
+deps = ["qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_QT_VERSION=6", "-DBUILD_SHARED_LIBS=ON"]

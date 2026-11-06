@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'htmlcxx'. Review before relying on it.
+[package]
+name = "htmlcxx"
+version = "0.87"
+archive = "https://downloads.sourceforge.net/sourceforge/htmlcxx/0.87/htmlcxx-0.87.tar.gz"
+sha256 = "5d38f938cf4df9a298a5346af27195fffabfef9f460fc2a02233cbcfa8fc75c8"
+strip_components = 1
+description = "Simple non-validating CSS1 and HTML parser for C++"
+homepage = "http://htmlcxx.sourceforge.net/"
+license = "LGPL-2.0-or-later"
+
+[build]
+system = "autotools"

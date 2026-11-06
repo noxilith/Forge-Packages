@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'less'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "less"
+version = "710"
+archive = "https://www.greenwoodsoftware.com/less/less-710.tar.gz"
+sha256 = "d1008fb78dcae1323ddab664bcb352a61f022b1b131bd8018548e021d975ec7a"
+strip_components = 1
+description = "Pager program similar to more(1)"
+homepage = "https://www.greenwoodsoftware.com/less"
+license = "GPL-3.0-or-later"
+deps = ["pcre2"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-regex=pcre2"]

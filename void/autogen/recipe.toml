@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'autogen'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "autogen"
+version = "5.18.16"
+archive = "https://ftp.gnu.org/gnu/autogen/rel5.18.16/autogen-5.18.16.tar.gz"
+sha256 = "e23c5bbd0ac83079ae2ef6eb3fd1948fecce718ac853025607a3ab0395538406"
+strip_components = 1
+description = "Automated Program Generator"
+homepage = "https://autogen.sourceforge.net/"
+license = "GPL-3.0-or-later"
+deps = ["gc", "guile", "libatomic_ops", "libxml2"]
+patches = ["patches/autogen-5.18.16-rpath.patch", "patches/autogen-guile-3.0.patch", "patches/build-aux.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-dependency-tracking", "--without-libregex", "ag_cv_run_strcspn=false"]
+tools = ["perl", "pkg-config"]
+deps = ["tar", "which"]

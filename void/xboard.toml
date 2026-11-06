@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'xboard'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "xboard"
+version = "4.9.1"
+archive = "https://ftp.gnu.org/gnu/xboard/xboard-4.9.1.tar.gz"
+sha256 = "2b2e53e8428ad9b6e8dc8a55b3a5183381911a4dae2c0072fa96296bbb1970d6"
+strip_components = 1
+description = "X graphical user interface for chess"
+homepage = "http://www.gnu.org/software/xboard/"
+license = "GPL-3.0-or-later"
+deps = ["alsa-utils", "cairo", "desktop-file-utils", "gnuchess", "gtk+", "librsvg", "shared-mime-info"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-gtk", "--enable-zippy"]
+tools = ["perl", "pkg-config"]
+deps = ["texinfo"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fcft'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "fcft"
+version = "3.3.3"
+archive = "https://codeberg.org/dnkl/fcft/archive/3.3.3.tar.gz"
+sha256 = "b0c0f4a599f43723736c8565b8b84337c4195077f07f1bb8bb3252bb13a2306a"
+strip_components = 1
+description = "Simple library for font loading and glyph rasterization"
+homepage = "https://codeberg.org/dnkl/fcft"
+license = "MIT"
+deps = ["fontconfig", "freetype", "pixman", "tllist"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddocs=enabled"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

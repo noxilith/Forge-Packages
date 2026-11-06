@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'vpnc'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: make_build_args, conf_files
+# needs, but Forge has no recipe for yet: net-tools, vpnc-scripts
+[package]
+name = "vpnc"
+version = "0.5.3"
+archive = "https://github.com/streambinder/vpnc/archive/43780cecd7a61668002f73b6f8b9f9ba61af74ad.tar.gz"
+sha256 = "190493d792c8d5b2f7ba6a621fa14daf5602b2dcfcf31c202255fd08b1a943a4"
+strip_components = 1
+description = "Client for cisco vpn concentrator"
+homepage = "https://www.unix-ag.uni-kl.de/~massar/vpnc/"
+license = "GPL-2.0-or-later"
+deps = ["libgcrypt", "openssl"]
+
+[build]
+system = "make"
+tools = ["perl"]

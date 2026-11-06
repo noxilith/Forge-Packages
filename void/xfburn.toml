@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfburn'. Review before relying on it.
+# needs, but Forge has no recipe for yet: docbook-xsl, hicolor-icon-theme, libburn
+[package]
+name = "xfburn"
+version = "0.8.0"
+archive = "https://archive.xfce.org/src/apps/xfburn/0.8/xfburn-0.8.0.tar.bz2"
+sha256 = "13a301aebcef27de18f63f8ca10b43bc42f9c1b9865dff1bfb3e97cfd95dd989"
+strip_components = 1
+description = "CD-burner application for the Xfce Desktop Environment"
+homepage = "https://docs.xfce.org/apps/xfburn/start"
+license = "GPL-2.0-only"
+deps = ["desktop-file-utils", "exo", "glib", "gst-plugins-base1", "libgudev", "libisofs", "libxfce4ui", "libxfce4util"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "libxslt"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rust-audit-info'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rust-audit-info"
+version = "0.5.4"
+archive = "https://github.com/rust-secure-code/cargo-auditable/archive/refs/tags/rust-audit-info/v0.5.4.tar.gz"
+sha256 = "d9d53352b5f2dc34a93b1ae6408cdd50085f40e24d832af6938e0c3b7c906ff5"
+strip_components = 1
+description = "CLI tool for extracting cargo-auditable dependency trees"
+homepage = "https://github.com/rust-secure-code/cargo-auditable"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "cargo"
+subdir = "rust-audit-info"

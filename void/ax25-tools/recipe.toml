@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ax25-tools'. Review before relying on it.
+[package]
+name = "ax25-tools"
+version = "0.0.10rc5"
+archive = "https://linux-ax25.in-berlin.de/pub/ax25-tools/ax25-tools-0.0.10-rc5.tar.gz"
+sha256 = "92a9cb8b58a86dcb9f55630fc54c9a46c58a20fc93bed524b8c111190b36aa06"
+strip_components = 1
+description = "Basic AX.25 (Amateur Radio/hamradio) administrative tools and daemons"
+homepage = "https://linux-ax25.in-berlin.de/wiki/Main_Page"
+license = "GPL-2.0-or-later"
+deps = ["libax25", "zlib"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"

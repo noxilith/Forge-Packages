@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mp3splt'. Review before relying on it.
+[package]
+name = "mp3splt"
+version = "2.6.2"
+archive = "https://downloads.sourceforge.net/sourceforge/mp3splt/mp3splt-2.6.2.tar.gz"
+sha256 = "3ec32b10ddd8bb11af987b8cd1c76382c48d265d0ffda53041d9aceb1f103baa"
+strip_components = 1
+description = "Commandline tool for splitting mp3 and ogg files without decoding"
+homepage = "http://mp3splt.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["libmp3splt"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-oggsplt_symlink", "--enable-flacsplt_symlink"]
+tools = ["pkg-config"]

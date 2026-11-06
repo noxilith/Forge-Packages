@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-weather'. Review before relying on it.
+# settings not translated: build_helper, lib32disabled
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-weather"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gnome-weather/48/gnome-weather-48.0.tar.xz"
+sha256 = "4c0569b3d815ae2f9416d47134cbd3056340640ff186d31a94c865813b4bdbb5"
+strip_components = 1
+description = "Access current weather conditions and forecasts for GNOME"
+homepage = "https://wiki.gnome.org/Apps/Weather"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "geoclue2", "gjs", "gnome-desktop", "gtk4", "libadwaita", "libgweather"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

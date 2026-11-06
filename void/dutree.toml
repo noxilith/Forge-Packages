@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'dutree'. Review before relying on it.
+[package]
+name = "dutree"
+version = "0.2.18"
+archive = "https://github.com/nachoparker/dutree/archive/v0.2.18.tar.gz"
+sha256 = "55c30e57cc339dd16141510af33245cc3b82f588f22419fc034f02b36ebecba0"
+strip_components = 1
+description = "Tool to analyze file system usage written in Rust"
+homepage = "https://github.com/nachoparker/dutree"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

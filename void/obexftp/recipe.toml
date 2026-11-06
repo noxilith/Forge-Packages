@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'obexftp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "obexftp"
+version = "0.24.2"
+archive = "https://downloads.sourceforge.net/sourceforge/openobex/obexftp-0.24.2-Source.tar.gz"
+sha256 = "d40fb48e0a0eea997b3e582774b29f793919a625d54b87182e31a3f3d1c989a3"
+strip_components = 1
+description = "OBEX transfer utilities"
+homepage = "http://dev.zuckschwerdt.org/openobex/wiki/ObexFtp"
+license = "GPL-2.0-only"
+deps = ["bluez", "expat", "fuse", "openobex"]
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

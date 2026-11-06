@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'fwupd'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: build_helper, conf_files
+# needs, but Forge has no recipe for yet: dejavu-fonts-ttf, gi-docgen, pciutils, python3-Pillow, sqlite
+[package]
+name = "fwupd"
+version = "2.1.7"
+archive = "https://github.com/fwupd/fwupd/archive/2.1.7.tar.gz"
+sha256 = "338ea5b139f9a37447ff2215d0a8d2cf23851fb5a39fba7b1b0ded52a40240cc"
+strip_components = 1
+description = "Daemon to allow session software to update firmware"
+homepage = "https://github.com/fwupd/fwupd"
+license = "LGPL-2.1-or-later"
+deps = ["cairo", "colord", "curl", "dbus", "elogind", "flashrom", "gcab", "gnutls", "gpgme", "json-glib", "libarchive", "libjcat", "libxmlb", "pango", "polkit", "protobuf-c", "tpm2-tss", "udisks2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsupported_build=enabled", "-Dsystemd=disabled", "-Dintrospection=enabled", "-Defi_binary=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "python3-gobject", "vala"]

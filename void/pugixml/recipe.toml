@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pugixml'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "pugixml"
+version = "1.14"
+archive = "https://github.com/zeux/pugixml/releases/download/v1.14/pugixml-1.14.tar.gz"
+sha256 = "2f10e276870c64b1db6809050a75e11a897a8d7456c4be5c6b2e35a11168a015"
+strip_components = 1
+description = "Light-weight, simple and fast XML parser for C++ with XPath support"
+homepage = "https://pugixml.org/"
+license = "MIT"
+patches = ["patches/patch-src_pugiconfig.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=On"]

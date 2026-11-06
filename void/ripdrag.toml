@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ripdrag'. Review before relying on it.
+[package]
+name = "ripdrag"
+version = "0.4.12"
+archive = "https://github.com/nik012003/ripdrag/archive/refs/tags/v0.4.12.tar.gz"
+sha256 = "ffa685c42e84558cc47d8bd5713f8a68f8cd8e313be55a111a0bc43bf1e220de"
+strip_components = 1
+description = "Drag and Drop utilty written in Rust and GTK4"
+homepage = "https://github.com/nik012003/ripdrag"
+license = "GPL-3.0-or-later"
+deps = ["gdk-pixbuf", "glib", "graphene", "gtk4", "pango"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

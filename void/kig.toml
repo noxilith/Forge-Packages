@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kig'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: boost, qt6-svg
+[package]
+name = "kig"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kig-26.08.1.tar.xz"
+sha256 = "dd3978b04e0a1e35ec40f676052d9ba485830e669fde62bedaa8b1b82a6e5a1f"
+strip_components = 1
+description = "KDE education tool for interactive geometry"
+homepage = "https://www.kde.org/applications/education/kig/"
+license = "GPL-2.0-only"
+deps = ["kf6-karchive", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kparts", "kf6-ktexteditor", "kf6-kxmlgui", "libimobiledevice", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

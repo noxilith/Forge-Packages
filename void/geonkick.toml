@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'geonkick'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "geonkick"
+version = "2.9.1"
+archive = "https://github.com/free-sm/geonkick/archive/refs/tags/v2.9.1.tar.gz"
+sha256 = "30ee2a36a26cabb9af8f458bb12d7b0358b4d6abec67ab5f8df696390b5699b4"
+strip_components = 1
+description = "Free software percussion synthesizer"
+homepage = "https://github.com/free-sm/geonkick"
+license = "GPL-3.0-or-later"
+deps = ["cairo", "libX11", "libsndfile", "lv2", "rapidjson"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["tar", "xz"]

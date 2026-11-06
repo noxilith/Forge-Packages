@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'LimeSuite'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: doxygen, glew, gnuplot, sqlite
+[package]
+name = "LimeSuite"
+version = "23.11.0"
+archive = "https://github.com/myriadrf/LimeSuite/archive/refs/tags/v23.11.0.tar.gz"
+sha256 = "fd8a448b92bc5ee4012f0ba58785f3c7e0a4d342b24e26275318802dfe00eb33"
+strip_components = 1
+description = "Driver and GUI for LimeSDR/LMS7002M-based SDR platforms"
+homepage = "https://myriadrf.org/projects/lime-suite/"
+license = "Apache-2.0"
+deps = ["SoapySDR", "fltk", "libfreeglut", "libusb", "wget", "wxWidgets-gtk3"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_SIMD_FLAGS=none", "-DENABLE_UTILITIES=True", "-DENABLE_LIME_UTIL=True", "-DCMAKE_SKIP_RPATH=True", "-DENABLE_DESKTOP=False", "-DENABLE_SOAPY_LMS7=True", "-DENABLE_PCIE_XILLYBUS=True", "-DENABLE_QUICKTEST=True", "-DENABLE_MCU_TESTBENCH=True", "-DENABLE_FTDI=True", "-DENABLE_FX3=True", "-DENABLE_STREAM_UNITE=True", "-DENABLE_EXAMPLES=True", "-DENABLE_HEADERS=True", "-DENABLE_GUI=True", "-DENABLE_API_DOXYGEN=True", "-DLIME_SUITE_EXTVER=23.11.0_3"]

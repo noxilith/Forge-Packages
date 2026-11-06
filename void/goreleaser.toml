@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'goreleaser'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, build_helper
+[package]
+name = "goreleaser"
+version = "2.18.2"
+archive = "https://github.com/goreleaser/goreleaser/archive/refs/tags/v2.18.2.tar.gz"
+sha256 = "aec0dee0c28739166cee8b81ef6f970cd90c02cf51687481a0c2ccc168f247f1"
+strip_components = 1
+description = "Deliver Go binaries as fast and easily as possible"
+homepage = "https://goreleaser.com/"
+license = "MIT"
+
+[build]
+system = "go"

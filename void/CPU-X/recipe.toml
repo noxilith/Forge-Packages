@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'CPU-X'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libstatgrab, ncurses, pciutils
+[package]
+name = "CPU-X"
+version = "5.1.0"
+archive = "https://github.com/thetumultuousunicornofdarkness/CPU-X/archive/v5.1.0.tar.gz"
+sha256 = "a99f963dd9cb982966fdfce9e9a9b569f852c1bfffb51e7b9f154abc8c0d40c5"
+strip_components = 1
+description = "Free software that gathers information on CPU, motherboard and more"
+homepage = "https://thetumultuousunicornofdarkness.github.io/CPU-X/"
+license = "GPL-3.0-or-later"
+deps = ["glfw", "gtkmm", "libcpuid", "ocl-icd", "procps-ng", "vulkan-loader"]
+patches = ["patches/disable_tests.patch", "patches/fix-no-pie-check.patch", "patches/fix_musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["nasm", "pkg-config"]
+deps = ["gettext"]

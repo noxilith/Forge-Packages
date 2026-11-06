@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'lightdm-webkit2-greeter'. Review before relying on it.
+# hooks not translated: post_extract, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: dbus-glib, libwebkit2gtk41, void-artwork
+[package]
+name = "lightdm-webkit2-greeter"
+version = "2.2.5"
+archive = "https://github.com/Antergos/web-greeter/archive/2.2.5.tar.gz"
+sha256 = "f3223db35d0efaae76b2157f312dd10979c133f5a85add8fc75fd66ecb3186e3"
+strip_components = 1
+description = "Light Display Manager Webkit2 Greeter"
+homepage = "https://github.com/Antergos/web-greeter"
+license = "GPL-3.0-or-later"
+deps = ["accountsservice", "gnome-backgrounds", "libxklavier", "lightdm"]
+patches = ["patches/01-conf.patch", "patches/02-musl.patch", "patches/03-void.patch", "patches/04-do-not-print-any-non-critical-errors-as-erros.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zfs-auto-snapshot'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: conf_files
+[package]
+name = "zfs-auto-snapshot"
+version = "1.2.4"
+archive = "https://github.com/zfsonlinux/zfs-auto-snapshot/archive/upstream/1.2.4.tar.gz"
+sha256 = "307f71f748cacf5149532891dc3174365a4494337d9cfc8e619d9038080f3e9b"
+strip_components = 1
+description = "ZFS automatic snapshot service"
+homepage = "https://github.com/zfsonlinux/zfs-auto-snapshot"
+license = "GPL-2.0-or-later"
+deps = ["zfs"]
+
+[build]
+system = "make"

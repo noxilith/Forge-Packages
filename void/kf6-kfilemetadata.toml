@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kfilemetadata'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, kf6-base, qt6-tools
+[package]
+name = "kf6-kfilemetadata"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kfilemetadata-6.30.0.tar.xz"
+sha256 = "5e14cd8e395e927042cb3eb7cff47e0effda5e8bf2520cf18d1082a9403b2e62"
+strip_components = 1
+description = "Library for extracting file metadata"
+homepage = "https://invent.kde.org/frameworks/kfilemetadata"
+license = "LGPL-2.1-or-later"
+deps = ["attr", "ebook-tools", "exiv2", "kf6-karchive", "kf6-kcodecs", "kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "libqmobipocket6", "poppler-qt5", "qt6-base", "taglib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libqmobipocket6'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-qt5compat
+[package]
+name = "libqmobipocket6"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kdegraphics-mobipocket-26.08.1.tar.xz"
+sha256 = "69ec5076b02332f23d96cfd7b560ae716726bfab2984ce0285e0a67c1270522a"
+strip_components = 1
+description = "Collection of plugins to handle mobipocket files"
+homepage = "https://projects.kde.org/projects/kde/kdegraphics-mobipocket"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

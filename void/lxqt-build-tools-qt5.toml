@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lxqt-build-tools-qt5'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "lxqt-build-tools-qt5"
+version = "0.13.0"
+archive = "https://github.com/lxqt/lxqt-build-tools/archive/0.13.0.tar.gz"
+sha256 = "7f45b7ed7f54ec1e119b005d5fccddd9fe8d9a231fb66c41c952f29a08d1f901"
+strip_components = 1
+description = "LXQt build tools"
+homepage = "https://lxqt-project.org"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

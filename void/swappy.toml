@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'swappy'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: font-awesome
+[package]
+name = "swappy"
+version = "1.8.0"
+archive = "https://github.com/jtheoof/swappy/archive/refs/tags/v1.8.0.tar.gz"
+sha256 = "11f5bedde6cce4db0d27eb7107d7ce46e20d021255450eeba2c2036e10570520"
+strip_components = 1
+description = "Wayland native snapshot editing tool, inspired by Snappy on macOS"
+homepage = "https://github.com/jtheoof/swappy"
+license = "MIT"
+deps = ["cairo", "glib", "gtk+3", "libnotify", "pango", "wl-clipboard"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "scdoc"]

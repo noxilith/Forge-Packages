@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'treefmt'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "treefmt"
+version = "2.4.0"
+archive = "https://github.com/numtide/treefmt/archive/refs/tags/v2.4.0.tar.gz"
+sha256 = "2b67a03045e8d31c6018d2149438d544c1c9dae7db44510cdd596030a13b38fd"
+strip_components = 1
+description = "Meta formatter to trigger all formatters needed for a project"
+homepage = "https://treefmt.com"
+license = "MIT"
+
+[build]
+system = "go"

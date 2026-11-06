@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qhull'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_target
+[package]
+name = "qhull"
+version = "2020.2"
+archive = "https://github.com/qhull/qhull/archive/2020.2.tar.gz"
+sha256 = "59356b229b768e6e2b09a701448bfa222c37b797a84f87f864f97462d8dbc7c5"
+strip_components = 1
+description = "Computes volumes, surface areas and approximations to the convex hull"
+homepage = "http://www.qhull.org"
+license = "Qhull"
+
+[build]
+system = "cmake"

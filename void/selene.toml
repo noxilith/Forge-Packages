@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'selene'. Review before relying on it.
+[package]
+name = "selene"
+version = "0.28.0"
+archive = "https://static.crates.io/crates/selene/selene-0.28.0.crate"
+sha256 = "45c23d9986ae64eedda1583ec07f25cdfa8509949ffc2737d4469cd1d8a67a5a"
+strip_components = 1
+description = "CLI tool designed to help write correct and idiomatic Lua code"
+homepage = "https://kampfkarren.github.io/selene/"
+license = "MPL-2.0"
+
+[build]
+system = "cargo"

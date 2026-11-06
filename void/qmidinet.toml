@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'qmidinet'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack, qt5
+[package]
+name = "qmidinet"
+version = "0.6.3"
+archive = "https://downloads.sourceforge.net/sourceforge/qmidinet/qmidinet-0.6.3.tar.gz"
+sha256 = "e1066d751cf27745ddc3075337be120c7d5527fea6fa40e102345d6f9cdd4b12"
+strip_components = 1
+description = "MIDI Network Gateway via UDP/IP Multicast"
+homepage = "https://qmidinet.sourceforge.io/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

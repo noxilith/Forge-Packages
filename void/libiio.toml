@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libiio'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: avahi, doxygen, libaio, python3-Sphinx, python3-setuptools, python3-sphinx_rtd_theme
+[package]
+name = "libiio"
+version = "0.26"
+archive = "https://github.com/analogdevicesinc/libiio/archive/v0.26.tar.gz"
+sha256 = "fb445fb860ef1248759f45d4273a4eff360534480ec87af64c6b8db3b99be7e5"
+strip_components = 1
+description = "Library for interfacing with local and remote Linux IIO devices"
+homepage = "https://analogdevicesinc.github.io/libiio"
+license = "LGPL-2.1-or-later"
+deps = ["libserialport", "libusb", "libxml2"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_DOC=YES", "-DWITH_SERIAL_BACKEND=YES", "-DHAVE_DNS_SD=YES", "-DPYTHON_BINDINGS=YES"]
+tools = ["bison", "flex", "pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-color-manager'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libcanberra, shared-color-targets
+[package]
+name = "gnome-color-manager"
+version = "3.36.2"
+archive = "https://download.gnome.org/sources/gnome-color-manager/3.36/gnome-color-manager-3.36.2.tar.xz"
+sha256 = "3904d42abb4ea566df0b880e82bf0b9f86386c692f15b318469a4c7be33a887f"
+strip_components = 1
+description = "Color profile manager for the GNOME desktop"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-color-manager"
+license = "GPL-2.0-or-later"
+deps = ["clutter-gtk", "colord", "desktop-file-utils", "gnome-desktop", "gtk+3", "libexif"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

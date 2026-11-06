@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libopenmpt'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "libopenmpt"
+version = "0.8.9"
+archive = "https://lib.openmpt.org/files/libopenmpt/src/libopenmpt-0.8.9+release.autotools.tar.gz"
+sha256 = "d7ce84fd05d686c4bcf66af40eae857afa371442db60eeda3f874bd6cf6fc318"
+strip_components = 1
+description = "Cross-platform C & C++ library to decode tracked music files (modules)"
+homepage = "https://lib.openmpt.org/libopenmpt/"
+license = "BSD-3-Clause"
+deps = ["flac", "libogg", "libsndfile", "libvorbis", "mpg123", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

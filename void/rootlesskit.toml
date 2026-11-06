@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rootlesskit'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "rootlesskit"
+version = "2.2.0"
+archive = "https://github.com/rootless-containers/rootlesskit/archive/v2.2.0.tar.gz"
+sha256 = "0075af5f14ea7ff5b1431ba30671d7c0e18e0e57453be58600293b283a9d8e2e"
+strip_components = 1
+description = 'Linux-native "fake root" for implementing rootless containers'
+homepage = "https://github.com/rootless-containers/rootlesskit"
+license = "Apache-2.0"
+
+[build]
+system = "go"

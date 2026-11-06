@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'containers-common'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "containers-common"
+version = "0.66.1"
+archive = "https://github.com/containers/container-libs/archive/refs/tags/common/v0.66.1.tar.gz"
+sha256 = "d008a3cc50d6f68fe84f139081c811384223665c273a520bee174f5b9f2f48af"
+strip_components = 1
+description = "Docs and configs shared by podman, buildah, and skopeo"
+homepage = "https://github.com/containers/container-libs"
+license = "Apache-2.0"
+
+[build]
+system = "make"
+subdir = "common"
+deps = ["go-md2man"]

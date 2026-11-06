@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'biosdisk'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: schilytools, syslinux
+[package]
+name = "biosdisk"
+version = "1.01"
+archive = "https://github.com/dell/biosdisk/archive/1.01.tar.gz"
+sha256 = "e89cf680914ab3d5bbb549c124c6c29594ef495880befc0d059ec8a3aaf1e3e7"
+strip_components = 1
+description = "Utility for creating Dell BIOS flash disks"
+homepage = "https://github.com/dell/biosdisk"
+license = "GPL-2.0-or-later"
+deps = ["wget"]
+patches = ["patches/fix-sbin.patch"]
+
+[build]
+system = "make"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'volta'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "volta"
+version = "2.0.2"
+archive = "https://github.com/volta-cli/volta/archive/v2.0.2.tar.gz"
+sha256 = "0e93d17c36fb79222b10881d6c67d667483f85b19a0498eacfc535ef31894dbe"
+strip_components = 1
+description = "JavaScript tool version sync helper"
+homepage = "https://volta.sh/"
+license = "BSD-2-Clause"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

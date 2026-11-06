@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'aptly'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_import_path
+[package]
+name = "aptly"
+version = "1.6.3"
+archive = "https://github.com/aptly-dev/aptly/archive/v1.6.3.tar.gz"
+sha256 = "689a0b4f110ab2528ae271c3884b92304e0fdf7a3bf4ee93f60705f4a27d4952"
+strip_components = 1
+description = "Debian repository management tool"
+homepage = "https://www.aptly.info/"
+license = "MIT"
+
+[build]
+system = "go"

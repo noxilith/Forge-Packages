@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wcslib'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "wcslib"
+version = "8.4"
+archive = "https://www.atnf.csiro.au/computing/software/wcs/WCS/wcslib-8.4.tar.bz2"
+sha256 = "960b844426d14a8b53cdeed78258aa9288cded99a7732c0667c64fa6a50126dc"
+strip_components = 1
+description = "FITS World Coordinate System Library"
+homepage = "https://www.atnf.csiro.au/computing/software/wcs/"
+license = "GPL-3.0-or-later"
+deps = ["cfitsio", "libX11", "libpng", "zlib"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-flex", "--without-pgplot"]

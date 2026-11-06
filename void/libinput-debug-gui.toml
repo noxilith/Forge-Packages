@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libinput-debug-gui'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: mtdev
+[package]
+name = "libinput-debug-gui"
+version = "1.31.3"
+archive = "https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.31.3/libinput-1.31.3.tar.gz"
+sha256 = "b6749bf6f1890f6631c0a70a027c35fec9d2e096a39f720548896e41474a9854"
+strip_components = 1
+description = "Provides handling input devices in Wayland compositors and X"
+homepage = "https://www.freedesktop.org/wiki/Software/libinput"
+license = "MIT"
+deps = ["eudev", "gtk4", "libevdev", "libwacom"]
+
+[build]
+system = "meson"
+configure_args = ["-Db_ndebug=false", "-Dtests=false", "-Ddebug-gui=true"]
+tools = ["pkg-config"]
+deps = ["wayland"]

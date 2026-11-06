@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'frei0r-plugins'. Review before relying on it.
+[package]
+name = "frei0r-plugins"
+version = "1.7.0"
+archive = "https://files.dyne.org/frei0r/releases/frei0r-plugins-1.7.0.tar.gz"
+sha256 = "1b1ff8f0f9bc23eed724e94e9a7c1d8f0244bfe33424bb4fe68e6460c088523a"
+strip_components = 1
+description = "Minimalistic API for a collection of free video effects plugins"
+homepage = "http://frei0r.dyne.org/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "cmake"

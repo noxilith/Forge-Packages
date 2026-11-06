@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'dragon-player'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, hicolor-icon-theme, qt6-multimedia, qt6-tools
+[package]
+name = "dragon-player"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/dragon-26.08.1.tar.xz"
+sha256 = "0b0c153f3918a24a0c7aa35601466202bfdc8865f74e536194acf8c0d217dd33"
+strip_components = 1
+description = "Multimedia player where the focus is on simplicity"
+homepage = "https://kde.org/applications/en/multimedia/org.kde.dragonplayer"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-kio", "kf6-kirigami", "kf6-kparts"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-base", "qt6-declarative"]

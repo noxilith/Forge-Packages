@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'gotestsum'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "gotestsum"
+version = "1.13.0"
+archive = "https://github.com/gotestyourself/gotestsum/archive/refs/tags/v1.13.0.tar.gz"
+sha256 = "e64d58e1bf4f4c4b82b3a703ed5046ea2b4eb827d2a7ba2ead3216bb5fb85547"
+strip_components = 1
+description = "Go test runner with human-readable output and a summary of test results"
+homepage = "https://github.com/gotestyourself/gotestsum"
+license = "Apache-2.0"
+
+[build]
+system = "go"

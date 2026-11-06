@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'x42-plugins'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: jack, zita-convolver
+[package]
+name = "x42-plugins"
+version = "20221119"
+archive = "https://gareus.org/misc/x42-plugins/x42-plugins-20221119.tar.xz"
+sha256 = "ab946213357640a3565cff0a07a9d08f23424dfb626207a8c1c6c3ef4f4f1089"
+strip_components = 1
+description = "Collection of LV2 plugins"
+homepage = "https://x42-plugins.com"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "glu", "libltc", "libsamplerate", "libsndfile", "lv2", "pango"]
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

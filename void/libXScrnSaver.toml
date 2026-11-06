@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXScrnSaver'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXScrnSaver"
+version = "1.2.5"
+archive = "https://www.x.org/releases/individual/lib/libXScrnSaver-1.2.5.tar.xz"
+sha256 = "5057365f847253e0e275871441e10ff7846c8322a5d88e1e187d326de1cd8d00"
+strip_components = 1
+description = "X11 Screen Saver Library"
+homepage = "https://cgit.freedesktop.org/xorg/lib/libXScrnSaver/"
+license = "MIT"
+deps = ["libX11", "libXext", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]

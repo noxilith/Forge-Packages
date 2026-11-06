@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'quota'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_build_args, conf_files
+[package]
+name = "quota"
+version = "4.11"
+archive = "https://downloads.sourceforge.net/sourceforge/linuxquota/quota-tools/quota-4.11.tar.gz"
+sha256 = "0a51b8f920254d8e83c34a4c3082b7d241f5d6fd65188afadf29859d5223ef78"
+strip_components = 1
+description = "Linux disk quota tool"
+homepage = "https://sourceforge.net/projects/linuxquota/"
+license = "GPL-2.0-or-later"
+deps = ["dbus", "e2fsprogs", "libnl3", "libtirpc", "openldap"]
+patches = ["patches/musl.patch", "patches/reallocarray.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

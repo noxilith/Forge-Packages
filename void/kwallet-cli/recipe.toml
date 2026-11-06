@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kwallet-cli'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_install
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: mksh
+[package]
+name = "kwallet-cli"
+version = "3.03"
+archive = "https://ftp.debian.org/debian/pool/main/k/kwalletcli/kwalletcli_3.03.orig.tar.gz"
+sha256 = "f228e5b179f6eb92289b9635382e676990dd58cd193ce42b61d3150c8a06b12d"
+strip_components = 1
+description = "Command-line interface to the KDE Wallet"
+homepage = "https://www.mirbsd.org/kwalletcli.htm"
+license = "MirOS, LGPL-3.0-or-later"
+deps = ["kf6-kwallet"]
+patches = ["patches/GNUmakefile.patch", "patches/kwallet6.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

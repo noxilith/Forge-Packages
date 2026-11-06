@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libsigc++'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: meson_builddir
+[package]
+name = "libsigc++"
+version = "2.12.1"
+archive = "https://download.gnome.org/sources/libsigc++/2.12/libsigc++-2.12.1.tar.xz"
+sha256 = "a9dbee323351d109b7aee074a9cb89ca3e7bcf8ad8edef1851f4cf359bd50843"
+strip_components = 1
+description = "Type-safe callback system for C++ programs"
+homepage = "https://libsigcplusplus.github.io/libsigcplusplus/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "meson"
+configure_args = ["-Dbuild-examples=false", "-Dwarnings=max"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'egl-wayland2'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "egl-wayland2"
+version = "1.0.2"
+archive = "https://github.com/NVIDIA/egl-wayland2/archive/refs/tags/v1.0.2.tar.gz"
+sha256 = "19262df1df00de75bdc419d31d544953a3589e6369e5dff1a4ebcee465c6d046"
+strip_components = 1
+description = "NVIDIA Wayland EGL External Platform library, Version 2"
+homepage = "https://github.com/NVIDIA/egl-wayland2"
+license = "Apache-2.0"
+deps = ["eglexternalplatform", "libdrm", "libglvnd", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

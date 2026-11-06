@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'glusterfs'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install
+# needs, but Forge has no recipe for yet: libaio, python3-setuptools, sqlite
+[package]
+name = "glusterfs"
+version = "9.6"
+archive = "https://download.gluster.org/pub/gluster/glusterfs/9/9.6/glusterfs-9.6.tar.gz"
+sha256 = "55ebe404ca887e387b1b6ecf952400f795be275f475295014dfc7ad4c1ed1464"
+strip_components = 1
+description = "Free and open source software scalable network filesystem (client)"
+homepage = "https://www.gluster.org/"
+license = "GPL-2.0-or-later, LGPL-3.0-only"
+deps = ["acl", "libtirpc", "liburcu", "liburing", "libxml2", "openssl", "rdma-core"]
+patches = ["patches/patch-xlators_cloudsync_ssl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_file__etc_debian_version=no", "ac_cv_file__etc_SuSE_release=no", "ac_cv_file__etc_redhat_release=no", "ac_cv_file__etc_centos_release=no"]
+tools = ["flex", "pkg-config"]
+deps = ["rpcsvc-proto"]

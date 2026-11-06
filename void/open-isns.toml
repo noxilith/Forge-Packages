@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'open-isns'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: conf_files
+[package]
+name = "open-isns"
+version = "0.103"
+archive = "https://github.com/open-iscsi/open-isns/archive/v0.103.tar.gz"
+sha256 = "47499f3ce87a832840884dcf3eedbec8c039f472fe921a5378e3b206a3fc1a32"
+strip_components = 1
+description = "Server and client for iSNS"
+homepage = "https://github.com/open-iscsi/open-isns"
+license = "LGPL-2.1"
+deps = ["openssl"]
+
+[build]
+system = "meson"

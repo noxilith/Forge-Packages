@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'zita-njbridge'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack, zita-resampler
+[package]
+name = "zita-njbridge"
+version = "0.4.8"
+archive = "https://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-njbridge-0.4.8.tar.bz2"
+sha256 = "101176a0bd407cab7bffd326e8d6886c1b65b212bc33f2efb97b03f926c47907"
+strip_components = 1
+description = "Jack clients to transport multichannel audio over a local network"
+homepage = "https://kokkinizita.linuxaudio.org/linuxaudio/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"
+subdir = "source"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'iceauth'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "iceauth"
+version = "1.0.11"
+archive = "https://www.x.org/releases/individual/app/iceauth-1.0.11.tar.xz"
+sha256 = "9d633cf0d4d1d98e3ef02d18660372958b60a67016e8a72cd04093a8d8f8d4e9"
+strip_components = 1
+description = "ICE protocol utility"
+homepage = "https://gitlab.freedesktop.org/xorg/app/iceauth"
+license = "MIT"
+deps = ["libICE", "xorgproto"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

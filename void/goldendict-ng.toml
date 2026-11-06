@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'goldendict-ng'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, libzim, qt6-multimedia, qt6-qt5compat, qt6-svg, qt6-tools
+[package]
+name = "goldendict-ng"
+version = "26.11.0"
+archive = "https://github.com/xiaoyifang/goldendict-ng/archive/refs/tags/v26.11.0.tar.gz"
+sha256 = "6aa520851b6ffd632bf391f26651b795cfab6445f7a6ecb2aaf449d116c8e41f"
+strip_components = 1
+description = "Feature-rich dictionary lookup program (goldendict fork)"
+homepage = "https://xiaoyifang.github.io/goldendict-ng/"
+license = "GPL-3.0-or-later"
+deps = ["eb", "fmt", "hunspell", "libvorbis", "opencc", "qt6-base", "qt6-declarative", "qt6-pdf", "tomlplusplus", "xapian-core"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_ALTERNATIVE_NAME=ON", "-DWITH_TTS=OFF"]
+tools = ["pkg-config"]

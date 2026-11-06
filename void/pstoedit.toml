@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pstoedit'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ghostscript
+[package]
+name = "pstoedit"
+version = "3.75"
+archive = "https://downloads.sourceforge.net/sourceforge/pstoedit/pstoedit-3.75.tar.gz"
+sha256 = "b7b5d8510b40a5b148f7751268712fcfd0c1ed2bb46f359f655b6fcdc53364cf"
+strip_components = 1
+description = "PostScript and PDF graphics into other vector formats translator"
+homepage = "http://www.pstoedit.net/"
+license = "GPL-2.0-or-later"
+deps = ["ImageMagick", "libXext", "libxml2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'thc-hydra'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "thc-hydra"
+version = "9.5"
+archive = "https://github.com/vanhauser-thc/thc-hydra/archive/v9.5.tar.gz"
+sha256 = "9dd193b011fdb3c52a17b0da61a38a4148ffcad731557696819d4721d1bee76b"
+strip_components = 1
+description = "Tool to guess/crack valid login/password pairs"
+homepage = "https://github.com/vanhauser-thc/thc-hydra"
+license = "AGPL-3.0-or-later"
+deps = ["libidn", "libssh", "mariadb", "openssl", "pcre", "postgresql18", "zlib"]
+
+[build]
+system = "autotools"

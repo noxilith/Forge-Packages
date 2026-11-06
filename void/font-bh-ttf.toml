@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-bh-ttf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-bh-ttf"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-bh-ttf-1.0.4.tar.gz"
+sha256 = "bf662d20107d60a964ade831b8ad575a58510e0f2fb9f67e8f064bbbeaae45b4"
+strip_components = 1
+description = "Standard Bigelow and Holmes TrueType fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

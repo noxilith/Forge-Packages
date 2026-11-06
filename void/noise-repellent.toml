@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'noise-repellent'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw
+[package]
+name = "noise-repellent"
+version = "0.2.4"
+archive = "https://github.com/lucianodato/noise-repellent/archive/v0.2.4.tar.gz"
+sha256 = "62bb188986a9d810faaaac17cbec006c83337b2c0e9e166e146453caa6a760c9"
+strip_components = 1
+description = "LV2 plug-in for broadband noise reduction"
+homepage = "https://github.com/lucianodato/noise-repellent"
+license = "LGPL-3.0-or-later"
+deps = ["libspecbleach", "lv2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dstatic_libspecbleach=false"]
+tools = ["pkg-config"]

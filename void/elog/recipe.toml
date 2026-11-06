@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'elog'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, CXXFLAGS, make_dirs, conf_files
+[package]
+name = "elog"
+version = "3.1.5.1"
+archive = "https://elog.psi.ch/elog/download/tar/elog-3.1.5-1.tar.gz"
+sha256 = "165fdeec01819c06a1fe14cd1741e9ab284a961053df9ba9f8680f8f7f9e299f"
+strip_components = 1
+description = "Logbook system to manage notes through a Web interface"
+homepage = "https://elog.psi.ch/elog/"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+patches = ["patches/makefile.patch"]
+
+[build]
+system = "make"

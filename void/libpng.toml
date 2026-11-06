@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libpng'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libpng"
+version = "1.6.59"
+archive = "https://downloads.sourceforge.net/sourceforge/libpng/libpng-1.6.59.tar.xz"
+sha256 = "d80dd2a38a37f803cb9b6ac7b14bd6e74ddc3b654780a8380bdf93523fdb4389"
+strip_components = 1
+description = "Library for manipulating PNG images"
+homepage = "http://www.libpng.org/pub/png/libpng.html"
+license = "Libpng"
+deps = ["zlib"]
+
+[build]
+system = "autotools"

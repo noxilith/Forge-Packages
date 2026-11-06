@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libchardet'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libchardet"
+version = "1.0.5"
+archive = "https://github.com/Joungkyun/libchardet/archive/1.0.5.tar.gz"
+sha256 = "95d2d372e571ecf680627598a3525ff2354fef1d35d97514f126468133965d50"
+strip_components = 1
+description = "Mozilla's Universal Charset Detector C/C++ API"
+homepage = "http://ftp.oops.org/pub/oops/libchardet/"
+license = "MPL-1.1"
+
+[build]
+system = "autotools"
+tools = ["perl"]

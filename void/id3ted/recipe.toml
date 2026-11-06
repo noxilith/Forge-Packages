@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'id3ted'. Review before relying on it.
+[package]
+name = "id3ted"
+version = "1.0"
+archive = "https://github.com/muennich/id3ted/archive/v1.0.tar.gz"
+sha256 = "b661514637278b00930cc13ef22f46530baadcf9f3f4ee4b7cb210b0d46b18f1"
+strip_components = 1
+description = "Command line id3 tag editor"
+homepage = "https://github.com/muennich/id3ted"
+license = "GPL-2.0-or-later"
+deps = ["file", "taglib"]
+patches = ["patches/id3ted-1.0-fix-build-taglib2.patch"]
+
+[build]
+system = "make"

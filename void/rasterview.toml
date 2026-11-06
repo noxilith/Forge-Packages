@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rasterview'. Review before relying on it.
+[package]
+name = "rasterview"
+version = "1.8"
+archive = "https://github.com/michaelrsweet/rasterview/archive/v1.8.tar.gz"
+sha256 = "388a2d4faf9da5161f7c553c27a66c355884f54fd4577a588508aa88cc668b83"
+strip_components = 1
+description = "CUPS/PWG Raster file viewer"
+homepage = "http://www.msweet.org/rasterview/"
+license = "Apache-2.0"
+deps = ["fltk"]
+
+[build]
+system = "autotools"

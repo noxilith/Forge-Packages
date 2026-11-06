@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'soft-serve'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper, make_dirs
+[package]
+name = "soft-serve"
+version = "0.12.2"
+archive = "https://github.com/charmbracelet/soft-serve/archive/refs/tags/v0.12.2.tar.gz"
+sha256 = "b99e40fc50a5d9889f54e583a932f09bcb0a29071d97c510dc97d4c7d0501268"
+strip_components = 1
+description = "Tasty, self-hostable Git server for the command line"
+homepage = "https://github.com/charmbracelet/soft-serve"
+license = "MIT"
+deps = ["git-lfs", "openssh"]
+
+[build]
+system = "go"

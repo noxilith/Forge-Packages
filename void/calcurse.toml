@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'calcurse'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses, python3-httplib2
+[package]
+name = "calcurse"
+version = "4.8.2"
+archive = "https://calcurse.org/files/calcurse-4.8.2.tar.gz"
+sha256 = "849ba852c7f37b6772365cb0c42a94cde0fe75efba91363e96a0e7ef797ba565"
+strip_components = 1
+description = "Text-based calendar and scheduling application"
+homepage = "https://calcurse.org"
+license = "BSD-2-Clause"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

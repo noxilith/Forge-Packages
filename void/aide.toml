@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'aide'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "aide"
+version = "0.19.5"
+archive = "https://github.com/aide/aide/releases/download/v0.19.5/aide-0.19.5.tar.gz"
+sha256 = "6b004557e9493048ceb5fa84fb44b904c16e23bed8850dc21316e7c44247a350"
+strip_components = 1
+description = "File and directory integrity checker"
+homepage = "https://aide.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["acl", "e2fsprogs", "elfutils", "mhash", "nettle", "pcre2", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-mhash", "--with-posix-acl", "--with-prelink", "--with-xattr", "--with-zlib", "--with-e2fsattrs", "--disable-static"]
+tools = ["flex", "pkg-config"]

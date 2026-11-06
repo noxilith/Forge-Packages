@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'chroot-distcc'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_target
+[package]
+name = "chroot-distcc"
+version = "3.4"
+archive = "https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz"
+sha256 = "2b99edda9dad9dbf283933a02eace6de7423fe5650daa4a728c950e5cd37bd7d"
+strip_components = 1
+description = "Distributed compilation for faster C/C++ builds -- for xbps-src use"
+homepage = "https://distcc.github.io"
+license = "GPL-2.0-or-later"
+patches = ["patches/dcc_gcc_rewrite_fqn-avoid-heap-corruption.patch", "patches/gcc-10.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-included-popt", "--without-avahi", "--without-gnome", "--without-gtk", "--disable-Werror", "--disable-pump-mode", "--without-libiberty"]

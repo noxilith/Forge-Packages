@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libre-graph-api-cpp-qt-client'. Review before relying on it.
+[package]
+name = "libre-graph-api-cpp-qt-client"
+version = "1.0.4"
+archive = "https://github.com/owncloud/libre-graph-api-cpp-qt-client/archive/refs/tags/v1.0.4.tar.gz"
+sha256 = "5504024235b8474eb053dad0051d33f3fcfd9aabdbde96f506a77df181fcd84d"
+strip_components = 1
+description = "Libre Graph API for owncloudclient"
+homepage = "https://github.com/owncloud/libre-graph-api-cpp-qt-client"
+license = "Apache-2.0"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+subdir = "client"

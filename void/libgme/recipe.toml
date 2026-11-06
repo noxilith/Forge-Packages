@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libgme'. Review before relying on it.
+# settings not translated: CXXFLAGS
+[package]
+name = "libgme"
+version = "0.6.3"
+archive = "https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-0.6.3.tar.xz"
+sha256 = "aba34e53ef0ec6a34b58b84e28bf8cfbccee6585cebca25333604c35db3e051d"
+strip_components = 1
+description = "Video game music file emulation/playback library"
+homepage = "https://bitbucket.org/mpyne/game-music-emu/wiki/Home"
+license = "LGPL-2.1-or-later"
+deps = ["SDL2", "zlib"]
+patches = ["patches/header.patch", "patches/ppc-musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_UBSAN=OFF"]

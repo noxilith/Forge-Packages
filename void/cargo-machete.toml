@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cargo-machete'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cargo-machete"
+version = "0.8.0"
+archive = "https://github.com/bnjbvr/cargo-machete/archive/refs/tags/v0.8.0.tar.gz"
+sha256 = "5d7b5cb94a6742cd76838a2a36f701cdf1e5d97bb0477dbb7ba03587dd791248"
+strip_components = 1
+description = "Remove unused Rust dependencies"
+homepage = "https://github.com/bnjbvr/cargo-machete"
+license = "MIT"
+
+[build]
+system = "cargo"

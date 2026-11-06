@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tolua'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: lua52
+[package]
+name = "tolua"
+version = "5.2.0"
+archive = "https://github.com/LuaDist/tolua/archive/5.2.0.tar.gz"
+sha256 = "121ae6b6e1fb86d064e5994be5ef43ee2e20d2602f40e6ba48fa9de867ffc3d5"
+strip_components = 1
+description = "Tool that greatly simplifies the integration of C/C++ code with Lua"
+homepage = "https://github.com/LuaDist/tolua"
+license = "custom:as-is"
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

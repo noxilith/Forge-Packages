@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'qingy'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS, make_dirs, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "qingy"
+version = "1.0.0"
+archive = "https://downloads.sourceforge.net/sourceforge/qingy/qingy-1.0.0.tar.bz2"
+sha256 = "de4b4b398d5ba81ab2544729864676a04ddc6ae818b357ee09a8770293740cd3"
+strip_components = 1
+description = "Qingy Is Not Getty"
+homepage = "http://qingy.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["libgcrypt"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-optimizations", "--disable-static", "--disable-DirectFB-support", "--enable-crypto=libgcrypt"]

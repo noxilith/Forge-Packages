@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'NetworkManager-l2tp'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: nss
+[package]
+name = "NetworkManager-l2tp"
+version = "1.20.20"
+archive = "https://github.com/nm-l2tp/NetworkManager-l2tp/releases/download/1.20.20/NetworkManager-l2tp-1.20.20.tar.xz"
+sha256 = "0859a35148fb0e1a1b6eef7beafd7c7211e87748af67879f1ecc40a4d01c008c"
+strip_components = 1
+description = "NetworkManager VPN plugin for L2TP/IPsec"
+homepage = "https://github.com/nm-l2tp/NetworkManager-l2tp"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "gtk4", "libnma", "libsecret", "openssl", "ppp", "strongswan", "xl2tpd"]
+patches = ["patches/sockaddr.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-gtk4"]
+tools = ["pkg-config"]
+deps = ["gettext", "libxml2"]

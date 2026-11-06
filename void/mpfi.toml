@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mpfi'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: mpfr
+[package]
+name = "mpfi"
+version = "1.5.3"
+archive = "https://gitlab.inria.fr/mpfi/mpfi/-/archive/1.5.3/mpfi-1.5.3.tar.bz2"
+sha256 = "6ad5247b37b9f9c024103fd64e76b6360294f471d448aac3797a0f44428024c3"
+strip_components = 1
+description = "C library for interval arithmetic"
+homepage = "http://perso.ens-lyon.fr/nathalie.revol/software.html"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+subdir = "mpfi"
+deps = ["texinfo"]

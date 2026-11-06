@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'widelands'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: SDL2_gfx, SDL2_image, glew
+[package]
+name = "widelands"
+version = "1.2.1"
+archive = "https://github.com/widelands/widelands/archive/refs/tags/v1.2.1.tar.gz"
+sha256 = "799bfd32048ef20118c48e21f3fc843ae0451c42bb8bf2eabcb9b26bf6fe54b4"
+strip_components = 1
+description = "Real-time strategy game"
+homepage = "https://www.widelands.org/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_mixer", "SDL2_net", "SDL2_ttf", "asio", "curl", "gettext", "glu", "libicu78", "minizip"]
+patches = ["patches/musl.patch", "patches/no-werror.patch", "patches/size_t-format-specifier.patch", "patches/update-asio-interfaces.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DOPTION_BUILD_WEBSITE_TOOLS=OFF"]
+tools = ["pkg-config"]

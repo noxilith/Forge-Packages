@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'electron-tasje'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "electron-tasje"
+version = "0.7.5"
+archive = "https://codeberg.org/selfisekai/electron_tasje/archive/v0.7.5.tar.gz"
+sha256 = "caaf4ffb3e9cbc148c68824afa765391f742c267387a38ee8a3c730b6e0a24dd"
+strip_components = 1
+description = "Tiny replacement for electron-builder"
+homepage = "https://codeberg.org/selfisekai/electron_tasje/"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "cargo"

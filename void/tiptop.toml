@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tiptop'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "tiptop"
+version = "2.3.1"
+archive = "https://files.inria.fr/pacap/tiptop/tiptop-2.3.1.tar.gz"
+sha256 = "51c4449c95bba34f16b429729c2f58431490665d8093efaa8643b2e1d1084182"
+strip_components = 1
+description = "Performance monitoring tool using hardware counters"
+homepage = "https://gitlab.inria.fr/rohou/tiptop"
+license = "GPL-2.0-only"
+deps = ["libxml2"]
+
+[build]
+system = "autotools"
+tools = ["flex"]

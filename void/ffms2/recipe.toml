@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ffms2'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "ffms2"
+version = "2.40"
+archive = "https://github.com/FFMS/ffms2/archive/2.40.tar.gz"
+sha256 = "82e95662946f3d6e1b529eadbd72bed196adfbc41368b2d50493efce6e716320"
+strip_components = 1
+description = "Libav/ffmpeg based frames server"
+homepage = "https://github.com/FFMS/ffms2"
+license = "MIT, GPL-3.0-or-later"
+deps = ["zlib"]
+patches = ["patches/ffmpeg5.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--disable-static"]
+tools = ["pkg-config"]

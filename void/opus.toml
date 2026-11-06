@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'opus'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "opus"
+version = "1.6.1"
+archive = "https://downloads.xiph.org/releases/opus/opus-1.6.1.tar.gz"
+sha256 = "6ffcb593207be92584df15b32466ed64bbec99109f007c82205f0194572411a1"
+strip_components = 1
+description = "Totally open, royalty-free, highly versatile audio codec"
+homepage = "https://www.opus-codec.org/"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-dred", "--enable-osce", "--enable-custom-modes", "--enable-opus-custom-api"]

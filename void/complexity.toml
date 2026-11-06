@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'complexity'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "complexity"
+version = "1.13"
+archive = "https://ftp.gnu.org/gnu/complexity/complexity-1.13.tar.xz"
+sha256 = "80a625a87ee7c17fed02fb39482a7946fc757f10d8a4ffddc5372b4c4b739e67"
+strip_components = 1
+description = "Measure complexity of C source"
+homepage = "http://www.gnu.org/software/complexity/"
+license = "GPL-3.0-or-later"
+deps = ["autogen"]
+
+[build]
+system = "autotools"

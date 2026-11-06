@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'ldacBT'. Review before relying on it.
+[package]
+name = "ldacBT"
+version = "2.0.2.3"
+archive = "https://github.com/EHfive/ldacBT/releases/download/v2.0.2.3/ldacBT-2.0.2.3.tar.gz"
+sha256 = "4bd8eece78bb5c1361fab95743e7100506e2408a25c4a592a0f8d349746dc5b4"
+strip_components = 1
+description = "LDAC Bluetooth encoder library"
+homepage = "https://github.com/EHfive/ldacBT"
+license = "Apache-2.0"
+
+[build]
+system = "cmake"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libcdio-paranoia'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libcdio-paranoia"
+version = "10.2+2.0.2"
+archive = "https://ftp.gnu.org/gnu/libcdio/libcdio-paranoia-10.2+2.0.2.tar.bz2"
+sha256 = "186892539dedd661276014d71318c8c8f97ecb1250a86625256abd4defbf0d0c"
+strip_components = 1
+description = "CD paranoia utility/libraries from libcdio"
+homepage = "https://www.gnu.org/software/libcdio/"
+license = "GPL-3.0-or-later"
+deps = ["libcdio"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-cpp-progs", "--disable-example-progs"]
+tools = ["pkg-config"]

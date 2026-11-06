@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'audit'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: apparmor, mit-krb5, python3-packaging-bootstrap, python3-setuptools
+[package]
+name = "audit"
+version = "4.2.1"
+archive = "https://github.com/linux-audit/audit-userspace/archive/refs/tags/v4.2.1.tar.gz"
+sha256 = "42876d195ee2ded19e5f72d7664096eee314928aa36ad346719ba5b25818fc84"
+strip_components = 1
+description = "Linux Security Auditing Framework"
+homepage = "https://github.com/linux-audit/audit-documentation/wiki"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["libcap-ng", "openldap"]
+patches = ["patches/seed-random.patch", "patches/strndupa.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared=audit", "--enable-gssapi-krb5", "--with-apparmor", "--with-libcap-ng", "--with-python3"]
+tools = ["pkg-config"]
+deps = ["gettext", "swig", "tar"]

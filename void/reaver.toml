@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'reaver'. Review before relying on it.
+[package]
+name = "reaver"
+version = "1.6.6"
+archive = "https://github.com/t6x/reaver-wps-fork-t6x/releases/download/v1.6.6/reaver-1.6.6.tar.xz"
+sha256 = "e329a0da0b6dd888916046535ff86a6aa144644561937954e560bb1810ab6702"
+strip_components = 1
+description = "Brute force attack tool against Wifi Protected Setup (WPS)"
+homepage = "https://github.com/t6x/reaver-wps-fork-t6x"
+license = "GPL-2.0-or-later"
+deps = ["libpcap"]
+
+[build]
+system = "autotools"
+subdir = "src"

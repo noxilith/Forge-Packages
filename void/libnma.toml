@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libnma'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "libnma"
+version = "1.10.6"
+archive = "https://download.gnome.org/sources/libnma/1.10/libnma-1.10.6.tar.xz"
+sha256 = "53a6fb2b190ad37c5986caed3e98bede7c3c602399ee4f93c8fc054303d76dab"
+strip_components = 1
+description = "NetworkManager panel applet for GNOME - runtime library"
+homepage = "https://gitlab.gnome.org/GNOME/libnma"
+license = "GPL-2.0-only, LGPL-2.1-or-later"
+deps = ["NetworkManager", "gcr", "gtk+3", "gtk4", "iso-codes", "mobile-broadband-provider-info"]
+
+[build]
+system = "meson"
+configure_args = ["-Dlibnma_gtk4=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc", "vala"]

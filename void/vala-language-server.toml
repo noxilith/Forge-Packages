@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'vala-language-server'. Review before relying on it.
+[package]
+name = "vala-language-server"
+version = "0.48.7"
+archive = "https://github.com/benwaffle/vala-language-server/archive/refs/tags/0.48.7.tar.gz"
+sha256 = "6e848334accd27566843d56db15bedcf7529dc68e416d23d3b4e9fc522019c68"
+strip_components = 1
+description = "Code Intelligence for Vala & Genie"
+homepage = "https://github.com/benwaffle/vala-language-server"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "json-glib", "jsonrpc-glib", "libgee", "vala"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

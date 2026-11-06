@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnuradio-nrsc5'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: python3-pybind11
+[package]
+name = "gnuradio-nrsc5"
+version = "2.0.0"
+archive = "https://github.com/argilo/gr-nrsc5/archive/v2.0.0.tar.gz"
+sha256 = "cc9135b20e79111f609b95e02c5b5926c8c71c3ed8ab6e58b2b484d4efb333ae"
+strip_components = 1
+description = "GNU Radio implementation of HD Radio"
+homepage = "https://github.com/argilo/gr-nrsc5"
+license = "GPL-3.0-or-later"
+deps = ["gnuradio"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

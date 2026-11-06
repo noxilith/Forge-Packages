@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'logrotate'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: make_dirs, conf_files
+[package]
+name = "logrotate"
+version = "3.22.0"
+archive = "https://github.com/logrotate/logrotate/releases/download/3.22.0/logrotate-3.22.0.tar.xz"
+sha256 = "42b4080ee99c9fb6a7d12d8e787637d057a635194e25971997eebbe8d5e57618"
+strip_components = 1
+description = "Log file rotation and periodic maintenance"
+homepage = "https://github.com/logrotate/logrotate"
+license = "GPL-2.0-or-later"
+deps = ["acl", "popt"]
+
+[build]
+system = "autotools"

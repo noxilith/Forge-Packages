@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'i3lockr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "i3lockr"
+version = "1.2.1"
+archive = "https://github.com/owenthewizard/i3lockr/archive/v1.2.1.tar.gz"
+sha256 = "5fce7e1b74fd7ecd5e966c928abe170e432f55f5c1c1462f2958dc423fffaae8"
+strip_components = 1
+description = "Distort a screenshot and run i3lock"
+homepage = "https://github.com/owenthewizard/i3lockr"
+license = "Apache-2.0 OR MIT"
+deps = ["xcb-util-image"]
+
+[build]
+system = "cargo"

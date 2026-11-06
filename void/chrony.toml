@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'chrony'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "chrony"
+version = "4.9"
+archive = "https://chrony-project.org/releases/chrony-4.9.tar.gz"
+sha256 = "4924c6f530105bcd5b9e9e33c48a2ae1bfd889222c8480bc41601110efc864d0"
+strip_components = 1
+description = "Versatile implementation of the Network Time Protocol (NTP)"
+homepage = "https://chrony-project.org/"
+license = "GPL-2.0-only"
+deps = ["gnutls", "libcap", "libedit", "libseccomp", "nettle", "pps-tools"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-nss", "--enable-scfilter"]
+tools = ["pkg-config"]

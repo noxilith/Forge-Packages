@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libpqxx'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libpqxx"
+version = "8.0.2"
+archive = "https://github.com/jtv/libpqxx/archive/8.0.2.tar.gz"
+sha256 = "028c5fba4982e759fe182af1103ccd08b02bb4e1f9f12a551e01d21cac0c4440"
+strip_components = 1
+description = "C++ connector for PostgreSQL"
+homepage = "http://pqxx.org/development/libpqxx"
+license = "BSD-3-Clause"
+deps = ["postgresql18"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--disable-documentation"]

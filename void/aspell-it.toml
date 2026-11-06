@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-it'. Review before relying on it.
+[package]
+name = "aspell-it"
+version = "2.4"
+archive = "https://downloads.sourceforge.net/sourceforge/linguistico/aspell6-it-2.4-20070901-0.tar.bz2"
+sha256 = "16ef0df30158e5d083d6b4f32ccc976614dfd4f5667db5e2cd972e3962bcde34"
+strip_components = 1
+description = "Italian dictionary for aspell"
+homepage = "https://linguistico.sourceforge.net"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

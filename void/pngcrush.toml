@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pngcrush'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "pngcrush"
+version = "1.8.13"
+archive = "https://downloads.sourceforge.net/sourceforge/pmt/pngcrush-1.8.13-nolib.tar.xz"
+sha256 = "3b4eac8c5c69fe0894ad63534acedf6375b420f7038f7fc003346dd352618350"
+strip_components = 1
+description = "Tool for optimizing the compression of PNG files"
+homepage = "https://pmt.sourceforge.net/pngcrush"
+license = "Libpng"
+deps = ["libpng"]
+
+[build]
+system = "make"

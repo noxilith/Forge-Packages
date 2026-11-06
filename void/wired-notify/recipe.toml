@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wired-notify'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wired-notify"
+version = "0.10.7"
+archive = "https://github.com/Toqozz/wired-notify/archive/refs/tags/0.10.7.tar.gz"
+sha256 = "e1b3157a288bf1a1ab3a533e33a13dc17263c0465a67dd216fde24d4dd417ff7"
+strip_components = 1
+description = "Lightweight notification daemon written in Rust"
+homepage = "https://github.com/Toqozz/wired-notify"
+license = "MIT"
+deps = ["glib", "libXScrnSaver", "pango"]
+patches = ["patches/32bit.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

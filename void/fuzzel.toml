@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fuzzel'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: resvg
+[package]
+name = "fuzzel"
+version = "1.15.0"
+archive = "https://codeberg.org/dnkl/fuzzel/archive/1.15.0.tar.gz"
+sha256 = "95b6c022fc1f1c7ab586d47c1594417cc311bf41ea8f5f8b5641478da7b5cf3b"
+strip_components = 1
+description = "Application launcher for wlroots based Wayland compositors"
+homepage = "https://codeberg.org/dnkl/fuzzel"
+license = "MIT"
+deps = ["fcft", "libpng", "libxkbcommon", "pixman", "tllist", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsvg-backend=resvg", "-Denable-cairo=disabled"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

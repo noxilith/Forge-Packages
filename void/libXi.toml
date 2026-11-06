@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libXi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXi"
+version = "1.8.3"
+archive = "https://www.x.org/releases/individual/lib/libXi-1.8.3.tar.xz"
+sha256 = "7ad60056f01af4f786cfe93b3a7707447711626fc8da2637bec71a90409babe5"
+strip_components = 1
+description = "X Input extension library"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libxi"
+license = "MIT"
+deps = ["libXext", "libXfixes", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]
+deps = ["xmlto"]

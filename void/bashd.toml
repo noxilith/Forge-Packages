@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'bashd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "bashd"
+version = "0.4.0"
+archive = "https://github.com/matkrin/bashd/archive/refs/tags/v0.4.0.tar.gz"
+sha256 = "8eec552f3b9d7e3bb7e5bbc52194397a84477c3a792f77f569b30f4519119fb1"
+strip_components = 1
+description = "Bash language server"
+homepage = "https://github.com/matkrin/bashd"
+license = "BSD-3-Clause"
+
+[build]
+system = "go"

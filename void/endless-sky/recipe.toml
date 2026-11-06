@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'endless-sky'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: glew, libavif
+[package]
+name = "endless-sky"
+version = "0.10.16"
+archive = "https://github.com/endless-sky/endless-sky/archive/v0.10.16.tar.gz"
+sha256 = "8854c676e45dc38ef8e0b0ed28b20213027db055c596495e09e6583ee37e8782"
+strip_components = 1
+description = "Space exploring, trading, and combat game"
+homepage = "http://endless-sky.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["SDL2", "libjpeg-turbo", "libmad", "libopenal", "libpng", "minizip"]
+patches = ["patches/cmake-pkg-config.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DES_USE_VCPKG=OFF", "-DCMAKE_BUILD_TYPE=Release", "-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]

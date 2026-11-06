@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'meld'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, python3-distro
+[package]
+name = "meld"
+version = "3.24.1"
+archive = "https://download.gnome.org/sources/meld/3.24/meld-3.24.1.tar.xz"
+sha256 = "29dfee0d857b89c2fa4dad7c9fb9e48506d8bde3f71b6634798659e6697c6b1e"
+strip_components = 1
+description = "Visual diff and merge tool"
+homepage = "http://meldmerge.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gsettings-desktop-schemas", "gtk+3", "gtksourceview4", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxml2"]

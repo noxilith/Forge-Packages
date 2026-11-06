@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libredwg'. Review before relying on it.
+[package]
+name = "libredwg"
+version = "0.14"
+archive = "https://github.com/LibreDWG/libredwg/releases/download/0.14/libredwg-0.14.tar.xz"
+sha256 = "62ebb73b984f865960f20ed26619ea5f8789d5e3fd088fa40a2598384da81275"
+strip_components = 1
+description = "Free library to handle DWG files"
+homepage = "https://www.gnu.org/software/libredwg/"
+license = "GPL-3.0-or-later"
+deps = ["pcre2"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-bindings"]
+tools = ["pkg-config"]

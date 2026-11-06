@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'scooper'. Review before relying on it.
+# settings not translated: make_build_target
+# needs, but Forge has no recipe for yet: kcgi
+[package]
+name = "scooper"
+version = "1.3"
+archive = "https://git.causal.agency/scooper/snapshot/scooper-1.3.tar.gz"
+sha256 = "8fa5dd6047290fba319dcd69d14e70e5efbe70cb5024224772fd5888cb457bfb"
+strip_components = 1
+description = "Web interface for litterbox"
+homepage = "https://git.causal.agency/scooper/"
+license = "GPL-3.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

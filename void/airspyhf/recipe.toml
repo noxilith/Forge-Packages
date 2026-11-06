@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'airspyhf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "airspyhf"
+version = "1.6.8"
+archive = "https://github.com/airspy/airspyhf/archive/refs/tags/1.6.8.tar.gz"
+sha256 = "cd1e5ae89e09b813b096ae4a328e352c9432a582e03fd7da86760ba60efa77ab"
+strip_components = 1
+description = "Usermode driver and tools for Airspy HF+"
+homepage = "https://github.com/airspy/airspyhf"
+license = "BSD-3-Clause"
+deps = ["libusb"]
+patches = ["patches/fix-libm-linking.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

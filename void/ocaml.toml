@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ocaml'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "ocaml"
+version = "5.3.0"
+archive = "https://github.com/ocaml/ocaml/archive/refs/tags/5.3.0.tar.gz"
+sha256 = "eb9eab2f21758d3cfb1e78c7f83f0b4dd6302824316aba4abee047a5a4f85029"
+strip_components = 1
+description = "Main implementation of the OCaml language"
+homepage = "http://ocaml.org/"
+license = "QPL-1.0, LGPL-2.1-only"
+
+[build]
+system = "autotools"
+configure_args = ["--with-pic"]

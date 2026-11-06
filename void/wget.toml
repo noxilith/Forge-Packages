@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'wget'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: ca-certificates, util-linux-common
+[package]
+name = "wget"
+version = "1.25.0"
+archive = "https://ftp.gnu.org/gnu/wget/wget-1.25.0.tar.gz"
+sha256 = "766e48423e79359ea31e41db9e5c289675947a7fcf2efdcedb726ac9d0da3784"
+strip_components = 1
+description = "GNU wget download utility"
+homepage = "https://www.gnu.org/software/wget/wget.html"
+license = "GPL-3.0-or-later"
+deps = ["libidn2", "pcre2", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]

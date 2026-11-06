@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'vc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "vc"
+version = "1.4.5"
+archive = "https://github.com/VcDevel/Vc/archive/refs/tags/1.4.5.tar.gz"
+sha256 = "eb734ef4827933fcd67d4c74aef54211b841c350a867c681c73003eb6d511a48"
+strip_components = 1
+description = "Library to ease explicit vectorization of C++ code"
+homepage = "https://github.com/VcDevel/Vc"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+configure_args = ["-DTARGET_ARCHITECTURE=generic"]

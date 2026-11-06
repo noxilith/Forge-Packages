@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pbbuttonsd'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "pbbuttonsd"
+version = "0.8.1a"
+archive = "https://downloads.sourceforge.net/sourceforge/pbbuttons/pbbuttonsd-0.8.1a.tar.gz"
+sha256 = "254cc391bcb0a4a58a62224b4cca2b29fdf9ca174c1dc18ab0784f1a86465ed1"
+strip_components = 1
+description = "PBButtons daemon to handle special hotkeys of Apple computers"
+homepage = "https://www.berlios.de/software/pbbuttons"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "glib", "hdparm", "procps-ng"]
+patches = ["patches/001-no-ftbfs-format-security.diff", "patches/002-English-language-fixes.patch", "patches/003-disable-powersave-under-gpm.patch", "patches/004-disable-autorescan.patch", "patches/005-cpufreq.patch", "patches/006-laptopmode.patch", "patches/007-bug774634.patch", "patches/008-fnmode.patch", "patches/009-comp_warnings.patch", "patches/010-rundir.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-oss=no", "--with-alsa=yes", "--with-ibam=no", "--with-doxygen-docs=no"]
+tools = ["pkg-config"]
+deps = ["gettext"]

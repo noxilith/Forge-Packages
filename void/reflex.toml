@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'reflex'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: librefl-devel-20260131_1
+[package]
+name = "reflex"
+version = "20260131"
+archive = "https://invisible-mirror.net/archives/reflex/reflex-20260131.tgz"
+sha256 = "ab51a65f33623bb9a3877fc5991ca7960b2421ed112d94c733d85597991748bd"
+strip_components = 1
+description = "Relocalizable fast lexical scanner"
+homepage = "https://invisible-island.net/reflex/"
+license = "BSD-3-Clause"
+deps = ["byacc"]
+
+[build]
+system = "autotools"

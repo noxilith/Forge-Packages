@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'xsimd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xsimd"
+version = "14.3.0"
+archive = "https://github.com/xtensor-stack/xsimd/archive/refs/tags/14.3.0.tar.gz"
+sha256 = "b3d50e7a73fbf4642ceef30131c93414901d69eee41c2a5302db650b03e2c792"
+strip_components = 1
+description = "C++ wrappers for SIMD intrinsics and parallel, optimized math functions"
+homepage = "https://github.com/xtensor-stack/xsimd"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"

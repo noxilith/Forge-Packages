@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ddcui'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "ddcui"
+version = "0.6.0"
+archive = "https://github.com/rockowitz/ddcui/archive/refs/tags/v0.6.0.tar.gz"
+sha256 = "89a0e33314c7bf046ab09b0e68aa3c758b8eba69f06973987522c75843237c39"
+strip_components = 1
+description = "GUI for ddcutil"
+homepage = "https://www.ddcutil.com/"
+license = "GPL-2.0-or-later"
+deps = ["ddcutil", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_QT6=ON"]
+tools = ["pkg-config"]

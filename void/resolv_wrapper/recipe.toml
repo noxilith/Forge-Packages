@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'resolv_wrapper'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "resolv_wrapper"
+version = "1.1.8"
+archive = "https://download.samba.org/pub/cwrap/resolv_wrapper-1.1.8.tar.gz"
+sha256 = "fbc30f77da3e12ecd4ef66ccf5ab77e0b744930ccd89062404082f928a8ec2e0"
+strip_components = 1
+description = "Wrapper for DNS name resolving or DNS faking"
+homepage = "https://cwrap.org/resolv_wrapper.html"
+license = "BSD-3-Clause"
+patches = ["patches/resolv_wrapper-fix-for-cmocka-1.1.6.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

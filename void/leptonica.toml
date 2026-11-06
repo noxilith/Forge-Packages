@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'leptonica'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: libwebp
+[package]
+name = "leptonica"
+version = "1.87.0"
+archive = "https://github.com/DanBloomberg/leptonica/archive/1.87.0.tar.gz"
+sha256 = "fa2b40c5caea96d1bb93a97486262aed8731b69ce25a84a6bf5d25323e33f631"
+strip_components = 1
+description = "Image processing and analysis library"
+homepage = "http://leptonica.org/"
+license = "BSD-2-Clause"
+deps = ["giflib", "libjpeg-turbo", "libpng", "openjpeg2", "tiff", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

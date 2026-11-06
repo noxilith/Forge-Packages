@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'cliquer'. Review before relying on it.
+[package]
+name = "cliquer"
+version = "1.23"
+archive = "https://github.com/dimpase/autocliquer/releases/download/v1.23/cliquer-1.23.tar.gz"
+sha256 = "c1d7cc927b7efe76ff4f11e1f01bee473e37360fb54843b16b287e3ad161287b"
+strip_components = 1
+description = "C routines for finding cliques in an arbitrary weighted graph"
+homepage = "https://users.aalto.fi/~pat/cliquer.html"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

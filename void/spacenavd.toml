@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'spacenavd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "spacenavd"
+version = "1.3.1"
+archive = "https://github.com/FreeSpacenav/spacenavd/archive/refs/tags/v1.3.1.tar.gz"
+sha256 = "f31d03fd683c514eeb4f5901bc6adeb85f9742ce479edf3a5ad09a3b2e1a2ac8"
+strip_components = 1
+description = "Userspace driver for 6-dof input devices"
+homepage = "http://spacenav.sourceforge.net"
+license = "GPL-3.0-or-later"
+deps = ["libX11", "libXtst"]
+
+[build]
+system = "autotools"

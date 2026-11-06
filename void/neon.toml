@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'neon'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: ca-certificates
+[package]
+name = "neon"
+version = "0.37.1"
+archive = "https://notroj.github.io/neon/neon-0.37.1.tar.gz"
+sha256 = "a99b7262525a454d1065cf76dd17240fd808dfc4ef15636990ff83a5d0d9e740"
+strip_components = 1
+description = "HTTP and WebDAV client library, with a C interface"
+homepage = "http://www.webdav.org/neon/"
+license = "LGPL-2.0-or-later"
+deps = ["expat", "libproxy", "openssl", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-expat", "--with-ssl=openssl", "--enable-shared", "--disable-nls", "--disable-static"]
+tools = ["pkg-config"]
+deps = ["xmlto"]

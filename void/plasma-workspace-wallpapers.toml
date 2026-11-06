@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'plasma-workspace-wallpapers'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base
+[package]
+name = "plasma-workspace-wallpapers"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-workspace-wallpapers-6.7.5.tar.xz"
+sha256 = "c481ac4b937a2b1b080c3273e0557cd0c9d57b644156b941902483fd8e1646b5"
+strip_components = 1
+description = "KDE Plasma wallpapers"
+homepage = "https://invent.kde.org/plasma/plasma-workspace-wallpapers"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+deps = ["extra-cmake-modules"]

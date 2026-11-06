@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'vsv'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "vsv"
+version = "2.0.0"
+archive = "https://github.com/bahamas10/vsv/archive/v2.0.0.tar.gz"
+sha256 = "05c20d8e04ca37fdc47dde80a04a4709b54650748529456ebdddb4104fc805ec"
+strip_components = 1
+description = "Manage and view runit services"
+homepage = "https://github.com/bahamas10/vsv"
+license = "MIT"
+deps = ["psmisc"]
+
+[build]
+system = "cargo"

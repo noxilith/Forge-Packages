@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'falkon'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: qt6-location, qt6-tools, qt6-webchannel
+[package]
+name = "falkon"
+version = "26.08.2"
+archive = "https://download.kde.org/stable/release-service/26.08.2/src/falkon-26.08.2.tar.xz"
+sha256 = "f59ed0b6fb12aee5a3ed310e489104b815e35a19278bd7e80f9c5ef444616f07"
+strip_components = 1
+description = "Cross-platform Qt Web Browser"
+homepage = "https://www.falkon.org"
+license = "GPL-3.0-or-later"
+deps = ["kf6-karchive", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-ki18n", "kf6-kio", "kf6-kjobwidgets", "kf6-kwallet", "kf6-purpose", "openssl", "qt6-base", "qt6-declarative", "qt6-pdf", "xcb-util"]
+patches = ["patches/cross-shiboken.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-dictionary'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool
+[package]
+name = "gnome-dictionary"
+version = "40.0"
+archive = "https://download.gnome.org/sources/gnome-dictionary/40/gnome-dictionary-40.0.tar.xz"
+sha256 = "2e650c2a4cea8cc4d02d4a583c456cbbc9d1871e918c7dc4de081ded1d830db5"
+strip_components = 1
+description = "Look up words in dictionary sources"
+homepage = "https://wiki.gnome.org/Apps/Dictionary"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gsettings-desktop-schemas", "gtk+3"]
+patches = ["patches/meson-0.61.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

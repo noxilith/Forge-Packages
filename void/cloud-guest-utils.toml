@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cloud-guest-utils'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: gptfdisk, util-linux
+[package]
+name = "cloud-guest-utils"
+version = "0.33"
+archive = "https://github.com/canonical/cloud-utils/archive/refs/tags/0.33.tar.gz"
+sha256 = "338770d637788466aacfcbcec17a8d0046f92a13cc3b25fce8fceadb02a7339f"
+strip_components = 1
+description = "Useful programs inside of a VM Guest"
+homepage = "https://github.com/canonical/cloud-utils/"
+license = "GPL-3.0-only"
+deps = ["e2fsprogs"]
+
+[build]
+system = "make"

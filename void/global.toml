@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'global'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: ctags, ncurses
+[package]
+name = "global"
+version = "6.6.5"
+archive = "https://ftp.gnu.org/gnu/global/global-6.6.5.tar.gz"
+sha256 = "9c3730bd9e975d94231f3402d5526b79c0b23cc665d624c9829c948dfad37b83"
+strip_components = 1
+description = "Source code tagging system that works across diverse environments"
+homepage = "https://www.gnu.org/software/global/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "ac_cv_posix1_2008_realpath=yes"]

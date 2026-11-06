@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gnome-video-effects'. Review before relying on it.
+[package]
+name = "gnome-video-effects"
+version = "0.6.0"
+archive = "https://download.gnome.org/sources/gnome-video-effects/0.6/gnome-video-effects-0.6.0.tar.xz"
+sha256 = "d7aeaeb46b3f5a832fb2e0d90b42bf8c6160202ca52ac9add17afce192e3c8a8"
+strip_components = 1
+description = "Collection of GStreamer effects for GNOME"
+homepage = "https://wiki.gnome.org/Projects/GnomeVideoEffects"
+license = "GPL-2.0-or-later"
+deps = ["gstreamer1"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

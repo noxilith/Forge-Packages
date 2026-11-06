@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libnice'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libnice"
+version = "0.1.22"
+archive = "https://libnice.freedesktop.org/releases/libnice-0.1.22.tar.gz"
+sha256 = "a5f724cf09eae50c41a7517141d89da4a61ec9eaca32da4a0073faed5417ad7e"
+strip_components = 1
+description = "Implementation of the IETF's draft ICE (for P2P UDP data streams)"
+homepage = "https://libnice.freedesktop.org/"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "gstreamer1", "openssl"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcrypto-library=openssl", "-Dgtk_doc=disabled", "-Dtests=disabled", "-Dexamples=disabled"]
+tools = ["pkg-config"]

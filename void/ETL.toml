@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ETL'. Review before relying on it.
+[package]
+name = "ETL"
+version = "1.4.5"
+archive = "https://github.com/synfig/synfig/releases/download/v1.4.5/ETL-1.4.5.tar.gz"
+sha256 = "fbd0328296bfe12f52d53389740c0f3fea5005152b9da43f52ac1f5ab6e22c73"
+strip_components = 1
+description = "Extended Template Library"
+homepage = "http://www.synfig.org/"
+license = "GPL-2.0-or-later"
+deps = ["glibmm"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

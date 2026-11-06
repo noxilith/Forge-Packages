@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ecl'. Review before relying on it.
+# hooks not translated: pre_check
+# needs, but Forge has no recipe for yet: libffi
+[package]
+name = "ecl"
+version = "26.5.5"
+archive = "https://ecl.common-lisp.dev/static/files/release/ecl-26.5.5.tgz"
+sha256 = "a01a5bcda8c5b73e59dda3494fd13e5fec5db6aa1dad782c3cc3bb57f1633435"
+strip_components = 1
+description = "Common-Lisp interpreter as described in the X3J13 Ansi specification"
+homepage = "https://ecl.common-lisp.dev/"
+license = "LGPL-2.1-or-later"
+deps = ["gc", "gmp", "libatomic_ops"]
+patches = ["patches/fix-tests.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gmp=system", "--enable-boehm=system", "--enable-libatomic=system", "--with-dffi=system"]
+tools = ["pkg-config"]

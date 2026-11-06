@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'tvheadend'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: avahi, ffmpeg6
+[package]
+name = "tvheadend"
+version = "4.3"
+archive = "https://github.com/tvheadend/tvheadend/archive/v4.3.tar.gz"
+sha256 = "9385388926154d03984d650b511a7e490707abbc51ec2590f2d84ca7757e8b4d"
+strip_components = 1
+description = "TV streaming server"
+homepage = "http://tvheadend.org"
+license = "GPL-3.0-only"
+deps = ["curl", "openssl", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-dvbscan", "--disable-ffmpeg_static", "--disable-hdhomerun_static", "--disable-bintray_cache", "--disable-libx264_static", "--disable-libx265_static", "--disable-libvpx_static", "--disable-libtheora_static", "--disable-libvorbis_static", "--disable-libfdkaac_static"]
+tools = ["pkg-config"]
+deps = ["gettext", "which"]

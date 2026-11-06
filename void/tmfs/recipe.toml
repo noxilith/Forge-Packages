@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tmfs'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "tmfs"
+version = "r5"
+archive = "https://github.com/abique/tmfs/archive/r5.tar.gz"
+sha256 = "897ad09e21ddd8e912dc1baba4466d8a65a09b3abdeb31e4640c2d770915f2f4"
+strip_components = 1
+description = "Apple Time Machine read-only mounting utility"
+homepage = "https://github.com/abique/tmfs"
+license = "MIT"
+deps = ["fuse"]
+patches = ["patches/S_IFDIR.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

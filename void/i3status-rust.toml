@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'i3status-rust'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: pandoc
+[package]
+name = "i3status-rust"
+version = "0.36.1"
+archive = "https://github.com/greshake/i3status-rust/archive/refs/tags/v0.36.1.tar.gz"
+sha256 = "f73d46eb2b7854e69195c063b69592da855848526f8eb0f427568e59859dbe5e"
+strip_components = 1
+description = "Replacement for i3status, written in Rust"
+homepage = "https://github.com/greshake/i3status-rust"
+license = "GPL-3.0-only"
+deps = ["dbus", "lm_sensors", "openssl", "pulseaudio"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

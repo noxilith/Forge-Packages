@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sauerbraten'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL2_image, sauerbraten-data-2020.12.29_1
+[package]
+name = "sauerbraten"
+version = "2020.12.29"
+archive = "https://downloads.sourceforge.net/sourceforge/sauerbraten/sauerbraten_2020_12_29_linux.tar.bz2"
+sha256 = "cdba7c4a47cefd30d0afdd6a912199a1384319cf1619923cb7189e72e468be70"
+strip_components = 1
+description = "3D game engine (more powerful redesign of the Cube engine) and FPS game"
+homepage = "http://sauerbraten.org"
+license = "Zlib"
+deps = ["SDL2_mixer", "zlib"]
+patches = ["patches/flags.patch"]
+
+[build]
+system = "make"
+subdir = "src"

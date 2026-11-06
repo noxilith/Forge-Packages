@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xfce4-i3-workspaces-plugin'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "xfce4-i3-workspaces-plugin"
+version = "1.4.2"
+archive = "https://github.com/denesb/xfce4-i3-workspaces-plugin/archive/refs/tags/1.4.2.tar.gz"
+sha256 = "a48caa74982462652b4187b72fd5c3b6df074c06f5bc702be5ab5147843f9ba1"
+strip_components = 1
+description = "Workspace switcher for i3 window manager and Xfce4 panel"
+homepage = "https://github.com/denesb/xfce4-i3-workspaces-plugin"
+license = "GPL-3.0-or-later"
+deps = ["i3ipc-glib", "xfce4-panel"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "xfce4-dev-tools"]

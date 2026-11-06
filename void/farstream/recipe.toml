@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'farstream'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "farstream"
+version = "0.2.9"
+archive = "https://www.freedesktop.org/software/farstream/releases/farstream/farstream-0.2.9.tar.gz"
+sha256 = "cb7d112433cf7c2e37a8ec918fb24f0ea5cb293cfa1002488e431de26482f47b"
+strip_components = 1
+description = "GStreamer modules and libraries for videoconferencing"
+homepage = "http://www.freedesktop.org/wiki/Software/Farstream"
+license = "LGPL-2.1-or-later"
+deps = ["gst-plugins-bad1", "gst-plugins-base1", "gst-plugins-good1", "gupnp-igd", "libnice"]
+patches = ["patches/gupnp-1.2.patch", "patches/gupnp-igd-1.6.patch", "patches/make-4.3.patch", "patches/nice-agent-keep-main-context-alive.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-valgrind", "--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc"]

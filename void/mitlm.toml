@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mitlm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mitlm"
+version = "0.4.2"
+archive = "https://github.com/mitlm/mitlm/releases/download/v0.4.2/mitlm-0.4.2.tar.xz"
+sha256 = "4a9886b68157a9b9280dc53e94af165c3e1ae62c13d0fa810c2ff17a9923db25"
+strip_components = 1
+description = "MIT Language Modeling toolkit"
+homepage = "https://github.com/mitlm/mitlm"
+license = "MIT"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'clipse'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_build_tags, go_import_path
+[package]
+name = "clipse"
+version = "1.2.1"
+archive = "https://github.com/savedra1/clipse/archive/refs/tags/v1.2.1.tar.gz"
+sha256 = "ec906744103a611cc1045a9d65f20b13b454ee046fd979abf1341a1b78fe553e"
+strip_components = 1
+description = "Configurable TUI clipboard manager"
+homepage = "https://github.com/savedra1/clipse"
+license = "MIT"
+deps = ["wl-clipboard"]
+
+[build]
+system = "go"

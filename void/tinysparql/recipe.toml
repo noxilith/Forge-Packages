@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'tinysparql'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: asciidoc, sqlite
+[package]
+name = "tinysparql"
+version = "3.11.0"
+archive = "https://download.gnome.org/sources/tinysparql/3.11/tinysparql-3.11.0.tar.xz"
+sha256 = "011e758a53f31112a8c45700fd6039ae55617f0dac70119d9eddafc03cf68fe5"
+strip_components = 1
+description = "Low-footprint RDF triple store library with SPARQL 1.1 interface"
+homepage = "https://gitlab.gnome.org/GNOME/tinysparql"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["bash-completion", "dbus", "glib", "json-glib", "libicu78", "libsoup3", "libxml2"]
+patches = ["patches/disable-cli-test.patch", "patches/gh-ci-timeout.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddocs=false", "-Dman=true", "-Dstemmer=disabled", "-Dsystemd_user_services=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "python3-gobject", "vala"]

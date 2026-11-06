@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'fastmod'. Review before relying on it.
+[package]
+name = "fastmod"
+version = "0.4.4"
+archive = "https://github.com/facebookincubator/fastmod/archive/refs/tags/v0.4.4.tar.gz"
+sha256 = "b438cc7564ef34d01f27cdd3cd50ee66a9915b9c50939ca021c6bee2e9c1f069"
+strip_components = 1
+description = "Tool for partially automating codebase refactors"
+homepage = "https://github.com/facebookincubator/fastmod"
+license = "Apache-2.0"
+
+[build]
+system = "cargo"

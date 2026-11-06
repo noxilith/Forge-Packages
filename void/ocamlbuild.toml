@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ocamlbuild'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "ocamlbuild"
+version = "0.16.1"
+archive = "https://github.com/ocaml/ocamlbuild/archive/0.16.1.tar.gz"
+sha256 = "2ba6857f2991b7f69368e8db818b163d31cf5a367f15f5953bf8f01a77b3d4fc"
+strip_components = 1
+description = "OCaml build tool"
+homepage = "https://github.com/ocaml/ocamlbuild"
+license = "LGPL-2.0-only"
+
+[build]
+system = "make"
+deps = ["ocaml"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cadence'. Review before relying on it.
+# hooks not translated: post_extract
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, jack, python3-PyQt5, qt5
+[package]
+name = "cadence"
+version = "0.9.2"
+archive = "https://github.com/falkTX/Cadence/archive/v0.9.2.tar.gz"
+sha256 = "a07fe845e55c1785d3e1a091b77efd3bb01a88648bd11215461f9fa6a797ae87"
+strip_components = 1
+description = "Set of tools useful for audio production"
+homepage = "https://kx.studio/Applications:Cadence"
+license = "GPL-2.0-only"
+deps = ["a2jmidid", "desktop-file-utils", "pulseaudio"]
+patches = ["patches/CVE-2023-43782.patch", "patches/CVE-2023-43783.patch", "patches/QPainterPath.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

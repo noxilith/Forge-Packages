@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kshdb'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ksh
+[package]
+name = "kshdb"
+version = "1.1.0"
+archive = "https://github.com/rocky/kshdb/archive/1.1.0.tar.gz"
+sha256 = "bfc4026e80c9f55719af6d5d51349be422292da828a8190ef86260ca8ac390c3"
+strip_components = 1
+description = "Korn Shell Debugger"
+homepage = "https://github.com/rocky/kshdb"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

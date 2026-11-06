@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cbatticon'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cbatticon"
+version = "1.6.13"
+archive = "https://github.com/valr/cbatticon/archive/1.6.13.tar.gz"
+sha256 = "87c6dae4a20dcfbf4897b110a7c5105fa8cf10de74b19e128b0cfd6212c55098"
+strip_components = 1
+description = "Lightweight and fast battery icon that sits in your systray"
+homepage = "https://github.com/valr/cbatticon"
+license = "GPL-2.0-only"
+deps = ["gtk+3", "libnotify"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["gettext"]

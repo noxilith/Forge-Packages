@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sprec'. Review before relying on it.
+# hooks not translated: post_build, pre_build
+# settings not translated: go_import_path
+# needs, but Forge has no recipe for yet: vosk-api
+[package]
+name = "sprec"
+version = "0.1"
+archive = "https://git.sr.ht/~geb/sprec/archive/0.1.tar.gz"
+sha256 = "085b7e0bd54ce79d7bb9b1f26cb72c6099264763a1b2c0743f15401b523aaae9"
+strip_components = 1
+description = "Simple speech recognition for transcription using vosk-api"
+homepage = "https://git.sr.ht/~geb/sprec"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"
+deps = ["scdoc"]

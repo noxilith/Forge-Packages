@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ddcutil'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "ddcutil"
+version = "2.2.6"
+archive = "https://github.com/rockowitz/ddcutil/archive/v2.2.6.tar.gz"
+sha256 = "7bf4420778894caf37ca5f7bade34f7a31d996d92618bb85e18de55a5e5ac465"
+strip_components = 1
+description = "Query and change monitor settings using DDC/CI and USB"
+homepage = "https://www.ddcutil.com"
+license = "GPL-2.0-or-later"
+deps = ["jansson", "kmod", "libXrandr", "libdrm", "libgudev", "libusb"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

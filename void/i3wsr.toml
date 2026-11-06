@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'i3wsr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "i3wsr"
+version = "3.1.2"
+archive = "https://github.com/roosta/i3wsr/archive/v3.1.2.tar.gz"
+sha256 = "0853f1c712d4d4622f7dc7c4eaf10243d06ca1cb1566cf896c957b135f0cb71a"
+strip_components = 1
+description = "Change i3 workspace names based on content"
+homepage = "https://github.com/roosta/i3wsr"
+license = "MIT"
+deps = ["libxcb"]
+
+[build]
+system = "cargo"

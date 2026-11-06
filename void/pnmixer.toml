@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pnmixer'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "pnmixer"
+version = "0.7.2"
+archive = "https://github.com/nicklan/pnmixer/archive/v0.7.2.tar.gz"
+sha256 = "433487da386396f8d39244395220992ff73fe5191d0226febaead403a0cd6f2c"
+strip_components = 1
+description = "Volume mixer for the system tray"
+homepage = "https://github.com/nicklan/pnmixer"
+license = "GPL-3.0-only"
+deps = ["alsa-lib", "gtk+3", "libnotify"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["glib"]

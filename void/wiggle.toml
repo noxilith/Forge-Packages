@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wiggle'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args, make_build_target
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "wiggle"
+version = "1.3"
+archive = "https://github.com/neilbrown/wiggle/archive/refs/tags/v1.3.tar.gz"
+sha256 = "ff92cf0133c1f4dce33563e263cb30e7ddb6f4abdf86d427b1ec1490bec25afa"
+strip_components = 1
+description = "Apply patches that patch rejects"
+homepage = "https://github.com/neilbrown/wiggle"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"
+deps = ["groff"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'protonplus'. Review before relying on it.
+[package]
+name = "protonplus"
+version = "0.6.8"
+archive = "https://github.com/Vysp3r/protonplus/archive/refs/tags/v0.6.8.tar.gz"
+sha256 = "9635706b4649032add033fcedf6db8dcbafe20c63789523c10a4764cb08fd2c7"
+strip_components = 1
+description = "Modern compatibility tools manager"
+homepage = "https://github.com/Vysp3r/protonplus"
+license = "GPL-3.0-or-later"
+deps = ["AppStream", "SDL3", "gtk4", "libadwaita", "libarchive", "libgee", "libnotify", "libsoup3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["appstream-glib", "desktop-file-utils", "gettext", "glib", "vala"]

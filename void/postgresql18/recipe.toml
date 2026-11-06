@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'postgresql18'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, post_install, post_patch, pre_check, pre_configure
+# settings not translated: make_build_target, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: libreadline8, perl, tcl, util-linux-common
+[package]
+name = "postgresql18"
+version = "18.6"
+archive = "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2"
+sha256 = "555610c24d53e4316da5b7d3fc25c279d96856d5e0e23ee308c328c5fa881d9f"
+strip_components = 1
+description = "Sophisticated open-source Object-Relational DBMS"
+homepage = "https://www.postgresql.org"
+license = "PostgreSQL"
+deps = ["flex", "libxslt", "openssl", "pam"]
+patches = ["patches/pg_config-cross-value.patch", "patches/relocate.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-openssl", "--with-python", "--with-pam", "--enable-thread-safety", "--with-perl", "--with-tcl", "--without-ldap", "--without-gssapi", "--without-bonjour", "--with-libxml", "--with-libxslt", "--enable-nls", "--with-uuid=e2fs"]
+tools = ["flex", "pkg-config"]
+deps = ["docbook2x", "gettext", "openjade"]

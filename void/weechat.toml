@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'weechat'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: ca-certificates, lua53, ncurses, perl, ruby-asciidoctor, tcl, zstd
+[package]
+name = "weechat"
+version = "4.10.2"
+archive = "https://www.weechat.org/files/src/weechat-4.10.2.tar.xz"
+sha256 = "6fcd05f350c808a4206d6951af36a9eec11b145b6a1a2a8a2b29dd3502e07022"
+strip_components = 1
+description = "Fast, light and extensible IRC client"
+homepage = "https://www.weechat.org"
+license = "GPL-3.0-or-later"
+deps = ["aspell", "cJSON", "curl", "gnutls", "libgcrypt", "ruby"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_MAN=ON", "-DENABLE_PERL=ON", "-DENABLE_LUA=ON", "-DENABLE_RUBY=ON", "-DENABLE_SPELL=ON", "-DENABLE_GUILE=OFF", "-DENABLE_PHP=OFF", "-DENABLE_JAVASCRIPT=OFF"]
+tools = ["pkg-config"]
+deps = ["gettext"]

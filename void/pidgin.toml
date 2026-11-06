@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'pidgin'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, lib32disabled
+# needs, but Forge has no recipe for yet: avahi-discover, dbus-glib, intltool, ncurses, nss
+[package]
+name = "pidgin"
+version = "2.14.14"
+archive = "https://downloads.sourceforge.net/sourceforge/pidgin/pidgin-2.14.14.tar.bz2"
+sha256 = "0ffc9994def10260f98a55cd132deefa8dc4a9835451cc0e982747bd458e2356"
+strip_components = 1
+description = "Multi-protocol instant messaging client"
+homepage = "https://pidgin.im/"
+license = "GPL-2.0-or-later"
+deps = ["NetworkManager", "cyrus-sasl", "evolution-data-server", "farstream", "glib", "gst-plugins-base1", "gst-plugins-good1", "gtk+", "gtkspell", "libSM", "libXScrnSaver", "libXext", "libgnt", "libidn", "libsasl", "libxml2", "startup-notification"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-schemas-install", "--disable-meanwhile", "--enable-cyrus-sasl", "--disable-doxygen", "--enable-nm", "--enable-vv", "--disable-tk", "--disable-tcl", "--disable-gnutls", "--disable-perl"]
+tools = ["pkg-config"]
+deps = ["gettext"]

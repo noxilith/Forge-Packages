@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'podget'. Review before relying on it.
+[package]
+name = "podget"
+version = "0.9.1"
+archive = "https://github.com/dvehrs/podget/archive/refs/tags/v0.9.1.tar.gz"
+sha256 = "eaeacc306b989359cbbc33891cf8f4ff9ca940af21e7a409e204b26ccb1d50a7"
+strip_components = 1
+description = "Automate downloading of podcasts"
+homepage = "https://github.com/dvehrs/podget"
+license = "GPL-3.0-or-later"
+deps = ["wget"]
+
+[build]
+system = "make"

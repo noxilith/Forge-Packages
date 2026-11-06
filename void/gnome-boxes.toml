@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-boxes'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libvirt-glib, libwebkit2gtk41
+[package]
+name = "gnome-boxes"
+version = "50.0"
+archive = "https://download.gnome.org/sources/gnome-boxes/50/gnome-boxes-50.0.tar.xz"
+sha256 = "fd6a5de18d1090946ca99f1f5a34aa3e15dc8183f6a72226e8d1504a13672d67"
+strip_components = 1
+description = "GNOME application to access remote or virtual systems"
+homepage = "https://wiki.gnome.org/Apps/Boxes"
+license = "LGPL-2.0-or-later"
+deps = ["clutter-gtk", "desktop-file-utils", "glib", "gtksourceview4", "libarchive", "libgcrypt", "libgudev", "libhandy1", "libosinfo", "libportal", "libsecret", "libsoup3", "libusb", "libxml2", "qemu", "spice-gtk", "spice-protocol", "tinysparql", "vala", "vte3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "gtk+3"]

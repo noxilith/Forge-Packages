@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'darkman'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "darkman"
+version = "2.3.1"
+archive = "https://gitlab.com/WhyNotHugo/darkman/-/archive/v2.3.1/darkman-v2.3.1.tar"
+sha256 = "4457a79dd8714c76f9e05c7d02ef7666006c930b155a5be4aa670789fbd2062c"
+strip_components = 1
+description = "Daemon for dark-mode and light-mode transitions on Linux desktop"
+homepage = "https://darkman.whynothugo.nl/"
+license = "0BSD"
+deps = ["dbus"]
+
+[build]
+system = "go"

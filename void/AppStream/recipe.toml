@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'AppStream'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xsl, itstool, qt6-tools
+[package]
+name = "AppStream"
+version = "1.1.2"
+archive = "https://github.com/ximion/appstream/archive/v1.1.2.tar.gz"
+sha256 = "564ec87b16e9e4ee81fb021e612250fd27f3a3ecd31c209a5dd1ff59def3022d"
+strip_components = 1
+description = "Tools and libraries to work with AppStream metadata"
+homepage = "https://github.com/ximion/appstream"
+license = "GPL-2.0-or-later"
+deps = ["bash-completion", "curl", "glib", "libfyaml", "librsvg", "libxml2", "libxmlb", "libyaml", "qt6-base"]
+patches = ["patches/libfyaml-0.9.5-compatibility.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dstemming=false", "-Dapidocs=false", "-Dqt=true", "-Dsystemd=false", "-Dcompose=true"]
+tools = ["gperf", "pkg-config"]
+deps = ["gettext", "libxslt"]

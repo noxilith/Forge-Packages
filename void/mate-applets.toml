@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mate-applets'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: dbus-glib, gucharmap, itstool
+[package]
+name = "mate-applets"
+version = "1.28.1"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-applets-1.28.1.tar.xz"
+sha256 = "a5967141527dc5b172d322a6003c23aeec253160f650bb36430a06ddaefa7e2e"
+strip_components = 1
+description = "Applets for MATE panel"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "gtksourceview4", "libgtop", "libmateweather", "libnl3", "libnotify", "libwnck", "libxml2", "mate-desktop", "mate-icon-theme", "mate-panel", "mate-settings-daemon", "polkit", "upower", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-ipv6"]
+tools = ["pkg-config"]
+deps = ["gettext"]

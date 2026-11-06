@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wvdial'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "wvdial"
+version = "1.61"
+archive = "https://ftp.debian.org/debian/pool/main/w/wvdial/wvdial_1.61.orig.tar.gz"
+sha256 = "5753d2005115aa4e365a1638f4eb6c076d4e2deafa46c3de38964918e7f62709"
+strip_components = 1
+description = "Point-to-Point Protocol dialer"
+homepage = "https://code.google.com/p/wvstreams/"
+license = "LGPL-2.0-only"
+deps = ["ppp", "wvstreams"]
+patches = ["patches/wvdial-1.61-as-needed.patch", "patches/wvdial-1.61-destdir.patch", "patches/wvdial-1.61-parallel-make.patch", "patches/wvdial-1.61-remove-glibc-check.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

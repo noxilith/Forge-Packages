@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'synergy'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: avahi, qt5, unzip
+[package]
+name = "synergy"
+version = "1.13.0"
+archive = "https://github.com/symless/synergy-core/archive/v1.13.0-stable.tar.gz"
+sha256 = "a57989dd2d3ae30657f2b95cba3cae112c189f9bbbc3d1b25b3874859afeb94d"
+strip_components = 1
+description = "Share a single mouse and keyboard between multiple computers"
+homepage = "http://synergy-foss.org/"
+license = "GPL-2.0-only"
+deps = ["curl", "libSM", "libXext", "libXinerama", "libXrandr", "libXtst"]
+patches = ["patches/cmake.patch", "patches/qt5-build-musl.patch", "patches/qt5-build.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTS=OFF", "-DSYNERGY_BUILD_LEGACY_GUI=ON"]
+tools = ["pkg-config"]

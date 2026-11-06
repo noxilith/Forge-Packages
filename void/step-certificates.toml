@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'step-certificates'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "step-certificates"
+version = "0.30.2"
+archive = "https://github.com/smallstep/certificates/archive/refs/tags/v0.30.2.tar.gz"
+sha256 = "327391f301b79818f2418302516b4f6b41bdf08e38edc9011cc7f1b351e19452"
+strip_components = 1
+description = "Private CA and ACME server"
+homepage = "https://smallstep.com/certificates/"
+license = "Apache-2.0"
+deps = ["pcsclite"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

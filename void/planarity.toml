@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'planarity'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "planarity"
+version = "4.0.0.0"
+archive = "https://github.com/graph-algorithms/edge-addition-planarity-suite/releases/download/Version_4.0.0.0/planarity-4.0.0.0.tar.gz"
+sha256 = "df3c86c32fd37b801079aea7de67675efdef12ada557cbcaae821e81b8db438d"
+strip_components = 1
+description = "Graph algorithms for planar embedding and related algorithms"
+homepage = "https://github.com/graph-algorithms/edge-addition-planarity-suite/"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

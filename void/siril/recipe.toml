@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'siril'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS, meson_builddir
+# needs, but Forge has no recipe for yet: ffmpeg6, fftw, gnuplot, libjxl, opencv
+[package]
+name = "siril"
+version = "1.4.4"
+archive = "https://free-astro.org/download/siril-1.4.4.tar.bz2"
+sha256 = "b1682f2129d2e06b034445ed225766a06e38cfaa7451b92d606a3ee36eb077a4"
+strip_components = 1
+description = "Free astronomical image processing software"
+homepage = "https://www.siril.org/"
+license = "GPL-3.0-or-later"
+deps = ["cfitsio", "curl", "exiv2", "ffms2", "gsl", "gtk+3", "gtksourceview4", "libconfig", "libgit2-1.9", "libheif", "libpng", "libraw", "libxisf", "tiff", "wcslib", "yyjson"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["cmake-bootstrap", "glib"]

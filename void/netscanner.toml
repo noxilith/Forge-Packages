@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'netscanner'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: iw
+[package]
+name = "netscanner"
+version = "0.6.41"
+archive = "https://github.com/Chleba/netscanner/archive/refs/tags/v0.6.41.tar.gz"
+sha256 = "1e913b7d9cde8953d2ea77307d91c55240bc94308ac9e321a8a843f930350e04"
+strip_components = 1
+description = "Network scanner & diagnostic tool with modern TUI"
+homepage = "https://github.com/Chleba/netscanner"
+license = "MIT"
+
+[build]
+system = "cargo"

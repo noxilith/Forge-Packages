@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libu2f-host'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libu2f-host"
+version = "1.1.10"
+archive = "https://github.com/Yubico/libu2f-host/archive/libu2f-host-1.1.10.tar.gz"
+sha256 = "45937c6c04349f865d9f047d3a68cc50ea24e9085d18ac2c7d31fa38eb749303"
+strip_components = 1
+description = "C library and tool that implements the host-side of the U2F protocol"
+homepage = "https://developers.yubico.com/libu2f-host/"
+license = "LGPL-2.1-or-later, GPL-3.0-or-later"
+deps = ["hidapi", "json-c", "libfido2", "openssl"]
+patches = ["patches/disable-help2man.patch", "patches/lowercase-boolean.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-openssl=yes"]
+tools = ["pkg-config"]
+deps = ["gengetopt", "gtk-doc"]

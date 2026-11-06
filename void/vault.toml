@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'vault'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_build_tags, go_import_path, make_dirs
+[package]
+name = "vault"
+version = "2.2.1"
+archive = "https://github.com/hashicorp/vault/archive/v2.2.1.tar.gz"
+sha256 = "367ed372044fd8c35c0c35bde47081a64fe4536b49f070ecff06d5d9007a0be4"
+strip_components = 1
+description = "Manage Secrets and Protect Sensitive Data"
+homepage = "https://www.vaultproject.io/"
+license = "BUSL-1.1"
+deps = ["libcap"]
+
+[build]
+system = "go"

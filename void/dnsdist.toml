@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'dnsdist'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, conf_files
+# needs, but Forge has no recipe for yet: boost, lua54, net-snmp, python3-yaml
+[package]
+name = "dnsdist"
+version = "2.1.3"
+archive = "https://downloads.powerdns.com/releases/dnsdist-2.1.3.tar.xz"
+sha256 = "41cc224817ff0f7753b46fe5b814ddb9221dd9dbf76e9eb1a09f01c3c5cbb4aa"
+strip_components = 1
+description = "Dynamic DNS loadbalancer"
+homepage = "https://dnsdist.org/"
+license = "GPL-2.0-only"
+deps = ["fstrm", "libcap", "libedit", "libsodium", "nghttp2", "openssl", "re2"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddnscrypt=enabled", "-Dreproducible=true", "-Dsnmp=enabled", "-Dyaml=disabled"]
+tools = ["pkg-config"]
+deps = ["tar"]

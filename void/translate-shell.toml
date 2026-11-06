@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'translate-shell'. Review before relying on it.
+# settings not translated: make_build_args
+[package]
+name = "translate-shell"
+version = "0.9.7.1"
+archive = "https://github.com/soimort/translate-shell/archive/v0.9.7.1.tar.gz"
+sha256 = "f949f379779b9e746bccb20fcd180d041fb90da95816615575b49886032bcefa"
+strip_components = 1
+description = "Command-line online translator"
+homepage = "https://www.soimort.org/translate-shell"
+license = "Unlicense"
+
+[build]
+system = "make"

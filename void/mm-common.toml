@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mm-common'. Review before relying on it.
+[package]
+name = "mm-common"
+version = "1.0.7"
+archive = "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.7.tar.xz"
+sha256 = "494abfce781418259b1e9d8888c73af4de4b6f3be36cc75d9baa8baa0f2a7a39"
+strip_components = 1
+description = "Common development macros for GTK+ C++"
+homepage = "https://gtkmm.org/en/"
+license = "LGPL-2.1-or-later"
+deps = ["gettext", "glib", "gtk-doc", "yelp-tools"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

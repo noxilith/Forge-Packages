@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ffmpegthumbs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "ffmpegthumbs"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/ffmpegthumbs-26.08.1.tar.xz"
+sha256 = "b02113fe6cf3196ee4d5cfe59fc4da52a61dc21b727d085d233ca8fc7a94bcc0"
+strip_components = 1
+description = "FFmpeg-based thumbnail creator for video files"
+homepage = "https://kde.org/applications/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-ki18n", "kf6-kio", "qt6-base", "taglib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

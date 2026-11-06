@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'nickle'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bc, libreadline8
+[package]
+name = "nickle"
+version = "2.108"
+archive = "https://nickle.org/release/nickle-2.108.tar.xz"
+sha256 = "0b68a2f3e123f27c32b971029658abaae00b4c3ae6e79c3f2c18c5dbbfe554d3"
+strip_components = 1
+description = "Powerful desk calculator language"
+homepage = "https://nickle.org/"
+license = "MIT"
+deps = ["gmp"]
+
+[build]
+system = "meson"
+tools = ["flex", "pkg-config"]

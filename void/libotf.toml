@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libotf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libotf"
+version = "0.9.16"
+archive = "https://download.savannah.nongnu.org/releases/m17n/libotf-0.9.16.tar.gz"
+sha256 = "68db0ca3cda2d46a663a92ec26e6eb5adc392ea5191bcda74268f0aefa78066b"
+strip_components = 1
+description = "Library for handling OpenType Font"
+homepage = "http://www.nongnu.org/m17n/"
+license = "LGPL-2.1"
+deps = ["freetype", "libXaw"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'impala'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "impala"
+version = "0.9.0"
+archive = "https://github.com/pythops/impala/archive/refs/tags/v0.9.0.tar.gz"
+sha256 = "af476be1c36be1c60fbc629f281e7c32aaece704db77b96c7ecd40fb87e0f1a7"
+strip_components = 1
+description = "TUI for managing wifi on Linux"
+homepage = "https://github.com/pythops/impala"
+license = "GPL-3.0-only"
+deps = ["iwd"]
+
+[build]
+system = "cargo"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kf6-knotifications'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: kf6-base, libcanberra, qt6-tools
+[package]
+name = "kf6-knotifications"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/knotifications-6.30.0.tar.xz"
+sha256 = "09ad50570b26aada0408bb9ccfaabf629c56ec89a9972c8b0e155ab780f577cf"
+strip_components = 1
+description = "KDE Desktop notifications"
+homepage = "https://invent.kde.org/frameworks/knotifications"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'umockdev'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "umockdev"
+version = "0.17.13"
+archive = "https://github.com/martinpitt/umockdev/releases/download/0.17.13/umockdev-0.17.13.tar.xz"
+sha256 = "6c6ebf6e6209b6a49746e0d91a448d027b54271bab82ed70a132ecf294ca13cf"
+strip_components = 1
+description = "Mock hardware devices for creating unit tests and bug reporting"
+homepage = "https://github.com/martinpitt/umockdev"
+license = "LGPL-2.1-or-later"
+deps = ["eudev", "gobject-introspection", "libpcap", "vala"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

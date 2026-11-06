@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'stalonetray'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "stalonetray"
+version = "0.8.5"
+archive = "https://github.com/kolbusa/stalonetray/archive/v0.8.5.tar.gz"
+sha256 = "b66ef676d4fcffbcb0980adc7842786e7050381e06ab2c99275f04cc98d39497"
+strip_components = 1
+description = "Standalone system tray (notification area)"
+homepage = "https://github.com/kolbusa/stalonetray"
+license = "GPL-2.0-only"
+deps = ["libSM", "libXpm"]
+patches = ["patches/0001-Check-usr-share-xsl-docbook-for-DOCBOOK_ROOT.patch"]
+
+[build]
+system = "autotools"
+deps = ["libxslt"]

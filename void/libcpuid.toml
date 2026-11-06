@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libcpuid'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "libcpuid"
+version = "0.8.1"
+archive = "https://github.com/anrieff/libcpuid/archive/v0.8.1.tar.gz"
+sha256 = "81f2f40da5d66b8220476e116cb40bca4e6a62c0d22bdeeb8e3856cf14607007"
+strip_components = 1
+description = "Small C library for x86 CPU detection and feature extraction"
+homepage = "https://github.com/anrieff/libcpuid"
+license = "BSD-2-Clause"
+
+[build]
+system = "cmake"

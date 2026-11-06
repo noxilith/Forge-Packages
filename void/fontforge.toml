@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fontforge'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# needs, but Forge has no recipe for yet: ca-certificates, hicolor-icon-theme, libreadline8, python3-packaging-bootstrap, python3-setuptools
+[package]
+name = "fontforge"
+version = "20251009"
+archive = "https://github.com/fontforge/fontforge/archive/20251009.tar.gz"
+sha256 = "613424039e0e1b6bb106f8f0df287e1d249ac285d854f4e1964d68e9b9ad7eb0"
+strip_components = 1
+description = "Create and modify PostScript, TrueType and SVG fonts"
+homepage = "http://fontforge.github.io/en-US/"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "giflib", "gtkmm", "libjpeg-turbo", "libpng", "libspiro", "libxml2", "pango", "tiff", "woff2", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["m4", "pkg-config"]
+deps = ["gettext"]

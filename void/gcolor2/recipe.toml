@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gcolor2'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: perl-XML-Parser
+[package]
+name = "gcolor2"
+version = "0.4"
+archive = "https://downloads.sourceforge.net/sourceforge/gcolor2/gcolor2-0.4.tar.gz"
+sha256 = "89bd6c6d27ba5a679ec60057de8497855072f520515b490e5986fc3509774f23"
+strip_components = 1
+description = "Simple GTK+2 color selector"
+homepage = "http://gcolor2.sourceforge.net/"
+license = "GPL-2.0-only"
+deps = ["gtk+"]
+patches = ["patches/gcolor2-0.4-amd64.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

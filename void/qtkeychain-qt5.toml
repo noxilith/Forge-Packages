@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qtkeychain-qt5'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "qtkeychain-qt5"
+version = "0.14.1"
+archive = "https://github.com/frankosterfeld/qtkeychain/archive/0.14.1.tar.gz"
+sha256 = "afb2d120722141aca85f8144c4ef017bd74977ed45b80e5d9e9614015dadd60c"
+strip_components = 1
+description = "Platform-independent Qt5 API for storing passwords securely"
+homepage = "https://github.com/frankosterfeld/qtkeychain"
+license = "BSD-2-Clause"
+deps = ["libsecret"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

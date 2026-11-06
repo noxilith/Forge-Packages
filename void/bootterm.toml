@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'bootterm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bootterm"
+version = "0.5"
+archive = "https://github.com/wtarreau/bootterm/archive/refs/tags/v0.5.tar.gz"
+sha256 = "95cc154236655082fb60e8cdae15823e4624e108b8aead59498ac8f2263295ad"
+strip_components = 1
+description = "Simple terminal designed to ease connection to serial ports"
+homepage = "https://github.com/wtarreau/bootterm"
+license = "MIT"
+
+[build]
+system = "make"

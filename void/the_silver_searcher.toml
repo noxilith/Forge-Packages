@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'the_silver_searcher'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "the_silver_searcher"
+version = "2.2.0"
+archive = "https://geoff.greer.fm/ag/releases/the_silver_searcher-2.2.0.tar.gz"
+sha256 = "d9621a878542f3733b5c6e71c849b9d1a830ed77cb1a1f6c2ea441d4b0643170"
+strip_components = 1
+description = "Code-searching tool similar to ack, but faster"
+homepage = "https://geoff.greer.fm/ag/"
+license = "Apache-2.0"
+deps = ["pcre", "xz", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

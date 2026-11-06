@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'PopCorn'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path, make_dirs
+[package]
+name = "PopCorn"
+version = "0.4"
+archive = "https://github.com/the-maldridge/PopCorn/archive/v0.4.tar.gz"
+sha256 = "b25589802c5e1c277d2e9536add44704a012359b02d7fb4be1b4b0f11eb10d93"
+strip_components = 1
+description = "Package statistics system"
+homepage = "https://github.com/the-maldridge/PopCorn"
+license = "MIT"
+deps = ["snooze"]
+patches = ["patches/gccgo12.patch"]
+
+[build]
+system = "go"

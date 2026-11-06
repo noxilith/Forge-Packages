@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pulseeffects-legacy'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, itstool, rnnoise, zita-convolver
+[package]
+name = "pulseeffects-legacy"
+version = "4.8.7"
+archive = "https://github.com/wwmm/easyeffects/archive/4c517815a483e8bb88b8762a0f6017218be1cfde.tar.gz"
+sha256 = "a5228b69fbf047bb70072ad2aff53e73870f4fd6b75fd8e48bdc0070130d3964"
+strip_components = 1
+description = "Sound effects for systems using PulseAudio (legacy)"
+homepage = "https://github.com/wwmm/easyeffects"
+license = "GPL-3.0-or-later"
+deps = ["calf", "gsettings-desktop-schemas", "gst-plugins-bad1", "gst-plugins-good1", "gtkmm", "libbs2b", "libebur128", "libsamplerate", "libsndfile", "lilv", "pulseaudio", "sratom"]
+patches = ["patches/no-more-boost.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

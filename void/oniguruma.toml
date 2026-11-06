@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'oniguruma'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "oniguruma"
+version = "6.9.10"
+archive = "https://github.com/kkos/oniguruma/releases/download/v6.9.10/onig-6.9.10.tar.gz"
+sha256 = "2a5cfc5ae259e4e97f86b68dfffc152cdaffe94e2060b770cb827238d769fc05"
+strip_components = 1
+description = "Multi-charset regular expressions library"
+homepage = "https://github.com/kkos/oniguruma"
+license = "BSD-2-Clause"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-posix-api=yes"]

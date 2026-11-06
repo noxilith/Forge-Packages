@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mise'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_install
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "mise"
+version = "2026.10.17"
+archive = "https://github.com/jdx/mise/archive/v2026.10.17.tar.gz"
+sha256 = "3b9cf6be9d57d342ba8992a11aca19dabc91f390b3be9f570d16d4d055b471c9"
+strip_components = 1
+description = "Polyglot runtime manager (asdf rust clone)"
+homepage = "https://github.com/jdx/mise"
+license = "MIT"
+deps = ["openssl", "usage"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

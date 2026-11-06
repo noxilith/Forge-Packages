@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xmh'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: nmh
+[package]
+name = "xmh"
+version = "1.0.5"
+archive = "https://www.x.org/releases/individual/app/xmh-1.0.5.tar.xz"
+sha256 = "2e8055b065e0492450a2c0bd8842b48ba7b0f0f377736a219b1752d0eec64c70"
+strip_components = 1
+description = "Send and read mail with an X interface to MH"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXaw", "xbitmaps"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

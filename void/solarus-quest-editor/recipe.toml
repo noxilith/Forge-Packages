@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'solarus-quest-editor'. Review before relying on it.
+# needs, but Forge has no recipe for yet: LuaJIT, SDL2_image, physfs, qt6-svg, qt6-tools
+[package]
+name = "solarus-quest-editor"
+version = "2.0.0"
+archive = "https://gitlab.com/solarus-games/solarus-quest-editor/-/archive/v2.0.0/solarus-quest-editor-v2.0.0.tar.bz2"
+sha256 = "66ad19c46ec3c7a47ceb7727401012090efe32691dc3a6f36a57143532626fba"
+strip_components = 1
+description = "Quest editor for the Solarus RPG game engine"
+homepage = "http://www.solarus-games.org"
+license = "GPL-3.0-or-later"
+deps = ["SDL2_ttf", "glm", "libmodplug", "libopenal", "qlementine", "solarus"]
+patches = ["patches/use-system-qlementine.patch"]
+
+[build]
+system = "cmake"
+deps = ["qt6-base"]

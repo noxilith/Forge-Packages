@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'jsonnet'. Review before relying on it.
+# settings not translated: build_helper, CXXFLAGS
+[package]
+name = "jsonnet"
+version = "0.22.0"
+archive = "https://github.com/google/jsonnet/archive/v0.22.0.tar.gz"
+sha256 = "5914b9904d97efa662d919519cef1a14e4132bfddddaeed8b061b4a8af628f8d"
+strip_components = 1
+description = "Data templating language"
+homepage = "https://github.com/google/jsonnet"
+license = "Apache-2.0"
+deps = ["gtest"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_SYSTEM_GTEST=ON"]
+tools = ["pkg-config"]
+deps = ["help2man"]

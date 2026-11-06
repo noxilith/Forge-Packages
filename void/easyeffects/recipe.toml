@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'easyeffects'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, ladspa-sdk, qt6-graphs, rnnoise, speexdsp, zita-convolver
+[package]
+name = "easyeffects"
+version = "8.3.1"
+archive = "https://github.com/wwmm/easyeffects/archive/v8.3.1.tar.gz"
+sha256 = "e59a1125bf9c8a28a6007b778493de2e080d4ae5b9f4c1e31716ff595473ae23"
+strip_components = 1
+description = "Sound effects for systems using PipeWire"
+homepage = "https://github.com/wwmm/easyeffects"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gsl", "json-c++", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kiconthemes", "kf6-kirigami", "kf6-qqc2-desktop-style", "kirigami-addons", "libbs2b", "libebur128", "libmysofa", "libportal", "lilv", "pipewire", "qt6-base", "qt6-declarative", "soundtouch", "tbb", "webrtc-audio-processing-2", "xdg-desktop-portal"]
+patches = ["patches/ignore-kirigami-qmldir.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "extra-cmake-modules", "gettext", "kf6-kconfig"]

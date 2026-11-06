@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sentry-native'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sentry-native"
+version = "0.7.7"
+archive = "https://github.com/getsentry/sentry-native/archive/refs/tags/0.7.7.tar.gz"
+sha256 = "3b785c3794867450a54c45eb9d22ab6fb5e49b6eb8abde27660ab2741b846d6a"
+strip_components = 1
+description = "Sentry SDK for C, C++ and native applications"
+homepage = "https://github.com/getsentry/sentry-native"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DSENTRY_BACKEND=inproc", "-DSENTRY_TRANSPORT=none"]

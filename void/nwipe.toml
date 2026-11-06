@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nwipe'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses, util-linux-common
+[package]
+name = "nwipe"
+version = "0.41"
+archive = "https://github.com/martijnvanbrummelen/nwipe/archive/refs/tags/v0.41.tar.gz"
+sha256 = "be626c43fff34ae57caea5adfa3c5f232528c0276be652ecd93295483999decc"
+strip_components = 1
+description = "Utility to securely erase disks"
+homepage = "https://github.com/martijnvanbrummelen/nwipe"
+license = "GPL-2.0-only"
+deps = ["dmidecode", "hdparm", "libconfig", "parted", "smartmontools", "which"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

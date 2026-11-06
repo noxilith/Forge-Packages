@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'stfl'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "stfl"
+version = "0.24"
+archive = "https://sources.voidlinux.org/stfl-0.24/stfl-0.24.tar.gz"
+sha256 = "d4a7aa181a475aaf8a8914a8ccb2a7ff28919d4c8c0f8a061e17a0c36869c090"
+strip_components = 1
+description = "Curses-based widget set for text terminals"
+homepage = "https://clifford.at/stfl/"
+license = "GPL-3.0-or-later"
+patches = ["patches/cross-fix.patch", "patches/stfl-void.patch"]
+
+[build]
+system = "make"
+deps = ["swig"]

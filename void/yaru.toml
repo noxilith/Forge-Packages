@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'yaru'. Review before relying on it.
+[package]
+name = "yaru"
+version = "25.10.1"
+archive = "https://github.com/ubuntu/yaru/archive/25.10.1.tar.gz"
+sha256 = "e718058726fc0b5f2dc10de6142ea86c57ca46072c1fe59c8699d8b3dd7316b5"
+strip_components = 1
+description = "Default Ubuntu 18.10+ theme"
+homepage = "https://github.com/ubuntu/yaru"
+license = "GPL-3.0-or-later, CC-BY-SA-4.0"
+deps = ["glib", "gtk+3"]
+
+[build]
+system = "meson"
+configure_args = ["-Dxfwm4=true"]
+tools = ["pkg-config"]
+deps = ["inkscape", "sassc"]

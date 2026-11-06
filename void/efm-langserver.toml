@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'efm-langserver'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "efm-langserver"
+version = "0.0.54"
+archive = "https://github.com/mattn/efm-langserver/archive/refs/tags/v0.0.54.tar.gz"
+sha256 = "4149b2922899ce313a89f60851f6678369253ed542dd65bdc8dd22f3cf1629bb"
+strip_components = 1
+description = "General purpose language server"
+homepage = "https://github.com/mattn/efm-langserver"
+license = "MIT"
+
+[build]
+system = "go"

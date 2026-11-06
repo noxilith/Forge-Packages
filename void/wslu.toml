@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'wslu'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "wslu"
+version = "4.1.4"
+archive = "https://github.com/wslutilities/wslu/archive/refs/tags/v4.1.4.tar.gz"
+sha256 = "02492f5a5aded1b8c7cce00d73bdb0190b43b2f85bfdd310c8df0035af6eebe1"
+strip_components = 1
+description = "Collection of utilities for Windows 10 Linux Subsystems"
+homepage = "https://github.com/wslutilities/wslu"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"

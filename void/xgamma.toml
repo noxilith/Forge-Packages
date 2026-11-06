@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xgamma'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xgamma"
+version = "1.0.8"
+archive = "https://www.x.org/releases/individual/app/xgamma-1.0.8.tar.xz"
+sha256 = "98f9f69e53a11c354a6637ea5c3d7699ceb5c5b1f8ad6f0a14d9931e5a10d079"
+strip_components = 1
+description = "Alter gamma correction"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11", "libXxf86vm"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

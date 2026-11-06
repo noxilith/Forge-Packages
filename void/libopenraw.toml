@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libopenraw'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "libopenraw"
+version = "0.1.3"
+archive = "https://libopenraw.freedesktop.org/download/libopenraw-0.1.3.tar.bz2"
+sha256 = "6405634f555849eb01cb028e2a63936e7b841151ea2a1571ac5b5b10431cfab9"
+strip_components = 1
+description = "Library for camera RAW files decoding"
+homepage = "https://libopenraw.freedesktop.org/wiki/"
+license = "LGPL-3.0-or-later"
+deps = ["gdk-pixbuf", "glib", "libjpeg-turbo", "libxml2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["curl"]

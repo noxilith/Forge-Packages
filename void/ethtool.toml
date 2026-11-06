@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ethtool'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libmnl
+[package]
+name = "ethtool"
+version = "7.1"
+archive = "https://www.kernel.org/pub/software/network/ethtool/ethtool-7.1.tar.xz"
+sha256 = "4d78c26edc0255bc92f4b995b5fd66108d75ff966ed4694f6025a6d370bc2496"
+strip_components = 1
+description = "Utility for controlling network drivers and hardware"
+homepage = "https://www.kernel.org/pub/software/network/ethtool/"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

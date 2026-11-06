@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'tanidvr'. Review before relying on it.
+[package]
+name = "tanidvr"
+version = "1.4.1"
+archive = "https://downloads.sourceforge.net/sourceforge/tanidvr/tanidvr-1.4.1.tar.xz"
+sha256 = "7c0d17c1dd75b3e3b05108451f9d77222dd8938fbf96e1467c3a48dbd9b7bbc9"
+strip_components = 1
+description = "Tool for DVRs and IP cameras based on the DVR-IP protocol"
+homepage = "http://tanidvr.sourceforge.net"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

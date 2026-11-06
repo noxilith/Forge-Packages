@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'duc'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "duc"
+version = "1.4.5"
+archive = "https://github.com/zevv/duc/releases/download/1.4.5/duc-1.4.5.tar.gz"
+sha256 = "c69512ca85b443e42ffbb4026eedd5492307af612047afb9c469df923b468bfd"
+strip_components = 1
+description = "Library and suite of tools for inspecting disk usage"
+homepage = "https://duc.zevv.nl/"
+license = "LGPL-3.0-only"
+deps = ["cairo", "pango", "tokyocabinet"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

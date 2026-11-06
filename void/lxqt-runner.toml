@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-runner'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-runner"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-runner/archive/2.4.0.tar.gz"
+sha256 = "9dec5b79434be351af58de0a7f718a29ad22b4a76f8ecc577fc3bc867ac11a97"
+strip_components = 1
+description = "LXQt quick launcher"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["layer-shell-qt", "liblxqt", "libqtxdg", "lxqt-globalkeys", "muparser"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools", "qt6-base"]

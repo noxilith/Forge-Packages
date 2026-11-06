@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'krename'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "krename"
+version = "5.0.2"
+archive = "https://download.kde.org/stable/krename/5.0.2/src/krename-5.0.2.tar.xz"
+sha256 = "b23c60a7ddd9f6db4dd7f55ac55fcca8a558fa68aaf8fa5cb89e1eaf692f23ed"
+strip_components = 1
+description = "Powerful batch renamer for KDE"
+homepage = "https://userbase.kde.org/KRename"
+license = "GPL-2.0-or-later"
+deps = ["exiv2", "freetype", "kjs", "kparts", "podofo", "taglib"]
+patches = ["patches/e7dd767a.patch", "patches/podofo-0.10.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

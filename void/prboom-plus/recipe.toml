@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'prboom-plus'. Review before relying on it.
+# hooks not translated: pre_build, pre_configure, pre_patch
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: SDL_image, SDL_mixer, SDL_net, fluidsynth
+[package]
+name = "prboom-plus"
+version = "2.5.1.4"
+archive = "https://downloads.sourceforge.net/sourceforge/prboom-plus/prboom-plus-2.5.1.4.tar.gz"
+sha256 = "e0e2241d174839b107f1a42b191aa9895dc6749e477cbc850ad520fba2353b94"
+strip_components = 1
+description = "Doom source port developed from the original PrBoom"
+homepage = "http://prboom-plus.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["glu", "libmad", "libpng", "libvorbis", "pcre", "portmidi"]
+patches = ["patches/gcc14.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-cpu-opt", "--disable-dogs"]

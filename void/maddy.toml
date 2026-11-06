@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'maddy'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_package, go_import_path, make_dirs
+[package]
+name = "maddy"
+version = "0.9.5"
+archive = "https://github.com/foxcpp/maddy/archive/refs/tags/v0.9.5.tar.gz"
+sha256 = "c5670ff64930a4d69053557cdf252527b54c32bff882c33d120bd208f34a6e19"
+strip_components = 1
+description = "Composable all-in-one mail server"
+homepage = "https://maddy.email"
+license = "GPL-3.0-or-later"
+deps = ["libcap", "pam"]
+
+[build]
+system = "go"
+deps = ["scdoc"]

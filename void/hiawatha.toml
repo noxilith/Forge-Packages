@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'hiawatha'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: mbedtls
+[package]
+name = "hiawatha"
+version = "11.6"
+archive = "https://hiawatha.leisink.net/files/hiawatha-11.6.tar.gz"
+sha256 = "b3c5eb7be007509b7e1f3d88cc03a99904d3b6e5e05d980f9d5bdaa424864dd6"
+strip_components = 1
+description = "Advanced and secure webserver for Unix"
+homepage = "https://hiawatha.leisink.net"
+license = "GPL-2.0-or-later"
+deps = ["libxslt", "nghttp2"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWEBROOT_DIR=/srv/www/hiawatha", "-DUSE_SYSTEM_MBEDTLS=ON", "-DUSE_SYSTEM_NGHTTP2=ON"]

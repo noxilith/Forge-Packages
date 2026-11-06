@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'bspwm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bspwm"
+version = "0.9.12"
+archive = "https://github.com/baskerville/bspwm/archive/0.9.12.tar.gz"
+sha256 = "ca3be808e3d0c785955f1613e6e860fc51b5db086b821b48707466da1a06392c"
+strip_components = 1
+description = "Tiling window manager based on binary space partitioning"
+homepage = "https://github.com/baskerville/bspwm"
+license = "BSD-2-Clause"
+deps = ["xcb-util-keysyms", "xcb-util-wm"]
+
+[build]
+system = "make"

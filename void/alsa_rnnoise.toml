@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'alsa_rnnoise'. Review before relying on it.
+# needs, but Forge has no recipe for yet: rnnoise
+[package]
+name = "alsa_rnnoise"
+version = "1.0"
+archive = "https://git.sr.ht/~arsen/alsa_rnnoise/archive/v1.0.tar.gz"
+sha256 = "88dc6e062539e75f80e90126934e3629ca766a99e3a7b7d0cd4e6013d295bc9d"
+strip_components = 1
+description = "RNNoise based noise removal plugin for ALSA"
+homepage = "https://git.sr.ht/~arsen/alsa_rnnoise"
+license = "GPL-3.0-only"
+deps = ["alsa-lib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

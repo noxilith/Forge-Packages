@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kget'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: boost, qt6-tools
+[package]
+name = "kget"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kget-26.08.1.tar.xz"
+sha256 = "0d44d9542aa00a1b6720f6319d35d97c7033ef834c9cbe7b5d92245252a5e944"
+strip_components = 1
+description = "KDE Download Manager"
+homepage = "https://invent.kde.org/network/kget"
+license = "GPL-2.0-or-later"
+deps = ["gpgme-qt6", "kf6-kcmutils", "kf6-kcompletion", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-knotifyconfig", "kf6-kstatusnotifieritem", "kf6-kwallet", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "libktorrent", "libmms"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

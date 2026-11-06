@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'rawtherapee'. Review before relying on it.
+# settings not translated: CFLAGS, CXXFLAGS
+# needs, but Forge has no recipe for yet: fftw, hicolor-icon-theme, libcanberra, libjxl
+[package]
+name = "rawtherapee"
+version = "5.12"
+archive = "https://rawtherapee.com/shared/source/rawtherapee-5.12.tar.xz"
+sha256 = "d9a6c10537d64a285bc465675fe59aaa94ce3223823dfbecf0ae2c9599082d57"
+strip_components = 1
+description = "Free RAW converter and digital photo processing software"
+homepage = "https://rawtherapee.com/"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "exiv2", "gtkmm", "lensfun", "libiptcdata", "libraw", "librsvg"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCACHE_NAME_SUFFIX=", "-DWITH_LTO=ON", "-DWITH_SYSTEM_LIBRAW=ON"]
+tools = ["pkg-config"]

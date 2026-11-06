@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libomemo-c'. Review before relying on it.
+[package]
+name = "libomemo-c"
+version = "0.5.1"
+archive = "https://github.com/dino/libomemo-c/releases/download/v0.5.1/libomemo-c-0.5.1.tar.gz"
+sha256 = "766827c07ff2cdc4deaf87bd9485474ed4aeea2fa5152593bf49fabe22b5865f"
+strip_components = 1
+description = "Fork of libsignal-protocol-c adding support for OMEMO XEP-0384"
+homepage = "https://github.com/dino/libomemo-c"
+license = "GPL-3.0-only"
+deps = ["check", "openssl", "protobuf-c"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["protobuf"]

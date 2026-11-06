@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gftp'. Review before relying on it.
+[package]
+name = "gftp"
+version = "2.0.19"
+archive = "https://repo-default.voidlinux.org/distfiles/gftp-2.0.19.tar.bz2"
+sha256 = "5306a46be96d6f4d23906cb1836fb3d732039621a6c7fcfa921acc21ac110bfd"
+strip_components = 1
+description = "Graphical file transfer client"
+homepage = "https://www.gftp.org"
+license = "GPL-2.0-or-later"
+deps = ["gtk+", "openssl"]
+patches = ["patches/cross.patch", "patches/ftbfs.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

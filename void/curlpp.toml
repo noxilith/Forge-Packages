@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'curlpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "curlpp"
+version = "0.8.1"
+archive = "https://github.com/jpbarrette/curlpp/archive/v0.8.1.tar.gz"
+sha256 = "97e3819bdcffc3e4047b6ac57ca14e04af85380bd93afe314bee9dd5c7f46a0a"
+strip_components = 1
+description = "C++ wrapper for libcURL"
+homepage = "http://www.curlpp.org/"
+license = "MIT"
+deps = ["curl"]
+
+[build]
+system = "cmake"

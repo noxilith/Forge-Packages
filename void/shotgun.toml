@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'shotgun'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "shotgun"
+version = "2.5.1"
+archive = "https://github.com/neXromancers/shotgun/archive/refs/tags/v2.5.1.tar.gz"
+sha256 = "4f95fd9d97c50bfd17228b5f59c7ed69b42ed6b50ae45b0a15d202ec1e89a1c6"
+strip_components = 1
+description = "Minimal screenshot utility for X11"
+homepage = "https://github.com/nexromancers/shotgun"
+license = "MPL-2.0"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

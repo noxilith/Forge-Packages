@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'crex'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "crex"
+version = "0.2.5"
+archive = "https://github.com/octobanana/crex/archive/0.2.5.tar.gz"
+sha256 = "c6a166b7a1e696a7babeaf7c5728eece1624704a18357f827129fc95ef2ecc56"
+strip_components = 1
+description = "Explore, test, and check regular expressions in the terminal"
+homepage = "https://github.com/octobanana/crex"
+license = "MIT"
+patches = ["patches/fix-cflags.patch"]
+
+[build]
+system = "cmake"

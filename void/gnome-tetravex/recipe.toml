@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-tetravex'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-tetravex"
+version = "3.38.2"
+archive = "https://download.gnome.org/sources/gnome-tetravex/3.38/gnome-tetravex-3.38.2.tar.xz"
+sha256 = "1fcdf10979b9a3526009d783a1c88a389918f360da4edb44fba25c71f186911b"
+strip_components = 1
+description = "GNOME puzzle game where you align pieces with numbers"
+homepage = "https://wiki.gnome.org/Apps/Tetravex"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3"]
+patches = ["patches/meson-0.61.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

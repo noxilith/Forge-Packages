@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'movit'. Review before relying on it.
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: SDL2_image, fftw
+[package]
+name = "movit"
+version = "1.6.3"
+archive = "https://movit.sesse.net/movit-1.6.3.tar.gz"
+sha256 = "eb19f109ec99d6050de5267d059c7b351d3d5e39c77d43ca348a95f474a99498"
+strip_components = 1
+description = "High-quality, high-performance library for video filters"
+homepage = "https://movit.sesse.net/"
+license = "GPL-2.0-or-later"
+deps = ["eigen", "libepoxy"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

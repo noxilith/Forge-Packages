@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'acr'. Review before relying on it.
+[package]
+name = "acr"
+version = "2.2.6"
+archive = "https://github.com/radare/acr/archive/2.2.6.tar.gz"
+sha256 = "18c8e66c297bb8216a6de54945701e6813f404e162887456f495a01bc1b427b3"
+strip_components = 1
+description = "AutoConf Replacement"
+homepage = "https://github.com/radare/acr"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

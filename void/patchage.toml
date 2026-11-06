@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'patchage'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ganv, hicolor-icon-theme, jack
+[package]
+name = "patchage"
+version = "1.0.10"
+archive = "https://download.drobilla.net/patchage-1.0.10.tar.xz"
+sha256 = "00612a9ecb4130d98e20e820be6a1241ba81e3d06dd76dfb29799ebd671687d4"
+strip_components = 1
+description = "Modular patch bay for audio and MIDI based on JACK and ALSA"
+homepage = "https://drobilla.net/software/patchage"
+license = "GPL-3.0-only"
+deps = ["alsa-lib", "desktop-file-utils", "fmt", "gtkmm2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

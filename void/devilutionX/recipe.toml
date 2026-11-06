@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'devilutionX'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL2_image, bzip2
+[package]
+name = "devilutionX"
+version = "1.5.5"
+archive = "https://github.com/diasurgical/devilutionX/releases/download/1.5.5/devilutionx-src.tar.xz"
+sha256 = "dfe7894dd4dfa5fd2375d708aaa6837eef3986ccac248345a7988059a507de6a"
+strip_components = 1
+description = "Diablo I engine for modern operating systems"
+homepage = "https://github.com/diasurgical/devilutionX"
+license = "custom:Sustainable Use License"
+deps = ["SDL2", "fmt", "gtest", "libsodium", "zlib"]
+patches = ["patches/disable_test.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DVERSION_NUM=1.5.5", "-DDISABLE_ZERO_TIER=ON"]
+tools = ["pkg-config"]

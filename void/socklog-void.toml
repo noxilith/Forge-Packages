@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'socklog-void'. Review before relying on it.
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: runit, socklog
+[package]
+name = "socklog-void"
+version = "20200115"
+archive = "https://github.com/void-linux/socklog-void/archive/20200115.tar.gz"
+sha256 = "2bbd906513584ef1d4b729cdaf19356eaacb37d00e29fd26f7f06e34f492ed5f"
+strip_components = 1
+description = "Void Linux socklog configuration"
+homepage = "https://github.com/void-linux/socklog-void"
+license = "Public Domain"
+deps = ["libcap"]
+
+[build]
+system = "make"

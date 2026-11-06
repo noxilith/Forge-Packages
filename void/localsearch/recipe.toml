@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'localsearch'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_check, pre_check
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: asciidoc, ffmpeg6, harfbuzz, python3-dbusmock
+[package]
+name = "localsearch"
+version = "3.11.0"
+archive = "https://download.gnome.org/sources/localsearch/3.11/localsearch-3.11.0.tar.xz"
+sha256 = "c6774761a8b9f4a06f6812f1c8078bee2e937d65e376c3d2338b78993e5f4666"
+strip_components = 1
+description = "File search framework of the GNOME desktop"
+homepage = "https://tracker.gnome.org/"
+license = "GPL-2.0-or-later"
+deps = ["dbus", "exempi", "giflib", "glib", "gobject-introspection", "gst-plugins-base1", "gstreamer1", "libcue", "libexif", "libgexiv2", "libgsf", "libgxps", "libicu78", "libiptcdata", "libjpeg-turbo", "libosinfo", "libpng", "libseccomp", "libxml2", "poppler", "tiff", "tinysparql", "totem-pl-parser", "upower", "zlib"]
+patches = ["patches/sqlite-seccomp.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dextract=true", "-Dcue=enabled", "-Dexif=enabled", "-Dlibav=enabled", "-Dgif=enabled", "-Dgsf=enabled", "-Diptc=enabled", "-Diso=enabled", "-Djpeg=enabled", "-Dpdf=enabled", "-Dplaylist=enabled", "-Dpng=enabled", "-Draw=enabled", "-Dtiff=enabled", "-Dxml=enabled", "-Dxmp=enabled", "-Dxps=enabled", "-Dbattery_detection=upower", "-Dcharset_detection=icu", "-Dsystemd_user_services=false"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'QMPlay2'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, qt6-qt5compat, qt6-svg, qt6-tools
+[package]
+name = "QMPlay2"
+version = "26.08.02"
+archive = "https://github.com/zaps166/QMPlay2/releases/download/26.08.02/QMPlay2-src-26.08.02.tar.xz"
+sha256 = "26ed1b33e38cc39635d363e2860a36dbc8b97b5e35f4b4dc7dffd6192fecf498"
+strip_components = 1
+description = "Video and audio player which can play most formats and codecs"
+homepage = "http://zaps166.sourceforge.net/?app=QMPlay2"
+license = "LGPL-3.0-only"
+deps = ["alsa-lib", "libXv", "libass", "libcdio", "libcdio-paranoia", "libgme", "libsidplayfp", "libva-glx", "pulseaudio", "qt6-declarative", "taglib"]
+patches = ["patches/fix-cross-compile.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["qt6-base", "shaderc"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXxf86dga'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXxf86dga"
+version = "1.1.6"
+archive = "https://www.x.org/releases/individual/lib/libXxf86dga-1.1.6.tar.xz"
+sha256 = "be44427579808fe3a217d59f51cae756a26913eb6e4c8738ccab65ff56d7980f"
+strip_components = 1
+description = "Library for the XFree86-DGA X extension"
+homepage = "https://www.x.org/releases/individual"
+license = "MIT"
+deps = ["libXext", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]

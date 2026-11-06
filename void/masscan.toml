@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'masscan'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "masscan"
+version = "1.3.2"
+archive = "https://github.com/robertdavidgraham/masscan/archive/1.3.2.tar.gz"
+sha256 = "0363e82c07e6ceee68a2da48acd0b2807391ead9a396cf9c70b53a2a901e3d5f"
+strip_components = 1
+description = "TCP port scanner, spews SYN packets asynchronously"
+homepage = "https://github.com/robertdavidgraham/masscan"
+license = "AGPL-3.0-only"
+deps = ["libpcap"]
+
+[build]
+system = "make"

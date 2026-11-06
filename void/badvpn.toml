@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'badvpn'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: nss
+[package]
+name = "badvpn"
+version = "1.999.130"
+archive = "https://github.com/ambrop72/badvpn/archive/1.999.130.tar.gz"
+sha256 = "bfd4bbfebd7274bcec792558c9a2fd60e39cd92e04673825ade5d04154766109"
+strip_components = 1
+description = "Peer-to-peer VPN system"
+homepage = "https://github.com/ambrop72/badvpn"
+license = "BSD-3-Clause"
+deps = ["nspr", "openssl"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

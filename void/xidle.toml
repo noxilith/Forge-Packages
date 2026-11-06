@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xidle'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "xidle"
+version = "6.5"
+archive = "https://github.com/steinex/xidle-linux/archive/6.5.tar.gz"
+sha256 = "ccb487b5bff35ec4df01ff3034e6a999b87595b4cab3093928f07e96c8725c91"
+strip_components = 1
+description = "Run a program on X inactivity"
+homepage = "https://github.com/steinex/xidle-linux"
+license = "BSD-2-Clause"
+deps = ["libX11", "libXScrnSaver", "libXext", "libbsd", "libmd"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cglm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cglm"
+version = "0.9.6"
+archive = "https://github.com/recp/cglm/archive/v0.9.6.tar.gz"
+sha256 = "be5e7d384561eb0fca59724a92b7fb44bf03e588a7eae5123a7d796002928184"
+strip_components = 1
+description = "Highly Optimized Graphics Math (glm) for C"
+homepage = "https://github.com/recp/cglm"
+license = "MIT"
+
+[build]
+system = "meson"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'linbox'. Review before relying on it.
+[package]
+name = "linbox"
+version = "1.7.1"
+archive = "https://github.com/linbox-team/linbox/releases/download/v1.7.1/linbox-1.7.1.tar.gz"
+sha256 = "a2b5f910a54a46fa75b03f38ad603cae1afa973c95455813d85cf72c27553bd8"
+strip_components = 1
+description = "C++ library for exact, high-performance linear algebra"
+homepage = "https://linalg.org"
+license = "LGPL-2.1-or-later"
+deps = ["fflas-ffpack"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

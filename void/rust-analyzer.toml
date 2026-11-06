@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rust-analyzer'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "rust-analyzer"
+version = "2026.07.20"
+archive = "https://github.com/rust-lang/rust-analyzer/archive/refs/tags/2026-07-20.tar.gz"
+sha256 = "400a4f5f6990d7e2befee21eaa7a0c2a2090a0c7d9bee24e11733483f2a380e7"
+strip_components = 1
+description = "Rust compiler front-end for IDEs"
+homepage = "https://rust-analyzer.github.io/"
+license = "Apache-2.0, MIT"
+
+[build]
+system = "cargo"

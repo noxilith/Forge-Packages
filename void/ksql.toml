@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ksql'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "ksql"
+version = "0.3.5"
+archive = "https://kristaps.bsd.lv/ksql/snapshots/ksql-0.3.5.tar.gz"
+sha256 = "8db29bf3af8a8af0b151efbcc0e9a908851e03b387601fda185cb06326501cb5"
+strip_components = 1
+description = "Yet another SQLite wrapper"
+homepage = "https://kristaps.bsd.lv/ksql/"
+license = "ISC"
+
+[build]
+system = "autotools"

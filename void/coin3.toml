@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'coin3'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, doxygen
+[package]
+name = "coin3"
+version = "4.0.10"
+archive = "https://github.com/coin3d/coin/archive/refs/tags/v4.0.10.tar.gz"
+sha256 = "c2317640bfa8eed50eeda7bc4d876d03e0fc17c2306a76b5fd73e8c33fa678e0"
+strip_components = 1
+description = "High-level 3D graphics toolkit"
+homepage = "https://coin3d.github.io/"
+license = "BSD-3-Clause"
+deps = ["expat", "glu"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_INSTALL_INCLUDEDIR=include/Coin3", "-DCOIN_BUILD_TESTS=OFF", "-DCOIN_BUILD_DOCUMENTATION=ON", "-DUSE_EXTERNAL_EXPAT=ON"]
+deps = ["graphviz"]

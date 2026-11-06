@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gtk2-engines'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gtk2-engines"
+version = "2.21.0"
+archive = "https://sources.archlinux.org/other/gtk-engines/gtk-engines-2.21.0.tar.gz"
+sha256 = "6c38c297c3b95d667c5159c1f379384806fedb53a828d44ac73ff54570ed185b"
+strip_components = 1
+description = "GTK+2 Theme engines"
+homepage = "http://live.gnome.org/GnomeArt"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-animation"]
+tools = ["pkg-config"]

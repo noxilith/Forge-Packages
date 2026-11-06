@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 're2'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "re2"
+version = "2025.11.05"
+archive = "https://github.com/google/re2/archive/2025-11-05.tar.gz"
+sha256 = "87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67"
+strip_components = 1
+description = "Efficient, principled regular expression library"
+homepage = "https://github.com/google/re2"
+license = "BSD-3-Clause"
+deps = ["abseil-cpp", "libicu78"]
+patches = ["patches/pkg-config.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DRE2_USE_ICU=ON"]
+tools = ["pkg-config"]

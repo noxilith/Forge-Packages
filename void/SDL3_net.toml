@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'SDL3_net'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "SDL3_net"
+version = "3.2.0"
+archive = "https://www.libsdl.org/projects/SDL_net/release/SDL3_net-3.2.0.tar.gz"
+sha256 = "098522fc26d4e302ef9348aee6e76e67fe504dfefd7f596236568f8330570c41"
+strip_components = 1
+description = "Networking library (SDL 3.x)"
+homepage = "https://github.com/libsdl-org/SDL_net"
+license = "Zlib"
+deps = ["SDL3"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSDLNET_SAMPLES=OFF"]
+tools = ["pkg-config"]

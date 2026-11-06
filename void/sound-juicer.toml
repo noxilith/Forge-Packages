@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sound-juicer'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libcanberra
+[package]
+name = "sound-juicer"
+version = "3.40.0"
+archive = "https://download.gnome.org/sources/sound-juicer/3.40/sound-juicer-3.40.0.tar.xz"
+sha256 = "2ee882744391beb4c6d64a0f6825fb765510b706ec2b704bfb42e42afaae1de6"
+strip_components = 1
+description = "CD ripping tool using GTK+ and GStreamer"
+homepage = "https://wiki.gnome.org/Apps/SoundJuicer"
+license = "GPL-2.0-or-later"
+deps = ["brasero", "desktop-file-utils", "gsettings-desktop-schemas", "gst-plugins-base1", "gst-plugins-good1", "iso-codes", "libdiscid", "libmusicbrainz5"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

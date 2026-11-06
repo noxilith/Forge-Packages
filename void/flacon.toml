@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'flacon'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg, hicolor-icon-theme, qt6-tools
+[package]
+name = "flacon"
+version = "12.0.0"
+archive = "https://github.com/Flacon/flacon/archive/v12.0.0.tar.gz"
+sha256 = "78199ff925b7cd0ffeb628d47909ca4172f8ff0d8fd8192bb537e0c012e6f4c6"
+strip_components = 1
+description = "Audio File Encoder. Splits audio tracks into separate tracks"
+homepage = "https://flacon.github.io/"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base", "taglib", "uchardet"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_QT6=ON", "-DUSE_QT5=OFF"]
+tools = ["pkg-config"]

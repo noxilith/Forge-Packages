@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libuev'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libuev"
+version = "2.4.1"
+archive = "https://github.com/troglobit/libuev/archive/v2.4.1.tar.gz"
+sha256 = "aeeca1889a65ee1927845676da2c23f34e4c3ae770dedce8313dc6088bd92d52"
+strip_components = 1
+description = "Lightweight event loop library"
+homepage = "https://github.com/troglobit/libuev"
+license = "MIT"
+
+[build]
+system = "autotools"

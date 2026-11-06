@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'anubis'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_package, go_import_path
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "anubis"
+version = "1.27.0"
+archive = "https://github.com/TecharoHQ/anubis/archive/refs/tags/v1.27.0.tar.gz"
+sha256 = "5a3f93d5b763283e2432f2574f30d30434befd5e1788990bd031bdf0696e78b3"
+strip_components = 1
+description = "Weighs the soul of requests using proof-of-work to stop crawlers"
+homepage = "https://anubis.techaro.lol/"
+license = "MIT"
+
+[build]
+system = "go"
+deps = ["esbuild", "nodejs"]

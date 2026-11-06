@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dsda-doom'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL2_image, fluidsynth
+[package]
+name = "dsda-doom"
+version = "0.29.3"
+archive = "https://github.com/kraflab/dsda-doom/archive/refs/tags/v0.29.3.tar.gz"
+sha256 = "9b9218d26055d2e2a3b830913cfe52f56b2a6dd4a16720634f0bc5dbe560fb84"
+strip_components = 1
+description = "Fork of prboom+ with extra tooling for demo recording and playback"
+homepage = "https://github.com/kraflab/dsda-doom"
+license = "GPL-2.0-or-later"
+deps = ["SDL2_mixer", "dumb", "libmad", "libvorbis", "libzip", "pcre", "portmidi"]
+
+[build]
+system = "cmake"
+subdir = "prboom2"

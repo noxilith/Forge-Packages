@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'vapoursynth'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: python3-Cython
+[package]
+name = "vapoursynth"
+version = "R66"
+archive = "https://github.com/vapoursynth/vapoursynth/archive/R66.tar.gz"
+sha256 = "e2c82b1f583adbc33dabbe59c0dc65e6aede70dedebe79be94155cb38d418b2c"
+strip_components = 1
+description = "Application for video manipulation"
+homepage = "http://www.vapoursynth.com"
+license = "LGPL-2.1-or-later, OFL-1.1"
+deps = ["zimg"]
+
+[build]
+system = "autotools"
+tools = ["nasm", "pkg-config"]

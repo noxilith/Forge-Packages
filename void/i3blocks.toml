@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'i3blocks'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_build_args
+[package]
+name = "i3blocks"
+version = "1.5"
+archive = "https://github.com/vivien/i3blocks/archive/1.5.tar.gz"
+sha256 = "41764d771043d0c06c23d75b1e3ca6b2b94279191483d03f10c5e034d6722ebf"
+strip_components = 1
+description = "Flexible scheduler for i3bar"
+homepage = "https://github.com/vivien/i3blocks"
+license = "GPL-3.0-or-later"
+deps = ["bash-completion"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libbytesize'. Review before relying on it.
+# hooks not translated: pre_check
+# needs, but Forge has no recipe for yet: mpfr
+[package]
+name = "libbytesize"
+version = "2.12"
+archive = "https://github.com/storaged-project/libbytesize/releases/download/2.12/libbytesize-2.12.tar.gz"
+sha256 = "8356bac2cafd2f31f39bf1ad373cef8448cab08b817aeaee5c526d54e81c3c5a"
+strip_components = 1
+description = "Library for operations with sizes in bytes"
+homepage = "https://github.com/storaged-project/libbytesize"
+license = "LGPL-2.1-or-later"
+deps = ["pcre2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'flatpak-kcm'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-svg
+[package]
+name = "flatpak-kcm"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/flatpak-kcm-6.7.5.tar.xz"
+sha256 = "acf25d4c7eed41e0d0ba9c897e6dae081b9021f9bcb75e3ca532ef5406ffa0ad"
+strip_components = 1
+description = "KDE Config Module for Flatpak Permissions"
+homepage = "https://invent.kde.org/plasma/flatpak-kcm"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["flatpak", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdeclarative", "kf6-ki18n", "kf6-kitemmodels", "kf6-kservice", "polkit", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage", "qt6-base"]

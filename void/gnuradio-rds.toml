@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnuradio-rds'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: boost, python3-pybind11
+[package]
+name = "gnuradio-rds"
+version = "3.10"
+archive = "https://github.com/bastibl/gr-rds/archive/v3.10.tar.gz"
+sha256 = "083a9f479d83ac2f6273cdf3b3cf1beca47dfdce2d28264ce979f23c119607f7"
+strip_components = 1
+description = "GNUradio FM RDS/TMC Transceiver"
+homepage = "https://github.com/bastibl/gr-rds"
+license = "GPL-2.0-or-later"
+deps = ["gnuradio"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

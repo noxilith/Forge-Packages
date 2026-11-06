@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-kstatusnotifieritem'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kstatusnotifieritem"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kstatusnotifieritem-6.30.0.tar.xz"
+sha256 = "373fb23fe6a5c0c5c755c473e7cf272796ea59891c05157c3a7e9607a4c4af4f"
+strip_components = 1
+description = "Implementation of Status Notifier Items"
+homepage = "https://invent.kde.org/frameworks/kstatusnotifieritem"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kwindowsystem", "qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

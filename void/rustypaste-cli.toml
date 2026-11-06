@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rustypaste-cli'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rustypaste-cli"
+version = "0.10.0"
+archive = "https://github.com/orhun/rustypaste-cli/archive/refs/tags/v0.10.0.tar.gz"
+sha256 = "cfa4fa94d950c59eb0474e2387e0171d77fba3abfbecef4ffbf520dbb897de44"
+strip_components = 1
+description = "CLI tool for rustypaste"
+homepage = "https://github.com/orhun/rustypaste-cli"
+license = "MIT"
+
+[build]
+system = "cargo"

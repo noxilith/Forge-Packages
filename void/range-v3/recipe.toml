@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'range-v3'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "range-v3"
+version = "0.12.0"
+archive = "https://github.com/ericniebler/range-v3/archive/0.12.0.tar.gz"
+sha256 = "015adb2300a98edfceaf0725beec3337f542af4915cec4d0b89fa0886f4ba9cb"
+strip_components = 1
+description = "Experimental range library for C++11/14/17"
+homepage = "https://github.com/ericniebler/range-v3"
+license = "BSL-1.0"
+patches = ["patches/1715.patch", "patches/1716.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DRANGE_V3_EXAMPLES=OFF", "-DRANGES_BUILD_CALENDAR_EXAMPLE=OFF", "-DRANGES_NATIVE=OFF"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kaccounts-integration'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libaccounts-qt, signon-plugin-oauth2, signond
+[package]
+name = "kf6-kaccounts-integration"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kaccounts-integration-26.08.1.tar.xz"
+sha256 = "7b12dc58c368690428ccaa71528f1dfe231eb99fc3a222cf2a8d6cf93dccbb6a"
+strip_components = 1
+description = "Administer web accounts for sites and services across the KDE desktop"
+homepage = "https://invent.kde.org/network/kaccounts-integration"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kparts", "kf6-kwallet", "qcoro-qt6", "qt6-base", "qt6-declarative", "signon-kwallet-extension"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage"]

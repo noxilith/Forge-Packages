@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cfssl'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "cfssl"
+version = "1.6.5"
+archive = "https://github.com/cloudflare/cfssl/archive/v1.6.5.tar.gz"
+sha256 = "b682452402f403b6ee668bb042bd9b753fe48df84fa7a18a1c32606ffd4918af"
+strip_components = 1
+description = "CFSSL: Cloudflare's PKI and TLS toolkit"
+homepage = "https://github.com/cloudflare/cfssl"
+license = "BSD-2-Clause"
+
+[build]
+system = "go"

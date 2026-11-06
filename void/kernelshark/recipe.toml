@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kernelshark'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: freefont-ttf, qt5
+[package]
+name = "kernelshark"
+version = "2.1.1"
+archive = "https://git.kernel.org/pub/scm/utils/trace-cmd/kernel-shark.git/snapshot/kernel-shark-kernelshark-v2.1.1.tar.gz"
+sha256 = "78a0cf28bc06d0e43cd5a2512f83c02b7b5c969a26a0d4b56338154d6cf6f7be"
+strip_components = 1
+description = "Front end reader of trace-cmd(1) output"
+homepage = "https://www.kernelshark.org"
+license = "GPL-3.0-or-later"
+deps = ["json-c", "libXi", "libXmu", "libfreeglut", "libtraceevent", "libtracefs", "trace-cmd"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_SKIP_RPATH=ON"]
+tools = ["pkg-config"]

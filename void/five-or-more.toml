@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'five-or-more'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "five-or-more"
+version = "48.1"
+archive = "https://download.gnome.org/sources/five-or-more/48/five-or-more-48.1.tar.xz"
+sha256 = "d941ce2e37ea66c0d80f1e81797fbcbbe4e8ef65a790b3cc5e56b9f10b5ea5a3"
+strip_components = 1
+description = "GNOME align five or more objects game"
+homepage = "https://wiki.gnome.org/Apps/Five%20or%20more"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libgee", "libgnome-games-support", "librsvg"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

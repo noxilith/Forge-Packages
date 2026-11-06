@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'geos'. Review before relying on it.
+[package]
+name = "geos"
+version = "3.13.0"
+archive = "https://download.osgeo.org/geos/geos-3.13.0.tar.bz2"
+sha256 = "47ec83ff334d672b9e4426695f15da6e6368244214971fabf386ff8ef6df39e4"
+strip_components = 1
+description = "C++ port of the Java Topology Suite (JTS)"
+homepage = "https://libgeos.org/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "cmake"

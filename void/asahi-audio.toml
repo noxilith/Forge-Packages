@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'asahi-audio'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: alsa-ucm-conf-asahi, bankstown, lsp-plugins, triforce
+[package]
+name = "asahi-audio"
+version = "5.0"
+archive = "https://github.com/AsahiLinux/asahi-audio/archive/refs/tags/v5.0.tar.gz"
+sha256 = "e3c0cf3ff4ccfd2d79260cd2d42a6ec992f3fdbf469a6dc0ecade8ade2d0c9ba"
+strip_components = 1
+description = "Linux userspace audio configuration for Apple Silicon Macs"
+homepage = "https://github.com/AsahiLinux/asahi-audio"
+license = "MIT AND GPL-2.0-only"
+deps = ["pipewire", "speakersafetyd", "wireplumber"]
+
+[build]
+system = "make"

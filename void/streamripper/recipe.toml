@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'streamripper'. Review before relying on it.
+[package]
+name = "streamripper"
+version = "1.64.6"
+archive = "https://downloads.sourceforge.net/sourceforge/streamripper/streamripper-1.64.6.tar.gz"
+sha256 = "c1d75f2e9c7b38fd4695be66eff4533395248132f3cc61f375196403c4d8de42"
+strip_components = 1
+description = "Mp3 recorder for shoutcast-compatible streams / internet radio"
+homepage = "http://streamripper.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["faad2", "glib", "libmad", "libvorbis"]
+patches = ["patches/musl-fix.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

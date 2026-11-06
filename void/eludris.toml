@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'eludris'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, build_helper
+[package]
+name = "eludris"
+version = "0.3.3"
+archive = "https://sources.voidlinux.org/eludris-0.3.3/v0.3.3.tar.gz"
+sha256 = "e204969d056e147a97cb8d1b2a0c16b7e4d06c5895ef9bb939884ddc0ecdb3c2"
+strip_components = 1
+description = "Simple CLI to help with setting up and managing your Eludris instance"
+homepage = "https://eludris.com/"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--bin", "eludris"]
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'persepolis'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: python3-packaging-bootstrap, python3-psutil, python3-pyside6, python3-pysocks, python3-requests, python3-setproctitle, python3-urllib3, qt6-svg
+[package]
+name = "persepolis"
+version = "5.2.0"
+archive = "https://github.com/persepolisdm/persepolis/archive/5.2.0.tar.gz"
+sha256 = "8d002e369955fd77e5353714185ce3edb98463b7117a26583b72f4db4e51b2c8"
+strip_components = 1
+description = "QT Download Manager"
+homepage = "https://persepolisdm.github.io/"
+license = "GPL-3.0-or-later"
+patches = ["patches/Handle-missing-XDG_CURRENT_DESKTOP-env-var.patch"]
+
+[build]
+system = "meson"

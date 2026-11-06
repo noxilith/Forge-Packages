@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'eilmeldung'. Review before relying on it.
+# needs, but Forge has no recipe for yet: llvm, sqlite
+[package]
+name = "eilmeldung"
+version = "1.7.2"
+archive = "https://github.com/christo-auer/eilmeldung/archive/refs/tags/1.7.2.tar.gz"
+sha256 = "26fa6822891e69248fe25467091329b7fe63f39073dcabd5f903b457ccc7e28e"
+strip_components = 1
+description = "TUI RSS reader based on the news-flash library"
+homepage = "https://github.com/christo-auer/eilmeldung"
+license = "GPL-3.0-or-later"
+deps = ["libsixel", "libxml2", "oniguruma", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

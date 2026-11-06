@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gutenprint'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: cups, ghostscript
+[package]
+name = "gutenprint"
+version = "5.3.4"
+archive = "https://downloads.sourceforge.net/sourceforge/gimp-print/gutenprint-5.3.4.tar.xz"
+sha256 = "db44a701d2b8e6a8931c83cec06c91226be266d23e5c189d20a39dd175f2023b"
+strip_components = 1
+description = "Top quality printer drivers for POSIX systems"
+homepage = "http://gimp-print.sourceforge.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-rpath", "--enable-samples", "--disable-static", "--disable-static-genppd", "--enable-cups-ppds", "--enable-simplified-cups-ppds=only", "--enable-translated-cups-ppds", "--enable-globalized-cups-ppds"]
+tools = ["perl"]

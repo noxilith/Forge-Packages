@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'fmtools'. Review before relying on it.
+[package]
+name = "fmtools"
+version = "2.0.7"
+archive = "https://benpfaff.org/fmtools/fmtools-2.0.7.tar.gz"
+sha256 = "75174e07d8cde6d4a8a5d7bbaa3a3b0760a850e7f6840cb7c6246227b18f5a39"
+strip_components = 1
+description = "Utility for adjusting the frequency and volume of FM radio cards"
+homepage = "https://benpfaff.org/fmtools/"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"

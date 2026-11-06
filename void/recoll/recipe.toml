@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'recoll'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: python3-setuptools, qt5
+[package]
+name = "recoll"
+version = "1.40.4"
+archive = "https://www.lesbonscomptes.com/recoll/recoll-1.40.4.tar.gz"
+sha256 = "a48503c4b0040dc1a476340cb7a1afb34366c21ae665bdad3c9ef8958845c1fa"
+strip_components = 1
+description = "Full text search tool based on Xapian backend"
+homepage = "https://www.lesbonscomptes.com/recoll/"
+license = "GPL-2.0-or-later"
+deps = ["aspell", "file", "libxslt", "xapian-core", "zlib"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Drecollq=true", "-Dpython-chm=false", "-Dx11mon=false", "-Dwebkit=false", "-Dsystemd=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "which"]

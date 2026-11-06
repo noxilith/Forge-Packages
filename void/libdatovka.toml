@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libdatovka'. Review before relying on it.
+[package]
+name = "libdatovka"
+version = "0.7.3"
+archive = "https://datovka.nic.cz/libdatovka/libdatovka-0.7.3.tar.xz"
+sha256 = "a6924d4cea81a87d6201036cafebe1283a8d372193a99e731970abf21e1434c1"
+strip_components = 1
+description = "Client library for accessing SOAP services of ISDS"
+homepage = "https://www.datovka.cz/cs/pages/libdatovka.html"
+license = "LGPL-3.0-or-later"
+deps = ["curl", "expat", "gettext", "gpgme", "json-c", "libgcrypt", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-doc", "--enable-openssl-backend", "--disable-static"]
+tools = ["pkg-config"]

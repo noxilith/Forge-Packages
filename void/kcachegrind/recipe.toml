@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kcachegrind'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt6-tools
+[package]
+name = "kcachegrind"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kcachegrind-26.08.1.tar.xz"
+sha256 = "179753cb1884fbad0ad43517ef660dda4ceeb161be741fcd54553485d7fbd852"
+strip_components = 1
+description = "Visualization of Performance Profiling Data"
+homepage = "https://kde.org/applications/development/kcachegrind/"
+license = "GPL-2.0-only, GFDL-1.2-only"
+deps = ["kf6-karchive", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-ki18n", "kf6-kio", "kf6-kwidgetsaddons", "kf6-kxmlgui"]
+patches = ["patches/python3.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

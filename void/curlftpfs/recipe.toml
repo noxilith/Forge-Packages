@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'curlftpfs'. Review before relying on it.
+[package]
+name = "curlftpfs"
+version = "0.9.2"
+archive = "https://downloads.sourceforge.net/sourceforge/curlftpfs/curlftpfs-0.9.2.tar.gz"
+sha256 = "4eb44739c7078ba0edde177bdd266c4cfb7c621075f47f64c85a06b12b3c6958"
+strip_components = 1
+description = "A FTP filesystem based on cURL and FUSE"
+homepage = "http://curlftpfs.sourceforge.net/"
+license = "GPL-2"
+deps = ["curl", "fuse", "glib"]
+patches = ["patches/curlftpfs-0.9.2-create-fix.patch", "patches/curlftpfs-0.9.2-memleak#591298.patch", "patches/curlftpfs-0.9.2-memleak-cached#591299.patch", "patches/curlftpfs-0.9.2-offset_64_another.patch", "patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

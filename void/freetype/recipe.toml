@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'freetype'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: bzip2
+[package]
+name = "freetype"
+version = "2.15.0"
+archive = "https://download-mirror.savannah.gnu.org/releases/freetype/freetype-2.15.0.tar.xz"
+sha256 = "93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5"
+strip_components = 1
+description = "Font rendering engine and library API"
+homepage = "https://www.freetype.org/"
+license = "GPL-2.0-or-later OR FTL"
+deps = ["brotli", "libpng"]
+patches = ["patches/enable-subpixel-rendering.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-freetype-config"]
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'flare-game'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "flare-game"
+version = "1.14"
+archive = "https://github.com/flareteam/flare-game/archive/v1.14.tar.gz"
+sha256 = "65758462070aa88842084f8ee69083d8226e93cfbf83481663276d8307494b8e"
+strip_components = 1
+description = "Single-player 2D action RPG using the FLARE engine"
+homepage = "http://flarerpg.org/"
+license = "GPL-3.0-or-later, CC-BY-SA-3.0"
+deps = ["flare-engine"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDATADIR=share/flare"]

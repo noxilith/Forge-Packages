@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-adobe-75dpi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-adobe-75dpi"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-adobe-75dpi-1.0.4.tar.gz"
+sha256 = "6a2be7148406fc5df4f1b5258955418fdacb17ee19946613164517ff501c41c7"
+strip_components = 1
+description = "Standard 75pi Adobe PCF fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'print-manager'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cups, kde-plasma-base
+[package]
+name = "print-manager"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/print-manager-6.7.5.tar.xz"
+sha256 = "f1658390a7104f2b806176f188ea38f148e7900cb928b4ddfcae0616af52f6ce"
+strip_components = 1
+description = "Printing management for KDE Plasma"
+homepage = "https://invent.kde.org/plasma/print-manager"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdeclarative", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-knotifications", "kf6-kpackage", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kirigami-addons", "libplasma", "plasma-framework", "qt6-declarative", "system-config-printer"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

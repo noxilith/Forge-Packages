@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gtksourceviewmm'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "gtksourceviewmm"
+version = "3.18.0"
+archive = "https://download.gnome.org/sources/gtksourceviewmm/3.18/gtksourceviewmm-3.18.0.tar.xz"
+sha256 = "51081ae3d37975dae33d3f6a40621d85cb68f4b36ae3835eec1513482aacfb39"
+strip_components = 1
+description = "GtkSourceview C++ bindings"
+homepage = "https://developer.gnome.org/gtksourceviewmm/"
+license = "GPL-2.0-or-later"
+deps = ["glibmm", "gtkmm", "gtksourceview"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-documentation"]
+tools = ["perl", "pkg-config"]
+deps = ["graphviz", "libxslt"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libpam-policycache'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS, make_dirs
+[package]
+name = "libpam-policycache"
+version = "0.11"
+archive = "https://github.com/google/libpam-policycache/archive/v0.11.tar.gz"
+sha256 = "d1a074493d3a4076094a79093ec02c8fdd886069b9624d8b6765f7a1e840fae6"
+strip_components = 1
+description = "Password caching module with advanced policies for PAM"
+homepage = "https://github.com/google/libpam-policycache"
+license = "Apache-2.0"
+deps = ["glib", "libscrypt", "pam"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

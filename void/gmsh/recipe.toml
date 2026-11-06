@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gmsh'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "gmsh"
+version = "4.13.1"
+archive = "https://gmsh.info/src/gmsh-4.13.1-source.tgz"
+sha256 = "77972145f431726026d50596a6a44fb3c1c95c21255218d66955806b86edbe8d"
+strip_components = 1
+description = "Three-dimensional finite element mesh generator"
+homepage = "https://gmsh.info"
+license = "GPL-2.0-or-later"
+deps = ["freetype", "glu", "gmp", "lapack"]
+patches = ["patches/32bitpointers.patch", "patches/string-time.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_SYSTEM_CONTRIB=ON"]

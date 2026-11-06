@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lifelines'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "lifelines"
+version = "3.1.1"
+archive = "https://github.com/lifelines/lifelines/releases/download/3.1.1/lifelines-3.1.1.tar.gz"
+sha256 = "083007f81e406fce15931e5a29a7ba0380ef0b3b9c61d5eb5228ad378c7f332d"
+strip_components = 1
+description = "Genealogy Software System"
+homepage = "https://github.com/lifelines/lifelines"
+license = "MIT"
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["bison"]

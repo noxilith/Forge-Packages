@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'aml'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "aml"
+version = "0.3.0"
+archive = "https://github.com/any1/aml/archive/v0.3.0.tar.gz"
+sha256 = "cba1ca1689d4031faf37bb7a184559106b6d2f462ae8890a9fa16e3022ca1eb0"
+strip_components = 1
+description = "Another Main Loop"
+homepage = "https://github.com/any1/aml"
+license = "ISC"
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

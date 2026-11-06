@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libpanel'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gi-docgen
+[package]
+name = "libpanel"
+version = "1.8.1"
+archive = "https://download.gnome.org/sources/libpanel/1.8/libpanel-1.8.1.tar.xz"
+sha256 = "b87b8fa9b79768cc704243793f0158a040a1e46d37b9889188545a7f7dcaa6fb"
+strip_components = 1
+description = "Dock/panel library for GTK 4"
+homepage = "https://gitlab.gnome.org/GNOME/libpanel"
+license = "LGPL-3.0-or-later"
+deps = ["gtk4", "libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3", "vala"]

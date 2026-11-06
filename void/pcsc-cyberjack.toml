@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pcsc-cyberjack'. Review before relying on it.
+[package]
+name = "pcsc-cyberjack"
+version = "3.99.5"
+archive = "https://support.reiner-sct.de/downloads/LINUX/V3.99.5_SP16/pcsc-cyberjack-3.99.5final.SP16.tar.bz2"
+sha256 = "141489261c0d436be4b92f78faf240c32694426685413d9d50e3585feba5eb79"
+strip_components = 1
+description = "Linux drivers for cyberJack® RFID"
+homepage = "https://www.reiner-sct.com/lang/en/support"
+license = "LGPL-2.1-only, GPL-2.0-only"
+deps = ["eudev", "libusb-compat", "pcsc-ccid", "pcsclite"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-udev"]
+tools = ["pkg-config"]

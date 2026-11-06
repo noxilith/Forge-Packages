@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'yamlfmt'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "yamlfmt"
+version = "0.21.0"
+archive = "https://github.com/google/yamlfmt/archive/refs/tags/v0.21.0.tar.gz"
+sha256 = "9ec915d70e527a94171eaaf6b785d1423222b5b82e7633f80dcc6b66e6a655aa"
+strip_components = 1
+description = "Extensible command line tool to format yaml files"
+homepage = "https://github.com/google/yamlfmt"
+license = "Apache-2.0"
+
+[build]
+system = "go"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lollypop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-BeautifulSoup4, python3-Pillow, yt-dlp
+[package]
+name = "lollypop"
+version = "1.4.48"
+archive = "https://adishatz.org/lollypop/lollypop-1.4.48.tar.xz"
+sha256 = "2d9e2c9ec58d8e1fb3b75d2aed293dce119c405fc60040493f4883f390c36bba"
+strip_components = 1
+description = "Music player for GNOME"
+homepage = "https://gitlab.gnome.org/World/lollypop"
+license = "GPL-3.0-or-later"
+deps = ["dconf", "gst-libav", "gst-plugins-good1", "gtk+3", "libhandy1", "libnotify", "libsecret", "libsoup3", "python3-gobject", "totem-pl-parser"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gobject-introspection"]

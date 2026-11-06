@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'thingylaunch'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "thingylaunch"
+version = "2.0.3"
+archive = "https://github.com/gahr/thingylaunch/archive/2.0.3.tar.gz"
+sha256 = "4d9cc6b826bddb3d02836f721316bfc24c2b31f75c9c2d5077ae162eb3d60b60"
+strip_components = 1
+description = "X11 application launcher with tab-completion, history, and bookmarks"
+homepage = "https://gahr.ch/thingylaunch/"
+license = "BSD-2-Clause"
+deps = ["xcb-util-keysyms", "xcb-util-wm"]
+patches = ["patches/fix-cmake-flags-override.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_XCB=ON"]
+tools = ["pkg-config"]

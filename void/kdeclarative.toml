@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kdeclarative'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kdeclarative"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kdeclarative-5.116.0.tar.xz"
+sha256 = "9e7f9c2ac3d22dec3baa0a0fc17a9366ffb442c41cdb81c37cf65ca462eac55f"
+strip_components = 1
+description = "KDE Integration of QML and KDE work spaces"
+homepage = "https://invent.kde.org/frameworks/kdeclarative"
+license = "LGPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kio", "kpackage", "libepoxy"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kconfig", "kcoreaddons"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libusbmuxd'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libusbmuxd"
+version = "2.0.2"
+archive = "https://github.com/libimobiledevice/libusbmuxd/archive/2.0.2.tar.gz"
+sha256 = "8ae3e1d9340177f8f3a785be276435869363de79f491d05d8a84a59efc8a8fdc"
+strip_components = 1
+description = "USB Multiplex Daemon library"
+homepage = "https://libimobiledevice.org"
+license = "LGPL-2.1-only"
+deps = ["libplist", "libusb"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

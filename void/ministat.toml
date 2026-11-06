@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ministat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ministat"
+version = "15.0"
+archive = "https://github.com/leahneukirchen/ministat/archive/v15.0.tar.gz"
+sha256 = "9e429718d3dac225ea4014ba5758b9b45ac3ff30ca101a325a111e58551d6f68"
+strip_components = 1
+description = "Small statistics utility"
+homepage = "https://github.com/leahneukirchen/ministat"
+license = "Beerware"
+
+[build]
+system = "make"

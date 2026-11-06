@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'deerportal'. Review before relying on it.
+[package]
+name = "deerportal"
+version = "0.8.2"
+archive = "https://github.com/deerportal/deerportal/archive/v0.8.2.tar.gz"
+sha256 = "a79a6286c9be1c6073f5d8fe79e45b309425f597d0532d2a042cd8369f57725d"
+strip_components = 1
+description = "Open source hybrid game which utilize board and card games mechanisms"
+homepage = "https://devcarpet.net/deerportal/"
+license = "Zlib"
+deps = ["SFML"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'igraph'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "igraph"
+version = "1.0.1"
+archive = "https://github.com/igraph/igraph/releases/download/1.0.1/igraph-1.0.1.tar.gz"
+sha256 = "969f2d7d22f67e788d8638c9a8c96615f50d7819c08978b3ef4a787bb6daa96c"
+strip_components = 1
+description = "Graph library"
+homepage = "https://igraph.org/c/"
+license = "GPL-2.0-or-later"
+deps = ["arpack-ng", "glpk", "gmp", "libxml2"]
+
+[build]
+system = "cmake"
+configure_args = ["-DIGRAPH_ENABLE_TLS=on", "-DIGRAPH_ENABLE_LTO=on", "-DBUILD_SHARED_LIBS=ON"]

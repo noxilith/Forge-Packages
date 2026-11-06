@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'glab'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "glab"
+version = "1.107.0"
+archive = "https://gitlab.com/gitlab-org/cli/-/archive/v1.107.0/cli-v1.107.0.tar.gz"
+sha256 = "a861959d8f59558ac0b7b1486ad20d05dda87e296d130430ba87e743bfebf8e5"
+strip_components = 1
+description = "Command line tool bringing GitLab's features to your command line"
+homepage = "https://gitlab.com/gitlab-org/cli"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'eog'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper, lib32disabled
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool
+[package]
+name = "eog"
+version = "50.0"
+archive = "https://download.gnome.org/sources/eog/50/eog-50.0.tar.xz"
+sha256 = "5c0226d10cfa13569ade2218f03ce62f79b8dc5c288e2e0b123d2ef51abdcb07"
+strip_components = 1
+description = "Eye of GNOME graphics viewer program"
+homepage = "https://gitlab.gnome.org/GNOME/eog/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "exempi", "gnome-desktop", "lcms2", "libexif", "libhandy1", "libpeas", "libportal", "librsvg", "shared-mime-info"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3"]

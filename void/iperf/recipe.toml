@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'iperf'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "iperf"
+version = "2.2.1"
+archive = "https://downloads.sourceforge.net/sourceforge/iperf2/iperf-2.2.1.tar.gz"
+sha256 = "754ab0a7e28033dbea81308ef424bc7df4d6e2fe31b60cc536b61b51fefbd8fb"
+strip_components = 1
+description = "Perform network throughput tests"
+homepage = "https://iperf.fr/"
+license = "NCSA"
+patches = ["patches/fix-udphdr-musl.patch", "patches/skip-ip6-tests-if-not-available.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ipv6", "--enable-multicast", "--enable-threads"]

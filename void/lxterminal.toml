@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lxterminal'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "lxterminal"
+version = "0.4.1"
+archive = "https://github.com/lxde/lxterminal/archive/refs/tags/0.4.1.tar.gz"
+sha256 = "d5da0646e20ad2be44ef69a9d620be5f1ec43b156dc585ebe203dd7b05c31d88"
+strip_components = 1
+description = "LXDE Terminal emulator"
+homepage = "http://lxde.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "vte3"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

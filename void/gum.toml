@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gum'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, build_helper
+[package]
+name = "gum"
+version = "2.0.2"
+archive = "https://github.com/charmbracelet/gum/archive/refs/tags/v2.0.2.tar.gz"
+sha256 = "06403707671e9b2af386640d8b9f6079efc0aadf77e8f6b091bd191fe16c1264"
+strip_components = 1
+description = "Tool for glamorous shell scripts"
+homepage = "https://github.com/charmbracelet/gum"
+license = "MIT"
+
+[build]
+system = "go"

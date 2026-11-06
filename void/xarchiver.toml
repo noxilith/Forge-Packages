@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xarchiver'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, intltool
+[package]
+name = "xarchiver"
+version = "0.5.4.26"
+archive = "https://github.com/ib/xarchiver/archive/refs/tags/0.5.4.26.tar.gz"
+sha256 = "58e4fb2c1fb8421573a31cf3b4dfec301076d61f48ac5720df632986c87e9573"
+strip_components = 1
+description = "Lightweight desktop independent archive manager"
+homepage = "https://github.com/ib/xarchiver"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "xdg-utils"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-doc", "--enable-gtk2=no"]
+tools = ["pkg-config"]

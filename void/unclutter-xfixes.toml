@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'unclutter-xfixes'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: asciidoc, libev
+[package]
+name = "unclutter-xfixes"
+version = "1.6"
+archive = "https://github.com/Airblader/unclutter-xfixes/archive/v1.6.tar.gz"
+sha256 = "6f7f248f16b7d4ec7cb144b6bc5a66bd49078130513a184f4dc16c498d457db9"
+strip_components = 1
+description = "Rewrite of the popular tool unclutter using the libXfixes"
+homepage = "https://github.com/Airblader/unclutter-xfixes"
+license = "MIT"
+deps = ["libXfixes", "libXi"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

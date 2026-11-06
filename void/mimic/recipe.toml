@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mimic'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "mimic"
+version = "1.3.0.1"
+archive = "https://github.com/MycroftAI/mimic/archive/1.3.0.1.tar.gz"
+sha256 = "9041f5c7d3720899c90c890ada179c92c3b542b90bb655c247e4a4835df79249"
+strip_components = 1
+description = "Mycroft's lightweight Text-to-speech engine"
+homepage = "https://github.com/MycroftAI/mimic"
+license = "custom: permissive BSD-like"
+deps = ["alsa-lib", "libicu78", "pcre2"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--enable-static"]
+tools = ["pkg-config"]

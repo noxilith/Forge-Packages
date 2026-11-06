@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bluetuith'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "bluetuith"
+version = "0.2.7"
+archive = "https://github.com/darkhz/bluetuith/archive/refs/tags/v0.2.7.tar.gz"
+sha256 = "9586383c1703dd4e12e81f5f68e5144481aed8fb0526ee046dc3a80558d0f0dc"
+strip_components = 1
+description = "TUI bluetooth manager"
+homepage = "https://darkhz.github.io/bluetuith"
+license = "MIT"
+deps = ["bluez", "dbus"]
+
+[build]
+system = "go"

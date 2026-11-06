@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libva-intel-driver'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "libva-intel-driver"
+version = "2.4.1"
+archive = "https://github.com/intel/intel-vaapi-driver/archive/2.4.1.tar.gz"
+sha256 = "03cd7e16acc94f828b6e7f3087863d8ca06e99ffa3385588005b1984bdd56157"
+strip_components = 1
+description = "Video Acceleration (VA) API - Intel Graphics backend"
+homepage = "https://01.org/linuxmedia"
+license = "MIT"
+deps = ["libX11", "libdrm", "libva-glx", "wayland"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith_wayland=yes", "-Dwith_x11=yes"]
+tools = ["pkg-config"]

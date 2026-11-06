@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'debugedit'. Review before relying on it.
+[package]
+name = "debugedit"
+version = "5.0"
+archive = "https://sourceware.org/pub/debugedit/5.0/debugedit-5.0.tar.xz"
+sha256 = "e9ecd7d350bebae1f178ce6776ca19a648b6fe8fa22f5b3044b38d7899aa553e"
+strip_components = 1
+description = "Tools for debuginfo creation"
+homepage = "https://sourceware.org/debugedit/"
+license = "GPL-2.0-or-later"
+deps = ["elfutils"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

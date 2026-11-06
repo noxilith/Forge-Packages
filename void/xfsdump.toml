@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xfsdump'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install
+# needs, but Forge has no recipe for yet: ncurses, util-linux-common, xfsprogs
+[package]
+name = "xfsdump"
+version = "3.3.0"
+archive = "https://www.kernel.org/pub/linux/utils/fs/xfs/xfsdump/xfsdump-3.3.0.tar.xz"
+sha256 = "9ca3e91055945f8a70bd4d465d5464f631630c65462896eda479d7371fd61db7"
+strip_components = 1
+description = "XFS filesystem incremental dump/restore utility"
+homepage = "https://git.kernel.org/pub/scm/fs/xfs/xfsdump-dev.git/"
+license = "GPL-2.0-or-later"
+deps = ["attr"]
+
+[build]
+system = "autotools"
+deps = ["gettext"]

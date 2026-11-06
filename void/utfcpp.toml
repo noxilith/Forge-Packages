@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'utfcpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "utfcpp"
+version = "4.2.1"
+archive = "https://github.com/nemtrif/utfcpp/archive/v4.2.1.tar.gz"
+sha256 = "6d6a5493a111884cc085ee31babfe6d9960c8fb08fc80a64852eaeea8323dbc1"
+strip_components = 1
+description = "Generic library that handles UTF-8 encoded strings"
+homepage = "https://github.com/nemtrif/utfcpp"
+license = "BSL-1.0"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

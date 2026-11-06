@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pithos'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "pithos"
+version = "1.5.1"
+archive = "https://github.com/pithos/pithos/releases/download/1.5.1/pithos-1.5.1.tar.xz"
+sha256 = "6850234fb7cf5a66f72219ef571b8f61b2506d314320274a236e514fd6fe90cd"
+strip_components = 1
+description = "Native Pandora Radio client"
+homepage = "https://pithos.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["gnome-keyring", "gst-libav", "gst-plugins-good1", "gtk+3", "libsecret", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

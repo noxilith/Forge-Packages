@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xurls'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "xurls"
+version = "2.6.0"
+archive = "https://github.com/mvdan/xurls/archive/refs/tags/v2.6.0.tar.gz"
+sha256 = "476d92a0416fee965f928180a950691b85dbb8d11efc3dc7f795ecc106c76075"
+strip_components = 1
+description = "Extract urls from text"
+homepage = "https://github.com/mvdan/xurls"
+license = "BSD-3-Clause"
+
+[build]
+system = "go"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'astroid'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: boost, libwebkit2gtk41, notmuch
+[package]
+name = "astroid"
+version = "0.17"
+archive = "https://github.com/astroidmail/astroid/archive/v0.17.tar.gz"
+sha256 = "dd419d4e11d1efa95979472e17cca5066799a5c64a595d5cea2b9e8d9f60f9c8"
+strip_components = 1
+description = "Graphical threads-with-tags style email client for Notmuch"
+homepage = "http://astroidmail.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["gmime", "gobject-introspection", "gtkmm", "libpeas", "libsass", "protobuf", "vte3"]
+patches = ["patches/boost-system.patch", "patches/cross.patch", "patches/libpeas-1.38.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["scdoc"]

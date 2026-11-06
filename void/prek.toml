@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'prek'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, build_helper
+[package]
+name = "prek"
+version = "0.5.3"
+archive = "https://github.com/j178/prek/archive/refs/tags/v0.5.3.tar.gz"
+sha256 = "2de788f26f8f32691c848d6ce3345c7df632813b099a3c0f48f10f3b37866d7a"
+strip_components = 1
+description = "Framework for running git pre-commit hooks"
+homepage = "https://prek.j178.dev"
+license = "MIT"
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features"]

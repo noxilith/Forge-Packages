@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libgedit-tepl'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libgedit-tepl"
+version = "6.14.0"
+archive = "https://gitlab.gnome.org/World/gedit/libgedit-tepl/-/archive/6.14.0/libgedit-tepl-6.14.0.tar.gz"
+sha256 = "9ddd8653a673a80a4184efa822578e3f8abdd00a85ec40e3851dee56ff47450c"
+strip_components = 1
+description = "Text editor product line"
+homepage = "https://gitlab.gnome.org/World/gedit/libgedit-tepl"
+license = "LGPL-3.0-or-later"
+deps = ["glib", "gsettings-desktop-schemas", "gtk+3", "libgedit-amtk", "libgedit-gfls", "libgedit-gtksourceview", "libhandy1", "libxml2", "uchardet"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

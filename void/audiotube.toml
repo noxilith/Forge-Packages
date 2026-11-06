@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'audiotube'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-pybind11, python3-ytmusicapi, qt6-imageformats, qt6-multimedia, qt6-svg, qt6-tools, yt-dlp
+[package]
+name = "audiotube"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/audiotube-26.08.1.tar.xz"
+sha256 = "f26bf29ff28cda7f79dc1dc6b46c159edf32149d98aa41926ab3d4190dbae7d3"
+strip_components = 1
+description = "Client for YouTube Music"
+homepage = "https://apps.kde.org/audiotube/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["futuresql", "gst-plugins-bad1", "gst-plugins-good1", "kf6-kconfig", "kf6-kcrash", "kf6-ki18n", "kf6-kiconthemes", "kf6-kirigami", "kf6-kwindowsystem", "kf6-purpose", "kirigami-addons", "qcoro-qt6", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-declarative"]

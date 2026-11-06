@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libxml2'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libreadline8, ncurses, python3-packaging-bootstrap
+[package]
+name = "libxml2"
+version = "2.13.8"
+archive = "https://download.gnome.org/sources/libxml2/2.13/libxml2-2.13.8.tar.xz"
+sha256 = "277294cb33119ab71b2bc81f2f445e9bc9435b893ad15bb2cd2b0e859a0ee84a"
+strip_components = 1
+description = "Library providing XML and HTML support"
+homepage = "https://gitlab.gnome.org/GNOME/libxml2"
+license = "MIT"
+deps = ["libicu78", "xz", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-threads", "--with-history", "--with-icu", "--with-legacy", "--with-ftp", "--with-xptr-locs", "--enable-static"]
+tools = ["pkg-config"]
+deps = ["gettext"]

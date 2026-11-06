@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'd2'. Review before relying on it.
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "d2"
+version = "0.7.1"
+archive = "https://github.com/d2lang/d2/archive/refs/tags/v0.7.1.tar.gz"
+sha256 = "b784d6472d53fdaaa7ecc9bdbe23456e2b4a90e18736828028b3f951537e56a1"
+strip_components = 1
+description = "Modern diagram scripting language that turns text to diagrams"
+homepage = "https://d2lang.com/"
+license = "MPL-2.0"
+
+[build]
+system = "go"

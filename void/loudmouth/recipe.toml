@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'loudmouth'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "loudmouth"
+version = "1.5.3"
+archive = "https://github.com/mcabber/loudmouth/archive/1.5.3.tar.gz"
+sha256 = "12972fcffd9bbcc4a3b2b9fbf4b0e549f7b4caf0f11c8d2af2059087ce4e8792"
+strip_components = 1
+description = "Lightweight Jabber client library written in C/Glib"
+homepage = "https://github.com/mcabber/loudmouth"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "libidn", "openssl"]
+patches = ["patches/enable-ipv6.patch", "patches/fix-nonce_nul.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-ssl=openssl", "--with-asyncns", "--with-compile-warnings=no"]
+tools = ["pkg-config"]
+deps = ["gtk-doc"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'opencamlib'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "opencamlib"
+version = "2019.07"
+archive = "https://github.com/aewallin/opencamlib/archive/2019.07.tar.gz"
+sha256 = "e08ab50672e24b51d30938ac60a6caa38bd8f5fb5f8fa3375dec0e69031cb620"
+strip_components = 1
+description = "Open source computer aided manufacturing algorithms library"
+homepage = "http://www.anderswallin.net/CAM"
+license = "LGPL-2.1-or-later"
+patches = ["patches/boost-1.83.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DVERSION_STRING=2019.07"]

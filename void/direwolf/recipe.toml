@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'direwolf'. Review before relying on it.
+[package]
+name = "direwolf"
+version = "1.8.1"
+archive = "https://github.com/wb2osz/direwolf/archive/refs/tags/1.8.1.tar.gz"
+sha256 = "89d5f7992ae1e74d8cf26ec6479dde74d1f480bde950043756e875a689d065d7"
+strip_components = 1
+description = "AX.25 packet modem/TNC and APRS encoder/decoder"
+homepage = "https://github.com/wb2osz/direwolf"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "eudev", "hamlib"]
+patches = ["patches/disable-arm32-neon.patch", "patches/fix_desktop.patch", "patches/fix_scripts_install.patch"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nvtop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "nvtop"
+version = "3.3.2"
+archive = "https://github.com/Syllo/nvtop/archive/refs/tags/3.3.2.tar.gz"
+sha256 = "48a295f3b3a917cc851d1aa8b185c09fde3a1b1e741fc57d7fa96b3671271630"
+strip_components = 1
+description = "GPUs process monitoring for AMD, Intel and NVIDIA"
+homepage = "https://github.com/Syllo/nvtop"
+license = "GPL-3.0-or-later"
+deps = ["libdrm"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

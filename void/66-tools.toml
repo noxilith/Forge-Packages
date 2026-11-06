@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for '66-tools'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_install_target
+[package]
+name = "66-tools"
+version = "0.1.2.0"
+archive = "https://git.obarun.org/Obarun/66-tools/-/archive/0.1.2.0/66-tools-0.1.2.0.tar.gz"
+sha256 = "5e30933e02a74398df3810bdcaf70170e91322e2ff2165d79d568001e321db88"
+strip_components = 1
+description = "Small tools and helpers for service scripts execution"
+homepage = "http://web.obarun.org/software/index.html"
+license = "ISC"
+deps = ["execline", "oblibs", "skalibs"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["lowdown"]

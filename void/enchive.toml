@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'enchive'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "enchive"
+version = "3.5"
+archive = "https://github.com/skeeto/enchive/archive/3.5.tar.gz"
+sha256 = "e66d0417db2bcc7ddd2dea1e0e1e88df6b4be07e85173710cba254af342585ef"
+strip_components = 1
+description = "Encrypted personal archives"
+homepage = "https://github.com/skeeto/enchive"
+license = "Unlicense"
+
+[build]
+system = "make"

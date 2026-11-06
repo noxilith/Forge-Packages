@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'guile-json'. Review before relying on it.
+[package]
+name = "guile-json"
+version = "4.7.3"
+archive = "https://download.savannah.gnu.org/releases/guile-json/guile-json-4.7.3.tar.gz"
+sha256 = "38ba048ed29d12f05b32c5b2fb7a51795c448b41e403a2b1b72ff0035817f388"
+strip_components = 1
+description = "JSON module for Guile"
+homepage = "https://github.com/aconchillo/guile-json"
+license = "GPL-3.0-or-later"
+deps = ["guile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

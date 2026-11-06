@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'so'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "so"
+version = "0.4.10"
+archive = "https://github.com/samtay/so/archive/refs/tags/v0.4.10.tar.gz"
+sha256 = "36d8bc53b9c05e242fd4c9ba8ae447fae6c4a35d8c7e071f8994a7c0f07c225d"
+strip_components = 1
+description = "Terminal interface for Stack Overflow"
+homepage = "https://github.com/samtay/so"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

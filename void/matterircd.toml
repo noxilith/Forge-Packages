@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'matterircd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, make_dirs
+[package]
+name = "matterircd"
+version = "0.30.0"
+archive = "https://github.com/42wim/matterircd/archive/refs/tags/v0.30.0.tar.gz"
+sha256 = "8dc003073489a345b28d93f9c793d72eed94c0285d9916af0ed8ff79c89b5774"
+strip_components = 1
+description = "Connect to your mattermost or slack using your IRC-client of choice"
+homepage = "https://github.com/42wim/matterircd"
+license = "MIT"
+
+[build]
+system = "go"

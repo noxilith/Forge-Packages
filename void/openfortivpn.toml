@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'openfortivpn'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+[package]
+name = "openfortivpn"
+version = "1.24.1"
+archive = "https://github.com/adrienverge/openfortivpn/archive/v1.24.1.tar.gz"
+sha256 = "c40d33acd97b89c2e943bfd839c19b69e5a7a5997052e2fc9a595602745c0465"
+strip_components = 1
+description = "Client for PPP+SSL VPN tunnel services"
+homepage = "https://github.com/adrienverge/openfortivpn"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-proc", "--disable-resolvconf", "--with-rt_dst"]
+tools = ["pkg-config"]

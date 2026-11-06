@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tldr'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "tldr"
+version = "1.0.0.alpha"
+archive = "https://github.com/isacikgoz/tldr/archive/v1.0.0-alpha.tar.gz"
+sha256 = "d40e1c602d84acc67cdee3b9bed001fb8ec198c7049c1d05eb071ab05af66c19"
+strip_components = 1
+description = "Fast and interactive TLDR client written in Go"
+homepage = "https://isacikgoz.me/tldr/"
+license = "MIT"
+
+[build]
+system = "go"

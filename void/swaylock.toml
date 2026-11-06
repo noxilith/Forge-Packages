@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'swaylock'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "swaylock"
+version = "1.8.6"
+archive = "https://github.com/swaywm/swaylock/releases/download/v1.8.6/swaylock-1.8.6.tar.gz"
+sha256 = "a15154348fef852fdb224112d137c393c826478b777f63479beb15e8d3812eaf"
+strip_components = 1
+description = "Screen locker for Wayland"
+homepage = "https://github.com/swaywm/swaylock"
+license = "MIT"
+deps = ["cairo", "gdk-pixbuf", "libxkbcommon", "pam", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

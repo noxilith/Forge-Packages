@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kio-admin'. Review before relying on it.
+[package]
+name = "kio-admin"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kio-admin-26.08.1.tar.xz"
+sha256 = "7389765ae8e4495234bd72f062d5e87a169360a5380c6078ef6871e1403cb3d6"
+strip_components = 1
+description = "Manage files as administrator using the admin:// KIO protocol"
+homepage = "https://invent.kde.org/system/kio-admin"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kio", "polkit-qt6", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

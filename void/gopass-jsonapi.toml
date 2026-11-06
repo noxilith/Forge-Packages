@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gopass-jsonapi'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "gopass-jsonapi"
+version = "1.15.15"
+archive = "https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.15.15.tar.gz"
+sha256 = "edd71e029d8f23e23f8b3a2fa5cf805910ca023d3607ea7bc0a59355b21b40b8"
+strip_components = 1
+description = "Gopass JSON bridge for extensions"
+homepage = "https://www.gopass.pw/"
+license = "MIT"
+deps = ["gopass"]
+
+[build]
+system = "go"

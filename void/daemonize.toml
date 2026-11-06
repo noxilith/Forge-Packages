@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'daemonize'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_install_args
+[package]
+name = "daemonize"
+version = "1.7.8"
+archive = "https://github.com/bmc/daemonize/archive/release-1.7.8.tar.gz"
+sha256 = "20c4fc9925371d1ddf1b57947f8fb93e2036eb9ccc3b43a1e3678ea8471c4c60"
+strip_components = 1
+description = "Run a program as a Unix daemon"
+homepage = "http://software.clapper.org/daemonize/daemonize.html"
+license = "BSD-3-Clause, MIT, Public Domain"
+
+[build]
+system = "autotools"

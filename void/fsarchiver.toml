@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fsarchiver'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "fsarchiver"
+version = "0.8.6"
+archive = "https://github.com/fdupoux/fsarchiver/releases/download/0.8.6/fsarchiver-0.8.6.tar.gz"
+sha256 = "be1d44222c4ef428360120c7326c8910930da5f318f7291f8b8d61cb2b730ebd"
+strip_components = 1
+description = "Safe and flexible file-system backup and deployment tool"
+homepage = "http://www.fsarchiver.org/"
+license = "GPL-2.0-or-later"
+deps = ["attr", "e2fsprogs", "libgcrypt", "lz4", "lzo", "xz"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

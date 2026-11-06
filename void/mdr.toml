@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mdr'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "mdr"
+version = "0.2.5"
+archive = "https://github.com/MichaelMure/mdr/archive/v0.2.5.tar.gz"
+sha256 = "7b8e4aa229094fbc4cb616470ab30b5665aa42d479d33407f95b45a336d2d88f"
+strip_components = 1
+description = "MarkDown Renderer for the terminal"
+homepage = "https://github.com/MichaelMure/mdr"
+license = "MIT"
+
+[build]
+system = "go"

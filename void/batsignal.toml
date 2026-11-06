@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'batsignal'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "batsignal"
+version = "1.8.0"
+archive = "https://github.com/electrickite/batsignal/archive/1.8.0.tar.gz"
+sha256 = "c8c2a048f4aa105aae389d9d765b76057d4998dbfc29a7dfeaf66351eaa7cba1"
+strip_components = 1
+description = "Simple battery monitor"
+homepage = "https://github.com/electrickite/batsignal"
+license = "ISC"
+deps = ["libnotify"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

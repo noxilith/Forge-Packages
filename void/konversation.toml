@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'konversation'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-qt5compat, qt6-tools
+[package]
+name = "konversation"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/konversation-26.08.1.tar.xz"
+sha256 = "0ee0926868f312379f5a51e9f81897f1a8b122d01207733393b3804a8f9ef886"
+strip_components = 1
+description = "User friendly IRC client for KDE"
+homepage = "https://konversation.kde.org"
+license = "GPL-2.0-or-later"
+deps = ["kf6-karchive", "kf6-kbookmarks", "kf6-kcodecs", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-ki18n", "kf6-kidletime", "kf6-kio", "kf6-kitemviews", "kf6-knewstuff", "kf6-knotifications", "kf6-knotifyconfig", "kf6-kparts", "kf6-kstatusnotifieritem", "kf6-ktextwidgets", "kf6-kwallet", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "qca-qt6", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext"]

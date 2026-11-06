@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'devil'. Review before relying on it.
+# needs, but Forge has no recipe for yet: SDL_image, glew
+[package]
+name = "devil"
+version = "1.8.0"
+archive = "https://downloads.sourceforge.net/sourceforge/openil/DevIL-1.8.0.tar.gz"
+sha256 = "0075973ee7dd89f0507873e2580ac78336452d29d34a07134b208f44e2feb709"
+strip_components = 1
+description = "Developer's Image Library"
+homepage = "http://openil.sourceforge.net/"
+license = "LGPL-2.1"
+deps = ["jasper", "lcms2", "libfreeglut", "libmng", "libpng", "openexr"]
+patches = ["patches/fix-mips-variable.patch", "patches/fix-solib-versions.patch", "patches/fix_mismatching_signatures.patch"]
+
+[build]
+system = "cmake"
+subdir = "DevIL"
+tools = ["pkg-config"]

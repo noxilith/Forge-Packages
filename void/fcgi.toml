@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'fcgi'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "fcgi"
+version = "2.4.6"
+archive = "https://github.com/FastCGI-Archives/fcgi2/archive/refs/tags/2.4.6.tar.gz"
+sha256 = "39af4fb21a6d695a5f0b1c4fa95776d2725f6bc6c77680943a2ab314acd505c1"
+strip_components = 1
+description = "Fast, open, and secure Web server interface"
+homepage = "https://github.com/FastCGI-Archives/fcgi2"
+license = "custom:fastcgi"
+
+[build]
+system = "autotools"

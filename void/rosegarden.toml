@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'rosegarden'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: fftw, jack, ladspa-sdk, qt6-qt5compat, qt6-tools
+[package]
+name = "rosegarden"
+version = "26.06"
+archive = "https://downloads.sourceforge.net/sourceforge/rosegarden/rosegarden/26.06}/rosegarden-26.06.tar.xz"
+sha256 = "75d9f01c6aa46d1a08c1ac29ee375e4aab1dcdb670fb7230a9e69c09458d3bd9"
+strip_components = 1
+description = "Music composition and editing environment"
+homepage = "http://rosegardenmusic.com/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "dssi", "libSM", "liblo", "liblrdf", "libsamplerate", "libsndfile", "lilv", "qt6-base", "shared-mime-info"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_QT6=ON", "-DBUILD_TESTING=ON"]
+tools = ["pkg-config"]

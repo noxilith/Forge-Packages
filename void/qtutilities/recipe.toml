@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qtutilities'. Review before relying on it.
+# hooks not translated: pre_check
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "qtutilities"
+version = "6.23.0"
+archive = "https://github.com/Martchus/qtutilities/archive/v6.23.0.tar.gz"
+sha256 = "ae984301e080278b5eda612a8628845fd826efda5fb8b8aa651df7f28c347a78"
+strip_components = 1
+description = "Qt helper routines, including dialogs, widgets, and models"
+homepage = "https://github.com/Martchus/qtutilities"
+license = "GPL-2.0-only"
+deps = ["cpp-utilities", "qt6-base"]
+patches = ["patches/linguist.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DQT_PACKAGE_PREFIX=Qt6"]

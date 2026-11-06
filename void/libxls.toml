@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libxls'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libxls"
+version = "1.6.4"
+archive = "https://github.com/libxls/libxls/releases/download/v1.6.4/libxls-1.6.4.tar.gz"
+sha256 = "064ee1da6cf3d481d8af4a936e0e0ce0190114e468fb7dfef5a81610746081e0"
+strip_components = 1
+description = "C library which can read Excel (xls) files"
+homepage = "https://github.com/libxls/libxls"
+license = "BSD-2-Clause"
+
+[build]
+system = "autotools"
+configure_args = ["--program-prefix=lib", "--enable-static"]

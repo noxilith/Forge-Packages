@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'Fonts-TLWG'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "Fonts-TLWG"
+version = "0.7.4"
+archive = "https://github.com/tlwg/fonts-tlwg/releases/download/v0.7.4/fonts-tlwg-0.7.4.tar.xz"
+sha256 = "2531d3e02de1d293e4a9f8527ac4d3d044a845f49dc2d314c5766b4f68730735"
+strip_components = 1
+description = "Thai fonts TTF"
+homepage = "https://linux.thai.net/projects/fonts-tlwg"
+license = "GPL-2.0-or-later, Bitstream-Vera"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ttf"]
+deps = ["fontforge"]

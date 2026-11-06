@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'iptraf-ng'. Review before relying on it.
+# settings not translated: make_install_args, LDFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "iptraf-ng"
+version = "1.2.1"
+archive = "https://ftp.debian.org/debian/pool/main/i/iptraf-ng/iptraf-ng_1.2.1.orig.tar.gz"
+sha256 = "9f5cef584065420dea1ba32c86126aede1fa9bd25b0f8362b0f9fd9754f00870"
+strip_components = 1
+description = "IP traffic monitor (iptraf-3.0.0 fork)"
+homepage = "https://tracker.debian.org/pkg/iptraf-ng"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

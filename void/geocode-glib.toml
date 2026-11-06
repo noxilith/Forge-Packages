@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'geocode-glib'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "geocode-glib"
+version = "3.26.4"
+archive = "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz"
+sha256 = "2d9a6826d158470449a173871221596da0f83ebdcff98b90c7049089056a37aa"
+strip_components = 1
+description = "GLib library for geocoding and reverse geocoding"
+homepage = "https://developer.gnome.org/geocode-glib"
+license = "LGPL-2.1-or-later"
+deps = ["json-glib", "libsoup3"]
+
+[build]
+system = "meson"
+configure_args = ["-Denable-gtk-doc=false", "-Denable-installed-tests=false", "-Dsoup2=false"]
+tools = ["pkg-config"]
+deps = ["glib"]

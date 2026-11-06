@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'dendrite'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: go_package, go_import_path, make_dirs
+[package]
+name = "dendrite"
+version = "0.13.3"
+archive = "https://github.com/matrix-org/dendrite/archive/v0.13.3.tar.gz"
+sha256 = "8840730ede16cc7e150344f5cdaa5f78d6abaa8aa3c588ec39c20d735bcf5dd7"
+strip_components = 1
+description = "Second-generation Matrix homeserver"
+homepage = "https://matrix.org/docs/projects/server/dendrite"
+license = "Apache-2.0"
+
+[build]
+system = "go"

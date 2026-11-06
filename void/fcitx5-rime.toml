@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fcitx5-rime'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: doxygen, fcitx5, rime-plum
+[package]
+name = "fcitx5-rime"
+version = "5.1.14"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-rime/fcitx5-rime-5.1.14.tar.zst"
+sha256 = "7478811fbe1d4e7cda6e6db74eb0c05d5fe81d218ca9dc81b6b7f4bb2bb08d62"
+strip_components = 1
+description = "Fcitx v5 - RIME engine"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "GPL-3.0-or-later"
+deps = ["fmt", "librime"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["cldr-emoji-annotation", "extra-cmake-modules", "gettext"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'enigma'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: SDL2_image, xerces-c
+[package]
+name = "enigma"
+version = "1.30"
+archive = "https://github.com/Enigma-Game/Enigma/archive/refs/tags/1.30.tar.gz"
+sha256 = "99af962feec553dd7e794827494a6a23428a69f83d6915fcaa25f00531357cac"
+strip_components = 1
+description = "Puzzle game inspired by Oxyd on the Atari ST"
+homepage = "https://www.nongnu.org/enigma/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2_mixer", "SDL2_ttf", "curl", "libenet"]
+patches = ["patches/musl-redirect.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-system-enet"]
+tools = ["pkg-config"]
+deps = ["ImageMagick", "SDL2", "texi2html"]

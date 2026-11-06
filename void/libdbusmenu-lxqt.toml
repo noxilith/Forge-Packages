@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libdbusmenu-lxqt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "libdbusmenu-lxqt"
+version = "0.4.0"
+archive = "https://github.com/lxqt/libdbusmenu-lxqt/releases/download/0.4.0/libdbusmenu-lxqt-0.4.0.tar.xz"
+sha256 = "b7f94d653559f021932aada76291e933535431a337c39c1a146d0461dd27a103"
+strip_components = 1
+description = "Library that provides a Qt6 implementation of the DBusMenu spec"
+homepage = "https://github.com/lxqt/libdbusmenu-lxqt"
+license = "LGPL-2"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

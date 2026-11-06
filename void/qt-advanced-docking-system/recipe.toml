@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qt-advanced-docking-system'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "qt-advanced-docking-system"
+version = "4.5.0"
+archive = "https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System/archive/refs/tags/4.5.0.tar.gz"
+sha256 = "a438810b9749684232fa29721857bb700167006f44407ab4dd51f5c90d171f09"
+strip_components = 1
+description = "Customizable layouts using a full featured window docking system"
+homepage = "https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System"
+license = "LGPL-2.1-only"
+deps = ["qt6-base"]
+patches = ["patches/fix-cross-platform.patch", "patches/fix-versioning-path.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DADS_VERSION=4.5.0", "-DBUILD_EXAMPLES=OFF"]

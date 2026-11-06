@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'flamelens'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "flamelens"
+version = "0.4.0"
+archive = "https://github.com/YS-L/flamelens/archive/refs/tags/v0.4.0.tar.gz"
+sha256 = "17101e6cb4c8e50cecfd4a31ea34bcfc076a78befdc6d37e753539a802598b71"
+strip_components = 1
+description = "Flamegraph viewer in the terminal"
+homepage = "https://github.com/YS-L/flamelens/"
+license = "MIT"
+
+[build]
+system = "cargo"

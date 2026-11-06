@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'growlight'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: jfsutils, libatasmart, pciutils, util-linux-common, xfsprogs
+[package]
+name = "growlight"
+version = "1.2.41"
+archive = "https://github.com/dankamongmen/growlight/archive/v1.2.41.tar.gz"
+sha256 = "d064d28626fbf11318563fcd7158afb68eccbf34ddce46dddd847593114caf1f"
+strip_components = 1
+description = "Block device manager and system installation tool"
+homepage = "https://nick-black.com/dankwiki/index.php/Growlight"
+license = "GPL-3.0-or-later"
+deps = ["btrfs-progs", "cryptsetup", "doctest", "e2fsprogs", "eudev", "f2fs-tools", "hdparm", "libcap", "libpciaccess", "lvm2", "nettle", "notcurses", "ntfs-3g", "nvme-cli", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

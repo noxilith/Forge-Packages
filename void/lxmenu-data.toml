@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxmenu-data'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "lxmenu-data"
+version = "0.1.6"
+archive = "https://github.com/lxde/lxmenu-data/archive/refs/tags/0.1.6.tar.gz"
+sha256 = "b237e732609fb2a521a942e08bb825ac7973ee478db7567d3606665a3793b2e8"
+strip_components = 1
+description = "LXDE freedesktop menu required files"
+homepage = "http://lxde.org/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

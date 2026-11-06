@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'telepathy-idle'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, telepathy-glib
+[package]
+name = "telepathy-idle"
+version = "0.2.2"
+archive = "https://telepathy.freedesktop.org/releases/telepathy-idle/telepathy-idle-0.2.2.tar.gz"
+sha256 = "8387e25e5fb0b4cbe701e5dc092d666d6510b833fd3e7e462e9170d36ec3c15f"
+strip_components = 1
+description = "IRC connection manager for Telepathy"
+homepage = "https://telepathy.freedesktop.org"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["libxslt"]

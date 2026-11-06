@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'folks'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libreadline8, python3-dbusmock, telepathy-glib
+[package]
+name = "folks"
+version = "0.15.9"
+archive = "https://download.gnome.org/sources/folks/0.15/folks-0.15.9.tar.xz"
+sha256 = "2311b37355c351f33f163fdc394874a22a0a0682c319493d6d8a6e420711415f"
+strip_components = 1
+description = "GObject Library to aggregate people into metacontacts"
+homepage = "https://wiki.gnome.org/Projects/Folks"
+license = "LGPL-2.1-or-later"
+deps = ["evolution-data-server", "libgee", "zeitgeist"]
+
+[build]
+system = "meson"
+configure_args = ["-Db_lto=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'serd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "serd"
+version = "0.32.8"
+archive = "https://gitlab.com/drobilla/serd/-/archive/v0.32.8/serd-v0.32.8.tar.gz"
+sha256 = "c0133d878b4b1abf5cb4b2ec4501ebf688edcfefb12a602e3cc26d9e6577a01c"
+strip_components = 1
+description = "Lightweight C library for RDF syntax"
+homepage = "http://drobilla.net/software/serd.html"
+license = "ISC"
+
+[build]
+system = "meson"

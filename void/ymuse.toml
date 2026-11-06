@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ymuse'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_import_path
+[package]
+name = "ymuse"
+version = "0.22"
+archive = "https://github.com/yktoo/ymuse/archive/v0.22.tar.gz"
+sha256 = "82c0850bbe7e2d9ce227284e167e091c497fffc9f5b80f84132305a4f360ec32"
+strip_components = 1
+description = "GTK client for Music Player Daemon, written in Go"
+homepage = "https://yktoo.com/en/software/ymuse/"
+license = "Apache-2.0"
+deps = ["gdk-pixbuf", "glib", "gtk+3"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]
+deps = ["gettext"]

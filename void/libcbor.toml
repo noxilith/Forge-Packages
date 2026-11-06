@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libcbor'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libcbor"
+version = "0.14.0"
+archive = "https://github.com/PJK/libcbor/archive/v0.14.0.tar.gz"
+sha256 = "a8c1516e741562cf95aa4479c64916c3d4d2623e24fdc35e414e2320e7300aae"
+strip_components = 1
+description = "Library for parsing and generating CBOR, a binary data format"
+homepage = "https://github.com/PJK/libcbor"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ptex'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ptex"
+version = "2.3.2"
+archive = "https://github.com/wdas/ptex/archive/refs/tags/v2.3.2.tar.gz"
+sha256 = "30aeb85b965ca542a8945b75285cd67d8e207d23dbb57fcfeaab587bb443402b"
+strip_components = 1
+description = "Per-Face Texture Mapping for Production Rendering"
+homepage = "http://ptex.us/"
+license = "BSD-3-Clause"
+deps = ["zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPTEX_VER=2.3.2"]
+tools = ["pkg-config"]

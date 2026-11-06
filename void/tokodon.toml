@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tokodon'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-svg, qt6-websockets
+[package]
+name = "tokodon"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/tokodon-26.08.1.tar.xz"
+sha256 = "1ac6e1dba048930f71fa152796b8a580d1b90e0af754542dcabd5bd731e4c66c"
+strip_components = 1
+description = "Mastodon client for Plasma"
+homepage = "https://apps.kde.org/tokodon"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["kf6-kcolorscheme", "kf6-kdbusaddons", "kf6-kdeclarative", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-knotifications", "kf6-prison", "kf6-purpose", "kf6-qqc2-desktop-style", "kirigami-addons", "kunifiedpush", "qcoro-qt6", "qt6-webview", "qtkeychain-qt6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base", "qt6-declarative"]

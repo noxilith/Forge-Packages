@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xcb-util-keysyms'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcb-util-keysyms"
+version = "0.4.1"
+archive = "https://xcb.freedesktop.org/dist/xcb-util-keysyms-0.4.1.tar.xz"
+sha256 = "7c260a5294412aed429df1da2f8afd3bd07b7cba3fec772fba15a613a6d5c638"
+strip_components = 1
+description = "Utility libraries for XCB - key constants and keycode conversion"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb-keysyms"
+license = "X11"
+deps = ["libxcb", "xcb-util"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

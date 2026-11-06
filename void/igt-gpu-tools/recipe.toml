@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'igt-gpu-tools'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: liboping, pciutils, peg, python3-docutils
+[package]
+name = "igt-gpu-tools"
+version = "2.6"
+archive = "https://www.x.org/releases/individual/app/igt-gpu-tools-2.6.tar.xz"
+sha256 = "5d5190debfec0ee1728430897f243d0afa271856c2cb5834a23b23f08be8d06e"
+strip_components = 1
+description = "Tools for development and testing of the DRM drivers"
+homepage = "https://gitlab.freedesktop.org/drm/igt-gpu-tools"
+license = "MIT"
+deps = ["alsa-lib", "cairo", "elfutils", "gsl", "jansson", "kmod", "libXrandr", "libdrm", "libunwind", "pixman", "procps-ng", "valgrind", "xmlrpc-c"]
+patches = ["patches/lib-igt_platform_filter-fix-musl-build.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Db_ndebug=false", "-Ddocs=disabled"]
+tools = ["bison", "flex", "pkg-config"]

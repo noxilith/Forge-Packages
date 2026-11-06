@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libdsk'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "libdsk"
+version = "1.5.22"
+archive = "https://www.seasip.info/Unix/LibDsk/libdsk-1.5.22.tar.gz"
+sha256 = "810f800bcc7665f4c1b35e19aaecb35f3729b712ad1d807105059b4bdb1cf049"
+strip_components = 1
+description = "Library and tools for accessing floppy discs and disc image files"
+homepage = "https://www.seasip.info/Unix/LibDsk/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

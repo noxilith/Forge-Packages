@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ideviceinstaller'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: usbmuxd
+[package]
+name = "ideviceinstaller"
+version = "1.1.1"
+archive = "https://github.com/libimobiledevice/ideviceinstaller/archive/1.1.1.tar.gz"
+sha256 = "b1401678a61f28c4aca95375c100b5a83ccc2cdfa0222c0de7ad0a2cfb4e3c9f"
+strip_components = 1
+description = "Manage apps of iOS devices"
+homepage = "https://libimobiledevice.org"
+license = "GPL-2.0-or-later"
+deps = ["libimobiledevice", "libplist", "libzip"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

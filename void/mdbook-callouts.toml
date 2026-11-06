@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mdbook-callouts'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mdbook-callouts"
+version = "0.3.0"
+archive = "https://static.crates.io/crates/mdbook-callouts/mdbook-callouts-0.3.0.crate"
+sha256 = "ecb7bc4790ff6e15638ca28038ff62c8a0dfb787de0efee393d92776bc8f6e8b"
+strip_components = 1
+description = "Preprocessor for adding Obsidian callouts to mdBook"
+homepage = "https://crates.io/crates/mdbook-callouts"
+license = "MIT"
+
+[build]
+system = "cargo"

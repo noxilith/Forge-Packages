@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'quickjs'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "quickjs"
+version = "2026.06.04"
+archive = "https://bellard.org/quickjs/quickjs-2026-06-04.tar.xz"
+sha256 = "b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a"
+strip_components = 1
+description = "Small and embeddable Javascript engine"
+homepage = "https://bellard.org/quickjs/"
+license = "MIT"
+patches = ["patches/cross.patch"]
+
+[build]
+system = "make"

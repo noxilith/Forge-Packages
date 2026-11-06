@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'openconnect'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: mit-krb5, vpnc-scripts
+[package]
+name = "openconnect"
+version = "9.21"
+archive = "https://www.infradead.org/openconnect/download/openconnect-9.21.tar.gz"
+sha256 = "5b32369467db6e5f317aa1ed12cfcbb81ed00bdbc765450b6bfcbdc300944a58"
+strip_components = 1
+description = "Free client for Cisco AnyConnect SSL VPN software"
+homepage = "http://www.infradead.org/openconnect/"
+license = "LGPL-2.1-only"
+deps = ["gnutls", "libproxy", "libxml2", "lz4", "pcsclite", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

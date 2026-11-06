@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'grub-customizer'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: grub, hicolor-icon-theme
+[package]
+name = "grub-customizer"
+version = "5.2.3"
+archive = "https://launchpad.net/grub-customizer/5.2/5.2.3/+download/grub-customizer_5.2.3.tar.gz"
+sha256 = "2e357b114f4f5ebb868cb249d9ff60512d7ec49131314d378212717cd085bd21"
+strip_components = 1
+description = "Graphical grub2 settings manager"
+homepage = "https://launchpad.net/grub-customizer/"
+license = "GPL-3.0-or-later"
+deps = ["gtkmm", "libarchive", "openssl", "polkit", "xhost"]
+patches = ["patches/musl-string.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

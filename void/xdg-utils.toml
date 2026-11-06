@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xdg-utils'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: lynx
+[package]
+name = "xdg-utils"
+version = "1.2.1"
+archive = "https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v1.2.1/xdg-utils-v1.2.1.tar.bz2"
+sha256 = "93d510dccf328378f012fe195b4574c2fac1cd65a74d0852d6eaa72e5a2065a7"
+strip_components = 1
+description = "Tools to assist applications with various desktop integration tasks"
+homepage = "https://www.freedesktop.org/wiki/Software/xdg-utils/"
+license = "MIT"
+deps = ["xset"]
+
+[build]
+system = "autotools"
+deps = ["xmlto"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'stopmotion'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-tools
+[package]
+name = "stopmotion"
+version = "0.9.0"
+archive = "https://invent.kde.org/multimedia/stopmotion/-/archive/0.9.0/stopmotion-0.9.0.tar.gz"
+sha256 = "81875b775a2fb40733dae018efa1b01267331cb67d2f80d2c05ddac29466b8e5"
+strip_components = 1
+description = "Program to create stop motion animations"
+homepage = "https://invent.kde.org/multimedia/stopmotion"
+license = "GPL-2.0-or-later"
+deps = ["libarchive", "libvorbis", "libxml2", "qt6-base"]
+patches = ["patches/nftw-musl.patch"]
+
+[build]
+system = "cmake"

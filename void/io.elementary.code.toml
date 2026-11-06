@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'io.elementary.code'. Review before relying on it.
+# hooks not translated: pre_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gtkspell3
+[package]
+name = "io.elementary.code"
+version = "8.2.0"
+archive = "https://github.com/elementary/code/archive/8.2.0.tar.gz"
+sha256 = "e82c9bb3d1a5450d38fbcc25400902e6442ba451f3510acb213d48d85793c577"
+strip_components = 1
+description = "Code editor designed for elementary OS"
+homepage = "https://github.com/elementary/code"
+license = "GPL-3.0-or-later"
+deps = ["editorconfig", "fontconfig", "glib", "granite", "gtk+3", "gtksourceview4", "libgee", "libgit2-glib", "libhandy1", "libpeas2", "pango", "polkit", "vte3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

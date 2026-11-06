@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xsm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xsm"
+version = "1.0.6"
+archive = "https://www.x.org/releases/individual/app/xsm-1.0.6.tar.xz"
+sha256 = "b74cc774c6060c37592f68a90dbd31b0f2a62fb14e562769434f79be284a63ce"
+strip_components = 1
+description = "X Session Manager"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["iceauth", "libICE", "libSM", "libX11", "libXaw", "libXt", "smproxy"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

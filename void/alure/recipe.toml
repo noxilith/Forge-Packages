@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'alure'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+# needs, but Forge has no recipe for yet: fluidsynth
+[package]
+name = "alure"
+version = "1.2"
+archive = "https://ftp.debian.org/debian/pool/main/a/alure/alure_1.2.orig.tar.bz2"
+sha256 = "465e6adae68927be3a023903764662d64404e40c4c152d160e3a8838b1d70f71"
+strip_components = 1
+description = "Utility library to help manage common tasks with OpenAL applications"
+homepage = "https://github.com/kcat/alure"
+license = "MIT"
+deps = ["flac", "libmodplug", "libopenal", "libsndfile", "libvorbis", "mpg123"]
+patches = ["patches/cmake-suck.patch", "patches/cmake.patch", "patches/include-close.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DMODPLUG=ON", "-DDYNLOAD=OFF"]
+tools = ["pkg-config"]

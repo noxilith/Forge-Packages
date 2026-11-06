@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'clapper'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "clapper"
+version = "0.10.0"
+archive = "https://github.com/Rafostar/clapper/archive/refs/tags/0.10.0.tar.gz"
+sha256 = "344c0f20e540a63c6fb44cdd5de88c168ed145bb66c1307e79b2b08124780118"
+strip_components = 1
+description = "Modern and user-friendly media player"
+homepage = "https://github.com/Rafostar/clapper"
+license = "GPL-3.0-or-later, LGPL-2.1-or-later"
+deps = ["gst-plugins-base1", "gstreamer1", "gtk4", "libadwaita", "libmicrodns", "libpeas2", "libsoup3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "vala"]

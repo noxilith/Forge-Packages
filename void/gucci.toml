@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gucci'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "gucci"
+version = "1.9.0"
+archive = "https://github.com/noqcks/gucci/archive/refs/tags/v1.9.0.tar.gz"
+sha256 = "3cbcbee42a78a38dce9544338b5bd46601b4378d5ff5ae2045cfd99d635d1664"
+strip_components = 1
+description = "Simple CLI templating tool written in Go"
+homepage = "https://github.com/noqcks/gucci"
+license = "MIT"
+
+[build]
+system = "go"

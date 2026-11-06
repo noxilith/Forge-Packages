@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sydbox'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "sydbox"
+version = "2.2.0"
+archive = "https://gitlab.exherbo.org/sydbox/sydbox-1/-/archive/v2.2.0/sydbox-1-v2.2.0.tar.gz"
+sha256 = "681e44816f2780f9b45a2ef601acc4174bc8336277ea6b9015aad8213b93e3c0"
+strip_components = 1
+description = "Utility for ptrace() sandboxing"
+homepage = "https://sydbox.exherbolinux.org"
+license = "MIT"
+deps = ["libseccomp", "pinktrace"]
+patches = ["patches/missing-include.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

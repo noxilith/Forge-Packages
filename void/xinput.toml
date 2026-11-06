@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xinput'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xinput"
+version = "1.6.4"
+archive = "https://www.x.org/releases/individual/app/xinput-1.6.4.tar.gz"
+sha256 = "64e25434af1309ed0abca1ebebd035f7631bb0bc1bfac5decefe9aa98ccaf611"
+strip_components = 1
+description = "Utility to configure and test X input devices"
+homepage = "http://www.x.org"
+license = "MIT"
+deps = ["libXext", "libXi", "libXinerama", "libXrandr"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

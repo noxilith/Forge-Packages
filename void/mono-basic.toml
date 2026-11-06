@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mono-basic'. Review before relying on it.
+[package]
+name = "mono-basic"
+version = "4.7"
+archive = "https://download.mono-project.com/sources/mono-basic/mono-basic-4.7.tar.bz2"
+sha256 = "0b3962719de45f7f6b8d6c5481d7e50c2e79cbcf7f1ce02810b65fcfa261cc28"
+strip_components = 1
+description = "VisualBasic.NET support for mono"
+homepage = "https://www.mono-project.com/"
+license = "LGPL-2.1-only, X11"
+deps = ["mono"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

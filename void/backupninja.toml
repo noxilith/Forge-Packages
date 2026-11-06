@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'backupninja'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: make_build_args, make_dirs, conf_files
+[package]
+name = "backupninja"
+version = "1.2.2"
+archive = "https://0xacab.org/liberate/backupninja/-/archive/backupninja-1.2.2/backupninja-backupninja-1.2.2.tar.gz"
+sha256 = "2d05b306a62a71be61fd7cf664a66fa2d558ad11db5d737f2c16079c9a27e8ed"
+strip_components = 1
+description = "Lightweight, extensible meta-backup system"
+homepage = "https://0xacab.org/liberate/backupninja"
+license = "GPL-2.0-or-later"
+deps = ["dialog"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'qmmp'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: enca, ffmpeg6, jack, libmpcdec, libshout, opusfile, qt6-multimedia, qt6-tools
+[package]
+name = "qmmp"
+version = "2.4.2"
+archive = "https://qmmp.ylsoftware.com/files/qmmp/2.4/qmmp-2.4.2.tar.bz2"
+sha256 = "8042f83a9ed810e170f7127e6eb53c6b29038dbf504a01c0867c19e5fd200e7d"
+strip_components = 1
+description = "Audio player based on Qt"
+homepage = "https://qmmp.ylsoftware.com"
+license = "GPL-3.0-or-later"
+deps = ["curl", "faad2", "libarchive", "libbs2b", "libcdio-paranoia", "libgme", "libmad", "libmms", "libmodplug", "libsamplerate", "libsidplayfp", "libsoxr", "pipewire", "projectM", "pulseaudio", "qt6-base", "taglib", "wavpack", "wildmidi"]
+patches = ["patches/default-pulseaudio.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_HAL:BOOL=FALSE", "-DQMMP_DEFAULT_UI:STRING=simple"]
+tools = ["pkg-config"]

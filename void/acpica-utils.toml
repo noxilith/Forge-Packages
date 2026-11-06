@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'acpica-utils'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+[package]
+name = "acpica-utils"
+version = "20260408"
+archive = "https://github.com/acpica/acpica/releases/download/20260408/acpica-unix-20260408.tar.gz"
+sha256 = "e66ceb26d6d514ce164fe22f5a4f7ca165cc38349d7a97f41a21f19b364647a2"
+strip_components = 1
+description = "Intel ACPI CA Unix utilities"
+homepage = "https://www.acpica.org/"
+license = "GPL-2.0-only, BSD-3-Clause"
+
+[build]
+system = "make"
+tools = ["flex"]

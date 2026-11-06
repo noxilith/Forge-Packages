@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lux'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+# needs, but Forge has no recipe for yet: ffmpeg
+[package]
+name = "lux"
+version = "0.24.1"
+archive = "https://github.com/iawia002/lux/archive/refs/tags/v0.24.1.tar.gz"
+sha256 = "69d4fe58c588cc6957b8682795210cd8154170ac51af83520c6b1334901c6d3d"
+strip_components = 1
+description = "Fast, simple and clean video downloader built with Go"
+homepage = "https://github.com/iawia002/lux"
+license = "MIT"
+
+[build]
+system = "go"

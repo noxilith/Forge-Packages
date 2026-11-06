@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pptpclient'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "pptpclient"
+version = "1.10.0"
+archive = "https://downloads.sourceforge.net/sourceforge/pptpclient/files/pptp-1.10.0.tar.gz"
+sha256 = "82492db8e487ce73b182ee7f444251d20c44f5c26d6e96c553ec7093aefb5af4"
+strip_components = 1
+description = "Client for the proprietary Microsoft Point-to-Point Tunneling Protocol"
+homepage = "http://pptpclient.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["iproute2", "ppp"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "make"
+tools = ["perl"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fnott'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "fnott"
+version = "1.8.0"
+archive = "https://codeberg.org/dnkl/fnott/archive/1.8.0.tar.gz"
+sha256 = "896bf281431067adf539a8e563db7ef0409877f53131af4fd6656ceda11d24db"
+strip_components = 1
+description = "Keyboard driven and lightweight notification daemon"
+homepage = "https://codeberg.org/dnkl/fnott/"
+license = "MIT"
+deps = ["fcft", "tllist", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

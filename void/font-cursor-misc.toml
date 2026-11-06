@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-cursor-misc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-cursor-misc"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-cursor-misc-1.0.4.tar.gz"
+sha256 = "37ef2363b3cfa6f5e20b65feab736db77fad484127c267b78de95d55fa39f61d"
+strip_components = 1
+description = "Standard X11 cursors in PCF format"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libuninameslist'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libuninameslist"
+version = "20260918"
+archive = "https://github.com/fontforge/libuninameslist/archive/20260918.tar.gz"
+sha256 = "553f63d14234c79ce29a63c0594b81d78e716a8d7b28f5cd1f54668b4d54eefe"
+strip_components = 1
+description = "Library of Unicode names and annotation data"
+homepage = "https://github.com/fontforge/libuninameslist"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'fail'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "fail"
+version = "0.4"
+archive = "https://github.com/leahneukirchen/fail/archive/v0.4.tar.gz"
+sha256 = "cfaf5fc3865116b7c40611c3424f30d8860cfc03f82cca4e344da7d30b479db0"
+strip_components = 1
+description = "Crash in various possible ways"
+homepage = "https://github.com/leahneukirchen/fail"
+license = "Public Domain"
+
+[build]
+system = "make"

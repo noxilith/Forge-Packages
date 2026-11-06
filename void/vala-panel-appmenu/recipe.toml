@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'vala-panel-appmenu'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "vala-panel-appmenu"
+version = "25.04"
+archive = "https://gitlab.com/vala-panel-project/vala-panel-appmenu/-/archive/25.04/vala-panel-appmenu-25.04.tar.gz"
+sha256 = "48d0be87b260056a65a9056a9be7e190b67a508540ebcb1fc18a67349cca0177"
+strip_components = 1
+description = "Global Menu plugin for XFCE panel"
+homepage = "https://gitlab.com/vala-panel-project/vala-panel-appmenu"
+license = "LGPL-3.0-or-later"
+deps = ["dconf", "gdk-pixbuf", "glib", "libXt", "libdbusmenu-glib", "libwnck", "libxkbcommon", "xfce4-panel", "xfconf"]
+patches = ["patches/no-gtk2.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dxfce=enabled", "-Dmate=disabled", "-Dbudgie=disabled", "-Dvalapanel=disabled", "-Dappmenu-gtk-module=enabled", "-Dregistrar=enabled", "-Djayatana=disabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "gobject-introspection", "vala"]

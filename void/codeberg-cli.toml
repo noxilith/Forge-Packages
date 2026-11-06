@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'codeberg-cli'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "codeberg-cli"
+version = "0.5.5"
+archive = "https://codeberg.org/Aviac/codeberg-cli/archive/v0.5.5.tar.gz"
+sha256 = "09902e3511c24316e9aab4cbd51492d00eb978ee81429e873de80bc9a485c549"
+strip_components = 1
+description = "CLI Tool for Codeberg similar to gh and glab"
+homepage = "https://codeberg.org/Aviac/codeberg-cli"
+license = "AGPL-3.0-or-later"
+deps = ["libgit2-1.9", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

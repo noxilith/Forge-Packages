@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kirigami2'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kirigami2"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kirigami2-5.116.0.tar.xz"
+sha256 = "8b584da74a0c4488ad5e31c3d740a1813c35d28bc003fef8854963d17058c9e0"
+strip_components = 1
+description = "Kirigami is KDE’s lightweight user interface framework"
+homepage = "https://techbase.kde.org/Kirigami"
+license = "LGPL-2.0-or-later"
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "kcoreaddons"]

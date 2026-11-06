@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'iniparser'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "iniparser"
+version = "4.3.0"
+archive = "https://gitlab.com/iniparser/iniparser/-/archive/v4.3.0/iniparser-v4.3.0.tar.gz"
+sha256 = "7a339779ddb37fafbacbf73b176ce968ef9dc5146831b87aba80a18b68355ed4"
+strip_components = 1
+description = "Free stand-alone ini file parsing library"
+homepage = "https://gitlab.com/iniparser/iniparser"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DOCS=ON"]

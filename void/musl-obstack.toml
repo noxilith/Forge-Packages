@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'musl-obstack'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "musl-obstack"
+version = "1.2.3"
+archive = "https://github.com/void-linux/musl-obstack/archive/v1.2.3.tar.gz"
+sha256 = "9ffb3479b15df0170eba4480e51723c3961dbe0b461ec289744622db03a69395"
+strip_components = 1
+description = "Implementation of obstack for musl libc"
+homepage = "https://github.com/void-linux/musl-obstack"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gitg'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "gitg"
+version = "44"
+archive = "https://download.gnome.org/sources/gitg/44/gitg-44.tar.xz"
+sha256 = "342a31684dab9671cd341bd3e3ce665adcee0460c2a081ddc493cdbc03132530"
+strip_components = 1
+description = "Git repository viewer for GTK+/GNOME"
+homepage = "https://wiki.gnome.org/Apps/Gitg"
+license = "GPL-2.0-or-later"
+deps = ["gpgme", "gsettings-desktop-schemas", "gspell", "gtksourceview4", "libdazzle", "libgee", "libgit2-glib", "libhandy1", "libpeas", "libsecret"]
+patches = ["patches/libpeas-1.38.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk+3", "vala"]

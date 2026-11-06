@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gtk-sharp'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: lib32disabled
+[package]
+name = "gtk-sharp"
+version = "2.99.3"
+archive = "https://download.gnome.org/sources/gtk-sharp/2.99/gtk-sharp-2.99.3.tar.xz"
+sha256 = "6440f571416267ae0cb5698071d087b31e3084693fa2c829b1db37ca7ea2c3a2"
+strip_components = 1
+description = "Graphical User Interface Toolkit for mono and .Net (Gtk#)"
+homepage = "https://www.mono-project.com/GtkSharp"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+3", "mono"]
+patches = ["patches/ftbfs.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

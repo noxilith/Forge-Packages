@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'include-what-you-use'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "include-what-you-use"
+version = "0.27"
+archive = "https://include-what-you-use.org/downloads/include-what-you-use-0.27.src.tar.gz"
+sha256 = "f6871eeea7dc9741cd00aae546d7514abe84b91ca3d1f096f15095e6ac14875f"
+strip_components = 1
+description = "Analyze #includes in C and C++ source files"
+homepage = "https://include-what-you-use.org/"
+license = "NCSA"
+deps = ["llvm23", "zlib"]
+
+[build]
+system = "cmake"

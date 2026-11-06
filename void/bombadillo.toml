@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'bombadillo'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "bombadillo"
+version = "2.4.0"
+archive = "https://tildegit.org/sloum/bombadillo/archive/2.4.0.tar.gz"
+sha256 = "fba4bb7a1bb84d4ff646d677e3762f4205a5bc3755a454cf66bffe71614ab058"
+strip_components = 1
+description = "Non-web client for the terminal"
+homepage = "https://bombadillo.colorfield.space/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

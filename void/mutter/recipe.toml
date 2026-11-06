@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'mutter'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gnome-settings-daemon, libcanberra, mesa, python3-argcomplete, python3-docutils
+[package]
+name = "mutter"
+version = "48.7"
+archive = "https://download.gnome.org/sources/mutter/48/mutter-48.7.tar.xz"
+sha256 = "ec102aa3cbb0e39001206627aca3055314555f70609de5e6c2b7efcd1fa90f20"
+strip_components = 1
+description = "Wayland display server, X11 window manager and compositor library"
+homepage = "https://wiki.gnome.org/Projects/Mutter/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "elogind", "glib", "gnome-desktop", "graphene", "gsettings-desktop-schemas", "gtk4", "json-glib", "libSM", "libXtst", "libdisplay-info", "libei", "libgudev", "libinput", "libwacom", "pipewire", "startup-notification", "wayland-protocols"]
+patches = ["patches/565756e13130d32eef93f93f93be2fff379cb0f8.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Degl_device=true", "-Dudev=true", "-Dnative_backend=true", "-Dprofiler=false", "-Dintrospection=true", "-Dxwayland_initfd=disabled", "-Dtests=disabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "wayland", "xorg-server", "xorg-server-xwayland", "zenity"]

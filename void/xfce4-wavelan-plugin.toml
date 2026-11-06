@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-wavelan-plugin'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xfce4-wavelan-plugin"
+version = "0.7.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.7/xfce4-wavelan-plugin-0.7.0.tar.xz"
+sha256 = "5fdce1e1b0d29d0a258dca86bab9d4edcbc12098134b92e00ea1502086a49116"
+strip_components = 1
+description = "WaveLAN plugin for the Xfce4 panel"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin"
+license = "BSD-2-Clause"
+deps = ["xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

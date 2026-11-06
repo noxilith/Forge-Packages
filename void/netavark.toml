@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'netavark'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: nftables
+[package]
+name = "netavark"
+version = "2.1.0"
+archive = "https://github.com/containers/netavark/archive/refs/tags/v2.1.0.tar.gz"
+sha256 = "96677048168ddd1abe313e4c2e17f1cace72b60ee1bac8ca12a4bd7dfcadfbbb"
+strip_components = 1
+description = "Container network stack"
+homepage = "https://github.com/containers/netavark"
+license = "Apache-2.0"
+
+[build]
+system = "cargo"
+deps = ["mandown", "protobuf"]

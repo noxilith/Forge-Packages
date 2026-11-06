@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libproxy'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "libproxy"
+version = "0.5.12"
+archive = "https://github.com/libproxy/libproxy/archive/refs/tags/0.5.12.tar.gz"
+sha256 = "a1fa55991998b80a567450a9e84382421a7176a84446c95caaa8b72cf09fa86f"
+strip_components = 1
+description = "Library handling all the details of proxy configuration"
+homepage = "http://github.com/libproxy/libproxy"
+license = "LGPL-2.1-or-later"
+deps = ["curl", "duktape", "glib", "gsettings-desktop-schemas", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Drelease=true"]
+tools = ["pkg-config"]
+deps = ["vala"]

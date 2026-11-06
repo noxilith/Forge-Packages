@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'loderunner-ng'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: SDL2_image
+[package]
+name = "loderunner-ng"
+version = "0.1.4"
+archive = "https://github.com/vchimishuk/loderunner-ng/archive/refs/tags/0.1.4.tar.gz"
+sha256 = "ee7d9828a8acfc535255ed50c6dd1b9d1040aebc4a6eb72df853e72c65c6e7ba"
+strip_components = 1
+description = "Classic Apple II Lode Runner game remake"
+homepage = "https://github.com/vchimishuk/loderunner-ng"
+license = "GPL-3.0-or-later"
+deps = ["SDL2", "SDL2_mixer"]
+
+[build]
+system = "cmake"

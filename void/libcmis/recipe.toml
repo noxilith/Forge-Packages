@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'libcmis'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, libcppunit
+[package]
+name = "libcmis"
+version = "0.6.3"
+archive = "https://github.com/tdf/libcmis/releases/download/v0.6.3/libcmis-0.6.3.tar.xz"
+sha256 = "e2e151fdd47a345b6ef72cae1d8ecf3099bb90420f276761f2793ec317809307"
+strip_components = 1
+description = "C/C++ client library for the CMIS protocol"
+homepage = "https://github.com/tdf/libcmis"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later, MPL-1.1"
+deps = ["curl", "libxml2"]
+patches = ["patches/fix-build.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["DOCBOOK2MAN=docbook2man", "--disable-werror"]
+tools = ["pkg-config"]
+deps = ["docbook2x", "xmlto"]

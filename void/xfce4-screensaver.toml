@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xfce4-screensaver'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, docbook-xml
+[package]
+name = "xfce4-screensaver"
+version = "4.20.2"
+archive = "https://archive.xfce.org/src/apps/xfce4-screensaver/4.20/xfce4-screensaver-4.20.2.tar.xz"
+sha256 = "5032f60a31df5e50a80512e301b595be5ea6a6bd762cdd95cacc24cbd29a01d7"
+strip_components = 1
+description = "Screensaver for XFCE4"
+homepage = "https://gitlab.xfce.org/apps/xfce4-screensaver"
+license = "GPL-2.0-or-later"
+deps = ["dbus", "elogind", "garcon", "glib", "gtk+3", "libX11", "libXScrnSaver", "libXext", "libXrandr", "libwnck", "libxfce4ui", "libxfce4util", "libxklavier", "pam", "wayland", "wayland-protocols", "xfconf"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsession-manager=elogind", "-Dauthentication-scheme=pam", "-Dx11=enabled", "-Dwayland=disabled", "-Dshadow=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "xmlto"]

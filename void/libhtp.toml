@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libhtp'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libhtp"
+version = "0.5.53"
+archive = "https://github.com/OISF/libhtp/archive/0.5.53.tar.gz"
+sha256 = "c6f4aadfc40a57eee5518555c2cc1b2cd38d6d5f8ad3a24e7cfc6a0963c524fb"
+strip_components = 1
+description = "Security-aware parser for HTTP"
+homepage = "https://github.com/OISF/libhtp"
+license = "BSD-3-Clause"
+deps = ["zlib"]
+
+[build]
+system = "autotools"

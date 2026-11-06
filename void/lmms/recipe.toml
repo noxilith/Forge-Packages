@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'lmms'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: SDL_sound, fluidsynth, hicolor-icon-theme, jack, ladspa-sdk, portaudio, qt5
+[package]
+name = "lmms"
+version = "1.2.2"
+archive = "https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms_1.2.2.tar.xz"
+sha256 = "b185507fb64ecfd8e31145135b58ab244b637f9efc09c4176caf70aa3cbaae1e"
+strip_components = 1
+description = "Cross-platform music production software"
+homepage = "https://lmms.io/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "fltk", "lame", "libsamplerate", "redland", "stk", "xcb-util", "xcb-util-keysyms"]
+patches = ["patches/cross.patch", "patches/ecm.patch", "patches/fix-duplicate-plugin-dir.patch", "patches/fix-qt-crash-kwidgetsaddons-5.101.0.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWANT_QT5=ON", "-DWANT_WEAKJACK=OFF", "-DWANT_CARLA=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

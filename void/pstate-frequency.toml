@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'pstate-frequency'. Review before relying on it.
+# settings not translated: make_install_args, conf_files
+[package]
+name = "pstate-frequency"
+version = "3.17.1"
+archive = "https://github.com/pyamsoft/pstate-frequency/archive/refs/tags/3.17.1.tar.gz"
+sha256 = "30678befd0d0d759a51cfd02d7ea2f88ffb097f8fa6b1d22308140ff85bd3454"
+strip_components = 1
+description = "Easily control Intel p-state driver on Linux"
+homepage = "https://pyamsoft.github.io/pstate-frequency/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

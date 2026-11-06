@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cinnamon-control-center'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: cinnamon-translations, hicolor-icon-theme, libcanberra
+[package]
+name = "cinnamon-control-center"
+version = "6.6.0"
+archive = "https://github.com/linuxmint/cinnamon-control-center/archive/6.6.0.tar.gz"
+sha256 = "2de5fbc5a9fcc2e1dad9c595dfb1d9047ff885d391f45d6ffe8b6711bb4e24e4"
+strip_components = 1
+description = "Cinnamon Control Center"
+homepage = "https://github.com/linuxmint/cinnamon-control-center"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["ModemManager", "cinnamon-desktop", "cinnamon-menus", "cinnamon-settings-daemon", "colord", "desktop-file-utils", "glib", "gnome-color-manager", "gnome-online-accounts", "gtk+3", "ibus", "libSM", "libgnomekbd", "libnma", "libnotify", "libwacom", "polkit", "pulseaudio", "upower"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "libxslt"]

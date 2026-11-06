@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'spectrum3d'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "spectrum3d"
+version = "2.7.2"
+archive = "https://downloads.sourceforge.net/sourceforge/project/spectrum3d/spectrum3d-2.7.2.tar.gz"
+sha256 = "274ec3cb16070e2441d3d202fce946c4c4c22c9ac6275d950ad989ed5111e4cb"
+strip_components = 1
+description = "Audio spectrum visualiser in 3D for Linux"
+homepage = "https://spectrum3d.sourceforge.net"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "glu", "gstreamer1", "gtk+3", "sdl12-compat"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

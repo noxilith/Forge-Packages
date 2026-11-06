@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'viking'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: docbook-xsl, gpsd, intltool, itstool, sqlite, vim
+[package]
+name = "viking"
+version = "1.11"
+archive = "https://downloads.sourceforge.net/sourceforge/viking/viking-1.11.tar.bz2"
+sha256 = "fe21d5c111ef20877d1cd95b1a4bc34faae9dd3a17bac923f418e1271a3cfc91"
+strip_components = 1
+description = "Open/source GPS data editor and analyzer"
+homepage = "https://sourceforge.net/projects/viking"
+license = "GPL-2.0-or-later"
+deps = ["curl", "file", "geoclue2", "gtk+3", "libgexiv2", "libnova", "liboauth", "libzip", "nettle"]
+patches = ["patches/0001-test-remove-ubsan-from-AM_CFLAGS.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-mapnik", "--disable-ubsan"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxslt"]

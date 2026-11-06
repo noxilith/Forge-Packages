@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'grype'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "grype"
+version = "0.109.1"
+archive = "https://github.com/anchore/grype/archive/refs/tags/v0.109.1.tar.gz"
+sha256 = "4499ac6dcf84f50b4f05024ba96152cabf343c4a42e9a8366916092f8df49a6d"
+strip_components = 1
+description = "Vulnerability scanner for container images and filesystems"
+homepage = "https://github.com/anchore/grype"
+license = "Apache-2.0"
+
+[build]
+system = "go"

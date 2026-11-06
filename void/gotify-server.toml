@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gotify-server'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_build
+# settings not translated: go_ldflags, go_import_path, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: yarn
+[package]
+name = "gotify-server"
+version = "2.4.0"
+archive = "https://github.com/gotify/server/archive/v2.4.0.tar.gz"
+sha256 = "ef217ca84232334ed03dcf30ccb67315a07508e6f5a58a923c01ea197e198226"
+strip_components = 1
+description = "Simple server for sending and receiving messages"
+homepage = "https://gotify.net"
+license = "MIT"
+
+[build]
+system = "go"
+deps = ["packr2"]

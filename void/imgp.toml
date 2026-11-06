@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'imgp'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-Pillow
+[package]
+name = "imgp"
+version = "2.9"
+archive = "https://github.com/jarun/imgp/archive/refs/tags/v2.9.tar.gz"
+sha256 = "4cc3dcbe669ff6b97641ce0c6c332e63934d829a0700fd87171d5be5b1b89305"
+strip_components = 1
+description = "Multi-core batch image resizer and rotator"
+homepage = "https://github.com/jarun/imgp"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"

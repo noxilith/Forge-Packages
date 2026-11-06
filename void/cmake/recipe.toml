@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cmake'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses, python3-Sphinx, qt6-tools
+[package]
+name = "cmake"
+version = "4.2.2"
+archive = "https://www.cmake.org/files/v4.2/cmake-4.2.2.tar.gz"
+sha256 = "bbda94dd31636e89eb1cc18f8355f6b01d9193d7676549fba282057e8b730f58"
+strip_components = 1
+description = "Cross-platform, open-source build system"
+homepage = "https://www.cmake.org"
+license = "BSD-3-Clause, ICU"
+deps = ["cppdap", "curl", "expat", "jsoncpp", "libarchive", "libuv", "qt6-base", "rhash"]
+patches = ["patches/ignore-crape-compiler-test.patch", "patches/musl-test.patch", "patches/no-license.patch", "patches/not-found.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_DOC_DIR=/share/doc/cmake", "-DSPHINX_MAN=1", "-DCMAKE_MAN_DIR=/share/man", "-DBUILD_CursesDialog=ON", "-DBUILD_QtDialog=ON", "-DCMAKE_SKIP_BOOTSTRAP_TEST=1", "-DCMAKE_SKIP_RPATH=1", "-DCMAKE_USE_SYSTEM_LIBRARIES=ON", "-DKWSYS_LFS_WORKS=1"]

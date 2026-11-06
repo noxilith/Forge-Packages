@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'swig'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_check
+[package]
+name = "swig"
+version = "4.4.1"
+archive = "https://downloads.sourceforge.net/sourceforge/swig/swig-4.4.1.tar.gz"
+sha256 = "40162a706c56f7592d08fd52ef5511cb7ac191f3593cf07306a0a554c6281fcf"
+strip_components = 1
+description = "Simplified Wrapper and Interface Generator"
+homepage = "http://www.swig.org"
+license = "GPL-3.0-or-later"
+deps = ["pcre2", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["bison"]

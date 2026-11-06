@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'peshming'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "peshming"
+version = "0.5.1"
+archive = "https://git.jcg.re/jcgruenhage/peshming/archive/v0.5.1.tar.gz"
+sha256 = "887ef53f4523cc1370f37c71244ecd1c654a2b02516b33d6e4f4f69345947bba"
+strip_components = 1
+description = "Prometheus exporter for background icmp pings"
+homepage = "https://git.jcg.re/jcgruenhage/peshming"
+license = "AGPL-3.0-only"
+deps = ["libcap"]
+
+[build]
+system = "cargo"

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'MEGAcmd'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "MEGAcmd"
+version = "1.4.0"
+archive = "https://github.com/meganz/MEGAcmd/archive/1.4.0_Linux.tar.gz"
+sha256 = "2a3626a9f1d22303fe2123f984a8ecf3779d6d59ac6c67c1bf43c2423dcb832d"
+strip_components = 1
+description = "Command Line Interactive and Scriptable Application to access MEGA"
+homepage = "https://github.com/meganz/MEGAcmd"
+license = "BSD-2-Clause, GPL-3.0-or-later"
+deps = ["MEGAsdk", "pcre"]
+patches = ["patches/autotools.patch", "patches/megaexec.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["autoconf-archive", "autogen", "gettext"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'amber'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "amber"
+version = "0.6.1"
+archive = "https://github.com/dalance/amber/archive/refs/tags/v0.6.1.tar.gz"
+sha256 = "58ca7d172e68acde06c80039762073f6fb700a75d1013aece84f310a4535c277"
+strip_components = 1
+description = "Code search/replace tool"
+homepage = "https://github.com/dalance/amber"
+license = "MIT"
+
+[build]
+system = "cargo"

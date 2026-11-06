@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kdb'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen, qt5, sqlite
+[package]
+name = "kdb"
+version = "3.2.0"
+archive = "https://download.kde.org/stable/kdb/src/kdb-3.2.0.tar.xz"
+sha256 = "8f8983bc8d143832dc14bc2003ba6af1af27688e477c0c791fd61445464f2069"
+strip_components = 1
+description = "Database connectivity and creation framework"
+homepage = "http://www.kexi-project.org/"
+license = "LGPL-2.0-or-later"
+deps = ["kcoreaddons", "mariadb", "postgresql18"]
+patches = ["patches/Find-also-Python3-with-find_package-PythonInterp.patch", "patches/cmake-4.patch", "patches/kdb-fix-build.patch", "patches/kdb-mkspecs-path.patch", "patches/postgresql12.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_CXX_STANDARD=17"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

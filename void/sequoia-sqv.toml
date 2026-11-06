@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sequoia-sqv'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_build
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "sequoia-sqv"
+version = "1.4.0"
+archive = "https://gitlab.com/sequoia-pgp/sequoia-sqv/-/archive/v1.4.0/sequoia-sqv-v1.4.0.tar.gz"
+sha256 = "a2c27efd6604ea2dae9ad03792f70486484e49f623dc4fbd367b4f4cb3252d69"
+strip_components = 1
+description = "Simple PGP signature verification program"
+homepage = "https://gitlab.com/sequoia-pgp/sequoia-sqv"
+license = "GPL-2.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features", "crypto-openssl"]
+tools = ["pkg-config"]

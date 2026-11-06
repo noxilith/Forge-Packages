@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libayatana-appindicator'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libayatana-appindicator"
+version = "0.5.94"
+archive = "https://github.com/AyatanaIndicators/libayatana-appindicator/archive/0.5.94.tar.gz"
+sha256 = "884a6bc77994c0b58c961613ca4c4b974dc91aa0f804e70e92f38a542d0d0f90"
+strip_components = 1
+description = "Ayatana Application Indicators Shared Library"
+homepage = "https://ayatanaindicators.github.io/"
+license = "LGPL-3.0-or-later"
+deps = ["glib", "gtk+3", "libayatana-indicator", "libdbusmenu-glib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_BINDINGS_MONO=OFF"]
+tools = ["pkg-config"]
+deps = ["gobject-introspection"]

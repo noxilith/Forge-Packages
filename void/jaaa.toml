@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'jaaa'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: fftw, jack
+[package]
+name = "jaaa"
+version = "0.9.2"
+archive = "https://kokkinizita.linuxaudio.org/linuxaudio/downloads/jaaa-0.9.2.tar.bz2"
+sha256 = "6cf55a3924694179d83e9d49f557896fcebdc1a7f89477e601caa2277ad7f3b3"
+strip_components = 1
+description = "JACK and ALSA Audio Analyser"
+homepage = "https://kokkinizita.linuxaudio.org/linuxaudio/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "clthreads", "clxclient", "freetype", "libX11", "libXft", "zita-alsa-pcmi"]
+
+[build]
+system = "make"
+subdir = "source"
+tools = ["pkg-config"]

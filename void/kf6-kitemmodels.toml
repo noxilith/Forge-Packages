@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-kitemmodels'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kitemmodels"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kitemmodels-6.30.0.tar.xz"
+sha256 = "f807e5b37aa913d2563ee1a21b2bce7d34495f32f38c7f35f16262d736bdfd55"
+strip_components = 1
+description = "Set of item models extending the Qt model-view framework"
+homepage = "https://invent.kde.org/frameworks/kitemmodels"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "qt6-base"]

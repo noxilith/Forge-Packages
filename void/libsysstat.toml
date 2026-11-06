@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libsysstat'. Review before relying on it.
+[package]
+name = "libsysstat"
+version = "1.1.0"
+archive = "https://github.com/lxqt/libsysstat/releases/download/1.1.0/libsysstat-1.1.0.tar.xz"
+sha256 = "996e5e8c43b1364a81a660b56956948c628e919f1d73554df6be152bbec8d430"
+strip_components = 1
+description = "Qt-based interface to system statistics"
+homepage = "https://lxqt.org/"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["lxqt-build-tools"]

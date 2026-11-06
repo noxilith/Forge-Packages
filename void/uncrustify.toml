@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'uncrustify'. Review before relying on it.
+[package]
+name = "uncrustify"
+version = "0.81.0"
+archive = "https://github.com/uncrustify/uncrustify/archive/refs/tags/uncrustify-0.81.0.tar.gz"
+sha256 = "484623dc16b92206adc6ac0770077c6c67c6e441102148c2a121a19549330ff9"
+strip_components = 1
+description = "Source Code Beautifier for multiple languages"
+homepage = "https://uncrustify.sourceforge.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "cmake"

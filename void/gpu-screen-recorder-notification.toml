@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gpu-screen-recorder-notification'. Review before relying on it.
+[package]
+name = "gpu-screen-recorder-notification"
+version = "1.1.1"
+archive = "https://dec05eba.com/snapshot/gpu-screen-recorder-notification.git.1.1.1.tar.gz"
+sha256 = "19a7d5681f87a49d636b2471c4d2d93b4539b053bc37a9c31598b5a44418a346"
+strip_components = 1
+description = "Notification daemon for gpu-screen-recorder-ui"
+homepage = "https://git.dec05eba.com/gpu-screen-recorder-notification/about"
+license = "GPL-3.0-only, OFL-1.1"
+deps = ["libX11", "libXext", "libXrandr", "libXrender", "libglvnd", "wayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

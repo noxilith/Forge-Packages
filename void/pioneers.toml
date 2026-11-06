@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pioneers'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool, itstool
+[package]
+name = "pioneers"
+version = "15.6"
+archive = "https://sourceforge.net/projects/pio/files/Source/pioneers-15.6.tar.gz"
+sha256 = "9a358d88548e3866e14c46c2707f66c98f8040a7857d47965e1ed9805aeb631d"
+strip_components = 1
+description = "Clone of the famous 'Settlers of Catan' game"
+homepage = "http://pio.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "librsvg"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

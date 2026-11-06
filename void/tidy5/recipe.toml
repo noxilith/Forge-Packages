@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tidy5'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: cmake_builddir
+[package]
+name = "tidy5"
+version = "5.8.0"
+archive = "https://github.com/htacg/tidy-html5/archive/5.8.0.tar.gz"
+sha256 = "59c86d5b2e452f63c5cdb29c866a12a4c55b1741d7025cf2f3ce0cde99b0660e"
+strip_components = 1
+description = "Tool to tidy down your HTML/HTML5 code to a clean style"
+homepage = "http://www.htacg.org/tidy-html5/"
+license = "W3C"
+patches = ["patches/allow-cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DTIDY_CONSOLE_SHARED=ON"]
+deps = ["libxslt"]

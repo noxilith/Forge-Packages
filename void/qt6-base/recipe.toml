@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'qt6-base'. Review before relying on it.
+# 6 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: cups, harfbuzz, mesa, mit-krb5, mtdev, sqlite, zstd
+[package]
+name = "qt6-base"
+version = "6.11.2"
+archive = "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz"
+sha256 = "5b2e00eccaf5a4d8c14134ffa0ea8dfd0a35ae1ffc7f8d87fa4305a1ed23cf22"
+strip_components = 1
+description = "Cross-platform application and UI framework (QT6)"
+homepage = "https://www.qt.io"
+license = "GPL-3.0-only WITH Qt-GPL-exception-1.0, LGPL-3.0-only, GPL-2.0-or-later"
+deps = ["brotli", "dbus", "double-conversion", "glib", "gtk+3", "libSM", "libb2", "libicu78", "libinput", "libpng", "libproxy", "libxcb", "mariadb", "md4c", "pcre2", "postgresql18", "tslib", "unixodbc", "vulkan-loader", "wayland", "xcb-util-cursor", "xcb-util-image", "xcb-util-keysyms", "xcb-util-renderutil", "xcb-util-wm", "zlib"]
+patches = ["patches/markdown.patch", "patches/musl-lfs.patch", "patches/musl-test-image.patch", "patches/musl-usr-path-hack.patch", "patches/resource-root-dir-last-modified-is-valid.patch", "patches/skip-mem-intensive.patch", "patches/x86-qround-passed.patch", "patches/zfs-storage.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DINSTALL_DATADIR=share/qt6", "-DINSTALL_INCLUDEDIR=include/qt6", "-DQT_FEATURE_openssl_linked=ON", "-DQT_FEATURE_system_sqlite=ON", "-DQT_FEATURE_system_xcb_xinput=ON", "-DQT_FEATURE_libproxy=ON", "-DQT_FEATURE_qmake=ON", "-DQT_FEATURE_wayland=ON", "-DBUILD_WITH_PCH=OFF"]
+tools = ["perl", "pkg-config"]
+deps = ["xmlstarlet"]

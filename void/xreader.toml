@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xreader'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, intltool, itstool, libspectre, libwebkit2gtk41, mathjax2, texlive-bin
+[package]
+name = "xreader"
+version = "4.6.9"
+archive = "https://github.com/linuxmint/xreader/archive/4.6.9.tar.gz"
+sha256 = "fbe1dc1937ca870c8ebc69015053eebf890193bc468425f795920b86565cc420"
+strip_components = 1
+description = "Document viewer capable of displaying formats like PDF and Postscript"
+homepage = "https://github.com/linuxmint/xreader"
+license = "GPL-2.0-or-later"
+deps = ["at-spi2-core", "cairo", "desktop-file-utils", "djvulibre", "gdk-pixbuf", "glib", "gtk+3", "libSM", "libgxps", "libsecret", "libxml2", "pango", "poppler", "tiff", "xapp", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dthumbnailer=false"]
+tools = ["pkg-config"]

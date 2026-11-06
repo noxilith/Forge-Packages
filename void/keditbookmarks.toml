@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'keditbookmarks'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "keditbookmarks"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/keditbookmarks-26.08.1.tar.xz"
+sha256 = "d1c4f6d837490e5bde6ddea0ca1de5726cc511b0f7a522a25425e5f0387a2365"
+strip_components = 1
+description = "Bookmarks editor"
+homepage = "https://www.kde.org/"
+license = "GPL-2.0-or-later, GFDL-1.2-only"
+deps = ["kf6-kbookmarks", "kf6-kcodecs", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kparts", "kf6-kwidgetsaddons", "kf6-kwindowsystem"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-base"]

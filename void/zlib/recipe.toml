@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zlib'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "zlib"
+version = "1.3.2"
+archive = "https://www.zlib.net/fossils/zlib-1.3.2.tar.gz"
+sha256 = "bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16"
+strip_components = 1
+description = "Compression/decompression Library"
+homepage = "https://www.zlib.net"
+license = "Zlib"
+patches = ["patches/makefile_ranlib_syntax.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--shared"]

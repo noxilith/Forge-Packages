@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'stc'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "stc"
+version = "1.5"
+archive = "https://github.com/tenox7/stc/archive/refs/tags/1.5.tar.gz"
+sha256 = "ee04a1f1968934ed0b64a422a231bea212799b5f9813de33d227b5781bf49813"
+strip_components = 1
+description = "Syncthing CLI Tool"
+homepage = "https://github.com/tenox7/stc"
+license = "Apache-2.0"
+
+[build]
+system = "go"

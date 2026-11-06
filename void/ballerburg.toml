@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ballerburg'. Review before relying on it.
+[package]
+name = "ballerburg"
+version = "1.2.3"
+archive = "https://framagit.org/baller/ballerburg/-/archive/v1.2.3/ballerburg-v1.2.3.tar.gz"
+sha256 = "88fdddef806008aac2c7c0ebf8c9152e26cdb1b21fd70337069925723134dcc4"
+strip_components = 1
+description = "Classical castle combat game"
+homepage = "https://baller.frama.io/"
+license = "GPL-3.0-or-later"
+deps = ["SDL2"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

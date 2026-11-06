@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'amfora'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "amfora"
+version = "1.11.0"
+archive = "https://github.com/makew0rld/amfora/archive/refs/tags/v1.11.0.tar.gz"
+sha256 = "76ae120bdae9a1882acbb2b07a873a52e40265b3ef4c8291de0934c1e9b5982c"
+strip_components = 1
+description = "Fancy terminal browser for the Gemini protocol"
+homepage = "https://github.com/makew0rld/amfora"
+license = "GPL-3.0-only"
+
+[build]
+system = "go"

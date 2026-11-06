@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nfdump'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: bzip2
+[package]
+name = "nfdump"
+version = "1.7.10"
+archive = "https://github.com/phaag/nfdump/archive/v1.7.10.tar.gz"
+sha256 = "9a1bc84eb484c7383eea3b48ad2abe5b9ffe7e90aab3fda7055aa3f64be0cc29"
+strip_components = 1
+description = "Collect and process netflow and sflow data"
+homepage = "https://github.com/phaag/nfdump"
+license = "BSD-3-Clause"
+deps = ["libbsd", "libpcap"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-sflow", "--enable-readpcap", "--enable-nfcapd"]
+tools = ["flex", "pkg-config"]

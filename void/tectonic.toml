@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tectonic'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: harfbuzz
+[package]
+name = "tectonic"
+version = "0.17.0"
+archive = "https://github.com/tectonic-typesetting/tectonic/archive/tectonic@0.17.0.tar.gz"
+sha256 = "30adda98f67dd5389844f6023adeeb54b5475c17a54b777900644468fbc9765d"
+strip_components = 1
+description = "Modernized, complete, self-contained TeX/LaTeX engine"
+homepage = "https://tectonic-typesetting.github.io"
+license = "MIT"
+deps = ["freetype", "graphite", "libicu78", "libpng", "openssl", "zlib"]
+
+[build]
+system = "cargo"
+configure_args = ["--features=external-harfbuzz"]
+tools = ["pkg-config"]

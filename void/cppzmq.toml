@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cppzmq'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cppzmq"
+version = "4.10.0"
+archive = "https://github.com/zeromq/cppzmq/archive/v4.10.0.tar.gz"
+sha256 = "c81c81bba8a7644c84932225f018b5088743a22999c6d82a2b5f5cd1e6942b74"
+strip_components = 1
+description = "C++ binding for 0MQ"
+homepage = "https://github.com/zeromq/cppzmq"
+license = "MIT"
+deps = ["zeromq"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCPPZMQ_BUILD_TESTS=OFF"]
+tools = ["pkg-config"]

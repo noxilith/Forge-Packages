@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'calligra-plan'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "calligra-plan"
+version = "4.0.1"
+archive = "https://download.kde.org/stable/calligraplan/calligraplan-4.0.1.tar.xz"
+sha256 = "9267ea174c04466014343927f73757bb3047dab36a74fc8f38b891e8d8833a39"
+strip_components = 1
+description = "Project Management"
+homepage = "https://www.calligra.org/plan/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later, GFDL-1.2-or-later"
+deps = ["kdiagram6", "kf6-kcmutils", "kf6-kdbusaddons", "kf6-kholidays", "kf6-kiconthemes", "kf6-kitemmodels", "kf6-knotifications", "kf6-kparts", "kf6-ktextwidgets", "kf6-kwallet", "kf6-sonnet", "kf6-threadweaver", "plasma-activities"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kdoctools", "qt6-base"]

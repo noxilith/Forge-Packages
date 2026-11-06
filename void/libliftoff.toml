@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libliftoff'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "libliftoff"
+version = "0.5.0"
+archive = "https://gitlab.freedesktop.org/emersion/libliftoff/-/archive/v0.5.0/libliftoff-v0.5.0.tar.gz"
+sha256 = "3309218c3137a70faada653690802b514e4e46d9b38e7d9d5948ffcc4831f3b1"
+strip_components = 1
+description = "Lightweight KMS plane library"
+homepage = "https://gitlab.freedesktop.org/emersion/libliftoff"
+license = "MIT"
+deps = ["libdrm"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

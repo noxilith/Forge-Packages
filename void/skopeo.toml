@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'skopeo'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_build_tags, go_package, go_import_path, build_helper, make_dirs
+# needs, but Forge has no recipe for yet: containers.image, containers.storage
+[package]
+name = "skopeo"
+version = "1.24.1"
+archive = "https://github.com/containers/skopeo/archive/refs/tags/v1.24.1.tar.gz"
+sha256 = "6a3f342a327ec7684198eb0e15114940b6101506db48d9a96590f5942cb3b335"
+strip_components = 1
+description = "Utility for operations on container images and image repositories"
+homepage = "https://github.com/containers/skopeo"
+license = "Apache-2.0"
+deps = ["btrfs-progs", "gpgme", "lvm2"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]
+deps = ["go-md2man"]

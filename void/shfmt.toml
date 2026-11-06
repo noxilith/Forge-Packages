@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'shfmt'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "shfmt"
+version = "3.14.1"
+archive = "https://github.com/mvdan/sh/archive/v3.14.1.tar.gz"
+sha256 = "ec4bdb88ab6c95686be3a4eeb4ad77d2b49d33d2ed7b0a65035cd52d2d87c443"
+strip_components = 1
+description = "Shell parser and formatter"
+homepage = "https://github.com/mvdan/sh"
+license = "BSD-3-Clause"
+
+[build]
+system = "go"
+deps = ["scdoc"]

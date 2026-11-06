@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'lr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "lr"
+version = "2.0.1"
+archive = "https://github.com/leahneukirchen/lr/archive/v2.0.1.tar.gz"
+sha256 = "c7c4a57169e1396f17a09b05b19456945c8bb5e55001c5a870b083c0b4a23cd8"
+strip_components = 1
+description = "List files, recursively (a better ls/find/stat/du)"
+homepage = "https://github.com/leahneukirchen/lr"
+license = "MIT"
+
+[build]
+system = "make"

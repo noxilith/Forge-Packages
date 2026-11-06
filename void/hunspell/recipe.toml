@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'hunspell'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "hunspell"
+version = "1.7.2"
+archive = "https://github.com/hunspell/hunspell/archive/v1.7.2.tar.gz"
+sha256 = "69fa312d3586c988789266eaf7ffc9861d9f6396c31fc930a014d551b59bbd6e"
+strip_components = 1
+description = "Spell checker and morphological analyzer"
+homepage = "https://hunspell.github.io/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later, MPL-1.1"
+patches = ["patches/search_path.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-ui"]
+tools = ["bison", "pkg-config"]
+deps = ["gettext"]

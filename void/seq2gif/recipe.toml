@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'seq2gif'. Review before relying on it.
+[package]
+name = "seq2gif"
+version = "0.10.4"
+archive = "https://github.com/saitoha/seq2gif/archive/v0.10.4.tar.gz"
+sha256 = "738805bf8eb7ee5171ded7f43326cca7caecb77031283720f97253c234261f29"
+strip_components = 1
+description = "Convert ttyrec recordings into high quality gifs"
+homepage = "http://saitoha.github.io/seq2gif/"
+license = "GPL-3.0-or-later"
+patches = ["patches/ifdef.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'librevenge'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, libcppunit
+[package]
+name = "librevenge"
+version = "0.0.6"
+archive = "https://downloads.sourceforge.net/sourceforge/libwpd/librevenge-0.0.6.tar.xz"
+sha256 = "19eacf5ce55d7fe6a990a45142589cdf7da0c7b68701797f133482cb44f189fa"
+strip_components = 1
+description = "Library for REVerses ENGineered formats filters"
+homepage = "https://sourceforge.net/p/libwpd/librevenge"
+license = "MPL-2.0, LGPL-2.1-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-werror"]
+tools = ["pkg-config"]

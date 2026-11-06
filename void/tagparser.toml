@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tagparser'. Review before relying on it.
+[package]
+name = "tagparser"
+version = "12.5.3"
+archive = "https://github.com/Martchus/tagparser/archive/v12.5.3.tar.gz"
+sha256 = "902ba1759ed54cff5e5009d6d4d1dded9ee0bd0d23fb1221aef59adf25b0e455"
+strip_components = 1
+description = "C++ library for handling AAC, ID3, Vorbis, Opus, FLAC and Matroska tags"
+homepage = "https://github.com/Martchus/tagparser"
+license = "GPL-2.0-only"
+deps = ["cpp-utilities", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS:BOOL=ON"]
+tools = ["pkg-config"]
+deps = ["iso-codes"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'idesk'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "idesk"
+version = "0.7.8"
+archive = "https://github.com/neagix/idesk/archive/refs/tags/v0.7.8.tar.gz"
+sha256 = "cb5ccc4e598d4d6de41a55512f0bff5afae16da499009b109322e43286c1c7bd"
+strip_components = 1
+description = "Gives users of minimal wm's icons on their desktop"
+homepage = "https://github.com/neagix/idesk"
+license = "BSD-3-Clause"
+deps = ["gdk-pixbuf", "giflib", "imlib2", "libXft", "libXpm", "libjpeg-turbo", "libpng", "librsvg", "tiff"]
+patches = ["patches/pkg-config.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-svg"]
+tools = ["pkg-config"]

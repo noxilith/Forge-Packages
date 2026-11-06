@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pulseaudio-equalizer-ladspa'. Review before relying on it.
+[package]
+name = "pulseaudio-equalizer-ladspa"
+version = "3.0.2"
+archive = "https://github.com/pulseaudio-equalizer-ladspa/equalizer/archive/v3.0.2.tar.gz"
+sha256 = "2dd14d7bdbc806bfa239bae49dbeef8ccd8bbdb53a413bd83d0ca32390ceae6f"
+strip_components = 1
+description = "Pulseaudio LADSPA Equalizer"
+homepage = "https://github.com/pulseaudio-equalizer-ladspa/equalizer"
+license = "GPL-3.0-or-later"
+deps = ["python3-gobject", "swh-plugins"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gource'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: SDL2_image, boost, freefont-ttf, glew, tinyxml
+[package]
+name = "gource"
+version = "0.55"
+archive = "https://github.com/acaudwell/Gource/releases/download/gource-0.55/gource-0.55.tar.gz"
+sha256 = "c8239212d28b07508d9e477619976802681628fc25eb3e04f6671177013c0142"
+strip_components = 1
+description = "Software version control visualization"
+homepage = "https://gource.io/"
+license = "GPL-3.0-or-later"
+deps = ["freetype", "glm", "libpng", "pcre2"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-tinyxml", "--with-boost-system=c"]
+tools = ["pkg-config"]

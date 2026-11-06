@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'notify-osd'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib
+[package]
+name = "notify-osd"
+version = "0.9.34"
+archive = "https://launchpad.net/notify-osd/precise/0.9.34/+download/notify-osd-0.9.34.tar.gz"
+sha256 = "12080deeaa5e1e10b420117351c2bd5db3421b0d1efcab8ee8052c808c3aaa3c"
+strip_components = 1
+description = "Canonical's on-screen-display notification agent"
+homepage = "https://launchpad.net/notify-osd"
+license = "GPL-3.0-only"
+deps = ["libnotify", "libwnck"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["glib"]

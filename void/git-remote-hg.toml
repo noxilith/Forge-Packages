@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'git-remote-hg'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_target, make_install_target
+# needs, but Forge has no recipe for yet: asciidoc, mercurial
+[package]
+name = "git-remote-hg"
+version = "1.0.4"
+archive = "https://github.com/mnauw/git-remote-hg/archive/refs/tags/v1.0.4.tar.gz"
+sha256 = "0645042e42295c978fff5c73828dd030d565de2d4daae87f0ed788aade699fdc"
+strip_components = 1
+description = "Transparent bidirectional bridge between Git and Mercurial for Git"
+homepage = "https://github.com/mnauw/git-remote-hg"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"

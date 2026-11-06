@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'niri'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "niri"
+version = "26.04"
+archive = "https://github.com/niri-wm/niri/archive/refs/tags/v26.04.tar.gz"
+sha256 = "134c602d8e0d53413a52d6cd58f9ce7e79a07d03288ee0a51ba1abd5db1b1ad9"
+strip_components = 1
+description = "Scrollable-tiling Wayland compositor"
+homepage = "https://niri-wm.github.io/niri/"
+license = "GPL-3.0-or-later"
+deps = ["eudev", "gdk-pixbuf", "graphene", "gtk4", "libadwaita", "libdisplay-info", "libinput", "libxkbcommon", "llvm19", "pango", "pipewire", "seatd", "wayland"]
+patches = ["patches/remove-session.patch"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features", "dbus,xdp-gnome-screencast"]
+tools = ["pkg-config"]

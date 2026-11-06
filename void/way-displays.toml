@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'way-displays'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: wlroots
+[package]
+name = "way-displays"
+version = "1.14.0"
+archive = "https://github.com/alex-courtis/way-displays/archive/refs/tags/1.14.0.tar.gz"
+sha256 = "c61a2fda5e8c94ed9955a18f634135fe203ad1f6b4c77da37241ff470f99f779"
+strip_components = 1
+description = "Auto Manage Your Wayland Displays"
+homepage = "https://github.com/alex-courtis/way-displays"
+license = "MIT"
+deps = ["eudev", "wayland", "yaml-cpp"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

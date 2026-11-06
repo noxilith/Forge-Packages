@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sov'. Review before relying on it.
+[package]
+name = "sov"
+version = "0.94"
+archive = "https://github.com/milgra/sov/releases/download/0.94/sov-0.94.tar.xz"
+sha256 = "ba5ab965093ead9e549c1e92e943a3eb3e9fe431d4859e1d2f840cc700eba34f"
+strip_components = 1
+description = "Overlay that shows schemas of all workspaces for sway"
+homepage = "https://github.com/milgra/sov"
+license = "GPL-3.0-or-later"
+deps = ["freetype", "libglvnd", "libpng", "libxkbcommon", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

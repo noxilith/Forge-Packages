@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'screentest'. Review before relying on it.
+[package]
+name = "screentest"
+version = "3.0"
+archive = "https://github.com/TobiX/screentest/archive/refs/tags/3.0.tar.gz"
+sha256 = "19a69ea8f8d8973000cf490525dc74d5363533859635fe5f7b998722a1398d11"
+strip_components = 1
+description = "Simple screen testing tool"
+homepage = "https://github.com/TobiX/screentest"
+license = "GPL-2.0-only"
+deps = ["glib", "gtk+3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'acpi'. Review before relying on it.
+[package]
+name = "acpi"
+version = "1.8"
+archive = "https://downloads.sourceforge.net/sourceforge/acpiclient/acpi-1.8.tar.gz"
+sha256 = "e64c6e00b53cd797427ea32a160513425b03ed4f077733f71f1f09ff340f230b"
+strip_components = 1
+description = "Informations about ACPI devices (battery, thermal sensors and power)"
+homepage = "https://sourceforge.net/projects/acpiclient/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fuse-exfat'. Review before relying on it.
+[package]
+name = "fuse-exfat"
+version = "1.4.0"
+archive = "https://github.com/relan/exfat/releases/download/v1.4.0/fuse-exfat-1.4.0.tar.gz"
+sha256 = "a1cfedc55e0e7a12c184605aa0f0bf44b24a3fb272449b20b2c8bbe6edb3001e"
+strip_components = 1
+description = "Free exFAT file system implementation"
+homepage = "https://github.com/relan/exfat"
+license = "GPL-2.0-or-later"
+deps = ["exfat-utils", "fuse"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

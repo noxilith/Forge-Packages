@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'extractpdfmark'. Review before relying on it.
+# hooks not translated: post_extract, pre_configure
+# settings not translated: configure_script
+[package]
+name = "extractpdfmark"
+version = "1.1.1"
+archive = "https://github.com/trueroad/extractpdfmark/archive/v1.1.1.tar.gz"
+sha256 = "9dab715fdd4ce0c34a3d83899c4263a2ab59f649df0f221d335535d6c9546191"
+strip_components = 1
+description = "Extract page mode and named destinations as PDFmark from PDF"
+homepage = "https://www.ctan.org/pkg/extractpdfmark"
+license = "GPL-3.0-or-later"
+deps = ["poppler"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-poppler=cpp"]
+subdir = "build"
+tools = ["pkg-config"]
+deps = ["autogen", "gettext", "tar"]

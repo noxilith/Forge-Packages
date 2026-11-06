@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'es'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "es"
+version = "0.10.0"
+archive = "https://github.com/wryun/es-shell/releases/download/v0.10.0/es-0.10.0.tar.gz"
+sha256 = "551ec0974822ec081e7b9f8ee79374c62766ca6dcdb1c685a98efdc3e6dbc4b9"
+strip_components = 1
+description = "Functional shell with rc-inspired syntax"
+homepage = "https://github.com/wryun/es-shell/"
+license = "Public Domain"
+
+[build]
+system = "autotools"
+configure_args = ["--with-readline", "es_cv_abused_getenv=no"]
+tools = ["bison"]

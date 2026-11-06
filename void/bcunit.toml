@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'bcunit'. Review before relying on it.
+[package]
+name = "bcunit"
+version = "5.2.0"
+archive = "https://github.com/BelledonneCommunications/bcunit/archive/5.2.0.tar.gz"
+sha256 = "67b9186c42bd91d076b33063a33837dbb11a753eb35ad7ed8db8d65cdf88ef83"
+strip_components = 1
+description = "Lightweight unit tests in C"
+homepage = "https://github.com/BelledonneCommunications/bcunit"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_DOC=ON"]

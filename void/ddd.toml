@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ddd'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "ddd"
+version = "3.4.1"
+archive = "https://ftp.gnu.org/gnu/ddd/ddd-3.4.1.tar.gz"
+sha256 = "b87517a6c3f9611566347e283a2cf931fa369919b553536a2235e63402f4ee89"
+strip_components = 1
+description = "Graphical front-end for command-line debuggers"
+homepage = "http://www.gnu.org/software/ddd"
+license = "GPL-3.0-or-later"
+deps = ["freetype", "libXaw", "libXext", "libXmu", "libXt", "motif"]
+
+[build]
+system = "autotools"

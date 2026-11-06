@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xastir'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "xastir"
+version = "2.2.2"
+archive = "https://github.com/Xastir/Xastir/archive/Release-2.2.2.tar.gz"
+sha256 = "e80d1640ef2b8071984a633d45beae878c120d6012cb371405b160a06b328542"
+strip_components = 1
+description = "X Amateur Station Tracking and Information Reporting"
+homepage = "http://xastir.org"
+license = "GPL-2.0-or-later"
+deps = ["GraphicsMagick", "curl", "libXp", "libXrender", "libXt", "libax25", "motif", "pcre"]
+patches = ["patches/fix-mutex.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_file__usr_bin_gm_exe=no", "ac_cv_file__usr_bin_convert_exe=no"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'openh264'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "openh264"
+version = "2.6.0"
+archive = "https://github.com/cisco/openh264/archive/v2.6.0.tar.gz"
+sha256 = "558544ad358283a7ab2930d69a9ceddf913f4a51ee9bf1bfb9e377322af81a69"
+strip_components = 1
+description = "OpenH264 is a codec library which supports H.264 encoding and decoding"
+homepage = "https://github.com/cisco/openh264"
+license = "BSD-2-Clause"
+
+[build]
+system = "meson"
+tools = ["nasm", "pkg-config"]

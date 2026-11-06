@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kio-gdrive'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: intltool, libaccounts-qt
+[package]
+name = "kio-gdrive"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kio-gdrive-26.08.1.tar.xz"
+sha256 = "ce1a91277edf256e9fc6a90fbc486dabd951b329c81d1c9328b0fa3bf06474c8"
+strip_components = 1
+description = "KIO slave that enables access and edit Google Drive files"
+homepage = "https://community.kde.org/KIO_GDrive"
+license = "GPL-2.0-or-later"
+deps = ["kaccounts-providers", "kf6-kaccounts-integration", "kf6-kparts", "kf6-purpose", "libkgapi"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DQT_MAJOR_VERSION=6", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdoctools", "qt6-base"]

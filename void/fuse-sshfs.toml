@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fuse-sshfs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-docutils
+[package]
+name = "fuse-sshfs"
+version = "3.7.5"
+archive = "https://github.com/libfuse/sshfs/releases/download/sshfs-3.7.5/sshfs-3.7.5.tar.xz"
+sha256 = "0e45db63c2d00919db3174134fa234c6e0682d6fe573c46312d1d53d1d61a8bb"
+strip_components = 1
+description = "FUSE client based on the SSH File Transfer Protocol"
+homepage = "https://github.com/libfuse/sshfs"
+license = "GPL-2.0-or-later"
+deps = ["fuse3", "glib", "openssh"]
+
+[build]
+system = "meson"
+configure_args = ["--sbindir=bin"]
+tools = ["pkg-config"]

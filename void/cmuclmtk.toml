@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cmuclmtk'. Review before relying on it.
+[package]
+name = "cmuclmtk"
+version = "0.7"
+archive = "https://downloads.sourceforge.net/sourceforge/cmusphinx/cmuclmtk/0.7/cmuclmtk-0.7.tar.gz"
+sha256 = "d23e47f00224667c059d69ac942f15dc3d4c3dd40e827318a6213699b7fa2915"
+strip_components = 1
+description = "Language model tools for Sphinx"
+homepage = "http://cmusphinx.sourceforge.net"
+license = "GPL-2"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pidgin-gpg'. Review before relying on it.
+[package]
+name = "pidgin-gpg"
+version = "0.9"
+archive = "https://sources.voidlinux.org/pidgin-gpg-0.9/pidgin-gpg-0.9.tar.gz"
+sha256 = "736681cb25da31eb8ced96055d4150d649fe6ef6e523b6f65846c3446ac09a96"
+strip_components = 1
+description = "GnuPG plug-in for the Pidgin IM"
+homepage = "http://github.com/segler-alex/Pidgin-GPG"
+license = "GPL-3.0-or-later"
+deps = ["gpgme", "pidgin"]
+patches = ["patches/musl-encrypt.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

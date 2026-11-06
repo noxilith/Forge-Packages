@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'keepalived'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libnfnetlink
+[package]
+name = "keepalived"
+version = "2.2.7"
+archive = "https://www.keepalived.org/software/keepalived-2.2.7.tar.gz"
+sha256 = "c61940d874154a560a54627ecf7ef47adebdf832164368d10bf242a4d9b7d49d"
+strip_components = 1
+description = "Failover and monitoring daemon for LVS clusters"
+homepage = "https://www.keepalived.org/"
+license = "GPL-2.0-or-later"
+deps = ["libnl3", "openssl", "popt"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-sha1"]
+tools = ["pkg-config"]

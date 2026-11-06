@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libopenrazer'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "libopenrazer"
+version = "0.2.0"
+archive = "https://github.com/z3ntu/libopenrazer/releases/download/v0.2.0/libopenrazer-0.2.0.tar.xz"
+sha256 = "86c28a1203e03f6c8f93490414a3a9ddcdb0459ce04bf08b6e3b6181478935f9"
+strip_components = 1
+description = "Qt wrapper around the D-Bus API from OpenRazer"
+homepage = "https://github.com/z3ntu/libopenrazer"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

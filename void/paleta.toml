@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'paleta'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "paleta"
+version = "1.0.2"
+archive = "https://github.com/dylanaraps/paleta/archive/1.0.2.tar.gz"
+sha256 = "b6a44653266598cd4e027703b0b06acb3a753f632abf87ea30732d139cf1bd16"
+strip_components = 1
+description = "Change terminal colors on-the-fly independent of terminal emulator"
+homepage = "https://github.com/dylanaraps/paleta"
+license = "MIT"
+
+[build]
+system = "make"

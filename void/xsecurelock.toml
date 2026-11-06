@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xsecurelock'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "xsecurelock"
+version = "1.9.0"
+archive = "https://github.com/google/xsecurelock/archive/v1.9.0.tar.gz"
+sha256 = "22aca05799326681bf296a288182d7b28066ff2d4db26d09bd7b2dfe8405269e"
+strip_components = 1
+description = "X11 screen locker designed with the primary goal of security"
+homepage = "https://github.com/google/xsecurelock"
+license = "Apache-2.0"
+deps = ["libX11", "libXScrnSaver", "libXcomposite", "libXext", "libXfixes", "libXft", "libXmu", "libXrandr", "pam"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-pam-service-name=system-local-login"]
+tools = ["pkg-config"]

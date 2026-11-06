@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'system-config-printer'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cups, python3-setuptools, python3-smbc
+[package]
+name = "system-config-printer"
+version = "1.5.18"
+archive = "https://github.com/OpenPrinting/system-config-printer/releases/download/v1.5.18/system-config-printer-1.5.18.tar.xz"
+sha256 = "b1a69e1b4ec2add569a87aeca811a37c5361ee6ae327ec852b79e64223e34bee"
+strip_components = 1
+description = "CUPS printer configuration tool and status applet"
+homepage = "https://github.com/OpenPrinting/system-config-printer"
+license = "GPL-2.0-or-later"
+deps = ["dconf", "desktop-file-utils", "eudev", "glib", "gobject-introspection", "gtk+3", "libnotify", "libsecret", "libusb", "python3-gobject"]
+patches = ["patches/python3.12.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-udev-rules"]
+tools = ["pkg-config"]
+deps = ["gettext", "xmlto"]

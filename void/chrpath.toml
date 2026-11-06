@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'chrpath'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "chrpath"
+version = "0.18"
+archive = "https://codeberg.org/pere/chrpath/archive/release-0.18.tar.gz"
+sha256 = "83441d1347a09a249c9f7efeac319454e17334d72e2983f18c812c7032cfef54"
+strip_components = 1
+description = "Change or delete the rpath or runpath in ELF files"
+homepage = "https://directory.fsf.org/project/chrpath/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

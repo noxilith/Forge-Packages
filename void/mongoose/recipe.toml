@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mongoose'. Review before relying on it.
+# settings not translated: make_build_target, CFLAGS
+[package]
+name = "mongoose"
+version = "7.6"
+archive = "https://github.com/cesanta/mongoose/archive/7.6.tar.gz"
+sha256 = "1ef09d971b6de1a6317c109980d6fb5a9c19b39efef2506d6b76869644b3dafa"
+strip_components = 1
+description = "Embedded HTTP/WebSocket/MQTT library for C/C++"
+homepage = "https://mongoose.ws/"
+license = "GPL-2.0-only"
+deps = ["openssl"]
+patches = ["patches/fix-makefile.patch", "patches/fix-tests.patch"]
+
+[build]
+system = "make"

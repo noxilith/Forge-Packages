@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lpa-gtk'. Review before relying on it.
+[package]
+name = "lpa-gtk"
+version = "0.4"
+archive = "https://codeberg.org/lucaweiss/lpa-gtk/archive/0.4.tar.gz"
+sha256 = "06ee0ce2c891f90c30dbfe0a804fdf319d2648ac619c25159f16e1caf7ccec2d"
+strip_components = 1
+description = "Local Profile Assistant app to manage an eSIM/eUICC"
+homepage = "https://codeberg.org/lucaweiss/lpa-gtk"
+license = "GPL-3.0-only"
+deps = ["glib", "gtk4", "libadwaita", "lpac", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils"]

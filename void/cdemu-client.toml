@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cdemu-client'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, post_patch
+[package]
+name = "cdemu-client"
+version = "3.3.1"
+archive = "https://downloads.sourceforge.net/sourceforge/cdemu/cdemu-client-3.3.1.tar.xz"
+sha256 = "dba28c77636da0c1c6d802603c64894e072c85f4b22735b47548a9980dcd1a5c"
+strip_components = 1
+description = "Simple command-line client for controlling CDEmu daemon"
+homepage = "https://cdemu.sourceforge.io"
+license = "GPL-2.0-or-later"
+deps = ["cdemu-daemon", "python3-gobject"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPOST_INSTALL_HOOKS=OFF"]
+tools = ["pkg-config"]
+deps = ["gettext"]

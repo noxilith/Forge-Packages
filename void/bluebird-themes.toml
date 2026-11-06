@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'bluebird-themes'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "bluebird-themes"
+version = "1.3"
+archive = "https://github.com/shimmerproject/Bluebird/archive/v1.3.tar.gz"
+sha256 = "b8da767c0ed66e2c0e8c2f78a8c827d8757634179b114a1352590f4e6d0b32c8"
+strip_components = 1
+description = "Elegant blue GTK2/3/Metacity/Xfwm theme"
+homepage = "https://github.com/shimmerproject/Bluebird"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+deps = ["gdk-pixbuf", "glib", "librsvg", "sassc", "tar", "which"]

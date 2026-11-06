@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gping'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "gping"
+version = "1.19.0"
+archive = "https://github.com/orf/gping/archive/refs/tags/gping-v1.19.0.tar.gz"
+sha256 = "a979c9a8c7a1a540bb48a1e90bb7ad294560bddc16ca977bc8475fb14f20155d"
+strip_components = 1
+description = "Ping, but with a graph"
+homepage = "https://crates.io/crates/gping"
+license = "MIT"
+
+[build]
+system = "cargo"

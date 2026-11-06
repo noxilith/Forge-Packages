@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce4-alsa-plugin'. Review before relying on it.
+[package]
+name = "xfce4-alsa-plugin"
+version = "0.3.0"
+archive = "https://github.com/equeim/xfce4-alsa-plugin/archive/0.3.0.tar.gz"
+sha256 = "e7c6aa6e65ce70764f2b8815445dd4be16f2c8aeee4971e9d7e1c66a44db7bbe"
+strip_components = 1
+description = "Simple ALSA volume control for xfce4-panel"
+homepage = "https://github.com/equeim/xfce4-alsa-plugin"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "gtk+3", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

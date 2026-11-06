@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libkdumpfile'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: python3-packaging-bootstrap, python3-setuptools, zstd
+[package]
+name = "libkdumpfile"
+version = "0.5.5"
+archive = "https://github.com/ptesarik/libkdumpfile/archive/refs/tags/v0.5.5.tar.gz"
+sha256 = "bb46f8573d85adfd30d41f70c126a5fc23428d7c27f3a389f6595a70c62a31f7"
+strip_components = 1
+description = "Kernel coredump file access library"
+homepage = "https://github.com/ptesarik/libkdumpfile"
+license = "GPL-2.0-or-later, LGPL-3.0-or-later"
+deps = ["lzo", "snappy", "zlib"]
+patches = ["patches/config.patch", "patches/missing-include.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["PYTHON=python3"]
+tools = ["pkg-config"]

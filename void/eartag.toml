@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'eartag'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-Pillow, python3-aiofiles, python3-aiohttp, python3-aiohttp-retry, python3-filetype, python3-mutagen, python3-pyacoustid, python3-xxhash
+[package]
+name = "eartag"
+version = "1.0.3"
+archive = "https://gitlab.gnome.org/World/eartag/-/archive/1.0.3/eartag-1.0.3.tar.gz"
+sha256 = "80854b588af057c8b86f6f9f8bb8bcfb06a1c13997d0228cd3f6e6f56a1ec4c3"
+strip_components = 1
+description = "Small and simple audio file tag editor"
+homepage = "https://gitlab.gnome.org/World/eartag"
+license = "MIT"
+deps = ["gtk4", "libadwaita", "python3-gobject"]
+
+[build]
+system = "meson"
+deps = ["blueprint-compiler", "gettext", "glib"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'nq'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "nq"
+version = "1.0"
+archive = "https://github.com/leahneukirchen/nq/archive/v1.0.tar.gz"
+sha256 = "d5b79a488a88f4e4d04184efa0bc116929baf9b34617af70d8debfb37f7431f4"
+strip_components = 1
+description = "Unix command line queue utility"
+homepage = "https://github.com/leahneukirchen/nq"
+license = "Public Domain"
+
+[build]
+system = "make"

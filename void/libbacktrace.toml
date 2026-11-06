@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libbacktrace'. Review before relying on it.
+[package]
+name = "libbacktrace"
+version = "0.0.202504"
+archive = "https://github.com/ianlancetaylor/libbacktrace/archive/793921876c981ce49759114d7bb89bb89b2d3a2d.tar.gz"
+sha256 = "858b1225351052234f7e71f0f36622fc9ad33aac947db7816d0b443ae0dd33ce"
+strip_components = 1
+description = "C library to produce symbolic backtraces"
+homepage = "https://github.com/ianlancetaylor/libbacktrace"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ugrep'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "ugrep"
+version = "7.8.5"
+archive = "https://github.com/Genivia/ugrep/archive/v7.8.5.tar.gz"
+sha256 = "f080ab6cd9d96a5357570cb60a99e09ebe5eef11cf322c35373dbe815378a1f2"
+strip_components = 1
+description = "Ultra fast grep with interactive query UI"
+homepage = "https://github.com/Genivia/ugrep"
+license = "BSD-3-Clause"
+deps = ["lz4", "pcre2", "xz", "zlib"]
+
+[build]
+system = "autotools"

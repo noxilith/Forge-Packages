@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'uhubctl'. Review before relying on it.
+# settings not translated: make_install_args
+[package]
+name = "uhubctl"
+version = "2.4.0"
+archive = "https://github.com/mvp/uhubctl/archive/v2.4.0.tar.gz"
+sha256 = "391f24fd1f89cacce801df38ecc289b34c3627bc08ee69eec515af7e1a283d97"
+strip_components = 1
+description = "USB hub per-port power control"
+homepage = "https://github.com/mvp/uhubctl"
+license = "GPL-2.0-only"
+deps = ["libusb"]
+patches = ["patches/Makefile.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["which"]

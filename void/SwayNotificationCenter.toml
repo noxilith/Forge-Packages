@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'SwayNotificationCenter'. Review before relying on it.
+[package]
+name = "SwayNotificationCenter"
+version = "0.12.6"
+archive = "https://github.com/ErikReider/SwayNotificationCenter/archive/refs/tags/v0.12.6.tar.gz"
+sha256 = "0c844eb5c9524f924495bd4145e5db575096de36f3ec87fb37e4c1ed6eacb897"
+strip_components = 1
+description = "Simple notification daemon with a GTK gui"
+homepage = "https://github.com/ErikReider/SwayNotificationCenter"
+license = "GPL-3.0-only"
+deps = ["dbus", "gobject-introspection", "granite7", "gtk4", "gtk4-layer-shell", "json-glib", "libadwaita", "libgee", "pulseaudio"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystemd-service=false"]
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "glib", "sassc", "scdoc", "vala", "wayland"]

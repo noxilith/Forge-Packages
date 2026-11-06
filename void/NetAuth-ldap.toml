@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'NetAuth-ldap'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "NetAuth-ldap"
+version = "0.4.0"
+archive = "https://github.com/netauth/ldap/archive/v0.4.0.tar.gz"
+sha256 = "2dbc92884df5241d54129304b7f443458dab6192be5f1c0fcce1232c6226f0d6"
+strip_components = 1
+description = "LDAP Proxy for NetAuth"
+homepage = "https://www.netauth.org/ecosystem/ldap"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cgrps'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "cgrps"
+version = "0.8.2"
+archive = "https://github.com/k1LoW/cgrps/archive/v0.8.2.tar.gz"
+sha256 = "e44901cbd1b2aa58fff84dffadf4196fc48e62e2b4cf180ee97f651ee0835618"
+strip_components = 1
+description = "Set of commands for checking cgroups"
+homepage = "https://github.com/k1LoW/cgrps"
+license = "MIT"
+
+[build]
+system = "go"

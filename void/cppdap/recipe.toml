@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cppdap'. Review before relying on it.
+# hooks not translated: post_patch
+[package]
+name = "cppdap"
+version = "1.58.0+a"
+archive = "https://github.com/google/cppdap/archive/refs/tags/dap-1.58.0-a.tar.gz"
+sha256 = "5d35ca5db78570b6bef698e3365f79bd82a4f78e8393546387f78d7bdb2a2a08"
+strip_components = 1
+description = "C++ library for the Debug Adapter Protocol"
+homepage = "https://github.com/google/cppdap"
+license = "Apache-2.0"
+deps = ["gtest", "json-c++"]
+patches = ["patches/gtest.patch", "patches/no-freeaddrinfo-null.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCPPDAP_USE_EXTERNAL_NLOHMANN_JSON_PACKAGE=On", "-DCPPDAP_BUILD_TESTS=On", "-DBUILD_SHARED_LIBS=On"]

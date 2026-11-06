@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'blur-effect'. Review before relying on it.
+# needs, but Forge has no recipe for yet: glew
+[package]
+name = "blur-effect"
+version = "1.1.3"
+archive = "https://github.com/sonald/blur-effect/archive/1.1.3.tar.gz"
+sha256 = "80baead168e117cdbd7dd915dac94b8055e63dc05ec5797f3030acfaf19e5654"
+strip_components = 1
+description = "Off-screen image blurring utility using OpenGL ES 3.0"
+homepage = "https://github.com/sonald/blur-effect"
+license = "GPL-3.0-only"
+deps = ["gdk-pixbuf"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

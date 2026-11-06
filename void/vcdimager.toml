@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'vcdimager'. Review before relying on it.
+[package]
+name = "vcdimager"
+version = "2.0.1"
+archive = "https://ftp.gnu.org/gnu/vcdimager/vcdimager-2.0.1.tar.gz"
+sha256 = "67515fefb9829d054beae40f3e840309be60cda7d68753cafdd526727758f67a"
+strip_components = 1
+description = "Mastering suite for authoring, disassembling and analyzing Video CDs"
+homepage = "http://www.gnu.org/software/vcdimager/"
+license = "GPL-2.0-or-later"
+deps = ["libcdio", "libcdio-paranoia", "libxml2", "popt"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

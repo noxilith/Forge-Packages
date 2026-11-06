@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wsdd-native'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "wsdd-native"
+version = "1.24"
+archive = "https://github.com/gershnik/wsdd-native/archive/refs/tags/v1.24.tar.gz"
+sha256 = "b1f6adb7086f2f7ce3199a1b80cd7091159b6f7e6a66266484efcd50aadcc4bb"
+strip_components = 1
+description = "WS-Discovery daemon to make Linux visible in Windows Network view"
+homepage = "https://github.com/gershnik/wsdd-native"
+license = "BSD-3-Clause"
+deps = ["fmt", "libxml2", "spdlog", "tomlplusplus"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWSDDN_PREFER_SYSTEM_LIBXML2=ON", "-DWSDDN_PREFER_SYSTEM_FMT=ON", "-DWSDDN_PREFER_SYSTEM_SPDLOG=ON", "-DWSDDN_PREFER_SYSTEM_TOMLPLUSPLUS=ON", "-DWSDDN_WITH_SYSTEMD=no"]
+tools = ["pkg-config"]

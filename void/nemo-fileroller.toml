@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nemo-fileroller'. Review before relying on it.
+[package]
+name = "nemo-fileroller"
+version = "6.6.0"
+archive = "https://github.com/linuxmint/nemo-extensions/archive/refs/tags/6.6.0.tar.gz"
+sha256 = "ab610011ea77b00ba760fd151546f271ac92b525fcf1e4b603fbf46b85c3be30"
+strip_components = 1
+description = "Nemo file roller extension"
+homepage = "https://github.com/linuxmint/nemo-extensions"
+license = "GPL-2.0-or-later"
+deps = ["file-roller", "glib", "nemo"]
+
+[build]
+system = "meson"
+subdir = "nemo-fileroller"
+tools = ["pkg-config"]

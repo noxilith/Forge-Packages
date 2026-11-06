@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-taskmanager'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "xfce4-taskmanager"
+version = "1.6.0"
+archive = "https://archive.xfce.org/src/apps/xfce4-taskmanager/1.6/xfce4-taskmanager-1.6.0.tar.xz"
+sha256 = "29bdc7840ab8b9025f6c0e456a83a31090d1c9fd9e26b359baa4a4010cfb0b90"
+strip_components = 1
+description = "XFCE task manager plugin"
+homepage = "https://docs.xfce.org/apps/xfce4-taskmanager/start"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "desktop-file-utils", "glib", "gtk+3", "libX11", "libXmu", "libwnck", "libxfce4ui", "libxfce4util", "xfconf"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

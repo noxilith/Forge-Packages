@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libquvi-scripts'. Review before relying on it.
+# needs, but Forge has no recipe for yet: lua53
+[package]
+name = "libquvi-scripts"
+version = "0.4.21"
+archive = "https://downloads.sourceforge.net/sourceforge/quvi/libquvi-scripts-0.4.21.tar.xz"
+sha256 = "7c02cc86ac25334892d08bbc31251d78a55ee2a16d57dfa2bda7ac657c8e0f34"
+strip_components = 1
+description = "Set of (lua) scripts for libquvi"
+homepage = "http://quvi.sourceforge.net/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

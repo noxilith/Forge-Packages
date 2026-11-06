@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'Vulkan-Utility-Libraries'. Review before relying on it.
+[package]
+name = "Vulkan-Utility-Libraries"
+version = "1.4.363.0"
+archive = "https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/vulkan-sdk-1.4.363.0.tar.gz"
+sha256 = "a5308b62e3bac84cf45c4d7dd5b830aabace4847fdb71f4fd7db3be034c2bebf"
+strip_components = 1
+description = "Khronos official Vulkan utility libraries"
+homepage = "https://www.khronos.org/vulkan/"
+license = "Apache-2.0"
+deps = ["Vulkan-Headers"]
+
+[build]
+system = "cmake"

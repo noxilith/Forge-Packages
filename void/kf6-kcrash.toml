@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kcrash'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kcrash"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kcrash-6.30.0.tar.xz"
+sha256 = "b17f8242309e1502119c48b1ef5059a396a3068596a84fb79fdef6d9e2cd4f49"
+strip_components = 1
+description = "KDE Graceful handling of application crashes"
+homepage = "https://invent.kde.org/frameworks/kcrash"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcoreaddons"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "qt6-base"]

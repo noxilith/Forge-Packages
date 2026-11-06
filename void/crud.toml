@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'crud'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "crud"
+version = "0.3"
+archive = "https://github.com/fosu/crud/archive/0.3.tar.gz"
+sha256 = "33b647432427542a81905cc804a2868a4dc06dcbf62935b6cafb1ee1abc6083c"
+strip_components = 1
+description = "Prints the geometry of a selected region to stdout"
+homepage = "https://github.com/fosu/crud"
+license = "MIT"
+deps = ["libX11", "libXext"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

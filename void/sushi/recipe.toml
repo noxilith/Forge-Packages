@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'sushi'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: build_helper, lib32disabled
+# needs, but Forge has no recipe for yet: libwebkit2gtk41
+[package]
+name = "sushi"
+version = "46.0"
+archive = "https://download.gnome.org/sources/sushi/46/sushi-46.0.tar.xz"
+sha256 = "96085baaa430ab2142c606aab5c47e2fbb2fd3eb70a352137e65c59a58a0f2c6"
+strip_components = 1
+description = "Quick image previewer over DBus for Nautilus"
+homepage = "https://gitlab.gnome.org/GNOME/sushi"
+license = "GPL-2.0-or-later"
+deps = ["clutter-gst3", "clutter-gtk", "evince", "gjs", "gtksourceview4", "libepoxy", "libsoup3", "nautilus"]
+patches = ["patches/66.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gstreamer1"]

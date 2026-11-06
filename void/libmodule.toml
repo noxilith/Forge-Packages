@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libmodule'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libmodule"
+version = "5.0.0"
+archive = "https://github.com/FedeDP/libmodule/archive/5.0.0.tar.gz"
+sha256 = "fa82567c56313b69bea589f7a1a027217b722b9c885c2d645a826d8af307a6c9"
+strip_components = 1
+description = "C simple and elegant implementation of an actor library"
+homepage = "https://github.com/FedeDP/libmodule"
+license = "MIT"
+
+[build]
+system = "cmake"

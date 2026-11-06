@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'slstatus'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "slstatus"
+version = "20180708"
+archive = "https://github.com/drkhsh/slstatus/archive/dd7f1896aa9883f33b4d28cd192e8088db0cab5a.tar.gz"
+sha256 = "2602a7210decb265b55f1802d4baea652d782ef6c1c8d2f58a7d79bbd2d93d84"
+strip_components = 1
+description = "Suckless status monitor for dwm"
+homepage = "https://tools.suckless.org/slstatus/"
+license = "ISC"
+deps = ["alsa-lib", "libX11"]
+
+[build]
+system = "make"

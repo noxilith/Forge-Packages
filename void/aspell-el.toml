@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'aspell-el'. Review before relying on it.
+[package]
+name = "aspell-el"
+version = "0.08.0"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/el/aspell6-el-0.08-0.tar.bz2"
+sha256 = "4af60f1a8adf8b1899680deefdf49288d7406a2c591658f880628bf7c1604cd2"
+strip_components = 1
+description = "Greek dictionary for aspell"
+homepage = "http://www.elspell.gr/"
+license = "GPL-2.0-only"
+deps = ["aspell"]
+
+[build]
+system = "autotools"
+deps = ["which"]

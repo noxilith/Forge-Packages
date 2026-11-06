@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-bitstream-type1'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-bitstream-type1"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-bitstream-type1-1.0.4.tar.gz"
+sha256 = "3827eef5d8482e956c9cbe412aab03c067f844bff50470add52bdac298f0e4c7"
+strip_components = 1
+description = "Standard Type1 Bitstream PCF fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'librtlsdr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "librtlsdr"
+version = "2.0.2"
+archive = "https://github.com/steve-m/librtlsdr/archive/v2.0.2.tar.gz"
+sha256 = "f407de0b6dce19e81694814e363e8890b6ab2c287c8d64c27a03023e5702fb42"
+strip_components = 1
+description = "Turns your Realtek RTL2832 based DVB dongle into a SDR receiver"
+homepage = "https://osmocom.org/projects/rtl-sdr/wiki"
+license = "GPL-2.0-or-later"
+deps = ["libusb"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

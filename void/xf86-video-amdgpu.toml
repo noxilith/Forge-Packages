@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xf86-video-amdgpu'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: LDFLAGS, lib32disabled
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "xf86-video-amdgpu"
+version = "25.0.0"
+archive = "https://www.x.org/releases/individual/driver/xf86-video-amdgpu-25.0.0.tar.xz"
+sha256 = "7653cead024a6820ed1139958503278d78b4b3f80befcacf54ce87a5199b0ce2"
+strip_components = 1
+description = "Xorg AMD Radeon RXXX video driver (amdgpu kernel module)"
+homepage = "https://wiki.freedesktop.org/xorg"
+license = "MIT"
+deps = ["eudev", "libdrm", "libpciaccess", "pixman", "xorg-server", "xorg-util-macros", "xorgproto"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

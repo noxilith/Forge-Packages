@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libzmf'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, libcppunit
+[package]
+name = "libzmf"
+version = "0.0.2"
+archive = "https://dev-www.libreoffice.org/src/libzmf/libzmf-0.0.2.tar.xz"
+sha256 = "27051a30cb057fdb5d5de65a1f165c7153dc76e27fe62251cbb86639eb2caf22"
+strip_components = 1
+description = "Zoner Callisto/Draw import library"
+homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libzmf"
+license = "MPL-2.0"
+deps = ["libicu78", "libpng", "librevenge", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-docs", "--disable-werror"]
+tools = ["pkg-config"]

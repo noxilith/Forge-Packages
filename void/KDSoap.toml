@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'KDSoap'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "KDSoap"
+version = "2.3.0"
+archive = "https://github.com/KDAB/KDSoap/releases/download/kdsoap-2.3.0/kdsoap-2.3.0.tar.gz"
+sha256 = "d2184951145cb768cc30376a10701be13869a164c1272d09f831ba2d195f02de"
+strip_components = 1
+description = "Qt-based client-side and server-side SOAP component"
+homepage = "https://www.kdab.com/development-resources/qt-tools/kd-soap/"
+license = "GPL-3.0-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDSoap_QT6=TRUE"]

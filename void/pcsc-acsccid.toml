@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pcsc-acsccid'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "pcsc-acsccid"
+version = "1.1.9"
+archive = "https://downloads.sourceforge.net/sourceforge/acsccid/acsccid-1.1.9.tar.bz2"
+sha256 = "cd7e41817364d2ad2e049e55bd2d10b073e1eec99dbc5a08dfb787dd449f5a48"
+strip_components = 1
+description = "PC/SC driver to support ACS CCID smart card readers"
+homepage = "http://acsccid.sourceforge.net"
+license = "LGPL-2.1-or-later"
+deps = ["eudev", "libusb-compat", "pcsclite"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-udev"]
+tools = ["flex", "perl", "pkg-config"]

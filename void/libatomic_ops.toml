@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libatomic_ops'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libatomic_ops"
+version = "7.10.0"
+archive = "https://github.com/bdwgc/libatomic_ops/releases/download/v7.10.0/libatomic_ops-7.10.0.tar.gz"
+sha256 = "0db3ebff755db170f65e74a64ec4511812e9ee3185c232eeffeacd274190dfb0"
+strip_components = 1
+description = "Semi-portable access to hardware provided atomic memory operations"
+homepage = "https://github.com/bdwgc/libatomic_ops"
+license = "GPL-2.0-or-later, MIT"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--enable-static"]

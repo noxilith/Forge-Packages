@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'openfpgaloader'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libftdi1
+[package]
+name = "openfpgaloader"
+version = "1.1.1"
+archive = "https://github.com/trabucayre/openFPGALoader/archive/refs/tags/v1.1.1.tar.gz"
+sha256 = "ca965f933c52a2a9dbb318df4d4de70fac5f095a8e64523f81036ab467a4b567"
+strip_components = 1
+description = "Universal utility for programming FPGA"
+homepage = "https://trabucayre.github.io/openFPGALoader/"
+license = "Apache-2.0"
+deps = ["eudev", "hidapi", "libusb", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_UDEV=ON", "-DENABLE_CMSISDAP=ON", "-DCMAKE_DISABLE_FIND_PACKAGE_LibFTDI1=ON"]
+tools = ["pkg-config"]

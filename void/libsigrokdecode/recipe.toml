@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libsigrokdecode'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libsigrokdecode"
+version = "0.5.3"
+archive = "https://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0.5.3.tar.gz"
+sha256 = "c50814aa6743cd8c4e88c84a0cdd8889d883c3be122289be90c63d7d67883fc0"
+strip_components = 1
+description = "C library provides basic API for running sigrok protocol decoders"
+homepage = "https://sigrok.org/"
+license = "GPL-3.0-or-later"
+deps = ["glib"]
+patches = ["patches/python-3.10.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

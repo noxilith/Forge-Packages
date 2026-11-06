@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'kf6-akonadi'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libaccounts-qt, qt6-tools, sqlite
+[package]
+name = "kf6-akonadi"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/akonadi-26.08.1.tar.xz"
+sha256 = "40b7eac471333eaa4ea0a010586660d2539def5ba61f9169d4129c2b569b4c34"
+strip_components = 1
+description = "PIM layer providing an asynchronous API to access PIM data"
+homepage = "https://community.kde.org/KDE_PIM/Akonadi"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kaccounts-integration", "kf6-kcompletion", "kf6-kconfigwidgets", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kiconthemes", "kf6-kio", "kf6-kitemmodels", "kf6-kxmlgui", "libxml2", "qt6-base", "shared-mime-info"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "libxslt", "qt6-declarative"]

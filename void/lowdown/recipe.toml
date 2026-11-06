@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lowdown'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_cmd, make_install_target
+# needs, but Forge has no recipe for yet: bmake
+[package]
+name = "lowdown"
+version = "3.2.1"
+archive = "https://kristaps.bsd.lv/lowdown/snapshots/lowdown-3.2.1.tar.gz"
+sha256 = "664afc7c00aadbaf16cdcf7dc464e64b529f432eba9dffc950acb0d55d1be90d"
+strip_components = 1
+description = "Simple markdown translator"
+homepage = "https://kristaps.bsd.lv/lowdown/"
+license = "ISC"
+patches = ["patches/fix-musl-build.patch"]
+
+[build]
+system = "autotools"

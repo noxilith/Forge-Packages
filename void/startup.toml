@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'startup'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs
+[package]
+name = "startup"
+version = "2.0.3"
+archive = "https://gitlab.com/chinstrap/startup/-/archive/2.0.3/startup-2.0.3.tar.gz"
+sha256 = "668fa38b2b4d4924309546c09a53690f4c5e31faf44be3f0e0ca826bf23f00f5"
+strip_components = 1
+description = "Event driven task and service manager"
+homepage = "https://gitlab.com/chinstrap/startup"
+license = "GPL-2.0-only"
+deps = ["dbus", "eudev", "json-c", "libnih"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-sysvcompat", "--disable-dconf-bridge", "--disable-cgroups"]
+tools = ["pkg-config"]
+deps = ["gettext"]

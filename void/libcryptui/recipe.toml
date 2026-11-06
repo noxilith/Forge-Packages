@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'libcryptui'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme, intltool
+[package]
+name = "libcryptui"
+version = "3.12.2"
+archive = "https://download.gnome.org/sources/libcryptui/3.12/libcryptui-3.12.2.tar.xz"
+sha256 = "71ead1a7b496f07f6c5102ae79945dd2515b7b9342c6edefe58b47318be20866"
+strip_components = 1
+description = "GNOME Interface components for OpenPGP"
+homepage = "http://www.gnome.org"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["gcr", "gnupg", "gpgme", "gtk+3", "libSM", "libnotify"]
+patches = ["patches/daemon-fix-conflict-return-type.patch", "patches/daemon-port-to-gcr-3.patch", "patches/fix-logic-flaw-in-the-prompt-recipients-dialog.patch", "patches/gpgme-2.0.patch", "patches/musl-locale.patch", "patches/support-new-gpg-versions.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-update-mime-database", "--disable-schemas-compile"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc"]

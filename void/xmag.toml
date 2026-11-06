@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xmag'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xmag"
+version = "1.0.8"
+archive = "https://www.x.org/releases/individual/app/xmag-1.0.8.tar.xz"
+sha256 = "326d3c583d795bb53ac609d144e7f7fb1499baba7eaec14b8e6cd232ea069532"
+strip_components = 1
+description = "X utility to Magnify parts of the screen"
+homepage = "https://gitlab.freedesktop.org/xorg/app/xmag"
+license = "MIT"
+deps = ["libXau", "libXaw", "libXext", "libXmu"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

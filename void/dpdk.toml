@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'dpdk'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: python3-pyelftools
+[package]
+name = "dpdk"
+version = "25.11.3"
+archive = "https://github.com/DPDK/dpdk/archive/v25.11.3.tar.gz"
+sha256 = "92e6114778f99f6c53bf7c2d3b979407fe4461f1b83fb53262d47a43f828957c"
+strip_components = 1
+description = "Data Plane Development Kit"
+homepage = "https://www.dpdk.org/"
+license = "BSD-3-Clause, GPL-2.0-only"
+deps = ["elfutils", "jansson", "libbsd", "libpcap", "numactl", "openssl", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Db_lto=false"]
+tools = ["pkg-config"]

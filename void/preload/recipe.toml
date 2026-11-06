@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'preload'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper, make_dirs, conf_files
+[package]
+name = "preload"
+version = "0.6.4"
+archive = "https://downloads.sourceforge.net/sourceforge/preload/preload-0.6.4.tar.gz"
+sha256 = "d0a558e83cb29a51d9d96736ef39f4b4e55e43a589ad1aec594a048ca22f816b"
+strip_components = 1
+description = "Adaptive readahead daemon"
+homepage = "http://sourceforge.net/projects/preload"
+license = "GPL-2.0-or-later"
+deps = ["glib"]
+patches = ["patches/qemu-help2man.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["help2man"]

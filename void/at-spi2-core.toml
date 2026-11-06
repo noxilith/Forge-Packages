@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'at-spi2-core'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "at-spi2-core"
+version = "2.56.5"
+archive = "https://download.gnome.org/sources/at-spi2-core/2.56/at-spi2-core-2.56.5.tar.xz"
+sha256 = "0d5bbf324c1d9d89cef4e80879b149c12aa2f4ab9614348b9e6c172261f0fcdd"
+strip_components = 1
+description = "Assistive Technology Service Provider Interface"
+homepage = "https://gitlab.gnome.org/GNOME/at-spi2-core"
+license = "GPL-2.0-or-later"
+deps = ["dbus", "glib", "libSM", "libXext", "libXtst", "libxml2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

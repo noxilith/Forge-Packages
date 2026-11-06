@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qmdnsengine'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "qmdnsengine"
+version = "0.1.0"
+archive = "https://github.com/nitroshare/qmdnsengine/archive/0.1.0.tar.gz"
+sha256 = "27416ca7b8b8a8588df4318de57127ef97e1205269fa506f00f21b09d30d3ac2"
+strip_components = 1
+description = "Multicast DNS library for Qt applications"
+homepage = "https://github.com/nitroshare/qmdnsengine"
+license = "MIT"
+
+[build]
+system = "cmake"

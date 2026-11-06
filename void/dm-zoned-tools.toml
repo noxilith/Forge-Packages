@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dm-zoned-tools'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "dm-zoned-tools"
+version = "2.1.2"
+archive = "https://github.com/hgst/dm-zoned-tools/archive/v2.1.2.tar.gz"
+sha256 = "98d62d349c4341c0a47d90b2e298e3c9d67ae08cd0399c0671d5ffb2807170c3"
+strip_components = 1
+description = "Userspace tool for the dm-zoned device mapper"
+homepage = "https://github.com/hgst/dm-zoned-tools/"
+license = "GPL-3.0-or-later"
+deps = ["kmod", "lvm2"]
+
+[build]
+system = "autotools"

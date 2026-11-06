@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'usbkvm'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "usbkvm"
+version = "0.3.2"
+archive = "https://github.com/carrotIndustries/usbkvm/releases/download/v0.3.2/usbkvm-v0.3.2.tar.gz"
+sha256 = "66ba6895bf4d80064b33c484553e7d8c69eb57b9ffd49a8b119119f273aa7b0b"
+strip_components = 1
+description = "USBKVM client app"
+homepage = "https://github.com/carrotIndustries/usbkvm"
+license = "GPL-3.0-or-later"
+deps = ["gstreamer1", "gtkmm", "hidapi"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

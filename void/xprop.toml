@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xprop'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xprop"
+version = "1.2.8"
+archive = "https://www.x.org/releases/individual/app/xprop-1.2.8.tar.xz"
+sha256 = "d689e2adb7ef7b439f6469b51cda8a7daefc83243854c2a3b8f84d0f029d67ee"
+strip_components = 1
+description = "Property displayer for X"
+homepage = "https://gitlab.freedesktop.org/xorg/app/xprop"
+license = "MIT"
+deps = ["libX11", "libXmu"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-powermanagement'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-powermanagement"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-powermanagement/archive/2.4.0.tar.gz"
+sha256 = "7a96da4e6657e3810574bfe39a383c130f0565206b087d0326ea09833eb9fab1"
+strip_components = 1
+description = "LXQt power management module"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kidletime", "kf6-solid", "liblxqt", "lxqt-globalkeys"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "qt6-base"]

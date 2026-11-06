@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'xi-editor'. Review before relying on it.
+[package]
+name = "xi-editor"
+version = "0.3.0"
+archive = "https://github.com/xi-editor/xi-editor/archive/v0.3.0.tar.gz"
+sha256 = "e42998ad9b6d6df0f797afd005f9c1286aad24c30a77d0dd380730c248274b8d"
+strip_components = 1
+description = "Modern editor with a Rust backend"
+homepage = "https://github.com/xi-editor/xi-editor"
+license = "Apache-2.0"
+
+[build]
+system = "cargo"
+subdir = "rust"

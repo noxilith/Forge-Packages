@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'supercollider'. Review before relying on it.
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: boost, jack, libreadline8, qt6-svg, qt6-tools, qt6-websockets
+[package]
+name = "supercollider"
+version = "3.14.1"
+archive = "https://github.com/supercollider/supercollider/releases/download/Version-3.14.1/SuperCollider-3.14.1-Source.tar.bz2"
+sha256 = "ee640c68777ae697682066ce5c4a8b7e56c5b223e76c79c13b5be5387ee55bb2"
+strip_components = 1
+description = "Environment and programming language for real time audio synthesis"
+homepage = "https://github.com/supercollider/supercollider"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "libXt", "libsndfile", "qt6-base", "qt6-declarative", "yaml-cpp"]
+patches = ["patches/conversion.patch", "patches/yield.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTSUITE=OFF", "-DSYSTEM_BOOST=ON", "-DSYSTEM_YAMLCPP=ON", "-DSYSTEM_PORTAUDIO=ON", "-DLIBSCSYNTH=ON"]
+tools = ["pkg-config"]

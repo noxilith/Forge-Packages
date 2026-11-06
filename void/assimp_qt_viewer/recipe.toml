@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'assimp_qt_viewer'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "assimp_qt_viewer"
+version = "5.0.0"
+archive = "https://github.com/assimp/assimp_qt_viewer/archive/b2b86036a860297b86b096dba009aebeaf5a2503.tar.gz"
+sha256 = "6c65e214f0a49c446a479b98b1a4795c1b79103410403ad38e28c4846eb76996"
+strip_components = 1
+description = "Qt-Widget-based viewer for assimp"
+homepage = "https://github.com/assimp/assimp_qt_viewer"
+license = "MIT"
+deps = ["assimp"]
+patches = ["patches/method-spelling-change.patch"]
+
+[build]
+system = "cmake"
+subdir = "assimp_qt_viewer"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'openhantek'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, qt5
+[package]
+name = "openhantek"
+version = "3.4.0"
+archive = "https://github.com/OpenHantek/OpenHantek6022/archive/refs/tags/3.4.0.tar.gz"
+sha256 = "7ad5ab70fd2986134814502c1aa2b0eeba76c3b40a556baa72f7bb598d83e80c"
+strip_components = 1
+description = "Hantek Oscilloscope Software"
+homepage = "https://github.com/OpenHantek/OpenHantek6022"
+license = "GPL-3.0-or-later"
+deps = ["libusb"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pasystray'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "pasystray"
+version = "0.8.2"
+archive = "https://github.com/christophgysin/pasystray/archive/refs/tags/0.8.2.tar.gz"
+sha256 = "9c6fc5859a203f0a6dd8ce2038fea85b7bac44b1baff5c4cf73643229fafa641"
+strip_components = 1
+description = "PulseAudio System Tray"
+homepage = "https://github.com/christophgysin/pasystray"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+3", "libnotify", "pulseaudio"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

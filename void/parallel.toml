@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'parallel'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "parallel"
+version = "20261022"
+archive = "https://ftp.gnu.org/gnu/parallel/parallel-20261022.tar.bz2"
+sha256 = "4fb0d2d4d14a4ef6448c788cb2bcfde9fbe00b8d4bdc637a7e4c08f8c5453a55"
+strip_components = 1
+description = "Shell tool for executing jobs in parallel"
+homepage = "https://www.gnu.org/software/parallel/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["perl"]

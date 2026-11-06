@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kdepim-runtime'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-networkauth, qt6-tools, qt6-webchannel
+[package]
+name = "kdepim-runtime"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kdepim-runtime-26.08.1.tar.xz"
+sha256 = "524910cc66b8279c1fa8eba517ec63121e4b74cccbfe0549d73ddf5cfd6ee837"
+strip_components = 1
+description = "KDE PIM runtime applications/libraries"
+homepage = "https://invent.kde.org/unmaintained/kdepimlibs"
+license = "GPL-2.0-or-later, GPL-3.0-or-later, LGPL-2.1-or-later, AGPL-3.0-or-later, BSD-3-Clause, BSD-2-Clause"
+deps = ["akonadi-calendar", "kf6-kdav", "kf6-kholidays", "kf6-knotifyconfig", "kf6-kwallet", "kmbox", "libkgapi", "pimcommon", "qca-qt6", "qt6-pdf"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcmutils", "kf6-kconfig", "kf6-kdoctools", "qt6-base"]

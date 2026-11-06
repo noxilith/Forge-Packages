@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'RcloneBrowser'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "RcloneBrowser"
+version = "1.8.0"
+archive = "https://github.com/kapitainsky/RcloneBrowser/archive/1.8.0.tar.gz"
+sha256 = "5f8242a011b85477749127b7e94e874035c431c2fa6df817e5603ed891604beb"
+strip_components = 1
+description = "Simple, cross-platform GUI for rclone"
+homepage = "https://github.com/kapitainsky/RcloneBrowser"
+license = "MIT"
+deps = ["rclone"]
+patches = ["patches/do-not-check-for-updates.patch"]
+
+[build]
+system = "cmake"

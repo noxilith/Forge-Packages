@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'vala-panel'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "vala-panel"
+version = "0.5.0"
+archive = "https://gitlab.com/vala-panel-project/vala-panel/uploads/da591ffc8460b2a473e1aba3e3dcf178/vala-panel-0.5.0.tar.xz"
+sha256 = "ee3a9e000133da43b218ecd1738463c2de3f45783a5a09a11b9c263df4e233d1"
+strip_components = 1
+description = "GTK+3 desktop panel forked from LXPanel"
+homepage = "https://gitlab.com/vala-panel-project/vala-panel"
+license = "LGPL-3.0-or-later"
+deps = ["gtk+3", "libwnck"]
+patches = ["patches/LINGUAS-remove-a-duplicate-entry.patch", "patches/wayland.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

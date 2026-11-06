@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'fdk-aac'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "fdk-aac"
+version = "2.0.3"
+archive = "https://downloads.sourceforge.net/sourceforge/opencore-amr/fdk-aac-2.0.3.tar.gz"
+sha256 = "829b6b89eef382409cda6857fd82af84fabb63417b08ede9ea7a553f811cb79e"
+strip_components = 1
+description = "Fraunhofer FDK AAC codec library"
+homepage = "http://www.iis.fraunhofer.de/en/ff/amm/impl/fdkaaccodec.html"
+license = "FDK-AAC"
+
+[build]
+system = "autotools"

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libjodycode'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libjodycode"
+version = "4.1.2"
+archive = "https://codeberg.org/jbruchon/libjodycode/archive/v4.1.2.tar.gz"
+sha256 = "a7085da591e0c314eb3442e7b258a6b6944e6978ecb2764ab33f3cb840f47ff4"
+strip_components = 1
+description = "Shared code used by several utilities written by Jody Bruchon"
+homepage = "https://codeberg.org/jbruchon/libjodycode"
+license = "MIT"
+
+[build]
+system = "make"

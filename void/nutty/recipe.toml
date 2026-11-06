@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'nutty'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: speedtest-cli, sqlite
+[package]
+name = "nutty"
+version = "1.1.1"
+archive = "https://github.com/babluboy/nutty/archive/1.1.1.tar.gz"
+sha256 = "b6c9ef1966d1c60480943313f20cd66ee1b5d23ac8d6578f457fb99f0898d9ba"
+strip_components = 1
+description = "Network Utility"
+homepage = "https://github.com/babluboy/nutty"
+license = "GPL-3.0-or-later"
+deps = ["granite", "gtk+3", "libgee", "libnotify"]
+patches = ["patches/use-system-speedtestcli.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

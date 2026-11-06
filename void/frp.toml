@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'frp'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path, conf_files
+[package]
+name = "frp"
+version = "0.65.0"
+archive = "https://github.com/fatedier/frp/archive/v0.65.0.tar.gz"
+sha256 = "bbec0d1855e66c96e3a79ff97b8c74d9b1b45ec560aa7132550254d48321f7de"
+strip_components = 1
+description = "Fast reverse proxy"
+homepage = "https://github.com/fatedier/frp"
+license = "Apache-2.0"
+
+[build]
+system = "go"

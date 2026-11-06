@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gron'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "gron"
+version = "0.7.1"
+archive = "https://github.com/tomnomnom/gron/archive/refs/tags/v0.7.1.tar.gz"
+sha256 = "1c98f2ef2ba03558864b1ab5e9c4b47a2e89d3ffaf24cfa0ac75cd38d775feb4"
+strip_components = 1
+description = "Tool to make JSON greppable"
+homepage = "https://github.com/tomnomnom/gron"
+license = "MIT"
+
+[build]
+system = "go"

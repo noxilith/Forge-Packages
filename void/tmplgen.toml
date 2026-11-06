@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tmplgen'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "tmplgen"
+version = "1.3.1"
+archive = "https://github.com/Cogitri/tmplgen/archive/refs/tags/v1.3.1.tar.gz"
+sha256 = "8c8aa5b65045614529626978852416a965d57c77dd5953be58bc84f8d8b27f9b"
+strip_components = 1
+description = "Void Linux template generator for language-specific package managers"
+homepage = "https://github.com/Cogitri/tmplgen"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

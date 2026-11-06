@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'dovecot-plugin-pigeonhole'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: make_build_args
+[package]
+name = "dovecot-plugin-pigeonhole"
+version = "2.4.5"
+archive = "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.5.tar.gz"
+sha256 = "ad7c478cb3aaa76c5f81f86727a3e6843645b0a1253f5684fb8a0beec0d22925"
+strip_components = 1
+description = "Sieve implementation for Dovecot"
+homepage = "https://pigeonhole.dovecot.org"
+license = "LGPL-2.1-or-later"
+deps = ["dovecot", "libicu78", "openldap", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-ldap=plugin", "--disable-static"]
+tools = ["perl", "pkg-config"]

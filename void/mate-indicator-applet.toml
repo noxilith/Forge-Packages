@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mate-indicator-applet'. Review before relying on it.
+[package]
+name = "mate-indicator-applet"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-indicator-applet-1.28.0.tar.xz"
+sha256 = "ceb3d703970a3e558d7cd7df0b1c2171e3af752a25495aced2e222c1e9ad49cd"
+strip_components = 1
+description = "MATE applet to display information from various applications"
+homepage = "https://mate-desktop.org"
+license = "GPL-3.0-or-later, LGPL-2.1-or-later"
+deps = ["gtk+3", "libX11", "libayatana-indicator", "mate-panel"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext"]

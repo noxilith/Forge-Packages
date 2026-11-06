@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'polyglot'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "polyglot"
+version = "2.0.4"
+archive = "https://ftp.debian.org/debian/pool/main/p/polyglot/polyglot_2.0.4.orig.tar.gz"
+sha256 = "fa43f80d7f956bdf986649d3ff1e487e1c8682a19b30011a55baa89633e3d23d"
+strip_components = 1
+description = "Winboard chess protocol to UCI protocol adapter"
+homepage = "https://packages.debian.org/sid/polyglot"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

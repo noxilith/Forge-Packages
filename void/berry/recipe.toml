@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'berry'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "berry"
+version = "0.1.13"
+archive = "https://github.com/JLErvin/berry/archive/0.1.13.tar.gz"
+sha256 = "839c0bdafbecbcb999e519a6fc32edbd37d9f010a205ccc34d71aa25ece1a768"
+strip_components = 1
+description = "Healthy, bite-sized window manager"
+homepage = "https://github.com/JLErvin/berry"
+license = "MIT"
+deps = ["freetype", "libX11", "libXft", "libXinerama"]
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["which"]

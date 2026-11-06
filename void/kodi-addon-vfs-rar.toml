@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kodi-addon-vfs-rar'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kodi, tinyxml
+[package]
+name = "kodi-addon-vfs-rar"
+version = "21.0.2"
+archive = "https://github.com/xbmc/vfs.rar/archive/21.0.2-Omega.tar.gz"
+sha256 = "7492cf73d52299218acc982c4b35b020ea801d36d47e40460341f4dde712de50"
+strip_components = 1
+description = "RAR VFS addon for Kodi"
+homepage = "https://github.com/xbmc/vfs.rar"
+license = "GPL-2.0-or-later"
+deps = ["kodi-platform", "p8-platform"]
+
+[build]
+system = "cmake"

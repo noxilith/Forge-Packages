@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xprintidle'. Review before relying on it.
+[package]
+name = "xprintidle"
+version = "0.3.0"
+archive = "https://github.com/g0hl1n/xprintidle/archive/0.3.0.tar.gz"
+sha256 = "6bddd464c396530e1de4c1725c3c2935135cf9a5079e5805ae139f00f0c0316b"
+strip_components = 1
+description = "Query X server for user's idle time and print it in milliseconds"
+homepage = "https://github.com/g0hl1n/xprintidle"
+license = "GPL-2.0-only"
+deps = ["libX11", "libXScrnSaver", "libXext"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'plasma-thunderbolt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "plasma-thunderbolt"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-thunderbolt-6.7.5.tar.xz"
+sha256 = "d8179c353f89de0eee69619e300b9df9b7788fce4864cfb2ce1255f0bc691664"
+strip_components = 1
+description = "Plasma integration for controlling Thunderbolt devices"
+homepage = "https://invent.kde.org/plasma/plasma-thunderbolt"
+license = "GPL-3.0-or-later"
+deps = ["bolt", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-ki18n", "kf6-knotifications", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

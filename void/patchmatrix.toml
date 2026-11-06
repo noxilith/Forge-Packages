@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'patchmatrix'. Review before relying on it.
+# needs, but Forge has no recipe for yet: glew, jack
+[package]
+name = "patchmatrix"
+version = "0.26.0"
+archive = "https://git.open-music-kontrollers.ch/lad/patchmatrix/snapshot/patchmatrix-0.26.0.tar.xz"
+sha256 = "72a3c70a7ac084707a6b4c663d460e02c65f2ecaa71a95c4b864755ba8ba5bb2"
+strip_components = 1
+description = "JACK patchbay in flow matrix style"
+homepage = "https://git.open-music-kontrollers.ch/lad/patchmatrix/about/"
+license = "Artistic-2.0"
+deps = ["lv2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

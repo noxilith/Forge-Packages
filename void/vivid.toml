@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'vivid'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "vivid"
+version = "0.11.1"
+archive = "https://github.com/sharkdp/vivid/archive/refs/tags/v0.11.1.tar.gz"
+sha256 = "a43ccfbc6554055181a08f2740664f9280fa2d0e57c4641850c60dd0e5323720"
+strip_components = 1
+description = "LS_COLORS with support for multiple color themes"
+homepage = "https://github.com/sharkdp/vivid"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kruler'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kruler"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kruler-26.08.1.tar.xz"
+sha256 = "a913d993e2cf2b1deaa27b26ba6801a2b20bcf9232b3ff52dfd2f17e4fdaaa29"
+strip_components = 1
+description = "Screen Ruler"
+homepage = "https://www.kde.org/applications/graphics/kruler/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-knotifications", "kf6-kstatusnotifieritem", "kf6-kwindowsystem", "kf6-kxmlgui", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kcompletion'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kcompletion"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kcompletion-6.30.0.tar.xz"
+sha256 = "96ad9c429ca53b830359c45614ca4c32ed6b759f3023f1b3db1650ba1c19bd58"
+strip_components = 1
+description = "KDE completion framework"
+homepage = "https://invent.kde.org/frameworks/kcompletion"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcodecs", "kf6-kconfig", "kf6-kwidgetsaddons"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "qt6-base"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'neochat'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-location, qt6-multimedia, qt6-svg, qt6-tools
+[package]
+name = "neochat"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/neochat-26.08.1.tar.xz"
+sha256 = "d745a8cd878c89d9bd3227ed027332933bcb9b5415b1d55ff2987c0587fd8182"
+strip_components = 1
+description = "Client for matrix from KDE"
+homepage = "https://apps.kde.org/en/neochat"
+license = "GPL-3.0-only, GPL-3.0-or-later, GPL-2.0-or-later, BSD-2-Clause"
+deps = ["cmark", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-knotifications", "kf6-kquickcharts", "kf6-kstatusnotifieritem", "kf6-purpose", "kf6-qqc2-desktop-style", "kf6-sonnet", "kf6-syntax-highlighting", "kirigami-addons", "kquickimageeditor", "kunifiedpush", "libQuotient", "olm", "qcoro-qt6", "qt6-base", "qt6-speech", "qtkeychain-qt6"]
+patches = ["patches/0001-Replace-insert_range-with-insert.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools", "qt6-declarative"]

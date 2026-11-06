@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'suricata'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, post_configure, post_install, pre_configure
+# settings not translated: build_helper, CFLAGS, conf_files
+# needs, but Forge has no recipe for yet: nss
+[package]
+name = "suricata"
+version = "8.0.6"
+archive = "https://www.openinfosecfoundation.org/download/suricata-8.0.6.tar.gz"
+sha256 = "b264584edda4a3b2b462050099c7c54f4f35ac0c7164e41084be9b216c090f8c"
+strip_components = 1
+description = "Suricata is a network IDS, IPS and NSM engine"
+homepage = "https://suricata.io/"
+license = "GPL-2.0-only"
+deps = ["file", "jansson", "libcap-ng", "libhtp", "libnet", "libpcap", "libunwind", "libyaml", "lz4", "pcre2", "xz"]
+patches = ["patches/fix-missing-syscalls.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gccmarch-native", "--disable-suricata-update", "--disable-static", "--enable-non-bundled-htp"]
+tools = ["pkg-config"]

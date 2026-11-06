@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'proplib'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "proplib"
+version = "0.6.10"
+archive = "https://gitlab.com/xtraeme/portableproplib/-/archive/0.6.10/portableproplib-0.6.10.tar.gz"
+sha256 = "e8fa7dbec90815a83d14c326286ee55196a9fe5b3192478671e58e7185db33dc"
+strip_components = 1
+description = "Portable Property container object library"
+homepage = "https://gitlab.com/xtraeme/portableproplib"
+license = "BSD-2-Clause"
+deps = ["zlib"]
+
+[build]
+system = "make"

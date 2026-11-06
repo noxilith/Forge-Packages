@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nbd'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+# settings not translated: CFLAGS, conf_files
+[package]
+name = "nbd"
+version = "3.24"
+archive = "https://downloads.sourceforge.net/sourceforge/nbd/nbd-3.24.tar.gz"
+sha256 = "a771022599525fd4f5c17c7b1c88696a91927c227e770425a55f67a7384441b6"
+strip_components = 1
+description = "Network Block Device utilities"
+homepage = "https://nbd.sourceforge.io/"
+license = "GPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-syslog"]
+tools = ["bison", "pkg-config"]

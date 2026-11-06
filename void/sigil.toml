@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sigil'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-lxml, qt6-svg, qt6-tools
+[package]
+name = "sigil"
+version = "2.4.0"
+archive = "https://github.com/Sigil-Ebook/Sigil/archive/2.4.0.tar.gz"
+sha256 = "200152fcda1d72b547e8981047c51415f1bcd3b8c28b463ffd1263438391f322"
+strip_components = 1
+description = "Multi-platform EPUB ebook editor"
+homepage = "https://github.com/Sigil-Ebook/Sigil"
+license = "GPL-3.0-or-later"
+deps = ["hunspell", "minizip", "pcre2", "qt6-base", "qt6-declarative", "qt6-pdf"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_SYSTEM_LIBS=ON"]
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xkbevd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xkbevd"
+version = "1.1.6"
+archive = "https://www.x.org/releases/individual/app/xkbevd-1.1.6.tar.xz"
+sha256 = "d9b401f84cf8568342ff63b1ffc6aecd3877579256d89fe6408645e2741b073e"
+strip_components = 1
+description = "XKBD Event Daemon"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11", "libxkbfile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

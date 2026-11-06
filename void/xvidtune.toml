@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xvidtune'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xvidtune"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/app/xvidtune-1.0.4.tar.xz"
+sha256 = "0d4eecd54e440cc11f1bdaaa23180fcf890f003444343f533f639086b05b2cc5"
+strip_components = 1
+description = "Video mode tuner for Xorg"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXaw", "libXxf86vm"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

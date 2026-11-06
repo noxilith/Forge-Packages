@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'monkey'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS, make_dirs, conf_files
+[package]
+name = "monkey"
+version = "1.6.9"
+archive = "https://github.com/monkey/monkey/archive/refs/tags/v1.6.9.tar.gz"
+sha256 = "8b795f605bfa544d3a57afd580bf6970aac72fb6b7aba338bd3012768b30e587"
+strip_components = 1
+description = "Cross-arch embeddable lightweight HTTP server"
+homepage = "https://github.com/monkey/monkey"
+license = "Apache-2.0"
+deps = ["mbedtls2"]
+patches = ["patches/addr-port.patch", "patches/filename.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_PLUGINS=mbedtls", "-DWITH_SYSTEM_MALLOC=ON", "-DINSTALL_WEBROOTDIR=/srv/www/monkey", "-DDEFAULT_USER=_monkey"]

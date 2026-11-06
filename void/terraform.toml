@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'terraform'. Review before relying on it.
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "terraform"
+version = "1.17.1"
+archive = "https://github.com/hashicorp/terraform/archive/v1.17.1.tar.gz"
+sha256 = "f52acd835c2ad8e813215681a534b9d0a223f7a97afed86b6275f16d2e1d2dae"
+strip_components = 1
+description = "Tool for building, changing, and combining infrastructure"
+homepage = "https://www.terraform.io/"
+license = "BUSL-1.1"
+
+[build]
+system = "go"

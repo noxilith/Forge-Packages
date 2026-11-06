@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'nextcloud-client'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: qt6-qt5compat, qt6-svg, qt6-tools, qt6-websockets, sqlite
+[package]
+name = "nextcloud-client"
+version = "35.0.1"
+archive = "https://github.com/nextcloud/desktop/archive/v35.0.1.tar.gz"
+sha256 = "a665eddd6352fcc475ae41d93ffe3fb93f0170a5267474339c2154e430c481b0"
+strip_components = 1
+description = "NextCloud Desktop client"
+homepage = "https://nextcloud.com/clients/"
+license = "GPL-2.0-or-later"
+deps = ["KDSingleApplication", "dbus", "glib", "kf6-karchive", "kf6-kguiaddons", "kf6-kio", "libcloudproviders", "libp11", "openssl", "qt6-base", "qt6-declarative", "qtkeychain-qt6", "zlib"]
+patches = ["patches/cross.patch", "patches/musl.patch", "patches/testfolderman-within-chroot.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_UPDATER=NO", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "inkscape", "kf6-kconfig"]

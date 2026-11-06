@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ntfy'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_import_path, make_dirs, conf_files
+[package]
+name = "ntfy"
+version = "2.28.0"
+archive = "https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.28.0.tar.gz"
+sha256 = "edfa7efdfd7e76a250bdec021c464ac3dfcaf928a4710433946e2a86c6d66c9e"
+strip_components = 1
+description = "Send push notifications to your phone or desktop using PUT/POST"
+homepage = "https://ntfy.sh"
+license = "Apache-2.0,GPL-2.0-only"
+patches = ["patches/config.patch"]
+
+[build]
+system = "go"
+deps = ["nodejs"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kbookmarks'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kbookmarks"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kbookmarks-6.30.0.tar.xz"
+sha256 = "680120f09929d51da0a65e96a1f7d20ffbbdd2795a165719b0d07e00475e77c4"
+strip_components = 1
+description = "KDE Bookmarks management library"
+homepage = "https://invent.kde.org/frameworks/kbookmarks"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kwidgetsaddons", "qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

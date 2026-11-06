@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'syncplay'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-Twisted, python3-pem, python3-pyside6, python3-service_identity
+[package]
+name = "syncplay"
+version = "1.7.6"
+archive = "https://github.com/syncplay/syncplay/archive/v1.7.6.tar.gz"
+sha256 = "f9d4e4b6d273f08e0c8df3171805c405d8b5d141d4d54f88f391cb645788f6a3"
+strip_components = 1
+description = "Free software that synchronises media players"
+homepage = "https://syncplay.pl/"
+license = "Apache-2.0"
+deps = ["desktop-file-utils", "qt6-declarative"]
+
+[build]
+system = "make"

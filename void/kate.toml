@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kate'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt6-tools
+[package]
+name = "kate"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kate-26.08.1.tar.xz"
+sha256 = "b7d690761e37c29b425375ee42b959b59a9de693789de86e0fb826bace5b3d7f"
+strip_components = 1
+description = "KDE Text editor"
+homepage = "https://kde.org/applications/en/utilities/org.kde.kate"
+license = "GPL-3.0-or-later, LGPL-2.0-or-later, GPL-2.0-or-later"
+deps = ["kf6-karchive", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kitemmodels", "kf6-knewstuff", "kf6-ktexteditor", "kf6-kuserfeedback", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-threadweaver", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

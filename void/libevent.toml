@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libevent'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libevent"
+version = "2.1.13"
+archive = "https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz"
+sha256 = "f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c"
+strip_components = 1
+description = "Abstract asynchronous event notification library"
+homepage = "https://libevent.org/"
+license = "BSD-3-Clause"
+deps = ["openssl"]
+
+[build]
+system = "autotools"

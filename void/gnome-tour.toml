@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-tour'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+[package]
+name = "gnome-tour"
+version = "48.1"
+archive = "https://download.gnome.org/sources/gnome-tour/48/gnome-tour-48.1.tar.xz"
+sha256 = "b8a03b2574eb956abe9af1414161ccb17f830d53600b9c0499cef3bb6f4127c5"
+strip_components = 1
+description = "GNOME Tour & Greeter"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-tour/"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gtk4", "libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk+3"]

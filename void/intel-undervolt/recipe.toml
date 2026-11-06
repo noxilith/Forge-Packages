@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'intel-undervolt'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "intel-undervolt"
+version = "1.7"
+archive = "https://github.com/kitsunyan/intel-undervolt/archive/1.7.tar.gz"
+sha256 = "29a7ebaee4830d65d0b5cefa6d497887d4f23f34659876dfe944f3a020cf33ff"
+strip_components = 1
+description = "Intel CPU undervolting tool"
+homepage = "https://github.com/kitsunyan/intel-undervolt"
+license = "GPL-3.0-or-later"
+patches = ["patches/configurable-compiler.patch", "patches/fix-musl.patch"]
+
+[build]
+system = "autotools"

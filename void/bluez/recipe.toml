@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'bluez'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: cups, libreadline8, python3-docutils
+[package]
+name = "bluez"
+version = "5.86"
+archive = "https://www.kernel.org/pub/linux/bluetooth/bluez-5.86.tar.xz"
+sha256 = "99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d"
+strip_components = 1
+description = "Bluetooth tools and daemons"
+homepage = "http://www.bluez.org/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["ell", "eudev", "glib", "json-c", "libical"]
+patches = ["patches/0001-enable-dbus-without-systemd.patch", "patches/0003-allow-mesh-on-non-systemd-system.patch", "patches/0004-permission.patch", "patches/basename.patch", "patches/disable-test-vcp.patch", "patches/fix-shell-input.patch", "patches/fix-stdin-input.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-systemd", "--enable-sixaxis", "--enable-threads", "--enable-library", "--enable-deprecated", "--enable-external-ell", "--enable-mesh", "--enable-nfc", "--enable-experimental", "--enable-hid2hci"]
+tools = ["flex", "pkg-config"]

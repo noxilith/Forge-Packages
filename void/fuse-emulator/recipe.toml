@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fuse-emulator'. Review before relying on it.
+[package]
+name = "fuse-emulator"
+version = "1.5.7"
+archive = "https://downloads.sourceforge.net/sourceforge/fuse-emulator/fuse-1.5.7.tar.gz"
+sha256 = "f0e2583f2642cdc3b2a737910d24e289d46e4f7e151805e3b0827024b2b45e4d"
+strip_components = 1
+description = "Free Unix Spectrum Emulator"
+homepage = "http://fuse-emulator.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "glib", "gtk+3", "libao", "libgcrypt", "libspectrum"]
+patches = ["patches/be.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--verbose", "--with-gtk", "--enable-desktop-integration"]
+tools = ["perl", "pkg-config"]

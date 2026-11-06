@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'forego'. Review before relying on it.
+# settings not translated: go_import_path
+# needs, but Forge has no recipe for yet: mercurial
+[package]
+name = "forego"
+version = "20180216151118"
+archive = "https://github.com/ddollar/forego/archive/20180216151118.tar.gz"
+sha256 = "23119550cc0e45191495823aebe28b42291db6de89932442326340042359b43d"
+strip_components = 1
+description = "Process supervisor in Go"
+homepage = "https://github.com/ddollar/forego"
+license = "Apache-2.0"
+
+[build]
+system = "go"

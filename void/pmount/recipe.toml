@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pmount'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: intltool, util-linux-common
+[package]
+name = "pmount"
+version = "0.9.23"
+archive = "https://ftp.debian.org/debian/pool/main/p/pmount/pmount_0.9.23.orig.tar.bz2"
+sha256 = "db38fc290b710e8e9e9d442da2fb627d41e13b3ee80326c15cc2595ba00ea036"
+strip_components = 1
+description = "Permits normal users to mount removable devices"
+homepage = "http://pmount.alioth.debian.org/"
+license = "GPL-3.0-only"
+patches = ["patches/fix-musl.patch", "patches/pmount-f2fs.patch"]
+
+[build]
+system = "autotools"

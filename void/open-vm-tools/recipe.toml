@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'open-vm-tools'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: xerces-c
+[package]
+name = "open-vm-tools"
+version = "13.1.0"
+archive = "https://github.com/vmware/open-vm-tools/archive/refs/tags/stable-13.1.0.tar.gz"
+sha256 = "2fed62074256ff5031609722f666b17921742a98dbec73f1b11121a301d6315b"
+strip_components = 1
+description = "Open source implementation of VMware Tools"
+homepage = "https://github.com/vmware/open-vm-tools"
+license = "GPL-2.0-only, LGPL-2.1-only"
+deps = ["fuse", "glib", "libmspack", "libtirpc", "openssl"]
+patches = ["patches/0001-open-vm-tools-Add-disable-werror-configure-option.patch", "patches/0002-Do-not-assume-that-linux-and-gnu-libc-are-the-same-t.patch", "patches/0003-Use-configure-test-for-struct-timespec.patch", "patches/0004-Fix-definition-of-ALLPERMS-and-ACCESSPERMS.patch", "patches/0005-Use-configure-to-test-for-feature-instead-of-platfor.patch", "patches/0006-Use-configure-test-for-sys-stat.h-include.patch", "patches/0007-Rename-poll.h-to-vm_poll.h.patch", "patches/0008-use-posix-strerror_r-unless-gnu.patch", "patches/0009-use-off64_t-instead-of-loff_t.patch", "patches/0010-lib-misc-Recognize-Alpine-Linux.patch", "patches/1000-mock-res_ninit-and-res_nclose.patch", "patches/1001-drop-localversion-in-x.y.z_LOCALVERSION.patch", "patches/1002-stdio.h-for-snprintf.patch", "patches/1003-remove-superfluous-sys-unistd.h.patch", "patches/1004-use-standard-integer-types.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-xmlsecurity", "--without-kernel-modules", "--disable-containerinfo", "--disable-glibc-check", "--disable-werror"]
+subdir = "open-vm-tools"
+tools = ["pkg-config"]
+deps = ["rpcsvc-proto"]

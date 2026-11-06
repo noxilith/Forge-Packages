@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'handbrake'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch, pre_build
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: bzip2, ffmpeg6, hicolor-icon-theme, libtheora, libvpx, speex
+[package]
+name = "handbrake"
+version = "1.11.2"
+archive = "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-source.tar.bz2"
+sha256 = "12b046350f2422dc28783ff94229aff4ba5fe5e683431e057355d36163b2593a"
+strip_components = 1
+description = "Multithreaded video transcoder"
+homepage = "https://handbrake.fr/"
+license = "GPL-2.0-only"
+deps = ["dav1d", "desktop-file-utils", "gst-plugins-base1", "gst-plugins-good1", "gtk4", "jansson", "lame", "libass", "libbluray", "libdvdnav", "libdvdread", "libgudev", "libsamplerate", "libvorbis", "libxml2", "numactl", "opus", "svt-av1", "x264", "x265", "zimg"]
+patches = ["patches/fix-missing-x265-link-flag.patch", "patches/gtk-meson.patch", "patches/i686.patch", "patches/libhb-vpl-include.patch", "patches/libsvt-av1-2.3.0.patch", "patches/muxavformat_check_for_presence_of_AV_PKT_DATA_FALLBACK_TRACK.patch", "patches/remove-dvdnav-dup.patch", "patches/remove-faac-dependency.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--force", "--disable-df-fetch", "--harden"]
+tools = ["m4", "nasm", "pkg-config"]
+deps = ["gettext", "glib", "tar"]

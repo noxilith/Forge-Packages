@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'madonctl'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "madonctl"
+version = "2.3.2"
+archive = "https://github.com/McKael/madonctl/archive/refs/tags/v2.3.2.tar.gz"
+sha256 = "d930d3dfcfb3fb141098c7c2b0a8cef6f1f938e48e276cefb1bff0e2f093425f"
+strip_components = 1
+description = "CLI client for the Mastodon social network API"
+homepage = "https://github.com/McKael/madonctl"
+license = "MIT"
+
+[build]
+system = "go"

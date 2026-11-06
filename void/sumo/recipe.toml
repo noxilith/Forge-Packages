@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'sumo'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: ffmpeg6, fox, gl2ps, python3-setuptools, xerces-c
+[package]
+name = "sumo"
+version = "1.27.1"
+archive = "https://sumo.dlr.de/releases/1.27.1/sumo-src-1.27.1.tar.gz"
+sha256 = "45ab4abeaf2863e9c2d1efbf47831e3eac07b5be3334d9f39cecdf4bb6be2f44"
+strip_components = 1
+description = "SUMO (Simulation of Urban MObility) and included applications"
+homepage = "https://eclipse.dev/sumo/"
+license = "EPL-2.0"
+deps = ["libgdal", "osg", "proj"]
+patches = ["patches/cross.patch", "patches/fix-musl-missing-includes.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["swig"]

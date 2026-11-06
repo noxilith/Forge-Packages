@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'grap'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "grap"
+version = "1.49"
+archive = "https://www.lunabase.org/~faber/Vault/software/grap//grap-1.49.tar.gz"
+sha256 = "f0bc7f09641a5ec42f019da64b0b2420d95c223b91b3778ae73cb68acfdf4e23"
+strip_components = 1
+description = "Language for typesetting graphs"
+homepage = "https://www.lunabase.org/~faber/Vault/software/grap/"
+license = "BSD-2-Clause"
+
+[build]
+system = "autotools"
+tools = ["flex"]

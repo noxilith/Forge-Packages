@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'conspy'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "conspy"
+version = "1.16"
+archive = "https://downloads.sourceforge.net/sourceforge/conspy/conspy-1.16-1/conspy-1.16.tar.gz"
+sha256 = "ee5ef648ea08d20d9062db22e7bf62a7b7261af02053f916016d1b80a66a5609"
+strip_components = 1
+description = "Remote control of Linux virtual consoles"
+homepage = "http://conspy.sourceforge.net/"
+license = "AGPL-3.0-or-later"
+
+[build]
+system = "autotools"

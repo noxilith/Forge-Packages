@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'yash'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, pre_build, pre_check
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "yash"
+version = "2.61"
+archive = "https://github.com/magicant/yash/releases/download/2.61/yash-2.61.tar.xz"
+sha256 = "a214966f4ff8b293aa5521a4d3ef6e87d707579eee616aa2f8218edaa920d447"
+strip_components = 1
+description = "Yet another shell (POSIX-compliant)"
+homepage = "http://yash.osdn.jp/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

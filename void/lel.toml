@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lel'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "lel"
+version = "0.2"
+archive = "https://dl.2f30.org/releases/lel-0.2.tar.gz"
+sha256 = "337b69b1c2b6db0d74d36d432df52538d653f7023ca696cc4dc89b50491e17be"
+strip_components = 1
+description = "Farbfeld image viewer"
+homepage = "https://git.2f30.org/lel"
+license = "MIT"
+deps = ["farbfeld", "libX11"]
+
+[build]
+system = "make"

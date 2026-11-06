@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pmw'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "pmw"
+version = "5.20"
+archive = "https://github.com/PhilipHazel/pmw/releases/download/pmw-5.20/pmw-5.20.tar.gz"
+sha256 = "a78063bcd59b72ad31e6ad471270bfc0d28db38ecb74cec20e06503ad033c8b4"
+strip_components = 1
+description = "Program for high quality music typesetting"
+homepage = "http://quercite.dx.am/pmw.html"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gip'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "gip"
+version = "0.7.1"
+archive = "https://github.com/dalance/gip/archive/v0.7.1.tar.gz"
+sha256 = "b0cc949cbd25d6dc1e61d08092a78f95f65fb600601d03a407878774385a4060"
+strip_components = 1
+description = "CLI tool to get global IP address"
+homepage = "https://github.com/dalance/gip"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

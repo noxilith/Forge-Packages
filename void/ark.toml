@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ark'. Review before relying on it.
+[package]
+name = "ark"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/ark-26.08.1.tar.xz"
+sha256 = "0b277a28263074359ce1a1b994c83e974187c0901e320dcbac6042e104b4d8ce"
+strip_components = 1
+description = "KDE Archiving Tool"
+homepage = "https://kde.org/applications/en/utilities/org.kde.ark"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kfilemetadata", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kitemmodels", "kf6-kparts", "kf6-kpty", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "libarchive", "libzip"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

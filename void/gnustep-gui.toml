@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnustep-gui'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnustep-make
+[package]
+name = "gnustep-gui"
+version = "0.32.0"
+archive = "https://github.com/gnustep/libs-gui/releases/download/gui-0_32_0/gnustep-gui-0.32.0.tar.gz"
+sha256 = "0c03a1b6313babd592ec58fcb825091f77eb27429a4ce4306ec3a7cfa7f9a1f6"
+strip_components = 1
+description = "Graphical user interface class library for GNUstep"
+homepage = "http://www.gnustep.org/"
+license = "GPL-2.0-or-later, GPL-3.0-or-later"
+deps = ["giflib", "gnustep-base", "libjpeg-turbo", "libpng", "tiff"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["tar"]

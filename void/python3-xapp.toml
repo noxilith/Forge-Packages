@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'python3-xapp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-packaging-bootstrap, python3-psutil
+[package]
+name = "python3-xapp"
+version = "3.0.2"
+archive = "https://github.com/linuxmint/python3-xapp/archive/3.0.2.tar.gz"
+sha256 = "2078766e2553eea0ff2ee598212d4883a226df63d014d060756c6274db024823"
+strip_components = 1
+description = "Python3 Xapp Library"
+homepage = "https://github.com/linuxmint/python3-xapp"
+license = "LGPL-2.1-or-later"
+deps = ["xapp"]
+
+[build]
+system = "meson"

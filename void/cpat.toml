@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cpat'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "cpat"
+version = "1.4.2"
+archive = "https://downloads.sourceforge.net/sourceforge/cpat/v1.4.2/cpat-1.4.2.tar.gz"
+sha256 = "be255b694db5b48e2553ed16a12cd15bcd5a50fcc222424a8c947f04f1053b67"
+strip_components = 1
+description = "Curses based solitaire/patience card game"
+homepage = "https://sourceforge.net/projects/cpat/"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"

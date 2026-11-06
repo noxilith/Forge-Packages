@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'med'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: tk
+[package]
+name = "med"
+version = "4.1.1"
+archive = "https://github.com/chennes/med/archive/v4.1.1.tar.gz"
+sha256 = "ee8b3b6d46bfee25c1d289308b16c7f248d1339161fd5448339382125e6119ad"
+strip_components = 1
+description = "Data Modelization and Exchanges"
+homepage = "https://www.salome-platform.org"
+license = "GPL-3.0-only, LGPL-3.0-only"
+deps = ["hdf5"]
+patches = ["patches/hdf5-1.14.patch", "patches/hdf5-version.patch", "patches/include-dir.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DMEDFILE_BUILD_PYTHON=OFF", "-DMEDFILE_BUILD_TESTS=OFF"]

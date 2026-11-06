@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'delve'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "delve"
+version = "1.27.2"
+archive = "https://github.com/go-delve/delve/archive/v1.27.2.tar.gz"
+sha256 = "8ea5979dfc5978c9690dc1dd533a830815441dd33617f4a61bcdff7d2c3c7e90"
+strip_components = 1
+description = "Debugger for the Go programming language"
+homepage = "https://github.com/go-delve/delve"
+license = "MIT"
+
+[build]
+system = "go"

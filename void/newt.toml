@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'newt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-packaging-bootstrap, slang
+[package]
+name = "newt"
+version = "0.52.24"
+archive = "https://pagure.io/releases/newt/newt-0.52.24.tar.gz"
+sha256 = "5ded7e221f85f642521c49b1826c8de19845aa372baf5d630a51774b544fbdbb"
+strip_components = 1
+description = "Library for color text mode, widget based user interfaces"
+homepage = "https://pagure.io/newt/"
+license = "LGPL-2.0-only"
+deps = ["popt"]
+
+[build]
+system = "autotools"

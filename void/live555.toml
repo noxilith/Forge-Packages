@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'live555'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: CXXFLAGS
+[package]
+name = "live555"
+version = "2026.08.14"
+archive = "https://download.live555.com/live.2026.08.14.tar.gz"
+sha256 = "85848fb28df98a77a6e745959cc3ecf5f541f34c8ffef9021b9f1c2e682edee0"
+strip_components = 1
+description = "Set of C++ libraries for multimedia streaming"
+homepage = "http://www.live555.com/liveMedia/"
+license = "LGPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "make"

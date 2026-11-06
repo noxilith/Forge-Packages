@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cli11'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cli11"
+version = "2.7.2"
+archive = "https://github.com/CLIUtils/CLI11/archive/refs/tags/v2.7.2.tar.gz"
+sha256 = "46eef3101da70852ec7af026e09d485ccee81813331c8c6052d39344443b83da"
+strip_components = 1
+description = "Command line parser for C++11"
+homepage = "https://github.com/CLIUtils/CLI11"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+configure_args = ["-DCLI11_BUILD_TESTS=OFF", "-DCLI11_BUILD_EXAMPLES=OFF"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libgsf'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "libgsf"
+version = "1.14.56"
+archive = "https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.56.tar.xz"
+sha256 = "9d21d30df1d12feaf03e181afd6067f65e3048ab69cb6ad174a3c5b72b92d297"
+strip_components = 1
+description = "Structured File Library"
+homepage = "https://www.gnome.org/"
+license = "LGPL-2.1-or-later"
+deps = ["gdk-pixbuf", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-introspection"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc"]

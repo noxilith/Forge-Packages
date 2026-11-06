@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sutils'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sutils"
+version = "0.2"
+archive = "https://github.com/baskerville/sutils/archive/0.2.tar.gz"
+sha256 = "da8cccace32094430be572cf59d85256023edf9107b12c926c7beb29586c56a3"
+strip_components = 1
+description = "Small command-line utilities"
+homepage = "https://github.com/baskerville/sutils/"
+license = "Unlicense"
+deps = ["alsa-lib"]
+patches = ["patches/getopt-unsigned-char.patch"]
+
+[build]
+system = "make"

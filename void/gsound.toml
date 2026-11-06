@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gsound'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool, libcanberra
+[package]
+name = "gsound"
+version = "1.0.3"
+archive = "https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz"
+sha256 = "ca2d039e1ebd148647017a7f548862350bc9af01986d39f10cfdc8e95f07881a"
+strip_components = 1
+description = "Small library for playing system sounds"
+homepage = "https://wiki.gnome.org/Projects/GSound"
+license = "LGPL-2.1-or-later"
+deps = ["vala"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

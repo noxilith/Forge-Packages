@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'cciss_vol_status'. Review before relying on it.
+[package]
+name = "cciss_vol_status"
+version = "1.12a"
+archive = "https://downloads.sourceforge.net/sourceforge/cciss/cciss_vol_status/cciss_vol_status-1.12a.tar.gz"
+sha256 = "db5a2508e4a5c57fb35a8b6d9c841db339b7386798a6c560d92f2369cf1cca47"
+strip_components = 1
+description = "Utility for Smart Array RAID controllers"
+homepage = "https://cciss.sourceforge.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

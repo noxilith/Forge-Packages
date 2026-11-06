@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cifs-utils'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: mit-krb5, python3-docutils, samba, talloc
+[package]
+name = "cifs-utils"
+version = "7.9"
+archive = "https://ftp.samba.org/pub/linux-cifs/cifs-utils/cifs-utils-7.9.tar.bz2"
+sha256 = "9f3750f402520b15c2c8eb52fd485df6ea77e5e66fe5e39ce8ac4386c32c0296"
+strip_components = 1
+description = "CIFS filesystem user-space tools"
+homepage = "https://wiki.samba.org/index.php/LinuxCIFS_utils"
+license = "GPL-2.0-or-later"
+deps = ["keyutils", "libcap-ng", "pam"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-systemd"]
+tools = ["pkg-config"]

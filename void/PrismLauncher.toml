@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'PrismLauncher'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: openjdk17, qt6-imageformats, qt6-networkauth, qt6-qt5compat, qt6-svg, qt6-tools
+[package]
+name = "PrismLauncher"
+version = "11.1.1"
+archive = "https://github.com/PrismLauncher/PrismLauncher/releases/download/11.1.1/PrismLauncher-11.1.1.tar.gz"
+sha256 = "9ea53f93714cd2a59dc0f38153690a59a3f06f439934d1410ec364cc7f363eb5"
+strip_components = 1
+description = "Custom launcher for Minecraft"
+homepage = "https://prismlauncher.org/"
+license = "GPL-3.0-only"
+deps = ["cmark", "gamemode", "libarchive", "qrencode", "qt6-base", "quazip", "tomlplusplus", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DLauncher_BUILD_PLATFORM=Void"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "scdoc"]

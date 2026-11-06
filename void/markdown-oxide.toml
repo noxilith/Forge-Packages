@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'markdown-oxide'. Review before relying on it.
+[package]
+name = "markdown-oxide"
+version = "0.25.10"
+archive = "https://github.com/Feel-ix-343/markdown-oxide/archive/refs/tags/v0.25.10.tar.gz"
+sha256 = "67217dc2f460a21bf64493d2ebe860cb93563a62aa5eecc28c24cf38ee7100ed"
+strip_components = 1
+description = "Markdown Language Server for Personal Knowledge Management"
+homepage = "https://oxide.md/"
+license = "Apache-2.0"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

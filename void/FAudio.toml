@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'FAudio'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "FAudio"
+version = "26.05"
+archive = "https://github.com/FNA-XNA/FAudio/archive/26.05.tar.gz"
+sha256 = "09390c33c8eac6487b10c6d3fa3ea26591ccdb0d57a2a4d465e0273bef028576"
+strip_components = 1
+description = "Accuracy-focused XAudio reimplementation for open platforms"
+homepage = "https://github.com/FNA-XNA/FAudio"
+license = "Zlib"
+deps = ["SDL3"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

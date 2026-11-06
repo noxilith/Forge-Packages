@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xkbutils'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xkbutils"
+version = "1.0.7"
+archive = "https://www.x.org/releases/individual/app/xkbutils-1.0.7.tar.xz"
+sha256 = "5f37be0ee31ada114415780c562638a1b4f03b385e56449927bf0d5665787a26"
+strip_components = 1
+description = "XKBD Utilities"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11", "libXaw", "xorgproto"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

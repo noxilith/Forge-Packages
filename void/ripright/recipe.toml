@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ripright'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: cdparanoia
+[package]
+name = "ripright"
+version = "0.11"
+archive = "https://www.mcternan.me.uk/ripright/software/ripright-0.11.tar.gz"
+sha256 = "15869b7030b869c1e34baf7954b10a080afb07deeb315c3560af5ca7e57b76b7"
+strip_components = 1
+description = "Minimal automatic CD ripper"
+homepage = "https://www.mcternan.me.uk/ripright/"
+license = "GPL-2.0-only"
+deps = ["ImageMagick", "curl", "flac", "libdiscid"]
+patches = ["patches/imagemagick7.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'menumaker'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "menumaker"
+version = "0.99.14"
+archive = "https://downloads.sourceforge.net/sourceforge/menumaker/menumaker-0.99.14.tar.gz"
+sha256 = "11e95d0e76a3b850f57df81bc5560222bd60141c5751b6e9bd05c3cd5560d65a"
+strip_components = 1
+description = "Menu generation utility"
+homepage = "http://menumaker.sourceforge.net"
+license = "BSD-2-Clause"
+
+[build]
+system = "autotools"

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'evince'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libspectre, perl-XML-Parser
+[package]
+name = "evince"
+version = "48.1"
+archive = "https://download.gnome.org/sources/evince/48/evince-48.1.tar.xz"
+sha256 = "7d8b9a6fa3a05d3f5b9048859027688c73a788ff6e923bc3945126884943fa10"
+strip_components = 1
+description = "GNOME Document viewer for multiple document formats"
+homepage = "https://wiki.gnome.org/Apps/Evince"
+license = "GPL-2.0-or-later"
+deps = ["adwaita-icon-theme", "desktop-file-utils", "djvulibre", "gnome-desktop", "gspell", "gst-plugins-base1", "libSM", "libgxps", "libhandy1", "libsecret", "poppler"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcomics=enabled", "-Ddjvu=enabled", "-Dps=enabled", "-Dxps=enabled", "-Ddvi=disabled", "-Dpdf=enabled"]
+tools = ["pkg-config"]
+deps = ["appstream-glib", "gettext", "glib"]

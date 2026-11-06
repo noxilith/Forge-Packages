@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'waydroid'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: dnsmasq, gbinder-python, nftables
+[package]
+name = "waydroid"
+version = "1.6.3"
+archive = "https://github.com/waydroid/waydroid/archive/refs/tags/1.6.3.tar.gz"
+sha256 = "f138a287eb8b0be7be7f7060971446490138bc2c8315665c8aa9c2c85576d8a5"
+strip_components = 1
+description = "Container-based approach to boot a full Android system"
+homepage = "https://waydro.id"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "kmod", "lxc", "polkit", "python3-dbus", "python3-gobject"]
+
+[build]
+system = "make"

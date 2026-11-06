@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xmlrpc-c'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "xmlrpc-c"
+version = "1.60.05"
+archive = "https://downloads.sourceforge.net/sourceforge/xmlrpc-c/xmlrpc-c-1.60.05.tgz"
+sha256 = "67d860062459ea2784c07b4d7913319d9539fa729f534378e8e41c8918f2adf6"
+strip_components = 1
+description = "XML-RPC for C and C++"
+homepage = "http://xmlrpc-c.sourceforge.net/"
+license = "BSD-3-Clause"
+deps = ["curl", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-libxml2-backend", "--enable-cplusplus", "--disable-cgi-server", "--disable-libwww-client", "--disable-wininet-client"]
+tools = ["pkg-config"]

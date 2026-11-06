@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'exfat-utils'. Review before relying on it.
+[package]
+name = "exfat-utils"
+version = "1.4.0"
+archive = "https://github.com/relan/exfat/releases/download/v1.4.0/exfat-utils-1.4.0.tar.gz"
+sha256 = "241575fa93104406a47e79e53e4d907bae69886f11621f70a45276c62b75bf69"
+strip_components = 1
+description = "Utilities for exFAT file system"
+homepage = "https://github.com/relan/exfat"
+license = "GPL-2.0-or-later"
+patches = ["patches/musl-not-found.patch"]
+
+[build]
+system = "autotools"

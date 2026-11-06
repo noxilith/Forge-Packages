@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gtk-vnc'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "gtk-vnc"
+version = "1.3.1"
+archive = "https://download.gnome.org/sources/gtk-vnc/1.3/gtk-vnc-1.3.1.tar.xz"
+sha256 = "512763ac4e0559d0158b6682ca5dd1a3bd633f082f5e4349d7158e6b5f80f1ce"
+strip_components = 1
+description = "VNC viewer widget for GTK"
+homepage = "https://wiki.gnome.org/Projects/gtk-vnc"
+license = "GPL-2.0-or-later"
+deps = ["gnutls", "gtk+3", "libgcrypt", "libsasl", "pulseaudio"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpulseaudio=enabled"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "glib"]

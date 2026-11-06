@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'SDL3_ttf'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: harfbuzz
+[package]
+name = "SDL3_ttf"
+version = "3.2.2"
+archive = "https://github.com/libsdl-org/SDL_ttf/releases/download/release-3.2.2/SDL3_ttf-3.2.2.tar.gz"
+sha256 = "63547d58d0185c833213885b635a2c0548201cc8f301e6587c0be1a67e1e045d"
+strip_components = 1
+description = "Use TrueType fonts in your SDL 3.x applications"
+homepage = "https://github.com/libsdl-org/SDL_ttf"
+license = "MIT"
+deps = ["SDL3", "freetype"]
+
+[build]
+system = "cmake"

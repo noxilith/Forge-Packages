@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'acpid'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "acpid"
+version = "2.0.34"
+archive = "https://downloads.sourceforge.net/sourceforge/acpid2/acpid-2.0.34.tar.xz"
+sha256 = "2d095c8cfcbc847caec746d62cdc8d0bff1ec1bc72ef7c674c721e04da6ab333"
+strip_components = 1
+description = "ACPI Daemon (acpid) With Netlink Support"
+homepage = "https://sourceforge.net/projects/acpid2/"
+license = "GPL-2.0-or-later"
+patches = ["patches/disable-logging-to-console.patch", "patches/fix-musl.patch", "patches/no-cursor-events.patch"]
+
+[build]
+system = "autotools"

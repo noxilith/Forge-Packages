@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xiphos'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, libwebkit2gtk41, python3-lxml, zip
+[package]
+name = "xiphos"
+version = "4.4.0"
+archive = "https://github.com/crosswire/xiphos/archive/refs/tags/4.4.0.tar.gz"
+sha256 = "b54551c1420b1a2129d3b56f7b77bf1d46555ecd90b321a4d3ffa4ffde811537"
+strip_components = 1
+description = "GTK3 Bible tool for reading, study, and research"
+homepage = "https://xiphos.org/"
+license = "GPL-2.0-only"
+deps = ["biblesync", "gtk+3", "libicu78", "libsoup3", "libxml2", "minizip", "speech-dispatcher", "sword"]
+patches = ["patches/build-without-uuidgen.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["AppStream", "appstream-glib", "desktop-file-utils", "gettext", "glib", "yelp-tools"]

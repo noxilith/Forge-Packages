@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xcolor'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcolor"
+version = "0.5.1"
+archive = "https://github.com/Soft/xcolor/archive/refs/tags/0.5.1.tar.gz"
+sha256 = "cff417d0ccbece766c66a183413e167868fdbd98b8129516ff9021a4b11a5647"
+strip_components = 1
+description = "Lightweight color picker for X11"
+homepage = "https://github.com/Soft/xcolor"
+license = "MIT"
+deps = ["libX11", "libXcursor", "libXrender"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

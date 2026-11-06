@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'vde2'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files, lib32disabled
+[package]
+name = "vde2"
+version = "2.3.3"
+archive = "https://github.com/virtualsquare/vde-2/archive/refs/tags/v2.3.3.tar.gz"
+sha256 = "a7d2cc4c3d0c0ffe6aff7eb0029212f2b098313029126dcd12dc542723972379"
+strip_components = 1
+description = "Virtual Distributed Ethernet"
+homepage = "https://github.com/virtualsquare/vde-2"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["libpcap", "openssl"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-experimental", "--disable-python", "--enable-kernel-switch"]

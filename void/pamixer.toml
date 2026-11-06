@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pamixer'. Review before relying on it.
+[package]
+name = "pamixer"
+version = "1.6"
+archive = "https://github.com/cdemoulins/pamixer/archive/1.6.tar.gz"
+sha256 = "8b7199e495dc19b190f8f02ace8782f533266a4bd7c7d3cf6f4cf09b2de13e71"
+strip_components = 1
+description = "Pulseaudio command line mixer"
+homepage = "https://github.com/cdemoulins/pamixer"
+license = "GPL-3.0-or-later"
+deps = ["cxxopts", "pulseaudio"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

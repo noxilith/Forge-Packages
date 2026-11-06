@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dbus-test-runner'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, intltool
+[package]
+name = "dbus-test-runner"
+version = "19.04.0"
+archive = "https://launchpad.net/dbus-test-runner/19.04/19.04.0/+download/dbus-test-runner-19.04.0.tar.gz"
+sha256 = "645a32fbd909baf2c01438f0cbda29dc9cd01a7aba5504c45610d88e8a57cb76"
+strip_components = 1
+description = "Run executables under a new DBus session for testing"
+homepage = "https://launchpad.net/dbus-test-runner"
+license = "GPL-3.0-only"
+deps = ["dbus", "glib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

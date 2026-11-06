@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ponymix'. Review before relying on it.
+[package]
+name = "ponymix"
+version = "5"
+archive = "https://github.com/falconindy/ponymix/archive/5.tar.gz"
+sha256 = "163e451dff830b1c1f22e5064a6827d0061b5a94d673ee7b246cf8fc51820cb0"
+strip_components = 1
+description = "CLI volume control for PulseAudio"
+homepage = "https://github.com/falconindy/ponymix"
+license = "MIT"
+deps = ["libnotify", "pulseaudio"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

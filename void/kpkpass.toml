@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kpkpass'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-qt5compat, qt6-tools
+[package]
+name = "kpkpass"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kpkpass-26.08.1.tar.xz"
+sha256 = "d1b9f52e266d7be21e818780a1a4578c3d8cf574925f5c0265e583f82408c903"
+strip_components = 1
+description = "Apple Wallet Pass reader"
+homepage = "https://kontact.kde.org"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-karchive", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QTMETATYPESDIR=lib/qt6/metatypes", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "shared-mime-info"]

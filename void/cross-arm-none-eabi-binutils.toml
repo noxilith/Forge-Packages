@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cross-arm-none-eabi-binutils'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "cross-arm-none-eabi-binutils"
+version = "2.32"
+archive = "https://ftp.gnu.org/gnu/binutils/binutils-2.32.tar.xz"
+sha256 = "0ab6c55dd86a92ed561972ba15b9b70a8b9f75557f896446c82e8b36e473ee04"
+strip_components = 1
+description = "GNU binary utilities"
+homepage = "https://www.gnu.org/software/binutils/"
+license = "GPL-3.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-nls", "--enable-deterministic-archives", "--enable-interwork", "--enable-ld", "--enable-multilib", "--enable-plugins", "--target=arm-none-eabi", "--with-gnu-as", "--with-gnu-ld", "--with-system-zlib", "--without-isl"]
+tools = ["bison", "flex", "perl"]

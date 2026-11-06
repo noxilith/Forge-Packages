@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'klickety'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "klickety"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/klickety-26.08.1.tar.xz"
+sha256 = "b5d4d53f37579a9c029ddb12d4e6c24eaf85fbc0e30288ac65e7ce126f42d9f3"
+strip_components = 1
+description = "Adaptation of the Clickomania game"
+homepage = "https://apps.kde.org/klickety"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kio", "libkdegames"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-base"]

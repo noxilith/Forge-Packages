@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fcitx5-table-extra'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fcitx5, libime
+[package]
+name = "fcitx5-table-extra"
+version = "5.1.12"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-table-extra/fcitx5-table-extra-5.1.12.tar.zst"
+sha256 = "6ccf4d07daad6a14557565038bc3125d12880dd713b80c24a6d48f0e22829329"
+strip_components = 1
+description = "Fcitx5 - Boshiamy, Zhengma, Cangjie, and Quick table"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "Public Domain"
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext"]

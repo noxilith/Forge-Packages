@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'Vulkan-ValidationLayers'. Review before relying on it.
+[package]
+name = "Vulkan-ValidationLayers"
+version = "1.4.363.0"
+archive = "https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/vulkan-sdk-1.4.363.0.tar.gz"
+sha256 = "36720627913a591ae8ffc0f24b3c04f98af65242c9b7215d1944a85ff5b70e00"
+strip_components = 1
+description = "Khronos official Vulkan validation layers"
+homepage = "https://www.khronos.org/vulkan/"
+license = "Apache-2.0"
+deps = ["SPIRV-Headers", "SPIRV-Tools", "Vulkan-Headers", "Vulkan-Utility-Libraries", "libX11", "libXrandr", "libxcb", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUPDATE_DEPS=OFF"]
+tools = ["pkg-config"]

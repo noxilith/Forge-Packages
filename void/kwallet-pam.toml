@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kwallet-pam'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools, socat
+[package]
+name = "kwallet-pam"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kwallet-pam-6.7.5.tar.xz"
+sha256 = "d71f5945ef3086f56f52f531508c2ab363078fbbd5ae4084bd3647049e6ee94f"
+strip_components = 1
+description = "KWallet PAM integration"
+homepage = "https://invent.kde.org/plasma/kwallet-pam"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kwallet", "libgcrypt", "pam"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "qt6-base"]

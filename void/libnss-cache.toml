@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libnss-cache'. Review before relying on it.
+# hooks not translated: pre_install
+[package]
+name = "libnss-cache"
+version = "0.20"
+archive = "https://github.com/google/libnss-cache/archive/version/0.20.tar.gz"
+sha256 = "71324b6035674028a0f39c98aedfbaed94adbcddd72dc1c4ab81308b135dd586"
+strip_components = 1
+description = "NSS module for reading directory information from local cache"
+homepage = "https://github.com/google/libnss-cache"
+license = "LGPL-3.0"
+
+[build]
+system = "make"

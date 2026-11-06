@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gts'. Review before relying on it.
+# hooks not translated: pre_check
+[package]
+name = "gts"
+version = "0.7.6"
+archive = "https://sourceforge.net/projects/gts/files/gts/0.7.6/gts-0.7.6.tar.gz"
+sha256 = "059c3e13e3e3b796d775ec9f96abdce8f2b3b5144df8514eda0cc12e13e8b81e"
+strip_components = 1
+description = "GNU Triangulated Surface Library"
+homepage = "http://gts.sourceforge.net/index.html"
+license = "LGPL-3.0-or-later"
+deps = ["glib"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

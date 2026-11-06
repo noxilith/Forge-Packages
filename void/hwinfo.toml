@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'hwinfo'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_build
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: libx86emu, util-linux-common
+[package]
+name = "hwinfo"
+version = "25.1"
+archive = "https://github.com/openSUSE/hwinfo/archive/refs/tags/25.1.tar.gz"
+sha256 = "3a424a3facf8632a9171a2c40a65f7bf57690ea189cc0d0a1e5bb86f35082192"
+strip_components = 1
+description = "Hardware information tool"
+homepage = "https://github.com/openSUSE/hwinfo"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"
+tools = ["flex", "perl"]

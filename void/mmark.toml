@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mmark'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "mmark"
+version = "2.2.45"
+archive = "https://github.com/mmarkdown/mmark/archive/v2.2.45.tar.gz"
+sha256 = "fb3e20117f11805de5459c78a56476a4b38877d03be49c1c1227598d80e01dfd"
+strip_components = 1
+description = "Powerful markdown processor geared towards the IETF"
+homepage = "https://github.com/mmarkdown/mmark/"
+license = "BSD-2-Clause"
+
+[build]
+system = "go"

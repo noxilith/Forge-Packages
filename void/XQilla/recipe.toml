@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'XQilla'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: xerces-c
+[package]
+name = "XQilla"
+version = "2.3.4"
+archive = "https://downloads.sourceforge.net/sourceforge/xqilla/XQilla-2.3.4.tar.gz"
+sha256 = "292631791631fe2e7eb9727377335063a48f12611d641d0296697e0c075902eb"
+strip_components = 1
+description = "XQuery and XPath2 library and command line utility"
+homepage = "http://xqilla.sourceforge.net/"
+license = "Apache-2.0"
+patches = ["patches/gcc11.patch"]
+
+[build]
+system = "autotools"
+tools = ["flex"]

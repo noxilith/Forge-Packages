@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'geoip'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "geoip"
+version = "1.6.12"
+archive = "https://github.com/maxmind/geoip-api-c/releases/download/v1.6.12/GeoIP-1.6.12.tar.gz"
+sha256 = "1dfb748003c5e4b7fd56ba8c4cd786633d5d6f409547584f6910398389636f80"
+strip_components = 1
+description = "Non-DNS IP-to-country resolver C library and utilities"
+homepage = "http://www.maxmind.com/app/c"
+license = "LGPL-2.1-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"

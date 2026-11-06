@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xf86-video-mach64'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: LDFLAGS, lib32disabled
+[package]
+name = "xf86-video-mach64"
+version = "6.10.0"
+archive = "https://www.x.org/releases/individual/driver/xf86-video-mach64-6.10.0.tar.xz"
+sha256 = "d6b96b47a27cd2dc6dea612f5dc51fcc1a8561d5ad1d48d04ec2d47751222724"
+strip_components = 1
+description = "Xorg ATI Rage Pro video driver"
+homepage = "https://wiki.freedesktop.org/xorg"
+license = "MIT"
+deps = ["xorg-server", "xorgproto"]
+patches = ["patches/0001-avoid-including-VBE-paths-when-not-used.patch", "patches/cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

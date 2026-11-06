@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wpebackend-fdo'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wpebackend-fdo"
+version = "1.16.1"
+archive = "https://wpewebkit.org/releases/wpebackend-fdo-1.16.1.tar.xz"
+sha256 = "544ae14012f8e7e426b8cb522eb0aaaac831ad7c35601d1cf31d37670e0ebb3b"
+strip_components = 1
+description = "FreeDesktop.org backend for WPE"
+homepage = "https://wpewebkit.org"
+license = "BSD-2-Clause"
+deps = ["glib", "libepoxy", "libwpe", "wayland"]
+patches = ["patches/musl-missing-include.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

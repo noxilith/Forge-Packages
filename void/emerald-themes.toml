@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'emerald-themes'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "emerald-themes"
+version = "0.8.18"
+archive = "https://github.com/compiz-reloaded/emerald-themes/archive/v0.8.18.tar.gz"
+sha256 = "0d9ff1c5aff6e0748dbd06e770d2129f02357aad3e3cd085fcd1252f8c3898b4"
+strip_components = 1
+description = "Compiz Reloaded Emerald native window decorator themes"
+homepage = "https://github.com/compiz-reloaded"
+license = "GPL-2.0-or-later"
+deps = ["emerald"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

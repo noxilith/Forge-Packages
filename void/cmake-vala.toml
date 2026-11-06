@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'cmake-vala'. Review before relying on it.
+[package]
+name = "cmake-vala"
+version = "1"
+archive = "https://gitlab.com/vala-panel-project/cmake-vala/-/archive/r1/cmake-vala-r1.tar.gz"
+sha256 = "f8801ce01ed7ced690229ef81c0809af212166d585a0de8cf2b276444fd9f942"
+strip_components = 1
+description = "Vala CMake modules"
+homepage = "https://gitlab.com/vala-panel-project/cmake-vala"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"

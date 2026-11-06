@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kcolorchooser'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kcolorchooser"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kcolorchooser-26.08.1.tar.xz"
+sha256 = "7fa2b2d5e552d8205921f25df1a9359d64ceb9f7844d7cf351bf45ca36850a46"
+strip_components = 1
+description = "KDE's Color Chooser"
+homepage = "https://kde.org/applications/en/graphics/org.kde.kcolorchooser"
+license = "MIT"
+deps = ["kf6-kcoreaddons", "kf6-ki18n", "kf6-kxmlgui", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig"]

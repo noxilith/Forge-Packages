@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'atuin'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_install
+# settings not translated: make_install_args, build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "atuin"
+version = "18.16.1"
+archive = "https://github.com/atuinsh/atuin/archive/refs/tags/v18.16.1.tar.gz"
+sha256 = "752802d4e8eef4896e9bc779b82f85e3d433c5934df5169e9b0f2537acf7f6e9"
+strip_components = 1
+description = "Magical shell history"
+homepage = "https://atuin.sh"
+license = "MIT"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

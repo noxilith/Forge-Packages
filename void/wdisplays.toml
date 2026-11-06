@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wdisplays'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-scour
+[package]
+name = "wdisplays"
+version = "1.1.3"
+archive = "https://github.com/artizirk/wdisplays/archive/1.1.3.tar.gz"
+sha256 = "6b8674598d50cb56a3acb79bd563c1d7a7d7781a8ce8dcc83a240916024b7070"
+strip_components = 1
+description = "GUI display configurator for wlroots compositors"
+homepage = "https://github.com/artizirk/wdisplays"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "libepoxy", "wayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

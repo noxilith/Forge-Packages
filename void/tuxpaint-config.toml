@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tuxpaint-config'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "tuxpaint-config"
+version = "0.0.21"
+archive = "https://downloads.sourceforge.net/sourceforge/tuxpaint/tuxpaint-config-0.0.21.tar.gz"
+sha256 = "5287de38944c302a7eaa069c8f5de635b95d82912e6cdf195c66366bf3431ae8"
+strip_components = 1
+description = "Configuration tool for Tux Paint"
+homepage = "https://www.tuxpaint.org/"
+license = "GPL-2.0-or-later"
+deps = ["fltk", "libpaper", "libunibreak", "tuxpaint"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["gettext"]

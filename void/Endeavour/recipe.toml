@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'Endeavour'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "Endeavour"
+version = "43.0"
+archive = "https://gitlab.gnome.org/World/Endeavour/-/archive/43.0/Endeavour-43.0.tar.gz"
+sha256 = "f5f442611f03b2471a522e976bfb156de36824b1ecf8c13a9b35a996f50670a3"
+strip_components = 1
+description = "Task manager designed to perfectly fit the GNOME desktop"
+homepage = "https://wiki.gnome.org/Apps/Todo"
+license = "GPL-2.0-or-later"
+deps = ["evolution-data-server", "gnome-online-accounts", "gtk4", "libadwaita", "libpeas"]
+patches = ["patches/libpeas-1.38.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3"]

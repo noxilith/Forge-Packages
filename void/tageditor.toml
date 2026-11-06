@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tageditor'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "tageditor"
+version = "3.9.11"
+archive = "https://github.com/Martchus/tageditor/archive/v3.9.11.tar.gz"
+sha256 = "ccb04b41cae2455852839bdaef94456fadc4254619b97a8736f71a0b031dcffe"
+strip_components = 1
+description = "Tag editor for AAC, ID3, Vorbis, Opus, FLAC and Matroska"
+homepage = "https://github.com/Martchus/tageditor"
+license = "GPL-2.0-only"
+deps = ["cpp-utilities", "qt6-base", "qt6-declarative", "qtutilities", "tagparser"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_PACKAGE_PREFIX=Qt6"]
+tools = ["pkg-config"]

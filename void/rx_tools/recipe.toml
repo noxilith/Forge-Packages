@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rx_tools'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rx_tools"
+version = "1.0.3"
+archive = "https://github.com/rxseger/rx_tools/archive/v1.0.3.tar.gz"
+sha256 = "0828f1bb2b4634746bf57da8a63d399ec89cb199e1a6630c893120b9fc51b18d"
+strip_components = 1
+description = "Tools for receiving data from SDRs"
+homepage = "https://github.com/rxseger/rx_tools"
+license = "GPL-2.0-only"
+deps = ["SoapySDR"]
+patches = ["patches/soapysdr_0.8.patch"]
+
+[build]
+system = "cmake"

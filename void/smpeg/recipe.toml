@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'smpeg'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_build_args
+[package]
+name = "smpeg"
+version = "0.4.5"
+archive = "https://github.com/icculus/smpeg/archive/refs/tags/release_0_4_5.tar.gz"
+sha256 = "e2e53bfd2e6401e2c29e5eb3929be0e8698bc9e4c9d731751f67e77b408f1f74"
+strip_components = 1
+description = "SDL MPEG Player Library"
+homepage = "https://icculus.org/smpeg/"
+license = "LGPL-2.1-only"
+deps = ["sdl12-compat"]
+patches = ["patches/fix-gcc6-narrowing.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gtk-player", "--disable-opengl-player"]
+tools = ["pkg-config"]

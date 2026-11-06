@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'svgcleaner'. Review before relying on it.
+# hooks not translated: post_patch
+[package]
+name = "svgcleaner"
+version = "0.9.5"
+archive = "https://github.com/RazrFalcon/SVGCleaner/archive/v0.9.5.tar.gz"
+sha256 = "dcf8dbc8939699e2e82141cb86688b6cd09da8cae5e18232ef14085c2366290c"
+strip_components = 1
+description = "Tool for reducing size of svg images without loss"
+homepage = "https://github.com/RazrFalcon/SVGCleaner"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "cargo"

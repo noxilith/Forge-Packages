@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'waitforfile'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "waitforfile"
+version = "0.1.8"
+archive = "https://github.com/nroi/waitforfile/archive/v0.1.8.tar.gz"
+sha256 = "e63c7b964d4b475f4d84fba62a8b2e43593cbe73c7ce4840474836a978ca01a3"
+strip_components = 1
+description = "Wait until the given file exists"
+homepage = "https://github.com/nroi/waitforfile"
+license = "MIT"
+
+[build]
+system = "cargo"

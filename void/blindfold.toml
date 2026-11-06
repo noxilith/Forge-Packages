@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'blindfold'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "blindfold"
+version = "1.2.0"
+archive = "https://github.com/Eoin-McMahon/blindfold/archive/v1.2.0.tar.gz"
+sha256 = "526ca5d4361a24ea6cb3422515c04519d2b738bab86de52358099ec37a61d59d"
+strip_components = 1
+description = "CLI gitignore file generator"
+homepage = "https://github.com/Eoin-McMahon/blindfold"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fotocx'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dcraw, exiftool
+[package]
+name = "fotocx"
+version = "24.21"
+archive = "https://www.kornelix.net/downloads/downloads/fotocx-24.21-source.tar.gz"
+sha256 = "0acb68e32956a3f1b2a28025e42d35e5072403e6183ffa1de5cebc3e09a6f32c"
+strip_components = 1
+description = "Free open source program for image editing and collection management"
+homepage = "https://www.kornelix.net/fotocx/fotocx.html"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "libchamplain", "xdg-utils"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

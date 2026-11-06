@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'sile'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: LuaJIT, font-sil-gentium, harfbuzz, lua51, lua51-luasocket, lua52-compat53, lua54-cassowary, lua54-cldr, lua54-cliargs, lua54-fluent, lua54-linenoise, lua54-loadkit (+8)
+[package]
+name = "sile"
+version = "0.15.13"
+archive = "https://github.com/sile-typesetter/sile/releases/download/v0.15.13/sile-0.15.13.tar.zst"
+sha256 = "5e97c19651aff710687b93292d5361cb411652094bcc8c62c811c19f7a81464b"
+strip_components = 1
+description = "Modern typesetting system inspired by TeX"
+homepage = "https://www.sile-typesetter.org/"
+license = "MIT"
+deps = ["fontconfig"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-system-lua-sources", "--with-system-luarocks", "--disable-emdedded-resources"]
+tools = ["pkg-config"]
+deps = ["jq", "luarocks-lua53", "poppler"]

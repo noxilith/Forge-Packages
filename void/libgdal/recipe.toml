@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'libgdal'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: freexl, libspatialite, libwebp, python3-numpy, python3-setuptools, sqlite, xerces-c, zstd
+[package]
+name = "libgdal"
+version = "3.8.4"
+archive = "https://download.osgeo.org/gdal/3.8.4/gdal-3.8.4.tar.xz"
+sha256 = "0c53ced95d29474236487202709b49015854f8e02e35e44ed0f4f4e12a7966ce"
+strip_components = 1
+description = "Geospatial Data Abstraction Library"
+homepage = "https://www.gdal.org"
+license = "MIT"
+deps = ["OpenCL-Headers", "c-blosc", "curl", "expat", "geos", "giflib", "hdf5", "jasper", "json-c", "libdeflate", "libjpeg-turbo", "libpng", "libxml2", "netcdf", "ocl-icd", "openexr", "openjpeg2", "pcre2", "postgresql18", "proj", "qhull", "tiff", "xz", "zlib"]
+patches = ["patches/20-userfaultfd-detection.patch", "patches/30-license.patch", "patches/40-fix-setup-py-cc.patch", "patches/50-swig-4.3.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DGDAL_USE_OPENCL=ON"]
+tools = ["bison", "pkg-config"]
+deps = ["swig"]

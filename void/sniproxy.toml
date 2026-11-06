@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'sniproxy'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, conf_files
+# needs, but Forge has no recipe for yet: libev, udns
+[package]
+name = "sniproxy"
+version = "0.7.0"
+archive = "https://github.com/dlundquist/sniproxy/archive/0.7.0.tar.gz"
+sha256 = "bbe579886c1af60e850b8b5bef850f10b317e6ebe366cb0b5476b1230f2870e4"
+strip_components = 1
+description = "Proxies incoming HTTP and TLS connections based on the hostname"
+homepage = "https://github.com/dlundquist/sniproxy"
+license = "BSD-2-Clause"
+deps = ["pcre"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-dns"]
+tools = ["pkg-config"]
+deps = ["gettext"]

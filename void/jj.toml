@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jj'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "jj"
+version = "1.9.2"
+archive = "https://github.com/tidwall/jj/archive/refs/tags/v1.9.2.tar.gz"
+sha256 = "a3dafa9f2182bf79f26cdca790ff7106ebc02a50bd72bcc2db58bdbc39ee052f"
+strip_components = 1
+description = "JSON Stream Editor"
+homepage = "https://github.com/tidwall/jj"
+license = "MIT"
+
+[build]
+system = "go"

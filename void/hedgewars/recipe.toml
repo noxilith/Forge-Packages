@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'hedgewars'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: SDL2_image, ffmpeg6, lua51, physfs, qt5
+[package]
+name = "hedgewars"
+version = "1.0.2"
+archive = "https://hedgewars.org/download/releases/hedgewars-src-1.0.2.tar.bz2"
+sha256 = "201fe5e45bd8ca5b3d81b18ec06bd6bbc9fa7c2c63bf019005e2f80be5bcf212"
+strip_components = 1
+description = "Funny turn-based artillery game, featuring fighting Hedgehogs!"
+homepage = "https://www.hedgewars.org/"
+license = "GPL-2.0-only"
+deps = ["SDL2_mixer", "SDL2_net", "SDL2_ttf", "libfreeglut"]
+patches = ["patches/0001-Add-support-for-ffmpeg-6.0.patch", "patches/cmake-build-type-none.patch", "patches/i686.patch", "patches/importmonad.patch", "patches/string.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DNOSERVER=1", "-DPHYSFS_SYSTEM=1", "-DMINIMAL_FLAGS=1"]
+tools = ["pkg-config"]

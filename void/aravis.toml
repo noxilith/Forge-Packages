@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'aravis'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gi-docgen
+[package]
+name = "aravis"
+version = "0.8.36"
+archive = "https://github.com/AravisProject/aravis/archive/0.8.36.tar.gz"
+sha256 = "39351e6ec3b0ea583a1a954054cc288fcd84202275614574e7d62054801aee8f"
+strip_components = 1
+description = "Vision utilities for genicam based cameras"
+homepage = "https://github.com/AravisProject/aravis"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "gst-plugins-base1", "gstreamer1", "gtk+3", "libusb", "libxml2", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddocumentation=enabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "gobject-introspection"]

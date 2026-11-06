@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sord'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sord"
+version = "0.16.22"
+archive = "https://gitlab.com/drobilla/sord/-/archive/v0.16.22/sord-v0.16.22.tar.gz"
+sha256 = "040fb3f369dd49a7717eb28ca0a66766352e25e760729903fc8a01e117122901"
+strip_components = 1
+description = "Lightweight C library for storing RDF data in memory"
+homepage = "https://drobilla.net/software/sord.html"
+license = "ISC"
+deps = ["pcre", "serd", "zix"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

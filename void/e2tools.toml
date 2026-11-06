@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'e2tools'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "e2tools"
+version = "0.1.2"
+archive = "https://github.com/e2tools/e2tools/archive/v0.1.2.tar.gz"
+sha256 = "7e18f382a713da28c6cf1b7b20eead4e0d34a61c8b6ccefb76c42ab71e7b70e4"
+strip_components = 1
+description = "Utilities for manipulating files in an ext2/ext3 filesystem"
+homepage = "https://github.com/e2tools/e2tools"
+license = "GPL-2.0-only"
+deps = ["e2fsprogs"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

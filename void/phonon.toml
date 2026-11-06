@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'phonon'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5, qt6-qt5compat, qt6-tools
+[package]
+name = "phonon"
+version = "4.12.0"
+archive = "https://download.kde.org/stable/phonon/4.12.0/phonon-4.12.0.tar.xz"
+sha256 = "3287ffe0fbcc2d4aa1363f9e15747302d0b080090fe76e5f211d809ecb43f39a"
+strip_components = 1
+description = "Multimedia framework for KDE"
+homepage = "https://phonon.kde.org/"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "pulseaudio"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPHONON_BUILD_DESIGNER_PLUGIN=ON"]
+deps = ["extra-cmake-modules", "qt6-base"]

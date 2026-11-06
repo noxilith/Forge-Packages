@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'mozjs140'. Review before relying on it.
+# hooks not translated: post_install, pre_check, pre_configure
+# settings not translated: build_helper, LDFLAGS
+# needs, but Forge has no recipe for yet: libffi, libreadline8
+[package]
+name = "mozjs140"
+version = "140.3.0"
+archive = "https://ftp.mozilla.org/pub/firefox/releases/140.3.0esr/source/firefox-140.3.0esr.source.tar.xz"
+sha256 = "efc6eb3c93756311bd2f9db3796c0bbee6e3f182975d857284168b3dec672316"
+strip_components = 1
+description = "SpiderMonkey JavaScript interpreter and library (140.x)"
+homepage = "https://spidermonkey.dev"
+license = "MPL-2.0"
+deps = ["libicu78", "nspr", "zlib"]
+patches = ["patches/001-fix-soname.patch", "patches/002-copy-headers.patch", "patches/003-tests-timeout.patch", "patches/004-icu-sources-data-py-decouple.patch", "patches/005-icu-sources-data-write-command-stderr.patch", "patches/006-emitter.patch", "patches/007-tests-use-native-temporarydirectory.patch", "patches/008-init-patch.patch", "patches/013-disable-spidermonkey-jslint.patch", "patches/017-no-lto-readelf.patch", "patches/armv6l-isb.patch", "patches/fix-i386-fdlibm.patch", "patches/missing-defines.patch", "patches/rust-configure.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-jemalloc", "--disable-strip", "--disable-tests", "--disable-optimize", "--disable-debug", "--enable-ctypes", "--enable-readline", "--enable-shared-js", "--enable-system-ffi", "--with-intl-api", "--with-system-icu", "--with-system-nspr", "--with-system-zlib", "--enable-hardening", "--enable-release"]
+subdir = "js/src"
+tools = ["m4", "perl", "pkg-config"]
+deps = ["cbindgen", "llvm19"]

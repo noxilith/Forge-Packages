@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ipfs-cluster'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "ipfs-cluster"
+version = "0.12.1"
+archive = "https://github.com/ipfs/ipfs-cluster/archive/v0.12.1.tar.gz"
+sha256 = "53758c1518b510fbaf2ba5d7b360d429ee073c6a0bf9296ccd8a5ad18f9575f2"
+strip_components = 1
+description = "Collective pinning and composition for IPFS"
+homepage = "https://github.com/ipfs/ipfs-cluster"
+license = "Apache-2.0, MIT"
+deps = ["kubo"]
+
+[build]
+system = "go"

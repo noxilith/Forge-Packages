@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ltris'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: SDL_mixer
+[package]
+name = "ltris"
+version = "1.3.2"
+archive = "https://downloads.sourceforge.net/sourceforge/lgames/ltris-1.3.2.tar.gz"
+sha256 = "ff28c55a18c61f28a86ba7f30f13222dfed0f7fbeb492acd95c97de9c659cec9"
+strip_components = 1
+description = "Tetris clone using SDL"
+homepage = "https://lgames.sourceforge.io/LTris/"
+license = "GPL-2.0-or-later"
+deps = ["sdl12-compat"]
+
+[build]
+system = "autotools"

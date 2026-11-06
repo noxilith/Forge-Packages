@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wmctrl'. Review before relying on it.
+[package]
+name = "wmctrl"
+version = "1.07"
+archive = "https://ftp.debian.org/debian/pool/main/w/wmctrl/wmctrl_1.07.orig.tar.gz"
+sha256 = "d78a1efdb62f18674298ad039c5cbdb1edb6e8e149bb3a8e3a01a4750aa3cca9"
+strip_components = 1
+description = "CLI tool to interact with EWMH compliant WMs"
+homepage = "https://packages.debian.org/sid/source/wmctrl"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libXmu"]
+patches = ["patches/01_64-bit-data.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

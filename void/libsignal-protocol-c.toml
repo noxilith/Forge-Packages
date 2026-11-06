@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libsignal-protocol-c'. Review before relying on it.
+[package]
+name = "libsignal-protocol-c"
+version = "2.3.3"
+archive = "https://github.com/signalapp/libsignal-protocol-c/archive/v2.3.3.tar.gz"
+sha256 = "c22e7690546e24d46210ca92dd808f17c3102e1344cd2f9a370136a96d22319d"
+strip_components = 1
+description = "Signal Protocol C Library"
+homepage = "https://www.whispersystems.org/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

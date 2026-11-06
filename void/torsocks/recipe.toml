@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'torsocks'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+[package]
+name = "torsocks"
+version = "2.5.0"
+archive = "https://gitlab.torproject.org/tpo/core/torsocks/-/archive/v2.5.0/torsocks-v2.5.0.tar.bz2"
+sha256 = "31a917328b221e955230b7663abfbc50d3a9b445a68cb0313c11cf884f8cb41f"
+strip_components = 1
+description = "Transparent socks proxy for use with tor"
+homepage = "https://gitlab.torproject.org/tpo/core/torsocks"
+license = "GPL-2.0-only"
+deps = ["tor"]
+patches = ["patches/implicit-function-decl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

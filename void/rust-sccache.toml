@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rust-sccache'. Review before relying on it.
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "rust-sccache"
+version = "0.19.0"
+archive = "https://static.crates.io/crates/sccache/sccache-0.19.0.crate"
+sha256 = "2c73f2a91ac28f4dd75250a693ae62eec64ab0f932df54c7c4a652853aa0dbe6"
+strip_components = 1
+description = "Sccache is a ccache-like tool"
+homepage = "https://crates.io/crates/sccache"
+license = "Apache-2.0"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

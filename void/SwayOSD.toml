@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'SwayOSD'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: build_helper
+[package]
+name = "SwayOSD"
+version = "0.3.2"
+archive = "https://github.com/ErikReider/SwayOSD/archive/refs/tags/v0.3.2.tar.gz"
+sha256 = "cb7ce2d47550b71fb2ecf48cf589d8553cfe2cacd257483cd1bf73db18f9a505"
+strip_components = 1
+description = "GTK based on screen display for keyboard shortcuts"
+homepage = "https://github.com/ErikReider/SwayOSD"
+license = "GPL-3.0-only"
+deps = ["cairo", "eudev", "gdk-pixbuf", "graphene", "gtk4", "gtk4-layer-shell", "libevdev", "libinput", "pango"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib", "sassc"]

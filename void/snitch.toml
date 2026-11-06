@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'snitch'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "snitch"
+version = "0.2.2"
+archive = "https://github.com/karol-broda/snitch/archive/refs/tags/v0.2.2.tar.gz"
+sha256 = "e0bc3a0b2e4f99d51fcd46217bd863d1ab18c08462fbbf1e875862fb8909c632"
+strip_components = 1
+description = "Prettier way to inspect network connections"
+homepage = "https://github.com/karol-broda/snitch"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'nocache'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "nocache"
+version = "1.2"
+archive = "https://github.com/Feh/nocache/archive/v1.2.tar.gz"
+sha256 = "2f8c6adbc82da4477416e1eaf9d435cf52f602d07064602f433d4ba4ecad5fdd"
+strip_components = 1
+description = "Minimize filesystem caching effects"
+homepage = "https://github.com/Feh/nocache"
+license = "BSD-2-Clause"
+patches = ["patches/musl.patch"]
+
+[build]
+system = "make"

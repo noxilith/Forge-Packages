@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'cairo-dock-plugins'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: fftw, python3-setuptools
+[package]
+name = "cairo-dock-plugins"
+version = "3.6.2"
+archive = "https://github.com/Cairo-Dock/cairo-dock-plug-ins/archive/refs/tags/3.6.2.tar.gz"
+sha256 = "a93700e9633d7562f34af83b5f0a0a97b24915dd2ae908c2e627acec2e4b295e"
+strip_components = 1
+description = "Plugins for cairo-dock"
+homepage = "https://launchpad.net/cairo-dock"
+license = "GPL-2.0-or-later, GPL-3.0-or-later"
+deps = ["alsa-lib", "cairo-dock", "gnome-menus", "gvfs", "libXxf86vm", "libayatana-indicator", "libdbusmenu-glib", "libetpan", "libexif", "libical", "libxklavier", "lm_sensors", "pulseaudio", "python3-dbus", "python3-gobject", "ruby", "upower", "vala", "vte3", "wget", "zeitgeist"]
+patches = ["patches/cairo-dock-plugins-3.4.1-time_h-confict.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

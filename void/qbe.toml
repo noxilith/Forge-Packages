@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'qbe'. Review before relying on it.
+[package]
+name = "qbe"
+version = "1.2"
+archive = "https://c9x.me/compile/release/qbe-1.2.tar.xz"
+sha256 = "a6d50eb952525a234bf76ba151861f73b7a382ac952d985f2b9af1df5368225d"
+strip_components = 1
+description = "Small embeddable C compiler backend"
+homepage = "https://c9x.me/compile/"
+license = "MIT"
+
+[build]
+system = "make"

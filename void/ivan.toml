@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ivan'. Review before relying on it.
+[package]
+name = "ivan"
+version = "058"
+archive = "https://github.com/Attnam/ivan/archive/v058.tar.gz"
+sha256 = "ee2e7a4ec26f8a08fceddebbcbb03af1f42ec95be69f54a84b72e5ea4595cb59"
+strip_components = 1
+description = "Iter Vehemens ad Necem - a graphical roguelike game"
+homepage = "https://attnam.com/wiki/Main_Page"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_mixer", "libpng", "pcre"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

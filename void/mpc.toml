@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mpc'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-Sphinx
+[package]
+name = "mpc"
+version = "0.35"
+archive = "https://www.musicpd.org/download/mpc/0/mpc-0.35.tar.xz"
+sha256 = "382959c3bfa2765b5346232438650491b822a16607ff5699178aa1386e3878d4"
+strip_components = 1
+description = "Minimalist command line interface to MPD"
+homepage = "https://www.musicpd.org/clients/mpc/"
+license = "GPL-2.0-or-later"
+deps = ["check", "libmpdclient"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtest=true", "-Ddocumentation=enabled"]
+tools = ["pkg-config"]

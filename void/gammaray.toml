@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gammaray'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "gammaray"
+version = "2.11.2"
+archive = "https://github.com/KDAB/GammaRay/releases/download/v2.11.2/gammaray-2.11.2.tar.gz"
+sha256 = "bba4f21a2bc81ec8ab50dce5218c7a375b92d64253c690490a6fcb384c2ff9f3"
+strip_components = 1
+description = "Tool to poke around in a Qt-application"
+homepage = "https://github.com/KDAB/GammaRay"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "cmake"
+configure_args = ["-DGAMMARAY_INSTALL_QT_LAYOUT=true"]

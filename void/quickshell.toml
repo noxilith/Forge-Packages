@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'quickshell'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-shadertools, qt6-svg
+[package]
+name = "quickshell"
+version = "0.3.2"
+archive = "https://git.outfoxxed.me/quickshell/quickshell/archive/v0.3.2.tar.gz"
+sha256 = "f14115a73c9fff6aa6399f924b632e88c3ce2cead2657f814a7825341f35baad"
+strip_components = 1
+description = "Flexible QtQuick-based desktop shell toolkit"
+homepage = "https://quickshell.org"
+license = "LGPL-3.0-only"
+deps = ["Vulkan-Headers", "cli11", "cpptrace", "glib", "jemalloc", "libdrm", "pam", "pipewire", "polkit", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDISTRIBUTOR=Void", "-DINSTALL_QML_PREFIX=lib/qt6/qml", "-DCPPTRACE_SIGNAL_SAFE_UNWIND=0"]
+tools = ["pkg-config"]
+deps = ["wayland"]

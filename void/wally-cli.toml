@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wally-cli'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+# needs, but Forge has no recipe for yet: wally-udev-rules
+[package]
+name = "wally-cli"
+version = "2.0.1"
+archive = "https://github.com/zsa/wally-cli/archive/2.0.1-linux.tar.gz"
+sha256 = "071b1bd10e9160c441e833be3bea211ccf835c4f1792b0c6c7fc86f7aa0695d1"
+strip_components = 1
+description = "Flashing firmware for ZSA keyboards"
+homepage = "https://www.zsa.io/wally/"
+license = "MIT"
+deps = ["go-bindata", "libusb"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

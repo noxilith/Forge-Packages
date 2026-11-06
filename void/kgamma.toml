@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kgamma'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "kgamma"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kgamma-6.7.5.tar.xz"
+sha256 = "b45ad6608693034046b65bf68a3843f394f78def02c6f059bc69c5de07cace57"
+strip_components = 1
+description = "KDE gamma adjustiment app"
+homepage = "https://invent.kde.org/plasma/kgamma"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kdoctools", "libXxf86vm"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

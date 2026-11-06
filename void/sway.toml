@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'sway'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "sway"
+version = "1.12"
+archive = "https://github.com/swaywm/sway/archive/refs/tags/1.12.tar.gz"
+sha256 = "29ca7caac960d13e02d8213418d91a5422c7c23102a283ceab944c57c5e1efcf"
+strip_components = 1
+description = "Tiling Wayland compositor compatible with i3"
+homepage = "https://swaywm.org"
+license = "MIT"
+deps = ["cairo", "gdk-pixbuf", "json-c", "libcap", "libevdev", "libxkbcommon", "pango", "pcre2", "swaybg", "wlroots0.20", "xorg-server-xwayland"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwerror=false", "-Db_ndebug=false"]
+tools = ["pkg-config"]
+deps = ["scdoc", "wayland"]

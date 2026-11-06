@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libtickit'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# needs, but Forge has no recipe for yet: libtermkey
+[package]
+name = "libtickit"
+version = "0.4.6"
+archive = "https://www.leonerd.org.uk/code/libtickit/libtickit-0.4.6.tar.gz"
+sha256 = "4af827ba3aeaf591f4364c20d6e31c608e46fa6ada9ef7389ed5fba597f797b8"
+strip_components = 1
+description = "Library for building interactive full-screen terminal programs"
+homepage = "https://www.leonerd.org.uk/code/libtickit/"
+license = "MIT"
+deps = ["unibilium"]
+
+[build]
+system = "make"
+tools = ["perl", "pkg-config"]

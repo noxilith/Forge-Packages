@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'keylaunch'. Review before relying on it.
+[package]
+name = "keylaunch"
+version = "1.3.9"
+archive = "https://ftp.debian.org/debian/pool/main/k/keylaunch/keylaunch_1.3.9.tar.gz"
+sha256 = "213da77e9263e6aa7edbb1204402ef55d5daff2cd66add2cacbf84a1206da1ef"
+strip_components = 1
+description = "A small utility for binding commands to a hot key"
+homepage = "http://www.oroborus.org/?node=Download"
+license = "GPL-2.0-only"
+deps = ["libX11"]
+
+[build]
+system = "autotools"

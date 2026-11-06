@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libplist'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: python3-Cython
+[package]
+name = "libplist"
+version = "2.2.0"
+archive = "https://github.com/libimobiledevice/libplist/archive/2.2.0.tar.gz"
+sha256 = "7e654bdd5d8b96f03240227ed09057377f06ebad08e1c37d0cfa2abe6ba0cee2"
+strip_components = 1
+description = "Apple Property List library"
+homepage = "https://libimobiledevice.org"
+license = "LGPL-2.1-only"
+deps = ["glib", "libxml2"]
+patches = ["patches/cython-3.1.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

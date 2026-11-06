@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce4-dict'. Review before relying on it.
+[package]
+name = "xfce4-dict"
+version = "0.8.9"
+archive = "https://archive.xfce.org/src/apps/xfce4-dict/0.8/xfce4-dict-0.8.9.tar.xz"
+sha256 = "f1a81baad1e60496aeffc8f8ef1be6413c732b09e250d52d062d293ade001a8c"
+strip_components = 1
+description = "Dictionary plugin for the Xfce panel"
+homepage = "https://goodies.xfce.org/projects/applications/xfce4-dict"
+license = "GPL-2.0-or-later"
+deps = ["glib", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

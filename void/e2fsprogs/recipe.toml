@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'e2fsprogs'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_install_args, conf_files
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "e2fsprogs"
+version = "1.47.2"
+archive = "https://www.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v1.47.2/e2fsprogs-1.47.2.tar.xz"
+sha256 = "08242e64ca0e8194d9c1caad49762b19209a06318199b63ce74ae4ef2d74e63c"
+strip_components = 1
+description = "Ext2/3/4 Filesystem Utilities"
+homepage = "http://e2fsprogs.sourceforge.net/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["fuse"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-elf-shlibs", "--disable-fsck", "--enable-e2initrd-helper", "--disable-rpath", "--disable-uuidd", "--disable-libuuid", "--disable-libblkid", "--enable-symlink-build", "--enable-symlink-install", "--enable-relative-symlinks", "ac_cv_prog_AWK=awk", "e2fsprogs_cv_struct_st_flags=no"]
+tools = ["pkg-config"]
+deps = ["texinfo"]

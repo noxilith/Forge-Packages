@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pimsync'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "pimsync"
+version = "0.5.7"
+archive = "https://git.sr.ht/~whynothugo/pimsync/archive/v0.5.7.tar.gz"
+sha256 = "b708f44bc4b0a3b26f06512ca1aaae9a93424d3cff7798a73d3b3e29da6a3c19"
+strip_components = 1
+description = "Synchronize calendars and contacts"
+homepage = "https://pimsync.whynothugo.nl/"
+license = "EUPL-1.2"
+
+[build]
+system = "cargo"

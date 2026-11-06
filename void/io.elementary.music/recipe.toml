@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'io.elementary.music'. Review before relying on it.
+[package]
+name = "io.elementary.music"
+version = "7.0.0"
+archive = "https://github.com/elementary/music/archive/refs/tags/7.0.0.tar.gz"
+sha256 = "5bd4f4f748f922ecb5bf1e2354a3725f5e41ba73b72b016f189f45a85fb29df7"
+strip_components = 1
+description = "Music player and library designed for elementary OS"
+homepage = "https://github.com/elementary/music"
+license = "GPL-3.0-or-later"
+deps = ["granite7", "gst-plugins-base1", "gtk4", "io.elementary.icons", "io.elementary.stylesheet"]
+patches = ["patches/hardcode-theme.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

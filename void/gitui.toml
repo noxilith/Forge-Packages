@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gitui'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "gitui"
+version = "0.28.1"
+archive = "https://github.com/gitui-org/gitui/archive/v0.28.1.tar.gz"
+sha256 = "0400cbf59605490b5fb8779f9af41fa4d7a1bb748093ca0e13156a5dff31c7aa"
+strip_components = 1
+description = "Blazing fast terminal-ui for git"
+homepage = "https://github.com/gitui-org/gitui"
+license = "MIT"
+deps = ["libgit2-1.9", "oniguruma", "openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features", "ghemoji,regex-onig"]
+tools = ["pkg-config"]

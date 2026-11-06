@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kjs'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kjs"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/portingAids/kjs-5.116.0.tar.xz"
+sha256 = "9fb4f33e31d5b31eb6449311c1c61acaa968d42419252c0ab9dccb1f5fd9e1b7"
+strip_components = 1
+description = "KDE Javascript engine"
+homepage = "https://invent.kde.org/frameworks/kjs"
+license = "LGPL-2.0-or-later"
+deps = ["kdoctools", "pcre"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["extra-cmake-modules", "kcoreaddons"]

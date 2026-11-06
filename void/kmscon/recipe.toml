@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'kmscon'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: docbook-xsl, mesa, ncurses
+[package]
+name = "kmscon"
+version = "10.0.4"
+archive = "https://github.com/kmscon/kmscon/archive/refs/tags/v10.0.4.tar.gz"
+sha256 = "6918c748c26e9c8cfe81783400be3732792a73e532d6235f40c4b332ca4fde0b"
+strip_components = 1
+description = "Linux KMS/DRM based virtual Console Emulator"
+homepage = "https://github.com/kmscon/kmscon"
+license = "MIT"
+deps = ["eudev", "libdrm", "libtsm", "libxkbcommon", "pango", "xkeyboard-config"]
+patches = ["patches/fix-build.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwerror=false", "-Ddocs=enabled"]
+tools = ["pkg-config"]
+deps = ["libxslt", "zlib"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libnl3'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: conf_files
+[package]
+name = "libnl3"
+version = "3.12.0"
+archive = "https://github.com/thom311/libnl/releases/download/libnl3_12_0/libnl-3.12.0.tar.gz"
+sha256 = "fc51ca7196f1a3f5fdf6ffd3864b50f4f9c02333be28be4eeca057e103c0dd18"
+strip_components = 1
+description = "Netlink Protocol Library Suite"
+homepage = "https://github.com/thom311/libnl"
+license = "LGPL-2.1-only"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["flex", "pkg-config"]

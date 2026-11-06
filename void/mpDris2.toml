@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mpDris2'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: intltool, python3-mpd2, python3-mutagen
+[package]
+name = "mpDris2"
+version = "0.9.1"
+archive = "https://github.com/eonpatapon/mpDris2/archive/0.9.1.tar.gz"
+sha256 = "d0f0467841e7866310cff44a1063334a9c776a64fd594815d926670b765fbee6"
+strip_components = 1
+description = "Provides MPRIS 2 support to mpd (Music Player Daemon)"
+homepage = "https://github.com/eonpatapon/mpDris2"
+license = "GPL-3.0-only"
+deps = ["python3-dbus", "python3-gobject"]
+
+[build]
+system = "autotools"
+deps = ["gettext"]

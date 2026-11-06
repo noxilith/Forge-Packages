@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'SDL3_image'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libavif, libwebp
+[package]
+name = "SDL3_image"
+version = "3.4.4"
+archive = "https://github.com/libsdl-org/SDL_image/releases/download/release-3.4.4/SDL3_image-3.4.4.tar.gz"
+sha256 = "29751304a13d25ac513f24305fa25b06a6edd9607718c90129b8350d35fc5573"
+strip_components = 1
+description = "Load images as SDL surfaces (SDL 3.x)"
+homepage = "https://github.com/libsdl-org/SDL_image"
+license = "Zlib"
+deps = ["SDL3", "libjpeg-turbo", "libpng", "tiff", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

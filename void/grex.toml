@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'grex'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "grex"
+version = "1.4.6"
+archive = "https://github.com/pemistahl/grex/archive/v1.4.6.tar.gz"
+sha256 = "2ab9cb4c3d921711f23ea33a9e60dc11e9eaab450b16d1f2247bea2276822433"
+strip_components = 1
+description = "Tool for generating regular expressions from user-provided test cases"
+homepage = "https://github.com/pemistahl/grex"
+license = "Apache-2.0"
+
+[build]
+system = "cargo"

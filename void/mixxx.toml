@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mixxx'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, opusfile, portaudio, qt6-qt5compat, qt6-shadertools, qt6-svg, qt6-tools
+[package]
+name = "mixxx"
+version = "2.5.6"
+archive = "https://github.com/mixxxdj/mixxx/archive/2.5.6.tar.gz"
+sha256 = "9cfc9025d50d2511767ee52a07b8854f75c581f0585197d043bc219fcf9f9050"
+strip_components = 1
+description = "Open source digital DJing software that allows mixing music"
+homepage = "https://www.mixxx.org"
+license = "GPL-2.0-or-later"
+deps = ["benchmark", "chromaprint", "faad2", "flac", "glib", "glu", "gperftools", "gsl", "gtest", "guidelines-support-library", "hidapi", "lame", "libebur128", "libid3tag", "libkeyfinder", "libmad", "libmodplug", "libmp4v2", "libogg", "libshout-idjc", "libsndfile", "libusb", "libvorbis", "lilv", "lv2", "openssl", "portmidi", "protobuf", "qt6-base", "qt6-declarative", "qtkeychain-qt6", "rubberband", "soundtouch", "taglib", "upower", "wavpack"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release", "-DENGINEPRIME=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "mold"]

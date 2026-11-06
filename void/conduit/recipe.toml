@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'conduit'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: llvm, sqlite, zstd
+[package]
+name = "conduit"
+version = "0.10.15"
+archive = "https://gitlab.com/famedly/conduit/-/archive/v0.10.15/conduit-v0.10.15.tar.gz"
+sha256 = "08d3ce1fe57fcef3aaf19559e84855104db995fab94271a1ec083d022b78487a"
+strip_components = 1
+description = "Simple, fast and reliable chat server powered by Matrix"
+homepage = "https://conduit.rs/"
+license = "Apache-2.0"
+patches = ["patches/config.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

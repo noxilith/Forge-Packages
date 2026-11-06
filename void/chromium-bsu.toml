@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'chromium-bsu'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL2_image
+[package]
+name = "chromium-bsu"
+version = "0.9.16.1"
+archive = "https://downloads.sourceforge.net/sourceforge/chromium-bsu/Chromium%20B.S.U.%20source%20code/chromium-bsu-0.9.16.1.tar.gz"
+sha256 = "a1c141a34d19a59607ae81166a19864eb8c84cf86b155462fed31a6d56e1624a"
+strip_components = 1
+description = "Fast paced, arcade-style, top-scrolling space shooter"
+homepage = "http://chromium-bsu.sourceforge.net"
+license = "chromium-bsu"
+deps = ["desktop-file-utils", "fontconfig", "freealut", "ftgl", "libICE", "libXmu", "libopenal"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-openal", "--disable-sdlmixer", "--disable-glpng"]
+tools = ["pkg-config"]
+deps = ["gettext"]

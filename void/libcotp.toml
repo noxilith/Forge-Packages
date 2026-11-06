@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libcotp'. Review before relying on it.
+[package]
+name = "libcotp"
+version = "4.0.1"
+archive = "https://github.com/paolostivanin/libcotp/archive/refs/tags/v4.0.1.tar.gz"
+sha256 = "f8c843004d18880eb41417853fcfc3855f6197e7a32dcd87d23a6609cf0a116a"
+strip_components = 1
+description = "Library for generating TOTP and HOTP"
+homepage = "https://github.com/paolostivanin/libcotp"
+license = "Apache-2.0"
+deps = ["libgcrypt"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

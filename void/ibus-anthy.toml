@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ibus-anthy'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+[package]
+name = "ibus-anthy"
+version = "1.5.16"
+archive = "https://github.com/ibus/ibus-anthy/releases/download/1.5.16/ibus-anthy-1.5.16.tar.gz"
+sha256 = "15522214b58ad884acc9d9b1da13f15db7dcd76c3b18a88509046e5ec613d1ae"
+strip_components = 1
+description = "Japanese input method Anthy IMEngine for IBus Framework"
+homepage = "https://github.com/fujiwarat/ibus-anthy/wiki"
+license = "LGPL-2.1-or-later"
+deps = ["anthy-unicode", "ibus", "python3-gobject"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-python=python3", "--with-layout=default"]
+tools = ["pkg-config"]
+deps = ["gettext"]

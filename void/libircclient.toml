@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libircclient'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libircclient"
+version = "1.10"
+archive = "https://downloads.sourceforge.net/sourceforge/libircclient/1.10/libircclient-1.10.tar.gz"
+sha256 = "bbb26f3af348b252c5204917a7f91cfdf172f1b6afbf4df1e561b03e20503c2d"
+strip_components = 1
+description = "IRC client library"
+homepage = "https://www.ulduzsoft.com/linux/libircclient/"
+license = "LGPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-openssl", "--enable-ipv6", "--enable-shared"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sxhkd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sxhkd"
+version = "0.6.3"
+archive = "https://github.com/baskerville/sxhkd/archive/0.6.3.tar.gz"
+sha256 = "9d7a64d73f7114a24ff93a35a2662afd9807e0df9ffbfabd24230b4872503fcb"
+strip_components = 1
+description = "Simple X HotKey Daemon"
+homepage = "https://github.com/baskerville/sxhkd"
+license = "BSD-2-Clause"
+deps = ["libxcb", "xcb-util", "xcb-util-keysyms"]
+
+[build]
+system = "make"

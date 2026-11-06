@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libtranscript'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "libtranscript"
+version = "0.3.4"
+archive = "https://os.ghalkes.nl/dist/libtranscript-0.3.4.tar.bz2"
+sha256 = "daaa09038f6f3b785b86d152014b3893910f9b9e4e430c015e41b05b34c37ea7"
+strip_components = 1
+description = "Character-set conversion library"
+homepage = "https://os.ghalkes.nl/libtranscript.html"
+license = "GPL-3.0-or-later"
+deps = ["gettext"]
+
+[build]
+system = "autotools"
+configure_args = ["LIBTOOL=./hack/libtool"]
+tools = ["pkg-config"]

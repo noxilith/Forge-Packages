@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'terminology'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "terminology"
+version = "1.13.0"
+archive = "https://download.enlightenment.org/rel/apps/terminology/terminology-1.13.0.tar.xz"
+sha256 = "16a37fecd7bbd63ec9de3ec6c0af331cee77d6dfda838a1b1573d6f298474da5"
+strip_components = 1
+description = "Enlightenment's terminal emulator"
+homepage = "https://www.enlightenment.org"
+license = "BSD-2-Clause"
+deps = ["desktop-file-utils", "efl", "xdg-utils"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

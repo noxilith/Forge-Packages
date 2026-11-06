@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gtrash'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "gtrash"
+version = "0.0.6"
+archive = "https://github.com/umlx5h/gtrash/archive/refs/tags/v0.0.6.tar.gz"
+sha256 = "66003276073d9da03cbb4347a4b161f89c81f3706012b77c3e91a154c91f3586"
+strip_components = 1
+description = "Featureful Trash CLI manager: alternative to rm and trash-cli"
+homepage = "https://github.com/umlx5h/gtrash"
+license = "MIT"
+
+[build]
+system = "go"

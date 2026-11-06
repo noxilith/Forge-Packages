@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'h2o'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "h2o"
+version = "2.2.6"
+archive = "https://github.com/h2o/h2o/archive/v2.2.6.tar.gz"
+sha256 = "f8cbc1b530d85ff098f6efc2c3fdbc5e29baffb30614caac59d5c710f7bda201"
+strip_components = 1
+description = "Optimized HTTP server with support for HTTP/1.x and HTTP/2"
+homepage = "https://h2o.examp1e.net/"
+license = "MIT"
+deps = ["libuv", "libyaml", "openssl", "zlib"]
+patches = ["patches/fix-libressl-2.7.patch", "patches/link-against-system-libyaml.patch", "patches/tests-force-TLSv1.2-on-s_client-invocations.patch", "patches/use-etc-ssl-certs.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_BUNDLED_SSL=OFF"]
+tools = ["pkg-config"]

@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'gtk4'. Review before relying on it.
+# 8 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xsl, gi-docgen, python3-docutils
+[package]
+name = "gtk4"
+version = "4.22.4"
+archive = "https://download.gnome.org/sources/gtk/4.22/gtk-4.22.4.tar.xz"
+sha256 = "51bd9f60c7d23a665a556c7364c21fb2e4e282566b3e7e092455e8f910330893"
+strip_components = 1
+description = "GIMP ToolKit (v4)"
+homepage = "https://www.gtk.org/"
+license = "LGPL-2.1-or-later"
+deps = ["at-spi2-core", "cairo", "gdk-pixbuf", "graphene", "gst-plugins-bad1", "gtk+3", "iso-codes", "libepoxy", "pango", "shared-mime-info"]
+patches = ["patches/fix-vulkan32bit.patch", "patches/remove-failing-tests.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dman-pages=true", "-Ddocumentation=true", "-Dbuild-tests=false", "-Dbuild-testsuite=false", "-Dbuild-examples=false"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "glib", "libxslt", "sassc", "shaderc"]

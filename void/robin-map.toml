@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'robin-map'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "robin-map"
+version = "1.0.1"
+archive = "https://github.com/Tessil/robin-map/archive/refs/tags/v1.0.1.tar.gz"
+sha256 = "b2ffdb623727cea852a66bddcb7fa6d938538a82b40e48294bb581fe086ef005"
+strip_components = 1
+description = "Fast hash map and hash set using robin hood hashing"
+homepage = "https://github.com/Tessil/robin-map"
+license = "MIT"
+
+[build]
+system = "cmake"

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'ldc'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_configure, post_install, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gdmd, libcxx, libffi, ncurses, zstd
+[package]
+name = "ldc"
+version = "1.42.0"
+archive = "https://github.com/ldc-developers/ldc/releases/download/v1.42.0/ldc-1.42.0-src.tar.gz"
+sha256 = "9bb0f628f869f7fc7b53c381a79742d29c17552c6f1a56b0a02aa289e65a0e3b"
+strip_components = 1
+description = "Portable D programming language compiler based on LLVM"
+homepage = "https://wiki.dlang.org/LDC"
+license = "BSD-3-Clause, BSL-1.0"
+deps = ["curl", "libedit", "llvm21", "zlib"]
+patches = ["patches/32bit.patch", "patches/arm.patch", "patches/dmd-fe-version.patch", "patches/druntime-musl-time_t.patch", "patches/link-llvm.patch", "patches/no-lit.patch", "patches/rpath.patch", "patches/std.range.patch", "patches/test-ignore-ld-library-path.patch", "patches/xldc.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=BOTH", "-DCMAKE_BUILD_TYPE=RelWithDebInfo", "-DLDC_DYNAMIC_COMPILE=OFF", "-DCOMPILE_D_MODULES_SEPARATELY=ON", "-DCOMPILE_ALL_D_FILES_AT_ONCE=OFF", "-DPHOBOS_SYSTEM_ZLIB=ON", "-DLDC_BUILD_RUNTIME=ON"]
+tools = ["perl", "pkg-config"]

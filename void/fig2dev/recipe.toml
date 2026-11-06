@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fig2dev'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ghostscript
+[package]
+name = "fig2dev"
+version = "3.2.9a"
+archive = "https://downloads.sourceforge.net/sourceforge/mcj/fig2dev-3.2.9a.tar.xz"
+sha256 = "61e185393176852f03b901b3b05b19fbc5ad8258ff142f3da6e70b1b83513326"
+strip_components = 1
+description = "Export .xfig to various output formats"
+homepage = "http://www.xfig.org/"
+license = "custom:MIT-like"
+deps = ["libXpm", "libpng"]
+patches = ["patches/CVE-2019-19555.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-transfig"]

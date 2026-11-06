@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'aqbanking'. Review before relying on it.
+# hooks not translated: pre_build, pre_configure
+# needs, but Forge has no recipe for yet: gwenhywfar
+[package]
+name = "aqbanking"
+version = "6.9.1"
+archive = "https://github.com/aqbanking/aqbanking/archive/refs/tags/6.9.1.tar.gz"
+sha256 = "673545c01d9e33d982a46e4a9d4a86795a7023b7772f62bb50579963a7675b95"
+strip_components = 1
+description = "Library for online banking and financial applications"
+homepage = "https://www.aquamaniac.de/rdm/"
+license = "GPL-2.0-only, GPL-3.0-only"
+deps = ["gmp", "xmlsec1"]
+patches = ["patches/cmake-prefix.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["tar"]

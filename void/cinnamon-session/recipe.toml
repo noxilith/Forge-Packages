@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cinnamon-session'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme, libcanberra
+[package]
+name = "cinnamon-session"
+version = "6.6.3"
+archive = "https://github.com/linuxmint/cinnamon-session/archive/6.6.3.tar.gz"
+sha256 = "ac7426dc383bbec3bd1576cb569d0837d95a87ec166a897263e0941be95feed6"
+strip_components = 1
+description = "Cinnamon session handler"
+homepage = "https://github.com/linuxmint/cinnamon-session"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["cinnamon-desktop", "dbus", "desktop-file-utils", "elogind", "gtk+3", "json-glib", "libSM", "libXtst", "upower", "xapp"]
+patches = ["patches/timeout.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "xmlto"]

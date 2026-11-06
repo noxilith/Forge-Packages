@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'flac'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "flac"
+version = "1.5.0"
+archive = "https://downloads.xiph.org/releases/flac/flac-1.5.0.tar.xz"
+sha256 = "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920"
+strip_components = 1
+description = "Free Lossless Audio Codec"
+homepage = "https://xiph.org/flac/"
+license = "BSD-3-Clause, GPL-2.0-or-later"
+deps = ["libogg"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-rpath", "--disable-doxygen-docs", "--disable-examples", "--disable-thorough-tests"]
+tools = ["pkg-config"]

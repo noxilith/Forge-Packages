@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kmix'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: libcanberra
+[package]
+name = "kmix"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kmix-26.08.1.tar.xz"
+sha256 = "e50d9b6190b07459eb16485fdd48595fa6ecbc1761920e8b667d9aeb4ade99b4"
+strip_components = 1
+description = "KDE's mixer application"
+homepage = "https://www.kde.org/applications/multimedia/kmix/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later, GFDL-1.2-only"
+deps = ["alsa-lib", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-ki18n", "kf6-knotifications", "kf6-kstatusnotifieritem", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "kf6-solid", "pulseaudio"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

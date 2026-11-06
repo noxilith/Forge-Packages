@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'obfs4proxy'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "obfs4proxy"
+version = "0.0.13"
+archive = "https://gitlab.com/yawning/obfs4/-/archive/obfs4proxy-0.0.13/obfs4-obfs4proxy-0.0.13.tar.gz"
+sha256 = "ddd9291cb7c41326f076f622118816f09148e1aac79ec440d46436e802918e84"
+strip_components = 1
+description = "Pluggable transport proxy for Tor, implementing obfs4"
+homepage = "https://gitlab.com/yawning/obfs4"
+license = "BSD-2-Clause"
+
+[build]
+system = "go"

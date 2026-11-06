@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'commoncpp2'. Review before relying on it.
+[package]
+name = "commoncpp2"
+version = "1.8.1"
+archive = "https://ftp.gnu.org/gnu/commoncpp/commoncpp2-1.8.1.tar.gz"
+sha256 = "53ced4aff74e28a1d8018eb2b4974519028db3c12471ab6dff1c873578c9af4e"
+strip_components = 1
+description = "GNU Common C++ 2"
+homepage = "http://www.gnu.org/software/commoncpp/"
+license = "GPL-3.0-or-later"
+deps = ["zlib"]
+patches = ["patches/applog.patch", "patches/ftbfs.patch"]
+
+[build]
+system = "autotools"

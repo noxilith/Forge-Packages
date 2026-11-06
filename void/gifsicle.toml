@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'gifsicle'. Review before relying on it.
+[package]
+name = "gifsicle"
+version = "1.96"
+archive = "https://www.lcdf.org/gifsicle/gifsicle-1.96.tar.gz"
+sha256 = "fd23d279681a6dfe3c15264e33f344045b3ba473da4d19f49e67a50994b077fb"
+strip_components = 1
+description = "Command-line tool for information about GIF images"
+homepage = "https://www.lcdf.org/gifsicle/"
+license = "GPL-2.0-or-later"
+deps = ["libX11"]
+
+[build]
+system = "autotools"

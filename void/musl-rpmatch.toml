@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'musl-rpmatch'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "musl-rpmatch"
+version = "1.0"
+archive = "https://github.com/pullmoll/musl-rpmatch/archive/v1.0.tar.gz"
+sha256 = "dcbd41909bd69eaeedd20f03435b165406b514465249186ff1ca68d04fd35953"
+strip_components = 1
+description = "Implementation of rpmatch(3) for musl libc"
+homepage = "https://github.com/pullmoll/musl-rpmatch"
+license = "BSD-3-Clause"
+deps = ["gettext"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--enable-static"]

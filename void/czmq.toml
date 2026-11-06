@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'czmq'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: asciidoc, util-linux-common
+[package]
+name = "czmq"
+version = "4.2.1"
+archive = "https://github.com/zeromq/czmq/archive/v4.2.1.tar.gz"
+sha256 = "83457cd32a2c2615b8d7ebcf91b198cb0d8df383a2072b96835ab250164d8a83"
+strip_components = 1
+description = "High-level C binding for ZeroMQ"
+homepage = "https://zeromq.org/"
+license = "MPL-2.0"
+deps = ["zeromq"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xmlto"]

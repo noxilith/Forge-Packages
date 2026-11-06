@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'frotz'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_target, make_install_target, CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "frotz"
+version = "2.44"
+archive = "https://github.com/DavidGriffith/frotz/archive/2.44.tar.gz"
+sha256 = "dbb5eb3bc95275dcb984c4bdbaea58bc1f1b085b20092ce6e86d9f0bf3ba858f"
+strip_components = 1
+description = "Infocom-style interactive fiction player for Unix and DOS"
+homepage = "http://frotz.sourceforge.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

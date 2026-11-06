@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'netris'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "netris"
+version = "0.1.8"
+archive = "https://gitlab.com/tslocum/netris/-/archive/v0.1.8/netris-v0.1.8.tar.gz"
+sha256 = "3638d7bfce544fde9ab1dd15376586e12513187f7c3b51baf223846cce60a33e"
+strip_components = 1
+description = "Multiplayer Tetris clone"
+homepage = "https://gitlab.com/tslocum/netris"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

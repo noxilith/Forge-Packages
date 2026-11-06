@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'file'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "file"
+version = "5.46"
+archive = "https://astron.com/pub/file/file-5.46.tar.gz"
+sha256 = "c9cc77c7c560c543135edc555af609d5619dbef011997e988ce40a3d75d86088"
+strip_components = 1
+description = "File type identification utility"
+homepage = "https://www.darwinsys.com/file/"
+license = "BSD-2-Clause"
+deps = ["zlib"]
+patches = ["patches/0002-PR-571-jschleus-Some-zip-files-are-misclassified-as-data.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static"]

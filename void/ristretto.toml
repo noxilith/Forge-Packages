@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ristretto'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "ristretto"
+version = "0.14.0"
+archive = "https://archive.xfce.org/src/apps/ristretto/0.14/ristretto-0.14.0.tar.xz"
+sha256 = "502cf1577de14b38132dc89e56884c5e10f86f6a028d8dde379a8839110fda55"
+strip_components = 1
+description = "Picture-viewer for the Xfce desktop environment"
+homepage = "https://docs.xfce.org/apps/ristretto/start"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "exo", "file", "libexif"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

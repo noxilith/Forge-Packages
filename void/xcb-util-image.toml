@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xcb-util-image'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcb-util-image"
+version = "0.4.1"
+archive = "https://xcb.freedesktop.org/dist/xcb-util-image-0.4.1.tar.xz"
+sha256 = "ccad8ee5dadb1271fd4727ad14d9bd77a64e505608766c4e98267d9aede40d3d"
+strip_components = 1
+description = "Utility libraries for XCB - XImage and XShmImage functions"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb-image"
+license = "X11"
+deps = ["xcb-util"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

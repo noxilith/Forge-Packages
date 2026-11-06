@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'guvcview'. Review before relying on it.
+# hooks not translated: post_patch, pre_configure
+# needs, but Forge has no recipe for yet: ffmpeg6, intltool, portaudio
+[package]
+name = "guvcview"
+version = "2.1.0"
+archive = "https://downloads.sourceforge.net/sourceforge/guvcview/guvcview-src-2.1.0.tar.bz2"
+sha256 = "3d93e4c9fab8d1a7a9bde1a6dbbf04d6cf9d347c134b5128b4586a1d90b63cfb"
+strip_components = 1
+description = "Simple GTK interface for capturing and viewing video from UVC devices"
+homepage = "http://guvcview.sourceforge.net/"
+license = "GPL-3.0-or-later"
+deps = ["SDL2", "desktop-file-utils", "eudev", "gsl", "gtk+3", "libusb", "pulseaudio", "v4l-utils"]
+patches = ["patches/0001-fix-building-with-musl-libc.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-debian-menu"]
+tools = ["pkg-config"]
+deps = ["glib"]

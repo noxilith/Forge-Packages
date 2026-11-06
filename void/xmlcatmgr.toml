@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xmlcatmgr'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+# settings not translated: conf_files
+[package]
+name = "xmlcatmgr"
+version = "2.2"
+archive = "https://downloads.sourceforge.net/sourceforge/xmlcatmgr/xmlcatmgr-2.2.tar.gz"
+sha256 = "ea1142b6aef40fbd624fc3e2130cf10cf081b5fa88e5229c92b8f515779d6fdc"
+strip_components = 1
+description = "XML and SGML catalog manager"
+homepage = "http://xmlcatmgr.sourceforge.net"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

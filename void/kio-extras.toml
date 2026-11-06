@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kio-extras'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: qt6-qt5compat, qt6-svg, qt6-tools, samba
+[package]
+name = "kio-extras"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kio-extras-26.08.1.tar.xz"
+sha256 = "8050c3dd33fed06a60dda8205f4e0134d3aac95f0647b1d9c05419845341397c"
+strip_components = 1
+description = "Additional KIO components"
+homepage = "https://invent.kde.org/network/kio-extras"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["KDSoap", "kdsoap-ws-discovery-client", "kf6-karchive", "kf6-kcmutils", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdnssd", "kf6-kdoctools", "kf6-kguiaddons", "kf6-ki18n", "kf6-kio", "kf6-knotifications", "kf6-ktextwidgets", "kf6-solid", "kf6-syntax-highlighting", "libimobiledevice", "libkexiv2", "libmtp", "libnfs", "libplist", "libproxy", "libssh", "libtirpc", "openexr", "phonon", "plasma-activities", "plasma-activities-stats", "qcoro-qt6", "qt6-base", "taglib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DWITH_LIBPROXY=ON"]
+tools = ["gperf", "pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

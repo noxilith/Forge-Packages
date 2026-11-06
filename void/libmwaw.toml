@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libmwaw'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, doxygen
+[package]
+name = "libmwaw"
+version = "0.3.23"
+archive = "https://downloads.sourceforge.net/sourceforge/libmwaw/libmwaw/libmwaw-0.3.23/libmwaw-0.3.23.tar.xz"
+sha256 = "ac3590f691a2904eb8c7dc8b757b8a29f125f592449e421459ae8fa928b399eb"
+strip_components = 1
+description = "Import library for legacy Mac documents"
+homepage = "https://sourceforge.net/projects/libmwaw/"
+license = "LGPL-2.1-or-later, MPL-2.0"
+deps = ["librevenge", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-werror"]
+tools = ["pkg-config"]

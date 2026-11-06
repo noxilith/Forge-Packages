@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gupnp-av'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "gupnp-av"
+version = "0.14.1"
+archive = "https://download.gnome.org/sources/gupnp-av/0.14/gupnp-av-0.14.1.tar.xz"
+sha256 = "b79ce0cc4b0c66d9c54bc22183a10e5709a0011d2af272025948efcab33a3e4f"
+strip_components = 1
+description = "Library to ease handling and implementation of UPnP A/V profiles"
+homepage = "http://gupnp.org/"
+license = "LGPL-2.1-or-later"
+deps = ["gupnp"]
+patches = ["patches/9557768121d54fdcedabe7544863515d6a813354.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

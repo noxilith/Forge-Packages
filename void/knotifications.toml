@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'knotifications'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libcanberra, libdbusmenu-qt5, qt5, qt5-speech
+[package]
+name = "knotifications"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/knotifications-5.116.0.tar.xz"
+sha256 = "485930001af56d647825cb5b99a7693b70a3270b1b270b32224a5f81dc69b44b"
+strip_components = 1
+description = "KDE Desktop notifications"
+homepage = "https://invent.kde.org/frameworks/knotifications"
+license = "LGPL-2.1-or-later"
+deps = ["kcodecs", "kconfig", "kcoreaddons", "kwindowsystem", "phonon"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=ON"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

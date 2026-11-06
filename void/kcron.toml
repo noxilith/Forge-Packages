@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kcron'. Review before relying on it.
+[package]
+name = "kcron"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kcron-26.08.1.tar.xz"
+sha256 = "9577b6bb8377a0b22e0856bc9b9cbc33567235b59f7b8d10bcfd4e7f401ba251"
+strip_components = 1
+description = "KDE Configure and schedule tasks"
+homepage = "https://userbase.kde.org/System_Settings/Task_Scheduler"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kauth", "kf6-kcmutils", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kio", "kirigami-addons", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools", "qt6-base"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qtxdg-tools'. Review before relying on it.
+[package]
+name = "qtxdg-tools"
+version = "4.4.0"
+archive = "https://github.com/lxqt/qtxdg-tools/archive/4.4.0.tar.gz"
+sha256 = "7dcbbd787606e522f874bf98305421d3c0c7d0550980ea2f4f39e718f3a28b2e"
+strip_components = 1
+description = "User tools for libqtxg"
+homepage = "http://www.lxqt.org"
+license = "LGPL-2.1-or-later"
+deps = ["libqtxdg"]
+
+[build]
+system = "cmake"
+deps = ["lxqt-build-tools", "qt6-base"]

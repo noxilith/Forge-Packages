@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cinnamon-screensaver'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper, conf_files
+# needs, but Forge has no recipe for yet: cinnamon-translations, dbus-glib, hicolor-icon-theme, python3-setproctitle
+[package]
+name = "cinnamon-screensaver"
+version = "6.6.1"
+archive = "https://github.com/linuxmint/cinnamon-screensaver/archive/6.6.1.tar.gz"
+sha256 = "d873cc22eb50db8b9339b546b9133945eee3a1458682136cb475a49252568fad"
+strip_components = 1
+description = "Cinnamon screensaver"
+homepage = "https://github.com/linuxmint/cinnamon-screensaver"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["cinnamon-desktop", "dbus", "glib", "gtk+3", "libXinerama", "libgnomekbd", "pam", "python3-gobject", "python3-xapp", "xapp", "xdotool"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

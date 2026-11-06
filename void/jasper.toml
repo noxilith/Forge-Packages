@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'jasper'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: cmake_builddir
+[package]
+name = "jasper"
+version = "4.2.9"
+archive = "https://github.com/mdadams/jasper/archive/version-4.2.9.tar.gz"
+sha256 = "b0e5af6b54c274b9670c7e32ddbf6c802d88c896062d760267695dd0aa7014ff"
+strip_components = 1
+description = "Software-based reference implementation of the JPEG-2000 codec"
+homepage = "http://www.ece.uvic.ca/~mdadams/jasper"
+license = "JasPer-2.0"
+deps = ["libjpeg-turbo"]
+
+[build]
+system = "cmake"
+configure_args = ["-DALLOW_IN_SOURCE_BUILD=ON", "-DJAS_STDC_VERSION=201112L"]

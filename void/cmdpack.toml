@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cmdpack'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "cmdpack"
+version = "1.06"
+archive = "https://github.com/chungy/cmdpack/archive/1.06.tar.gz"
+sha256 = "6ce7029c0f2b0fbc6a1e26fb3ad8003ed18836aa3ef35f148ec51cde0b703307"
+strip_components = 1
+description = "Fork of cmdpack by Neill Corlett"
+homepage = "https://github.com/chungy/cmdpack"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"

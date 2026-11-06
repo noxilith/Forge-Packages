@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ssr'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, hicolor-icon-theme, jack, qt5
+[package]
+name = "ssr"
+version = "0.4.4"
+archive = "https://github.com/MaartenBaert/ssr/archive/0.4.4.tar.gz"
+sha256 = "69fccf8df6e7285d4df5033eed8748f4eae13b407488906dcf4810a277d557b8"
+strip_components = 1
+description = "Simple Screen Recorder for programs and games"
+homepage = "http://www.maartenbaert.be/simplescreenrecorder/"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "desktop-file-utils", "glu", "libXinerama", "pulseaudio", "v4l-utils"]
+patches = ["patches/0001-Fix-build-with-ffmpeg-5.0.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_QT5=ON"]
+tools = ["pkg-config"]

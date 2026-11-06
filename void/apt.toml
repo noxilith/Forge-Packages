@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'apt'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_check
+# needs, but Forge has no recipe for yet: bzip2, db, docbook-xsl, doxygen, po4a, triehash, zstd
+[package]
+name = "apt"
+version = "3.3.2"
+archive = "https://salsa.debian.org/apt-team/apt/-/archive/3.3.2/apt-3.3.2.tar.gz"
+sha256 = "96871dbee05f41adf3a52c6c061b5dda0710486c51c6df8ffdbbc0791efe0423"
+strip_components = 1
+description = "APT package management tools"
+homepage = "https://salsa.debian.org/apt-team/apt"
+license = "GPL-2.0-or-later"
+deps = ["dpkg", "eudev", "gnutls", "gtest", "libgcrypt", "libseccomp", "lz4", "xxHash", "xz"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCURRENT_VENDOR=debian"]
+tools = ["pkg-config"]
+deps = ["libxslt", "w3m"]

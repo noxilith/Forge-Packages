@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libslirp'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libslirp"
+version = "4.9.5"
+archive = "https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v4.9.5/libslirp-v4.9.5.tar.gz"
+sha256 = "f43e68b60b580647574ec4a0e2b6c600a56281e6c39f79426510832dc810f483"
+strip_components = 1
+description = "User-mode networking library used by VMs and containers"
+homepage = "https://gitlab.freedesktop.org/slirp/libslirp"
+license = "BSD-3-Clause"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

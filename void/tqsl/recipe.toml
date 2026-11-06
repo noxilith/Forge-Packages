@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tqsl'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: lmdb, sqlite
+[package]
+name = "tqsl"
+version = "2.8.7"
+archive = "https://www.arrl.org/tqsl/tqsl-2.8.7.tar.gz"
+sha256 = "666fa402794237c06d473ebb0fa4ec0642057682204a3a73386c40bec2ef82c7"
+strip_components = 1
+description = "QSO log signing data for the ARRL Logbook of The World (LoTW)"
+homepage = "https://www.arrl.org/tqsl-download"
+license = "custom:ARRL"
+deps = ["curl", "expat", "openssl", "wxWidgets-gtk3", "zlib"]
+patches = ["patches/icon.patch"]
+
+[build]
+system = "cmake"

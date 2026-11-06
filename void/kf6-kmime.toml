@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kmime'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kmime"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kmime-6.30.0.tar.xz"
+sha256 = "2969a5ef484e98f91bf78e88c98a9d613bdd3bb86ac154ceece0557b70f373bc"
+strip_components = 1
+description = "Library for handling mail messages and newsgroup articles"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcodecs", "kf6-ki18n"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

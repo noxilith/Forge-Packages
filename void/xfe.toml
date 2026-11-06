@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfe'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fox
+[package]
+name = "xfe"
+version = "2.1.7"
+archive = "https://downloads.sourceforge.net/sourceforge/xfe/xfe-2.1.7.tar.xz"
+sha256 = "180514e5e8d9682bc372e94d642b15a89322ff39346068e2e3560f26e0696ff4"
+strip_components = 1
+description = "Lightweight file manager for X"
+homepage = "http://roland65.free.fr/xfe/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "libpng", "startup-notification", "xcb-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

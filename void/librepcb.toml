@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'librepcb'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools, unzip
+[package]
+name = "librepcb"
+version = "1.3.0"
+archive = "https://download.librepcb.org/releases/1.3.0/librepcb-1.3.0-source.zip"
+sha256 = "0c5313142ab3d689fc998ea432eb86a41d7c010e6dd5a70a633eaba0bcf75845"
+strip_components = 1
+description = "Powerful, innovative and intuitive EDA tool for everyone"
+homepage = "https://librepcb.org"
+license = "GPL-3.0-or-later"
+deps = ["glu", "occt", "openssl", "qt6-base", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_QTQUICK_TEST=OFF"]

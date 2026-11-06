@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'NetworkManager-strongswan'. Review before relying on it.
+[package]
+name = "NetworkManager-strongswan"
+version = "1.6.3"
+archive = "https://download.strongswan.org/NetworkManager/NetworkManager-strongswan-1.6.3.tar.bz2"
+sha256 = "96faaf38ac754ab22a0dc4df431c45cb747230666d66f81d12095750e2c19d9a"
+strip_components = 1
+description = "Strongswan NetworkManager plugin"
+homepage = "https://www.strongswan.org/"
+license = "GPL-2.0-or-later"
+deps = ["NetworkManager", "gtk+3", "libnma", "libsecret", "strongswan"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-more-warnings"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

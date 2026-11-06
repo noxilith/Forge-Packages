@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libpurple-skypeweb'. Review before relying on it.
+[package]
+name = "libpurple-skypeweb"
+version = "1.7"
+archive = "https://github.com/EionRobb/skype4pidgin/archive/1.7.tar.gz"
+sha256 = "e504d4c4807a45aa6ab1c62509c2f31a97952bbf2f0501428fd32a885b2ad84e"
+strip_components = 1
+description = "Skype plugin for libpurple - uses the Skype Web API"
+homepage = "https://github.com/EionRobb/skype4pidgin"
+license = "GPL-3.0-or-later"
+deps = ["json-glib", "pidgin"]
+
+[build]
+system = "make"
+subdir = "skypeweb"
+tools = ["pkg-config"]

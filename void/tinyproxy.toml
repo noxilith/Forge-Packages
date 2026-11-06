@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tinyproxy'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "tinyproxy"
+version = "1.11.3"
+archive = "https://github.com/tinyproxy/tinyproxy/releases/download/1.11.3/tinyproxy-1.11.3.tar.xz"
+sha256 = "f05644fdf1211ba13754a354bebed909b5b39371b12cce8563c46929a75bedf6"
+strip_components = 1
+description = "Small, efficient HTTP/SSL proxy daemon"
+homepage = "https://tinyproxy.github.io/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-transparent", "tinyproxy_cv_regex_broken=no"]

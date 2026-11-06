@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zathura-pdf-poppler'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "zathura-pdf-poppler"
+version = "2026.07.18"
+archive = "https://pwmt.org/projects/zathura-pdf-poppler/download/zathura-pdf-poppler-2026.07.18.tar.xz"
+sha256 = "605d3f2c2e90efbc0434bb7206f013dc8ff99d8b679c6b519e13543777635bf1"
+strip_components = 1
+description = "PDF support for zathura (using poppler)"
+homepage = "https://git.pwmt.org/pwmt/zathura-pdf-poppler/"
+license = "Zlib"
+deps = ["poppler", "zathura"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

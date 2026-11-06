@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'rest'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: ca-certificates, gi-docgen
+[package]
+name = "rest"
+version = "0.9.1"
+archive = "https://download.gnome.org/sources/rest/0.9/rest-0.9.1.tar.xz"
+sha256 = "9266a5c10ece383e193dfb7ffb07b509cc1f51521ab8dad76af96ed14212c2e3"
+strip_components = 1
+description = "RESTful library"
+homepage = "https://gitlab.gnome.org/GNOME/librest"
+license = "GPL-2.0-or-later"
+deps = ["json-glib", "libsoup3", "libxml2"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dexamples=false", "-Dsoup2=false"]
+tools = ["pkg-config"]
+deps = ["glib"]

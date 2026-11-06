@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'manpages-pt-br'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: po4a
+[package]
+name = "manpages-pt-br"
+version = "4.27.0"
+archive = "https://salsa.debian.org/manpages-l10n-team/manpages-l10n/-/archive/4.27.0/manpages-l10n-v4.27.0.tar.gz"
+sha256 = "ca64939b3ce023d328bbe93ebf7966a4bbb06cf291d8d7e8c559de5cc4d42abe"
+strip_components = 1
+description = "Translations of manpages - Brazilian Portuguese (Português Brasileiro)"
+homepage = "https://manpages-l10n-team.pages.debian.net/manpages-l10n/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-compression=none"]

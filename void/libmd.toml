@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libmd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libmd"
+version = "1.3.0"
+archive = "https://archive.hadrons.org/software/libmd/libmd-1.3.0.tar.xz"
+sha256 = "fc0f1eb6b6766470326f2c014693809190e67dba84274a6fbae9d4912d066706"
+strip_components = 1
+description = "Message Digest functions from BSD systems"
+homepage = "https://www.hadrons.org/software/libmd/"
+license = "BSD-3-Clause, BSD-2-Clause, ISC, Beerware, custom:Public Domain"
+
+[build]
+system = "autotools"

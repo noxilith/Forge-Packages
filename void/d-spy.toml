@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'd-spy'. Review before relying on it.
+[package]
+name = "d-spy"
+version = "50.0"
+archive = "https://download.gnome.org/sources/d-spy/50/d-spy-50.0.tar.xz"
+sha256 = "1bddc86d8a2cf67b4f652dc461ccd8353112f088753420037c75f5454deaad10"
+strip_components = 1
+description = "Like d-feet, but written in C and blisteringly fast"
+homepage = "https://gitlab.gnome.org/GNOME/d-spy"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "libadwaita", "libdex"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk+3"]

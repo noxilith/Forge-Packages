@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jitterentropy'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "jitterentropy"
+version = "3.4.1"
+archive = "https://www.chronox.de/jent/jitterentropy-library-3.4.1.tar.xz"
+sha256 = "802f025f766c38abf663fd5a21482b8313b6d6e2c68c36a4ffd6bc105fe975ab"
+strip_components = 1
+description = "Hardware RNG based on CPU timing jitter"
+homepage = "https://www.chronox.de/jent.html"
+license = "BSD-3-Clause, GPL-2.0-only"
+
+[build]
+system = "make"

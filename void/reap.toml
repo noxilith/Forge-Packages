@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'reap'. Review before relying on it.
+[package]
+name = "reap"
+version = "0.2"
+archive = "https://github.com/leahneukirchen/reap/archive/v0.2.tar.gz"
+sha256 = "8bbc18311230b98fea5e3d3319824ac904e1fcaff34d8faa25860fe0db70ab81"
+strip_components = 1
+description = "Unix command line queue utility"
+homepage = "https://github.com/leahneukirchen/reap"
+license = "CC0-1.0"
+
+[build]
+system = "make"

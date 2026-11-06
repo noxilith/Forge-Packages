@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'tang'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: asciidoc, socat
+[package]
+name = "tang"
+version = "16"
+archive = "https://github.com/latchset/tang/archive/v16/tang-16.tar.gz"
+sha256 = "2a618f8174b1c865e705e2de6a74bee2d1966af2f02b2b3e58b2ef06baa220cd"
+strip_components = 1
+description = "Server for binding data to network presence"
+homepage = "https://github.com/latchset/tang"
+license = "GPL-3.0-or-later"
+deps = ["jose", "llhttp"]
+
+[build]
+system = "meson"
+configure_args = ["-Duser=_tang", "-Dgroup=_tang"]
+tools = ["pkg-config"]
+deps = ["curl", "iproute2"]

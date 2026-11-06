@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'srt'. Review before relying on it.
+[package]
+name = "srt"
+version = "1.5.7"
+archive = "https://github.com/Haivision/srt/archive/refs/tags/v1.5.7.tar.gz"
+sha256 = "017cd1e437ef2073a4dd10ddf7b55e86bc3d6ebac0393d13bd22f6a57055d32b"
+strip_components = 1
+description = "Secure, Reliable, Transport"
+homepage = "https://github.com/Haivision/srt"
+license = "MPL-2.0"
+deps = ["openssl"]
+patches = ["patches/compiler.patch", "patches/dynamic-link.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_INSTALL_BINDIR=bin", "-DCMAKE_INSTALL_INCLUDEDIR=include"]
+tools = ["pkg-config"]

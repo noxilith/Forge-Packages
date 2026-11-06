@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ngircd'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+# settings not translated: conf_files
+[package]
+name = "ngircd"
+version = "27"
+archive = "https://ngircd.barton.de/pub/ngircd/ngircd-27.tar.xz"
+sha256 = "6897880319dd5e2e73c1c9019613509f88eb5b8daa5821a36fbca3d785c247b8"
+strip_components = 1
+description = "Free, portable and lightweight Internet Relay Chat server"
+homepage = "http://ngircd.barton.de/"
+license = "GPL-2.0-or-later"
+deps = ["libticonv", "openssl", "pam", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ipv6", "--with-openssl", "--without-ident", "ac_cv_func_getaddrinfo=yes", "--with-pam", "--with-iconv"]
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'akonadi-import-wizard'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "akonadi-import-wizard"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/akonadi-import-wizard-26.08.1.tar.xz"
+sha256 = "af5c26b74dce64974403bac9182c8477fbfd99369978670b5e2aee588fad4699"
+strip_components = 1
+description = "Import data from other mail clients to KMail"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kcalutils", "kf6-kauth", "kf6-kconfig", "kf6-kcontacts", "kf6-kdoctools", "mailcommon", "mailimporter", "messagelib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

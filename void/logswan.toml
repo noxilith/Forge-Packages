@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'logswan'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "logswan"
+version = "2.1.17"
+archive = "https://github.com/fcambus/logswan/archive/2.1.17.tar.gz"
+sha256 = "47e2c80024a1abf4b3423446e65a520a5002e565a5488c14dcba87a80c820a2a"
+strip_components = 1
+description = "Fast Web log analyzer using probabilistic data structures"
+homepage = "https://www.logswan.org/"
+license = "BSD-2-clause"
+deps = ["jansson", "libmaxminddb"]
+
+[build]
+system = "cmake"

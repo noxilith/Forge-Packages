@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'tmux'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: libutempter, ncurses
+[package]
+name = "tmux"
+version = "3.8"
+archive = "https://github.com/tmux/tmux/releases/download/3.8/tmux-3.8.tar.gz"
+sha256 = "e79c699c7e949dccd0a4a125e17b8d1261e311b16979dbc8eb34542f3966d82e"
+strip_components = 1
+description = "Terminal Multiplexer"
+homepage = "https://tmux.github.io"
+license = "ISC"
+deps = ["libevent"]
+patches = ["patches/reallocarray.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-optimizations", "--enable-utempter", "--enable-sixel"]
+tools = ["pkg-config"]
+deps = ["byacc"]

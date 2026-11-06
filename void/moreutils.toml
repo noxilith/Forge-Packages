@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'moreutils'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: perl, perl-IPC-Run, perl-Time-Duration, perl-TimeDate
+[package]
+name = "moreutils"
+version = "0.70"
+archive = "https://git.joeyh.name/index.cgi/moreutils.git/snapshot/moreutils-0.70.tar.gz"
+sha256 = "f2bf46d410ba567cc8d01507e94916994e48742722e690dc498fab59f5250132"
+strip_components = 1
+description = "Unix tools that nobody thought to write, when Unix was young"
+homepage = "https://joeyh.name/code/moreutils/"
+license = "GPL-2.0-only, BSD-2-Clause"
+
+[build]
+system = "make"
+deps = ["docbook2x"]

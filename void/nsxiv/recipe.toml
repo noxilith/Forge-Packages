@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nsxiv'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_install_target, CFLAGS
+# needs, but Forge has no recipe for yet: libwebp
+[package]
+name = "nsxiv"
+version = "34"
+archive = "https://codeberg.org/nsxiv/nsxiv/archive/v34.tar.gz"
+sha256 = "b68356296130924d56abc0616756900c0fe75ac9932b9bb9bed3a349915b7320"
+strip_components = 1
+description = "Neo (or New or Not) Simple (or Small or Suckless) X Image Viewer"
+homepage = "https://codeberg.org/nsxiv/nsxiv"
+license = "GPL-2.0-or-later"
+deps = ["fontconfig", "freetype", "giflib", "imlib2", "libX11", "libXft", "libexif"]
+patches = ["patches/no-rebuild-options.patch"]
+
+[build]
+system = "make"

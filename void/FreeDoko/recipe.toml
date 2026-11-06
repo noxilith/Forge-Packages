@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'FreeDoko'. Review before relying on it.
+# settings not translated: make_build_target
+# needs, but Forge has no recipe for yet: asciidoc, unzip
+[package]
+name = "FreeDoko"
+version = "0.7.18"
+archive = "https://downloads.sourceforge.net/sourceforge/free-doko/FreeDoko_0.7.18.src.zip"
+sha256 = "5b9ca3ad915f36dba17a4bd22b3d7d68ac2526cf125d045a819aa8d4a2cceb4c"
+strip_components = 1
+description = "Free implementation of the card game Doppelkopf"
+homepage = "http://free-doko.sourceforge.net/en/FreeDoko.html"
+license = "GPL-2.0-or-later"
+deps = ["freealut", "gtkmm"]
+patches = ["patches/makefiles.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["dos2unix", "gettext", "rsync", "which"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'streampager'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "streampager"
+version = "0.10.3"
+archive = "https://github.com/markbt/streampager/archive/refs/tags/v0.10.3.tar.gz"
+sha256 = "e0179cd03bbaad09acefa08cc74c99668fee1b448d0ef5a11b847f10e1b8e15c"
+strip_components = 1
+description = "Pager for command output or large files"
+homepage = "https://github.com/markbt/streampager"
+license = "MIT"
+
+[build]
+system = "cargo"

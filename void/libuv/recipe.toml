@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libuv'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: LDFLAGS
+[package]
+name = "libuv"
+version = "1.52.1"
+archive = "https://dist.libuv.org/dist/v1.52.1/libuv-v1.52.1-dist.tar.gz"
+sha256 = "c5f14915e2fa7b83b6111c3bc477920559499e10d95f852707420c8725b82d6a"
+strip_components = 1
+description = "Multi-platform support library with a focus on asynchronous I/O"
+homepage = "https://libuv.org/"
+license = "MIT, BSD-2-Clause, ISC"
+patches = ["patches/disable-fs-chown.patch", "patches/disable-setuid-test.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

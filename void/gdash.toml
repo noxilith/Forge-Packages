@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gdash'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build
+# needs, but Forge has no recipe for yet: SDL2_image
+[package]
+name = "gdash"
+version = "20180129"
+archive = "https://bitbucket.org/czirkoszoltan/gdash/downloads/gdash-20180129unstable.tar.gz"
+sha256 = "7d4bc188d26b6cfce2c94c17dada22282a7108482c5a0f87d37f6ac6db76298e"
+strip_components = 1
+description = "Boulder Dash clone close to the original"
+homepage = "https://bitbucket.org/czirkoszoltan/gdash"
+license = "MIT"
+deps = ["SDL2_mixer", "glu", "gtk+"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["SDL2", "gettext", "glib"]

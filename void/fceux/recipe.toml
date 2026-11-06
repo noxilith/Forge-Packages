@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fceux'. Review before relying on it.
+# needs, but Forge has no recipe for yet: lua51, qt5
+[package]
+name = "fceux"
+version = "2.6.6"
+archive = "https://github.com/TASVideos/fceux/archive/v2.6.6.tar.gz"
+sha256 = "0320241d45c6d609f7aeb6f85fdd9019552047206b0864a7f9fddff15b004daa"
+strip_components = 1
+description = "All in one NES/Famicom Emulator"
+homepage = "https://fceux.com/web/home.html"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "minizip", "zlib"]
+patches = ["patches/2.6.6-timestamp-nonx86.patch", "patches/isascii-musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

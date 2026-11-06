@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mongo-c-driver'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "mongo-c-driver"
+version = "2.5.7"
+archive = "https://github.com/mongodb/mongo-c-driver/archive/2.5.7.tar.gz"
+sha256 = "fdf10d5af224c18711eb3ec9d5a33056ae185901517cca17b631acf0a877a2fd"
+strip_components = 1
+description = "High-performance MongoDB driver for C"
+homepage = "https://mongoc.org"
+license = "Apache-2.0"
+deps = ["openssl"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTS=OFF"]
+tools = ["pkg-config"]

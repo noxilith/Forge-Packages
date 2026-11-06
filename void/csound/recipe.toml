@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'csound'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: LuaJIT, boost, fluidsynth, pd, portaudio, tk
+[package]
+name = "csound"
+version = "6.18.1"
+archive = "https://github.com/csound/csound/archive/6.18.1.tar.gz"
+sha256 = "b84be8237fa9258ef60fdddf36fae27b20c11665811bf5ed12540da9a9a4414e"
+strip_components = 1
+description = "Programming language for sound rendering and signal processing"
+homepage = "https://csound.com/"
+license = "LGPL-2.1-or-later"
+deps = ["curl", "fltk", "liblo", "libsndfile", "portmidi", "stk"]
+patches = ["patches/arm.patch", "patches/gcc14.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPORTAUDIO_V19=yes"]
+tools = ["flex"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kmailtransport'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "kmailtransport"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kmailtransport-26.08.1.tar.xz"
+sha256 = "2a227c011a54d38b61c33e6a7d0d7b499174ed35ed4f1dd5b05ab38afda47614"
+strip_components = 1
+description = "Mail Transport Service"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "kf6-kconfigwidgets", "kf6-kio", "ksmtp", "libkgapi", "qtkeychain-qt6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

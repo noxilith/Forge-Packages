@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ibus-m17n'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: m17n-db
+[package]
+name = "ibus-m17n"
+version = "1.4.5"
+archive = "https://github.com/ibus/ibus-m17n/releases/download/1.4.5/ibus-m17n-1.4.5.tar.gz"
+sha256 = "3aeb59fe13ab64516f7a39462d78812952b480c5ee885aa2ab45e8ff52ff1a8c"
+strip_components = 1
+description = "M17N engine for IBus"
+homepage = "https://github.com/ibus/ibus-m17n"
+license = "GPL-2.0-or-later"
+deps = ["gettext", "ibus", "m17n-lib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["which", "xz"]

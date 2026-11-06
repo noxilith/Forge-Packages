@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'joe'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "joe"
+version = "4.8"
+archive = "https://downloads.sourceforge.net/sourceforge/joe-editor/JOE%20sources/joe-4.8/joe-4.8.tar.gz"
+sha256 = "6995b28ee20dcdbbcb5a45a4c110642dc96d67748aea27450c74cdb4dd07cc20"
+strip_components = 1
+description = "World-famous Wordstar like text editor"
+homepage = "http://joe-editor.sourceforge.net/"
+license = "GPL-2.0-or-later"
+patches = ["patches/fix-musl-stdin.patch"]
+
+[build]
+system = "autotools"

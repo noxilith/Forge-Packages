@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'bftpd'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_build_args, make_dirs, conf_files
+[package]
+name = "bftpd"
+version = "6.1"
+archive = "https://downloads.sourceforge.net/sourceforge/bftpd/bftpd-6.1.tar.gz"
+sha256 = "9721d0614e1a5d0fe6b80c9a8a04ada8efd42cbdfddd239e95a8059ae283aa6f"
+strip_components = 1
+description = "Simple FTP server"
+homepage = "https://bftpd.sourceforge.net/"
+license = "GPL-2.0-only"
+deps = ["zlib"]
+patches = ["patches/paths.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-libz"]

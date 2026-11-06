@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'uim'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper, CFLAGS
+# needs, but Forge has no recipe for yet: intltool, ncurses, qt5, qt6-tools
+[package]
+name = "uim"
+version = "1.9.6"
+archive = "https://github.com/uim/uim/releases/download/1.9.6/uim-1.9.6.tar.bz2"
+sha256 = "67f0e5fa4292a533edc6f98b842df60c531a89cf82d0336a4e1ab72202ab8c83"
+strip_components = 1
+description = "Multilingual input method library and environment"
+homepage = "https://github.com/uim/uim/wiki"
+license = "BSD-3-Clause"
+deps = ["anthy-unicode", "gtk+", "gtk+3", "libgcroots", "qt6-base"]
+patches = ["patches/fix-segfault.patch", "patches/no-kde5.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-pref", "--enable-fep", "--with-gtk2", "--with-gtk3", "--with-libgcroots=installed", "--with-qt5", "--with-qt5-immodule", "--with-x", "--with-anthy-utf8", "--with-skk", "--with-qt6", "--with-qt6-immodule"]
+tools = ["pkg-config"]

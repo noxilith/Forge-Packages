@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'licensechecker'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "licensechecker"
+version = "1.3.1"
+archive = "https://github.com/boyter/lc/archive/v1.3.1.tar.gz"
+sha256 = "e33ec5451b346e02919a55f22e4f44d854eb395d6a5622d2cca70129f1d5a7e6"
+strip_components = 1
+description = "Identify software licenses used on a source tree"
+homepage = "https://github.com/boyter/lc"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'netns'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "netns"
+version = "0.5.3"
+archive = "https://github.com/genuinetools/netns/archive/v0.5.3.tar.gz"
+sha256 = "3a55e96e71067989902b65a6de74f1ebbb63ea3f6fc85184523e8d289b0eb35d"
+strip_components = 1
+description = "Runc hook for setting up default bridge networking for containers"
+homepage = "https://github.com/genuinetools/netns"
+license = "MIT"
+
+[build]
+system = "go"

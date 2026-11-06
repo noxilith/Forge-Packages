@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libiptcdata'. Review before relying on it.
+[package]
+name = "libiptcdata"
+version = "1.0.4"
+archive = "https://downloads.sourceforge.net/sourceforge/libiptcdata/libiptcdata-1.0.4.tar.gz"
+sha256 = "79f63b8ce71ee45cefd34efbb66e39a22101443f4060809b8fc29c5eebdcee0e"
+strip_components = 1
+description = "Library for manipulating the IPTC metadata"
+homepage = "http://libiptcdata.sourceforge.net/"
+license = "LGPL-2.1"
+
+[build]
+system = "autotools"

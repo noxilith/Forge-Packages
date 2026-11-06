@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'aqemu'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "aqemu"
+version = "0.9.4"
+archive = "https://github.com/TBK/aqemu/archive/v0.9.4.tar.gz"
+sha256 = "576ae78de936518a1de057355ffc192b59e42be934f0111122b2c5fcafe318a7"
+strip_components = 1
+description = "Qt5 GUI to QEMU and KVM emulators"
+homepage = "http://aqemu.sourceforge.net"
+license = "GPL-2.0-only"
+deps = ["desktop-file-utils", "qemu"]
+patches = ["patches/stdexcept.patch", "patches/widgets.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITHOUT_EMBEDDED_DISPLAY=1"]

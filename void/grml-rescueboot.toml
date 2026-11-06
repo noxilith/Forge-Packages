@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'grml-rescueboot'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: grub
+[package]
+name = "grml-rescueboot"
+version = "0.7.0"
+archive = "https://github.com/grml/grml-rescueboot/archive/v0.7.0.tar.gz"
+sha256 = "f0b00e3c3d88577f3fe5a5926488029b8cbf6f9cae0e65bf89dc1094314264c0"
+strip_components = 1
+description = "Grub rules to find and boot Grml ISO images"
+homepage = "http://wiki.grml.org/doku.php?id=rescueboot"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"
+deps = ["xmltoman"]

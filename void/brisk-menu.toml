@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'brisk-menu'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "brisk-menu"
+version = "0.6.2"
+archive = "https://github.com/getsolus/brisk-menu/releases/download/v0.6.2/brisk-menu-v0.6.2.tar.xz"
+sha256 = "5a87f4dcf7365e81a571128bf0b8199eb06a6fcd7e15ec7739be0ccff1326488"
+strip_components = 1
+description = "Modern, efficient menu for the MATE DE"
+homepage = "https://github.com/getsolus/brisk-menu"
+license = "GPL-2.0-only, CC-BY-SA-4.0"
+deps = ["gtk+3", "libnotify", "mate-menus", "mate-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

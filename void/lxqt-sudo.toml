@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-sudo'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-sudo"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-sudo/archive/2.4.0.tar.gz"
+sha256 = "f7ff3a68fe83efb9a236ea16e23b48408d988ced7f2b8fb727439935ec10c6b4"
+strip_components = 1
+description = "LXQt GUI frontend for sudo"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["liblxqt", "sudo"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "qt6-base"]

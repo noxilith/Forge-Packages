@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wallpaperd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wallpaperd"
+version = "0.2.1"
+archive = "https://web.archive.org/web/20150803033301/https://projects.pekdon.net/projects/wallpaperd/files/wallpaperd-0.2.1.tar.gz"
+sha256 = "0fea5c40e8daa8ab9bef9277b65843db0c5fbf484a8a665787e8c67f0e0d4114"
+strip_components = 1
+description = "A small application that takes care of setting the background image on different workspaces"
+homepage = "https://web.archive.org/web/20150803033301/https://projects.pekdon.net/projects/wallpaperd"
+license = "MIT"
+deps = ["imlib2", "libICE", "libXrandr", "libXrender"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

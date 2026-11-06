@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'py-spy'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: build_helper
+[package]
+name = "py-spy"
+version = "0.4.0"
+archive = "https://github.com/benfred/py-spy/archive/refs/tags/v0.4.0.tar.gz"
+sha256 = "13a5c4b949947425670eedac05b6dd27edbc736b75f1587899efca1a7ef79ac3"
+strip_components = 1
+description = "Sampling profiler for Python programs"
+homepage = "https://github.com/benfred/py-spy"
+license = "MIT"
+deps = ["libunwind"]
+
+[build]
+system = "cargo"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bzflag'. Review before relying on it.
+# needs, but Forge has no recipe for yet: glew, ncurses
+[package]
+name = "bzflag"
+version = "2.4.30"
+archive = "https://download.bzflag.org/bzflag/source/2.4.30/bzflag-2.4.30.tar.bz2"
+sha256 = "bb78b750e7bce7aa7c11bd35906bb08a49acc7c50bf29629af380eecd153894d"
+strip_components = 1
+description = "3D networked multi-player tank battle game"
+homepage = "https://www.bzflag.org"
+license = "LGPL-2.1-only, MPL-2.0"
+deps = ["SDL2", "c-ares", "curl", "zlib"]
+patches = ["patches/bzfs-musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

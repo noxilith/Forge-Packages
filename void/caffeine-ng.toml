@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'caffeine-ng'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, python3-click, python3-ewmh, python3-pulsectl, python3-setproctitle
+[package]
+name = "caffeine-ng"
+version = "4.3.2"
+archive = "https://codeberg.org/WhyNotHugo/caffeine-ng/archive/v4.3.2.tar.gz"
+sha256 = "2b3bb3795f53b991a35db085c6468594c832addbec65fd2e1e23796eee6e05ce"
+strip_components = 1
+description = "Temporarily inhibits the screensaver and sleep mode"
+homepage = "https://codeberg.org/WhyNotHugo/caffeine-ng"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "libayatana-appindicator", "libnotify", "pulseaudio", "python3-dbus", "python3-gobject", "xdg-utils"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "scdoc"]

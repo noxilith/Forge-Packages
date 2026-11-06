@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pulseaudio-qt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "pulseaudio-qt"
+version = "1.8.1"
+archive = "https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-1.8.1.tar.xz"
+sha256 = "79619c55b94808aa7d307fb234ad39a1096d088f21f806be0e788be79a76b3c9"
+strip_components = 1
+description = "Pulseaudio bindings for Qt"
+homepage = "https://invent.kde.org/libraries/pulseaudio-qt"
+license = "LGPL-2.1-or-later"
+deps = ["pulseaudio", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_WITH_QT6=ON"]
+tools = ["pkg-config"]
+deps = ["AppStream", "extra-cmake-modules", "qt6-base"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nspr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "nspr"
+version = "4.40"
+archive = "https://ftp.mozilla.org/pub/nspr/releases/v4.40/src/nspr-4.40.tar.gz"
+sha256 = "c0c1884c627f3db7a783f7c7314c695226b2043696791d15519e7e0578c19bdc"
+strip_components = 1
+description = "NetScape Portable Runtime"
+homepage = "http://www.mozilla.org/projects/nspr/"
+license = "MPL-2.0"
+deps = ["zlib"]
+patches = ["patches/musl-large-off_t.patch", "patches/ppc64-default-stack-size.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-optimize", "--enable-debug", "--enable-ipv6"]
+subdir = "nspr"

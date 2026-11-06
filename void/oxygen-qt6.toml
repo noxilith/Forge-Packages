@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'oxygen-qt6'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "oxygen-qt6"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/oxygen-6.7.5.tar.xz"
+sha256 = "ffa4b969197f6e09a6ee4f468925e67223666d761ee9801a8ea612e09b756037"
+strip_components = 1
+description = "Oxygen visual style for the Plasma Desktop"
+homepage = "https://invent.kde.org/plasma/oxygen"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["kf6-frameworkintegration", "kf6-kcmutils", "kf6-kcompletion", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdecoration", "kf6-kguiaddons", "kf6-ki18n", "kf6-kirigami", "kf6-kservice", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "libplasma", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DBUILD_QT5=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage"]

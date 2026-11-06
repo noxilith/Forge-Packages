@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'plasma-nano'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-svg
+[package]
+name = "plasma-nano"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-nano-6.7.5.tar.xz"
+sha256 = "9a5356f6526daec0873c8dd35d98d88122c2bc7739eb69fb9585146a6772f202"
+strip_components = 1
+description = "Minimal Plasma shell for embedded devices"
+homepage = "https://invent.kde.org/plasma/plasma-nano"
+license = "GPL-2.0-or-later AND LGPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-ki18n", "kf6-kirigami", "kf6-kitemmodels", "kf6-kservice", "kf6-kwayland", "kf6-kwindowsystem", "libplasma", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pistol'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+# needs, but Forge has no recipe for yet: ruby-asciidoctor
+[package]
+name = "pistol"
+version = "0.5.3"
+archive = "https://github.com/doronbehar/pistol/archive/v0.5.3.tar.gz"
+sha256 = "4a0bd18e5eb7489497a7af9d182abe5e4ec3a93064060b03d6702bc69adde146"
+strip_components = 1
+description = "File previewer for command line file managers"
+homepage = "https://github.com/doronbehar/pistol"
+license = "MIT"
+deps = ["file"]
+
+[build]
+system = "go"

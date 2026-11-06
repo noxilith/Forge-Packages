@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'clevis'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "clevis"
+version = "23"
+archive = "https://github.com/latchset/clevis/archive/v23/clevis-23.tar.gz"
+sha256 = "a8a09f148d54d91aa0d21c5fa508dd1446c2a200be7679fbf6e7d19196aec164"
+strip_components = 1
+description = "Pluggable framework for automated decryption"
+homepage = "https://github.com/latchset/clevis"
+license = "GPL-3.0-or-later WITH custom:OpenSSL-Exception"
+deps = ["audit", "bash-completion", "cryptsetup", "curl", "dracut", "jansson", "jose", "libpwquality", "luksmeta", "tpm2-tools", "udisks2"]
+patches = ["patches/0001-dracut-avoid-requiring-systemd-reply-password-at-bui.patch", "patches/0002-dracut-include-chmod-for-password-unlocker.patch", "patches/0003-tests-avoid-assert-in-token-to-jwe-test.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["jq", "keyutils"]

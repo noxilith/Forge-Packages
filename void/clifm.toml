@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'clifm'. Review before relying on it.
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "clifm"
+version = "1.29"
+archive = "https://github.com/leo-arch/clifm/releases/download/v1.29/clifm-1.29.tar.gz"
+sha256 = "dfdc0f339437345d9d5d8c2cb4bd43294c05821ebc8d5f0c9abfa4eec8f6c905"
+strip_components = 1
+description = "Command Line Interface File Manager"
+homepage = "https://github.com/leo-arch/clifm"
+license = "GPL-2.0-or-later"
+deps = ["acl", "file", "libcap"]
+
+[build]
+system = "make"

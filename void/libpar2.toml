@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libpar2'. Review before relying on it.
+[package]
+name = "libpar2"
+version = "0.4"
+archive = "https://launchpad.net/libpar2/trunk/0.4/+download/libpar2-0.4.tar.gz"
+sha256 = "316d6f0eb31eb896f5546171c2e86801aeffe5ae5e2decffc17f0018346796d4"
+strip_components = 1
+description = "Generate, modify, verifiy, and repair PAR and PAR2 recovery sets"
+homepage = "https://launchpad.net/libpar2"
+license = "GPL-2"
+deps = ["libsigc++"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

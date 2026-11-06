@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lutris'. Review before relying on it.
+# needs, but Forge has no recipe for yet: 7zip, libwebkit2gtk41, pciutils, python3-Pillow, python3-certifi, python3-distro, python3-evdev, python3-lxml, python3-magic, python3-requests, python3-setuptools, python3-yaml (+1)
+[package]
+name = "lutris"
+version = "0.5.22"
+archive = "https://github.com/lutris/lutris/archive/v0.5.22.tar.gz"
+sha256 = "1001b215d68c7e450b74bcf11510adb3ac60074ed46d5a160eb851bafcc14c3c"
+strip_components = 1
+description = "Open gaming platform for managing games in a unified way"
+homepage = "https://lutris.net"
+license = "GPL-3.0-or-later"
+deps = ["cabextract", "gnome-desktop", "gtk+3", "mesa-demos", "python3-dbus", "python3-gobject", "xrandr"]
+
+[build]
+system = "meson"
+deps = ["gettext"]

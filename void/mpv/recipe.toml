@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'mpv'. Review before relying on it.
+# 15 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg6, harfbuzz, hicolor-icon-theme, mesa, python3-docutils, util-linux-common
+[package]
+name = "mpv"
+version = "0.41.0"
+archive = "https://github.com/mpv-player/mpv/archive/v0.41.0.tar.gz"
+sha256 = "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
+strip_components = 1
+description = "Video player based on MPlayer/mplayer2"
+homepage = "https://mpv.io"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "libXv", "libarchive", "libass", "libbluray", "libcdio-paranoia", "libdisplay-info", "libdvdnav", "libplacebo", "libva", "rubberband", "uchardet"]
+patches = ["patches/vo-fix.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcdda=enabled", "-Ddvbin=enabled", "-Ddvdnav=enabled", "-Dlibmpv=true", "-Dcplugins=enabled"]
+tools = ["pkg-config"]

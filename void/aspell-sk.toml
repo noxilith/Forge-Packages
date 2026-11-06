@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-sk'. Review before relying on it.
+[package]
+name = "aspell-sk"
+version = "2.01.2"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/sk/aspell6-sk-2.01-2.tar.bz2"
+sha256 = "c6a80a2989c305518e0d71af1196b7484fda26fe53be4e49eec7b15b76a860a6"
+strip_components = 1
+description = "Slovak dictionary for aspell"
+homepage = "http://aspell.net/"
+license = "LGPL-2.1-only, GPL-2.0-only, MPL-1.1"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

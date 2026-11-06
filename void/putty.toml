@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'putty'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "putty"
+version = "0.84"
+archive = "https://the.earth.li/~sgtatham/putty/latest/putty-0.84.tar.gz"
+sha256 = "06057862ae198f1dbd219d0c7493080d59f606194bb5056c549e342aa01b69fe"
+strip_components = 1
+description = "Free Telnet/SSH Client"
+homepage = "https://www.chiark.greenend.org.uk/~sgtatham/putty/"
+license = "MIT"
+deps = ["gtk+3"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]

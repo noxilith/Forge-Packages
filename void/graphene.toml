@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'graphene'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "graphene"
+version = "1.10.8"
+archive = "https://download.gnome.org/sources/graphene/1.10/graphene-1.10.8.tar.xz"
+sha256 = "a37bb0e78a419dcbeaa9c7027bcff52f5ec2367c25ec859da31dfde2928f279a"
+strip_components = 1
+description = "Thin layer of types for graphic libraries"
+homepage = "https://github.com/ebassi/graphene"
+license = "MIT"
+deps = ["glib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dinstalled_tests=false"]
+tools = ["pkg-config"]

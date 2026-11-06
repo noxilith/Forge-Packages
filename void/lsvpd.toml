@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lsvpd'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: sg3_utils
+[package]
+name = "lsvpd"
+version = "1.7.10"
+archive = "https://downloads.sourceforge.net/sourceforge/linux-diag/lsvpd-1.7.10.tar.gz"
+sha256 = "de268f9a3793530af738fe4acabc95721d40c3580d5a5350a77d5d7277b98d13"
+strip_components = 1
+description = "Utility to List Device Vital Product Data (VPD)"
+homepage = "https://sourceforge.net/projects/linux-diag"
+license = "GPL-2.0-or-later"
+deps = ["iprutils", "librtas", "libvpd", "zlib"]
+
+[build]
+system = "autotools"

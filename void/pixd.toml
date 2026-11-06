@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'pixd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "pixd"
+version = "1.0.0"
+archive = "https://github.com/FireyFly/pixd/archive/v1.0.0.tar.gz"
+sha256 = "011440a8d191e40a572910b0ce7a094e9b4ee75cf972abc6d30674348edf4158"
+strip_components = 1
+description = "Colourful visualization tool for binary files"
+homepage = "https://github.com/FireyFly/pixd"
+license = "MIT"
+
+[build]
+system = "make"

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gnome-keyring'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "gnome-keyring"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gnome-keyring/48/gnome-keyring-48.0.tar.xz"
+sha256 = "f20518c920e9ea3f9c9b8b44be8c50d8d7feecd0dd5624960f77bd2ca4fbeb9d"
+strip_components = 1
+description = "GNOME password and secret manager"
+homepage = "https://wiki.gnome.org/Projects/GnomeKeyring/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["dconf", "gcr", "pam"]
+patches = ["patches/sys-select-h.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystemd=disabled", "-Dssh-agent=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxslt", "openssh"]

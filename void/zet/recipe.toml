@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'zet'. Review before relying on it.
+[package]
+name = "zet"
+version = "2.0.1"
+archive = "https://github.com/yarrow/zet/archive/refs/tags/v2.0.1.tar.gz"
+sha256 = "a6f431927c16b22516e78a9ec7864d99e2676abae3acb46101df1c287e16f267"
+strip_components = 1
+description = "CLI to find union, intersection, set difference, etc of files"
+homepage = "https://github.com/yarrow/zet"
+license = "Apache-2.0"
+patches = ["patches/7aba3b6016ede0b0a6b8aaff292bd7f6a0d7ac86.patch"]
+
+[build]
+system = "cargo"

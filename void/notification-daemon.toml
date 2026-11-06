@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'notification-daemon'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool, libcanberra
+[package]
+name = "notification-daemon"
+version = "3.20.0"
+archive = "https://download.gnome.org/sources/notification-daemon/3.20/notification-daemon-3.20.0.tar.xz"
+sha256 = "dd13768f35fd8bba9c4920b0f8269f39270e5a3cfed1a34c3b940a492286ece5"
+strip_components = 1
+description = "Shows notification messages on the desktop"
+homepage = "http://www.galago-project.org/specs/notification/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "glib", "gtk+3"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

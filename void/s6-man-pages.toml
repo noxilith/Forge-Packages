@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 's6-man-pages'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "s6-man-pages"
+version = "2.13.1.0.1"
+archive = "https://git.sr.ht/~flexibeast/s6-man-pages/archive/v2.13.1.0.1.tar.gz"
+sha256 = "e1a9e002506f4f1806d278211168b9408e83e15899f925ad68e23aca6e6c33a4"
+strip_components = 1
+description = "Ports of the HTML documentation for the s6 supervision suite to mdoc(7)"
+homepage = "https://git.sr.ht/~flexibeast/s6-man-pages"
+license = "ISC"
+
+[build]
+system = "make"

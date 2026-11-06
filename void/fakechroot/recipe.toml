@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fakechroot'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: conf_files, lib32disabled
+[package]
+name = "fakechroot"
+version = "2.20.1"
+archive = "https://github.com/dex4er/fakechroot/archive/2.20.1.tar.gz"
+sha256 = "7f9d60d0d48611969e195fadf84d05f6c74f71bbf8f41950ad8f5bf061773e18"
+strip_components = 1
+description = "Gives a fake chroot environment"
+homepage = "https://github.com/dex4er/fakechroot"
+license = "LGPL-2.1"
+patches = ["patches/glibc-2.34.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

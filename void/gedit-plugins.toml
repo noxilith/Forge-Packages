@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gedit-plugins'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gedit, itstool
+[package]
+name = "gedit-plugins"
+version = "50.0"
+archive = "https://gitlab.gnome.org/World/gedit/gedit-plugins/-/archive/50.0/gedit-plugins-50.0.tar.gz"
+sha256 = "fc9d9593509fbcf6867dc3a995c71ae4ad376279afabeddb3c7e1a6973eecfd5"
+strip_components = 1
+description = "Set of plugins for Gedit"
+homepage = "https://gitlab.gnome.org/World/gedit/gedit-plugins"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "libgedit-gtksourceview", "libpeas"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["appstream-glib", "gettext"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'stow'. Review before relying on it.
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "stow"
+version = "2.4.1"
+archive = "https://ftp.gnu.org/gnu/stow/stow-2.4.1.tar.gz"
+sha256 = "2a671e75fc207303bfe86a9a7223169c7669df0a8108ebdf1a7fe8cd2b88780b"
+strip_components = 1
+description = "GNU symlink manager"
+homepage = "https://www.gnu.org/software/stow/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["perl"]

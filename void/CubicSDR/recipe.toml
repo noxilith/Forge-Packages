@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'CubicSDR'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper, CXXFLAGS
+[package]
+name = "CubicSDR"
+version = "0.2.7"
+archive = "https://github.com/cjcliffe/CubicSDR/archive/0.2.7.tar.gz"
+sha256 = "790f851e08f1068081a8593dfd4a149c7414e7d70c1f5cafd287331df493b811"
+strip_components = 1
+description = "Cross-Platform Software-Defined Radio (SDR) Application"
+homepage = "https://cubicsdr.com"
+license = "GPL-2.0-or-later"
+deps = ["SoapySDR", "glu", "hamlib", "liquid-dsp", "wxWidgets-gtk3"]
+patches = ["patches/fix-build.patch", "patches/revert-migration-to-wx3.1.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_HAMLIB=1"]

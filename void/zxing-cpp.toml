@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zxing-cpp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: stb
+[package]
+name = "zxing-cpp"
+version = "3.1.1"
+archive = "https://github.com/zxing-cpp/zxing-cpp/releases/download/v3.1.1/zxing-cpp-3.1.1.tar.gz"
+sha256 = "c3c02c29c0b519de7bd4e25b376e606e87f0761befd1282815642a2246613d14"
+strip_components = 1
+description = "Multi-format 1D/2D barcode image processing library"
+homepage = "https://github.com/zxing-cpp/zxing-cpp/"
+license = "Apache-2.0"
+
+[build]
+system = "cmake"
+configure_args = ["-DZXING_BLACKBOX_TESTS=OFF", "-DZXING_DEPENDENCIES=LOCAL", "-DZXING_WRITERS=BOTH"]
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'filespooler'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "filespooler"
+version = "1.2.2"
+archive = "https://salsa.debian.org/jgoerzen/filespooler/-/archive/v1.2.2/filespooler-v1.2.2.tar.gz"
+sha256 = "aeb028e4f3dea0b42793d0b49d6d16fe20f3e3d1f781ce46266fa9474b2b1d44"
+strip_components = 1
+description = "Sequential, Distributed, POSIX-style job queue processing"
+homepage = "https://www.complete.org/filespooler/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libmt32emu'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libmt32emu"
+version = "2.7.0"
+archive = "https://github.com/munt/munt/archive/libmt32emu_2_7_0.tar.gz"
+sha256 = "5ede7c3d28a3bb0d9e637935b8b96484fadb409c9e5952a9e5432b3e05e5dbc1"
+strip_components = 1
+description = "Emulate Roland MT-32, CM-32L and LAPC-I synthesizer modules"
+homepage = "http://munt.sourceforge.net"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "cmake"
+subdir = "mt32emu"

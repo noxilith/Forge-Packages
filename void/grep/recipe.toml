@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'grep'. Review before relying on it.
+[package]
+name = "grep"
+version = "3.12"
+archive = "https://ftp.gnu.org/gnu/grep/grep-3.12.tar.xz"
+sha256 = "2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9"
+strip_components = 1
+description = "GNU grep utility"
+homepage = "https://www.gnu.org/software/grep/"
+license = "GPL-3.0-or-later"
+deps = ["pcre2"]
+patches = ["patches/efgrep-remove-warning.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

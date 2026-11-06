@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'openocd'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libftdi1
+[package]
+name = "openocd"
+version = "0.12.0+1"
+archive = "https://github.com/openocd-org/openocd/archive/dccf323c1f78d015f75db4cef8cdc33523e1abd6.tar.gz"
+sha256 = "52faaa5dd38d96e223d423d3426a39efa78c0f10d8f267a506528eb39a90a619"
+strip_components = 1
+description = "Open On-Chip Debugger"
+homepage = "http://openocd.org/"
+license = "GPL-2.0-or-later"
+deps = ["capstone", "hidapi", "jimtcl", "libjaylink", "libusb"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-werror", "--disable-internal-jimtcl", "--enable-amtjtagaccel", "--enable-at91rm9200", "--enable-bcm2835gpio", "--enable-buspirate", "--enable-dummy", "--enable-ep93xx", "--enable-gw16012", "--enable-jtag_vpi", "--enable-openjtag", "--enable-parport", "--enable-presto", "--enable-remote-bitbang", "--enable-sysfsgpio", "--enable-usb-blaster", "--enable-usb-blaster-2", "--enable-armjtagew", "--enable-ftdi", "--enable-jlink", "--enable-oocd_trace", "--enable-opendous", "--enable-osbdm", "--enable-rlink", "--enable-stlink", "--enable-ti-icdi", "--enable-ulink", "--enable-usbprog", "--enable-vsllink", "--enable-aice", "--enable-cmsis-dap", "--enable-cmsis-dap-v2", "--disable-internal-libjaylink"]
+tools = ["pkg-config"]
+deps = ["which"]

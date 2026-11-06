@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'liblastfm-qt5'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, qt5
+[package]
+name = "liblastfm-qt5"
+version = "1.1.0"
+archive = "https://github.com/lastfm/liblastfm/archive/1.1.0.tar.gz"
+sha256 = "f61f0daa384e081a8f2bd2f7a2148babff22696e5b72ecdac86940a10100b1c8"
+strip_components = 1
+description = "Qt5 C++ library for the Last.fm webservices"
+homepage = "https://github.com/lastfm/liblastfm"
+license = "GPL-3.0-or-later"
+deps = ["libsamplerate"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_CXX_STANDARD=14"]

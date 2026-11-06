@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tomlplusplus'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "tomlplusplus"
+version = "3.4.0"
+archive = "https://github.com/marzer/tomlplusplus/archive/refs/tags/v3.4.0.tar.gz"
+sha256 = "8517f65938a4faae9ccf8ebb36631a38c1cadfb5efa85d9a72e15b9e97d25155"
+strip_components = 1
+description = "TOML config parser and serializer for C++"
+homepage = "https://marzer.github.io/tomlplusplus/"
+license = "MIT"
+
+[build]
+system = "meson"
+deps = ["cmake-bootstrap"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'skippy-xd'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "skippy-xd"
+version = "2016.10.20"
+archive = "https://github.com/antonio-malcolm/skippy-xd/archive/v2016.10.20.tar.gz"
+sha256 = "221a27e96b3ff759a2fb0f9909063c60e0c206c87d024f49b77484f92a37e4c2"
+strip_components = 1
+description = "Expose-like full-screen task-switcher for X11"
+homepage = "https://github.com/antonio-malcolm/skippy-xd"
+license = "GPL-2.0-or-later"
+deps = ["fontconfig", "freetype", "giflib", "imlib2", "libX11", "libXcomposite", "libXdamage", "libXext", "libXfixes", "libXft", "libXinerama", "libXmu", "libXrender", "libjpeg-turbo", "libpng", "zlib"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

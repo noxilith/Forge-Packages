@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kup'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kup"
+version = "0.10.0"
+archive = "https://download.kde.org/stable/kup/kup-0.10.0.tar.xz"
+sha256 = "ac58f3f789973cac5f2b70a81683294e90f7f84fa3b399116b398bca6eff1b0a"
+strip_components = 1
+description = "Kup is created to keep backups of personal files"
+homepage = "https://apps.kde.org/kup/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kdbusaddons", "kf6-kidletime", "kf6-kio", "kf6-kxmlgui", "libgit2-1.9", "libplasma", "plasma5support", "qt6-declarative", "rsync"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage", "qt6-base"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'keynav'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "keynav"
+version = "0.0.20180821"
+archive = "https://github.com/jordansissel/keynav/archive/78f9e076a5618aba43b030fbb9344c415c30c1e5.tar.gz"
+sha256 = "def79c32ea8aec57ec65310ede962f4d5d54ef26c5adccb351a19fb5683b678f"
+strip_components = 1
+description = "Quick way to use cursor via the keyboard"
+homepage = "https://www.semicomplete.com/projects/keynav/"
+license = "BSD-3-Clause"
+deps = ["cairo", "glib", "libXinerama", "libXrandr", "xdotool"]
+patches = ["patches/fix-cursor-passthrough.patch", "patches/fix-overlapping-screens.patch"]
+
+[build]
+system = "make"
+tools = ["perl", "pkg-config"]

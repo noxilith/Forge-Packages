@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mpg123'. Review before relying on it.
+[package]
+name = "mpg123"
+version = "1.33.7"
+archive = "https://downloads.sourceforge.net/sourceforge/mpg123/mpg123-1.33.7.tar.bz2"
+sha256 = "31d0e35a4ca567ec9b5ebda6c3062bb4435d6d3eacd6ef0d95cadd7854dc03ee"
+strip_components = 1
+description = "Fast console MPEG audio decoder/player"
+homepage = "https://www.mpg123.org/"
+license = "LGPL-2.1-only"
+deps = ["alsa-lib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-optimization=0", "--with-default-audio=alsa"]
+tools = ["pkg-config"]

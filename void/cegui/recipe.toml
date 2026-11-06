@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'cegui'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_build_args, CXXFLAGS
+# needs, but Forge has no recipe for yet: SDL2_image, boost, dejavu-fonts-ttf, doxygen, lua53, silly
+[package]
+name = "cegui"
+version = "0.8.7.20190225"
+archive = "https://github.com/cegui/cegui/archive/bfc6a841de45b8e63040d33b9cccc67745337f4e.tar.gz"
+sha256 = "70156257313b81d068d6592887157dd16b91d7bc0dfdcba02a96ed371d329e64"
+strip_components = 1
+description = "Crazy Eddie's Graphical User Interface"
+homepage = "http://cegui.org.uk/"
+license = "MIT"
+deps = ["SDL2", "devil", "freetype", "fribidi", "glfw", "glm", "libglvnd", "libxml2", "minizip", "ois", "pcre"]
+patches = ["patches/cmake-4.patch", "patches/fix-ccache-rule.patch", "patches/fix-libxml2-2.12.patch", "patches/musl_execinfo.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DOpenGL_GL_PREFERENCE=GLVND", "-DCEGUI_BUILD_RENDERER_OPENGL=ON", "-DCEGUI_SAMPLES_ENABLED=OFF"]
+tools = ["perl", "pkg-config"]
+deps = ["gd", "graphviz"]

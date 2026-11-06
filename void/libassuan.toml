@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libassuan'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "libassuan"
+version = "3.0.2"
+archive = "https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-3.0.2.tar.bz2"
+sha256 = "d2931cdad266e633510f9970e1a2f346055e351bb19f9b78912475b8074c36f6"
+strip_components = 1
+description = "IPC library used by some GnuPG related software"
+homepage = "https://www.gnupg.org/related_software/libassuan"
+license = "GPL-3.0-or-later"
+deps = ["libgpg-error"]
+
+[build]
+system = "autotools"

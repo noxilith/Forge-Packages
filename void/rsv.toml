@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rsv'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: build_helper
+[package]
+name = "rsv"
+version = "1.3.3"
+archive = "https://github.com/JojiiOfficial/rsv/archive/v1.3.3.tar.gz"
+sha256 = "599c8f2db3aab8dd36a290cbe63d6489453f5e76fd432eeb85a6a96058ecfa88"
+strip_components = 1
+description = "Runit sv command rewritten in rust with nice new features"
+homepage = "https://github.com/JojiiOfficial/rsv"
+license = "GPL-3.0-only"
+
+[build]
+system = "cargo"

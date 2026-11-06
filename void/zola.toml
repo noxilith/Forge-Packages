@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'zola'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "zola"
+version = "0.23.6"
+archive = "https://github.com/getzola/zola/archive/refs/tags/v0.23.6.tar.gz"
+sha256 = "193db594222cd9c1097387ce17272cbbe672c3a894c263f6f4c436a7fedb379f"
+strip_components = 1
+description = "Fast opinionated static site generator"
+homepage = "https://github.com/getzola/zola"
+license = "MIT AND EUPL-1.2"
+deps = ["oniguruma"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

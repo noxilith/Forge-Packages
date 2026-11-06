@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tinyclipboard'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tinyclipboard"
+version = "16.01"
+archive = "https://files.guelker.eu/projects/tinyclipboard/tinyclipboard-16.01.tar.gz"
+sha256 = "a5d16f09792183963f7c35e7e27ef9a7bb476bfee230f9bc0bd65df02f5d8429"
+strip_components = 1
+description = "Cross-platform C library for accessing the clipboard"
+homepage = "https://redmine.guelker.eu/projects/tinyclipboard"
+license = "GPL-3.0-or-later"
+deps = ["libXt"]
+
+[build]
+system = "make"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'doomretro'. Review before relying on it.
+# needs, but Forge has no recipe for yet: SDL2_image
+[package]
+name = "doomretro"
+version = "5.7.2"
+archive = "https://github.com/bradharding/doomretro/archive/v5.7.2.tar.gz"
+sha256 = "cba070130496aa83dec75f860358fdaa5928606435149c47e3ecc6a36527dcbe"
+strip_components = 1
+description = "Refined DOOM source port"
+homepage = "https://www.doomretro.com"
+license = "GPL-3.0-or-later"
+deps = ["SDL2_mixer"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

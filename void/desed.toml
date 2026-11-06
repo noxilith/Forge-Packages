@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'desed'. Review before relying on it.
+# hooks not translated: post_patch
+[package]
+name = "desed"
+version = "1.2.2"
+archive = "https://github.com/SoptikHa2/desed/archive/v1.2.2.tar.gz"
+sha256 = "73c75eaa65cccde5065a947e45daf1da889c054d0f3a3590d376d7090d4f651a"
+strip_components = 1
+description = "Demystify and debug sed scripts"
+homepage = "https://github.com/SoptikHa2/desed"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

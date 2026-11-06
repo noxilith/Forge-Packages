@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ncdu'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "ncdu"
+version = "1.22"
+archive = "https://dev.yorhel.nl/download/ncdu-1.22.tar.gz"
+sha256 = "0ad6c096dc04d5120581104760c01b8f4e97d4191d6c9ef79654fa3c691a176b"
+strip_components = 1
+description = "NCurses Disk Usage utility"
+homepage = "https://dev.yorhel.nl/ncdu"
+license = "MIT"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

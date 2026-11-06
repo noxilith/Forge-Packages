@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'consul-template'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "consul-template"
+version = "0.42.1"
+archive = "https://github.com/hashicorp/consul-template/archive/v0.42.1.tar.gz"
+sha256 = "def64b66c47dd38d98e37bfa1b571584ed9ab5f98be0dce09304c68b7ac966eb"
+strip_components = 1
+description = "Template rendering, notifier, and supervisor for Consul and Vault data"
+homepage = "https://github.com/hashicorp/consul-template"
+license = "MPL-2.0"
+
+[build]
+system = "go"

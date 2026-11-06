@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'rust-bindgen'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "rust-bindgen"
+version = "0.73.2"
+archive = "https://github.com/rust-lang/rust-bindgen/archive/refs/tags/v0.73.2.tar.gz"
+sha256 = "5fc3277dd334e4bbbd7bdb8cad5d4fb87a667b2e95a2bae350a8d5424c280629"
+strip_components = 1
+description = "Tool to generate Rust FFI bindings to C (and some C++) libraries"
+homepage = "https://rust-lang.github.io/rust-bindgen/"
+license = "BSD-3-Clause"
+deps = ["llvm23"]
+
+[build]
+system = "cargo"
+configure_args = ["--bins"]

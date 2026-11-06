@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libglob'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libglob"
+version = "1.0"
+archive = "https://github.com/void-linux/libglob/archive/1.0.tar.gz"
+sha256 = "4f1b204dad065689941c64828a92441fb316c9c7539b39525fa728125da65e22"
+strip_components = 1
+description = "BSD glob(3) implementation for the musl C library"
+homepage = "https://github.com/void-linux/libglob"
+license = "BSD-3-clause"
+
+[build]
+system = "make"

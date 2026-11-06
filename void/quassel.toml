@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'quassel'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost, libdbusmenu-qt5, qt5
+[package]
+name = "quassel"
+version = "0.14.0"
+archive = "https://quassel-irc.org/pub/quassel-0.14.0.tar.bz2"
+sha256 = "bbd46ca429c1518480904c9e2b0ab3a0412fe197f3ce4879974e06ed3a0093a3"
+strip_components = 1
+description = "Modern, cross-platform, distributed graphical IRC client - standalone client"
+homepage = "https://www.quassel-irc.org"
+license = "GPL-2.0-only, GPL-3.0-only"
+deps = ["phonon", "qca-qt5", "snorenotify", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWANT_QTCLIENT=ON", "-DWANT_MONO=ON", "-DWANT_CORE=ON", "-DUSE_QT5=ON", "-DWITH_BUNDLED_ICONS=OFF", "-DENABLE_SHARED=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

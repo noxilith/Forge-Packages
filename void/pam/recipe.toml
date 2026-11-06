@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'pam'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: db, pam-base
+[package]
+name = "pam"
+version = "1.5.3"
+archive = "https://github.com/linux-pam/linux-pam/releases/download/v1.5.3/Linux-PAM-1.5.3.tar.xz"
+sha256 = "7ac4b50feee004a9fa88f1dfd2d2fa738a82896763050cd773b3c54b0a818283"
+strip_components = 1
+description = "Flexible mechanism for authenticating users"
+homepage = "https://github.com/linux-pam/linux-pam"
+license = "BSD-3-Clause"
+deps = ["flex"]
+patches = ["patches/no-examples.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-nis", "--disable-audit", "--disable-selinux", "--enable-lastlog", "--disable-regenerate-docu", "BUILD_CFLAGS=-Os", "BUILD_LDFLAGS="]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pjproject'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: libgsm, speex, speexdsp
+[package]
+name = "pjproject"
+version = "2.13"
+archive = "https://github.com/pjsip/pjproject/archive/refs/tags/2.13.tar.gz"
+sha256 = "4178bb9f586299111463fc16ea04e461adca4a73e646f8ddef61ea53dafa92d9"
+strip_components = 1
+description = "Open source SIP and media stack"
+homepage = "https://www.pjsip.org/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "libsamplerate", "libsrtp", "openssl"]
+patches = ["patches/no-third-party.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--enable-libsamplerate", "--with-external-speex", "--with-external-gsm", "--with-external-srtp", "--disable-libyuv", "--disable-libwebrtc"]

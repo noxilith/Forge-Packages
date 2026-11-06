@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lightdm-slick-greeter'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, libcanberra
+[package]
+name = "lightdm-slick-greeter"
+version = "2.2.7"
+archive = "https://github.com/linuxmint/slick-greeter/archive/refs/tags/2.2.7.tar.gz"
+sha256 = "f685da6ca9d97329b4b200077d12db0ad4f9964d4515479e6c00bba721ab0626"
+strip_components = 1
+description = "Light Display Manager GTK+ Greeter from Linux Mint"
+homepage = "https://github.com/linuxmint/slick-greeter"
+license = "GPL-3.0-only"
+deps = ["ayatana-ido", "gtk+3", "lightdm", "numlockx", "xapp"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

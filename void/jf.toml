@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'jf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "jf"
+version = "1.0.0"
+archive = "https://github.com/sayanarijit/jf/archive/refs/tags/v1.0.0.tar.gz"
+sha256 = "fa7acd5cbe06513227a7a4ac5968cf159b742d2d89f9c90416681ce1d7ad04b3"
+strip_components = 1
+description = "Safely format and print JSON objects in the commandline"
+homepage = "https://github.com/sayanarijit/jf"
+license = "MIT"
+
+[build]
+system = "cargo"

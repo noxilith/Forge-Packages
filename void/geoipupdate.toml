@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'geoipupdate'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_ldflags, go_package, go_import_path, conf_files
+# needs, but Forge has no recipe for yet: pandoc
+[package]
+name = "geoipupdate"
+version = "7.0.1"
+archive = "https://github.com/maxmind/geoipupdate/archive/refs/tags/v7.0.1.tar.gz"
+sha256 = "59c80ab737f128fc05e4ecdec4d84652182851dc8c8bea892022e3fc12db9101"
+strip_components = 1
+description = "GeoIP update client code"
+homepage = "https://github.com/maxmind/geoipupdate"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "go"
+tools = ["perl"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xorg-util-macros'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xorg-util-macros"
+version = "1.20.2"
+archive = "https://www.x.org/releases/individual/util/util-macros-1.20.2.tar.xz"
+sha256 = "9ac269eba24f672d7d7b3574e4be5f333d13f04a7712303b1821b2a51ac82e8e"
+strip_components = 1
+description = "X.org autotool macros"
+homepage = "https://gitlab.freedesktop.org/xorg/util/macros/"
+license = "MIT"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xfd"
+version = "1.1.5"
+archive = "https://www.x.org/releases/individual/app/xfd-1.1.5.tar.xz"
+sha256 = "9048aafba291e3baaab2e76fc298195ec58d82827649b9ee60af6838a1059475"
+strip_components = 1
+description = "Display all the characters in an X font"
+homepage = "https://wiki.freedesktop.org/xorg/"
+license = "MIT"
+deps = ["freetype", "libXaw", "libXft", "libxkbfile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

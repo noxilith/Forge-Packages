@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'artyfx'. Review before relying on it.
+[package]
+name = "artyfx"
+version = "1.3"
+archive = "https://github.com/openAVproductions/openAV-ArtyFX/archive/release-1.3.tar.gz"
+sha256 = "a2a8d02b47bea44d0053cd4f8c6411f68a6fe9b9e4348a4139cd9bfd70105c00"
+strip_components = 1
+description = "Plugin bundle of artistic real-time audio effects"
+homepage = "http://openavproductions.com/artyfx/"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "libsndfile", "lv2"]
+patches = ["patches/fix-avtk-cmake-sse.patch", "patches/fix-lv2-1.18.patch", "patches/respect-our-cflags.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

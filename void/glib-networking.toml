@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'glib-networking'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: ca-certificates
+[package]
+name = "glib-networking"
+version = "2.80.1"
+archive = "https://download.gnome.org/sources/glib-networking/2.80/glib-networking-2.80.1.tar.xz"
+sha256 = "b80e2874157cd55071f1b6710fa0b911d5ac5de106a9ee2a4c9c7bee61782f8e"
+strip_components = 1
+description = "Network-related giomodules for glib"
+homepage = "https://gitlab.gnome.org/GNOME/glib-networking/"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "gnutls", "gsettings-desktop-schemas", "libproxy"]
+
+[build]
+system = "meson"
+configure_args = ["-Dinstalled_tests=false", "-Dgnutls=enabled", "-Dlibproxy=enabled", "-Dgnome_proxy=enabled"]
+tools = ["pkg-config"]
+deps = ["gettext"]

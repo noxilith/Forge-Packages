@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'm17n-lib'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libthai, m17n-db
+[package]
+name = "m17n-lib"
+version = "1.8.7"
+archive = "https://download.savannah.nongnu.org/releases/m17n/m17n-lib-1.8.7.tar.gz"
+sha256 = "a72cf78e40198020aa05217b9839dd260b94d4f2dc59a5a8d60bae7b84104caa"
+strip_components = 1
+description = "Multilingual text processing library"
+homepage = "http://www.nongnu.org/m17n/"
+license = "LGPL-2.1-or-later"
+deps = ["fontconfig", "freetype", "fribidi", "gd", "libXft", "libotf", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

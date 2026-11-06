@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libpcap'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "libpcap"
+version = "1.11.0"
+archive = "https://www.tcpdump.org/release/libpcap-1.11.0.tar.gz"
+sha256 = "596389bc8560ea027dff9db8aaf6c173d992366d9aef4baf5d7c6d180b4d49ad"
+strip_components = 1
+description = "System-independent interface for user-level packet capture"
+homepage = "https://www.tcpdump.org/"
+license = "BSD-3-Clause"
+deps = ["libnl3"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ipv6", "--with-libnl", "--with-pcap=linux"]
+tools = ["flex", "pkg-config"]

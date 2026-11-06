@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-pl'. Review before relying on it.
+[package]
+name = "aspell-pl"
+version = "20061121"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/pl/aspell6-pl-6.0_20061121-0.tar.bz2"
+sha256 = "017741fcb70a885d718c534160c9de06b03cc72f352879bd106be165e024574d"
+strip_components = 1
+description = "Polish dictionary for aspell"
+homepage = "http://aspell.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

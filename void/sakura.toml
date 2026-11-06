@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sakura'. Review before relying on it.
+[package]
+name = "sakura"
+version = "3.8.9"
+archive = "https://launchpad.net/sakura/trunk/3.8.9/+download/sakura-3.8.9.tar.bz2"
+sha256 = "53b41c9b5dd62802d172c78f8af302768192e438af0dc0d65871d04a330b0a27"
+strip_components = 1
+description = "Simple but powerful libvte based terminal emulator"
+homepage = "https://launchpad.net/sakura"
+license = "GPL-2.0-only"
+deps = ["desktop-file-utils", "vte3"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["gettext"]

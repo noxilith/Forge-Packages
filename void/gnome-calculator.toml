@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-calculator'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-calculator"
+version = "50.0"
+archive = "https://download.gnome.org/sources/gnome-calculator/50/gnome-calculator-50.0.tar.xz"
+sha256 = "8053d6891565e882874b65c1db51c5bf310005eb788b8bac3546390743350a90"
+strip_components = 1
+description = "GNOME calculator"
+homepage = "https://wiki.gnome.org/Apps/Calculator"
+license = "GPL-2.0-or-later"
+deps = ["gsettings-desktop-schemas", "gtk4", "gtksourceview5", "libadwaita", "libgee", "libmpc", "libsoup3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "gettext", "glib", "vala"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnumeric'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool, itstool, perl-XML-Parser
+[package]
+name = "gnumeric"
+version = "1.12.59"
+archive = "https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.59.tar.xz"
+sha256 = "cb3750b176d641f9423df721b831658c829557552f8887fedf8a53d907eceb51"
+strip_components = 1
+description = "GNOME Spreadsheet Program"
+homepage = "http://gnumeric.org/"
+license = "GPL-3.0-or-later"
+deps = ["goffice", "librsvg", "libxml2", "libxslt"]
+
+[build]
+system = "autotools"
+tools = ["bison", "pkg-config"]
+deps = ["gdk-pixbuf", "glib"]

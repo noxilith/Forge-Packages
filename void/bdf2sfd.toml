@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'bdf2sfd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bdf2sfd"
+version = "1.2.0"
+archive = "https://github.com/fcambus/bdf2sfd/archive/1.2.0.tar.gz"
+sha256 = "43ffe2034d1e064a4583c67bd228668742d3dec59d34d7270c5ffffb7ccc7196"
+strip_components = 1
+description = "BDF to SFD converter to vectorize bitmap fonts"
+homepage = "https://github.com/fcambus/bdf2sfd"
+license = "BSD-2-Clause"
+
+[build]
+system = "cmake"

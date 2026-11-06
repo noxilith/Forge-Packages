@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kaccounts-providers'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libaccounts-qt, qt6-tools, signond
+[package]
+name = "kaccounts-providers"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kaccounts-providers-26.08.1.tar.xz"
+sha256 = "59d70593a7b8917500fa65ee8ec6c876d30ea2213d1a7a454aaff7d1da1fccb1"
+strip_components = 1
+description = "KDE Accounts Providers"
+homepage = "https://invent.kde.org/network/kaccounts-providers"
+license = "GPL-2.0-or-later"
+deps = ["glib", "kf6-kaccounts-integration", "kf6-ki18n", "kf6-kio", "kf6-kpackage", "kf6-kparts", "qcoro-qt6", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons"]

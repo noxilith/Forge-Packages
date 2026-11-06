@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gst-rtsp-server'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "gst-rtsp-server"
+version = "1.28.6"
+archive = "https://gstreamer.freedesktop.org/src/gst-rtsp-server/gst-rtsp-server-1.28.6.tar.xz"
+sha256 = "0cb725b1351f75e88803c55dddea1f27be09523ddcd7f29ab18270e182a2a463"
+strip_components = 1
+description = "GStreamer multimedia graph framework - rtsp server"
+homepage = "https://gstreamer.freedesktop.org"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "gst-plugins-bad1", "gst-plugins-good1", "python3-gobject"]
+
+[build]
+system = "meson"
+configure_args = ["-Dintrospection=enabled"]
+tools = ["pkg-config"]

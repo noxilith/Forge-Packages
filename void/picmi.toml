@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'picmi'. Review before relying on it.
+[package]
+name = "picmi"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/picmi-26.08.1.tar.xz"
+sha256 = "c200a8e8ecaa286bc2c057f37a83f63953a49c9e0bbcb27adb9e482fc245cca4"
+strip_components = 1
+description = "Puzzle game based on number logic"
+homepage = "https://apps.kde.org/picmi"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "libkdegames"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

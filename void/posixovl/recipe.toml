@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'posixovl'. Review before relying on it.
+[package]
+name = "posixovl"
+version = "1.3"
+archive = "https://downloads.sourceforge.net/sourceforge/posixovl/files/posixovl-1.3.tar.xz"
+sha256 = "a827798b02c0f27b37d8a10502e76c21adac43b887a49e7234e8d27668f62e72"
+strip_components = 1
+description = "FUSE filesystem to emulate POSIX features on non-POSIX filesystems"
+homepage = "https://sourceforge.net/projects/posixovl/"
+license = "GPL-2.0-or-later"
+deps = ["fuse"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'atomicparsley'. Review before relying on it.
+[package]
+name = "atomicparsley"
+version = "20240608.083822"
+archive = "https://github.com/wez/atomicparsley/archive/refs/tags/20240608.083822.1ed9031.tar.gz"
+sha256 = "5bc9ac931a637ced65543094fa02f50dde74daae6c8800a63805719d65e5145e"
+strip_components = 1
+description = "Lightweight program for manipulating MPEG-4 metadata"
+homepage = "https://github.com/wez/atomicparsley"
+license = "GPL-2.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPACKAGE_VERSION=20240608.083822", "-DBUILD_INFO=1ed9031"]

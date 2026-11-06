@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'f2fs-tools'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "f2fs-tools"
+version = "1.17.0"
+archive = "https://git.kernel.org/cgit/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.17.0.tar.gz"
+sha256 = "1dbc89ada373b43cc9130b47ad3f575117583ca74715e952046c88a121a2a469"
+strip_components = 1
+description = "Tools for the Linux Flash-Friendly File System (F2FS)"
+homepage = "https://git.kernel.org/cgit/linux/kernel/git/jaegeuk/f2fs-tools.git"
+license = "GPL-2.0-only"
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

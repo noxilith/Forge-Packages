@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'subtitleeditor'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "subtitleeditor"
+version = "0.56.2"
+archive = "https://github.com/subtitleeditor/subtitleeditor/archive/0.56.2.tar.gz"
+sha256 = "333598a35facfc2c1d6b9c53f9e722c21044c7025bfc02d596ac40a853f976b3"
+strip_components = 1
+description = "Subtitle Editor is a GTK+3 tool to edit subtitles"
+homepage = "https://subtitleeditor.github.io/subtitleeditor/"
+license = "GPL-3.0-or-later"
+deps = ["enchant2", "gst-plugins-base1", "gst-plugins-good1", "gstreamermm", "gtk+3", "gtkmm", "iso-codes", "libxml++"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["autogen", "gettext"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'synfigstudio'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, intltool
+[package]
+name = "synfigstudio"
+version = "1.4.5"
+archive = "https://github.com/synfig/synfig/releases/download/v1.4.5/synfigstudio-1.4.5.tar.gz"
+sha256 = "82a2d8a6d03f72443f8ddeb9d7ea38214313c1ac56f4ddba3e872464e8f91568"
+strip_components = 1
+description = "Vector based 2D animation studio"
+homepage = "https://www.synfig.org/"
+license = "GPL-2.0-or-later"
+deps = ["ETL", "ImageMagick", "gtkmm", "synfig"]
+patches = ["patches/fix-test-crash.patch", "patches/musl-accessperms.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-update-mimedb"]
+tools = ["pkg-config"]
+deps = ["gettext"]

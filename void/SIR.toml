@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'SIR'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dcraw, qt5
+[package]
+name = "SIR"
+version = "3.2.2"
+archive = "https://github.com/marek629/SIR/archive/v3.2.2.tar.gz"
+sha256 = "aad7965bc65103427a0e8ced2830361b03d1dbe0ebb814f8e46b08986cafbde8"
+strip_components = 1
+description = "Simple Image Resizer using Qt5 and exiv2"
+homepage = "https://marek629.github.io/SIR/"
+license = "GPL-2.0-or-later"
+deps = ["exiv2"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

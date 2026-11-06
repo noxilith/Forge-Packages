@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hblock'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "hblock"
+version = "3.4.0"
+archive = "https://github.com/hectorm/hblock/archive/v3.4.0.tar.gz"
+sha256 = "762dbe5f2a0ea84078b194190f4fb51b9fe3e6ef043c1899fdda6a083328225f"
+strip_components = 1
+description = "Adblocker that creates a hosts file from multiple sources"
+homepage = "https://github.com/hectorm/hblock"
+license = "MIT"
+deps = ["curl"]
+
+[build]
+system = "make"

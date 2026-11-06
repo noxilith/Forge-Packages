@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'json-c'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "json-c"
+version = "0.18"
+archive = "https://s3.amazonaws.com/json-c_releases/releases/json-c-0.18.tar.gz"
+sha256 = "876ab046479166b869afc6896d288183bbc0e5843f141200c677b3e8dfb11724"
+strip_components = 1
+description = "JSON implementation in C"
+homepage = "https://json-c.github.io/json-c"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_THREADING=ON", "-DBUILD_STATIC_LIBS=ON"]

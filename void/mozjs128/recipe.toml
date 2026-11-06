@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'mozjs128'. Review before relying on it.
+# hooks not translated: post_install, pre_check, pre_configure
+# settings not translated: build_helper, LDFLAGS
+# needs, but Forge has no recipe for yet: libffi, libreadline8
+[package]
+name = "mozjs128"
+version = "128.14.0"
+archive = "https://ftp.mozilla.org/pub/firefox/releases/128.14.0esr/source/firefox-128.14.0esr.source.tar.xz"
+sha256 = "93b9ef6229f41cb22ff109b95bbf61a78395a0fe4b870192eeca22947cb09a53"
+strip_components = 1
+description = "SpiderMonkey JavaScript interpreter and library (128.x)"
+homepage = "https://spidermonkey.dev"
+license = "MPL-2.0"
+deps = ["libicu78", "nspr", "zlib"]
+patches = ["patches/001-fix-soname.patch", "patches/002-copy-headers.patch", "patches/003-tests-timeout.patch", "patches/004-icu-sources-data-py-decouple.patch", "patches/005-icu-sources-data-write-command-stderr.patch", "patches/006-emitter.patch", "patches/007-tests-use-native-temporarydirectory.patch", "patches/008-init-patch.patch", "patches/009-sloppy-m4-detection.patch", "patches/011-failing-tests-ppc64-s390x.patch", "patches/013-disable-spidermonkey-jslint.patch", "patches/014-rust-target.patch", "patches/015-drop-rustc-validation.patch", "patches/017-no-lto-readelf.patch", "patches/018-armv6l-isb.patch", "patches/020-fix-build-ppc32.patch", "patches/021-fix-i386-fdlibm.patch", "patches/022-MOZ_NO_RUST_LTO.patch", "patches/023-icu-78.patch", "patches/024-python-3.14.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-jemalloc", "--disable-strip", "--disable-tests", "--disable-optimize", "--disable-debug", "--enable-ctypes", "--enable-readline", "--enable-shared-js", "--enable-system-ffi", "--with-intl-api", "--with-system-icu", "--with-system-nspr", "--with-system-zlib", "--enable-hardening", "--enable-release"]
+subdir = "js/src"
+tools = ["m4", "perl", "pkg-config"]
+deps = ["cbindgen", "llvm19"]

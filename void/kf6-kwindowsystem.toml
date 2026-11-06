@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kf6-kwindowsystem'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kwindowsystem"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kwindowsystem-6.30.0.tar.xz"
+sha256 = "639a501b877446b19905399d27e2be2b6ebb0bb481abe3209dc4d535a12e12ca"
+strip_components = 1
+description = "KDE frameworks - Access to the windowing system"
+homepage = "https://invent.kde.org/frameworks/kwindowsystem"
+license = "LGPL-2.1-or-later"
+deps = ["plasma-wayland-protocols", "qt6-base", "qt6-declarative", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

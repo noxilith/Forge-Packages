@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sfeed'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "sfeed"
+version = "2.4"
+archive = "https://codemadness.org/releases/sfeed/sfeed-2.4.tar.gz"
+sha256 = "f9503fe9205a8136f76a9b753c6007abad33e2a516807e416a986723db06e879"
+strip_components = 1
+description = "RSS and Atom parser"
+homepage = "https://git.codemadness.org/sfeed"
+license = "ISC"
+deps = ["curl"]
+
+[build]
+system = "make"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'nsss'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "nsss"
+version = "0.2.1.2"
+archive = "https://skarnet.org/software/nsss/nsss-0.2.1.2.tar.gz"
+sha256 = "ccaa73e90509f3fa5b52af85d90203ba628c16c9daed34c542679ae7681f1067"
+strip_components = 1
+description = "Minimal competing implementation of glibc's Name Switch Service"
+homepage = "https://skarnet.org/software/nsss/"
+license = "ISC"
+deps = ["skalibs"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared"]

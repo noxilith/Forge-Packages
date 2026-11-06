@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libcloudproviders'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libcloudproviders"
+version = "0.4.0"
+archive = "https://gitlab.gnome.org/GNOME/libcloudproviders/-/archive/0.4.0/libcloudproviders-0.4.0.tar.gz"
+sha256 = "ff65b1d4ed685f5f1659370e7dc503e891fdc0c9174661b1447e04798b98ed83"
+strip_components = 1
+description = "DBus API for cloud storage sync clients to expose their services"
+homepage = "https://gitlab.gnome.org/GNOME/libcloudproviders"
+license = "LGPL-3.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

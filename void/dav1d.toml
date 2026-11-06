@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'dav1d'. Review before relying on it.
+[package]
+name = "dav1d"
+version = "1.5.3"
+archive = "https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.bz2"
+sha256 = "e099f53253f6c247580c554d53a13f1040638f2066edc3c740e4c2f15174ce22"
+strip_components = 1
+description = "Small and fast AV1 Decoder"
+homepage = "https://code.videolan.org/videolan/dav1d"
+license = "BSD-2-Clause"
+
+[build]
+system = "meson"
+configure_args = ["-Denable_asm=true", "-Denable_tools=true", "-Dfuzzing_engine=none", "-Dtestdata_tests=false"]

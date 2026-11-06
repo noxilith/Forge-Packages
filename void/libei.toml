@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libei'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-Jinja2, python3-attrs
+[package]
+name = "libei"
+version = "1.6.0"
+archive = "https://gitlab.freedesktop.org/libinput/libei/-/archive/1.6.0/libei-1.6.0.tar.gz"
+sha256 = "81b4b967f0e5938492434a04f7ea2e6c6d96d3e6c44700bc691821f82281e602"
+strip_components = 1
+description = "Library for Emulated Input"
+homepage = "https://libinput.pages.freedesktop.org/libei/"
+license = "MIT"
+deps = ["elogind"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtests=disabled"]
+tools = ["pkg-config"]

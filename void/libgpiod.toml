@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'libgpiod'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: doxygen, python3-build, python3-pip
+[package]
+name = "libgpiod"
+version = "2.2"
+archive = "https://mirrors.edge.kernel.org/pub/software/libs/libgpiod/libgpiod-2.2.tar.gz"
+sha256 = "f89c2176250f1a9563265479eb8ad5f22a63f42db6a1f438effc570f0254d2f5"
+strip_components = 1
+description = "Library for interacting with the linux GPIO character device"
+homepage = "https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git"
+license = """
+Apache-2.0, BSD-3-Clause, CC-BY-SA-4.0, CC0-1.0, GPL-2.0-only, GPL-2.0-or-later,
+ LGPL-2.1-or-later, Linux-syscall-note"""
+deps = ["libedit"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-tools=yes", "--enable-bindings-cxx", "--enable-bindings-python", "--enable-gpioset-interactive"]
+tools = ["pkg-config"]

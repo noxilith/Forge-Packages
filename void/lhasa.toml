@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'lhasa'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "lhasa"
+version = "0.6.0"
+archive = "https://github.com/fragglet/lhasa/releases/download/v0.6.0/lhasa-0.6.0.tar.gz"
+sha256 = "9840154367f73e9d9c3196f944a121ab4d398d84e921c8fe8fca8a931274aed7"
+strip_components = 1
+description = "Free Software LHA implementation"
+homepage = "https://github.com/fragglet/lhasa"
+license = "ISC"
+
+[build]
+system = "autotools"

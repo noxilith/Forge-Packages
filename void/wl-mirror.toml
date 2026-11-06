@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wl-mirror'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "wl-mirror"
+version = "0.18.4"
+archive = "https://github.com/Ferdi265/wl-mirror/releases/download/v0.18.4/wl-mirror-0.18.4.tar.gz"
+sha256 = "d3913773665cb052d03b6e6092b23cb30df9261d4197e32d6f38e502bc6678ec"
+strip_components = 1
+description = "Simple Wayland output mirror client"
+homepage = "https://github.com/Ferdi265/wl-mirror"
+license = "GPL-3.0-or-later"
+deps = ["libglvnd", "scdoc", "wayland", "wayland-protocols"]
+
+[build]
+system = "cmake"
+configure_args = ["-DINSTALL_EXAMPLE_SCRIPTS=ON", "-DINSTALL_DOCUMENTATION=ON"]
+tools = ["pkg-config"]

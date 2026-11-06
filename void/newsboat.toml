@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'newsboat'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: make_install_args, build_helper, configure_script
+# needs, but Forge has no recipe for yet: ruby-asciidoctor, sqlite
+[package]
+name = "newsboat"
+version = "2.45"
+archive = "https://newsboat.org/releases/2.45/newsboat-2.45.tar.xz"
+sha256 = "defe303d2518f3c4241780a9165e8750e9984e3f10aa341b7dde107579e34b3d"
+strip_components = 1
+description = "RSS/Atom feed reader for the text console"
+homepage = "https://newsboat.org/"
+license = "MIT"
+deps = ["curl", "json-c", "libxml2", "stfl"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

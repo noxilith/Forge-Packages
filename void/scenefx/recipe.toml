@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'scenefx'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "scenefx"
+version = "0.5"
+archive = "https://github.com/wlrfx/scenefx/archive/refs/tags/0.5.tar.gz"
+sha256 = "0fa8ecca0e310f813efd052624c5ed7d9153d6a0fdead5cc957d34c07f9a86c6"
+strip_components = 1
+description = "Drop-in replacement for the wlroots scene API"
+homepage = "https://github.com/wlrfx/scenefx"
+license = "MIT"
+deps = ["wlroots0.20"]
+patches = ["patches/scenefx-0.5-musl.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwerror=false", "-Db_ndebug=false"]
+tools = ["pkg-config"]
+deps = ["scdoc", "wayland"]

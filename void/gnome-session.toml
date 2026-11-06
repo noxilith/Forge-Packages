@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-session'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "gnome-session"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gnome-session/48/gnome-session-48.0.tar.xz"
+sha256 = "dd909fbc5b22cdbdb2fc4df1a47d78d1b5943ccc5e61e6a20a1846246347c417"
+strip_components = 1
+description = "GNOME session management utilities"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-session"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["dconf", "desktop-file-utils", "elogind", "glib", "gnome-desktop", "gsettings-desktop-schemas", "gtk+3", "json-glib", "libICE", "libSM", "polkit", "xtrans"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "xmlto"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'kaboom'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "kaboom"
+version = "0.1.0"
+archive = "https://git.sr.ht/~klardotsh/kaboom/archive/v0.1.0.tar.gz"
+sha256 = "b923eacbd691fbd6aaef8640872b2f550b562adbf5a1056ef82e2c22774bdcba"
+strip_components = 1
+description = "Atom feed management for the casual blogger"
+homepage = "https://sr.ht/~klardotsh/kaboom/"
+license = "0BSD"
+
+[build]
+system = "cargo"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'udftools'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libreadline8, ncurses
+[package]
+name = "udftools"
+version = "2.3"
+archive = "https://github.com/pali/udftools/releases/download/2.3/udftools-2.3.tar.gz"
+sha256 = "750dcf5c797765eb42265e0a56d1a99f97f94b7f6f4534263a5410503f0caf59"
+strip_components = 1
+description = "Linux tools for UDF filesystems and DVD/CD-R(W) drives"
+homepage = "https://github.com/pali/udftools/"
+license = "GPL-2.0-or-later"
+deps = ["eudev"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

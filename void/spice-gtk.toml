@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'spice-gtk'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper, CFLAGS
+# needs, but Forge has no recipe for yet: hwids, python3-parsing, python3-six
+[package]
+name = "spice-gtk"
+version = "0.42"
+archive = "https://spice-space.org/download/gtk/spice-gtk-0.42.tar.xz"
+sha256 = "9380117f1811ad1faa1812cb6602479b6290d4a0d8cc442d44427f7f6c0e7a58"
+strip_components = 1
+description = "GTK+ SPICE widget"
+homepage = "https://spice-space.org"
+license = "LGPL-2.1-or-later"
+deps = ["acl", "glib", "gst-plugins-base1", "gst-plugins-good1", "gstreamer1", "gtk+3", "json-glib", "libjpeg-turbo", "libsasl", "libsoup3", "libva", "lz4", "openssl", "opus", "phodav", "pixman", "polkit", "spice-protocol", "usbredir", "vte3"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsmartcard=disabled", "-Dusbredir=enabled", "-Dpolkit=enabled", "-Dlz4=enabled", "-Dopus=enabled", "-Dgtk_doc=disabled"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext"]

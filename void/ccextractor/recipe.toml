@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'ccextractor'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: build_helper, CFLAGS
+# needs, but Forge has no recipe for yet: ffmpeg6, llvm, tesseract-ocr
+[package]
+name = "ccextractor"
+version = "0.96.6"
+archive = "https://github.com/CCExtractor/ccextractor/archive/v0.96.6.tar.gz"
+sha256 = "d2bda9d2071ccf7a81a43c10e82ec00899b2a25b391c300e965274f92ad46208"
+strip_components = 1
+description = "Extract subtitles from video streams"
+homepage = "https://www.ccextractor.org/"
+license = "GPL-2.0-or-later"
+deps = ["freetype", "gpac", "leptonica", "libpng", "libutf8proc", "zlib"]
+patches = ["patches/use-system-libs.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ocr", "--enable-hardsubx"]
+subdir = "linux"
+tools = ["pkg-config"]

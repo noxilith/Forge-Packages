@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libchipcard'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gwenhywfar
+[package]
+name = "libchipcard"
+version = "5.0.4"
+archive = "https://www.aquamaniac.de/rdm/attachments/download/158/libchipcard-5.0.4.tar.gz"
+sha256 = "d25a79adcf09f1058ca9168b80e843fadbd556fb0f23c890d871124ad380423a"
+strip_components = 1
+description = "Library for easy access to chip cards via chipcard readers"
+homepage = "http://www.libchipcard.de"
+license = "LGPL-2.1-only"
+deps = ["pcsclite", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

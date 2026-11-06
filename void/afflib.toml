@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'afflib'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: libreadline8, ncurses
+[package]
+name = "afflib"
+version = "3.7.22"
+archive = "https://github.com/sshock/AFFLIBv3/archive/refs/tags/v3.7.22.tar.gz"
+sha256 = "67481fc520ff927bf61aea0bf2d660feb73e24cc329335bebb064f8f12115dcb"
+strip_components = 1
+description = "Advanced Forensics Format Library"
+homepage = "https://github.com/sshock/AFFLIBv3/tree/master"
+license = "BSD-4-Clause OR Public Domain"
+deps = ["curl", "expat", "fuse3", "openssl", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-threading"]
+deps = ["which"]

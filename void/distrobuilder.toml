@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'distrobuilder'. Review before relying on it.
+# settings not translated: go_build_tags, go_package, go_import_path
+# needs, but Forge has no recipe for yet: debootstrap, sqlite
+[package]
+name = "distrobuilder"
+version = "3.3.1"
+archive = "https://github.com/lxc/distrobuilder/releases/download/v3.3.1/distrobuilder-3.3.1.tar.gz"
+sha256 = "6c411af7178bb55ef649c708f4f38fc3c30e6ecce901c08d8a389448a900a73a"
+strip_components = 1
+description = "System container image builder for LXC and LXD"
+homepage = "https://linuxcontainers.org/distrobuilder/introduction/"
+license = "Apache-2.0"
+deps = ["btrfs-progs", "gnupg", "gpgme", "squashfs-tools"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

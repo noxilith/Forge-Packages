@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'radare2'. Review before relying on it.
+[package]
+name = "radare2"
+version = "5.9.8"
+archive = "https://github.com/radareorg/radare2/archive/5.9.8.tar.gz"
+sha256 = "e45e4fd342f04b2e00363bc1b68cc375c1cf36041085d3d59caa7a3b7be43836"
+strip_components = 1
+description = "Advanced command line debugger and hexadecimal editor"
+homepage = "https://www.radare.org"
+license = "LGPL-3.0-only"
+deps = ["capstone", "file", "libuv", "libzip", "lz4", "openssl", "xxHash", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Denable_tests=false", "-Duse_sys_capstone=true", "-Duse_sys_magic=true", "-Duse_sys_xxhash=true", "-Duse_ssl=true", "-Duse_sys_openssl=true", "-Duse_libuv=true", "-Duse_sys_zlib=true", "-Duse_sys_zip=true", "-Duse_sys_lz4=true"]
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mujs'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, CFLAGS
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "mujs"
+version = "1.2.0"
+archive = "https://github.com/ccxvii/mujs/archive/refs/tags/1.2.0.tar.gz"
+sha256 = "bbb74b96c168e7120f1aa2ce0a42026eba01cff14a9234108c91795f3a4c8cd0"
+strip_components = 1
+description = "Embeddable JavaScript interpreter written in C"
+homepage = "https://mujs.com/"
+license = "ISC"
+patches = ["patches/dynlink.patch"]
+
+[build]
+system = "make"

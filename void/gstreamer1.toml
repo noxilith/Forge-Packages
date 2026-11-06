@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gstreamer1'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_check
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "gstreamer1"
+version = "1.28.6"
+archive = "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.28.6.tar.xz"
+sha256 = "62b6b9f0ad3147a6dd6420ac64a91180b14e990695bddd353b96041611d052ca"
+strip_components = 1
+description = "Core GStreamer libraries and elements (1.x)"
+homepage = "https://gstreamer.freedesktop.org"
+license = "LGPL-2.0-or-later"
+deps = ["bash-completion", "glib", "libcap", "libxml2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dptp-helper-permissions=capabilities", "-Dpackage-origin=https://www.voidlinux.org", "-Ddbghelp=disabled"]
+tools = ["flex", "pkg-config"]
+deps = ["gettext"]

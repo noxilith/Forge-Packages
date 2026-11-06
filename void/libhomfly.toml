@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libhomfly'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libhomfly"
+version = "1.03"
+archive = "https://github.com/miguelmarco/libhomfly/releases/download/1.03/libhomfly-1.03.tar.gz"
+sha256 = "2a06e93cccd91d33ed9c345eba2e59b2ba175c11e454cf2029644a9364250871"
+strip_components = 1
+description = "Library to compute the homfly polynomial of knots and links"
+homepage = "https://github.com/miguelmarco/libhomfly/"
+license = "custom:unlicense"
+deps = ["gc"]
+
+[build]
+system = "autotools"

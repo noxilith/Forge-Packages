@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ripgrep'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: build_helper
+[package]
+name = "ripgrep"
+version = "15.2.0"
+archive = "https://github.com/BurntSushi/ripgrep/archive/refs/tags/15.2.0.tar.gz"
+sha256 = "7605249d3eb0d5f170e3414498e3344e26b1e7a147aec518b57090b80036a562"
+strip_components = 1
+description = "Fast search tool inspired by ag and grep"
+homepage = "https://github.com/BurntSushi/ripgrep/"
+license = "MIT OR Unlicense"
+deps = ["pcre2"]
+
+[build]
+system = "cargo"
+configure_args = ["--features=pcre2"]
+tools = ["pkg-config"]

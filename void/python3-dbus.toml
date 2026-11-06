@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'python3-dbus'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: python3-packaging-bootstrap
+[package]
+name = "python3-dbus"
+version = "1.3.2"
+archive = "https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.3.2.tar.gz"
+sha256 = "ad67819308618b5069537be237f8e68ca1c7fcc95ee4a121fe6845b1418248f8"
+strip_components = 1
+description = "D-Bus Python3 bindings"
+homepage = "https://www.freedesktop.org/wiki/Software/DBusBindings"
+license = "MIT"
+deps = ["dbus", "glib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

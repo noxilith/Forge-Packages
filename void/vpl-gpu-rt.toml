@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'vpl-gpu-rt'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "vpl-gpu-rt"
+version = "26.4.1"
+archive = "https://github.com/intel/vpl-gpu-rt/archive/refs/tags/intel-onevpl-26.4.1.tar.gz"
+sha256 = "7550feb11581709c884cfe8e8b0968b8b387ece23388189108005aeefde09ecd"
+strip_components = 1
+description = "Runtime implementation of libvpl API for Intel GPUs"
+homepage = "https://github.com/intel/vpl-gpu-rt"
+license = "MIT"
+deps = ["libdrm", "libva", "libvpl"]
+
+[build]
+system = "cmake"
+configure_args = ["-Wno-dev"]
+tools = ["pkg-config"]

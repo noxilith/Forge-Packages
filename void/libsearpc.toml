@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libsearpc'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libsearpc"
+version = "3.3.0.20220902"
+archive = "https://github.com/haiwen/libsearpc/archive/15f6f0b9f451b9ecf99dedab72e9242e54e124eb.tar.gz"
+sha256 = "694ab76ea0e3c0616a4c517fc6f264cc35679ed70a843c4e74e0b35b779def8d"
+strip_components = 1
+description = "Seafile RPC library"
+homepage = "https://seafile.com"
+license = "LGPL-3.0-or-later, Apache-2.0"
+deps = ["glib", "jansson"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-python3", "--disable-static", "--disable-compile-demo"]
+tools = ["pkg-config"]

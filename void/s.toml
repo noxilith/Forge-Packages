@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 's'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_import_path, build_helper
+[package]
+name = "s"
+version = "0.8.1"
+archive = "https://github.com/zquestz/s/archive/v0.8.1.tar.gz"
+sha256 = "9dd80e19b2287abf2689b8f9fd424fdfad9abdc51b69e3a550579db69d6c8f6f"
+strip_components = 1
+description = "Web search from the terminal"
+homepage = "https://github.com/zquestz/s"
+license = "MIT"
+
+[build]
+system = "go"

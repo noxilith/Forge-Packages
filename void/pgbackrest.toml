@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pgbackrest'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: bzip2, perl
+[package]
+name = "pgbackrest"
+version = "2.58.0"
+archive = "https://github.com/pgbackrest/pgbackrest/archive/release/2.58.0.tar.gz"
+sha256 = "2517ec0a7f66be0f1bc77795c3a19cd41c4b106699321d3ac511bc539dd2bfca"
+strip_components = 1
+description = "Reliable PostgreSQL Backup & Restore"
+homepage = "http://www.pgbackrest.org/"
+license = "MIT"
+deps = ["libxml2", "libyaml", "lz4", "openssl", "postgresql18", "zlib"]
+
+[build]
+system = "meson"
+tools = ["perl", "pkg-config"]

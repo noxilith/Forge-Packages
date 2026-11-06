@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'wob'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libffi
+[package]
+name = "wob"
+version = "0.16"
+archive = "https://github.com/francma/wob/archive/0.16.tar.gz"
+sha256 = "8a5850beec72b5b19be631a6eb21315a20082bf9135447080f9e9045f143938b"
+strip_components = 1
+description = "Lightweight overlay volume/backlight/progress/anything bar for Wayland"
+homepage = "https://github.com/francma/wob"
+license = "ISC"
+deps = ["inih", "libseccomp", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+configure_args = ["-Dseccomp=enabled", "-Dsystemd-unit-files=disabled"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

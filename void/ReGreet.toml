@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ReGreet'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: greetd
+[package]
+name = "ReGreet"
+version = "0.2.0"
+archive = "https://github.com/rharish101/ReGreet/archive/refs/tags/0.2.0.tar.gz"
+sha256 = "6ce1f948feb75e12436eccc41557ad6a7127672f0658a9c9fbd5a412cebafc8a"
+strip_components = 1
+description = "Clean and customizable greeter for greetd"
+homepage = "https://github.com/rharish101/ReGreet"
+license = "GPL-3.0-or-later"
+deps = ["cairo", "gdk-pixbuf", "glib", "gtk4", "pango"]
+
+[build]
+system = "cargo"
+configure_args = ["--features", "gtk4_8"]
+tools = ["pkg-config"]

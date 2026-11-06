@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'clsync'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "clsync"
+version = "0.4.5"
+archive = "https://github.com/clsync/clsync/archive/v0.4.5.tar.gz"
+sha256 = "dcf6e45914edac00c660942594f0c8958c6c7b9819c11277b7d9eb596f52cb81"
+strip_components = 1
+description = "File live sync daemon based on inotify/kqueue/bsm"
+homepage = "http://ut.mephi.ru/oss/clsync"
+license = "GPL-3.0-or-later"
+deps = ["glib"]
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

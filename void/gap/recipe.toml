@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gap'. Review before relying on it.
+# hooks not translated: post_check, post_extract, post_install, pre_check
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "gap"
+version = "4.16.0"
+archive = "https://github.com/gap-system/gap/releases/download/v4.16.0/gap-4.16.0.tar.gz"
+sha256 = "aaa296b32a5d7bf25fd80f241d23ec1f58b74e991ae730fafe40e54eb3af6e7e"
+strip_components = 1
+description = "Groups, Algorithms, Programming - computational discrete algebra"
+homepage = "https://www.gap-system.org/"
+license = "GPL-2.0-or-later"
+deps = ["gmp", "zlib"]
+patches = ["patches/atlasrep-dont_use_network_by_default.patch"]
+
+[build]
+system = "autotools"

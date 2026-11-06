@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libogdf'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: unzip
+[package]
+name = "libogdf"
+version = "2025.10"
+archive = "https://ogdf.uos.de/wp-content/uploads/2025/10/ogdf.v2025.10.zip"
+sha256 = "54f8fc9c2b44b3e4f34ca85be3ae77ce2a309337397662c1432a960367522ccb"
+strip_components = 1
+description = "Open Graph Drawing Framework"
+homepage = "https://ogdf.uos.de/"
+license = "GPL-2.0-or-later"
+patches = ["patches/install-coin.patch", "patches/no-march-native-werror.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

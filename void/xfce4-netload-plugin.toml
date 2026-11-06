@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce4-netload-plugin'. Review before relying on it.
+[package]
+name = "xfce4-netload-plugin"
+version = "1.5.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-netload-plugin/1.5/xfce4-netload-plugin-1.5.0.tar.xz"
+sha256 = "a868be8f73e8396c2d61903d46646993c5130d16ded71ddb5da9088abf7cb7ba"
+strip_components = 1
+description = "Netload plugin for the Xfce panel"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-netload-plugin"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "libxfce4ui", "libxfce4util", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'MangoHud'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: glew, glslang, python3-Mako
+[package]
+name = "MangoHud"
+version = "0.8.4"
+archive = "https://github.com/flightlessmango/MangoHud/releases/download/v0.8.4/MangoHud-v0.8.4-Source-DFSG.tar.xz"
+sha256 = "5411681fff30082ae9fc09bf27794c3ef3cd3b5ab27783fea4e2f0e899d591a3"
+strip_components = 1
+description = "Vulkan and OpenGL overlay for monitoring FPS, temperatures and more"
+homepage = "https://github.com/flightlessmango/MangoHud"
+license = "MIT"
+deps = ["dbus", "glfw", "json-c++", "libglvnd", "libxkbcommon", "spdlog", "vulkan-loader", "wayland"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith_xnvctrl=disabled", "-Dwith_nvml=disabled", "-Duse_system_spdlog=enabled", "-Dmangoapp=true"]
+tools = ["pkg-config"]
+deps = ["Vulkan-Headers"]

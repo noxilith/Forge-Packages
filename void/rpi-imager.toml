@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'rpi-imager'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: qt5, util-linux
+[package]
+name = "rpi-imager"
+version = "1.8.5"
+archive = "https://github.com/raspberrypi/rpi-imager/archive/v1.8.5.tar.gz"
+sha256 = "443e2ca2132067cc67038c82d890f70fd744da2503588852f014435dd11fb786"
+strip_components = 1
+description = "Raspberry Pi Imaging Utility"
+homepage = "https://github.com/raspberrypi/rpi-imager"
+license = "Apache-2.0"
+deps = ["curl", "gnutls", "libarchive"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TELEMETRY=OFF", "-DENABLE_CHECK_VERSION=OFF"]
+subdir = "src"

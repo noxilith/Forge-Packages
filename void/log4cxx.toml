@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'log4cxx'. Review before relying on it.
+# needs, but Forge has no recipe for yet: zip
+[package]
+name = "log4cxx"
+version = "1.5.0"
+archive = "https://archive.apache.org/dist/logging/log4cxx/1.5.0/apache-log4cxx-1.5.0.tar.gz"
+sha256 = "aa23f47c3164aa2cf848c2258b4b4bc372e7964d4a3ed47c2b4a4a915c5dfa37"
+strip_components = 1
+description = "C++ Logging Library based on Log4J"
+homepage = "https://logging.apache.org/log4cxx/"
+license = "Apache-2.0"
+deps = ["apr", "apr-util", "gdbm", "libxml2"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

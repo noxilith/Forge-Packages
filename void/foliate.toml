@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'foliate'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebkit2gtk41
+[package]
+name = "foliate"
+version = "3.3.0"
+archive = "https://github.com/johnfactotum/foliate/releases/download/3.3.0/com.github.johnfactotum.Foliate-3.3.0.tar.xz"
+sha256 = "09d0cc0a34426a2e57af25d67147dfe9b77ebf638a5a041b9f5c42499c4db672"
+strip_components = 1
+description = "Simple and modern GTK eBook reader"
+homepage = "https://johnfactotum.github.io/foliate/"
+license = "GPL-3.0-or-later"
+deps = ["gjs", "gtk4", "libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib"]

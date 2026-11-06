@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'rocksdb'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "rocksdb"
+version = "11.0.4"
+archive = "https://github.com/facebook/rocksdb/archive/v11.0.4.tar.gz"
+sha256 = "b4dfd75199f385ec76056f81d33cde8f4cb446ea2ed1821feec7b996b3409f67"
+strip_components = 1
+description = "RocksDB is a embeddable, persistent key-value store for fast storage"
+homepage = "https://github.com/facebook/rocksdb"
+license = "GPL-2.0-or-later, Apache-2.0, BSD-3-Clause"
+deps = ["gflags", "lz4", "snappy", "zlib"]
+patches = ["patches/toku_time.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPORTABLE=1", "-DWITH_TESTS=0", "-DUSE_RTTI=0", "-DWITH_LZ4=1", "-DWITH_ZLIB=1", "-DWITH_BZ2=1", "-DWITH_SNAPPY=1", "-DWITH_ZSTD=1", "-DFAIL_ON_WARNINGS=0"]

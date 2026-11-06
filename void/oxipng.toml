@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'oxipng'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "oxipng"
+version = "10.1.1"
+archive = "https://github.com/shssoichiro/oxipng/archive/refs/tags/v10.1.1.tar.gz"
+sha256 = "ce19b1f060d586ceb3ea682f27d00e41675ec4093d8ac200a61ccd9d967d0999"
+strip_components = 1
+description = "Multithreaded lossless PNG compression optimizer"
+homepage = "https://github.com/shssoichiro/oxipng"
+license = "MIT"
+
+[build]
+system = "cargo"

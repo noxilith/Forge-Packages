@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'intel-media-driver'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "intel-media-driver"
+version = "26.4.1"
+archive = "https://github.com/intel/media-driver/archive/intel-media-26.4.1.tar.gz"
+sha256 = "9ff79e04075fa52ad9d5bc66154f508892241a61f85192d0846de9f55b9f2ef2"
+strip_components = 1
+description = "Intel Media Driver for VAAPI (Broadwell+)"
+homepage = "https://github.com/intel/media-driver"
+license = "MIT, BSD-3-Clause"
+deps = ["intel-gmmlib", "libX11", "libva"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

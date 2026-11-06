@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'clamav'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, CFLAGS, CXXFLAGS, conf_files
+# needs, but Forge has no recipe for yet: bzip2, libmilter, ncurses, tcl, zip
+[package]
+name = "clamav"
+version = "1.5.3"
+archive = "https://www.clamav.net/downloads/production/clamav-1.5.3.tar.gz"
+sha256 = "89af57a45bbf13de4dc91ed7f20b435388c88428eb7dc30639a02b2f0fc2dad1"
+strip_components = 1
+description = "Clam Anti-Virus scanner"
+homepage = "https://www.clamav.net/"
+license = "GPL-2.0-only"
+deps = ["check", "curl", "json-c", "libmspack", "libxml2", "openssl", "pcre2", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCLAMAV_USER=_clamav", "-DCLAMAV_GROUP=_clamav", "-DENABlE_WERROR=NO", "-DENABLE_SYSTEMD=NO", "-DENABLE_FUZZ=NO", "-DENABLE_APP=ON"]
+tools = ["flex", "pkg-config"]
+deps = ["cargo-auditable"]

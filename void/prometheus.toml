@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'prometheus'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_build_tags, go_package, go_import_path, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: yarn
+[package]
+name = "prometheus"
+version = "3.10.0"
+archive = "https://github.com/prometheus/prometheus/archive/v3.10.0.tar.gz"
+sha256 = "a3d01efaf82edfd074f9fc48399969bcf22f22b8fb4353dfbbcc79cb2a03e579"
+strip_components = 1
+description = "Monitoring system and time series database"
+homepage = "https://prometheus.io/"
+license = "Apache-2.0, MIT"
+
+[build]
+system = "go"

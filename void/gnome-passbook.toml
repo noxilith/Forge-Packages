@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-passbook'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-pykeepass
+[package]
+name = "gnome-passbook"
+version = "0.8"
+archive = "https://gitlab.gnome.org/gnumdk/passbook/uploads/5fea4e4fc19f1732d3a5270bc43eb8e9/passbook-0.8.tar.xz"
+sha256 = "55b5aaa5a61aa3b026de0491e1ac33ca6094208f88031f547f869578b5ff8ad9"
+strip_components = 1
+description = "Password manager for GNOME"
+homepage = "https://wiki.gnome.org/Apps/Passbook"
+license = "LGPL-3.0-or-later"
+deps = ["glib", "gobject-introspection", "gtk+3", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libopenglrecorder'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libvpx
+[package]
+name = "libopenglrecorder"
+version = "0.1.0"
+archive = "https://github.com/Benau/libopenglrecorder/archive/v0.1.0.tar.gz"
+sha256 = "a90a99c23f868636f77003a8dc6ffe6c3699fc2759c47df5dbd44ff8b42d2e4f"
+strip_components = 1
+description = "Library allowing audio and OpenGL recording"
+homepage = "https://github.com/Benau/libopenglrecorder"
+license = "BSD-3-Clause"
+deps = ["libjpeg-turbo", "libogg", "libvorbis", "pulseaudio"]
+patches = ["patches/fix-cflags.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

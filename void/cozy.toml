@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cozy'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-distro, python3-mutagen, python3-peewee, python3-pytz, python3-requests
+[package]
+name = "cozy"
+version = "1.3.0"
+archive = "https://github.com/geigi/cozy/archive/1.3.0.tar.gz"
+sha256 = "b4e5d438f5d3f5d236a49f3fcb433ca4fa489d7d5995961a5d967950bbb6c102"
+strip_components = 1
+description = "Audio book player"
+homepage = "https://github.com/geigi/cozy"
+license = "GPL-3.0-only, LGPL-3.0-only, Apache-2.0"
+deps = ["glade3", "glib", "granite", "gst-libav", "gst-plugins-good1", "gst1-python3", "libadwaita", "libdazzle", "libhandy1", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk+3"]

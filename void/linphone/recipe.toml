@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'linphone'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# needs, but Forge has no recipe for yet: doxygen, libreadline8, python3-pystache, python3-six, speex, sqlite, xerces-c
+[package]
+name = "linphone"
+version = "5.3.106"
+archive = "https://gitlab.linphone.org/BC/public/liblinphone/-/archive/5.3.106/liblinphone-5.3.106.tar.gz"
+sha256 = "8c1cc0b8089ab186bd74f347dc0228e329557d67d5e804157ecc56b644f91135"
+strip_components = 1
+description = "Voice-over-IP phone"
+homepage = "https://www.linphone.org"
+license = "AGPL-3.0-or-later"
+deps = ["bctoolbox", "belcard", "belle-sip", "bzrtp", "gettext", "libnotify", "libsrtp", "libupnp", "libxml2", "mediastreamer", "ortp", "soci"]
+patches = ["patches/cacert.patch", "patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=TRUE", "-DENABLE_ADVANCED_IM=FALSE", "-DENABLE_DB_STORAGE=TRUE", "-DENABLE_LIME_X3DH=NO", "-DENABLE_UNIT_TESTS=NO", "-DENABLE_FLEXIAPI=OFF", "-DENABLE_QRCODE=OFF", "-DENABLE_STRICT=OFF", "-DENABLE_CONSOLE_UI=ON"]
+tools = ["pkg-config"]
+deps = ["graphviz"]

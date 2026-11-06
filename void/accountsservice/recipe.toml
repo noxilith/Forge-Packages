@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'accountsservice'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper, CFLAGS, make_dirs
+# needs, but Forge has no recipe for yet: python3-dbusmock
+[package]
+name = "accountsservice"
+version = "23.13.9"
+archive = "https://www.freedesktop.org/software/accountsservice/accountsservice-23.13.9.tar.xz"
+sha256 = "adda4cdeae24fa0992e7df3ffff9effa7090be3ac233a3edfdf69d5a9c9b924f"
+strip_components = 1
+description = "D-Bus interfaces for querying and manipulating user account information"
+homepage = "https://www.freedesktop.org/wiki/Software/AccountsService/"
+license = "GPL-3.0-or-later"
+deps = ["elogind", "polkit"]
+patches = ["patches/ad0365b77b583da06bcd1e8da4c1bed74129895a.patch", "patches/fix-build.patch", "patches/fix-tests.patch", "patches/mocklibc-Fix-compiler-warning.patch", "patches/musl-fgetspent_r.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "python3-dbus", "python3-gobject"]

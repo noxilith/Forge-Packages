@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'khelpcenter'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "khelpcenter"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/khelpcenter-26.08.1.tar.xz"
+sha256 = "061bd1a929b175cf35c9830f1306b1da8dc9cb3c70d9c371a3767f47401edcfa"
+strip_components = 1
+description = "KDE Help center"
+homepage = "https://kde.org/applications/en/system/org.kde.Help"
+license = "GPL-2.0-or-later"
+deps = ["kf6-karchive", "kf6-kbookmarks", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kguiaddons", "kf6-ki18n", "kf6-kio", "kf6-knewstuff", "kf6-kservice", "kf6-ktexttemplate", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "libxml2", "qt6-base", "qt6-pdf", "xapian-core"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

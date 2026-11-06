@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'libgpod'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: sg3_utils, sqlite
+[package]
+name = "libgpod"
+version = "0.8.3"
+archive = "https://downloads.sourceforge.net/sourceforge/gtkpod/libgpod-0.8.3.tar.bz2"
+sha256 = "638a7959d04e95f1e62abad02bd33702e4e8dfef98485ac7d9d50395c37e955d"
+strip_components = 1
+description = "Shared library to access the contents of an iPod"
+homepage = "http://www.gtkpod.org/libgpod/"
+license = "LGPL-2.1-only"
+deps = ["gdk-pixbuf", "glib", "libimobiledevice", "taglib"]
+patches = ["patches/0001-323-Segmentation-fault-when-opening-ipod.patch", "patches/incompat-ptr.patch", "patches/libgpod-0.8.2-pkgconfig_overlinking.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-udev"]
+tools = ["pkg-config"]
+deps = ["gettext", "gtk-doc"]

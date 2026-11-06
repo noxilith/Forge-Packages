@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ltrace'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "ltrace"
+version = "0.7.3.20160924"
+archive = "https://github.com/dkogan/ltrace/archive/82c66409c7a93ca6ad2e4563ef030dfb7e6df4d4.tar.gz"
+sha256 = "4aecf69e4a33331aed1e50ce4907e73a98cbccc4835febc3473863474304d547"
+strip_components = 1
+description = "Tracks runtime library calls in dynamically linked programs"
+homepage = "http://ltrace.org"
+license = "GPL-2"
+deps = ["elfutils"]
+patches = ["patches/musl-ppc.patch"]
+
+[build]
+system = "autotools"

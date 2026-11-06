@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lsof'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "lsof"
+version = "4.99.7"
+archive = "https://github.com/lsof-org/lsof/releases/download/4.99.7/lsof-4.99.7.tar.gz"
+sha256 = "4a10391aab0b8ce1f539e82a1966693b2a6cf225972a6504ebb7ec4fa71675de"
+strip_components = 1
+description = "LiSt Open Files"
+homepage = "https://github.com/lsof-org/lsof"
+license = "lsof"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-security", "--disable-liblsof"]
+deps = ["groff"]

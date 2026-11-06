@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'bacula-common'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses, sqlite
+[package]
+name = "bacula-common"
+version = "15.0.3"
+archive = "https://downloads.sourceforge.net/sourceforge/bacula/15.0.3/bacula-15.0.3.tar.gz"
+sha256 = "294afd3d2eb9d5b71c3d0e88fdf19eb513bfdb843b28d35c0552e4ae062827a1"
+strip_components = 1
+description = "Bacula - A Network Backup Tool (common libs)"
+homepage = "https://www.bacula.org"
+license = "AGPL-3.0-only, BSD-2-Clause, BSD-3-Clause"
+deps = ["acl", "mariadb", "openssl", "postgresql18", "zlib"]
+patches = ["patches/fix-cross.patch", "patches/fix-include.patch", "patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-openssl", "--with-sqlite3", "--with-mysql", "--with-postgresql", "--enable-smartalloc"]

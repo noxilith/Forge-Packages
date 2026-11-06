@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gforth'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libffi
+[package]
+name = "gforth"
+version = "0.7.3"
+archive = "https://ftp.gnu.org/gnu/gforth/gforth-0.7.3.tar.gz"
+sha256 = "2f62f2233bf022c23d01c920b1556aa13eab168e3236b13352ac5e9f18542bb0"
+strip_components = 1
+description = "GNU Forth, a fast and portable implementation of ANS Forth"
+homepage = "https://www.gnu.org/software/gforth/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["m4"]

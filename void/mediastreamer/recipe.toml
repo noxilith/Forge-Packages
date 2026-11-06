@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mediastreamer'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: glew, libaom, libgsm, libtheora, libvpx, libyuv, mbedtls, qt5, speex
+[package]
+name = "mediastreamer"
+version = "5.3.106"
+archive = "https://gitlab.linphone.org/BC/public/mediastreamer2/-/archive/5.3.106/mediastreamer2-5.3.106.tar.gz"
+sha256 = "af6363aabdf15819c00a980085a3028345ebea096b2d6704b265d704b46d84b0"
+strip_components = 1
+description = "Powerful and lightweight streaming engine for voice/video telephony"
+homepage = "https://www.linphone.org/technical-corner/mediastreamer2"
+license = "AGPL-3.0-or-later"
+deps = ["bcg729", "bcmatroska2", "bzrtp", "libXv", "libsrtp", "libupnp", "opus", "ortp", "pulseaudio", "v4l-utils", "zxing-cpp"]
+patches = ["patches/MS2_GIT_VERSION.patch", "patches/cmake-deps.patch", "patches/cmake.patch", "patches/set_and_no_check.patch", "patches/soname.patch", "patches/zxing-3.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_STRICT=0", "-DENABLE_UNIT_TESTS=0", "-DBUILD_SHARED_LIBS=TRUE", "-DENABLE_QT_GL=TRUE", "-DENABLE_FFMPEG=0", "-DENABLE_LIBYUV=1"]

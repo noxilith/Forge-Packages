@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'prelink-cross'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "prelink-cross"
+version = "20180128"
+archive = "https://github.com/Gottox/prelink-cross/archive/ca213abd9ebfd77a04e3a967bf9f7bc1ef832087.tar.gz"
+sha256 = "b6b0baf60e7e66f62ed8e7117973be24b2d24649490365e6a88e11be0dd2fab4"
+strip_components = 1
+description = "Prelink from the yocto project"
+homepage = "https://git.yoctoproject.org/cgit.cgi/prelink-cross"
+license = "GPL-2.0-or-later"
+deps = ["elfutils"]
+
+[build]
+system = "autotools"

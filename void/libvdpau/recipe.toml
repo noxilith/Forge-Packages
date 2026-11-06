@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libvdpau'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "libvdpau"
+version = "1.5"
+archive = "https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/1.5/libvdpau-1.5.tar.gz"
+sha256 = "66490802f30426d30ff9e8af35263bbbbaa23b52d0a2d797d06959c3d19638fd"
+strip_components = 1
+description = "Video Decode and Presentation API for UNIX"
+homepage = "https://freedesktop.org/wiki/Software/VDPAU/"
+license = "MIT"
+deps = ["libXext", "xorgproto"]
+patches = ["patches/dlclose.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

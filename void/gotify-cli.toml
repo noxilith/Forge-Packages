@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gotify-cli'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "gotify-cli"
+version = "2.2.3"
+archive = "https://github.com/gotify/cli/archive/v2.2.3.tar.gz"
+sha256 = "9446aa09a675bca2a8fd0448e6c45e28630e31f7578cc9e1587d09f24e59f66a"
+strip_components = 1
+description = "Command line interface for pushing messages to a Gotify server"
+homepage = "https://gotify.net"
+license = "MIT"
+
+[build]
+system = "go"

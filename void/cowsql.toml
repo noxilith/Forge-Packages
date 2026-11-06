@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cowsql'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "cowsql"
+version = "1.15.6"
+archive = "https://github.com/cowsql/cowsql/archive/refs/tags/v1.15.6.tar.gz"
+sha256 = "723f7f8ede3bcb19c10a6c85c18a23ee34c6874cb4cf104c434bd69d6a916882"
+strip_components = 1
+description = "Embeddable, replicated and fault tolerant SQL engine"
+homepage = "https://github.com/cowsql/cowsql"
+license = "LGPL-3.0-only, LGPL-3.0-linking-exception"
+deps = ["libuv", "raft"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-example"]
+tools = ["pkg-config"]

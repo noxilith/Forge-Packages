@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'goocanvas'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "goocanvas"
+version = "2.0.4"
+archive = "https://download.gnome.org/sources/goocanvas/2.0/goocanvas-2.0.4.tar.xz"
+sha256 = "c728e2b7d4425ae81b54e1e07a3d3c8a4bd6377a63cffa43006045bceaa92e90"
+strip_components = 1
+description = "Canvas widget for GTK+ that uses the cairo 2D library for drawing"
+homepage = "https://wiki.gnome.org/GooCanvas"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "glib", "gtk+3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

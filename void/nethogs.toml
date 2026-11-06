@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nethogs'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "nethogs"
+version = "0.8.8"
+archive = "https://github.com/raboof/nethogs/archive/v0.8.8.tar.gz"
+sha256 = "111ade20cc545e8dfd7ce4e293bd6b31cd1678a989b6a730bd2fa2acc6254818"
+strip_components = 1
+description = "Small net top tool grouping bandwidth by process"
+homepage = "https://github.com/raboof/nethogs"
+license = "GPL-2.0-or-later"
+deps = ["libpcap"]
+
+[build]
+system = "make"

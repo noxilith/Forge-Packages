@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'dlayer'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "dlayer"
+version = "0.3.1"
+archive = "https://github.com/orisano/dlayer/archive/v0.3.1.tar.gz"
+sha256 = "6d091744618e03d1490de97eb0a41d89b70cedc4f242c004f4f2f4c7d77d859d"
+strip_components = 1
+description = "Dlayer is a docker layer analyzer"
+homepage = "https://github.com/orisano/dlayer"
+license = "MIT"
+
+[build]
+system = "go"

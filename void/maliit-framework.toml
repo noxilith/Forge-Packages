@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'maliit-framework'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: doxygen, qt5
+[package]
+name = "maliit-framework"
+version = "2.3.0"
+archive = "https://github.com/maliit/framework/archive/refs/tags/2.3.0.tar.gz"
+sha256 = "bfc23919ac8b960243f85e8228ad7dfc28d557b52182a0b5a2a216a5c6a8057c"
+strip_components = 1
+description = "Core libraries of Maliit and server"
+homepage = "https://maliit.github.io"
+license = "LGPL-2.1-only"
+deps = ["glib", "libXcomposite", "libXdamage", "libXext", "libXfixes", "libxcb", "libxkbcommon", "wayland", "wayland-protocols"]
+
+[build]
+system = "cmake"
+configure_args = ["-Denable-examples=ON", "-Denable-tests=OFF", "-Denable-dbus-activation=ON", "-Denable-wayland-gtk=ON"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-en'. Review before relying on it.
+[package]
+name = "aspell-en"
+version = "2020.12.07"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/en/aspell6-en-2020.12.07-0.tar.bz2"
+sha256 = "4c8f734a28a088b88bb6481fcf972d0b2c3dc8da944f7673283ce487eac49fb3"
+strip_components = 1
+description = "English dictionary for aspell"
+homepage = "http://aspell.net/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

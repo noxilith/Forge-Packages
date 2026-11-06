@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'giblib'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_install_args
+[package]
+name = "giblib"
+version = "1.2.4"
+archive = "https://ftp.debian.org/debian/pool/main/g/giblib/giblib_1.2.4.orig.tar.gz"
+sha256 = "e437756ce3ded019946fb3d979991cda7604bc345dbb1338b17655caff65a3d3"
+strip_components = 1
+description = "Programming utility library"
+homepage = "http://freshmeat.sourceforge.net/projects/giblib"
+license = "MIT"
+deps = ["freetype", "imlib2", "libX11", "libXext"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'iio-sensor-proxy'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "iio-sensor-proxy"
+version = "3.9"
+archive = "https://gitlab.freedesktop.org/hadess/iio-sensor-proxy/-/archive/3.9/iio-sensor-proxy-3.9.tar.gz"
+sha256 = "af5edd307dcfa52dc3a242d13b7cc756e90a71640caf332efbad960e21649ae4"
+strip_components = 1
+description = "IIO accelerometer sensor to input device proxy"
+homepage = "https://gitlab.freedesktop.org/hadess/iio-sensor-proxy"
+license = "GPL-3.0-or-later"
+deps = ["libgudev", "polkit"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgeoclue-user=_geoclue2"]
+tools = ["pkg-config"]
+deps = ["glib", "libxml2"]

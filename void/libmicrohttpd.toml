@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libmicrohttpd'. Review before relying on it.
+[package]
+name = "libmicrohttpd"
+version = "1.0.10"
+archive = "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.10.tar.gz"
+sha256 = "04bfe8ef75db7d629a33de767599765cecadc56274a39822d5d081030d577685"
+strip_components = 1
+description = "Library embedding HTTP server functionality"
+homepage = "https://www.gnu.org/software/libmicrohttpd/"
+license = "LGPL-2.1-or-later"
+deps = ["gnutls"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-https", "--enable-messages", "mhd_cv_works_func_epoll_create=yes", "mhd_cv_works_func_eventfd=yes"]
+tools = ["pkg-config"]

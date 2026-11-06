@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xinit'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "xinit"
+version = "1.4.4"
+archive = "https://www.x.org/releases/individual/app/xinit-1.4.4.tar.xz"
+sha256 = "40a47c7a164c7f981ce3787b4b37f7e411fb43231dcde543d70094075dacfef9"
+strip_components = 1
+description = "X init program"
+homepage = "https://gitlab.freedesktop.org/xorg/app/xinit"
+license = "MIT"
+deps = ["libX11"]
+patches = ["patches/06_move_serverauthfile_into_tmp.diff", "patches/fs25361.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'compiz-plugins-experimental'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "compiz-plugins-experimental"
+version = "0.8.18"
+archive = "https://github.com/compiz-reloaded/compiz-plugins-experimental/archive/v0.8.18.tar.gz"
+sha256 = "23bed53ecfe72a293d86e87b9db4a42e2cb7a9a21c1b2c3a56024ee93a66c89e"
+strip_components = 1
+description = "Experimental plugins for Compiz Reloaded"
+homepage = "https://github.com/compiz-reloaded"
+license = "GPL-2.0-or-later"
+deps = ["compiz-core", "compiz-plugins-extra", "compiz-plugins-main", "glib", "libXScrnSaver", "libcompizconfig", "libnotify"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["compiz-bcop", "gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libgedit-gtksourceview'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "libgedit-gtksourceview"
+version = "299.7.0"
+archive = "https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview/-/archive/299.7.0/libgedit-gtksourceview-299.7.0.tar.gz"
+sha256 = "c08a70666d5aad156a3fe9dd178ddd3bdf07b3733a1d37dccae0e366585e91f0"
+strip_components = 1
+description = "Source code editing widget"
+homepage = "https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+3", "libgedit-amtk", "libgedit-gfls", "libxml2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgtk_doc=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

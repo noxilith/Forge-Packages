@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'aloadimage'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: arcan
+[package]
+name = "aloadimage"
+version = "0.7.1"
+archive = "https://codeberg.org/letoram/arcan/archive/0.7.1.tar.gz"
+sha256 = "b015dba937a5dc3ef525d09d07cd59f8aeeb8173e37a2f514ff5d19f7bc1ed0c"
+strip_components = 1
+description = "Image viewer for Arcan"
+homepage = "https://arcan-fe.com/"
+license = "BSD-3-Clause"
+deps = ["libseccomp"]
+
+[build]
+system = "cmake"
+subdir = "src/tools/aloadimage"
+tools = ["pkg-config"]

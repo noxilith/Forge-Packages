@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kodi-addon-pvr-hts'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kodi
+[package]
+name = "kodi-addon-pvr-hts"
+version = "21.2.6"
+archive = "https://github.com/kodi-pvr/pvr.hts/archive/21.2.6-Omega.tar.gz"
+sha256 = "c98e29433bf4a007662b20279748dccd95da7817ab73b7e78c0b45fbe31c22b1"
+strip_components = 1
+description = "Tvheadend HTSP client addon for Kodi"
+homepage = "https://github.com/kodi-pvr/pvr.hts"
+license = "GPL-2.0-or-later"
+deps = ["kodi-platform", "p8-platform"]
+patches = ["patches/gcc12.patch"]
+
+[build]
+system = "cmake"

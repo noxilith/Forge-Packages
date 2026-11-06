@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'kubecfg'. Review before relying on it.
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "kubecfg"
+version = "0.22.0"
+archive = "https://github.com/bitnami/kubecfg/archive/v0.22.0.tar.gz"
+sha256 = "1a27df34f815069c843da18430bca2ae0aa7d3156ea17c5bd4efcfa23014b768"
+strip_components = 1
+description = "Tool for managing Kubernetes resources as code"
+homepage = "https://github.com/bitnami/kubecfg"
+license = "Apache-2.0"
+
+[build]
+system = "go"

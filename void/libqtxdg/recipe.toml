@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libqtxdg'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-svg
+[package]
+name = "libqtxdg"
+version = "4.4.0"
+archive = "https://github.com/lxqt/libqtxdg/archive/4.4.0.tar.gz"
+sha256 = "1e59690f5e74b2a23ec91564e8c5d03baffa8a3c6243d935c0f299a54d2e44ea"
+strip_components = 1
+description = "Qt implementation of freedesktop.org XDG specifications"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "qt6-base"]
+patches = ["patches/qt610.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["lxqt-build-tools"]

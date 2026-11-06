@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'trousers'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+[package]
+name = "trousers"
+version = "0.3.15"
+archive = "https://downloads.sourceforge.net/sourceforge/trousers/trousers-0.3.15.tar.gz"
+sha256 = "1e5be93e518372acf1d92d2f567d01a46fdb0b730487e544e6fb896c59cac77f"
+strip_components = 1
+description = "Trusted Computing Software Stack for the TPM"
+homepage = "http://trousers.sourceforge.net/"
+license = "BSD-3-Clause"
+deps = ["openssl"]
+patches = ["patches/musl-getpwent_r.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

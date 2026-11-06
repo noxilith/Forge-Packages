@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cyanrip'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "cyanrip"
+version = "0.9.3.1"
+archive = "https://github.com/cyanreg/cyanrip/archive/refs/tags/v0.9.3.1.tar.gz"
+sha256 = "01b2679eb5b74b03af0b1232877c2267d141c32be1574a27e7eac19f86cb109b"
+strip_components = 1
+description = "Bule-ish CD ripper"
+homepage = "https://github.com/cyanreg/cyanrip"
+license = "LGPL-2.1-or-later"
+deps = ["curl", "libcdio", "libcdio-paranoia", "libmusicbrainz5"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

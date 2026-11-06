@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fdm'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: tdb
+[package]
+name = "fdm"
+version = "2.2"
+archive = "https://github.com/nicm/fdm/releases/download/2.2/fdm-2.2.tar.gz"
+sha256 = "53aad117829834e21c1b9bf20496a1aa1c0e0fb98fe7735e1e73314266fb6c16"
+strip_components = 1
+description = "Program to fetch and deliver mail"
+homepage = "https://github.com/nicm/fdm"
+license = "ISC"
+deps = ["openssl", "pcre2", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_func_strlcpy=no", "ac_cv_func_strlcat=no", "--enable-pcre2"]
+tools = ["bison"]

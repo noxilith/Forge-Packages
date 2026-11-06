@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'pixiewps'. Review before relying on it.
+[package]
+name = "pixiewps"
+version = "1.4.2"
+archive = "https://github.com/wiire-a/pixiewps/archive/v1.4.2.tar.gz"
+sha256 = "c73ffd58c461a88504cca36e5a29981dc68b78f8fdd31d7c546bc204fad7c435"
+strip_components = 1
+description = "Tool used to bruteforce offline the WPS PIN"
+homepage = "https://github.com/wiire-a/pixiewps/releases"
+license = "GPL-3.0-only"
+
+[build]
+system = "make"

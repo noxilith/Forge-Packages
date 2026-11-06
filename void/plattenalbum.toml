@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'plattenalbum'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-mpd2
+[package]
+name = "plattenalbum"
+version = "2.5.0"
+archive = "https://github.com/SoongNoonien/plattenalbum/archive/refs/tags/v2.5.0.tar.gz"
+sha256 = "20e400a4b30edc5db9ee4942ffe386b4fede5695623b4af28f999317a473b1d5"
+strip_components = 1
+description = "Simple music browser for MPD"
+homepage = "https://github.com/SoongNoonien/plattenalbum/"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "libadwaita", "mpd", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib"]

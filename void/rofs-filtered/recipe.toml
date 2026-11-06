@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rofs-filtered'. Review before relying on it.
+[package]
+name = "rofs-filtered"
+version = "1.7"
+archive = "https://github.com/gburca/rofs-filtered/archive/rel-1.7.tar.gz"
+sha256 = "d66066dfd0274a2fb7b71dd929445377dd23100b9fa43e3888dbe3fc7e8228e8"
+strip_components = 1
+description = "Filtered read only filesystem for FUSE"
+homepage = "https://github.com/gburca/rofs-filtered"
+license = "GPL-2.0-or-later"
+deps = ["fuse"]
+patches = ["patches/fix-cflags.patch", "patches/sysconf_dir-is-string.patch"]
+
+[build]
+system = "cmake"

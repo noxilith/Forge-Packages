@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kguiaddons'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kguiaddons"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kguiaddons-5.116.0.tar.xz"
+sha256 = "5c10d56cb02cb60710c2412d4a3d02671cad74f25d1e9889c6c741f6e833fce6"
+strip_components = 1
+description = "KDE frameworks - Addons to QtGui"
+homepage = "https://invent.kde.org/frameworks/kguiaddons"
+license = "LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-or-later"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=ON", "-DBUILD_GEO_SCHEME_HANDLER=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "kcoreaddons"]

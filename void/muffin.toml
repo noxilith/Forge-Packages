@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'muffin'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool, libcanberra, mesa
+[package]
+name = "muffin"
+version = "6.6.3"
+archive = "https://github.com/linuxmint/muffin/archive/6.6.3.tar.gz"
+sha256 = "af1aa8e68699895a841415c007c7f3f48efc06f07c50d219d30f8131a981248e"
+strip_components = 1
+description = "Cinnamon window manager based on Mutter"
+homepage = "https://github.com/linuxmint/muffin"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["at-spi2-core", "cairo", "cinnamon-desktop", "dbus", "elogind", "eudev", "fribidi", "gdk-pixbuf", "glib", "graphene", "gtk+3", "json-glib", "libICE", "libSM", "libX11", "libXau", "libXcomposite", "libXcursor", "libXdamage", "libXext", "libXfixes", "libXi", "libXinerama", "libXrandr", "libXrender", "libXtst", "libglvnd", "libgudev", "libinput", "libwacom", "libxcb", "libxkbcommon", "libxkbfile", "mutter", "pango", "pipewire", "startup-notification", "upower", "wayland", "xkeyboard-config", "zenity"]
+
+[build]
+system = "meson"
+configure_args = ["-Dopengl=true", "-Degl=true", "-Dglx=true", "-Dgles2=true", "-Dudev=true", "-Dsm=true", "-Dlibwacom=true", "-Dpango_ft2=true", "-Dstartup_notification=true", "-Dremote_desktop=true", "-Dintrospection=true", "-Dprofiler=false", "-Ddebug=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "wayland-protocols", "xorg-server-xwayland"]

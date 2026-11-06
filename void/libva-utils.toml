@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libva-utils'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libva-utils"
+version = "2.24.0"
+archive = "https://github.com/intel/libva-utils/archive/refs/tags/2.24.0.tar.gz"
+sha256 = "bf959a1ced3cde8176a7ff50ad358ee98e93301ac068581a8b2617c5b83afcb3"
+strip_components = 1
+description = "Video Acceleration (VA) API - Utilities"
+homepage = "https://github.com/intel/libva-utils"
+license = "MIT"
+deps = ["libXext", "libXfixes", "libdrm", "libva", "wayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

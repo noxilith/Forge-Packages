@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libcddb'. Review before relying on it.
+[package]
+name = "libcddb"
+version = "1.3.2"
+archive = "https://downloads.sourceforge.net/sourceforge/libcddb/libcddb-1.3.2.tar.gz"
+sha256 = "68e9b53918b9bea727fb2db78936526671c039dcd7396cb82ecd6854e866048c"
+strip_components = 1
+description = "Library to access data on a CDDB server"
+homepage = "http://libcddb.sourceforge.net/"
+license = "LGPL-2.0-or-later"
+patches = ["patches/gcc14.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libmill'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libmill"
+version = "1.18"
+archive = "https://github.com/sustrik/libmill/archive/1.18.tar.gz"
+sha256 = "ff6903cd05f45c4cc050921d03201a93d2723ab59c480eb924f8f1ca8c6f0614"
+strip_components = 1
+description = "Go-style concurrency in C"
+homepage = "http://libmill.org/"
+license = "MIT"
+patches = ["patches/gcc9.patch"]
+
+[build]
+system = "autotools"

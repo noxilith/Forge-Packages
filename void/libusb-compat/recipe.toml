@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libusb-compat'. Review before relying on it.
+[package]
+name = "libusb-compat"
+version = "0.1.8"
+archive = "https://downloads.sourceforge.net/sourceforge/libusb/libusb-compat-0.1.8.tar.bz2"
+sha256 = "b692dcf674c070c8c0bee3c8230ce4ee5903f926d77dc8b968a4dd1b70f9b05c"
+strip_components = 1
+description = "libusb-0.1 compatibility library"
+homepage = "http://libusb.sourceforge.net/"
+license = "LGPL-2.1-or-later"
+deps = ["libusb"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

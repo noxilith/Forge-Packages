@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'duff'. Review before relying on it.
+[package]
+name = "duff"
+version = "0.5.2"
+archive = "https://downloads.sourceforge.net/sourceforge/duff/duff-0.5.2.tar.gz"
+sha256 = "15b721f7e0ea43eba3fd6afb41dbd1be63c678952bf3d80350130a0e710c542e"
+strip_components = 1
+description = "Duplicate file finder"
+homepage = "http://duff.dreda.org/"
+license = "Zlib"
+
+[build]
+system = "autotools"

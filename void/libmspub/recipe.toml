@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libmspub'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "libmspub"
+version = "0.1.4"
+archive = "https://dev-www.libreoffice.org/src/libmspub-0.1.4.tar.xz"
+sha256 = "ef36c1a1aabb2ba3b0bedaaafe717bf4480be2ba8de6f3894be5fd3702b013ba"
+strip_components = 1
+description = "Library for parsing the mspub file structure"
+homepage = "http://cgit.freedesktop.org/libreoffice/libmspub/commit/"
+license = "MPL-2.0"
+deps = ["libicu78", "librevenge", "zlib"]
+patches = ["patches/fix-MSPUBMetaData_cstdint.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

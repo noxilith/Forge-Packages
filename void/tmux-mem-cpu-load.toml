@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tmux-mem-cpu-load'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tmux-mem-cpu-load"
+version = "3.8.2"
+archive = "https://github.com/thewtex/tmux-mem-cpu-load/archive/v3.8.2.tar.gz"
+sha256 = "c433e396050a821f915f3fd1e7d932b46204def8d59a46fce4f486b1b4ebef2e"
+strip_components = 1
+description = "A CPU, RAM and load monitor for use with tmux"
+homepage = "https://github.com/thewtex/tmux-mem-cpu-load"
+license = "Apache-2.0"
+deps = ["tmux"]
+
+[build]
+system = "cmake"

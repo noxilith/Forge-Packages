@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'OpenXcom'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: SDL_gfx, SDL_image, SDL_mixer
+[package]
+name = "OpenXcom"
+version = "1.0"
+archive = "https://github.com/SupSuper/OpenXcom/archive/v1.0.tar.gz"
+sha256 = "45acb280010a01d60506b1c5f2951ae501c012cc6161aac470bd15c1e6981246"
+strip_components = 1
+description = "Reimplementation of the original X-Com game"
+homepage = "http://openxcom.org/"
+license = "GPL-3.0-or-later"
+deps = ["glu", "yaml-cpp"]
+patches = ["patches/fix-gcc6-ambigous_abs.patch", "patches/openxcom-cmath-algorithm-fixes.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-silent-rules", "--disable-werror"]
+tools = ["pkg-config"]
+deps = ["xmlto"]

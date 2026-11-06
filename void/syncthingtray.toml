@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'syncthingtray'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: boost, qt6-svg, qt6-tools, qtforkawesome
+[package]
+name = "syncthingtray"
+version = "2.1.9"
+archive = "https://github.com/Martchus/syncthingtray/archive/refs/tags/v2.1.9.tar.gz"
+sha256 = "1ea90b8e92d19989f6e3fd900027b4e11c8e28bf2e1994834df7aeab8924cbca"
+strip_components = 1
+description = "Tray application for Syncthing"
+homepage = "https://martchus.github.io/syncthingtray/"
+license = "GPL-2.0-or-later"
+deps = ["cpp-utilities", "kf6-kconfig", "kf6-kio", "kf6-kirigami", "libplasma", "qt6-base", "qt6-declarative", "qtutilities", "syncthing"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILTIN_TRANSLATIONS=ON", "-DSYSTEMD_SUPPORT=OFF", "-DBUILD_SHARED_LIBS=ON", "-DQT_PACKAGE_PREFIX=Qt6", "-DKF_PACKAGE_PREFIX=KF6"]
+tools = ["perl", "pkg-config"]
+deps = ["extra-cmake-modules", "kf6-kpackage"]

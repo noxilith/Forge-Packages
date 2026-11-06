@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'testdisk'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses, util-linux-common
+[package]
+name = "testdisk"
+version = "7.2"
+archive = "https://www.cgsecurity.org/testdisk-7.2.tar.bz2"
+sha256 = "f8343be20cb4001c5d91a2e3bcd918398f00ae6d8310894a5a9f2feb813c283f"
+strip_components = 1
+description = "Powerful free data recovery software"
+homepage = "https://www.cgsecurity.org/"
+license = "GPL-2.0-or-later"
+deps = ["e2fsprogs", "libjpeg-turbo", "ntfs-3g", "sudo"]
+patches = ["patches/add-missing-include.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-ewf", "--enable-sudo"]

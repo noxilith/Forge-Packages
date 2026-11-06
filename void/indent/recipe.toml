@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'indent'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, pre_configure
+[package]
+name = "indent"
+version = "2.2.13"
+archive = "https://ftp.gnu.org/gnu/indent/indent-2.2.13.tar.gz"
+sha256 = "9e64634fc4ce6797b204bcb8897ce14fdd0ab48ca57696f78767c59cae578095"
+strip_components = 1
+description = "Indent can be used to make code easier to read"
+homepage = "https://www.gnu.org/software/indent/"
+license = "GPL-3.0-or-later"
+patches = ["patches/fix-locale_h.patch"]
+
+[build]
+system = "autotools"
+deps = ["texinfo"]

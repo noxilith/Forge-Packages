@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'spotify-qt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "spotify-qt"
+version = "4.0.4"
+archive = "https://github.com/kraxarn/spotify-qt/archive/v4.0.4.tar.gz"
+sha256 = "10656f4c980c8d4b90f11879a6a58fe542e8b0ef1212297a700bcde3d9a6e396"
+strip_components = 1
+description = "Lightweight Spotify client using Qt"
+homepage = "https://github.com/kraxarn/spotify-qt"
+license = "GPL-3.0-or-later"
+deps = ["qt6-base"]
+patches = ["patches/disable-crash-handler.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gmetronome'. Review before relying on it.
+[package]
+name = "gmetronome"
+version = "0.5.1"
+archive = "https://gitlab.gnome.org/dqpb/gmetronome/-/releases/0.5.1/downloads/gmetronome-0.5.1.tar.bz2"
+sha256 = "13ac65d21de16b01cfb17ef485351429d9546356238b9c063aaa9e7a68f3e3a8"
+strip_components = 1
+description = "Free software metronome and tempo measurement tool"
+homepage = "https://gitlab.gnome.org/dqpb/gmetronome"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "glib", "gtk+3", "gtkmm", "pulseaudio"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

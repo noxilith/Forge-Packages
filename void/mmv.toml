@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mmv'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "mmv"
+version = "2.10"
+archive = "https://github.com/rrthomas/mmv/releases/download/v2.10/mmv-2.10.tar.gz"
+sha256 = "2bbba14c099b512b4a7e9effacec53caa06998069d108a5669ff424ffc879d03"
+strip_components = 1
+description = "Utility for wildcard renaming, copying, etc"
+homepage = "https://github.com/rrthomas/mmv"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["help2man"]

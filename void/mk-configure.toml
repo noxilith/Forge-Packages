@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mk-configure'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_build, pre_check
+# settings not translated: make_install_args, make_cmd
+# needs, but Forge has no recipe for yet: bmake
+[package]
+name = "mk-configure"
+version = "0.40.3"
+archive = "https://github.com/cheusov/mk-configure/archive/mk-configure-0.40.3.tar.gz"
+sha256 = "babb7144cc343210a9a10cdf1fc1935896c20a34b554e89f3927e18cfb994a18"
+strip_components = 1
+description = "Lightweight replacement for GNU autotools"
+homepage = "https://github.com/cheusov/mk-configure/"
+license = "BSD-2-Clause, BSD-3-Clause"
+deps = ["bmkdep"]
+
+[build]
+system = "make"
+deps = ["tar", "texinfo"]

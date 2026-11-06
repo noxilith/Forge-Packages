@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xar'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: bzip2
+[package]
+name = "xar"
+version = "1.6.1"
+archive = "https://github.com/mackyle/xar/archive/refs/tags/xar-1.6.1.tar.gz"
+sha256 = "5e7d50dab73f5cb1713b49fa67c455c2a0dd2b0a7770cbc81b675e21f6210e25"
+strip_components = 1
+description = "Archiver for the eXtensible ARchiver format"
+homepage = "https://github.com/mackyle/xar"
+license = "BSD-3-Clause"
+deps = ["acl", "e2fsprogs", "libxml2", "openssl", "zlib"]
+patches = ["patches/autoconf.patch", "patches/configure_disable_rpath.patch", "patches/ext2.patch", "patches/implicit-function-decl.patch", "patches/openssl1.1.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_sizeof_uid_t=4"]
+subdir = "xar"

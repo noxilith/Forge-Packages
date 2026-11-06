@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'isync'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ca-certificates, db
+[package]
+name = "isync"
+version = "1.5.1"
+archive = "https://downloads.sourceforge.net/sourceforge/isync/isync-1.5.1.tar.gz"
+sha256 = "28cc90288036aa5b6f5307bfc7178a397799003b96f7fd6e4bd2478265bb22fa"
+strip_components = 1
+description = "IMAP and MailDir mailbox synchronizer"
+homepage = "http://isync.sourceforge.net/"
+license = "GPL-2.0-or-later WITH custom:LicenseRef-isync-GPL-exception"
+deps = ["libsasl", "openssl", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'enblend-enfuse'. Review before relying on it.
+# hooks not translated: pre_build, pre_configure
+# needs, but Forge has no recipe for yet: perl-TimeDate
+[package]
+name = "enblend-enfuse"
+version = "4.2"
+archive = "https://downloads.sourceforge.net/sourceforge/enblend/enblend-enfuse/enblend-enfuse-4.2/enblend-enfuse-4.2.tar.gz"
+sha256 = "8703e324939ebd70d76afd350e56800f5ea2c053a040a5f5218b2a1a4300bd48"
+strip_components = 1
+description = "Tools for for combining multiple images"
+homepage = "http://enblend.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["gperftools", "gsl", "lcms2", "libjpeg-turbo", "libpng", "openexr", "tiff", "vigra"]
+patches = ["patches/boost-fallthrough.patch", "patches/no-latex.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-openmp", "--with-tcmalloc", "--with-latex=false", "HELP2MAN=:"]
+tools = ["perl", "pkg-config"]

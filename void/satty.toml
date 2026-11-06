@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'satty'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "satty"
+version = "0.21.1"
+archive = "https://github.com/Satty-org/Satty/archive/refs/tags/v0.21.1.tar.gz"
+sha256 = "890384695583e649074f453f2e694fd2cae6960c189363f849e2ecd2a27f8b79"
+strip_components = 1
+description = "Modern Screenshot Annotation"
+homepage = "https://github.com/Satty-org/Satty"
+license = "MPL-2.0"
+deps = ["fontconfig", "glib", "gtk4", "libadwaita", "libepoxy"]
+
+[build]
+system = "cargo"
+configure_args = ["--features", "ci-release"]
+tools = ["pkg-config"]

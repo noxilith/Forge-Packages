@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'himalaya'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "himalaya"
+version = "1.1.0"
+archive = "https://github.com/pimalaya/himalaya/archive/refs/tags/v1.1.0.tar.gz"
+sha256 = "bc5ee10ebdb23ea205215650070373dc591f083a96b1d6d038aa23a105256f94"
+strip_components = 1
+description = "CLI email client"
+homepage = "https://github.com/pimalaya/himalaya"
+license = "MIT"
+deps = ["libgit2-1.8"]
+
+[build]
+system = "cargo"
+configure_args = ["--features=oauth2"]
+tools = ["pkg-config"]

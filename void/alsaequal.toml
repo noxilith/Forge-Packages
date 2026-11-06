@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'alsaequal'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: caps, ladspa-sdk
+[package]
+name = "alsaequal"
+version = "0.7.1"
+archive = "https://github.com/bassdr/alsaequal/archive/v0.7.1.tar.gz"
+sha256 = "25a3da01fd471015ecefe679bcf157be47af307cc11ac5e5888157291eb8ce54"
+strip_components = 1
+description = "Real-time adjustable equalizer plugin for ALSA"
+homepage = "https://github.com/bassdr/alsaequal"
+license = "LGPL-2.1-or-later"
+deps = ["alsa-lib"]
+
+[build]
+system = "make"

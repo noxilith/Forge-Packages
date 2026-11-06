@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'io.elementary.terminal'. Review before relying on it.
+[package]
+name = "io.elementary.terminal"
+version = "6.0.1"
+archive = "https://github.com/elementary/terminal/archive/6.0.1.tar.gz"
+sha256 = "de741ad5deadb927243a7007be0f5d3bb4070f780362d59ded600692064b0eca"
+strip_components = 1
+description = "Terminal from elementary OS for the 21st century"
+homepage = "https://github.com/elementary/terminal"
+license = "LGPL-3.0-only"
+deps = ["desktop-file-utils", "granite", "gsettings-desktop-schemas", "libhandy1", "libnotify", "vte3"]
+patches = ["patches/meson-0.61.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dubuntu-bionic-patched-vte=false"]
+tools = ["pkg-config"]
+deps = ["AppStream", "gettext", "glib", "vala"]

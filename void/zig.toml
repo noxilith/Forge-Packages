@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'zig'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: ncurses, zstd
+[package]
+name = "zig"
+version = "0.13.0"
+archive = "https://ziglang.org/download/0.13.0/zig-0.13.0.tar.xz"
+sha256 = "06c73596beeccb71cc073805bdb9c0e05764128f16478fa53bf17dfabc1d4318"
+strip_components = 1
+description = "Programming language designed for robustness, optimality, and clarity"
+homepage = "https://ziglang.org"
+license = "MIT"
+deps = ["libxml2", "llvm18", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DZIG_TARGET_MCPU=baseline"]

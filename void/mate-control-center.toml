@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mate-control-center'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: dbus-glib, itstool, libcanberra
+[package]
+name = "mate-control-center"
+version = "1.28.1"
+archive = "https://github.com/mate-desktop/mate-control-center/archive/refs/tags/v1.28.1.tar.gz"
+sha256 = "0890c1bafc10a77ae7aea4edc37951fa69cbce2552ce199a7e49cb55de8af71b"
+strip_components = 1
+description = "Control Center for MATE"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["accountsservice", "dconf", "elogind", "libXScrnSaver", "libXt", "libayatana-appindicator", "libgtop", "libmatekbd", "librsvg", "libxml2", "marco", "mate-desktop", "mate-icon-theme", "mate-menus", "mate-settings-daemon", "polkit", "udisks2"]
+
+[build]
+system = "meson"
+configure_args = ["-Daccountsservice=enabled", "-Dlibappindicator=enabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk4"]

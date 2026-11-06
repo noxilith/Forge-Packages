@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xmandump'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "xmandump"
+version = "0.2.8"
+archive = "https://github.com/void-linux/xmandump/archive/v0.2.8.tar.gz"
+sha256 = "17c4ea9680b132d916d51fa73648c81d9732dd13c05441a57b4db5b2d145aef2"
+strip_components = 1
+description = "Dump all manpages in an XBPS package for use with man.cgi"
+homepage = "https://github.com/void-linux/xmandump"
+license = "ISC"
+
+[build]
+system = "go"

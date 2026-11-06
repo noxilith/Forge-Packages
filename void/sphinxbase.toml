@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sphinxbase'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "sphinxbase"
+version = "0.8"
+archive = "https://downloads.sourceforge.net/sourceforge/cmusphinx/sphinxbase/0.8/sphinxbase-0.8.tar.gz"
+sha256 = "55708944872bab1015b8ae07b379bf463764f469163a8fd114cbb16c5e486ca8"
+strip_components = 1
+description = "CMU Sphinx common libraries and utilities"
+homepage = "http://cmusphinx.sourceforge.net"
+license = "GPL-2"
+deps = ["libsamplerate", "libsndfile", "pulseaudio"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-fixed", "--disable-static", "--without-python"]
+tools = ["bison", "pkg-config"]

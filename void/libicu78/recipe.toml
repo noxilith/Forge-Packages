@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libicu78'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_configure
+# settings not translated: CFLAGS, CXXFLAGS
+[package]
+name = "libicu78"
+version = "78.3"
+archive = "https://github.com/unicode-org/icu/releases/download/release-78.3/icu4c-78.3-sources.tgz"
+sha256 = "3a2e7a47604ba702f345878308e6fefeca612ee895cf4a5f222e7955fabfe0c0"
+strip_components = 1
+description = "International Components for Unicode v78"
+homepage = "https://home.unicode.org/"
+license = "ICU"
+patches = ["patches/32bit.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-data-packaging=archive", "--enable-static"]
+subdir = "source"
+tools = ["pkg-config"]

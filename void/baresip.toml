@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'baresip'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg6, jack, libvpx
+[package]
+name = "baresip"
+version = "4.11.0"
+archive = "https://github.com/baresip/baresip/archive/refs/tags/v4.11.0.tar.gz"
+sha256 = "e170ad5857994dfed0c84c4c04eb904fa410f3ec2d5a6c789b50b3fda47ba98c"
+strip_components = 1
+description = "Modular SIP User-Agent with audio and video support"
+homepage = "https://github.com/baresip/baresip"
+license = "BSD-3-Clause"
+deps = ["SDL2", "codec2", "fdk-aac", "gst-plugins-base1", "gstreamer1", "gtk+3", "libX11", "libXext", "libpng", "libsndfile", "mosquitto", "openssl", "opus", "re", "spandsp", "v4l-utils", "webrtc-audio-processing"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["glib"]

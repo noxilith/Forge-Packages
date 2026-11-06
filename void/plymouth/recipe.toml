@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'plymouth'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: void-artwork
+[package]
+name = "plymouth"
+version = "22.02.122"
+archive = "https://www.freedesktop.org/software/plymouth/releases/plymouth-22.02.122.tar.xz"
+sha256 = "100551442221033ce868c447ad6c74d831d209c18ae232b98ae0207e34eadaeb"
+strip_components = 1
+description = "Graphical boot animation and logger"
+homepage = "https://www.freedesktop.org/wiki/Software/Plymouth/"
+license = "GPL-2.0-or-later"
+deps = ["libdrm", "libpng"]
+patches = ["patches/fix-glibc-2.36.patch", "patches/musl-rpmatch.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-system-root-install=no", "--without-rhgb-compat-link", "--enable-systemd-integration=no", "--localstatedir=/", "--disable-documentation"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libao'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: sndio
+[package]
+name = "libao"
+version = "1.2.2"
+archive = "https://github.com/xiph/libao/archive/1.2.2.tar.gz"
+sha256 = "df8a6d0e238feeccb26a783e778716fb41a801536fe7b6fce068e313c0e2bf4d"
+strip_components = 1
+description = "Cross-platform audio output library"
+homepage = "https://xiph.org/ao/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "pulseaudio"]
+patches = ["patches/nanosleep-missing-include.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-alsa-mmap"]
+tools = ["pkg-config"]

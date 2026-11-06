@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pidgin-sipe'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: dbus-glib, intltool
+[package]
+name = "pidgin-sipe"
+version = "1.25.0"
+archive = "https://downloads.sourceforge.net/sourceforge/sipe/sipe/pidgin-sipe-1.25.0.tar.xz"
+sha256 = "738b121b11f2b3f1744150c00cb381222eb6cf67161a7742797eb4f03e64a2ba"
+strip_components = 1
+description = "SIP/SIMPLE plugin for Pidgin IM"
+homepage = "http://sipe.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["farstream", "gst-libav", "gst-plugins-bad1", "gst-plugins-base1", "gst-plugins-good1", "gst-plugins-ugly1", "libnice", "libxml2", "openssl", "pidgin"]
+patches = ["patches/time64.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

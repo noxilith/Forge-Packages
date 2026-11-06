@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'scaleway-cli'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "scaleway-cli"
+version = "2.65.1"
+archive = "https://github.com/scaleway/scaleway-cli/archive/v2.65.1.tar.gz"
+sha256 = "051700be1322e38aa6fb01330e945dc2d538912ed8647a2ea197dfc5c2b50fe4"
+strip_components = 1
+description = "Interact with the Scaleway API from the command line"
+homepage = "https://github.com/scaleway/scaleway-cli"
+license = "MIT"
+
+[build]
+system = "go"

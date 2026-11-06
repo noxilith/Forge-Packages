@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'usage'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "usage"
+version = "5.0.0"
+archive = "https://github.com/jdx/usage/archive/v5.0.0.tar.gz"
+sha256 = "ac903db2d2c0fcee17a285da60fcc292b90a2f51ff813121f73cf050c023daa1"
+strip_components = 1
+description = "Specification and CLI for defining CLI tools"
+homepage = "https://usage.jdx.dev"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

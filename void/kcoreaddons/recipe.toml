@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kcoreaddons'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kcoreaddons"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kcoreaddons-5.116.0.tar.xz"
+sha256 = "defbb4c068fcfccf7a08298ee6f7b88f9c2d3f34e4ae22b8f8e2df47dfb73174"
+strip_components = 1
+description = "Qt5 addon library with a collection of non-GUI utilities"
+homepage = "https://invent.kde.org/frameworks/kcoreaddons"
+license = "LGPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["shared-mime-info"]
+patches = ["patches/desktoptojson-usage-crossbuild.patch"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mangl'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "mangl"
+version = "1.1.5"
+archive = "https://github.com/zigalenarcic/mangl/archive/refs/tags/v1.1.5.tar.gz"
+sha256 = "8bbbadb66d1cb30d7e914e5b71993997e67c59103c55c8601410eeda35062157"
+strip_components = 1
+description = "Graphical man page viewer based on the mandoc library"
+homepage = "https://github.com/zigalenarcic/mangl"
+license = "BSD-2-Clause"
+deps = ["freetype", "glfw", "libglvnd", "zlib"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

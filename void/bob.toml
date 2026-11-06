@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'bob'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "bob"
+version = "4.1.7"
+archive = "https://github.com/MordechaiHadad/bob/archive/refs/tags/v4.1.7.tar.gz"
+sha256 = "ad9c8b7ba04e3eb006d1d3646107abfcf5615ee588c1deb7969a9cfca6267f76"
+strip_components = 1
+description = "Version manager for neovim"
+homepage = "https://github.com/MordechaiHadad/bob"
+license = "MIT"
+
+[build]
+system = "cargo"

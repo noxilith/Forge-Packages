@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'plasma-keyboard'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools, qt6-virtualkeyboard
+[package]
+name = "plasma-keyboard"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-keyboard-6.7.5.tar.xz"
+sha256 = "0dd91212308e6c6999db55b95b5b462cadc2766935272e9caf2f138b9a063788"
+strip_components = 1
+description = "Virtual Keyboard for Qt based desktops"
+homepage = "https://invent.kde.org/plasma/plasma-keyboard"
+license = "(GPL-2.0-only OR GPL-3.0-only OR custom:LicenseRef-KDE-Accepted-GPL) AND GPL-3.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR custom:LicenseRef-KDE-Accepted-LGPL)"
+deps = ["kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-ki18n", "kf6-kirigami", "libplasma", "qt6-base", "qt6-wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage", "plasma-wayland-protocols", "qt6-declarative", "wayland", "wayland-protocols"]

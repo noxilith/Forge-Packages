@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xdu'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xdu"
+version = "3.1"
+archive = "https://github.com/leahneukirchen/xdu/archive/v3.1.tar.gz"
+sha256 = "13035b0642b1042debf6c84d0963b3fd3914f76c8dfb9c8c6f852ee1451eea1f"
+strip_components = 1
+description = "Display the output of du(1) in an X window"
+homepage = "https://github.com/leahneukirchen/xdu"
+license = "MIT, X11"
+deps = ["libXaw"]
+
+[build]
+system = "make"

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'cheese'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libcanberra
+[package]
+name = "cheese"
+version = "44.1"
+archive = "https://download.gnome.org/sources/cheese/44/cheese-44.1.tar.xz"
+sha256 = "5f2185c4c99e54ddf2b8baf60c82819950e54952e132e8639875f3edcbf8f68e"
+strip_components = 1
+description = "GNOME tool to take pictures and videos from your webcam"
+homepage = "https://wiki.gnome.org/Apps/Cheese"
+license = "GPL-2.0-or-later"
+deps = ["clutter-gst3", "clutter-gtk", "desktop-file-utils", "gnome-desktop", "gnome-video-effects", "gst-plugins-good1", "libXtst", "libgee", "librsvg"]
+patches = ["patches/gcc14.patch", "patches/invalid-json.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gdk-pixbuf", "gettext", "glib", "gtk+3", "vala"]

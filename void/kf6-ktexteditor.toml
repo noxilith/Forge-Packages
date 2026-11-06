@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-ktexteditor'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-multimedia, qt6-tools
+[package]
+name = "kf6-ktexteditor"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/ktexteditor-6.30.0.tar.xz"
+sha256 = "d90f24e33a7aa0e6a179af253dfdeca0977992adb62bf1b6f7ad11537ab6e3e7"
+strip_components = 1
+description = "KDE Full text editor component"
+homepage = "https://invent.kde.org/frameworks/ktexteditor"
+license = "LGPL-2.1-or-later"
+deps = ["editorconfig", "kf6-karchive", "kf6-kauth", "kf6-kconfig", "kf6-kguiaddons", "kf6-ki18n", "kf6-kio", "kf6-kparts", "kf6-ktextwidgets", "kf6-kxmlgui", "kf6-sonnet", "kf6-syntax-highlighting", "qt6-speech"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base", "qt6-declarative"]

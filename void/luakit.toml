@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'luakit'. Review before relying on it.
+# settings not translated: make_build_args, conf_files
+# needs, but Forge has no recipe for yet: LuaJIT, libwebkit2gtk41, lua54-luafilesystem
+[package]
+name = "luakit"
+version = "2.4.0"
+archive = "https://github.com/luakit/luakit/archive/2.4.0.tar.gz"
+sha256 = "65f73939db561de21bba735bdf92c2b32d28c6610e3d114d1420a8477d531802"
+strip_components = 1
+description = "Fast, small, webkit based browser framework extensible by Lua"
+homepage = "https://luakit.github.io/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"
+tools = ["pkg-config"]

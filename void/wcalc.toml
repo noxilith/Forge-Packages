@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'wcalc'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libreadline8, mpfr
+[package]
+name = "wcalc"
+version = "2.5"
+archive = "https://downloads.sourceforge.net/sourceforge/w-calc/wcalc-2.5.tar.bz2"
+sha256 = "0e2c17c20f935328dcdc6cb4c06250a6732f9ee78adf7a55c01133960d6d28ee"
+strip_components = 1
+description = "Powerful arbitrary-precision calculator"
+homepage = "http://w-calc.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["gmp"]
+
+[build]
+system = "autotools"

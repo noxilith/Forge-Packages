@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qt6ct'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "qt6ct"
+version = "0.11"
+archive = "https://www.opencode.net/trialuser/qt6ct/-/archive/0.11/qt6ct-0.11.tar.gz"
+sha256 = "32cd06cb4e801362676194ec6c3378498c81eb9484c57870fee3f7d5952ebe1f"
+strip_components = 1
+description = "Qt6 Configuration Tool"
+homepage = "https://www.opencode.net/trialuser/qt6ct"
+license = "BSD-2-Clause"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"

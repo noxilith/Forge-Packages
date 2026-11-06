@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 's6-rc'. Review before relying on it.
+# 6 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: s6
+[package]
+name = "s6-rc"
+version = "0.6.1.1"
+archive = "https://skarnet.org/software/s6-rc/s6-rc-0.6.1.1.tar.gz"
+sha256 = "b54f226a35be1ee56a228bf1a4c39437f072bc64e69dbf356e733e606a86402d"
+strip_components = 1
+description = "Service manager of the s6 init system"
+homepage = "https://skarnet.org/software/s6-rc/"
+license = "ISC"
+deps = ["execline", "skalibs"]
+
+[build]
+system = "autotools"

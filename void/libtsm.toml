@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libtsm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "libtsm"
+version = "4.8.0"
+archive = "https://github.com/kmscon/libtsm/archive/refs/tags/v4.8.0.tar.gz"
+sha256 = "50811e9e94fc798eb5dcbaff20f81067c942ec47f329f91bbe4caeb35a61ff05"
+strip_components = 1
+description = "Terminal-emulator State Machine"
+homepage = "https://github.com/kmscon/libtsm"
+license = "MIT AND LGPL-2.1-or-later"
+deps = ["check", "libxkbcommon"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

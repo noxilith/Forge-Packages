@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xq-api'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, make_dirs, conf_files
+[package]
+name = "xq-api"
+version = "0.5.0"
+archive = "https://github.com/nilium/xq-api/archive/v0.5.0.tar.gz"
+sha256 = "087940a16830eaf821abfcb8c6e0daad47078b4859b9acf236464bfca809ed43"
+strip_components = 1
+description = "HTTP-based xbps repodata query API"
+homepage = "https://github.com/nilium/xq-api"
+license = "BSD-2-Clause"
+
+[build]
+system = "go"

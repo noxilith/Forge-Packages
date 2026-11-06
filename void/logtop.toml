@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'logtop'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses, uthash
+[package]
+name = "logtop"
+version = "0.7"
+archive = "https://github.com/JulienPalard/logtop/archive/logtop-0.7.tar.gz"
+sha256 = "c63371cd806b1b1e80e2e39b988c039d90264e6d92f8c03762035b6f74fa8730"
+strip_components = 1
+description = "Display real time statistics of whatever you want"
+homepage = "https://julienpalard.github.io/logtop/"
+license = "BSD-2-Clause"
+
+[build]
+system = "make"
+tools = ["pkg-config"]

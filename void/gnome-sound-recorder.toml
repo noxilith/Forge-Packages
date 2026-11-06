@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-sound-recorder'. Review before relying on it.
+# settings not translated: build_helper, lib32disabled
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-sound-recorder"
+version = "42.0"
+archive = "https://download.gnome.org/sources/gnome-sound-recorder/42/gnome-sound-recorder-42.0.tar.xz"
+sha256 = "4c08c315282f3ebf7a2da6f20e0ff9f0c71daa5229fcd2fe0b5c0aaaaa06f0ad"
+strip_components = 1
+description = "GNOME sound recorder application"
+homepage = "https://wiki.gnome.org/Apps/SoundRecorder"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gjs", "glib", "gsettings-desktop-schemas", "gst-plugins-bad1", "gst-plugins-good1", "gtk4", "libadwaita", "libhandy1"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

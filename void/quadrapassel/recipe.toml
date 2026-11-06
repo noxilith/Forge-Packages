@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'quadrapassel'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool, libcanberra
+[package]
+name = "quadrapassel"
+version = "40.2"
+archive = "https://download.gnome.org/sources/quadrapassel/40/quadrapassel-40.2.tar.xz"
+sha256 = "0bd822414207c73123ed6a49f723da5ac8dd4df5d35edc099ffea2e1399cc00a"
+strip_components = 1
+description = "GNOME classic falling-block game (Tetris)"
+homepage = "https://wiki.gnome.org/Apps/Quadrapassel"
+license = "GPL-2.0-or-later"
+deps = ["clutter-gtk", "glib", "gsound", "gtk+3", "libmanette", "librsvg"]
+patches = ["patches/0001-Fixed-Seg-fault-due-to-game-object-not-being-created.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

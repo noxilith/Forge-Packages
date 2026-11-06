@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'age-plugin-yubikey'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: pcsc-tools, yubikey-manager
+[package]
+name = "age-plugin-yubikey"
+version = "0.5.1"
+archive = "https://github.com/str4d/age-plugin-yubikey/archive/refs/tags/v0.5.1.tar.gz"
+sha256 = "51e4680ad7ad7f56535e4f3018531bd0196815659378709979617d4f17102700"
+strip_components = 1
+description = "YubiKey plugin for age"
+homepage = "https://github.com/str4d/age-plugin-yubikey"
+license = "MIT OR Apache-2.0"
+deps = ["openssl", "pcsc-ccid", "pcsclite"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

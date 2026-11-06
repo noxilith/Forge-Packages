@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bootiso'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bc, ncurses, syslinux
+[package]
+name = "bootiso"
+version = "4.2.0"
+archive = "https://github.com/jsamr/bootiso/archive/v4.2.0.tar.gz"
+sha256 = "eaf0cedb31d2195546e882624b7f1f0abbb3a6bb6234b4408dfeb2eaeaff3a50"
+strip_components = 1
+description = "Create a USB bootable device from an ISO image easily and securely"
+homepage = "https://github.com/jsamr/bootiso"
+license = "GPL-3.0-only"
+deps = ["curl", "dosfstools", "e2fsprogs", "eudev", "exfatprogs", "f2fs-tools", "file", "jq", "ntfs-3g", "rsync", "wimlib"]
+patches = ["patches/new-exfat.patch"]
+
+[build]
+system = "make"

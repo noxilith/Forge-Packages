@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'adriconf'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mesa, pciutils
+[package]
+name = "adriconf"
+version = "2.7.2"
+archive = "https://gitlab.freedesktop.org/mesa/adriconf/-/archive/v2.7.2/adriconf-v2.7.2.tar.gz"
+sha256 = "615cf34d8de1ee8d537e001e81129b3d57fa86b5c2b18120bd6b5476fb3a11c0"
+strip_components = 1
+description = "Advanced DRI Configurator"
+homepage = "https://gitlab.freedesktop.org/mesa/adriconf/"
+license = "GPL-3.0-or-later"
+deps = ["atkmm", "gtest", "gtkmm4", "pugixml"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_UNIT_TESTS=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lightdm-gtk-greeter'. Review before relying on it.
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "lightdm-gtk-greeter"
+version = "2.0.9"
+archive = "https://github.com/Xubuntu/lightdm-gtk-greeter/releases/download/lightdm-gtk-greeter-2.0.9/lightdm-gtk-greeter-2.0.9.tar.gz"
+sha256 = "c8fdf198aa9a3f9d0dad0b48dfe23c2277b79107e8fcfc62965290f1081f645d"
+strip_components = 1
+description = "Light Display Manager GTK+ Greeter"
+homepage = "https://github.com/Xubuntu/lightdm-gtk-greeter"
+license = "GPL-3.0-or-later"
+deps = ["ayatana-ido", "gtk+3", "libayatana-appindicator", "lightdm"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-maintainer-mode"]
+tools = ["pkg-config"]
+deps = ["gettext"]

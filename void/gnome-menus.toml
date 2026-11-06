@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-menus'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "gnome-menus"
+version = "3.38.1"
+archive = "https://download.gnome.org/sources/gnome-menus/3.38/gnome-menus-3.38.1.tar.xz"
+sha256 = "1198a91cdbdcfb232df94e71ef5427617d26029e327be3f860c3b0921c448118"
+strip_components = 1
+description = "GNOME menu specifications"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-menus"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext"]

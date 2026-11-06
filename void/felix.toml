@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'felix'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "felix"
+version = "2.16.1"
+archive = "https://github.com/kyoheiu/felix/archive/refs/tags/v2.16.1.tar.gz"
+sha256 = "a001dfe81cdbdfa19ba653a4711a17e4c92aa528139739c895df5791a26ea9f5"
+strip_components = 1
+description = "TUI file manager with vim-like key mapping"
+homepage = "https://kyoheiu.dev/felix/"
+license = "MIT"
+deps = ["libgit2-1.8"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

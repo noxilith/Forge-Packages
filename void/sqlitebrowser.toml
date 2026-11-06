@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sqlitebrowser'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5, sqlite
+[package]
+name = "sqlitebrowser"
+version = "3.13.1"
+archive = "https://github.com/sqlitebrowser/sqlitebrowser/archive/v3.13.1.tar.gz"
+sha256 = "1044ba67d649cabc459eb887c016f70d6a404ad651390ab33bf7859dc7f1b67b"
+strip_components = 1
+description = "Light GUI editor for SQLite databases"
+homepage = "http://sqlitebrowser.org/"
+license = "MPL-2.0, GPL-3.0-or-later"
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_QT5=1"]
+tools = ["pkg-config"]

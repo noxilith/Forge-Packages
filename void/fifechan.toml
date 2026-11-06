@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fifechan'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL2_image, mesa
+[package]
+name = "fifechan"
+version = "0.1.5"
+archive = "https://github.com/fifengine/fifechan/archive/0.1.5.tar.gz"
+sha256 = "29be5ff4b379e2fc4f88ef7d8bc172342130dd3e77a3061f64c8a75efe4eba73"
+strip_components = 1
+description = "C++ GUI library designed for games"
+homepage = "https://github.com/fifengine/fifechan"
+license = "LGPL-2.1-or-later, BSD-3-Clause"
+deps = ["SDL2"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'duf'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "duf"
+version = "0.9.1"
+archive = "https://github.com/muesli/duf/archive/v0.9.1.tar.gz"
+sha256 = "1334d8c1a7957d0aceebe651e3af9e1c1e0c6f298f1feb39643dd0bd8ad1e955"
+strip_components = 1
+description = "Disk Usage/Free Utility"
+homepage = "https://github.com/muesli/duf/"
+license = "MIT"
+
+[build]
+system = "go"

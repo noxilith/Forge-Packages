@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce4-docklike-plugin'. Review before relying on it.
+[package]
+name = "xfce4-docklike-plugin"
+version = "0.5.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-docklike-plugin/0.5/xfce4-docklike-plugin-0.5.0.tar.xz"
+sha256 = "418aa01f51f6528d95ceeb3b19d52bdc0ac554447bdb7afa9975cca5234f244b"
+strip_components = 1
+description = "Modern, minimalist taskbar for Xfce"
+homepage = "https://docs.xfce.org/panel-plugins/xfce4-docklike-plugin/start"
+license = "GPL-3.0-or-later"
+deps = ["glib", "libwnck", "libxfce4windowing", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

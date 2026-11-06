@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 's6-dns'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "s6-dns"
+version = "2.4.1.2"
+archive = "https://skarnet.org/software/s6-dns/s6-dns-2.4.1.2.tar.gz"
+sha256 = "0618d8830fce63ee17b7f55e49428069c85c97a1710827a7b2349b660cd33a4e"
+strip_components = 1
+description = "Suite of DNS client programs and libraries for Unix systems"
+homepage = "https://skarnet.org/software/s6-dns"
+license = "ISC"
+deps = ["execline", "skalibs"]
+
+[build]
+system = "autotools"

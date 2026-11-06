@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'afl++'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "afl++"
+version = "5.03c"
+archive = "https://github.com/AFLplusplus/AFLplusplus/archive/refs/tags/v5.03c.tar.gz"
+sha256 = "07f089e8591209862898c770a569d8e2b74b459fe967db323fc6a3924dcc82b5"
+strip_components = 1
+description = "American fuzzy lop Plus Plus - a brute-force fuzzer"
+homepage = "https://aflplus.plus/"
+license = "Apache-2.0, AGPL-3.0-or-later"
+deps = ["gmp", "llvm21", "zlib"]
+patches = ["patches/mode_t.patch"]
+
+[build]
+system = "make"
+deps = ["which"]

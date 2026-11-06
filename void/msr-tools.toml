@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'msr-tools'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "msr-tools"
+version = "1.3.0.20170320"
+archive = "https://github.com/intel/msr-tools/archive/eec71d977a83f8dc76bc3ccc6de5cbd3be378572.tar.gz"
+sha256 = "a68bf1fae358f476126c8874148155c2796ab5a08bf37e94ec3a2d96ebd6bba5"
+strip_components = 1
+description = "Model-Specific Register (MSR) Tools"
+homepage = "https://github.com/intel/msr-tools"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

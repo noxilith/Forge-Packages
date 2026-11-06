@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tint2'. Review before relying on it.
+[package]
+name = "tint2"
+version = "17.0.2"
+archive = "https://gitlab.com/o9000/tint2/-/archive/v17.0.2/tint2-v17.0.2.tar.bz2"
+sha256 = "329de800a82faa92b3d4c3afb76351e41b22de29fbcdae8a9eb3984a38eba65c"
+strip_components = 1
+description = "Simple panel/taskbar made for modern X window managers"
+homepage = "https://gitlab.com/o9000/tint2"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "imlib2", "libXcomposite", "libXdamage", "libXinerama", "libXrandr", "librsvg", "startup-notification"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=None"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libSM'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "libSM"
+version = "1.2.6"
+archive = "https://www.x.org/releases/individual/lib/libSM-1.2.6.tar.xz"
+sha256 = "be7c0abdb15cbfd29ac62573c1c82e877f9d4047ad15321e7ea97d1e43d835be"
+strip_components = 1
+description = "X Session Management Library"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["libICE"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'clipit'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "clipit"
+version = "1.4.5"
+archive = "https://github.com/CristianHenzel/ClipIt/archive/v1.4.5.tar.gz"
+sha256 = "f0bbd1b4ff07bb4509388cf5b7f7a25fd72ec02cdd8f4c8f5ff3f5f9ca6da514"
+strip_components = 1
+description = "Lightweight GTK+ clipboard manager"
+homepage = "https://github.com/CristianHenzel/ClipIt/"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "librsvg", "xdotool"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "tar"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'node_exporter'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "node_exporter"
+version = "1.12.1"
+archive = "https://github.com/prometheus/node_exporter/archive/v1.12.1.tar.gz"
+sha256 = "a90f1df0fde58d216d4a7d342e64831d2e3257db8084deadbe69754d34b15142"
+strip_components = 1
+description = "Exporter for machine metrics"
+homepage = "https://prometheus.io/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

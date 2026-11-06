@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'airwindows-lv2'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "airwindows-lv2"
+version = "40.0"
+archive = "https://git.sr.ht/~hannes/airwindows-lv2/archive/v40.0.tar.gz"
+sha256 = "8db2c1f8ae8bc49d2fb555805412c3113025df500a32853b05aacb1b156cc90d"
+strip_components = 1
+description = "LV2 port of the Airwindows plugins"
+homepage = "https://git.sr.ht/~hannes/airwindows-lv2"
+license = "MIT"
+deps = ["lv2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

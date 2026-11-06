@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-kpty'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: kf6-base, libutempter, qt6-tools
+[package]
+name = "kf6-kpty"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kpty-6.30.0.tar.xz"
+sha256 = "ad66149c20470de29d483f0ccdcb057d42ccf778f3f8cc8e68aefca5380bace7"
+strip_components = 1
+description = "KDE Interfacing with pseudo terminal devices"
+homepage = "https://invent.kde.org/frameworks/kpty"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcoreaddons", "kf6-ki18n"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

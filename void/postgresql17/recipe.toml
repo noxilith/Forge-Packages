@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'postgresql17'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, post_install, post_patch, pre_check, pre_configure
+# settings not translated: make_build_target, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: libreadline8, perl, tcl, util-linux-common
+[package]
+name = "postgresql17"
+version = "17.11"
+archive = "https://ftp.postgresql.org/pub/source/v17.11/postgresql-17.11.tar.bz2"
+sha256 = "dd27f2b3c59e73ed14aa3324901242bf69a032a6347805f274e6260322d42979"
+strip_components = 1
+description = "Sophisticated open-source Object-Relational DBMS"
+homepage = "https://www.postgresql.org"
+license = "PostgreSQL"
+deps = ["flex", "libxslt", "openssl", "pam"]
+patches = ["patches/pg_config-cross-value.patch", "patches/relocate.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-openssl", "--with-python", "--with-pam", "--enable-thread-safety", "--with-perl", "--with-tcl", "--without-ldap", "--without-gssapi", "--without-bonjour", "--with-libxml", "--with-libxslt", "--enable-nls", "--with-uuid=e2fs"]
+tools = ["flex", "pkg-config"]
+deps = ["docbook2x", "gettext", "openjade"]

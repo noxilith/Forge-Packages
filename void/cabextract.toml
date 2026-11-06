@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cabextract'. Review before relying on it.
+# hooks not translated: post_extract
+[package]
+name = "cabextract"
+version = "1.11"
+archive = "https://www.cabextract.org.uk/cabextract-1.11.tar.gz"
+sha256 = "b5546db1155e4c718ff3d4b278573604f30dd64c3c5bfd4657cd089b823a3ac6"
+strip_components = 1
+description = "Extract Microsoft Cabinet (.CAB) files"
+homepage = "https://www.cabextract.org.uk/"
+license = "GPL-3.0-or-later"
+deps = ["libmspack"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-external-libmspack", "ac_cv_func_fnmatch_works=yes"]
+tools = ["pkg-config"]

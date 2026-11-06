@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'edb-debugger'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, qt5
+[package]
+name = "edb-debugger"
+version = "1.5.0"
+archive = "https://github.com/eteran/edb-debugger/releases/download/1.5.0/edb-debugger-1.5.0.tgz"
+sha256 = "04382485a60eb585f7dfa72993ee2dd2753564556a4abbfd747ec44809a0ad0c"
+strip_components = 1
+description = "Cross platform x86/x86-64 debugger"
+homepage = "https://github.com/eteran/edb-debugger"
+license = "GPL-2.0-or-later"
+deps = ["capstone", "graphviz"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

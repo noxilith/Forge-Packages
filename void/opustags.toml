@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'opustags'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "opustags"
+version = "1.10.1"
+archive = "https://github.com/fmang/opustags/archive/1.10.1.tar.gz"
+sha256 = "703096e9c41481e30ab90eefdd8fafc4c3a138998b3f8281aa4f023e7058bc86"
+strip_components = 1
+description = "Ogg Opus tags editor"
+homepage = "https://github.com/fmang/opustags"
+license = "BSD-3-Clause"
+deps = ["libogg"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

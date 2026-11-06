@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-terminal'. Review before relying on it.
+# needs, but Forge has no recipe for yet: docbook-xsl, hicolor-icon-theme
+[package]
+name = "xfce4-terminal"
+version = "1.2.0"
+archive = "https://archive.xfce.org/src/apps/xfce4-terminal/1.2/xfce4-terminal-1.2.0.tar.xz"
+sha256 = "6874c7b975cc3dc3bd636d57ffec723de7458202defe65377593d3a7e0734b94"
+strip_components = 1
+description = "Modern terminal emulator primarly for the Xfce desktop environment"
+homepage = "https://docs.xfce.org/apps/xfce4-terminal/start"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "exo", "glib", "gsettings-desktop-schemas", "gtk+3", "gtk-layer-shell", "libX11", "libxfce4ui", "libxfce4util", "pcre2", "vte3", "xfconf"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "libxslt"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lpac'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "lpac"
+version = "2.3.0"
+archive = "https://github.com/estkme-group/lpac/archive/refs/tags/v2.3.0.tar.gz"
+sha256 = "661dffbd1e9e5732dab4a0bb0a9837d4906c8c66bd748bda262fe3e8d3e420f6"
+strip_components = 1
+description = "C-based eUICC LPA"
+homepage = "https://github.com/estkme-group/lpac"
+license = "AGPL-3.0-only"
+deps = ["curl", "pcsc-ccid", "pcsclite"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

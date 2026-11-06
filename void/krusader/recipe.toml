@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'krusader'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-qt5compat
+[package]
+name = "krusader"
+version = "2.9.0"
+archive = "https://download.kde.org/stable/krusader/2.9.0/krusader-2.9.0.tar.xz"
+sha256 = "c9b79bfade6cc69fe0e341ecef932fcac8afd9fe94e8cbcfbd729feb54394e04"
+strip_components = 1
+description = "Twin-panel (commander-style) file manager"
+homepage = "https://www.krusader.org/"
+license = "GPL-2.0-or-later"
+deps = ["kde-cli-tools", "kf6-karchive", "kf6-kbookmarks", "kf6-kcodecs", "kf6-kcompletion", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kitemviews", "kf6-knotifications", "kf6-kparts", "kf6-kstatusnotifieritem", "kf6-ktextwidgets", "kf6-kwallet", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "kf6-solid", "qt6-base"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

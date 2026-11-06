@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gwenview'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-imageformats, qt6-multimedia, qt6-svg, qt6-tools
+[package]
+name = "gwenview"
+version = "26.08.2"
+archive = "https://download.kde.org/stable/release-service/26.08.2/src/gwenview-26.08.2.tar.xz"
+sha256 = "bc6eb96196daeb5879e3551b834e65e296409d2252804ee26fedcbb376826a72"
+strip_components = 1
+description = "Fast and easy to use image viewer by KDE"
+homepage = "https://www.kde.org/applications/graphics/gwenview"
+license = "GPL-2.0-or-later"
+deps = ["cfitsio", "kImageAnnotator", "kf6-baloo", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kimageformats", "kf6-kio", "kf6-kitemmodels", "kf6-knotifications", "kf6-kparts", "kf6-kwindowsystem", "kf6-purpose", "lcms2", "libjpeg-turbo", "libkdcraw-qt6", "libpng", "phonon", "plasma-activities", "qt6-base", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons"]

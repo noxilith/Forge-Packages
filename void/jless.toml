@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jless'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "jless"
+version = "0.9.0"
+archive = "https://github.com/PaulJuliusMartinez/jless/archive/refs/tags/v0.9.0.tar.gz"
+sha256 = "43527a78ba2e5e43a7ebd8d0da8b5af17a72455c5f88b4d1134f34908a594239"
+strip_components = 1
+description = "Pager for JSON data"
+homepage = "https://github.com/PaulJuliusMartinez/jless"
+license = "MIT"
+deps = ["xcb-util"]
+
+[build]
+system = "cargo"

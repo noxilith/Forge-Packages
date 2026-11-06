@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libt3highlight'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "libt3highlight"
+version = "0.5.0"
+archive = "https://os.ghalkes.nl/dist/libt3highlight-0.5.0.tar.bz2"
+sha256 = "8216190785e52a116f9f78ec6513815745904c2aaf70d0a0a09438e08640dfbb"
+strip_components = 1
+description = "Tilde Terminal Toolkit's library for syntax highlighting"
+homepage = "https://os.ghalkes.nl/t3/libt3highlight.html"
+license = "GPL-3.0-or-later"
+deps = ["gettext", "libt3config", "pcre2"]
+
+[build]
+system = "autotools"
+configure_args = ["LIBTOOL=./hack/libtool"]
+tools = ["pkg-config"]

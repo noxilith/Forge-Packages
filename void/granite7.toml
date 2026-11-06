@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'granite7'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "granite7"
+version = "7.6.0"
+archive = "https://github.com/elementary/granite/archive/refs/tags/7.6.0.tar.gz"
+sha256 = "4b4e4f7f86eb3f55116faec42ebd87e04c3e424d82715ecd967ed39540dca5ef"
+strip_components = 1
+description = "GTK4 widget library for elementary OS"
+homepage = "https://github.com/elementary/granite"
+license = "LGPL-3.0-or-later"
+deps = ["gtk4", "libgee"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3", "sassc", "vala"]

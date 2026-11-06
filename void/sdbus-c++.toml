@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sdbus-c++'. Review before relying on it.
+[package]
+name = "sdbus-c++"
+version = "2.3.1"
+archive = "https://github.com/Kistler-Group/sdbus-cpp/archive/v2.3.1.tar.gz"
+sha256 = "3a289eded586c26d06c1387de72c7bf7c809527a70d51ba6401fe61059b19626"
+strip_components = 1
+description = "High-level C++ D-Bus library"
+homepage = "https://github.com/Kistler-Group/sdbus-cpp"
+license = "LGPL-2.1-only"
+deps = ["basu", "expat"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSDBUSCPP_BUILD_CODEGEN=ON", "-DSDBUSCPP_BUILD_DOCS=ON"]
+tools = ["pkg-config"]

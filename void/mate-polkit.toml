@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mate-polkit'. Review before relying on it.
+[package]
+name = "mate-polkit"
+version = "1.28.1"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-polkit-1.28.1.tar.xz"
+sha256 = "350a1dd0a8ed6a2c9c183cff2a21f394299e968fcc6ae2e8c93c565dae604ae8"
+strip_components = 1
+description = "PolicyKit integration for the MATE desktop"
+homepage = "https://mate-desktop.org"
+license = "LGPL-2.0-or-later"
+deps = ["glib", "gtk+3", "polkit"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

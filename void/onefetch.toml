@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'onefetch'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "onefetch"
+version = "2.26.1"
+archive = "https://github.com/o2sh/onefetch/archive/refs/tags/2.26.1.tar.gz"
+sha256 = "ff43255d7c138c448cfdd1abacb01c6abe0c3e3886024e98ff077b28d4dc0ddc"
+strip_components = 1
+description = "Git repository summary on your terminal"
+homepage = "https://onefetch.dev"
+license = "MIT"
+deps = ["zlib"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

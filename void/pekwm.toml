@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pekwm'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "pekwm"
+version = "0.4.4"
+archive = "https://www.pekwm.se/pekwm/uv/pekwm-0.4.4.tar.gz"
+sha256 = "8e794f094151fac9b85df2aaccf27add8cce5980f7eaf05b1caa8ab17b751aed"
+strip_components = 1
+description = "Window manager based on aewm++"
+homepage = "https://www.pekwm.se/"
+license = "GPL-2.0-or-later"
+deps = ["fontconfig", "libXft", "libXinerama", "libXpm", "libXrandr", "libjpeg-turbo", "libpng", "pango"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

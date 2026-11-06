@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'codeblocks'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS, LDFLAGS
+# needs, but Forge has no recipe for yet: boost, tinyxml, zip
+[package]
+name = "codeblocks"
+version = "25.03"
+archive = "https://downloads.sourceforge.net/sourceforge/codeblocks/Sources/25.03/codeblocks_25.03.tar.xz"
+sha256 = "b0f6aa5908d336d7f41f9576b2418ac7d27efbc59282aa8c9171d88cea74049e"
+strip_components = 1
+description = "Free C, C++ and Fortran IDE"
+homepage = "http://www.codeblocks.org"
+license = "GPL-3.0-only"
+deps = ["gamin", "gtk+3", "hunspell", "wxWidgets-gtk3"]
+patches = ["patches/cross-autorevision.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-wx-config=wx-config-gtk3", "--with-contrib-plugins", "--with-boost-system=c", "ac_cv_exeext=no", "--with-gnu-ld"]
+tools = ["pkg-config"]

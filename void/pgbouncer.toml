@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pgbouncer'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+[package]
+name = "pgbouncer"
+version = "1.21.0"
+archive = "https://pgbouncer.github.io/downloads/files/1.21.0/pgbouncer-1.21.0.tar.gz"
+sha256 = "7e1dd620c8d85a8490aff25061d5055d7aef9cf3e8bfe2d9e7719b8ee59114e2"
+strip_components = 1
+description = "Lightweight connection pooler for PostgreSQL"
+homepage = "https://pgbouncer.github.io/"
+license = "ISC"
+deps = ["libevent"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

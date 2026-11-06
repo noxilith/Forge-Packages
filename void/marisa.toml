@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'marisa'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "marisa"
+version = "0.3.1"
+archive = "https://github.com/s-yata/marisa-trie/archive/refs/tags/v0.3.1.tar.gz"
+sha256 = "986ed5e2967435e3a3932a8c95980993ae5a196111e377721f0849cad4e807f3"
+strip_components = 1
+description = "Matching Algorithm with Recursively Implemented StorAge"
+homepage = "https://github.com/s-yata/marisa-trie"
+license = "BSD-2-Clause, LGPL-2.1-or-later"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DENABLE_NATIVE_CODE=OFF", "-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]

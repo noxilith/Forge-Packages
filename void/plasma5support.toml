@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'plasma5support'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "plasma5support"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma5support-6.7.5.tar.xz"
+sha256 = "dcd58d280b9c3f9570b1790134f692374ecae633cd15c60b1ee76947d5543e80"
+strip_components = 1
+description = "Support components for porting from KF5/Qt5 to KF6/Qt6"
+homepage = "https://invent.kde.org/plasma/plasma5support"
+license = "GPL-3.0-or-later"
+deps = ["glib", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kguiaddons", "kf6-kholidays", "kf6-ki18n", "kf6-kidletime", "kf6-kio", "kf6-knotifications", "kf6-kservice", "kf6-kunitconversion", "kf6-networkmanager-qt", "kf6-solid", "libksysguard", "plasma-activities", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

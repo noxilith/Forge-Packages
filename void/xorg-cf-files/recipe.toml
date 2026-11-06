@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xorg-cf-files'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "xorg-cf-files"
+version = "1.0.8"
+archive = "https://www.x.org/releases/individual/util/xorg-cf-files-1.0.8.tar.xz"
+sha256 = "7408955defcfab0f44d1bedd4ec0c20db61914917ad17bfc1f1c9bf56acc17b9"
+strip_components = 1
+description = "X.Org imake program and related utilities"
+homepage = "https://www.x.org/wiki/"
+license = "X11"
+patches = ["patches/linuxconfig.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["font-util", "xorg-util-macros"]

@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'ostree'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "ostree"
+version = "2026.4"
+archive = "https://github.com/ostreedev/ostree/releases/download/v2026.4/libostree-2026.4.tar.xz"
+sha256 = "b26c9016eb03bb4ee52cc00c642d56e00fc79ae7faac6bf4aa317d7451339ef7"
+strip_components = 1
+description = "Operating system and container binary deployment and upgrades"
+homepage = "https://ostreedev.github.io/ostree/"
+license = "LGPL-2.0-or-later"
+deps = ["curl", "e2fsprogs", "fuse", "glib", "gpgme", "libarchive", "libsodium", "libsoup3"]
+patches = ["patches/gir-cross.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-builtin-grub2-mkconfig", "--with-ed25519-libsodium", "--with-openssl", "--with-curl"]
+tools = ["bison", "pkg-config"]
+deps = ["libxslt"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'PAmix'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "PAmix"
+version = "1.6"
+archive = "https://github.com/patroclos/PAmix/archive/1.6.tar.gz"
+sha256 = "b63522889d70920d64229c66e2ab6929950476538443af297f6b242f7e9dc406"
+strip_components = 1
+description = "Ncurses/Curses Pulseaudio mixer in C++ similar to Pavucontrol"
+homepage = "https://github.com/patroclos/PAmix"
+license = "MIT"
+deps = ["pulseaudio"]
+patches = ["patches/4807a44c793a61bb3eb7aa110c08db51938d4502.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_UNICODE=1", "-DNCURSESW_H_INCLUDE=ncurses.h"]
+tools = ["pkg-config"]
+deps = ["autoconf-archive"]

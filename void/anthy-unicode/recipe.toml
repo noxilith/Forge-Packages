@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'anthy-unicode'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch
+# settings not translated: build_helper
+[package]
+name = "anthy-unicode"
+version = "1.0.0.20260127"
+archive = "https://github.com/fujiwarat/anthy-unicode/releases/download/1.0.0.20260127/anthy-unicode-1.0.0.20260127.tar.xz"
+sha256 = "3b92fdd124ebe00c64099088a78c0fbcbe7457e145def00c11f726f2c3c3a34a"
+strip_components = 1
+description = "Japanese character set input library for Unicode"
+homepage = "https://github.com/fujiwarat/anthy-unicode/wiki"
+license = "LGPL-2.0-or-later, GPL-2.0-only, Public Domain"
+patches = ["patches/fix-depgraph.patch"]
+
+[build]
+system = "meson"

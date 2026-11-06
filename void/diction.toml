@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'diction'. Review before relying on it.
+[package]
+name = "diction"
+version = "1.11"
+archive = "https://ftp.gnu.org/gnu/diction/diction-1.11.tar.gz"
+sha256 = "35c2f1bf8ddf0d5fa9f737ffc8e55230736e5d850ff40b57fdf5ef1d7aa024f6"
+strip_components = 1
+description = "Writing style checkers, diction and style"
+homepage = "https://www.gnu.org/software/diction/diction.html"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

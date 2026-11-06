@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'SystemPreferences'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnustep-make
+[package]
+name = "SystemPreferences"
+version = "1.2.1"
+archive = "https://github.com/gnustep/apps-systempreferences/archive/refs/tags/systempreferences-1_2_1.tar.gz"
+sha256 = "40125db52808abef4a08433c43ab856dcad3c24f909531655fc794145fd2c8ab"
+strip_components = 1
+description = "GNUstep preferences application"
+homepage = "http://gnustep.org/experience/systempreferences.html"
+license = "GPL-2.0-only"
+deps = ["gnustep-back", "gnustep-base", "gnustep-gui"]
+
+[build]
+system = "make"

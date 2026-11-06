@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'void-updates'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+[package]
+name = "void-updates"
+version = "20250624"
+archive = "https://github.com/void-linux/void-updates/archive/20250624.tar.gz"
+sha256 = "a08994b017cfaf1c20a8911a7866e4807c110a20865d2bf36746618ee00c7ce8"
+strip_components = 1
+description = "Void Linux package updates"
+homepage = "https://github.com/void-linux/void-updates"
+license = "ISC"
+deps = ["curl"]
+
+[build]
+system = "make"

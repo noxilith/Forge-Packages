@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ImapGoose'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "ImapGoose"
+version = "0.5.3"
+archive = "https://git.sr.ht/~whynothugo/ImapGoose/archive/v0.5.3.tar.gz"
+sha256 = "d8ddce354a89122062f72fd21a10fe4c33bac2feb3b2064b96918ffc9ae61592"
+strip_components = 1
+description = "Keep local Maildir directories synchronised with an IMAP server"
+homepage = "https://git.sr.ht/~whynothugo/ImapGoose"
+license = "ISC"
+
+[build]
+system = "go"

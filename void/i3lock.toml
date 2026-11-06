@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'i3lock'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libev
+[package]
+name = "i3lock"
+version = "2.16"
+archive = "https://i3wm.org/i3lock/i3lock-2.16.tar.xz"
+sha256 = "a30a5ebead35cc78e5f337571df8c5de2bdd9141426034c74b17e4d3db15f024"
+strip_components = 1
+description = "Improved screenlocker based upon XCB and PAM"
+homepage = "https://i3wm.org/i3lock/"
+license = "MIT"
+deps = ["cairo", "libxkbcommon", "pam", "xcb-util", "xcb-util-image", "xcb-util-xrm"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

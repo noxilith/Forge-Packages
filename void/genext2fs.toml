@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'genext2fs'. Review before relying on it.
+[package]
+name = "genext2fs"
+version = "1.4.1"
+archive = "https://downloads.sourceforge.net/sourceforge/genext2fs/genext2fs-1.4.1.tar.gz"
+sha256 = "404dbbfa7a86a6c3de8225c8da254d026b17fd288e05cec4df2cc7e1f4feecfc"
+strip_components = 1
+description = "Generates an ext2 filesystem as a normal (i.e. non-root) user"
+homepage = "http://genext2fs.sourceforge.net"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_have_working_snprintf=yes", "ac_cv_have_working_vsnprintf=yes"]

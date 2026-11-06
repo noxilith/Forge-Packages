@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'cogl'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool, mesa
+[package]
+name = "cogl"
+version = "1.22.8"
+archive = "https://download.gnome.org/sources/cogl/1.22/cogl-1.22.8.tar.xz"
+sha256 = "a805b2b019184710ff53d0496f9f0ce6dcca420c141a0f4f6fcc02131581d759"
+strip_components = 1
+description = "Library for using 3D graphics hardware for rendering"
+homepage = "http://www.clutter-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["gdk-pixbuf", "libXcomposite", "libXdamage", "libXrandr", "pango", "wayland"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-cairo=yes", "--enable-cogl-pango=yes", "--enable-gdk-pixbuf=yes", "--enable-kms-egl-platform", "--enable-wayland-egl-platform", "--enable-wayland-egl-server"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gobject-introspection", "gtk-doc"]

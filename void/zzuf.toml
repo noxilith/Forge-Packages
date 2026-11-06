@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'zzuf'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+[package]
+name = "zzuf"
+version = "0.15"
+archive = "https://github.com/samhocevar/zzuf/releases/download/v0.15/zzuf-0.15.tar.bz2"
+sha256 = "04353d94c68391b3945199f100ab47fc5ff7815db1e92581a600d4175e3a6872"
+strip_components = 1
+description = "Multi-purpose fuzzer"
+homepage = "http://caca.zoy.org/wiki/zzuf"
+license = "WTFPL"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

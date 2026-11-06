@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-mpc-plugin'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xfce4-mpc-plugin"
+version = "0.6.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-mpc-plugin/0.6/xfce4-mpc-plugin-0.6.0.tar.xz"
+sha256 = "dee5bcc0566ba2dc95b9c3b4cadd5e8b3bb2798a54a2a8d8652708915fe45d50"
+strip_components = 1
+description = "MPD client plugin for the Xfce4 panel"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-mpc-plugin"
+license = "ISC"
+deps = ["glib", "gtk+3", "libxfce4ui", "libxfce4util", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

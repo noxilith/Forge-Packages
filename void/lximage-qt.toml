@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lximage-qt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "lximage-qt"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lximage-qt/archive/2.4.0.tar.gz"
+sha256 = "0976c821c823cf1fedf0ec31312b88386306291dc83ea861e934744d12ac4ea4"
+strip_components = 1
+description = "LXQt image viewer"
+homepage = "https://lxqt-project.org"
+license = "GPL-2.0-or-later"
+deps = ["libX11", "libXfixes", "libexif", "libfm-qt", "menu-cache"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools", "qt6-base"]

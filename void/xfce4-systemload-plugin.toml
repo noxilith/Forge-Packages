@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-systemload-plugin'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xfce4-systemload-plugin"
+version = "1.4.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin/1.4/xfce4-systemload-plugin-1.4.0.tar.xz"
+sha256 = "6e363bcf845bb88329b52858d65a1ec6e00db5121ae9246e46eb03135d9569c6"
+strip_components = 1
+description = "System load plugin for the Xfce4 panel"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin"
+license = "BSD-2-Clause"
+deps = ["glib", "gtk+3", "libgtop", "libxfce4ui", "libxfce4util", "upower", "xfce4-panel", "xfconf"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

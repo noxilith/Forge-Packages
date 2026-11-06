@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'nng'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "nng"
+version = "1.5.2"
+archive = "https://github.com/nanomsg/nng/archive/refs/tags/v1.5.2.tar.gz"
+sha256 = "f8b25ab86738864b1f2e3128e8badab581510fa8085ff5ca9bb980d317334c46"
+strip_components = 1
+description = "Nanomsg next-generation"
+homepage = "https://github.com/nanomsg/nng"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=on"]

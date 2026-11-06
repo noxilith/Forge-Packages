@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'squashfs-tools'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "squashfs-tools"
+version = "4.7.5"
+archive = "https://github.com/plougher/squashfs-tools/archive/refs/tags/4.7.5.tar.gz"
+sha256 = "547b7b7f4d2e44bf91b6fc554664850c69563701deab9fd9cd7e21f694c88ea6"
+strip_components = 1
+description = "Tool to create and append to squashfs filesystems"
+homepage = "https://github.com/plougher/squashfs-tools"
+license = "GPL-2.0-or-later"
+deps = ["lz4", "lzo", "xz", "zlib"]
+patches = ["patches/musl-missing-includes.patch"]
+
+[build]
+system = "make"
+subdir = "squashfs-tools"
+deps = ["which"]

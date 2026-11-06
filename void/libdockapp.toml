@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libdockapp'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libdockapp"
+version = "0.7.3"
+archive = "https://www.dockapps.net/download/libdockapp-0.7.3.tar.gz"
+sha256 = "16d992f684dfcdb19e3682822d495f473615fba6e9e2fa7a106307bc767b389c"
+strip_components = 1
+description = "DockApp Development Standard Library"
+homepage = "https://www.dockapps.net/libdockapp"
+license = "BSD-3-Clause"
+deps = ["font-util", "libX11", "libXext", "libXpm"]
+
+[build]
+system = "autotools"
+tools = ["m4", "pkg-config"]

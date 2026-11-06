@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xdg-user-dirs-gtk'. Review before relying on it.
+# needs, but Forge has no recipe for yet: xdg-user-dirs
+[package]
+name = "xdg-user-dirs-gtk"
+version = "0.14"
+archive = "https://download.gnome.org/sources/xdg-user-dirs-gtk/0.14/xdg-user-dirs-gtk-0.14.tar.xz"
+sha256 = "537fbe142b24736ed7894e4a01f69fd758cb6c7a677a382879529d217f4a2873"
+strip_components = 1
+description = "GTK+ tool to help manage user directories"
+homepage = "http://www.gnome.org"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

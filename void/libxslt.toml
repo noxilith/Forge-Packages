@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libxslt'. Review before relying on it.
+# hooks not translated: post_build, post_configure, post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: docbook-xml, docbook-xsl
+[package]
+name = "libxslt"
+version = "1.1.43"
+archive = "https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.43.tar.xz"
+sha256 = "5a3d6b383ca5afc235b171118e90f5ff6aa27e9fea3303065231a6d403f0183a"
+strip_components = 1
+description = "XSLT parser library from the GNOME project"
+homepage = "https://gitlab.gnome.org/GNOME/libxslt"
+license = "MIT"
+deps = ["libgcrypt", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static", "--disable-dependency-tracking"]
+tools = ["pkg-config"]

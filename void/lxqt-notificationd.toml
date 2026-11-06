@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-notificationd'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-notificationd"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-notificationd/archive/2.4.0.tar.gz"
+sha256 = "2a50fd423fce0e4f79966fd4cd887692f564778289ee6988af10eca7566d7a4a"
+strip_components = 1
+description = "LXQt notification daemon"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["layer-shell-qt", "liblxqt"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "qt6-base"]

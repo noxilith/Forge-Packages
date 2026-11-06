@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'http-parser'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+# settings not translated: make_build_target
+[package]
+name = "http-parser"
+version = "2.9.4.20201223"
+archive = "https://github.com/nodejs/http-parser/archive/ec8b5ee63f0e51191ea43bb0c6eac7bfbff3141d.tar.gz"
+sha256 = "765a21444322ea2476ca1e3cfeb74d280eeb37f4713cf52d2bf398dabf6e4128"
+strip_components = 1
+description = "HTTP request/response parser for c"
+homepage = "https://github.com/nodejs/http-parser"
+license = "MIT"
+patches = ["patches/cve_2020_8287.patch"]
+
+[build]
+system = "make"

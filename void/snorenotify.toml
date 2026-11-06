@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'snorenotify'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "snorenotify"
+version = "0.7.0"
+archive = "https://download.kde.org/stable/snorenotify/0.7.0/src/snorenotify-0.7.0.tar.xz"
+sha256 = "6d411ba6e31a73db56d298195f8336f66f8fe4fffd64d5fde3f14090e68ee64b"
+strip_components = 1
+description = "Multi platform Qt notification framework"
+homepage = "https://techbase.kde.org/Projects/Snorenotify"
+license = "LGPL-3.0-or-later"
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

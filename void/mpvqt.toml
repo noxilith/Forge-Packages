@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mpvqt'. Review before relying on it.
+[package]
+name = "mpvqt"
+version = "1.2.1"
+archive = "https://download.kde.org/stable/mpvqt/mpvqt-1.2.1.tar.xz"
+sha256 = "6ff5f56a0edd8248073446e5cc038f47d4b17c46b6af43cf438123d0ac911189"
+strip_components = 1
+description = "Libmpv wrapper for QtQuick2 and QML"
+homepage = "https://invent.kde.org/libraries/mpvqt"
+license = "LGPL-2.1-only OR LGPL-3.0-only"
+deps = ["mpv", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTMETATYPESDIR=lib/qt6/metatypes"]
+deps = ["extra-cmake-modules", "qt6-base"]

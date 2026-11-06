@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bcg729'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mbedtls
+[package]
+name = "bcg729"
+version = "1.1.1"
+archive = "https://gitlab.linphone.org/BC/public/bcg729/-/archive/1.1.1/bcg729-1.1.1.tar.gz"
+sha256 = "68599a850535d1b182932b3f86558ac8a76d4b899a548183b062956c5fdc916d"
+strip_components = 1
+description = "Implementation of the ITU G729 Annex A/B speech codec"
+homepage = "https://gitlab.linphone.org/BC/public/bcg729"
+license = "GPL-2.0-only"
+deps = ["bcunit"]
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_STATIC=OFF"]

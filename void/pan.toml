@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pan'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool
+[package]
+name = "pan"
+version = "0.163"
+archive = "https://gitlab.gnome.org/GNOME/pan/-/archive/v0.163/pan-v0.163.tar.bz2"
+sha256 = "f15b5ad48729424fc5c31d1c3b609563374f1993e4b37ed17cf36f5e4e65589c"
+strip_components = 1
+description = "Usenet newsreader that's good at both text and binaries"
+homepage = "http://pan.rebelbase.com"
+license = "GFDL-1.1-or-later AND GPL-2.0-only"
+deps = ["desktop-file-utils", "gcr", "gmime", "gspell", "gtk+3", "libnotify", "libsecret"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWANT_GMIME_CRYPTO=ON", "-DWANT_GKR=ON", "-DWANT_GNUTLS=ON", "-DWANT_GSPELL=ON", "-DWANT_NOTIFY=ON", "-DENABLE_MANUAL=ON"]
+tools = ["pkg-config"]
+deps = ["gettext"]

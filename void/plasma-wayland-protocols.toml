@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'plasma-wayland-protocols'. Review before relying on it.
+[package]
+name = "plasma-wayland-protocols"
+version = "1.21.0"
+archive = "https://download.kde.org/stable/plasma-wayland-protocols/plasma-wayland-protocols-1.21.0.tar.xz"
+sha256 = "698a7b28b711270314e396e248ae86087cfeaed01372009063995be6e1dc85ba"
+strip_components = 1
+description = "Plasma Specific Protocols for Wayland"
+homepage = "https://invent.kde.org/libraries/plasma-wayland-protocols"
+license = "GPL-3.0-or-later"
+deps = ["wayland"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

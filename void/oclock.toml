@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'oclock'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "oclock"
+version = "1.0.6"
+archive = "https://www.x.org/releases/individual/app/oclock-1.0.6.tar.xz"
+sha256 = "3ee85e5e2d211eca7bdb8b2fe0e3baf31998829af48198b5fa9bbee2aa0d24be"
+strip_components = 1
+description = "Round X clock"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXmu", "libxkbfile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

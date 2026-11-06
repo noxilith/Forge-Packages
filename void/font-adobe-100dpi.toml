@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-adobe-100dpi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-adobe-100dpi"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-adobe-100dpi-1.0.4.tar.gz"
+sha256 = "f11f4776f53fa9663dce71b71978f3fde07a1fc87c6995623e30bf3c5d05a2a1"
+strip_components = 1
+description = "Standard 100dpi Adobe PCF fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

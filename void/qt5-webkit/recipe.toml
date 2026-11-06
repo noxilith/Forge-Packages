@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'qt5-webkit'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CXXFLAGS, CPPFLAGS
+# needs, but Forge has no recipe for yet: libwebp, qt5, sqlite
+[package]
+name = "qt5-webkit"
+version = "5.212.0"
+archive = "https://sources.voidlinux.org/qt5-webkit-5.212.0/qtwebkit-opensource-src-5.212.tar.xz"
+sha256 = "9a6ed083154c7ec850081102b299afa928ca7e48bbdf2b5f3ae152425e46eb17"
+strip_components = 1
+description = "Cross-platform application and UI framework (Qt5) - WebKit2 component"
+homepage = "https://www.qt.io/"
+license = "LGPL-2.1-or-later"
+deps = ["gst-plugins-base1", "hyphen", "libXcomposite", "libjpeg-turbo", "libxslt", "ruby"]
+patches = ["patches/armv6.patch", "patches/bison3.7.patch", "patches/gcc13.patch", "patches/glib-2.68.patch", "patches/icu-68.patch", "patches/icu-78.patch", "patches/jsc-musl.patch", "patches/mips-isa-32.patch", "patches/mips-isa-rev.patch", "patches/musl-mcontext.patch", "patches/musl-ppc.patch", "patches/ppc-llint.patch", "patches/python3.9.patch", "patches/qt-musl-execinfo.patch", "patches/qt5-webkit-icu76.patch", "patches/qtwebkit-fix-build-gcc14.patch", "patches/reduce-exports.patch", "patches/webkit-offlineasm-warnings-ruby27.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPORT=Qt", "-DUSE_LD_GOLD=OFF", "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG", "-DCMAKE_CXX_FLAGS_DEBUG=-DNDEBUG", "-DCMAKE_CXX_FLAGS_RELWITHDEBINFO=-DNDEBUG", "-DCMAKE_C_FLAGS_RELEASE=-DNDEBUG", "-DCMAKE_C_FLAGS_DEBUG=-DNDEBUG", "-DCMAKE_C_FLAGS_RELWITHDEBINFO=-DNDEBUG"]
+tools = ["bison", "gperf", "perl", "pkg-config"]

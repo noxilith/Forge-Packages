@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libplacebo'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: python3-Jinja2, python3-Mako
+[package]
+name = "libplacebo"
+version = "7.360.1"
+archive = "https://code.videolan.org/videolan/libplacebo/-/archive/v7.360.1/libplacebo-v7.360.1.tar.gz"
+sha256 = "14c0a99f4b01557ec9826ce6b1d52f6de21be274ba03fd5aab7307f18766dc39"
+strip_components = 1
+description = "Reusable library for GPU-accelerated video/image rendering"
+homepage = "https://code.videolan.org/videolan/libplacebo"
+license = "LGPL-2.1-or-later"
+deps = ["shaderc", "vulkan-loader"]
+
+[build]
+system = "meson"
+configure_args = ["-Dshaderc=enabled", "-Dvulkan=enabled", "-Ddemos=false"]
+tools = ["pkg-config"]
+deps = ["Vulkan-Headers"]

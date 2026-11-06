@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'circadian'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "circadian"
+version = "0.8.4"
+archive = "https://github.com/mrmekon/circadian/archive/v0.8.4.tar.gz"
+sha256 = "3c7f955ae879394f95dcce90a143719bb4aac9dd0354bfe20c180eeda5223673"
+strip_components = 1
+description = "Suspend-On-Idle Daemon"
+homepage = "https://github.com/mrmekon/circadian"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

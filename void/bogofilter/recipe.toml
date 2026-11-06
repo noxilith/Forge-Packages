@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'bogofilter'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: perl, sqlite
+[package]
+name = "bogofilter"
+version = "1.2.5"
+archive = "https://downloads.sourceforge.net/sourceforge/bogofilter/bogofilter-1.2.5.tar.xz"
+sha256 = "3248a1373bff552c500834adbea4b6caee04224516ae581fb25a4c6a6dee89ea"
+strip_components = 1
+description = "Fast Bayesian spam filtering tool"
+homepage = "http://bogofilter.sourceforge.net"
+license = "GPL-3.0-only"
+deps = ["gsl"]
+patches = ["patches/test-musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-database=sqlite"]
+tools = ["perl"]

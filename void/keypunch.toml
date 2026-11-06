@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'keypunch'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+[package]
+name = "keypunch"
+version = "7.0"
+archive = "https://github.com/bragefuglseth/keypunch/archive/refs/tags/v7.0.tar.gz"
+sha256 = "4c2ade53b30ab0a5ae31af4ff265c53204a180adcc525c31b24234e75f1db13b"
+strip_components = 1
+description = "Practice your typing skills"
+homepage = "https://apps.gnome.org/Keypunch/"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "gettext", "glib"]

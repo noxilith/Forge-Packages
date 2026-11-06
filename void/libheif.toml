@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libheif'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libaom
+[package]
+name = "libheif"
+version = "1.23.6"
+archive = "https://github.com/strukturag/libheif/archive/v1.23.6.tar.gz"
+sha256 = "c9a00b0452f5c16d72ef71e5e40c0e90fbe2ad37148d27a1b2f9bb21546f5f03"
+strip_components = 1
+description = "ISO/IEC 23008-12:2017 HEIF file format decoder and encoder"
+homepage = "https://github.com/strukturag/libheif"
+license = "LGPL-3.0-or-later"
+deps = ["gdk-pixbuf", "libde265", "libjpeg-turbo", "libpng", "openh264", "x264", "x265"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

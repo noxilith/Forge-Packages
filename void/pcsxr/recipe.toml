@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'pcsxr'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS, lib32disabled
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "pcsxr"
+version = "1.9.94"
+archive = "https://ftp.debian.org/debian/pool/main/p/pcsxr/pcsxr_1.9.94.orig.tar.xz"
+sha256 = "8a366b68a7c236443aa75b422bea84b5115f8d8c23e5a78fd6951e643e90f660"
+strip_components = 1
+description = "Sony PlayStation (PSX) emulator based on the PCSX-df project"
+homepage = "http://pcsxr.codeplex.com/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "libXtst", "libXv", "libXxf86vm", "libcdio", "sdl12-compat"]
+patches = ["patches/01_fix-i386-exec-stack.patch", "patches/02_disable-ppc-auto-dynarec.patch", "patches/05_format-security.patch", "patches/06_warnings.patch", "patches/10_cross.patch", "patches/cdriso-uncompress2-fix-mgorny.patch", "patches/musl-fcntl_h.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-libcdio", "--enable-opengl"]
+tools = ["nasm", "pkg-config"]
+deps = ["gettext", "glib"]

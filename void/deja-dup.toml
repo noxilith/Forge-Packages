@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'deja-dup'. Review before relying on it.
+# needs, but Forge has no recipe for yet: duplicity, itstool
+[package]
+name = "deja-dup"
+version = "50.2"
+archive = "https://gitlab.gnome.org/World/deja-dup/-/archive/50.2/deja-dup-50.2.tar.gz"
+sha256 = "ac5e0c708868e5cd1a605b4b72ab52818f0e24f3fc25052f40a84d0ada3b6023"
+strip_components = 1
+description = "Simple backup tool that uses duplicity as the backend"
+homepage = "https://gitlab.gnome.org/World/deja-dup"
+license = "GPL-3.0-or-later"
+deps = ["dbus", "gtk4", "json-glib", "libadwaita", "libsecret", "libsoup3", "restic"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpackagekit=disabled"]
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils", "gettext", "glib", "gtk+3", "vala"]

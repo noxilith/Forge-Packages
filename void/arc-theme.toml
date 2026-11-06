@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'arc-theme'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnome-shell
+[package]
+name = "arc-theme"
+version = "20221218"
+archive = "https://github.com/jnsh/arc-theme/archive/20221218.tar.gz"
+sha256 = "aa32825da7e2329fdaac64d35f0afab85e2e2f3c71cc41547bafafa379444ccf"
+strip_components = 1
+description = "Flat theme with transparent elements for GTK and GNOME Shell"
+homepage = "https://github.com/jnsh/arc-theme"
+license = "GPL-3.0-or-later"
+deps = ["gnome-themes-extra", "gtk+3", "gtk-engine-murrine", "gtk4"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["cinnamon", "glib", "inkscape", "sassc"]

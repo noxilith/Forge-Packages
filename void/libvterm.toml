@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libvterm'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_install_target
+[package]
+name = "libvterm"
+version = "0.3.3"
+archive = "https://www.leonerd.org.uk/code/libvterm/libvterm-0.3.3.tar.gz"
+sha256 = "09156f43dd2128bd347cbeebe50d9a571d32c64e0cf18d211197946aff7226e0"
+strip_components = 1
+description = "Abstract VT220/xterm/ECMA-48 emulation library"
+homepage = "https://www.leonerd.org.uk/code/libvterm"
+license = "MIT"
+
+[build]
+system = "make"
+tools = ["perl", "pkg-config"]

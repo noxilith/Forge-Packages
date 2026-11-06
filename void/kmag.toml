@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kmag'. Review before relying on it.
+[package]
+name = "kmag"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kmag-26.08.1.tar.xz"
+sha256 = "7e6b7d29bbc492b697f22a9a7bd1b707d9cfd7559da46f54f80be096a6bf8f2c"
+strip_components = 1
+description = "Screen Magnifier"
+homepage = "https://www.kde.org/applications/utilities/kmag/"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kio", "kf6-kparts", "kf6-kxmlgui", "libqaccessibilityclient", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+deps = ["extra-cmake-modules", "gettext"]

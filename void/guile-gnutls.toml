@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'guile-gnutls'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "guile-gnutls"
+version = "5.0.2"
+archive = "https://codeberg.org/guile-gnutls/guile-gnutls/archive/v5.0.2.tar.gz"
+sha256 = "5b2778f910b850c9c3bbe16109732018dc58975a3f317d494201921f2ffdd37b"
+strip_components = 1
+description = "Provides Guile bindings for the GnuTLS library"
+homepage = "https://codeberg.org/guile-gnutls/guile-gnutls"
+license = "LGPL-2.1-or-later"
+deps = ["gnutls", "guile"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-guile-site-dir=no"]
+tools = ["pkg-config"]
+deps = ["texinfo"]

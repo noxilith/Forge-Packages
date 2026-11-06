@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rdedup'. Review before relying on it.
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "rdedup"
+version = "3.2.1"
+archive = "https://github.com/dpc/rdedup/archive/v3.2.1.tar.gz"
+sha256 = "023b5576f30ebf75c1740dd244ac13b6ef3ad7f6d4a6ab6654e12130201eb923"
+strip_components = 1
+description = "Data deduplication engine"
+homepage = "https://github.com/dpc/rdedup"
+license = "MPL-2.0"
+deps = ["libsodium", "openssl", "xz"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

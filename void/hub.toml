@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'hub'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "hub"
+version = "2.14.2"
+archive = "https://github.com/github/hub/archive/v2.14.2.tar.gz"
+sha256 = "e19e0fdfd1c69c401e1c24dd2d4ecf3fd9044aa4bd3f8d6fd942ed1b2b2ad21a"
+strip_components = 1
+description = "Command line tool for Github"
+homepage = "https://hub.github.com/"
+license = "MIT"
+
+[build]
+system = "go"
+deps = ["groff"]

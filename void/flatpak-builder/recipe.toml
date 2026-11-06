@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'flatpak-builder'. Review before relying on it.
+# hooks not translated: post_patch
+[package]
+name = "flatpak-builder"
+version = "1.4.2"
+archive = "https://github.com/flatpak/flatpak-builder/releases/download/1.4.2/flatpak-builder-1.4.2-fixed-libglnx.tar.xz"
+sha256 = "c041b974e03a2c2d3cda88a0efe1ecf69f9adf42a1758eac341d555e779d0596"
+strip_components = 1
+description = "Tool to build flatpaks from source"
+homepage = "https://github.com/flatpak/flatpak-builder"
+license = "LGPL-2.1-or-later"
+deps = ["AppStream", "curl", "debugedit", "elfutils", "flatpak", "json-glib", "libcap", "libxml2", "libyaml"]
+patches = ["patches/fix-temp-failure-retry.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["xmlto"]

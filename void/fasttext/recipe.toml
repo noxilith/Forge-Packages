@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fasttext'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "fasttext"
+version = "0.9.2"
+archive = "https://github.com/facebookresearch/fastText/archive/v0.9.2.tar.gz"
+sha256 = "7ea4edcdb64bfc6faaaec193ef181bdc108ee62bb6a04e48b2e80b639a99e27e"
+strip_components = 1
+description = "Library for efficient text classification and representation learning"
+homepage = "https://fasttext.cc/"
+license = "MIT"
+patches = ["patches/cmake.patch", "patches/includes.patch"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'entr'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_build
+[package]
+name = "entr"
+version = "5.8"
+archive = "https://eradman.com/entrproject/code/entr-5.8.tar.gz"
+sha256 = "dc9a2bdc556b2be900c1d8cdf432de26492de5af3ffade000d4bfd97f3122bfb"
+strip_components = 1
+description = "Utility for running arbitrary commands when files change"
+homepage = "https://eradman.com/entrproject/"
+license = "ISC"
+patches = ["patches/include-sysctl.patch"]
+
+[build]
+system = "make"

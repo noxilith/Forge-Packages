@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'dropbox'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: gpgme-python3, python3-docutils
+[package]
+name = "dropbox"
+version = "2026.05.06"
+archive = "https://github.com/dropbox/nautilus-dropbox/archive/refs/tags/v2026.05.06.tar.gz"
+sha256 = "dee25a10b10e0f2734ab3b5ad8b3cb36c2929a0059d5c9d1faf60d75eab6c59c"
+strip_components = 1
+description = "Dropbox file sharing"
+homepage = "https://www.dropbox.com"
+license = "GPL-3.0-or-later, CC-BY-ND-3.0"
+deps = ["gdk-pixbuf", "libxslt", "nautilus", "python3-gobject"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

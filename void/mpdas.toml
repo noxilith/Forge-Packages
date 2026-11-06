@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mpdas'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "mpdas"
+version = "0.4.5"
+archive = "https://github.com/hrkfdn/mpdas/archive/0.4.5.tar.gz"
+sha256 = "c9103d7b897e76cd11a669e1c062d74cb73574efc7ba87de3b04304464e8a9ca"
+strip_components = 1
+description = "MPD AudioScrobbler written in C++ using libcurl"
+homepage = "http://50hz.ws/mpdas/"
+license = "BSD-3-Clause"
+deps = ["curl", "libmpdclient"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

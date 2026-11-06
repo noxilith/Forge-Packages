@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dssi'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack, ladspa-sdk
+[package]
+name = "dssi"
+version = "1.1.1"
+archive = "https://downloads.sourceforge.net/sourceforge/dssi/dssi-1.1.1.tar.gz"
+sha256 = "f2c82b073a947c8255284249097667f9b14e660bf86186f3fcd3b3b3e087814e"
+strip_components = 1
+description = "API for audio processing plugins"
+homepage = "http://dssi.sourceforge.net"
+license = "LGPL-2.1-or-later"
+deps = ["alsa-lib", "libSM", "libX11", "liblo", "libsamplerate", "libsndfile"]
+patches = ["patches/alsa-include.patch", "patches/fix-incompatible-pointer.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

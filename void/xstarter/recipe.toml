@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xstarter'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "xstarter"
+version = "0.8.2"
+archive = "https://github.com/lchsk/xstarter/archive/v0.8.2.tar.gz"
+sha256 = "52e09af2ccc2e6a5eccddaa209ee4eaf2ce4c7663a3bec6c25e1c516a1b32d6e"
+strip_components = 1
+description = "Application launcher for Linux"
+homepage = "https://github.com/lchsk/xstarter"
+license = "GPL-3.0-or-later"
+deps = ["inih"]
+patches = ["patches/cmake-buildtype-cflags-ncurses.patch", "patches/include-stdlib.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

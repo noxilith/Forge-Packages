@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xlbiff'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+[package]
+name = "xlbiff"
+version = "4.7.1"
+archive = "https://github.com/edsantiago/xlbiff/archive/4.7.1.tar.gz"
+sha256 = "f26198119c821b9f8e73ae372dd3832bceee09848906927ee76b42746c300d8b"
+strip_components = 1
+description = "X Literate Biff, a mail notifier"
+homepage = "https://www.edsantiago.com/xlbiff/"
+license = "MIT"
+deps = ["libX11", "libXaw", "libXrandr"]
+
+[build]
+system = "autotools"

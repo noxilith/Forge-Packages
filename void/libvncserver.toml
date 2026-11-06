@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libvncserver'. Review before relying on it.
+[package]
+name = "libvncserver"
+version = "0.9.15"
+archive = "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.15.tar.gz"
+sha256 = "62352c7795e231dfce044beb96156065a05a05c974e5de9e023d688d8ff675d7"
+strip_components = 1
+description = "C libraries to easily implement VNC server or client functionality"
+homepage = "https://libvnc.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["libgcrypt", "libjpeg-turbo", "libpng", "lzo", "openssl", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_OPENSSL=ON", "-DWITH_GNUTLS=OFF", "-DWITH_SYSTEMD=OFF"]
+tools = ["pkg-config"]

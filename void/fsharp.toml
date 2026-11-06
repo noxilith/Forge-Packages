@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fsharp'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args, lib32disabled
+# needs, but Forge has no recipe for yet: msbuild-bin
+[package]
+name = "fsharp"
+version = "10.2.3"
+archive = "https://github.com/fsharp/fsharp/archive/10.2.3.tar.gz"
+sha256 = "527e4bad7a6d71668e905608c82db7c6eda44d9fd2ed9ce3c758e291e024cc4d"
+strip_components = 1
+description = "F# compiler, core library and tools"
+homepage = "http://fsharp.org"
+license = "Apache-2.0"
+deps = ["mono"]
+
+[build]
+system = "make"

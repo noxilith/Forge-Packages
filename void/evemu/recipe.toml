@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'evemu'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "evemu"
+version = "2.7.0"
+archive = "https://www.freedesktop.org/software/evemu/evemu-2.7.0.tar.xz"
+sha256 = "78c9400d55eeeb5ab75161360543f9376438c4da4934cb34cdda5b46021ae379"
+strip_components = 1
+description = "Kernel device emulation"
+homepage = "https://freedesktop.org/wiki/Evemu/"
+license = "LGPL-3.0-only, MIT"
+deps = ["libevdev"]
+patches = ["patches/musl.patch", "patches/time64.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xmlto"]

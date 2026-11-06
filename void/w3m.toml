@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'w3m'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch, pre_build
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: ncurses, nkf
+[package]
+name = "w3m"
+version = "0.5.6"
+archive = "https://git.sr.ht/~rkta/w3m/archive/v0.5.6.tar.gz"
+sha256 = "8dd652cd3f31817d68c7263c34eeffb50118c80be19e1159bf8cbf763037095e"
+strip_components = 1
+description = "Text-based Web browser and pager (with Debian patches)"
+homepage = "https://sr.ht/~rkta/w3m/"
+license = "MIT"
+deps = ["gc", "imlib2", "libX11", "openssl", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-image=x11,fb", "--with-imagelib=imlib2", "--with-termlib=ncurses", "--disable-w3mmailer"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext"]

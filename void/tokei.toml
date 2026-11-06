@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tokei'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tokei"
+version = "15.0.0"
+archive = "https://github.com/XAMPPRocky/tokei/archive/refs/tags/v15.0.0.tar.gz"
+sha256 = "966da7b9a81ac6cb777b9f159f4c02e5b83a8b8bd30ebf5991007839926b600c"
+strip_components = 1
+description = "Count lines of code"
+homepage = "https://github.com/XAMPPRocky/tokei"
+license = "Apache-2.0 OR MIT"
+
+[build]
+system = "cargo"
+configure_args = ["--features=all"]

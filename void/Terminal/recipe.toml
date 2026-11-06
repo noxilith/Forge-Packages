@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'Terminal'. Review before relying on it.
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: gnustep-make
+[package]
+name = "Terminal"
+version = "0.9.9"
+archive = "https://download.savannah.nongnu.org/releases/gap/Terminal-0.9.9.tar.gz"
+sha256 = "27f81bbecdbd10cde8c080012cde4973bec20e551c58c29f353733cf03c220e9"
+strip_components = 1
+description = "Terminal emulator for GNUstep"
+homepage = "http://gap.nongnu.org/terminal/"
+license = "GPL-2.0-only"
+deps = ["gnustep-back", "gnustep-base", "gnustep-gui"]
+patches = ["patches/x86_64-musl-termios_h.patch"]
+
+[build]
+system = "make"
+deps = ["which"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xclock'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xclock"
+version = "1.2.1"
+archive = "https://www.x.org/releases/individual/app/xclock-1.2.1.tar.xz"
+sha256 = "e326cac20f7ad2af5412b9c4b70b1c3d392e08cd3cc6246e0a77b7c3935a4851"
+strip_components = 1
+description = "Analog and digital clock for X"
+homepage = "http://www.x.org/archive/X11R6.8.1/doc/xclock.1.html"
+license = "MIT"
+deps = ["libXaw", "libXft", "libXmu", "libxkbfile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

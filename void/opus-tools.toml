@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'opus-tools'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: opusfile
+[package]
+name = "opus-tools"
+version = "0.2"
+archive = "https://ftp.mozilla.org/pub/mozilla.org/opus/opus-tools-0.2.tar.gz"
+sha256 = "b4e56cb00d3e509acfba9a9b627ffd8273b876b4e2408642259f6da28fa0ff86"
+strip_components = 1
+description = "Collection of tools for the Opus audio codec"
+homepage = "http://wiki.xiph.org/Opus-tools"
+license = "BSD-2-Clause"
+deps = ["flac", "libogg", "libopusenc", "opus"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

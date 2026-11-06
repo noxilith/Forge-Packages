@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'powerdevil'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "powerdevil"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/powerdevil-6.7.5.tar.xz"
+sha256 = "6a738fccf01e4d1b10fea68ff8b404a406f95bc36fcb593bcc70fafb1c53258b"
+strip_components = 1
+description = "Power consumption settings of a Plasma"
+homepage = "https://invent.kde.org/plasma/powerdevil"
+license = "GPL-2.0-or-later"
+deps = ["ddcutil", "eudev", "kf6-bluez-qt", "kf6-kauth", "kf6-kcmutils", "kf6-kconfig", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-ki18n", "kf6-kidletime", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-knotifications", "kf6-krunner", "kf6-kwindowsystem", "kf6-kxmlgui", "kf6-networkmanager-qt", "kf6-solid", "libkf6screen", "libplasma", "libxcb", "plasma-activities", "plasma-wayland-protocols", "plasma-workspace", "qcoro-qt6", "qt6-base", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage", "qt6-declarative"]

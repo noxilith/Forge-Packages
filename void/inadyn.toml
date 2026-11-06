@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'inadyn'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+[package]
+name = "inadyn"
+version = "2.13.0"
+archive = "https://github.com/troglobit/inadyn/releases/download/v2.13.0/inadyn-2.13.0.tar.xz"
+sha256 = "d08ca63a35896f2a809ba9b704da16ec6812b94dd410e7b3ea536a16d93860c2"
+strip_components = 1
+description = "Small DynDNS client with SSL/TLS support"
+homepage = "http://troglobit.com/inadyn.html"
+license = "GPL-2.0-or-later"
+deps = ["confuse", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-openssl"]
+tools = ["pkg-config"]

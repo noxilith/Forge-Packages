@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'vndr'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "vndr"
+version = "0.0.3"
+archive = "https://github.com/LK4D4/vndr/archive/v0.0.3.tar.gz"
+sha256 = "dec53ba179dd2b854efb0d321a8e45b53cd2c7f06018d5ef65f55dfa9f28e840"
+strip_components = 1
+description = "Stupid vendoring tool"
+homepage = "https://github.com/LK4D4/vndr"
+license = "Apache-2.0"
+
+[build]
+system = "go"

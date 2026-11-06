@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libtcd'. Review before relying on it.
+[package]
+name = "libtcd"
+version = "2.2.7.r3"
+archive = "https://flaterco.com/files/xtide/libtcd-2.2.7-r3.tar.xz"
+sha256 = "e1dde9aafb771eab57c676a99b4b79d61c6800990a0e72782bc20057a8a2d877"
+strip_components = 1
+description = "API for reading and writing Tide Constituent Database (TCD) files"
+homepage = "https://www.flaterco.com/xtide/files.html#libtcd"
+license = "Public Domain"
+
+[build]
+system = "autotools"

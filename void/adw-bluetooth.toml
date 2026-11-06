@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'adw-bluetooth'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "adw-bluetooth"
+version = "1.2.0"
+archive = "https://github.com/ezratweaver/adw-bluetooth/archive/refs/tags/1.2.0.tar.gz"
+sha256 = "6a50b4ec136143034892a0aee8a06c6e3892288491a0f04ba80267d9fd4cee4c"
+strip_components = 1
+description = "Bluetooth device manager built with GTK4 and Libadwaita"
+homepage = "https://github.com/ezratweaver/adw-bluetooth"
+license = "GPL-3.0-or-later"
+deps = ["gjs", "libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "glib", "gtk4", "nodejs"]

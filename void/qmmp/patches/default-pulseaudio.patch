@@ -1,0 +1,12 @@
+--- a/src/qmmp/output.cpp	2026-10-13 13:25:29.912183495 +0000
++++ b/src/qmmp/output.cpp	2026-10-13 13:25:51.019916626 +0000
+@@ -11,6 +11,9 @@
+ #include "qmmpplugincache_p.h"
+ #include "output.h"
+ 
++#undef  QMMP_DEFAULT_OUTPUT
++#define QMMP_DEFAULT_OUTPUT "pulse"
++
+ Q_GLOBAL_STATIC(QList<QmmpPluginCache *>, outputCache);
+ 
+ class OutputPrivate

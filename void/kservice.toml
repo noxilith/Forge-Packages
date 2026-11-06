@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kservice'. Review before relying on it.
+[package]
+name = "kservice"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kservice-5.116.0.tar.xz"
+sha256 = "52b7c2c317d0a662ca33200f9b4f93e0b7efb1843abd120a3b49c9a092f4a869"
+strip_components = 1
+description = "KDE Plugin framework for desktop services"
+homepage = "https://invent.kde.org/frameworks/kservice"
+license = "LGPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kconfig", "kcrash", "kdbusaddons", "kdoctools", "ki18n"]
+
+[build]
+system = "cmake"
+tools = ["bison", "flex"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

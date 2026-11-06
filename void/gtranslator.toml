@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gtranslator'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gtranslator"
+version = "45.3"
+archive = "https://download.gnome.org/sources/gtranslator/45/gtranslator-45.3.tar.xz"
+sha256 = "3010204df5c7a5ae027f5a30b1544d6977d417f0e4bb9de297f0ad1a80331873"
+strip_components = 1
+description = "GNOME translation making program"
+homepage = "https://wiki.gnome.org/Apps/Gtranslator"
+license = "GPL-3.0-or-later"
+deps = ["gettext", "glib", "gsettings-desktop-schemas", "gspell", "gtk4", "gtksourceview5", "json-glib", "libadwaita", "libdazzle", "libgda", "libsoup3", "libxml2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

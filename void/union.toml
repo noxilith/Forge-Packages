@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'union'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-shadertools
+[package]
+name = "union"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/union-6.7.5.tar.xz"
+sha256 = "deea749acb710357e56fce07198e3de3bad4bdfa95298e185e38eb8938f8d2c8"
+strip_components = 1
+description = "Qt style supporting both QtQuick and QtWidgets"
+homepage = "https://invent.kde.org/plasma/union"
+license = "LGPL-2.1-only, LGPL-3.0-only"
+deps = ["breeze-qt6", "cxx-rust-cssparser", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kguiaddons", "kf6-kiconthemes", "kf6-kirigami", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DBUILD_TOOLS=OFF", "-DBUILD_EXAMPLES=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

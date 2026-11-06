@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'luarocks-lua53'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, post_extract, post_install, pre_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: lua53, unzip
+[package]
+name = "luarocks-lua53"
+version = "3.13.0"
+archive = "https://luarocks.org/releases/luarocks-3.13.0.tar.gz"
+sha256 = "245bf6ec560c042cb8948e3d661189292587c5949104677f1eecddc54dbe7e37"
+strip_components = 1
+description = "Package management for Lua modules (5.3.x)"
+homepage = "https://luarocks.org/"
+license = "MIT"
+deps = ["curl"]
+
+[build]
+system = "autotools"
+configure_args = ["--lua-version=5.3"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gnucobol'. Review before relying on it.
+# hooks not translated: post_build, post_configure, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: db, ncurses
+[package]
+name = "gnucobol"
+version = "3.2"
+archive = "https://ftp.gnu.org/gnu/gnucobol/gnucobol-3.2.tar.xz"
+sha256 = "3bb48af46ced4779facf41fdc2ee60e4ccb86eaa99d010b36685315df39c2ee2"
+strip_components = 1
+description = "GnuCOBOL (formerly OpenCOBOL) is a free COBOL compiler"
+homepage = "https://www.gnu.org/software/gnucobol/"
+license = "GPL-3.0-or-later"
+deps = ["gmp", "json-c", "libxml2"]
+patches = ["patches/cross.patch", "patches/errno.patch", "patches/move-packed-decimal.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-hardening"]
+tools = ["pkg-config"]
+deps = ["gettext"]

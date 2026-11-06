@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'consul'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, make_dirs
+[package]
+name = "consul"
+version = "1.16.2"
+archive = "https://github.com/hashicorp/consul/archive/v1.16.2.tar.gz"
+sha256 = "0dacc7eeacd19a687e20fa83ae88444d2a5336a9150cfc116d39a39b31d5829d"
+strip_components = 1
+description = "Distributed solution to connect and configure applications"
+homepage = "https://www.consul.io/"
+license = "BUSL-1.1"
+
+[build]
+system = "go"

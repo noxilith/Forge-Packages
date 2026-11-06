@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kiwix-tools'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libzim, util-linux-common
+[package]
+name = "kiwix-tools"
+version = "3.7.0"
+archive = "https://github.com/kiwix/kiwix-tools/archive/refs/tags/3.7.0.tar.gz"
+sha256 = "7367400dab80fcf0702657b2d5324ec29f344581318659c106f5b7fca30fa0db"
+strip_components = 1
+description = "Kiwix command line tools"
+homepage = "https://kiwix.org"
+license = "GPL-3.0-or-later"
+deps = ["curl", "kiwix-lib", "libmicrohttpd", "zlib"]
+patches = ["patches/01-meson.patch", "patches/02-meson.patch", "patches/addr.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

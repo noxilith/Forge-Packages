@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'usql'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "usql"
+version = "0.20.8"
+archive = "https://github.com/xo/usql/archive/refs/tags/v0.20.8.tar.gz"
+sha256 = "71c25971a7ab8558a34d106eb60bf9d06acdfd8b5e6417062748821005aac1a7"
+strip_components = 1
+description = "Universal command-line interface for SQL databases"
+homepage = "https://github.com/xo/usql"
+license = "MIT"
+
+[build]
+system = "go"

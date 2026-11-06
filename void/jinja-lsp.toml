@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jinja-lsp'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "jinja-lsp"
+version = "0.2.2"
+archive = "https://github.com/uros-5/jinja-lsp/archive/refs/tags/v0.2.2.tar.gz"
+sha256 = "1f028146eb5357d1da639583f87fd6253eabf67e221427574063ce2dd6507371"
+strip_components = 1
+description = "Language server for Jinja"
+homepage = "https://github.com/uros-5/jinja-lsp"
+license = "MIT"
+
+[build]
+system = "cargo"

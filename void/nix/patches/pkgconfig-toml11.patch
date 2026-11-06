@@ -1,0 +1,10 @@
+--- a/src/libexpr/meson.build
++++ b/src/libexpr/meson.build
+@@ -80,7 +80,6 @@ configdata_pub.set('NIX_USE_BOEHMGC', bd
+ toml11 = dependency(
+   'toml11',
+   version : '>=3.7.0',
+-  method : 'cmake',
+   include_type : 'system',
+ )
+ 

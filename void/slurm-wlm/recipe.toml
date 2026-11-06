@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'slurm-wlm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, LDFLAGS
+# needs, but Forge has no recipe for yet: cgit, libreadline8, lua53, ncurses, python
+[package]
+name = "slurm-wlm"
+version = "19.05.5.1"
+archive = "https://github.com/SchedMD/slurm/archive/slurm-19-05-5-1.tar.gz"
+sha256 = "e53e67bd0bb4c37a9c481998764a746467a96bc41d6527569080514f36452c07"
+strip_components = 1
+description = "Workload manager for Linux clusters of all sizes"
+homepage = "http://slurm.schedmd.com/slurm.html"
+license = "GPL-2.0-or-later"
+deps = ["freeipmi", "gtk+", "hdf5", "hwloc", "json-c", "mariadb", "munge", "numactl", "openssl", "pam"]
+patches = ["patches/musl-cpu_set_t.patch", "patches/musl-getgrent.patch", "patches/musl-getpwent.patch", "patches/musl-nsap_addr.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["perl", "pkg-config"]

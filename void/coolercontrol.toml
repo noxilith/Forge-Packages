@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'coolercontrol'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, mesa
+[package]
+name = "coolercontrol"
+version = "5.0.1"
+archive = "https://gitlab.com/coolercontrol/coolercontrol/-/archive/5.0.1/coolercontrol-5.0.1.tar.gz"
+sha256 = "4a501b379ff1d26458473747bd8cd9a090ba62937d0bf8765b948bd251b20dbe"
+strip_components = 1
+description = "Application for monitoring and controlling supported cooling devices"
+homepage = "https://gitlab.com/coolercontrol/coolercontrol"
+license = "GPL-3.0-or-later"
+deps = ["libdrm", "qt6-base", "qt6-pdf"]
+
+[build]
+system = "cmake"
+subdir = "coolercontrol"
+deps = ["nodejs", "qt6-declarative"]

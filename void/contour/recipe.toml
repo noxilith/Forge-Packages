@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'contour'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: contour-shell-integration-0.4.3.6442_3, contour-terminfo-0.4.3.6442_3, harfbuzz, libssh2, libunicode, libutempter, qt6-multimedia, qt6-qt5compat, qt6-tools
+[package]
+name = "contour"
+version = "0.4.3.6442"
+archive = "https://github.com/contour-terminal/contour/archive/refs/tags/v0.4.3.6442.tar.gz"
+sha256 = "859910a5330d9dcf628dfcb6f767807dbdaf187e550ac67966c1e8a713c1567e"
+strip_components = 1
+description = "Modern C++ Terminal Emulator"
+homepage = "http://contour-terminal.org/"
+license = "Apache-2.0"
+deps = ["boxed-cpp", "fmt", "freetype", "guidelines-support-library", "qt6-base", "qt6-declarative", "range-v3", "yaml-cpp"]
+patches = ["patches/0000-phtread_musl.patch", "patches/fmt-11.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCONTOUR_QT_VERSION=6", "-DCONTOUR_TESTING=OFF", "-DCRISPY_TESTING=OFF", "-DVTPARSER_TESTING=OFF", "-DLIBTERMINAL_TESTING=OFF"]
+tools = ["pkg-config"]

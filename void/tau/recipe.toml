@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'tau'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "tau"
+version = "0.12.0"
+archive = "https://gitlab.gnome.org/World/Tau/uploads/14037a7f98f475d2497b74bd74a0430e/tau-0.12.0.tar.xz"
+sha256 = "a14e4c3511fa51cc051c33ad04a3989b93c6aa2405e8b0f5ac05970fe5d95449"
+strip_components = 1
+description = "GTK frontend for the Xi text editor, written in Rust"
+homepage = "https://gitlab.gnome.org/World/Tau"
+license = "MIT"
+deps = ["libhandy", "oniguruma", "vte3", "xi-editor"]
+patches = ["patches/meson-0.61.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

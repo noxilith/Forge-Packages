@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libsass'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, CXXFLAGS
+[package]
+name = "libsass"
+version = "3.6.6"
+archive = "https://github.com/sass/libsass/archive/3.6.6.tar.gz"
+sha256 = "11f0bb3709a4f20285507419d7618f3877a425c0131ea8df40fe6196129df15d"
+strip_components = 1
+description = "C implementation of Sass CSS preprocessor"
+homepage = "http://www.sass-lang.com/libsass"
+license = "MIT"
+
+[build]
+system = "autotools"

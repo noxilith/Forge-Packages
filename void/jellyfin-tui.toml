@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'jellyfin-tui'. Review before relying on it.
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "jellyfin-tui"
+version = "1.6.0"
+archive = "https://github.com/dhonus/jellyfin-tui/archive/refs/tags/v1.6.0.tar.gz"
+sha256 = "b3d24a6a0abf5f4b8118f8943c7fe3ff7afce0939b5c7edf0103efc2d1d67bf0"
+strip_components = 1
+description = "TUI streaming client for the Jellyfin media server"
+homepage = "https://github.com/dhonus/jellyfin-tui"
+license = "GPL-3.0-or-later"
+deps = ["mpv", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

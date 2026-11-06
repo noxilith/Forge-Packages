@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kamoso'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, qt6-multimedia, qt6-tools
+[package]
+name = "kamoso"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kamoso-26.08.1.tar.xz"
+sha256 = "fd36a3fb681b943c4defc4b6acd4c4390aacf373adcb3df0d4c4f17143207d02"
+strip_components = 1
+description = "Simple and friendly program to use your webcam recorder"
+homepage = "https://apps.kde.org/kamoso/"
+license = "GPL-2.0-or-later"
+deps = ["gst-plugins-bad1", "gst-plugins-base1", "gst-plugins-good1", "gstreamer1", "kf6-kconfig", "kf6-kdoctools", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-knotifications", "kf6-purpose", "kirigami-addons", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

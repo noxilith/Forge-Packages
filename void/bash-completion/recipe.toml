@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bash-completion'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: make_install_args
+[package]
+name = "bash-completion"
+version = "2.16.0"
+archive = "https://github.com/scop/bash-completion/releases/download/2.16.0/bash-completion-2.16.0.tar.xz"
+sha256 = "3369bd5e418a75fb990863925aed5b420398acebb320ec4c0306b3eae23f107a"
+strip_components = 1
+description = "Programmable completion for the GNU Bash shell"
+homepage = "https://github.com/scop/bash-completion"
+license = "GPL-2.0-or-later"
+patches = ["patches/load_compat.patch"]
+
+[build]
+system = "autotools"

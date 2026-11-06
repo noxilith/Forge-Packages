@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pam_ssh'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "pam_ssh"
+version = "2.3"
+archive = "https://downloads.sourceforge.net/sourceforge/pam-ssh/pam_ssh-2.3.tar.xz"
+sha256 = "0c456f6a5c9e47ce6825ac50d467e7a797e14239b2b9a72bfeb2df0100f4af31"
+strip_components = 1
+description = "PAM module providing single sign-on behavior for SSH"
+homepage = "http://pam-ssh.sourceforge.net/"
+license = "BSD-2-Clause"
+deps = ["openssl", "pam"]
+patches = ["patches/fix-cross-compile-openssl-feature-checks.patch"]
+
+[build]
+system = "autotools"
+deps = ["openssh"]

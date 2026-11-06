@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-session'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools, xdg-user-dirs
+[package]
+name = "lxqt-session"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-session/archive/2.4.0.tar.gz"
+sha256 = "c9f712925dd1246693d6892334f325596d685d4341822cf8071bad17233ae922"
+strip_components = 1
+description = "LXQt session handler"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kwindowsystem", "layer-shell-qt", "liblxqt", "procps-ng", "qtxdg-tools"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools", "qt6-base"]

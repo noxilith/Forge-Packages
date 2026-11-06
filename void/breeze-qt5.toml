@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'breeze-qt5'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: fftw, kde-plasma-base, qt5
+[package]
+name = "breeze-qt5"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/breeze-6.7.5.tar.xz"
+sha256 = "aa05c0c31c852ed5b137327e7798fd763a54c643875d5d8070625475e0af6976"
+strip_components = 1
+description = "Breeze visual style for the Plasma Desktop"
+homepage = "https://invent.kde.org/plasma/breeze"
+license = "GPL-2.0-or-later"
+deps = ["breeze-qt6", "frameworkintegration", "kcmutils", "plasma-framework"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DBUILD_QT6=OFF"]
+deps = ["extra-cmake-modules", "gettext", "kconfig", "kcoreaddons", "kpackage"]

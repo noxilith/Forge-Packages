@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mangowc'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "mangowc"
+version = "0.18.3"
+archive = "https://github.com/mangowm/mango/archive/refs/tags/0.18.3.tar.gz"
+sha256 = "9b9c66c55ba83131cc2e7b847239f0f7520207f448a8c580c8ca796ec9e13e41"
+strip_components = 1
+description = "Dwl-based wayland compositor using scenefx"
+homepage = "https://github.com/mangowm/mango"
+license = "GPL-3.0-or-later"
+deps = ["cJSON", "pango", "pcre2", "scenefx", "wlroots0.20"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["wayland"]

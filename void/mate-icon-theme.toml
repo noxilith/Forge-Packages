@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mate-icon-theme'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, icon-naming-utils
+[package]
+name = "mate-icon-theme"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-icon-theme-1.28.0.tar.xz"
+sha256 = "94d6079060ca5df74542921de4eea38b7d02d07561c919356d95de876f9a6d3a"
+strip_components = 1
+description = "MATE icon theme"
+homepage = "https://mate-desktop.org"
+license = "CC-BY-SA-3.0"
+deps = ["gtk+3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

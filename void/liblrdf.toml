@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'liblrdf'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ladspa-sdk
+[package]
+name = "liblrdf"
+version = "0.6.1"
+archive = "https://github.com/swh/LRDF/archive/v0.6.1.tar.gz"
+sha256 = "d579417c477ac3635844cd1b94f273ee2529a8c3b6b21f9b09d15f462b89b1ef"
+strip_components = 1
+description = "Lightweight RDF library with special support for LADSPA plugins"
+homepage = "https://github.com/swh/LRDF"
+license = "GPL-2.0-only"
+deps = ["raptor"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

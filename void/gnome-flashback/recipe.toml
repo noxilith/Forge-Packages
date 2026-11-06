@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gnome-flashback'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gnome-settings-daemon, libcanberra
+[package]
+name = "gnome-flashback"
+version = "3.52.1"
+archive = "https://download.gnome.org/sources/gnome-flashback/3.52/gnome-flashback-3.52.1.tar.xz"
+sha256 = "ba04613cdadb62bda206437c047299e16025cde1bd8095e094aa77769c78603a"
+strip_components = 1
+description = "GNOME session with similar user experience to the GNOME 2.x series"
+homepage = "https://wiki.gnome.org/Projects/GnomeFlashback"
+license = "GPL-3.0-or-later"
+deps = ["elogind", "gdk-pixbuf", "gdm", "glib", "gnome-bluetooth", "gnome-desktop", "gnome-panel", "gnome-session", "gnome-themes-extra", "gsettings-desktop-schemas", "gtk+3", "ibus", "libX11", "libXxf86vm", "libcompizconfig", "libxcb", "libxkbfile", "metacity", "pam", "pango", "polkit", "pulseaudio", "upower"]
+patches = ["patches/fix-non-systemd.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-compiz-session", "--enable-compile-warnings=minimum"]
+tools = ["pkg-config"]
+deps = ["gettext"]

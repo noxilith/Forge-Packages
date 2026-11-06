@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'polychromatic'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-colorama, python3-colour, python3-packaging-bootstrap, python3-pyqt6, python3-pyqt6-webengine, python3-requests, python3-setproctitle
+[package]
+name = "polychromatic"
+version = "0.9.8"
+archive = "https://github.com/polychromatic/polychromatic/archive/v0.9.8.tar.gz"
+sha256 = "e9ec85bbdec01b5e5634ee236c90c6a7e78128f1651cd48ac39dadec1199a576"
+strip_components = 1
+description = "RGB lighting management software"
+homepage = "https://polychromatic.app"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "meson"
+deps = ["gettext"]

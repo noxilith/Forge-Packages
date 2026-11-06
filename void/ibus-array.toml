@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ibus-array'. Review before relying on it.
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "ibus-array"
+version = "0.2.3"
+archive = "https://github.com/lexical/ibus-array/archive/refs/tags/release-0.2.3.tar.gz"
+sha256 = "a1018644655ab187728d6a65149186b8517a6c8f1ea4d8416900c129eea58a36"
+strip_components = 1
+description = "Array 30 engine for iBus"
+homepage = "https://github.com/lexical/ibus-array"
+license = "GPL-2.0-or-later"
+deps = ["gettext", "ibus", "opencc"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'osslsigncode'. Review before relying on it.
+[package]
+name = "osslsigncode"
+version = "2.14"
+archive = "https://github.com/mtrojnar/osslsigncode/archive/2.14.tar.gz"
+sha256 = "0f033fd6069387d2e489fbd2187e62f624764eb8c2758ee94e3e793e5150b5c5"
+strip_components = 1
+description = "Authenticode signing and verification"
+homepage = "https://github.com/mtrojnar/osslsigncode"
+license = "GPL-3.0-or-later"
+deps = ["curl", "openssl", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

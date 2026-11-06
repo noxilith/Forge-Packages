@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'rakarrack'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "rakarrack"
+version = "0.6.1"
+archive = "https://downloads.sourceforge.net/sourceforge/rakarrack/rakarrack-0.6.1.tar.bz2"
+sha256 = "7696d27a4814b140fe651d137612ddfa1f167858eccc119e278c14dbee30eee6"
+strip_components = 1
+description = "Versatile guitar multi-effects processor"
+homepage = "http://rakarrack.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["fltk", "libXpm", "libsamplerate", "libsndfile"]
+patches = ["patches/fltk_include.patch"]
+
+[build]
+system = "autotools"
+deps = ["alsa-utils"]

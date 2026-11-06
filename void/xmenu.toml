@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xmenu'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+[package]
+name = "xmenu"
+version = "4.5.5"
+archive = "https://github.com/phillbush/xmenu/archive/v4.5.5.tar.gz"
+sha256 = "13fda8068d3886a590365d19d6ff84f04c0a4c9a516d79569000514067b4e77b"
+strip_components = 1
+description = "X11 menu utility"
+homepage = "https://github.com/phillbush/xmenu"
+license = "MIT"
+deps = ["imlib2", "libX11", "libXft", "libXinerama"]
+
+[build]
+system = "make"

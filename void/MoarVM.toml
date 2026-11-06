@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'MoarVM'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CFLAGS, configure_script
+# needs, but Forge has no recipe for yet: libffi, libtommath, zstd
+[package]
+name = "MoarVM"
+version = "2026.09"
+archive = "https://moarvm.org/releases/MoarVM-2026.09.tar.gz"
+sha256 = "6572adbef9eba7905323318a4d99f450fe365032da71b268c2c16234b8cdb42e"
+strip_components = 1
+description = "VM with adaptive optimization and JIT compilation, built for Rakudo"
+homepage = "https://moarvm.org"
+license = "Artistic-2.0"
+deps = ["libuv", "mimalloc"]
+
+[build]
+system = "autotools"
+configure_args = ["--c11-atomics", "--has-libffi", "--has-libtommath", "--has-libuv", "--has-mimalloc", "--mimalloc"]
+tools = ["perl"]

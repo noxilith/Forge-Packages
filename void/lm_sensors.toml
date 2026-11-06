@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lm_sensors'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: make_build_args, make_install_args, conf_files
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "lm_sensors"
+version = "3.6.0"
+archive = "https://github.com/lm-sensors/lm-sensors/archive/V3-6-0.tar.gz"
+sha256 = "0591f9fa0339f0d15e75326d0365871c2d4e2ed8aa1ff759b3a55d3734b7d197"
+strip_components = 1
+description = "Utilities to read temperature/voltage/fan sensors"
+homepage = "https://hwmon.wiki.kernel.org/lm_sensors"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+
+[build]
+system = "make"
+tools = ["flex", "perl"]
+deps = ["which"]

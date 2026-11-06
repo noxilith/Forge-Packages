@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lxqt-qt5plugin'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libdbusmenu-qt5, qt5
+[package]
+name = "lxqt-qt5plugin"
+version = "1.4.1"
+archive = "https://github.com/lxqt/lxqt-qtplugin/archive/1.4.1.tar.gz"
+sha256 = "20768f00a35f0540d69ad47e6ed829a248bd01056ef9c7da3d931a9f5b2afc6c"
+strip_components = 1
+description = "LXQt Qt theme plugin"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["libfm-qt5", "libqt5xdg"]
+
+[build]
+system = "cmake"
+deps = ["libfm", "lxqt-build-tools-qt5"]

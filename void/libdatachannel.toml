@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libdatachannel'. Review before relying on it.
+[package]
+name = "libdatachannel"
+version = "0.23.1"
+archive = "https://github.com/paullouisageneau/libdatachannel/archive/refs/tags/v0.23.1.tar.gz"
+sha256 = "63e14d619ac4d9cc310a0c7620b80e6da88abf878f27ccc78cd099f95d47b121"
+strip_components = 1
+description = "C/C++ WebRTC network library"
+homepage = "https://libdatachannel.org/"
+license = "MPL-2.0"
+deps = ["libnice", "libsrtp", "openssl", "plog", "usrsctp"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPREFER_SYSTEM_LIB=ON", "-DUSE_NICE=ON", "-DNO_EXAMPLES=ON"]

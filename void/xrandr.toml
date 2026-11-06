@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xrandr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xrandr"
+version = "1.5.4"
+archive = "https://www.x.org/releases/individual/app/xrandr-1.5.4.tar.xz"
+sha256 = "2cafccb2aaf2491a4068676117a0d4f90ab307724b96fffc54cd1da953779400"
+strip_components = 1
+description = "Primitive command line interface to RandR extension"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXrandr"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

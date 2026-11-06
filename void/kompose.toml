@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kompose'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, build_helper
+[package]
+name = "kompose"
+version = "1.38.0"
+archive = "https://github.com/kubernetes/kompose/archive/v1.38.0.tar.gz"
+sha256 = "1a6eb3e9a5084d0ce6d1a81628b314686b7cfa41124bace13eb188865f7640a0"
+strip_components = 1
+description = "Tool to convert Docker Compose to Kubernetes"
+homepage = "https://kompose.io/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

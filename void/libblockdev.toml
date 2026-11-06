@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libblockdev'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS, conf_files
+# needs, but Forge has no recipe for yet: dmraid, libatasmart, nss, python3-setuptools, util-linux-common
+[package]
+name = "libblockdev"
+version = "3.3.1"
+archive = "https://github.com/storaged-project/libblockdev/archive/refs/tags/3.3.1.tar.gz"
+sha256 = "7d313d790dbf2921d19bed0bba591fc3530113bc0f3e7818ee80f028c988a286"
+strip_components = 1
+description = "Library for manipulating block devices"
+homepage = "https://github.com/storaged-project/libblockdev"
+license = "LGPL-2.1-or-later"
+deps = ["cryptsetup", "e2fsprogs", "glib", "json-glib", "keyutils", "kmod", "libbytesize", "libnvme", "libyaml", "lvm2", "parted", "pcre2", "volume_key"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["autoconf-archive"]

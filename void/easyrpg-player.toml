@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'easyrpg-player'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fluidsynth, opusfile, speexdsp
+[package]
+name = "easyrpg-player"
+version = "0.8.1.1"
+archive = "https://github.com/EasyRPG/Player/archive/0.8.1.1.tar.gz"
+sha256 = "fae1c417a9807fa8870e14af49d9e49f3c59072474db6b92f7290a8ab127acb6"
+strip_components = 1
+description = "RPG Maker 2000/2003 and EasyRPG games interpreter"
+homepage = "https://easyrpg.org/player"
+license = "GPL-3.0-or-later"
+deps = ["SDL2", "SDL2_mixer", "fmt", "freetype", "lhasa", "liblcf", "libpng", "libsndfile", "libvorbis", "libxmp", "mpg123", "pixman", "wildmidi", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

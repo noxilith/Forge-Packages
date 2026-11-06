@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'plasma-nm'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "plasma-nm"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-nm-6.7.5.tar.xz"
+sha256 = "6469ff89e26d44565292c968df595b3a68f353707255ba48725c1bae2a67f3be"
+strip_components = 1
+description = "NetworkManager Plasma applet"
+homepage = "https://invent.kde.org/plasma/plasma-nm"
+license = "LGPL-2.1-or-later"
+deps = ["NetworkManager", "kf6-kcmutils", "kf6-kcolorscheme", "kf6-kcompletion", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-knotifications", "kf6-kpackage", "kf6-kquickcharts", "kf6-kservice", "kf6-ksvg", "kf6-kwallet", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-modemmanager-qt", "kf6-networkmanager-qt", "kf6-prison", "kf6-solid", "kirigami-addons", "libplasma", "mobile-broadband-provider-info", "plasma-workspace", "qca-qt6", "qcoro-qt6", "qt6-base", "qt6-declarative", "qtkeychain-qt6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

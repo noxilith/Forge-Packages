@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'frr'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_build_args, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: libreadline8, python3-Sphinx
+[package]
+name = "frr"
+version = "7.5"
+archive = "https://github.com/FRRouting/frr/archive/frr-7.5.tar.gz"
+sha256 = "54066e82a82751ec5876d9b67aa0cb24fe94e19e7371af290ac25099eda9f136"
+strip_components = 1
+description = "IP routing protocol suite"
+homepage = "https://frrouting.org"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["c-ares", "json-c", "libcap", "libyang", "pam", "pcre"]
+patches = ["patches/python-3.13.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-doc", "--enable-user=_frr", "--enable-group=_frr", "--enable-vty-group=_frrvty"]
+tools = ["bison", "flex", "pkg-config"]

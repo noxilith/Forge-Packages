@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'SatDump'. Review before relying on it.
+# needs, but Forge has no recipe for yet: LuaJIT, fftw, glew, portaudio, volk, zstd
+[package]
+name = "SatDump"
+version = "1.2.2"
+archive = "https://github.com/SatDump/SatDump/archive/refs/tags/1.2.2.tar.gz"
+sha256 = "2ab7c6126e426ad79972b274cc380c0bb04c9e755d746d67f3af92c1dd569209"
+strip_components = 1
+description = "Satellite data processing"
+homepage = "https://github.com/SatDump/SatDump"
+license = "GPL-3.0-or-later"
+deps = ["LimeSuite", "airspy", "airspyhf", "curl", "glfw", "hackrf", "jemalloc", "libpng", "librtlsdr", "nng", "ocl-icd", "tiff", "uhd"]
+patches = ["patches/gcc-16.patch", "patches/incompat-ptr.patch", "patches/time64.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

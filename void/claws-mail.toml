@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'claws-mail'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libcanberra, libwebkit2gtk41, ytnef
+[package]
+name = "claws-mail"
+version = "4.4.0"
+archive = "https://www.claws-mail.org/download.php?file=releases/claws-mail-4.4.0.tar.xz"
+sha256 = "03e0549d5f0fcd7a59804186524105d05ebb5e534d42a4b86a9a90f729ca255b"
+strip_components = 1
+description = "GTK+ based, user-friendly, lightweight, and fast email client"
+homepage = "https://claws-mail.org"
+license = "GPL-3.0-or-later"
+deps = ["NetworkManager", "cairo", "curl", "dbus", "enchant2", "glib", "gnutls", "gpgme", "gumbo-parser", "libSM", "libarchive", "libayatana-appindicator", "libetpan", "libical", "libnotify", "librsvg", "libxml2", "openldap", "poppler", "startup-notification"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-python-plugin", "--disable-perl-plugin", "--enable-enchant", "--enable-gnutls"]
+tools = ["pkg-config"]
+deps = ["gettext"]

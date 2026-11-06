@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ksnip'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "ksnip"
+version = "1.10.1"
+archive = "https://github.com/DamirPorobic/ksnip/archive/v1.10.1.tar.gz"
+sha256 = "41fa6a54b0a88095ccdf7f8f3a96617e91fb15dcedae2aadaf2ee24677e9a88c"
+strip_components = 1
+description = "Qt based cross-platform screenshot tool with annotation features"
+homepage = "https://github.com/DamirPorobic/ksnip"
+license = "GPL-3.0-or-later"
+deps = ["kColorPicker-qt5", "kImageAnnotator-qt5", "libXfixes"]
+patches = ["patches/76f4b381.patch"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

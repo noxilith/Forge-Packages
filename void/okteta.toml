@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'okteta'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "okteta"
+version = "0.26.25"
+archive = "https://download.kde.org/stable/okteta/0.26.25/src/okteta-0.26.25.tar.xz"
+sha256 = "2be1891bf498cb38030ca5db1ad022c502557c1c0b8ff6ac3fdac8254a5bb76b"
+strip_components = 1
+description = "Hexadecimal editor for binary files"
+homepage = "https://apps.kde.org/okteta/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kbookmarks", "kcmutils", "kcodecs", "kcompletion", "kconfigwidgets", "kcrash", "knewstuff", "kparts", "qca-qt5"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "kconfig", "kcoreaddons", "kdoctools"]

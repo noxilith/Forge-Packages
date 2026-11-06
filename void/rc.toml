@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rc'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build, pre_configure
+[package]
+name = "rc"
+version = "1.7.4"
+archive = "https://github.com/rakitzis/rc/archive/refs/tags/v1.7.4.tar.gz"
+sha256 = "0b83f8698dd8ef44ca97b25c4748c087133f53c7fff39b6b70dab65931def8b0"
+strip_components = 1
+description = "Alternative implementation of the plan 9 rc shell"
+homepage = "https://github.com/rakitzis/rc"
+license = "Zlib"
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_sys_restartable_syscalls=no"]

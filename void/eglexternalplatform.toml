@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'eglexternalplatform'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "eglexternalplatform"
+version = "1.2.1"
+archive = "https://github.com/NVIDIA/eglexternalplatform/archive/refs/tags/1.2.1.tar.gz"
+sha256 = "5089ceb054ca50c85837f015756a3d0f2f75cf2a98c9e5fbcbcfb8206137f76e"
+strip_components = 1
+description = "EGL External Platform interface headers"
+homepage = "https://github.com/NVIDIA/eglexternalplatform"
+license = "MIT"
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'par2cmdline'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "par2cmdline"
+version = "1.4.0"
+archive = "https://github.com/Parchive/par2cmdline/archive/v1.4.0.tar.gz"
+sha256 = "c608d046977ad334d5fb230a63db336cb62682fa01c980127fce2e5283dcc629"
+strip_components = 1
+description = "PAR 2.0 compatible file verification and repair tool"
+homepage = "https://github.com/Parchive/par2cmdline"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

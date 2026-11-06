@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lshw'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: make_build_args, make_install_args, make_build_target, make_install_target
+[package]
+name = "lshw"
+version = "B.02.20"
+archive = "https://ezix.org/software/files/lshw-B.02.20.tar.gz"
+sha256 = "06d9cf122422220e5dc94e8ea5b01816a69bb6b59368f63d7f21fff31fc6922a"
+strip_components = 1
+description = "Hardware lister application"
+homepage = "https://ezix.org/project/wiki/HardwareLiSter"
+license = "GPL-2.0-only"
+deps = ["gtk+3"]
+patches = ["patches/musl-basename.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["docbook2x", "gettext"]

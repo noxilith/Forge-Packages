@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'palapeli'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "palapeli"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/palapeli-26.08.1.tar.xz"
+sha256 = "7d117962db230e30fad9fa00e3604fa352010d2d050fe850b6db4bd20c651825"
+strip_components = 1
+description = "Jigsaw puzzle game"
+homepage = "https://kde.org/applications/games/palapeli"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kio", "kf6-knotifications", "libkdegames", "qhull"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

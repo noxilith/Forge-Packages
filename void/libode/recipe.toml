@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libode'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libode"
+version = "0.16"
+archive = "https://bitbucket.org/odedevs/ode/downloads/ode-0.16.tar.gz"
+sha256 = "4ba3b76f9c1314160de483b3db92b0569242a07452cbb25b368e75deb3cabf27"
+strip_components = 1
+description = "High performance library for simulating rigid body dynamics"
+homepage = "http://www.ode.org"
+license = "LGPL-2/BSD"
+patches = ["patches/patch1-96154db.patch", "patches/patch2-3262016.patch", "patches/patch3-ea98ff1.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-shared", "--enable-double-precision"]

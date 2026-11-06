@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libxkbui'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libxkbui"
+version = "1.0.2"
+archive = "https://www.x.org/releases/individual/lib/libxkbui-1.0.2.tar.bz2"
+sha256 = "20c23101d63234ee5f6d696dfa069b29c6c58e39eff433bcd7705b50b3ffa214"
+strip_components = 1
+description = "xkbui library from X.org"
+homepage = "https://www.x.org/releases/individual"
+license = "MIT"
+deps = ["libXt", "libxkbfile", "xorgproto"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

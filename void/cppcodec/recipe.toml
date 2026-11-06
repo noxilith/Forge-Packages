@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cppcodec'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cppcodec"
+version = "0.2"
+archive = "https://github.com/tplgy/cppcodec/archive/v0.2.tar.gz"
+sha256 = "0edaea2a9d9709d456aa99a1c3e17812ed130f9ef2b5c2d152c230a5cbc5c482"
+strip_components = 1
+description = "Header-only C++11 library to encode/decode base64*, base32* and hex"
+homepage = "https://github.com/tplgy/cppcodec"
+license = "MIT"
+deps = ["catch2"]
+patches = ["patches/new-catch2.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_CXX_STANDARD=17"]
+tools = ["pkg-config"]

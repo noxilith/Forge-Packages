@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'vlna'. Review before relying on it.
+[package]
+name = "vlna"
+version = "1.5"
+archive = "https://petr.olsak.net/ftp/olsak/vlna/vlna-1.5.tar.gz"
+sha256 = "0d79955ec138760fa48dcddd73ed0bac4a81d31e99cb8929a05550373b4f4bfb"
+strip_components = 1
+description = "Adding Czech & Slovak non-breaking spaces to TeX and other files"
+homepage = "https://petr.olsak.net/ftp/olsak/vlna/"
+license = "LPPL-1.0"
+
+[build]
+system = "autotools"

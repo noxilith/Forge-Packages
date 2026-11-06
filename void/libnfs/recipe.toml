@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libnfs'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libnfs"
+version = "5.0.3"
+archive = "https://github.com/sahlberg/libnfs/archive/libnfs-5.0.3.tar.gz"
+sha256 = "d945cb4f4c8f82ee1f3640893a168810f794a28e1010bb007ec5add345e9df3e"
+strip_components = 1
+description = "Client library for accessing NFS shares"
+homepage = "https://github.com/sahlberg/libnfs"
+license = "LGPL-2.1-or-later"
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

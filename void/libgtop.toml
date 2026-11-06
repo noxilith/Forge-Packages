@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libgtop'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: python3-distutils-extra
+[package]
+name = "libgtop"
+version = "2.41.3"
+archive = "https://download.gnome.org/sources/libgtop/2.41/libgtop-2.41.3.tar.xz"
+sha256 = "775676df958e2ea2452f7568f28b2ea581063d312773dd5c0b7624c1b9b2da8c"
+strip_components = 1
+description = "Library to retrieve system information, used in GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/libgtop"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "libXau"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-libgtop-smp"]
+tools = ["perl", "pkg-config"]

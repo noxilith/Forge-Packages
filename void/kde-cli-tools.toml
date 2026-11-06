@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kde-cli-tools'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-svg, qt6-tools
+[package]
+name = "kde-cli-tools"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kde-cli-tools-6.7.5.tar.xz"
+sha256 = "18f3c421b305003caf73f9e9fbec09fbf30f472dbe81fec328046cca7883a31d"
+strip_components = 1
+description = "KDE CLI tools"
+homepage = "https://invent.kde.org/plasma/kde-cli-tools"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdesu", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kparts", "kf6-kservice", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "plasma-activities", "plasma-workspace", "qt6-base", "xdg-utils"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext"]

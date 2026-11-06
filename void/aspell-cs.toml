@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-cs'. Review before relying on it.
+[package]
+name = "aspell-cs"
+version = "20040614.1"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/cs/aspell6-cs-20040614-1.tar.bz2"
+sha256 = "01c091f907c2fa4dfa38305c2494bb80009407dfb76ead586ad724ae21913066"
+strip_components = 1
+description = "Czech dictionary for aspell"
+homepage = "http://aspell.net/"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

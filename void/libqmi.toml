@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libqmi'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libqmi"
+version = "1.38.0"
+archive = "https://gitlab.freedesktop.org/mobile-broadband/libqmi/-/archive/1.38.0/libqmi-1.38.0.tar.bz2"
+sha256 = "742cd353a7b6f64285c444cf33242176c70c4d711b877bec15e1f4ed3e064f1a"
+strip_components = 1
+description = "QMI modem protocol helper library"
+homepage = "http://www.freedesktop.org/wiki/Software/libqmi/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["bash-completion", "glib", "libgudev", "libmbim", "libqrtr-glib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dmbim_qmux=true", "-Dqrtr=true", "-Dintrospection=true"]
+tools = ["pkg-config"]

@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'nfs-utils'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: mit-krb5, sqlite, util-linux-common
+[package]
+name = "nfs-utils"
+version = "3.1.1"
+archive = "https://www.kernel.org/pub/linux/utils/nfs-utils/3.1.1/nfs-utils-3.1.1.tar.xz"
+sha256 = "7dbc05eb8b32828b322872b759a62cb3979cb4118f344dd8616813d1390e84e0"
+strip_components = 1
+description = "Network File System utilities"
+homepage = "https://www.linux-nfs.org/"
+license = "GPL-2.0-or-later"
+deps = ["keyutils", "libcap", "libevent", "libnl3", "libtirpc", "libxml2", "lvm2", "rpcbind"]
+patches = ["patches/musl-fix_long_unsigned_int.patch", "patches/musl-getservbyport.patch", "patches/musl-includes.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-statduser=nobody", "--enable-gss", "--enable-nfsv4", "--enable-libmount-mount", "--enable-svcgss", "--enable-uuid", "--enable-ipv6", "--without-tcp-wrappers", "--disable-static", "--enable-junction"]
+tools = ["pkg-config"]
+deps = ["rpcsvc-proto"]

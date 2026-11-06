@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'opentoonz'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: boost, glew, opencv, qt5
+[package]
+name = "opentoonz"
+version = "1.7.1"
+archive = "https://github.com/opentoonz/opentoonz/archive/v1.7.1.tar.gz"
+sha256 = "d0daf60d06510efe15d0db3f9eed0162499ed58061504dca27892c2b9ea5f22d"
+strip_components = 1
+description = "Full-featured 2D animation creation software"
+homepage = "https://opentoonz.github.io/e/"
+license = "BSD-3-Clause"
+deps = ["SDL2", "libfreeglut", "libjpeg-turbo", "libmypaint", "libusb", "lz4", "lzo", "openblas", "superlu", "xz"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+subdir = "toonz/sources"
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mblaze'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mblaze"
+version = "1.4"
+archive = "https://leahneukirchen.org/releases/mblaze-1.4.tar.gz"
+sha256 = "7bb6f2b3f9e31963e3d38c3f4a0a07ae67190b131712f4f94bf37fb87f98a41b"
+strip_components = 1
+description = "Maildir-focused command line mail client"
+homepage = "https://github.com/leahneukirchen/mblaze"
+license = "Public Domain, MIT"
+
+[build]
+system = "make"

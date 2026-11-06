@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libktorrent'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: boost, doxygen, qt6-tools
+[package]
+name = "libktorrent"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libktorrent-26.08.1.tar.xz"
+sha256 = "0a55d129024f39b474ceb108bfa536caca15fea6cb0fb3aa7bb0b87acc476845"
+strip_components = 1
+description = "BitTorrent protocol implementation"
+homepage = "https://apps.kde.org/en/ktorrent"
+license = "GPL-2.0-or-later"
+deps = ["gmp", "karchive", "kf6-kcrash", "kf6-ki18n", "kf6-kio", "kf6-solid", "libgcrypt", "qca-qt6", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons"]

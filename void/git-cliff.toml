@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'git-cliff'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, build_helper
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "git-cliff"
+version = "2.14.2"
+archive = "https://github.com/orhun/git-cliff/archive/refs/tags/v2.14.2.tar.gz"
+sha256 = "fbbb1f8ade8e9affeaacd632bedc94ac898fb726516f2f5a86d1bfba947635f4"
+strip_components = 1
+description = "Changelog generator based on conventional commits"
+homepage = "https://github.com/orhun/git-cliff"
+license = "Apache-2.0 OR MIT"
+deps = ["libgit2-1.9"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features=integrations"]
+tools = ["pkg-config"]

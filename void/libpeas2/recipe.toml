@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'libpeas2'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gi-docgen, hicolor-icon-theme, lua51, lua54-lgi
+[package]
+name = "libpeas2"
+version = "2.2.1"
+archive = "https://download.gnome.org/sources/libpeas/2.2/libpeas-2.2.1.tar.xz"
+sha256 = "589eca89b437006edf3755478df037c740a2a84cfa5d202dbad6095e828e2488"
+strip_components = 1
+description = "Gobject-based plugins engine"
+homepage = "https://wiki.gnome.org/Projects/Libpeas"
+license = "LGPL-2.1-or-later"
+deps = ["gjs", "mozjs140", "python3-gobject", "vala"]
+patches = ["patches/test-gobject-3.55.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgtk_doc=true", "-Dvapi=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

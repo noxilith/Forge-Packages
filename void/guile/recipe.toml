@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'guile'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: libffi, libreadline8
+[package]
+name = "guile"
+version = "3.0.11"
+archive = "https://ftp.gnu.org/gnu/guile/guile-3.0.11.tar.gz"
+sha256 = "3c9c16972a73bb792752f2e4f1cce7212d7638d5494b5f7e8e19f3819dbf3a19"
+strip_components = 1
+description = "Portable, embeddable Scheme implementation written in C"
+homepage = "http://www.gnu.org/software/guile"
+license = "GPL-3.0-or-later, LGPL-3.0-or-later"
+deps = ["gc", "gmp", "libatomic_ops", "libunistring"]
+patches = ["patches/musl-longlong.patch", "patches/zfs.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-error-on-warning"]
+tools = ["pkg-config"]
+deps = ["texinfo"]

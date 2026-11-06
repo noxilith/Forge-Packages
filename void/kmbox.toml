@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kmbox'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kmbox"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kmbox-26.08.1.tar.xz"
+sha256 = "4bda0a789e010d383db7a56294941853cc2d878ddd57b33f1e08daeb2714a75b"
+strip_components = 1
+description = "Library for accessing mail storages in MBox format"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcodecs", "kf6-kmime", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext"]

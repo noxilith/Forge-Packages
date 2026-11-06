@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'greybird-themes'. Review before relying on it.
+[package]
+name = "greybird-themes"
+version = "3.23.4"
+archive = "https://github.com/shimmerproject/Greybird/archive/v3.23.4.tar.gz"
+sha256 = "74dcec9b9bcf6c869941b661c50ce0d752b4eb4e193747db536ffd7e97d32453"
+strip_components = 1
+description = "Elegant grey GTK+2/3 theme"
+homepage = "https://github.com/shimmerproject/Greybird"
+license = "GPL-2.0-or-later, CC-BY-SA-3.0"
+
+[build]
+system = "meson"
+deps = ["gdk-pixbuf", "glib", "librsvg", "sassc"]

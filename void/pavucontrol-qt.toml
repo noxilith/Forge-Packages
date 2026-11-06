@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pavucontrol-qt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "pavucontrol-qt"
+version = "2.4.0"
+archive = "https://github.com/lxqt/pavucontrol-qt/archive/2.4.0.tar.gz"
+sha256 = "bee5d80a7c9467b89c66b904b36aae96c72f136f683867ad986d1e56bee10656"
+strip_components = 1
+description = "Pulseaudio mixer in Qt"
+homepage = "https://lxqt-project.org"
+license = "GPL-2.0-or-later"
+deps = ["pulseaudio", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools"]

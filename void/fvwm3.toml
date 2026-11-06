@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fvwm3'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ruby-asciidoctor
+[package]
+name = "fvwm3"
+version = "1.1.5"
+archive = "https://github.com/fvwmorg/fvwm3/releases/download/1.1.5/fvwm3-1.1.5.tar.gz"
+sha256 = "6b827885e226261eda97fec57ec03feb5e82e102f3081a3dc941020403a9c196"
+strip_components = 1
+description = "Multiple large virtual desktop window manager"
+homepage = "https://www.fvwm.org/"
+license = "GPL-2.0-or-later"
+deps = ["fribidi", "libXcursor", "libXft", "libXpm", "libXrandr", "libXt", "libevent", "libpng", "librsvg", "libxkbcommon"]
+
+[build]
+system = "meson"
+configure_args = ["-Dmandoc=true"]
+tools = ["perl", "pkg-config"]

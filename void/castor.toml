@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'castor'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "castor"
+version = "0.9.0"
+archive = "https://git.sr.ht/~julienxx/castor/archive/0.9.0.tar.gz"
+sha256 = "ed57c92a88e8ebe8db286daad9677ffb99287d164d3193d17f8134bb77de5ae1"
+strip_components = 1
+description = "Graphical client for plain-text protocols written in Rust with GTK"
+homepage = "https://git.sr.ht/~julienxx/castor"
+license = "MIT"
+deps = ["at-spi2-core", "cairo", "gdk-pixbuf", "gtk+3", "openssl", "pango"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

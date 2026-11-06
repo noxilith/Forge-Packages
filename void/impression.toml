@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'impression'. Review before relying on it.
+# hooks not translated: post_patch, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "impression"
+version = "3.8.0"
+archive = "https://gitlab.com/adhami3310/Impression/-/archive/v3.8.0/Impression-v3.8.0.tar.gz"
+sha256 = "afce96e3acefb521a8b3d6fbcc1279d1133775c99439a97e2178bafcd9e0658d"
+strip_components = 1
+description = "Application to create bootable drives from disk images"
+homepage = "https://apps.gnome.org/Impression/"
+license = "GPL-3.0-only"
+deps = ["gtk4", "libadwaita", "libcdio", "openssl", "udisks2", "wimlib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils", "gettext", "glib"]

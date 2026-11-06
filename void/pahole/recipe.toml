@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pahole'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "pahole"
+version = "1.32"
+archive = "https://fedorapeople.org/~acme/dwarves/dwarves-1.32.tar.xz"
+sha256 = "319cbf319e9fc92065a5407ce47eb868d73566f3d4840a56832734e4579df947"
+strip_components = 1
+description = "Various DWARF utils"
+homepage = "http://git.kernel.org/?p=devel/pahole/pahole.git;a=summary"
+license = "GPL-2.0-only"
+deps = ["elfutils", "zlib"]
+patches = ["patches/fix_always_inline.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-D__LIB=lib"]

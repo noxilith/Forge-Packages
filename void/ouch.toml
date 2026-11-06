@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ouch'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# needs, but Forge has no recipe for yet: bzip2, llvm, zstd
+[package]
+name = "ouch"
+version = "0.8.1"
+archive = "https://github.com/ouch-org/ouch/archive/refs/tags/0.8.1.tar.gz"
+sha256 = "920f73d4b162bd1814b67c57906b7322345f198d763f28d04722a406f8352246"
+strip_components = 1
+description = "CLI utility for easily compressing and decompressing files and dirs"
+homepage = "https://github.com/ouch-org/ouch"
+license = "MIT"
+deps = ["libzip", "xz"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features=use_zlib,use_zstd_thin"]
+tools = ["pkg-config"]

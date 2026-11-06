@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'okular'. Review before relying on it.
+# needs, but Forge has no recipe for yet: chmlib, discount, hicolor-icon-theme, libspectre, qt6-svg
+[package]
+name = "okular"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/okular-26.08.1.tar.xz"
+sha256 = "7eb26c37ee42b6657526aeddd1bce71c5556e3865772a677f49b68deb46885d6"
+strip_components = 1
+description = "KDE Document Viewer"
+homepage = "https://kde.org/applications/en/graphics/org.kde.okular"
+license = "GPL-2.0-only"
+deps = ["djvulibre", "ebook-tools", "kf6-kbookmarks", "kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-kparts", "kf6-kpty", "kf6-ktextwidgets", "kf6-kwallet", "kf6-kwindowsystem", "kf6-purpose", "kf6-threadweaver", "libkexiv2", "libqmobipocket6", "libzip", "phonon", "plasma-activities", "poppler-qt5", "qca-qt6", "qt6-base", "qt6-speech"]
+patches = ["patches/musl-vasprintf.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

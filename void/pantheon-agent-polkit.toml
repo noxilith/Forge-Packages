@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pantheon-agent-polkit'. Review before relying on it.
+[package]
+name = "pantheon-agent-polkit"
+version = "1.0.0"
+archive = "https://github.com/elementary/pantheon-agent-polkit/archive/1.0.0.tar.gz"
+sha256 = "8e730f335545a4ca2717e1c9ccad61c329c1f19ea51f76ae4783da9e0416d484"
+strip_components = 1
+description = "Pantheon Polkit Agent"
+homepage = "https://github.com/elementary/pantheon-agent-polkit"
+license = "LGPL-3.0-or-later"
+deps = ["granite", "gtk+3", "polkit"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "gobject-introspection", "vala"]

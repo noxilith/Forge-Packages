@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cups-filters'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: bc, cups, ghostscript
+[package]
+name = "cups-filters"
+version = "2.0.1"
+archive = "https://github.com/OpenPrinting/cups-filters/releases/download/2.0.1/cups-filters-2.0.1.tar.xz"
+sha256 = "39e71de3ce06762b342749f1dc7cba6817738f7bf4d322c1bb9ab10b8569ab80"
+strip_components = 1
+description = "OpenPrinting CUPS Filters"
+homepage = "https://wiki.linuxfoundation.org/openprinting/cups-filters"
+license = "Apache-2.0 WITH custom:GPL-2.0-LGPL-2.0-Exception"
+deps = ["libcupsfilters", "libppd", "poppler"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-mutool"]
+tools = ["pkg-config"]

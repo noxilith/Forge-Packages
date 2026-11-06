@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gammu'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gammu"
+version = "1.42.0"
+archive = "https://dl.cihar.com/gammu/releases/gammu-1.42.0.tar.bz2"
+sha256 = "6197f8b4d35746d31567e61880121def676f225eba05276648410eaa6ce60c9f"
+strip_components = 1
+description = "Cell phone connectivity and management tool"
+homepage = "https://wammu.eu"
+license = "GPL-2.0-or-later"
+deps = ["bash-completion", "bluez", "glib", "libusb"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

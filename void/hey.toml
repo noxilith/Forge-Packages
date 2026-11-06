@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'hey'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "hey"
+version = "0.1.5"
+archive = "https://github.com/rakyll/hey/archive/v0.1.5.tar.gz"
+sha256 = "f678bc0f07c62a6513726298873940b70099aa85244efa813f6a0d925092ffe9"
+strip_components = 1
+description = "HTTP load generator"
+homepage = "https://github.com/rakyll/hey"
+license = "Apache-2.0"
+
+[build]
+system = "go"

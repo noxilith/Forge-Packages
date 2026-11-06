@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-multi-writer'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libcanberra
+[package]
+name = "gnome-multi-writer"
+version = "3.32.1"
+archive = "https://download.gnome.org/sources/gnome-multi-writer/3.32/gnome-multi-writer-3.32.1.tar.xz"
+sha256 = "bcd56cd0716a727b85e3a2dedef8e747d4567952e68c29907bea8b103d6aedaa"
+strip_components = 1
+description = "Writes ISO files to multiple USB devices at once"
+homepage = "https://wiki.gnome.org/Apps/MultiWriter"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libgusb", "polkit", "udisks2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["docbook2mdoc", "gettext", "glib"]

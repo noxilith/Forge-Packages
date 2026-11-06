@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'NetworkManager-openconnect'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_configure, post_patch
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: libwebkit2gtk41
+[package]
+name = "NetworkManager-openconnect"
+version = "1.2.10"
+archive = "https://download.gnome.org/sources/NetworkManager-openconnect/1.2/NetworkManager-openconnect-1.2.10.tar.xz"
+sha256 = "844b6bf64ecadb97b4a68c776db89aa5e6ee7e59bd24b0180228406863136464"
+strip_components = 1
+description = "NetworkManager VPN plugin for OpenConnect"
+homepage = "https://wiki.gnome.org/Projects/NetworkManager"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["gcr", "gtk4", "libnma", "libsecret", "libxml2", "lz4", "openconnect", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--with-gtk4"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'x265'. Review before relying on it.
+# hooks not translated: post_configure, pre_build, pre_configure
+[package]
+name = "x265"
+version = "4.2"
+archive = "https://github.com/Multicorewareinc/x265/releases/download/4.2/x265_4.2.tar.gz"
+sha256 = "40b1ea0453e0309f0eba934e0ddf533f8f6295966679e8894e8f1c1c8d5e1210"
+strip_components = 1
+description = "Open Source H.265/HEVC video encoder"
+homepage = "http://x265.org/"
+license = "GPL-2.0-or-later"
+patches = ["patches/80392c12f71cb4e562099631e8ee496deb1ad719.patch", "patches/handbrake-ambientlight.patch", "patches/x265-pic.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_PIC=1", "-DEXTRA_LINK_FLAGS=-L.", "-DEXTRA_LIB=x265_main10.a;x265_main12.a", "-DLINKED_10BIT=TRUE", "-DLINKED_12BIT=TRUE"]
+subdir = "source"

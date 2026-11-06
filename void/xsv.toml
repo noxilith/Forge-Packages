@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'xsv'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "xsv"
+version = "0.13.0"
+archive = "https://github.com/BurntSushi/xsv/archive/0.13.0.tar.gz"
+sha256 = "2b75309b764c9f2f3fdc1dd31eeea5a74498f7da21ae757b3ffd6fd537ec5345"
+strip_components = 1
+description = "Fast CSV toolkit written in Rust"
+homepage = "https://github.com/BurntSushi/xsv/"
+license = "Public Domain, MIT"
+
+[build]
+system = "cargo"

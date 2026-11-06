@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'subjack'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "subjack"
+version = "3.1.0"
+archive = "https://github.com/haccer/subjack/archive/v3.1.0.tar.gz"
+sha256 = "3daf124c32a1bf839736420a0f3bc6d92c5358987c9e08ec00a0c8cf3a3febe4"
+strip_components = 1
+description = "Subdomain takeover tool"
+homepage = "https://github.com/haccer/subjack"
+license = "Apache-2.0"
+
+[build]
+system = "go"

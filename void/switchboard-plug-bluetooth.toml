@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'switchboard-plug-bluetooth'. Review before relying on it.
+[package]
+name = "switchboard-plug-bluetooth"
+version = "2.3.6"
+archive = "https://github.com/elementary/switchboard-plug-bluetooth/archive/2.3.6.tar.gz"
+sha256 = "fec5d135dc17c3ab1396cbe78f255e767f1834dfc4db8ec30579ff0ef29836b9"
+strip_components = 1
+description = "Switchboard Bluetooth Plug"
+homepage = "https://github.com/elementary/switchboard-plug-bluetooth"
+license = "GPL-3.0-or-later"
+deps = ["granite", "gtk+3", "switchboard"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

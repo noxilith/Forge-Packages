@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'NetworkManager'. Review before relying on it.
+# 13 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_check, post_install, post_patch, pre_check
+# settings not translated: build_helper, make_dirs, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: dbus-glib, docbook-xsl, libndp, libreadline8, linux-tools, llvm, nss, util-linux-common, wpa_supplicant
+[package]
+name = "NetworkManager"
+version = "1.58.1"
+archive = "https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases/1.58.1/downloads/NetworkManager-1.58.1.tar.xz"
+sha256 = "262864cfd198123d3e5dbe91937441b97ee9059d6d712e1a5bfbb1c54668d14d"
+strip_components = 1
+description = "Network Management daemon"
+homepage = "https://networkmanager.dev"
+license = "GPL-2.0-or-later"
+deps = ["ModemManager", "curl", "dbus", "eudev", "gnutls", "iproute2", "jansson", "libbpf", "libgudev", "libnl3", "libnvme", "libpsl", "mobile-broadband-provider-info", "newt", "openresolv", "polkit", "ppp"]
+patches = ["patches/fix-cross-clat.patch", "patches/fix-cross-gir.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystemd_journal=false", "-Dsystemdsystemgeneratordir=no", "-Dlibaudit=no", "-Dovs=false", "-Dselinux=false", "-Dsystemdsystemunitdir=no", "-Dqt=false", "-Dsession_tracking_consolekit=false", "-Diwd=true", "-Ddocs=false", "-Dman=true", "-Dconfig_dhcp_default=internal", "-Dtests=no"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "glib", "libxslt"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fntsample'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: unicode-character-database
+[package]
+name = "fntsample"
+version = "5.3"
+archive = "https://github.com/eugmes/fntsample/archive/release/5.3.tar.gz"
+sha256 = "e4e8b50b0a5e984cfdaa32b7d133bd3bf0c62edb14f752f7df1190176023972b"
+strip_components = 1
+description = "PDF and PostScript font samples generator"
+homepage = "https://github.com/eugmes/fntsample"
+license = "GPL-3.0-or-later"
+deps = ["cairo", "fontconfig", "freetype", "glib", "pango"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

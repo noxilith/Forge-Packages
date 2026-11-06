@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'detox'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+[package]
+name = "detox"
+version = "3.0.1"
+archive = "https://github.com/dharple/detox/archive/v3.0.1.tar.gz"
+sha256 = "15dc32ca5856a3edc2fff237c8cbcb29979a25292aac738a272181d2152699ea"
+strip_components = 1
+description = "Utility designed to clean up filenames"
+homepage = "https://github.com/dharple/detox"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+tools = ["flex", "pkg-config"]

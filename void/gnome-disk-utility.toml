@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-disk-utility'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: docbook-xsl, gnome-settings-daemon, gptfdisk, hicolor-icon-theme, libcanberra
+[package]
+name = "gnome-disk-utility"
+version = "46.1"
+archive = "https://download.gnome.org/sources/gnome-disk-utility/46/gnome-disk-utility-46.1.tar.xz"
+sha256 = "c24e9439a04d70bcfae349ca134c7005435fe2b6f452114df878bff0b89bbffe"
+strip_components = 1
+description = "GNOME libraries and applications for dealing with storage devices"
+homepage = "https://wiki.gnome.org/Apps/Disks"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "libdvdread", "libhandy1", "libnotify", "libpwquality", "libsecret", "libxslt", "parted", "udisks2"]
+
+[build]
+system = "meson"
+configure_args = ["-Dlogind=none"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3"]

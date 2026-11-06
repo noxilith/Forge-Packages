@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'flex'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libfl-devel-2.6.4_3
+[package]
+name = "flex"
+version = "2.6.4"
+archive = "https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz"
+sha256 = "e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995"
+strip_components = 1
+description = "Fast Lexical Analyzer"
+homepage = "https://github.com/westes/flex"
+license = "custom:flex"
+deps = ["bison", "m4"]
+patches = ["patches/disable-tests.patch", "patches/no-help2man.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-bootstrap", "--disable-shared"]
+tools = ["bison"]

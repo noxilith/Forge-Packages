@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gumbo-parser'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "gumbo-parser"
+version = "0.13.2"
+archive = "https://codeberg.org/gumbo-parser/gumbo-parser/archive/0.13.2.tar.gz"
+sha256 = "90bea83283760339da194fb90112a532854c13cd1eabdabc7ef7a4dede1dbc9d"
+strip_components = 1
+description = "HTML5 parsing library in pure C99"
+homepage = "https://codeberg.org/gumbo-parser/gumbo-parser/"
+license = "Apache-2.0"
+deps = ["gtest"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

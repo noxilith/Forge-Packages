@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libseccomp'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libseccomp"
+version = "2.6.1"
+archive = "https://github.com/seccomp/libseccomp/archive/v2.6.1.tar.gz"
+sha256 = "f9a13e4c633d319a9240189760ca348caa0837c0ebe2a09b17061da8ceaf60f0"
+strip_components = 1
+description = "High level interface to the Linux Kernel's seccomp filter"
+homepage = "https://github.com/seccomp/libseccomp/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+tools = ["gperf"]

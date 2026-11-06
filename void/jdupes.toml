@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'jdupes'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+[package]
+name = "jdupes"
+version = "1.31.1"
+archive = "https://codeberg.org/jbruchon/jdupes/archive/v1.31.1.tar.gz"
+sha256 = "c80d4c1deb03cc891a7e938f886952cfc480b8a0bc48baf21b312d350b62d8e3"
+strip_components = 1
+description = "Powerful duplicate file finder and an enhanced fork of fdupes"
+homepage = "https://www.jdupes.com/"
+license = "MIT"
+deps = ["libjodycode"]
+
+[build]
+system = "make"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gqrx'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: jack, qt6-svg, qt6-tools
+[package]
+name = "gqrx"
+version = "2.17.7"
+archive = "https://github.com/gqrx-sdr/gqrx/archive/v2.17.7.tar.gz"
+sha256 = "4aaab8a3c185cd99d6dda56d95b8f1b20128a6acfd2e86e0349d432a5fdcbce4"
+strip_components = 1
+description = "Software defined radio receiver powered by GNU Radio and Qt"
+homepage = "https://gqrx.dk"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "desktop-file-utils", "gnuradio", "gnuradio-osmosdr", "pulseaudio"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["qt6-base"]

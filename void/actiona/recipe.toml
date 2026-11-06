@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'actiona'. Review before relying on it.
+# hooks not translated: pre_build, pre_configure
+# needs, but Forge has no recipe for yet: boost, opencv, qt6-multimedia, qt6-qt5compat, qt6-tools
+[package]
+name = "actiona"
+version = "3.11.1"
+archive = "https://github.com/Jmgr/actiona/releases/download/v3.11.1/actiona-3.11.1-source-linux.tar.gz"
+sha256 = "a643ccae90f353b6558e9f61c00a8aedb5ca73c52f08bb0ccca69fc5e2a8444d"
+strip_components = 1
+description = "Cross platform automation tool"
+homepage = "https://actiona.tools/"
+license = "GPL-3.0-or-later"
+deps = ["bluez", "libnotify", "pulseaudio", "qt6-base", "qt6-declarative", "qt6-speech"]
+patches = ["patches/bytearray-constdata.patch", "patches/cross.patch", "patches/qt610.patch", "patches/socket-include-order.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DACT_UPDATER=OFF"]
+tools = ["pkg-config"]

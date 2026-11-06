@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hydroxide'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "hydroxide"
+version = "0.2.33"
+archive = "https://codeberg.org/emersion/hydroxide/archive/v0.2.33.tar.gz"
+sha256 = "89a38d1378bb72cb44440065aae826a930782fb10be3ee73750b5779cb6cfbc4"
+strip_components = 1
+description = "Third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge"
+homepage = "https://codeberg.org/emersion/hydroxide"
+license = "MIT"
+
+[build]
+system = "go"

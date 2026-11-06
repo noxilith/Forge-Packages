@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'meli'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: man, notmuch, sqlite
+[package]
+name = "meli"
+version = "0.8.13"
+archive = "https://git.meli-email.org/meli/meli/archive/v0.8.13.tar.gz"
+sha256 = "b1414defb7973a96ed0510b5cb888aa8671fe4f3f832c5baa0c79dcd61ba2edf"
+strip_components = 1
+description = "Terminal e-mail client"
+homepage = "https://meli-email.org/"
+license = "EUPL-1.2 OR GPL-3.0-or-later"
+deps = ["gpgme", "openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--bin", "meli"]
+subdir = "meli"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tokyocabinet'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2
+[package]
+name = "tokyocabinet"
+version = "1.4.48"
+archive = "https://dbmx.net/tokyocabinet/tokyocabinet-1.4.48.tar.gz"
+sha256 = "a003f47c39a91e22d76bc4fe68b9b3de0f38851b160bbb1ca07a4f6441de1f90"
+strip_components = 1
+description = "Modern implementation of DBM"
+homepage = "https://dbmx.net/tokyocabinet/"
+license = "LGPL-2.1-only"
+deps = ["zlib"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gst-libav'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6, orc
+[package]
+name = "gst-libav"
+version = "1.28.6"
+archive = "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.28.6.tar.xz"
+sha256 = "71e6eafb4fff2a66d1bb0ba8d078224dfe7e3397307d8c0bba3dc23606e08f51"
+strip_components = 1
+description = "GStreamer libav plugin (1.x)"
+homepage = "https://gstreamer.freedesktop.org"
+license = "LGPL-2.0-or-later"
+deps = ["gst-plugins-base1"]
+
+[build]
+system = "meson"
+tools = ["pkg-config", "yasm"]

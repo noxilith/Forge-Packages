@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'hyprpicker'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# needs, but Forge has no recipe for yet: wlroots
+[package]
+name = "hyprpicker"
+version = "0.4.7"
+archive = "https://github.com/hyprwm/hyprpicker/archive/refs/tags/v0.4.7.tar.gz"
+sha256 = "cde02b92abe372187c9d59a7cb2ca07ede5c3e1a8c81ed8b209dc0d3ac5f0339"
+strip_components = 1
+description = "Wlroots-compatible Wayland color picker that does not suck"
+homepage = "https://github.com/hyprwm/hyprpicker"
+license = "BSD-3-Clause"
+deps = ["cairo", "hyprutils", "libglvnd", "libjpeg-turbo", "pango", "wayland", "wayland-protocols"]
+patches = ["patches/build-no-git.patch", "patches/scanner-cross.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["hyprwayland-scanner"]

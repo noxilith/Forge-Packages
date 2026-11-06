@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'vhs'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, build_helper
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "vhs"
+version = "0.12.1"
+archive = "https://github.com/charmbracelet/vhs/archive/refs/tags/v0.12.1.tar.gz"
+sha256 = "ba9fbcb40133d1734c580ccb6b0fcae9673bf51d227f00877ac581c56ad15b77"
+strip_components = 1
+description = "Your CLI home video recorder"
+homepage = "https://github.com/charmbracelet/vhs"
+license = "MIT"
+deps = ["ttyd"]
+
+[build]
+system = "go"

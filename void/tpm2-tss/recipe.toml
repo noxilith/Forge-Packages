@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'tpm2-tss'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install, pre_configure
+# needs, but Forge has no recipe for yet: doxygen, util-linux-common
+[package]
+name = "tpm2-tss"
+version = "4.2.0"
+archive = "https://github.com/tpm2-software/tpm2-tss/archive/4.2.0.tar.gz"
+sha256 = "5f5907d3a3ca1e37c2d6d4027b4ccda5bbad61873751fb78ebecaca5744218a5"
+strip_components = 1
+description = "OSS implementation of the TCG TPM2 Software Stack"
+homepage = "https://github.com/tpm2-software/tpm2-tss"
+license = "BSD-2-Clause"
+deps = ["curl", "json-c", "libtpms", "openssl"]
+patches = ["patches/dont-run-sysusers-in-Makefile.patch", "patches/prefix-user-and-group-names.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-weakcrypto", "--with-crypto=ossl", "--with-imameasurements=/sys/kernel/security/ima/binary_runtime_measurements", "--with-sysmeasurements=/sys/kernel/security/tpm0/binary_bios_measurements"]
+tools = ["pkg-config"]
+deps = ["autoconf-archive"]

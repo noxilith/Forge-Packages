@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ibus-chewing'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gob2, libchewing
+[package]
+name = "ibus-chewing"
+version = "2.0.0"
+archive = "https://github.com/chewing/ibus-chewing/archive/refs/tags/v2.0.0.tar.gz"
+sha256 = "6da855d9b15cb84b6ed2a8d1594ffa57cca8ed1234115bd487720379d5c11d0e"
+strip_components = 1
+description = "Chewing input method for IBus"
+homepage = "https://github.com/chewing/ibus-chewing"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk4", "ibus", "libadwaita"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

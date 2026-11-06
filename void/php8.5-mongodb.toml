@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'php8.5-mongodb'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure, pre_install
+# needs, but Forge has no recipe for yet: php8.5
+[package]
+name = "php8.5-mongodb"
+version = "2.3.1"
+archive = "https://pecl.php.net/get/mongodb-2.3.1.tgz"
+sha256 = "2738972432d36c370fde3c76c208c31bd5a7a0afc4a7705874f92f322f3d2786"
+strip_components = 1
+description = "Official MongoDB PHP driver"
+homepage = "https://pecl.php.net/package/mongodb"
+license = "Apache-2.0"
+deps = ["openssl", "pcre2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

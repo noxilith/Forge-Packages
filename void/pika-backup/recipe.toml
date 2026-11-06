@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'pika-backup'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: borg, itstool
+[package]
+name = "pika-backup"
+version = "0.8.3"
+archive = "https://gitlab.gnome.org/World/pika-backup/-/archive/0.8.3/pika-backup-0.8.3.tar.gz"
+sha256 = "2b80f73b2d5414473f1741180e7db15cbada17af9c556da191f7f86ddd0c4e77"
+strip_components = 1
+description = "GNOME Frontend for BorgBackup"
+homepage = "https://apps.gnome.org/en/PikaBackup/"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "libadwaita"]
+patches = ["patches/remove-git-describe.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

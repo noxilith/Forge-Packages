@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'sgml-common'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "sgml-common"
+version = "0.6.3"
+archive = "https://sourceware.org/ftp/docbook-tools/new-trials/SOURCES/sgml-common-0.6.3.tgz"
+sha256 = "7dc418c1d361123ffc5e45d61f1b97257940a8eb35d0bfbbc493381cc5b1f959"
+strip_components = 1
+description = "Tools for maintaining centralized SGML catalogs"
+homepage = "https://docbook.org/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

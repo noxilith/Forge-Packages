@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'helvum'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "helvum"
+version = "0.6.2"
+archive = "https://gitlab.freedesktop.org/pipewire/helvum/-/archive/0.6.2/helvum-0.6.2.tar.gz"
+sha256 = "9f1ec78186dd9de5b3c5a4718c88eb2a4a4bf9de78d477cb4db0ea304567349c"
+strip_components = 1
+description = "GTK patchbay for pipewire"
+homepage = "https://gitlab.freedesktop.org/pipewire/helvum"
+license = "GPL-3.0-only"
+deps = ["glib", "gtk4", "libadwaita", "pipewire"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'qt6-declarative'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: qt6-shadertools, qt6-svg
+[package]
+name = "qt6-declarative"
+version = "6.11.2"
+archive = "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtdeclarative-everywhere-src-6.11.2.tar.xz"
+sha256 = "215b7b70517e380123eabc6b92243f3c47b6f016a91d126057dbe53551c6b430"
+strip_components = 1
+description = "Cross-platform application and UI framework - Declarative"
+homepage = "https://www.qt.io"
+license = "GPL-3.0-only WITH Qt-GPL-exception-1.0, LGPL-3.0-only, GPL-2.0-or-later"
+deps = ["Vulkan-Headers", "qt6-base", "qt6-languageserver"]
+patches = ["patches/050-revert-dad91592e609364231decaba771418d2d48d4910.patch", "patches/101-test_generate_qmlls_ini.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_BUILD_TESTS=ON"]
+tools = ["perl", "pkg-config"]
+deps = ["wayland"]

@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'paper-icon-theme'. Review before relying on it.
+[package]
+name = "paper-icon-theme"
+version = "1.5.0.20200312"
+archive = "https://github.com/snwh/paper-icon-theme/archive/aa3e8af7a1f0831a51fd7e638a4acb077a1e5188.tar.gz"
+sha256 = "ad76f45266693666df43fab5a381a60899de99e21a85961fa24d60f4cb639b27"
+strip_components = 1
+description = "Modern freedesktop icon theme"
+homepage = "https://github.com/snwh/paper-icon-theme"
+license = "CC-BY-SA-4.0"
+
+[build]
+system = "meson"

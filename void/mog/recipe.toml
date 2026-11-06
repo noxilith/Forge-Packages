@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mog'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: SDL_image, SDL_mixer, SDL_sound
+[package]
+name = "mog"
+version = "0.63"
+archive = "https://braingames.jorito.net/mog/downloads/mog.src_0.63-1548.tgz"
+sha256 = "3caf30d86f5b010b9266ef860c8c8ce0be23f37dee93dd037e7927d4237475eb"
+strip_components = 1
+description = "Remake of classic MSX game The Maze of Galious"
+homepage = "https://mog.jorito.net/"
+license = "GPL-2.0-or-later"
+patches = ["patches/makefile.patch", "patches/name_max.patch"]
+
+[build]
+system = "make"

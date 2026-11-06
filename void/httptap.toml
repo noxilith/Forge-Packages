@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'httptap'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "httptap"
+version = "0.1.1"
+archive = "https://github.com/monasticacademy/httptap/archive/v0.1.1.tar.gz"
+sha256 = "dc6b99f20b1ab33f6801050a2367529a235c2b1a654d24f908b1f1bf62a36457"
+strip_components = 1
+description = "View HTTP/HTTPS requests made by any program"
+homepage = "https://github.com/monasticacademy/httptap"
+license = "MIT"
+
+[build]
+system = "go"

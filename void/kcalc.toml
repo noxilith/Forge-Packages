@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kcalc'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: mpfr, qt6-qt5compat, qt6-tools
+[package]
+name = "kcalc"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kcalc-26.08.1.tar.xz"
+sha256 = "24d7b07dcac6e248354e8a4032cc91340f4ca2333f83964808adfa44b4bae096"
+strip_components = 1
+description = "Simple and scientific calculator"
+homepage = "https://kde.org/applications/en/utilities/org.kde.kcalc"
+license = "GPL-2.0-or-later"
+deps = ["gmp", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-knotifications", "kf6-kxmlgui", "libmpc", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext"]

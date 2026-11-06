@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bovo'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg
+[package]
+name = "bovo"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/bovo-26.08.1.tar.xz"
+sha256 = "09204b4c051e7103188119abe7ed849dea384d018fbf6f865b4dacec83c35a64"
+strip_components = 1
+description = "Gomoku like game for two players"
+homepage = "https://apps.kde.org/bovo"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kwidgetsaddons", "kf6-kxmlgui", "libkdegames", "qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext"]

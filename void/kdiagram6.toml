@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kdiagram6'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "kdiagram6"
+version = "3.0.1"
+archive = "https://download.kde.org/stable/kdiagram/3.0.1/kdiagram-3.0.1.tar.xz"
+sha256 = "4659b0c2cd9db18143f5abd9c806091c3aab6abc1a956bbf82815ab3d3189c6d"
+strip_components = 1
+description = "Powerful libraries for creating business diagrams"
+homepage = "http://www.kde.org/"
+license = "GPL-2.0-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules"]

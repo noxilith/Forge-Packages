@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'light'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "light"
+version = "1.2.2"
+archive = "https://github.com/haikarainen/light/archive/v1.2.2.tar.gz"
+sha256 = "62e889ee9be80fe808a972ef4981acc39e83a20f9a84a66a82cd1f623c868d9c"
+strip_components = 1
+description = "Program to control backlight controllers"
+homepage = "http://haikarainen.github.io/light/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--with-udev"]

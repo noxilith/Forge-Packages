@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cbonsai'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "cbonsai"
+version = "1.4.2"
+archive = "https://gitlab.com/jallbrit/cbonsai/-/archive/v1.4.2/cbonsai-v1.4.2.tar.gz"
+sha256 = "75cf844940e5ef825a74f2d5b1551fe81883551b600fecd00748c6aa325f5ab0"
+strip_components = 1
+description = "Grow bonsai trees in your terminal"
+homepage = "https://gitlab.com/jallbrit/cbonsai"
+license = "GPL-3.0-only"
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["scdoc"]

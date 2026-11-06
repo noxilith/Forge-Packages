@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'libdbusmenu-glib'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper, CFLAGS
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "libdbusmenu-glib"
+version = "16.04.0"
+archive = "https://launchpad.net/libdbusmenu/16.04/16.04.0/+download/libdbusmenu-16.04.0.tar.gz"
+sha256 = "b9cc4a2acd74509435892823607d966d424bd9ad5d0b00938f27240a1bfa878a"
+strip_components = 1
+description = "Library for passing menus over DBus"
+homepage = "https://launchpad.net/libdbusmenu"
+license = "GPL-3, LGPL-2.1, LGPL-3"
+deps = ["gtk+3"]
+patches = ["patches/python3.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-dumper", "--disable-static", "--disable-tests", "HAVE_VALGRIND_FALSE="]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc"]

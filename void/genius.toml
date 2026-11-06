@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'genius'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, intltool, libreadline8, mpfr, ncurses
+[package]
+name = "genius"
+version = "1.0.27"
+archive = "https://download.gnome.org/sources/genius/1.0/genius-1.0.27.tar.xz"
+sha256 = "0243b7c36b5f9e930c62778acd52deb188deeca704a5e195337018435d9e7bb5"
+strip_components = 1
+description = "Advanced calculator including a mathematical programming language"
+homepage = "https://www.jirka.org/genius.html"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "glib", "gtk+3", "gtksourceview4", "vte3"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-update-mimedb", "ac_cv_file__proc_self_maps=yes"]
+tools = ["bison", "flex", "pkg-config"]

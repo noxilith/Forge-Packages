@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sequeler'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libssh2
+[package]
+name = "sequeler"
+version = "0.9.0"
+archive = "https://github.com/Alecaddd/sequeler/archive/v0.9.0.tar.gz"
+sha256 = "b5dd3ab24357167120864c318aa09dead69732bea23661eeae2ce055beb845da"
+strip_components = 1
+description = "Native Linux SQL client built in Vala and Gtk"
+homepage = "https://github.com/Alecaddd/sequeler"
+license = "GPL-3.0-or-later"
+deps = ["glib", "granite", "gtk+3", "gtksourceview", "gtksourceview4", "libgda", "libgee", "libsecret", "libxml2"]
+patches = ["patches/no-cache-update.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "vala"]

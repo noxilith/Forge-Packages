@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'efl'. Review before relying on it.
+# 15 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: LuaJIT, avahi, libavif, libjxl, libspectre, libwebp, lua52, util-linux-common
+[package]
+name = "efl"
+version = "1.28.1"
+archive = "https://download.enlightenment.org/rel/libs/efl/efl-1.28.1.tar.xz"
+sha256 = "84cf6145f9cc82bfff690005be24392c8f3c52f8e00ff04d8eea371429c09424"
+strip_components = 1
+description = "Enlightenment Foundation Libraries"
+homepage = "https://enlightenment.org"
+license = "LGPL-2.1-only"
+deps = ["eudev", "fontconfig", "fribidi", "gettext", "giflib", "glib", "ibus", "libheif", "libjpeg-turbo", "libpng", "libraw", "librsvg", "libsndfile", "lz4", "openh264", "openjpeg2", "openssl", "poppler", "tiff"]
+patches = ["patches/eina-debug.patch", "patches/musl.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dbuild-examples=false", "-Dembedded-lz4=false", "-Dcrypto=openssl", "-Dnetwork-backend=none", "-Devas-loaders-disabler=json"]
+tools = ["pkg-config"]

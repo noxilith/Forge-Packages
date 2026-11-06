@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'budgie-desktop'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gnome-settings-daemon, libcanberra, util-linux-common
+[package]
+name = "budgie-desktop"
+version = "10.9.4"
+archive = "https://github.com/BuddiesOfBudgie/budgie-desktop/releases/download/v10.9.4/budgie-desktop-v10.9.4.tar.xz"
+sha256 = "0d1899ecad0051ef54f587b097add678ecb535b0de5e93e4fdfa23da6c557852"
+strip_components = 1
+description = "Modern desktop environment from the Solus Project"
+homepage = "https://github.com/BuddiesOfBudgie/budgie-desktop"
+license = "GPL-2.0-only, LGPL-2.1-only"
+deps = ["accountsservice", "alsa-lib", "budgie-control-center", "budgie-desktop-view", "budgie-screensaver", "budgie-session", "elogind", "gnome-bluetooth1", "gnome-desktop", "gnome-menus", "gnome-themes-extra", "gstreamer1", "gtk+3", "ibus", "libgee", "libnotify", "libpeas2", "libwacom", "libwnck", "libxfce4windowing", "magpie", "polkit", "pulseaudio", "upower", "vala", "zenity"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith-gtk-doc=false", "-Duse-old-zenity=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gobject-introspection", "sassc"]

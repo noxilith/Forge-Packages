@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'up_rewrite'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, conf_files
+[package]
+name = "up_rewrite"
+version = "1.4.0"
+archive = "https://github.com/UnifiedPush/common-proxies/archive/v1.4.0.tar.gz"
+sha256 = "c4565b764bbdd7f680e8516e9d38f9942918f9697c140b1693f72cf784875fd5"
+strip_components = 1
+description = "Rewrite Proxy for UnifiedPush written in Go"
+homepage = "https://unifiedpush.org"
+license = "MIT"
+
+[build]
+system = "go"

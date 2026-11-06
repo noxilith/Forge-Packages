@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'devhelp'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool, libwebkit2gtk41
+[package]
+name = "devhelp"
+version = "43.0"
+archive = "https://download.gnome.org/sources/devhelp/43/devhelp-43.0.tar.xz"
+sha256 = "63ceeefd05392e02044881ef1ecd724293553da5735b7efc082b2d13fe85dd04"
+strip_components = 1
+description = "API documentation browser for GTK+ and GNOME"
+homepage = "https://wiki.gnome.org/Apps/Devhelp"
+license = "GPL-2.0-or-later"
+deps = ["gsettings-desktop-schemas"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3"]

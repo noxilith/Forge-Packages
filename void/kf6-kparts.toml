@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kparts'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kparts"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kparts-6.30.0.tar.xz"
+sha256 = "99f5a0e3a4da10e1a0fbfb505ae966cd87627f887dd07929a920afe41c862ac0"
+strip_components = 1
+description = "KDE Plugin framework for user interface components"
+homepage = "https://invent.kde.org/frameworks/kparts"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kio", "kf6-kxmlgui"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

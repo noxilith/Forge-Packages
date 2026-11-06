@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'vtwm'. Review before relying on it.
+[package]
+name = "vtwm"
+version = "5.5.0"
+archive = "https://downloads.sourceforge.net/sourceforge/vtwm/files/vtwm-5.5.0.tar.gz"
+sha256 = "448d7afd8d5a5fcfabf1b9c64b811cfa6bdbf8892c067fe01a141806ef61eaf4"
+strip_components = 1
+description = "Virtual tab window manager"
+homepage = "http://www.vtwm.org/"
+license = "X11"
+deps = ["libXmu", "libXpm"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-sound"]
+tools = ["flex", "m4", "pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'corrosion'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "corrosion"
+version = "0.6.1"
+archive = "https://github.com/corrosion-rs/corrosion/archive/refs/tags/v0.6.1.tar.gz"
+sha256 = "e9e95b1ee2bad52681f347993fb1a5af5cce458c5ce8a2636c9e476e4babf8e3"
+strip_components = 1
+description = "Tool for integrating Rust into an existing CMake project"
+homepage = "https://github.com/corrosion-rs/corrosion"
+license = "MIT"
+
+[build]
+system = "cmake"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pwru'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: go_ldflags, go_import_path
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "pwru"
+version = "1.0.12"
+archive = "https://github.com/cilium/pwru/archive/refs/tags/v1.0.12.tar.gz"
+sha256 = "1b5154439ad4bf02d4d7acaf98fd1913fb053593d31282f6898352a1b04e5e09"
+strip_components = 1
+description = "Packet, where are you? eBPF-based kernel networking debugger"
+homepage = "https://github.com/cilium/pwru"
+license = "Apache-2.0"
+deps = ["libnl3", "libpcap"]
+patches = ["patches/pcap.patch"]
+
+[build]
+system = "go"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'miller'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "miller"
+version = "6.22.0"
+archive = "https://github.com/johnkerl/miller/archive/refs/tags/v6.22.0.tar.gz"
+sha256 = "a3cec3b8bf74f1e6eddb708d6ae768e6ec70f10e345980de42cbc24df15f0c70"
+strip_components = 1
+description = "Tool like sed/awk/cut/join/sort for name-indexed data such as CSV"
+homepage = "http://johnkerl.org/miller/"
+license = "BSD-2-Clause"
+
+[build]
+system = "go"

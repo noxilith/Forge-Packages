@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'codecrypt'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: fftw
+[package]
+name = "codecrypt"
+version = "1.8"
+archive = "https://github.com/exaexa/codecrypt/archive/v1.8.tar.gz"
+sha256 = "25f11bc361b4f8aca7245698334b5715b7d594d708a75e8cdb2aa732dc46eb96"
+strip_components = 1
+description = "Post-quantum cryptography tool"
+homepage = "https://e-x-a.org/codecrypt"
+license = "LGPL-3.0-or-later"
+deps = ["crypto++", "gmp"]
+patches = ["patches/cryptopp.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

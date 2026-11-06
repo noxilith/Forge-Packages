@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libidn'. Review before relying on it.
+[package]
+name = "libidn"
+version = "1.44"
+archive = "https://ftp.gnu.org/gnu/libidn/libidn-1.44.tar.gz"
+sha256 = "499608bab3a65650a0ea52888c13a8deebe3f71408e319acd9ec52e02eb13959"
+strip_components = 1
+description = "Internationalized string handling library"
+homepage = "https://www.gnu.org/software/libidn/"
+license = "(GPL-2.0-or-later OR LGPL-3.0-or-later) AND GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-csharp", "--disable-java", "--disable-static"]
+deps = ["texinfo"]

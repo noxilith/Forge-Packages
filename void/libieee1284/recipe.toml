@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libieee1284'. Review before relying on it.
+[package]
+name = "libieee1284"
+version = "0.2.11"
+archive = "https://downloads.sourceforge.net/sourceforge/libieee1284/libieee1284-0.2.11.tar.bz2"
+sha256 = "7730de107782e5d2b071bdcb5b06a44da74856f00ef4a9be85d1ba4806a38f1a"
+strip_components = 1
+description = "A library to query devices connected in parallel port"
+homepage = "http://cyberelk.net/tim/libieee1284"
+license = "GPL-2.0-or-later"
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--without-python"]

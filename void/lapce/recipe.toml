@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lapce'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "lapce"
+version = "0.4.5"
+archive = "https://github.com/lapce/lapce/archive/refs/tags/v0.4.5.tar.gz"
+sha256 = "e5e9df702c2f108da57b8a5232d797c582171c0523a0ac381947058ec667423c"
+strip_components = 1
+description = "Lightning-fast and powerful code editor"
+homepage = "https://lapce.dev/"
+license = "Apache-2.0"
+deps = ["fontconfig", "gtk+3", "libgit2-1.9", "openssl"]
+patches = ["patches/desktop-icon.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

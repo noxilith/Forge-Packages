@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zita-ajbridge'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack, zita-resampler
+[package]
+name = "zita-ajbridge"
+version = "0.8.4"
+archive = "https://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-ajbridge-0.8.4.tar.bz2"
+sha256 = "bc264e36ba4d715c34ec7dd6e317cd1ed4bb8a4656980d6b2200e2fa0105bb3c"
+strip_components = 1
+description = "Use an ALSA device as a Jack client"
+homepage = "https://kokkinizita.linuxaudio.org/linuxaudio/zita-ajbridge-doc/quickguide.html"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "zita-alsa-pcmi"]
+
+[build]
+system = "make"
+subdir = "source"

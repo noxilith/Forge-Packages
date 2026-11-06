@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'flashrom'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libftdi1, pciutils, python3-Sphinx
+[package]
+name = "flashrom"
+version = "1.7.0"
+archive = "https://github.com/flashrom/flashrom/archive/refs/tags/v1.7.0.tar.gz"
+sha256 = "c5a8892158bd749aadfee6e114eec268130cdd8c2027fd1ddf44273755b07b59"
+strip_components = 1
+description = "Utility for reading, writing, erasing and verifying flash ROM chips"
+homepage = "https://www.flashrom.org"
+license = "GPL-2.0-only"
+deps = ["dmidecode", "eudev", "libjaylink", "libusb-compat", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Duse_internal_dmi=false", "-Ddocumentation=enabled"]
+tools = ["pkg-config"]

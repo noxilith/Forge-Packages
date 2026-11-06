@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kColorPicker-qt5'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kColorPicker-qt5"
+version = "0.3.1"
+archive = "https://github.com/DamirPorobic/kColorPicker/archive/v0.3.1.tar.gz"
+sha256 = "e78c785ec4a8a22a48a91835c97601f5704b5076b154415353b0d2697dc0b4f7"
+strip_components = 1
+description = "Qt based Color Picker with popup menu"
+homepage = "https://github.com/DamirPorobic/kColorPicker"
+license = "LGPL-2.0-or-later"
+patches = ["patches/rename-qt5.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTS=ON", "-DBUILD_EXAMPLE=OFF", "-DBUILD_SHARED_LIBS=ON"]
+deps = ["extra-cmake-modules"]

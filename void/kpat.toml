@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kpat'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "kpat"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kpat-26.08.1.tar.xz"
+sha256 = "832240e17910682795ab26c789390f4cfaa39c6c768523cc3da7c205a0a3a96f"
+strip_components = 1
+description = "Relaxing card sorting game"
+homepage = "https://kde.org/applications/games/kpat"
+license = "GPL-2.0-only"
+deps = ["freecell-solver", "kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kguiaddons", "kf6-ki18n", "kf6-kio", "kf6-knewstuff", "kf6-kparts", "kf6-kwidgetsaddons", "kf6-kxmlgui", "libkdegames", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_BH_SOLVER=OFF", "-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

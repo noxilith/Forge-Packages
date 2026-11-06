@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'CastXML'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libffi, python3-Sphinx, zstd
+[package]
+name = "CastXML"
+version = "0.8.0"
+archive = "https://github.com/CastXML/CastXML/archive/refs/tags/v0.8.0.tar.gz"
+sha256 = "68e91af54851ef341fae72299f7576892c3317f7b40d00590ed79d00dc30a16c"
+strip_components = 1
+description = "C-family abstract syntax tree XML output tool"
+homepage = "https://github.com/CastXML/CastXML"
+license = "Apache-2.0"
+deps = ["libedit", "libxml2", "llvm22", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSPHINX_MAN=YES", "-DCastXML_INSTALL_MAN_DIR=share/man"]

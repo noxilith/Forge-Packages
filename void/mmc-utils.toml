@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mmc-utils'. Review before relying on it.
+# settings not translated: make_build_args
+[package]
+name = "mmc-utils"
+version = "1.0"
+archive = "https://git.kernel.org/pub/scm/utils/mmc/mmc-utils.git/snapshot/mmc-utils-1.0.tar.gz"
+sha256 = "39e6a89e06b53f99816f110af6743d1adc82220b26c51b0c3fd0a11ccf4206c2"
+strip_components = 1
+description = "Userspace tools for MMC/eMMC/SD devices"
+homepage = "https://git.kernel.org/pub/scm/utils/mmc/mmc-utils.git/"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'opensmtpd'. Review before relying on it.
+# 6 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, conf_files
+# needs, but Forge has no recipe for yet: ca-certificates, db
+[package]
+name = "opensmtpd"
+version = "7.9.0p0"
+archive = "https://www.opensmtpd.org/archives/opensmtpd-7.9.0p0.tar.gz"
+sha256 = "74e640de18a8ea63ef43ba2ddb1a6ad1eb82cce2e600b94e98cb551bb2a724c4"
+strip_components = 1
+description = "Free implementation of the server-side SMTP protocol"
+homepage = "https://www.opensmtpd.org"
+license = "BSD-3-Clause, ISC, MIT"
+deps = ["libevent", "openssl", "pam", "zlib"]
+patches = ["patches/configure-cross.patch", "patches/cross-no-varrun-check.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-pie", "--with-table-db", "--with-auth-pam=smtpd", "ac_cv_func_explicit_bzero=no", "ac_cv_func_reallocarray=no", "ac_cv_func_strlcat=no", "ac_cv_func_strlcpy=no"]
+tools = ["bison", "pkg-config"]

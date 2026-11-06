@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'parcellite'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "parcellite"
+version = "1.2.1"
+archive = "https://downloads.sourceforge.net/sourceforge/parcellite/1.2.1/parcellite-1.2.1.tar.gz"
+sha256 = "aba1c7c56c7607e219ce9855723eefa552c5376982891aefbfb5a2d3297ef046"
+strip_components = 1
+description = "GTK+ clipboard manager"
+homepage = "http://parcellite.sourceforge.net/"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "gtk+"]
+patches = ["patches/locale.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["glib"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sgfutils'. Review before relying on it.
+[package]
+name = "sgfutils"
+version = "0.25"
+archive = "https://homepages.cwi.nl/~aeb/go/sgfutils/sgfutils.tgz"
+sha256 = "4b26b321fbe255722f1d7e57233614da89a4da5bab031ae4ef7118ae3c7436a2"
+strip_components = 1
+description = "Collection of utilities to handle SGF files"
+homepage = "https://www.cwi.nl/~aeb/go/sgfutils/html/"
+license = "GPL-2.0-or-later"
+deps = ["ImageMagick", "openssl"]
+patches = ["patches/Makefile.patch"]
+
+[build]
+system = "make"

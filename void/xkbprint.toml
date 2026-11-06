@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xkbprint'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xkbprint"
+version = "1.0.8"
+archive = "https://www.x.org/releases/individual/app/xkbprint-1.0.8.tar.xz"
+sha256 = "6dbb3dc79b1d1e17045a65f86e7581e149c75ee5aacae69a6cf685acf78fc31b"
+strip_components = 1
+description = "Print an XKB keyboard description"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libxkbfile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

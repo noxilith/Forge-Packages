@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wmutils-core'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "wmutils-core"
+version = "1.7"
+archive = "https://github.com/wmutils/core/archive/v1.7.tar.gz"
+sha256 = "f57da66f7da7752b1b76030b1dfdfcc0b5483f6e6d9b6ff52c6a5bb3c2af1659"
+strip_components = 1
+description = "Set of window manipulation tools"
+homepage = "https://github.com/wmutils/core"
+license = "ISC"
+deps = ["libxcb", "xcb-util", "xcb-util-cursor"]
+patches = ["patches/install-pdw-manpage.patch"]
+
+[build]
+system = "make"

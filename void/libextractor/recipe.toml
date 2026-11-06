@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libextractor'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2, libmpeg2
+[package]
+name = "libextractor"
+version = "1.13"
+archive = "https://ftp.gnu.org/gnu/libextractor/libextractor-1.13.tar.gz"
+sha256 = "bb8f312c51d202572243f113c6b62d8210301ab30cbaee604f9837d878cdf755"
+strip_components = 1
+description = "Library used to extract meta data from files"
+homepage = "https://www.gnu.org/software/libextractor/"
+license = "GPL-3.0-or-later"
+deps = ["exiv2", "file", "flac", "giflib", "gst-plugins-base1", "gstreamer1", "gtk+3", "libarchive", "libgsf", "libjpeg-turbo", "libpng", "libvorbis", "tiff", "zlib"]
+patches = ["patches/fix-tests.diff", "patches/noexcept-must-not-throw.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

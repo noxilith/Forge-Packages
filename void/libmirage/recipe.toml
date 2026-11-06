@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libmirage'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "libmirage"
+version = "3.3.2"
+archive = "https://downloads.sourceforge.net/sourceforge/cdemu/libmirage-3.3.2.tar.xz"
+sha256 = "c0c03326912e7b54270e595685e164dd95fef294a4630d77b3e194d06fc039fb"
+strip_components = 1
+description = "CD-ROM image access library written in C"
+homepage = "http://cdemu.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libsamplerate", "xz"]
+patches = ["patches/girpath.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DPOST_INSTALL_HOOKS=OFF"]
+tools = ["pkg-config"]

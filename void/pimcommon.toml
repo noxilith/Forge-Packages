@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pimcommon'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "pimcommon"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/pimcommon-26.08.1.tar.xz"
+sha256 = "67ea0976c8a3d37c224e0f2a5db08dcb88342f0c77378f28b7aef6f502fccb7e"
+strip_components = 1
+description = "Common libraries for KDE PIM"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["akonadi-contacts", "akonadi-search", "kf6-akonadi", "kf6-karchive", "kf6-kcmutils", "kf6-kcodecs", "kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcontacts", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kitemmodels", "kf6-kjobwidgets", "kf6-kmime", "kf6-knewstuff", "kf6-kservice", "kf6-ktexttemplate", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "kf6-kxmlgui", "kf6-purpose", "kimap", "kldap", "kpimtextedit", "ktextaddons", "libkdepim", "libkleo", "plasma-activities", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext"]

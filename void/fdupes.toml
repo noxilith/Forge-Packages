@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fdupes'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses, sqlite
+[package]
+name = "fdupes"
+version = "2.4.0"
+archive = "https://github.com/adrianlopezroche/fdupes/releases/download/v2.4.0/fdupes-2.4.0.tar.gz"
+sha256 = "527b27a39d031dcbe1d29a220b3423228c28366c2412887eb72c25473d7b1736"
+strip_components = 1
+description = "Identify or delete duplicate files within specified directories"
+homepage = "https://github.com/adrianlopezroche/fdupes"
+license = "MIT"
+deps = ["pcre2"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'wireplumber'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: doxygen, lua54, python3-lxml
+[package]
+name = "wireplumber"
+version = "0.5.18"
+archive = "https://gitlab.freedesktop.org/pipewire/wireplumber/-/archive/0.5.18/wireplumber-0.5.18.tar.gz"
+sha256 = "8c8a326a5b2a570681c1503c83f1fce0cc54ba862019815604b2bc92a7d483a1"
+strip_components = 1
+description = "Session and policy manager implementation for PipeWire"
+homepage = "https://pipewire.pages.freedesktop.org/wireplumber"
+license = "MIT"
+deps = ["elogind", "glib", "pipewire"]
+patches = ["patches/test.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dintrospection=enabled", "-Dsystem-lua=true"]
+tools = ["pkg-config"]
+deps = ["gettext"]

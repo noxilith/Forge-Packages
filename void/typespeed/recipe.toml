@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'typespeed'. Review before relying on it.
+# hooks not translated: post_configure
+# settings not translated: CFLAGS, conf_files
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "typespeed"
+version = "0.6.5"
+archive = "https://downloads.sourceforge.net/sourceforge/typespeed/typespeed-0.6.5.tar.gz"
+sha256 = "5c860385ceed8a60f13217cc0192c4c2b4705c3e80f9866f7d72ff306eb72961"
+strip_components = 1
+description = "Test your typing speed"
+homepage = "http://typespeed.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["gettext"]
+patches = ["patches/time.patch"]
+
+[build]
+system = "autotools"

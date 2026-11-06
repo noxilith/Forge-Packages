@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gitbatch'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "gitbatch"
+version = "0.5.0"
+archive = "https://github.com/isacikgoz/gitbatch/archive/v0.5.0.tar.gz"
+sha256 = "b1781bb1a0f16545d8980d4f854cb4685c289b222d141197889fc387524aa515"
+strip_components = 1
+description = "Command line tool to manage your git repositories in one place"
+homepage = "https://github.com/isacikgoz/gitbatch"
+license = "MIT"
+
+[build]
+system = "go"

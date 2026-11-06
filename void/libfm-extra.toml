@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libfm-extra'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "libfm-extra"
+version = "1.4.0"
+archive = "https://github.com/lxde/libfm/archive/refs/tags/1.4.0.tar.gz"
+sha256 = "7d7b616411992389a4b7f35796109d605f30bc2ceab84d4081d1665254ebbf82"
+strip_components = 1
+description = "LXDE GLib/GIO based library (extra library)"
+homepage = "https://github.com/lxde/libfm"
+license = "GPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-extra-only", "--with-gtk=no", "--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext", "gtk-doc"]

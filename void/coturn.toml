@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'coturn'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_configure, post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "coturn"
+version = "4.16.0"
+archive = "https://github.com/coturn/coturn/archive/4.16.0.tar.gz"
+sha256 = "4782c1560c2dfa4697dd3fbd85f2f8b506beb48f1d738351464300ef1e294760"
+strip_components = 1
+description = "Server Implementation of TURN and STUN"
+homepage = "https://github.com/coturn/coturn"
+license = "BSD-3-Clause"
+deps = ["hiredis", "libevent", "libmicrohttpd", "mariadb", "openssl", "postgresql18", "prometheus-client-c"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

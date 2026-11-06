@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cups-pk-helper'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cups
+[package]
+name = "cups-pk-helper"
+version = "0.2.7"
+archive = "https://www.freedesktop.org/software/cups-pk-helper/releases/cups-pk-helper-0.2.7.tar.xz"
+sha256 = "66070ddb448fe9fcee76aa26be2ede5a80f85563e3a4afd59d2bfd79fbe2e831"
+strip_components = 1
+description = "PolicyKit helper to configure cups with fine-grained privileges"
+homepage = "https://www.freedesktop.org/wiki/Software/cups-pk-helper"
+license = "GPL-2.0-or-later"
+deps = ["glib", "polkit"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

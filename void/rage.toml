@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'rage'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "rage"
+version = "0.12.1"
+archive = "https://github.com/str4d/rage/archive/refs/tags/v0.12.1.tar.gz"
+sha256 = "3684e7e269a677180db116cb8115b008ea462dbb6f223f6983dd6750a863afaa"
+strip_components = 1
+description = "Simple, modern and secure encryption tool, written in Rust"
+homepage = "https://github.com/str4d/rage"
+license = "MIT OR Apache-2.0"
+deps = ["fuse3"]
+
+[build]
+system = "cargo"
+configure_args = ["--features", "mount"]
+tools = ["pkg-config"]

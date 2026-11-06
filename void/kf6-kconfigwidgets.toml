@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kconfigwidgets'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kconfigwidgets"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kconfigwidgets-6.30.0.tar.xz"
+sha256 = "6efd9fc7786a7e979b32904aeadf1d2d8e69a5da110f8ebd45f95ec02de41f77"
+strip_components = 1
+description = "Widgets for KConfig"
+homepage = "https://invent.kde.org/frameworks/kconfigwidgets"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcodecs", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kwidgetsaddons", "qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext"]

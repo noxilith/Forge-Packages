@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'exodriver'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+[package]
+name = "exodriver"
+version = "2.6.0"
+archive = "https://github.com/labjack/exodriver/archive/refs/tags/v2.6.0.tar.gz"
+sha256 = "d2ccf992bf42b50e7c009ae3d9d3d3191a67bfc8a2027bd54ba4cbd4a80114b2"
+strip_components = 1
+description = "LabJack U3, U6, and UE9 low-level driver"
+homepage = "https://labjack.com/support/software/installers/exodriver"
+license = "MIT, X11"
+deps = ["libusb"]
+patches = ["patches/destdir.patch", "patches/link-so-correctly.patch"]
+
+[build]
+system = "make"
+subdir = "liblabjackusb"

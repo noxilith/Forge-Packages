@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-sonnet'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-sonnet"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/sonnet-6.30.0.tar.xz"
+sha256 = "1574ef5c17f38e315de104b94580ccc1b7ec1db2650cb4bace2e14159bf61e10"
+strip_components = 1
+description = "Spelling framework for Qt"
+homepage = "https://invent.kde.org/frameworks/sonnet"
+license = "LGPL-2.1-or-later"
+deps = ["aspell", "hunspell", "qt6-declarative"]
+patches = ["patches/cross-designer.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DESIGNERPLUGIN=ON", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "qt6-base"]

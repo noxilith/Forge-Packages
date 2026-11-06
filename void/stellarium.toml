@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'stellarium'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5, qt5-webengine
+[package]
+name = "stellarium"
+version = "26.3"
+archive = "https://github.com/Stellarium/stellarium/archive/refs/tags/v26.3.tar.gz"
+sha256 = "979716e89df588eb0a7df33c414c22c0d3c0ead0a455bdfe87ae827cafd8e254"
+strip_components = 1
+description = "Open Source Planetarium"
+homepage = "https://stellarium.org/"
+license = "GPL-2.0-or-later"
+deps = ["QXlsx", "desktop-file-utils", "exiv2", "md4c", "nlopt"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_SHOWMYSKY=Off", "-DUSE_PLUGIN_TELESCOPECONTROL=NO", "-DBUILD_MD2HTML_EXECUTABLE=OFF"]
+tools = ["perl"]
+deps = ["gettext"]

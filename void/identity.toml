@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'identity'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: glycin, libwebp
+[package]
+name = "identity"
+version = "26.03"
+archive = "https://gitlab.gnome.org/YaLTeR/identity/-/archive/v26.03/identity-v26.03.tar.gz"
+sha256 = "fe30aa7097c9cc1d3b4eb47c363970a2399ed6c0f5e7070e76b6735011cd59eb"
+strip_components = 1
+description = "Program for comparing multiple versions of an image or video"
+homepage = "https://apps.gnome.org/Identity/"
+license = "GPL-3.0-or-later"
+deps = ["dav1d", "glib", "gstreamer1", "gtk4", "libadwaita", "libseccomp"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "gettext"]

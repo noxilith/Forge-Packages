@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'starship'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_check, pre_install
+# settings not translated: build_helper
+[package]
+name = "starship"
+version = "1.27.0"
+archive = "https://github.com/starship/starship/archive/refs/tags/v1.27.0.tar.gz"
+sha256 = "f1887ffa88a7ba437d2932501794047e28d03387996f7d1c364631c053cffc44"
+strip_components = 1
+description = "Minimal, fast and customizable cross-shell prompt"
+homepage = "https://starship.rs"
+license = "ISC"
+
+[build]
+system = "cargo"

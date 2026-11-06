@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kcalutils'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kcalutils"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kcalutils-26.08.1.tar.xz"
+sha256 = "a8db4527bb98e7152ada184a2a998bb88f44f975b8c4bda0907a3ee56c52561c"
+strip_components = 1
+description = "KDE calendar utility library"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "LGPL-2.0-or-later"
+deps = ["kf6-kcalendarcore", "kf6-ktexttemplate", "kidentitymanagement"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

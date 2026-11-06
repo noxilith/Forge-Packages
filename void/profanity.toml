@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'profanity'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libotr, libreadline8, sqlite
+[package]
+name = "profanity"
+version = "0.18.2"
+archive = "https://github.com/profanity-im/profanity/archive/refs/tags/0.18.2.tar.gz"
+sha256 = "d5431065b4d966a745284e64337ec7e11a3fd20179de00b0f98b9cf6004e2ab5"
+strip_components = 1
+description = "Console based XMPP client"
+homepage = "https://profanity-im.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["curl", "glib", "gpgme", "gtk+3", "libXScrnSaver", "libgcrypt", "libnotify", "libomemo-c", "libstrophe", "qrencode"]
+
+[build]
+system = "meson"
+configure_args = ["-Dnotifications=enabled", "-Dotr=enabled", "-Dpgp=enabled", "-Dpython-plugins=enabled", "-Dc-plugins=enabled", "-Dxscreensaver=enabled", "-Domemo=enabled", "-Domemo-backend=libomemo-c", "-Domemo-qrcode=enabled", "-Dicons-and-clipboard=enabled", "-Dtests=true"]
+tools = ["pkg-config"]

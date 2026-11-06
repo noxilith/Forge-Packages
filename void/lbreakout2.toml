@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lbreakout2'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: SDL_mixer, SDL_net
+[package]
+name = "lbreakout2"
+version = "2.6.5"
+archive = "https://downloads.sourceforge.net/sourceforge/lgames/lbreakout2-2.6.5.tar.gz"
+sha256 = "9104d6175553da3442dc6a5fc407a669e2f5aff3eedc5d30409eb003b7a78d6f"
+strip_components = 1
+description = "Breakout-style arcade game"
+homepage = "http://lgames.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["libpng", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-sdl-net"]

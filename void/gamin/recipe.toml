@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gamin'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "gamin"
+version = "0.1.10"
+archive = "https://download.gnome.org/sources/gamin/0.1/gamin-0.1.10.tar.bz2"
+sha256 = "a59948b20ce2f14136c013f155abb8c8d51db2ea167c063ff33461e453fec10a"
+strip_components = 1
+description = "Library providing the FAM File Alteration Monitor API"
+homepage = "http://www.gnome.org/~veillard/gamin/"
+license = "GPL-2.0-or-later"
+deps = ["glib"]
+patches = ["patches/0001-Poll-files-on-nfs4.patch", "patches/0002-Fix-compilation-of-recent-glib-removing-G_CONST_RETU.patch", "patches/0004-fix-possible-server-deadlock-in-ih_sub_cancel.patch", "patches/disable-tests-for-cross-build.patch", "patches/gamin-manape.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

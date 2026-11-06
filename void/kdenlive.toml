@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kdenlive'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: ffmpeg, mediainfo, qt6-multimedia, qt6-networkauth, qt6-tools
+[package]
+name = "kdenlive"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kdenlive-26.08.1.tar.xz"
+sha256 = "8a0e2cc6451de6901fec778a8b6d00165399879233a264ca5bb1b1b283266513"
+strip_components = 1
+description = "Non-linear video editor"
+homepage = "https://kdenlive.org"
+license = "GPL-3.0-or-later"
+deps = ["OpenTimelineIO", "breeze-icons", "dvdauthor", "frei0r-plugins", "imath", "kddockwidgets", "kf6-karchive", "kf6-kbookmarks", "kf6-kcodecs", "kf6-kcolorscheme", "kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kfilemetadata", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-kitemviews", "kf6-knewstuff", "kf6-knotifications", "kf6-knotifyconfig", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "kf6-kxmlgui", "kf6-purpose", "kf6-qqc2-desktop-style", "mlt7", "v4l-utils"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kdoctools", "kf6-kpackage", "qt6-base", "qt6-declarative"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'armadillo'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "armadillo"
+version = "14.0.2"
+archive = "https://downloads.sourceforge.net/sourceforge/arma/armadillo-14.0.2.tar.xz"
+sha256 = "248e2535fc092add6cb7dea94fc86ae1c463bda39e46fd82d2a7165c1c197dff"
+strip_components = 1
+description = "C++ linear algebra library"
+homepage = "https://arma.sourceforge.net/"
+license = "Apache-2.0"
+deps = ["openblas", "superlu"]
+
+[build]
+system = "cmake"
+configure_args = ["-DOPENBLAS_PROVIDES_LAPACK=true"]
+tools = ["pkg-config"]

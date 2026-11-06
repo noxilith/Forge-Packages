@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'extra-cmake-modules'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-Sphinx, qt6-tools
+[package]
+name = "extra-cmake-modules"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/extra-cmake-modules-6.30.0.tar.xz"
+sha256 = "22c9f7ff930dae7329faebf2942d2424f4a298c43bb3f11e217be6b12f227f6e"
+strip_components = 1
+description = "Extra modules and scripts for CMake"
+homepage = "https://invent.kde.org/frameworks/extra-cmake-modules"
+license = "BSD-3-Clause"
+patches = ["patches/cross-shiboken.patch", "patches/cross.patch", "patches/libexecdir.patch", "patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_HTML_DOCS=ON", "-DBUILD_TESTING=ON"]
+deps = ["qt6-base"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kodi-addon-vfs-sftp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kodi
+[package]
+name = "kodi-addon-vfs-sftp"
+version = "21.0.2"
+archive = "https://github.com/xbmc/vfs.sftp/archive/21.0.2-Omega.tar.gz"
+sha256 = "01a23958331cb0cd78fd2e9367d1269d4319c20b84db5b132632f9c1acd5f3c5"
+strip_components = 1
+description = "VFS SFTP addon for Kodi"
+homepage = "https://github.com/xbmc/vfs.sftp"
+license = "GPL-2.0-or-later"
+deps = ["kodi-platform", "libssh", "openssl", "p8-platform", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

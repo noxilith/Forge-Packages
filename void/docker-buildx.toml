@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'docker-buildx'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "docker-buildx"
+version = "0.38.1"
+archive = "https://github.com/docker/buildx/archive/refs/tags/v0.38.1.tar.gz"
+sha256 = "bfd908c66d13c88cb6dccbc6d0fbb68aab17446901ba24203b5019ebf9d32f67"
+strip_components = 1
+description = "Docker CLI plugin for extended build capabilities with BuildKit"
+homepage = "https://docs.docker.com/buildx/working-with-buildx/"
+license = "Apache-2.0"
+deps = ["docker-cli"]
+
+[build]
+system = "go"

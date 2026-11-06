@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'VirtualGL'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "VirtualGL"
+version = "3.1"
+archive = "https://downloads.sourceforge.net/sourceforge/virtualgl/3.1/VirtualGL-3.1.tar.gz"
+sha256 = "57bd20a9b1127de344313b6178b19610838a6af6309c059702788e41b6a875d0"
+strip_components = 1
+description = "Run remote OpenGL applications with full acceleration"
+homepage = "http://www.virtualgl.org/"
+license = "LGPL-2.1-or-later"
+deps = ["fltk", "glu", "libXtst", "libXv", "libjpeg-turbo", "ocl-icd", "openssl", "xcb-util-keysyms"]
+
+[build]
+system = "cmake"
+configure_args = ["-DVGL_SYSTEMFLTK=ON"]

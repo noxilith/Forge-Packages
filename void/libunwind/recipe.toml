@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libunwind'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libunwind"
+version = "1.8.3"
+archive = "https://github.com/libunwind/libunwind/releases/download/v1.8.3/libunwind-1.8.3.tar.gz"
+sha256 = "be30d910e67f58d82e753231f1357f326a1a088acf126b21ff77e60aab19b90b"
+strip_components = 1
+description = "Library to determine the call-chain of a program"
+homepage = "https://www.nongnu.org/libunwind/"
+license = "MIT"
+deps = ["xz"]
+patches = ["patches/mips-musl.patch", "patches/mips-read_write_s32.patch", "patches/mips-registers.patch", "patches/ppc64-musl.patch"]
+
+[build]
+system = "autotools"

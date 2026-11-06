@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'io.elementary.icons'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "io.elementary.icons"
+version = "7.0.0"
+archive = "https://github.com/elementary/icons/archive/7.0.0.tar.gz"
+sha256 = "3fc69e15939303b252be53a136650632763d856ad47b699b31ddc9bd3763f2e5"
+strip_components = 1
+description = "Named, vector icons for elementary OS"
+homepage = "https://github.com/elementary/icons"
+license = "GPL-3.0-or-later"
+deps = ["librsvg"]
+
+[build]
+system = "meson"
+deps = ["gettext", "xcursorgen"]

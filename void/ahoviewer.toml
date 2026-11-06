@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ahoviewer'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "ahoviewer"
+version = "1.6.5"
+archive = "https://github.com/ahodesuka/ahoviewer/archive/1.6.5.tar.gz"
+sha256 = "a14e32b4a8095c9f8b4b607c090a50cc8ac1076550e57b5a9303c54089068152"
+strip_components = 1
+description = "GTK2 image viewer, manga reader, and booru browser"
+homepage = "https://github.com/ahodesuka/ahoviewer"
+license = "MIT"
+deps = ["curl", "glibmm", "gst-plugins-bad1", "gst-plugins-good1", "gstreamer1", "gtkmm2", "libconfig", "libsecret", "libxml2", "libzip", "wayland"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-libsecret", "--enable-gst", "--enable-zip"]
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lemonbar'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "lemonbar"
+version = "1.5"
+archive = "https://github.com/LemonBoy/bar/archive/v1.5.tar.gz"
+sha256 = "bc8defe0ce6e4c1b16fd6ba3080a08e4502d6cf9d09440186044eae6b2d7460d"
+strip_components = 1
+description = "Lightweight xcb based bar"
+homepage = "https://github.com/LemonBoy/bar"
+license = "MIT"
+deps = ["libxcb"]
+
+[build]
+system = "make"
+tools = ["perl"]

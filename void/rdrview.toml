@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rdrview'. Review before relying on it.
+[package]
+name = "rdrview"
+version = "0.1.5"
+archive = "https://github.com/eafer/rdrview/archive/refs/tags/v0.1.5.tar.gz"
+sha256 = "e83266cb2e3b16a42f3433101d1f312350ce1442561eaded67efb51c2e8e8aab"
+strip_components = 1
+description = "Firefox Reader View as a command line tool"
+homepage = "https://github.com/eafer/rdrview"
+license = "Apache-2.0"
+deps = ["curl", "libseccomp", "libxml2"]
+
+[build]
+system = "make"

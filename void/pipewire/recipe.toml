@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'pipewire'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: avahi, doxygen, fftw, jack, libcanberra, libreadline8, ncurses, python3-docutils
+[package]
+name = "pipewire"
+version = "1.6.10"
+archive = "https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.10/pipewire-1.6.10.tar.gz"
+sha256 = "93b7c4f1e62fd9ec3a921846c6bfc64442872bb2366c2bbc3ea69a427b79a4f9"
+strip_components = 1
+description = "Server and user space API to deal with multimedia pipelines"
+homepage = "https://pipewire.org/"
+license = "MIT"
+deps = ["bluez", "dbus", "fdk-aac", "gst-plugins-base1", "libcamera", "libcap", "libebur128", "libfreeaptx", "liblc3", "libmysofa", "libsndfile", "libusb", "libva", "lilv", "openssl", "opus", "pulseaudio", "sbc", "spandsp", "v4l-utils", "vulkan-loader", "webrtc-audio-processing"]
+patches = ["patches/fix-neon-detection.patch"]
+
+[build]
+system = "meson"
+configure_args = ["--auto-features=enabled", "-Db_ndebug=false", "-Ddocs=enabled", "-Dman=enabled", "-Dlibcamera=enabled", "-Droc=disabled", "-Dlibsystemd=disabled", "-Dsystemd-user-service=disabled", "-Dlogind=disabled", "-Dvulkan=enabled", "-Dbluez5-codec-lc3plus=disabled", "-Dbluez5-codec-ldac-dec=disabled", "-Dgsettings-pulse-schema=disabled", "-Dsnap=disabled", "-Donnxruntime=disabled", "-Dsession-managers=[]", "-Drlimits-match=@_pipewire"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

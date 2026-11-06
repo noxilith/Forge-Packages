@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ndpi'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "ndpi"
+version = "5.0"
+archive = "https://github.com/ntop/nDPI/archive/5.0.tar.gz"
+sha256 = "8b0d3dc0c8a6a68578e09a18c922021ef6458d4aca1c7a20ce04efc267aa9ea5"
+strip_components = 1
+description = "Open Source Deep Packet Inspection Software Toolkit"
+homepage = "http://www.ntop.org/products/ndpi/"
+license = "LGPL-3.0-or-later"
+deps = ["json-c", "libgcrypt", "libpcap"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

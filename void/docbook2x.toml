@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'docbook2x'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: docbook, docbook-dsssl, docbook-xsl, perl-XML-SAX
+[package]
+name = "docbook2x"
+version = "0.8.8"
+archive = "https://downloads.sourceforge.net/sourceforge/docbook2x/docbook2X-0.8.8.tar.gz"
+sha256 = "4077757d367a9d1b1427e8d5dfc3c49d993e90deabc6df23d05cfe9cd2fcdc45"
+strip_components = 1
+description = "DocBook converter to UNIX manpage and GNU Texinfo format"
+homepage = "http://docbook2x.sourceforge.net"
+license = "MIT"
+deps = ["libxslt", "texinfo"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-resolver-jars", "--without-saxon-jars", "--without-xalan-jars"]

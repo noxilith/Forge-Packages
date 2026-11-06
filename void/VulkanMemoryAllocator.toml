@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'VulkanMemoryAllocator'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "VulkanMemoryAllocator"
+version = "3.5.0"
+archive = "https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/refs/tags/v3.5.0.tar.gz"
+sha256 = "c5f3db848fca9cb9726b41f256cc3007773321fa92a86d1e0902e66474e8a9e3"
+strip_components = 1
+description = "Vulkan memory allocation library"
+homepage = "https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator"
+license = "MIT"
+deps = ["Vulkan-Headers"]
+
+[build]
+system = "cmake"
+configure_args = ["-DVMA_BUILD_DOCUMENTATION=ON"]

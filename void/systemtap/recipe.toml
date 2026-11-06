@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'systemtap'. Review before relying on it.
+# settings not translated: CFLAGS, CXXFLAGS
+[package]
+name = "systemtap"
+version = "4.9"
+archive = "https://sourceware.org/pub/systemtap/releases/systemtap-4.9.tar.gz"
+sha256 = "d01033baea9d0af52a65e70167816931f4b856427a53ff2ab30e4b45f6ad3a98"
+strip_components = 1
+description = "Infrastructure to simplify the gathering of information"
+homepage = "https://sourceware.org/systemtap/"
+license = "GPL-3.0-or-later"
+deps = ["elfutils"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tqftpserv'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: LDFLAGS
+[package]
+name = "tqftpserv"
+version = "1.0"
+archive = "https://github.com/andersson/tqftpserv/archive/v1.0.tar.gz"
+sha256 = "7e6641796ae65b0e6cdbefd2a4463b3f580ff7f28c2f4b79c5f5629d8c672bf0"
+strip_components = 1
+description = "Trivial File Transfer Protocol server over AF_QIPCRTR"
+homepage = "https://github.com/andersson/tqftpserv"
+license = "BSD-3-Clause"
+deps = ["qrtr-ns"]
+
+[build]
+system = "make"

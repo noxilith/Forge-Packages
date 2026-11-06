@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libva-glx'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "libva-glx"
+version = "2.24.1"
+archive = "https://github.com/intel/libva/archive/refs/tags/2.24.1.tar.gz"
+sha256 = "0b4a3649ee8d683b9cce2ef094df4fb039d276c0cef7e49337c43d3b297b9f42"
+strip_components = 1
+description = "Video Acceleration (VA) API - GLX backend"
+homepage = "https://intel.github.io/libva"
+license = "MIT"
+deps = ["libXfixes", "libva"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith_glx=yes"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'biew'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "biew"
+version = "6.1.0"
+archive = "https://downloads.sourceforge.net/sourceforge/beye/biew/6.1.0/biew-610-src.tar.bz2"
+sha256 = "2e85f03c908dd6ec832461fbfbc79169a33f4caccf48c8fe60cbd29f5fb06d17"
+strip_components = 1
+description = "Console hex viewer/editor and disassembler"
+homepage = "http://beye.sourceforge.net/"
+license = "GPL-2.0-or-later"
+patches = ["patches/bool.patch"]
+
+[build]
+system = "autotools"

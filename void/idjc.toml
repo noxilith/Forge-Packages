@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'idjc'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ffmpeg6, jack, python3-mutagen, speex
+[package]
+name = "idjc"
+version = "0.9.8"
+archive = "https://downloads.sourceforge.net/sourceforge/idjc/idjc-0.9.8.tar.gz"
+sha256 = "e5cc850d55cbe569b005df2df8910ff9dc0f6990cd1b143062e8ac35c275630b"
+strip_components = 1
+description = "Internet DJ Console"
+homepage = "http://idjc.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "flac", "glib", "lame", "libebur128", "libogg", "libsamplerate", "libshout-idjc", "libsndfile", "libvorbis", "mpg123", "opus", "pixman", "python3-dbus", "python3-gobject", "shared-mime-info", "twolame"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

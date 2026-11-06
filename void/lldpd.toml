@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lldpd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "lldpd"
+version = "1.0.22"
+archive = "https://media.luffy.cx/files/lldpd/lldpd-1.0.22.tar.gz"
+sha256 = "9587940ed2314a86774c5499f3dfb13a8eb86232a62d243a83a1f09886848e03"
+strip_components = 1
+description = "Broadcast 802.1AB neighbor announcements"
+homepage = "https://vincentbernat.github.io/lldpd/index.html"
+license = "ISC"
+deps = ["libcap", "libevent", "libpcap"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

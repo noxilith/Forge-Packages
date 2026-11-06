@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lagrange'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: harfbuzz, libwebp, zip
+[package]
+name = "lagrange"
+version = "1.21.2"
+archive = "https://git.skyjake.fi/skyjake/lagrange/releases/download/v1.21.2/lagrange-1.21.2.tar.gz"
+sha256 = "ae9439b26d569d1d3efa682f591cc0e34eb5314f13ef18840c18a2d57e8cd677"
+strip_components = 1
+description = "Beautiful Gemini Client"
+homepage = "https://gmi.skyjake.fi/lagrange/"
+license = "BSD-2-Clause"
+deps = ["SDL2", "curl", "fribidi", "libunistring", "mpg123", "openssl", "pcre2", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DTFDN_ENABLE_SSE41=NO"]
+tools = ["pkg-config"]

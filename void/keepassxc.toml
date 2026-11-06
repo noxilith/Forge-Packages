@@ -1,0 +1,23 @@
+# Imported from Void Linux's template for 'keepassxc'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: botan, libreadline8, qt6-svg, qt6-tools, ruby-asciidoctor
+[package]
+name = "keepassxc"
+version = "2.8.0"
+archive = "https://github.com/keepassxreboot/keepassxc/releases/download/2.8.0/keepassxc-2.8.0-src.tar.xz"
+sha256 = "4ed4b77d375f021fc04648c257fedfb41dc13c6bd5c4965d8ded31284c9c653c"
+strip_components = 1
+description = "KeePassXC is a cross-platform port of “Keepass Password Safe”"
+homepage = "https://keepassxc.org/"
+license = """
+GPL-3.0-or-later, BSD-3-Clause, CC0-1.0, LGPL-2.0-only, LGPL-2.1-only,
+ LGPL-3.0-or-later, Nokia-Qt-exception-1.1, MIT, BSL-1.0"""
+deps = ["argon2", "keyutils", "libXi", "libXtst", "libusb", "minizip", "pcsclite", "qrencode"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKPXC_FEATURE_DOCS=ON", "-DKPXC_FEATURE_UPDATES=OFF", "-DKPXC_MINIMAL=OFF"]
+tools = ["pkg-config"]
+deps = ["qt6-base"]

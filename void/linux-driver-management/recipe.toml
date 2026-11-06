@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'linux-driver-management'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "linux-driver-management"
+version = "1.0.3"
+archive = "https://github.com/solus-project/linux-driver-management/releases/download/v1.0.3/linux-driver-management-1.0.3.tar.xz"
+sha256 = "968ef61fbb7e26b89ef9456f03cf31c616bdc8fc69531fcfd9f90ae0f4ff147b"
+strip_components = 1
+description = "Distro agnostic Plug'n'Play system for Linux"
+homepage = "https://github.com/solus-project/linux-driver-management"
+license = "LGPL-2.1-only"
+deps = ["eudev", "glib", "gobject-introspection", "kmod", "libusb", "xorg-server"]
+patches = ["patches/fix-ftbfs-dep_usb.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith-docs=false"]
+tools = ["pkg-config"]

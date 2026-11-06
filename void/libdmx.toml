@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libdmx'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libdmx"
+version = "1.1.5"
+archive = "https://www.x.org/releases/individual/lib/libdmx-1.1.5.tar.xz"
+sha256 = "35a4e26a8b0b2b4fe36441dca463645c3fa52d282ac3520501a38ea942cbf74f"
+strip_components = 1
+description = "DMX Extension for X"
+homepage = "https://wiki.freedesktop.org/xorg/"
+license = "MIT"
+deps = ["libXext"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]

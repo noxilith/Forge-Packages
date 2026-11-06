@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'baloo-widgets'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "baloo-widgets"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/baloo-widgets-26.08.1.tar.xz"
+sha256 = "b4af5cc65d886ab9d2a807254e11295e585d7cedd993d2b3b78f2f17e3a7f544"
+strip_components = 1
+description = "Baloo widgets"
+homepage = "https://invent.kde.org/libraries/baloo-widgets"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["kf6-baloo", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kfilemetadata", "kf6-ki18n", "kf6-kio", "kf6-kservice", "kf6-kwidgetsaddons", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DBUILD_WITH_QT6=ON", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

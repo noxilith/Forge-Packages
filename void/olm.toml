@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'olm'. Review before relying on it.
+[package]
+name = "olm"
+version = "3.2.16"
+archive = "https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.16/olm-3.2.16.tar.bz2"
+sha256 = "327cfcb81ef0c42f4b1d5c24b25d56932b57d64ccd9f00ed919a893a43333411"
+strip_components = 1
+description = "Implementation of the Double Ratchet cryptographic ratchet"
+homepage = "https://gitlab.matrix.org/matrix-org/olm"
+license = "Apache-2.0"
+
+[build]
+system = "cmake"

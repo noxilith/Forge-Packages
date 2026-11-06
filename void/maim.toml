@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'maim'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebp, mesa
+[package]
+name = "maim"
+version = "5.8.2"
+archive = "https://github.com/naelstrof/maim/archive/v5.8.2.tar.gz"
+sha256 = "2252c95c7eeebdee190c0a8cae3adeb1bb9c70858aef807060669fd02180204c"
+strip_components = 1
+description = "Desktop screenshot utility"
+homepage = "https://github.com/naelstrof/maim"
+license = "GPL-3.0-or-later"
+deps = ["glm", "libXcomposite", "libXrandr", "libicu78", "libjpeg-turbo", "libpng", "slop"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

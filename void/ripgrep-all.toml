@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ripgrep-all'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg, pandoc, sqlite, zstd
+[package]
+name = "ripgrep-all"
+version = "0.10.10"
+archive = "https://github.com/phiresky/ripgrep-all/archive/refs/tags/v0.10.10.tar.gz"
+sha256 = "17fadc7b73a51608d57f82b4a11f3edc0da87716cc4b302103eed9d4b9010fe5"
+strip_components = 1
+description = "Ripgrep, but also search in non-plaintext files (PDFs, archives, etc)"
+homepage = "https://github.com/phiresky/ripgrep-all"
+license = "AGPL-3.0-or-later"
+deps = ["poppler", "ripgrep"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

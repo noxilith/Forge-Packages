@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'galene'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, make_dirs
+[package]
+name = "galene"
+version = "1.0"
+archive = "https://github.com/jech/galene/archive/refs/tags/galene-1.0.tar.gz"
+sha256 = "663639649ab417cddbb8d88b16cfc2f8a2391903f27a25b16e0239202ae2245e"
+strip_components = 1
+description = "Galene videoconference server"
+homepage = "https://galene.org"
+license = "MIT"
+
+[build]
+system = "go"

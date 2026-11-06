@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gom'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "gom"
+version = "0.5.6"
+archive = "https://gitlab.gnome.org/GNOME/gom/-/archive/0.5.6/gom-0.5.6.tar.gz"
+sha256 = "0f091c15d06bed82bcac1d079a87e0bbab4f78f90ec135fdf71050b742d92f22"
+strip_components = 1
+description = "GObject Data Mapper"
+homepage = "https://wiki.gnome.org/Projects/Gom"
+license = "LGPL-2.1-or-later"
+deps = ["gdk-pixbuf", "gettext", "glib"]
+
+[build]
+system = "meson"
+configure_args = ["-Denable-gtk-doc=false"]
+tools = ["pkg-config"]

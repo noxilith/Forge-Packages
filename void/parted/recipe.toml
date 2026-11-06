@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'parted'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libreadline8, ncurses, util-linux-common
+[package]
+name = "parted"
+version = "3.8"
+archive = "https://ftp.gnu.org/gnu/parted/parted-3.8.tar.xz"
+sha256 = "a2b7811f47b0ddb1f7b1d0aa456f7c1270da70708ce231c2fe054c7199eafa63"
+strip_components = 1
+description = "GNU Parted disk partition resizing program"
+homepage = "http://www.gnu.org/software/parted/"
+license = "GPL-3.0-or-later"
+deps = ["lvm2"]
+patches = ["patches/disable-failed-tests.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_sizeof_off_t=8"]
+tools = ["pkg-config"]

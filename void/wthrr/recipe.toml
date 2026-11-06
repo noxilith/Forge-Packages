@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wthrr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wthrr"
+version = "1.2.1"
+archive = "https://github.com/ttytm/wthrr-the-weathercrab/archive/refs/tags/v1.2.1.tar.gz"
+sha256 = "ff5b47f2046ebefa9ff28cb52ece49a06f7b89230578801c338c77802aa721e0"
+strip_components = 1
+description = "Weather companion for the terminal"
+homepage = "https://github.com/ttytm/wthrr-the-weathercrab"
+license = "MIT"
+deps = ["openssl"]
+patches = ["patches/fix-builds.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

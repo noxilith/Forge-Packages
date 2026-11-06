@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ifupdown'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "ifupdown"
+version = "0.8.37"
+archive = "https://ftp.debian.org/debian/pool/main/i/ifupdown/ifupdown_0.8.37.tar.xz"
+sha256 = "8db81d5a1b94bb4dc9c169a59d837eeb405a48cd3b1905d10c95ba4030222d24"
+strip_components = 1
+description = "High level tools to configure network interfaces"
+homepage = "https://tracker.debian.org/pkg/ifupdown"
+license = "GPL-2.0-or-later"
+patches = ["patches/fix-musl.patch", "patches/installdirs.patch"]
+
+[build]
+system = "make"
+tools = ["perl"]
+deps = ["dpkg"]

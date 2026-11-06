@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'wayfire'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS, LDFLAGS
+[package]
+name = "wayfire"
+version = "0.11.0"
+archive = "https://github.com/WayfireWM/wayfire/releases/download/v0.11.0/wayfire-0.11.0.tar.xz"
+sha256 = "29dc95468c4f954341c9ecbad889b661eb849bdb96fb47e19c9d6edc8d49640b"
+strip_components = 1
+description = "3D wayland compositor"
+homepage = "https://wayfire.org"
+license = "MIT"
+deps = ["cairo", "libdrm", "pango", "wf-config", "wlroots0.20", "xorg-server-xwayland", "yyjson"]
+
+[build]
+system = "meson"
+configure_args = ["-Dprint_trace=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "wayland"]

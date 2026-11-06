@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libmspack'. Review before relying on it.
+[package]
+name = "libmspack"
+version = "0.10.1alpha"
+archive = "https://cabextract.org.uk/libmspack/libmspack-0.10.1alpha.tar.gz"
+sha256 = "bac862dee6e0fc10d92c70212441d9f8ad9b0222edc9a708c3ead4adb1b24a8e"
+strip_components = 1
+description = "Library for Microsoft compression formats"
+homepage = "https://www.cabextract.org.uk/libmspack"
+license = "LGPL-2.1-only"
+
+[build]
+system = "autotools"

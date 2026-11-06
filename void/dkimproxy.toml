@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dkimproxy'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: perl, perl-Mail-DKIM, perl-Net-Server
+[package]
+name = "dkimproxy"
+version = "1.4.1"
+archive = "https://downloads.sourceforge.net/sourceforge/dkimproxy/dkimproxy-1.4.1.tar.gz"
+sha256 = "e5345a1d3cefd32d1fb0face9fa73490118132767253b0ce643463f1e86185bd"
+strip_components = 1
+description = "SMTP-proxy that signs and/or verifies emails, using DKIM"
+homepage = "http://dkimproxy.sourceforge.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["perl"]

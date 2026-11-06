@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libdvdnav'. Review before relying on it.
+[package]
+name = "libdvdnav"
+version = "6.1.1"
+archive = "https://download.videolan.org/pub/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2"
+sha256 = "c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48"
+strip_components = 1
+description = "Library to navigate DVDs"
+homepage = "https://www.videolan.org/developers/libdvdnav.html"
+license = "GPL-2.0-or-later"
+deps = ["libdvdcss", "libdvdread"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'enscript'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "enscript"
+version = "1.6.6"
+archive = "https://ftp.gnu.org/gnu/enscript/enscript-1.6.6.tar.gz"
+sha256 = "6d56bada6934d055b34b6c90399aa85975e66457ac5bf513427ae7fc77f5c0bb"
+strip_components = 1
+description = "Converts text to Postscript, HTML or RTF with syntax highlighting"
+homepage = "http://git.savannah.gnu.org/cgit/enscript.git"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["perl"]

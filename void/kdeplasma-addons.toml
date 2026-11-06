@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kdeplasma-addons'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-location, qt6-qt5compat, qt6-quick3d, qt6-tools
+[package]
+name = "kdeplasma-addons"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kdeplasma-addons-6.7.5.tar.xz"
+sha256 = "1bc1c861487733f4944695d509c81f19b90a4d80c5825cc6df633b0313e3e8cc"
+strip_components = 1
+description = "Various Plasma addons"
+homepage = "https://invent.kde.org/plasma/kdeplasma-addons"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kf6-kauth", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdeclarative", "kf6-kglobalaccel", "kf6-kholidays", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-kjobwidgets", "kf6-knewstuff", "kf6-knotifications", "kf6-kpackage", "kf6-krunner", "kf6-kservice", "kf6-ksvg", "kf6-kunitconversion", "kf6-kxmlgui", "kf6-purpose", "kf6-sonnet", "libicu78", "libplasma", "plasma5support", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["corrosion", "extra-cmake-modules", "gettext"]

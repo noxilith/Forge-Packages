@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xcursorgen'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcursorgen"
+version = "1.0.9"
+archive = "https://www.x.org/releases/individual/app/xcursorgen-1.0.9.tar.gz"
+sha256 = "21082be975472e469dd79d46166cee3720fda80a54382dc8d03fa7a4cd39837a"
+strip_components = 1
+description = "X cursor generator"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11", "libXcursor", "libXfixes", "libXrender", "libpng"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

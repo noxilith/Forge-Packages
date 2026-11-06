@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fontmatrix'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "fontmatrix"
+version = "1.0.1"
+archive = "https://github.com/fontmatrix/fontmatrix/archive/refs/tags/v1.0.1.tar.gz"
+sha256 = "fa31e8cd287e4bf242770e3b7f5a2df0eaa5119b0e2714f9ea77791fac170b10"
+strip_components = 1
+description = "Font management application"
+homepage = "https://github.com/fontmatrix/fontmatrix"
+license = "GPL-2.0-or-later"
+deps = ["gettext", "hyphen", "kf6-kauth", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kiconthemes", "kf6-kstatusnotifieritem", "kf6-kxmlgui", "podofo", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "kf6-kconfig"]

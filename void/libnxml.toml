@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libnxml'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libnxml"
+version = "0.18.3"
+archive = "https://github.com/bakulf/libnxml/archive/0.18.3.tar.gz"
+sha256 = "30d733bade81273fa8e66c40271f629a548da83fcd6037ff0105a4f2a4e6fd75"
+strip_components = 1
+description = "A C library for parsing, writing and creating XML"
+homepage = "http://www.autistici.org/bakunin/libnxml/doc/"
+license = "LGPL-2.1-or-later"
+deps = ["curl"]
+
+[build]
+system = "autotools"

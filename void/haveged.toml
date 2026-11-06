@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'haveged'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "haveged"
+version = "1.9.26"
+archive = "https://github.com/jirka-h/haveged/archive/refs/tags/v1.9.26.tar.gz"
+sha256 = "74bc6052506451ca9f23ba186f72cf81b124f859351f8a4b777ead32d9bdd4da"
+strip_components = 1
+description = "Entropy harvesting daemon using CPU timings"
+homepage = "https://www.issihosts.com/haveged"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

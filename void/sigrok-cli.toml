@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sigrok-cli'. Review before relying on it.
+# needs, but Forge has no recipe for yet: sigrok-firmware-fx2lafw
+[package]
+name = "sigrok-cli"
+version = "0.7.2"
+archive = "https://sigrok.org/download/source/sigrok-cli/sigrok-cli-0.7.2.tar.gz"
+sha256 = "71d0443f36897bf565732dec206830dbea0f2789b6601cf10536b286d1140ab8"
+strip_components = 1
+description = "Provide the basic sigrok functionality from the command-line"
+homepage = "https://sigrok.org/"
+license = "GPL-3.0-or-later"
+deps = ["glib", "libsigrok", "libsigrokdecode", "libzip"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

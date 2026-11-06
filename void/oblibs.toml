@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'oblibs'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_check
+[package]
+name = "oblibs"
+version = "0.3.4.0"
+archive = "https://git.obarun.org/Obarun/oblibs/-/archive/0.3.4.0/oblibs-0.3.4.0.tar.bz2"
+sha256 = "aa85916444474fab7fa9f21def8a73b73223fd2f4017d232d5e388142371d7b9"
+strip_components = 1
+description = "Obarun library"
+homepage = "https://git.obarun.org/Obarun/oblibs"
+license = "ISC"
+deps = ["execline", "skalibs"]
+
+[build]
+system = "autotools"

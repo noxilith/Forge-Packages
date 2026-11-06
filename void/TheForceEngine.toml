@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'TheForceEngine'. Review before relying on it.
+# needs, but Forge has no recipe for yet: SDL2_image, glew, hicolor-icon-theme, jack, mesa
+[package]
+name = "TheForceEngine"
+version = "1.22.420"
+archive = "https://github.com/luciusDXL/TheForceEngine/archive/v1.22.420.tar.gz"
+sha256 = "a319745b2ec2ff799e3170b77d900d1f77ec2e7f451e534b74f33eb7d7705e8d"
+strip_components = 1
+description = 'Modern "Jedi Engine" replacement supporting Dark Forces and mods'
+homepage = "https://theforceengine.github.io"
+license = "GPL-2.0-only"
+deps = ["SDL2", "desktop-file-utils", "rtmidi"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

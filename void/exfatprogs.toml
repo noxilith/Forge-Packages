@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'exfatprogs'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "exfatprogs"
+version = "1.4.2"
+archive = "https://github.com/exfatprogs/exfatprogs/releases/download/1.4.2/exfatprogs-1.4.2.tar.xz"
+sha256 = "47c7c8ddeccbf50d39b903353f2cb3df79134367a4fd764fe2ce3755ff5877bf"
+strip_components = 1
+description = "Tools to create, check and label exFAT filesystems"
+homepage = "https://github.com/exfatprogs/exfatprogs"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

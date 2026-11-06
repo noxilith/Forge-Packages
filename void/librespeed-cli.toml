@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'librespeed-cli'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "librespeed-cli"
+version = "1.0.10"
+archive = "https://github.com/librespeed/speedtest-cli/archive/refs/tags/v1.0.10.tar.gz"
+sha256 = "904ec84f41714d5a7ab778534d332219cd254fdd0f97cc33ebb3540d31fb802c"
+strip_components = 1
+description = "LibreSpeed command line tool"
+homepage = "https://github.com/librespeed/speedtest-cli"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

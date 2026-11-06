@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 's3fs-fuse'. Review before relying on it.
+# hooks not translated: pre_check, pre_configure
+[package]
+name = "s3fs-fuse"
+version = "1.97"
+archive = "https://github.com/s3fs-fuse/s3fs-fuse/archive/v1.97.tar.gz"
+sha256 = "28413457cbf923b9b81e546caffabb8edd5c18f263e698ad86f564fd4b5b344d"
+strip_components = 1
+description = "FUSE-based file system backed by Amazon S3"
+homepage = "https://github.com/s3fs-fuse/s3fs-fuse/wiki"
+license = "GPL-2.0-or-later"
+deps = ["curl", "fuse3", "libxml2"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-openssl", "ac_cv_file__git=no"]
+tools = ["pkg-config"]

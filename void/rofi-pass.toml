@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rofi-pass'. Review before relying on it.
+# needs, but Forge has no recipe for yet: pass
+[package]
+name = "rofi-pass"
+version = "2.0.2"
+archive = "https://github.com/carnager/rofi-pass/archive/2.0.2.tar.gz"
+sha256 = "6ba8d08c39d8df671ce37f272bd05b0926365d3512f5037dab699b462015b22d"
+strip_components = 1
+description = "Rofi frontend for pass"
+homepage = "https://github.com/carnager/rofi-pass"
+license = "GPL-3.0-or-later"
+deps = ["feh", "pwgen", "qrencode", "rofi", "xdotool"]
+
+[build]
+system = "make"

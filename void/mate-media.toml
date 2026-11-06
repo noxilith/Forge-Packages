@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mate-media'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: libcanberra, libmatemixer, sound-theme-freedesktop
+[package]
+name = "mate-media"
+version = "1.28.1"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-media-1.28.1.tar.xz"
+sha256 = "bcdc102e22f63f55e63166d5c708e91c113570e6a30a874345a88609e83a9912"
+strip_components = 1
+description = "MATE Media Tools"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "libxml2", "mate-desktop", "mate-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

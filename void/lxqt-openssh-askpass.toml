@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-openssh-askpass'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-openssh-askpass"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-openssh-askpass/archive/2.4.0.tar.gz"
+sha256 = "a5a03c3155ac3803e48f3d7966cf1db710ef90a7cabd4d66854db941565e4d49"
+strip_components = 1
+description = "LXQt ssh-agent helper"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["liblxqt", "openssh"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "qt6-base"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'elisa'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-svg, qt6-tools
+[package]
+name = "elisa"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/elisa-26.08.1.tar.xz"
+sha256 = "e6a36f4c6cd8b775cc8f60f41dc950db86c45107ef74672616c8c683611aecc1"
+strip_components = 1
+description = "Simple and flexible music player"
+homepage = "https://kde.org/applications/en/multimedia/org.kde.elisa"
+license = "GPL-3.0-or-later"
+deps = ["kf6-baloo", "kf6-kcmutils", "kf6-kcodecs", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdeclarative", "kf6-kdoctools", "kf6-kfilemetadata", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-kpackage", "kf6-kxmlgui", "kf6-qqc2-desktop-style", "kirigami-addons", "qt6-base", "qt6-declarative", "vlc"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

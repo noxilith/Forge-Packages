@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'msgpack'. Review before relying on it.
+[package]
+name = "msgpack"
+version = "7.0.2"
+archive = "https://github.com/msgpack/msgpack-c/releases/download/c-7.0.2/msgpack-c-7.0.2.tar.gz"
+sha256 = "6ae50f69612871aa01de76bec904165cd2a2fc30ff9f653f2f60a663c5c1a86c"
+strip_components = 1
+description = "Binary-based efficient object serialization library for C"
+homepage = "https://github.com/msgpack/msgpack-c/tree/c_master"
+license = "BSL-1.0"
+
+[build]
+system = "cmake"

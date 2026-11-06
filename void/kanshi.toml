@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kanshi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "kanshi"
+version = "1.9.0"
+archive = "https://gitlab.freedesktop.org/emersion/kanshi/-/archive/v1.9.0/kanshi-v1.9.0.tar.gz"
+sha256 = "2a61c2765055d29861e3bab639222033358ec547d58782299084bad86f5bd627"
+strip_components = 1
+description = "Dynamic display configuration for Wayland"
+homepage = "https://wayland.emersion.fr/kanshi/"
+license = "MIT"
+deps = ["libscfg", "vali", "wayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

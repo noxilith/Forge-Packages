@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mbox'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_configure
+[package]
+name = "mbox"
+version = "0.0.0.140526"
+archive = "https://github.com/tsgates/mbox/archive/a131424b6cb577e1c916bd0e8ffb2084a5f73048.tar.gz"
+sha256 = "f650704f0cc6a9ad97eeadaa02dd156faa176d234f660f6615cc9cd2d2806fdc"
+strip_components = 1
+description = "A lightweight sandbox tool for non-root users"
+homepage = "https://pdos.csail.mit.edu/archive/mbox/"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+subdir = "src"

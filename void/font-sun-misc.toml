@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-sun-misc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-sun-misc"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-sun-misc-1.0.4.tar.xz"
+sha256 = "dd84dd116d927affa4fa0fa29727b3ecfc0f064238817c0a1e552a0ac384db9f"
+strip_components = 1
+description = "X.Org Sun fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xnec2c'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "xnec2c"
+version = "4.4.18"
+archive = "https://www.xnec2c.org/releases/xnec2c-v4.4.18.tar.gz"
+sha256 = "0e1b05dddee94854c32955b8189a7f0a9e0281c7f5888dc96c1a154a882f1116"
+strip_components = 1
+description = "GTK application for Numerical Electromagnetics Code generation"
+homepage = "https://www.xnec2c.org/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libglvnd"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "which"]

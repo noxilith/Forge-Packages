@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rofi-emoji'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "rofi-emoji"
+version = "4.1.0"
+archive = "https://github.com/Mange/rofi-emoji/archive/v4.1.0.tar.gz"
+sha256 = "e8bf926d4bcbc542c716043785c6e0b8aa75d61023a5efd2fa29ff5567141dcc"
+strip_components = 1
+description = "Emoji selector plugin for Rofi"
+homepage = "https://github.com/Mange/rofi-emoji"
+license = "MIT"
+deps = ["rofi"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

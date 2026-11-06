@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'tangara-companion'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: build_helper
+[package]
+name = "tangara-companion"
+version = "0.5.2"
+archive = "https://github.com/haileys/tangara-companion/archive/refs/tags/v0.5.2.tar.gz"
+sha256 = "835ec82076435a19eb37b05fe8ce97af9179b8126a65db20723f3e4f6d5a563b"
+strip_components = 1
+description = "Companion app for the Tangara music player"
+homepage = "https://github.com/haileys/tangara-companion"
+license = "GPL-3.0-only"
+deps = ["gtk4", "libadwaita"]
+patches = ["patches/cargo.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["cargo-auditable", "glib"]

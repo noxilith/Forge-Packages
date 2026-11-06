@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'io.elementary.files'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, libcanberra, sqlite
+[package]
+name = "io.elementary.files"
+version = "6.5.3"
+archive = "https://github.com/elementary/files/archive/6.5.3.tar.gz"
+sha256 = "df3d4dd84d4b606b9ce4817106c41280c9bddb19c8592b2a72959283db9ed4d3"
+strip_components = 1
+description = "File browser designed for elementary OS"
+homepage = "https://github.com/elementary/files"
+license = "GPL-3.0-or-later"
+deps = ["accountsservice", "glib", "granite", "gtk+3", "gvfs", "libcloudproviders", "libgee", "libgit2-glib", "libhandy1", "libnotify", "pango", "plank", "zeitgeist"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystemduserunitdir=no"]
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "vala"]

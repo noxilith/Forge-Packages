@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'fontmanager'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libwebkit2gtk41, sqlite
+[package]
+name = "fontmanager"
+version = "0.9.4"
+archive = "https://github.com/FontManager/font-manager/archive/0.9.4.tar.gz"
+sha256 = "3e4aefdaa0fbd37410c35421501819b19ba1f6847bad7a1f51707209c4147063"
+strip_components = 1
+description = "Font-manager is a simple font management tool for GTK+ environments"
+homepage = "https://fontmanager.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["fontconfig", "gtk4", "json-glib", "libarchive", "libsoup3"]
+patches = ["patches/fix-compile.patch"]
+
+[build]
+system = "meson"
+configure_args = ["--buildtype=release"]
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "vala", "yelp-tools"]

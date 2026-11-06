@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'neatvnc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "neatvnc"
+version = "0.9.5"
+archive = "https://github.com/any1/neatvnc/archive/v0.9.5.tar.gz"
+sha256 = "8150a30bfbd350b046680650b52afcce5ae44d328cb396fb571c6f9b99811357"
+strip_components = 1
+description = "Liberally licensed VNC server library"
+homepage = "https://github.com/any1/neatvnc"
+license = "ISC"
+deps = ["aml", "gnutls", "libdrm", "libjpeg-turbo", "pixman", "zlib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

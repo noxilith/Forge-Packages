@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bullet'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bullet"
+version = "3.25"
+archive = "https://github.com/bulletphysics/bullet3/archive/3.25.tar.gz"
+sha256 = "c45afb6399e3f68036ddb641c6bf6f552bf332d5ab6be62f7e6c54eda05ceb77"
+strip_components = 1
+description = "3D Collision Detection and Rigid Body Dynamics Library"
+homepage = "http://www.bulletphysics.com/Bullet/"
+license = "Zlib"
+deps = ["glu"]
+patches = ["patches/disableExample.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=1", "-DBUILD_BULLET2_DEMOS=1", "-DBUILD_CPU_DEMOS=0", "-DBUILD_UNIT_TESTS=1", "-DBUILD_OPENGL3_DEMOS=1", "-DBUILD_EXTRAS=1", "-DINSTALL_EXTRA_LIBS=1", "-DINSTALL_LIBS=1"]

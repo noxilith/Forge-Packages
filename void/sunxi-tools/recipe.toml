@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sunxi-tools'. Review before relying on it.
+# settings not translated: make_build_target, make_install_target
+[package]
+name = "sunxi-tools"
+version = "1.4.2"
+archive = "https://github.com/linux-sunxi/sunxi-tools/archive/refs/tags/v1.4.2.tar.gz"
+sha256 = "81f48014a520cb83cac4e17f5ae627a637c4d6a422b60c693c5a705c92e43822"
+strip_components = 1
+description = "Tools to help hacking Allwinner AXX (aka sunxi) based devices"
+homepage = "https://github.com/linux-sunxi/sunxi-tools"
+license = "GPL-2.0-or-later"
+deps = ["libusb"]
+patches = ["patches/include_getopt.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

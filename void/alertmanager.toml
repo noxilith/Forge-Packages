@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'alertmanager'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, make_dirs, conf_files
+[package]
+name = "alertmanager"
+version = "0.31.1"
+archive = "https://github.com/prometheus/alertmanager/archive/v0.31.1.tar.gz"
+sha256 = "9e266c6b890d28834ec4fd575603a22e190309d5de61f0f435aa196f11c09c89"
+strip_components = 1
+description = "Handles alerts sent by client applications ie. Prometheus server"
+homepage = "https://github.com/prometheus/alertmanager"
+license = "Apache-2.0"
+
+[build]
+system = "go"

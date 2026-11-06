@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libimobiledevice'. Review before relying on it.
+# hooks not translated: post_patch, pre_configure
+# needs, but Forge has no recipe for yet: python3-Cython
+[package]
+name = "libimobiledevice"
+version = "1.3.0"
+archive = "https://github.com/libimobiledevice/libimobiledevice/archive/1.3.0.tar.gz"
+sha256 = "acbfb73eabee162e64c0d9de207d71c0a5f47c40cd5ad32a5097f734328ce10a"
+strip_components = 1
+description = "Library to communicate with Apple devices"
+homepage = "https://libimobiledevice.org"
+license = "LGPL-2.1-only"
+deps = ["glib", "libplist", "libusb", "libusbmuxd", "openssl"]
+patches = ["patches/00.cython3.patch", "patches/01.cython3.patch", "patches/python3.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

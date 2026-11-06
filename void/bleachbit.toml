@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bleachbit'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-chardet, python3-psutil, python3-requests, python3-scandir
+[package]
+name = "bleachbit"
+version = "6.0.4"
+archive = "https://github.com/bleachbit/bleachbit/archive/v6.0.4.tar.gz"
+sha256 = "5af7cec3ed77b38e2e9ef91201e69d75100664116669b04a053dfd788d996f12"
+strip_components = 1
+description = "Deletes unneeded files to free disk space and maintain privacy"
+homepage = "https://www.bleachbit.org/"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "python3-gobject"]
+
+[build]
+system = "make"
+deps = ["desktop-file-utils", "gettext"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libkeyfinder'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw
+[package]
+name = "libkeyfinder"
+version = "2.2.8"
+archive = "https://github.com/mixxxdj/libkeyfinder/archive/refs/tags/2.2.8.tar.gz"
+sha256 = "a54fc6c5ff435bb4b447f175bc97f9081fb5abf0edd5d125e6f5215c8fff4d11"
+strip_components = 1
+description = "Small C++11 library for estimating the musical key of digital audio"
+homepage = "https://mixxxdj.github.io/libkeyfinder/"
+license = "GPL-3.0-or-later"
+deps = ["catch2"]
+patches = ["patches/test.patch"]
+
+[build]
+system = "cmake"

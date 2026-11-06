@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wayland-pipewire-idle-inhibit'. Review before relying on it.
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "wayland-pipewire-idle-inhibit"
+version = "0.7.1"
+archive = "https://github.com/rafaelrc7/wayland-pipewire-idle-inhibit/archive/refs/tags/v0.7.1.tar.gz"
+sha256 = "6644562aa9ac0210ae7203453f7d3d38fe9d74059e0864d60e13b45033dc2652"
+strip_components = 1
+description = "Inhibit wayland idle when computer is playing sound"
+homepage = "https://github.com/rafaelrc7/wayland-pipewire-idle-inhibit"
+license = "GPL-3.0-only"
+deps = ["pipewire"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

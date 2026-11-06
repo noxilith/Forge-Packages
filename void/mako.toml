@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mako'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mako"
+version = "1.11.0"
+archive = "https://github.com/emersion/mako/archive/v1.11.0.tar.gz"
+sha256 = "72d11d3fca20a3dfbca0107ff875eace479751be0cf2ddd1dd5bafa131ac7282"
+strip_components = 1
+description = "Lightweight Wayland notification daemon"
+homepage = "https://wayland.emersion.fr/mako/"
+license = "MIT"
+deps = ["basu", "cairo", "gdk-pixbuf", "pango", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+configure_args = ["-Dicons=enabled", "-Dman-pages=enabled", "-Dzsh-completions=true", "-Dfish-completions=true", "-Dwerror=false"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

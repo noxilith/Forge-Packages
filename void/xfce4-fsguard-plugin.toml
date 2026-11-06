@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-fsguard-plugin'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xfce4-fsguard-plugin"
+version = "1.2.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/1.2/xfce4-fsguard-plugin-1.2.0.tar.xz"
+sha256 = "9e40cf3ce7b34e1c27d6b442f3a067886c35154b5d0c4d644a239038611da64f"
+strip_components = 1
+description = "File system usage monitor plugin for the Xfce4 panel"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-fsguard-plugin"
+license = "BSD-2-Clause"
+deps = ["xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

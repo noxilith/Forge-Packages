@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'skaffold'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "skaffold"
+version = "2.24.0"
+archive = "https://github.com/GoogleContainerTools/skaffold/archive/v2.24.0.tar.gz"
+sha256 = "a8a5b2f7f291834be1fffff0f2eb1a32245c6279546b2037e0281d62d5607bb5"
+strip_components = 1
+description = "Easy and repeatable Kubernetes development"
+homepage = "https://skaffold.dev/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

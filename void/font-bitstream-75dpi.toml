@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-bitstream-75dpi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-bitstream-75dpi"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-bitstream-75dpi-1.0.4.tar.gz"
+sha256 = "4d48e8e02ee6434eb44afc228ac78aea70ba2f1bf7a635082c13662864e3d522"
+strip_components = 1
+description = "Standard 100dpi Bitstream PCF fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

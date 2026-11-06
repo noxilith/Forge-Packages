@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'SPIRV-Reflect'. Review before relying on it.
+[package]
+name = "SPIRV-Reflect"
+version = "1.4.363.0"
+archive = "https://github.com/KhronosGroup/SPIRV-Reflect/archive/vulkan-sdk-1.4.363.0.tar.gz"
+sha256 = "e0b2914648ab2eac1c83851911199e73f868d966e183531e4c227a258ea07bc6"
+strip_components = 1
+description = "Reflection API and command line tool for SPIR-V shader bytecode"
+homepage = "https://github.com/KhronosGroup/SPIRV-Reflect"
+license = "Apache-2.0"
+deps = ["SPIRV-Headers"]
+patches = ["patches/use-system-spirv-headers.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSPIRV_REFLECT_STATIC_LIB=ON", "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"]

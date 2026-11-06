@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xcb-util-renderutil'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcb-util-renderutil"
+version = "0.3.10"
+archive = "https://xcb.freedesktop.org/dist/xcb-util-renderutil-0.3.10.tar.xz"
+sha256 = "3e15d4f0e22d8ddbfbb9f5d77db43eacd7a304029bf25a6166cc63caa96d04ba"
+strip_components = 1
+description = "Utility libraries for XCB - Render extension convenience functions"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb-render-util"
+license = "X11, MIT"
+deps = ["libxcb", "xcb-util"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

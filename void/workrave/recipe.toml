@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'workrave'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: boost, intltool, python3-Jinja2, python3-cheetah3
+[package]
+name = "workrave"
+version = "1.10.52"
+archive = "https://github.com/rcaelers/workrave/archive/v1_10_52.tar.gz"
+sha256 = "e33e70cd0401a83aa0e4e319e117911b937df9d832cc9310c3e86bb3062f16f7"
+strip_components = 1
+description = "Program that assists in the recovery and prevention of RSI"
+homepage = "https://www.workrave.org/"
+license = "GPL-3.0-or-later"
+deps = ["gtkmm", "libSM", "libXScrnSaver", "libXtst"]
+patches = ["patches/musl-nl_langinfo.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-gsettings"]
+tools = ["pkg-config"]
+deps = ["autoconf-archive", "gettext"]

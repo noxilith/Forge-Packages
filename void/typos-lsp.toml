@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'typos-lsp'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "typos-lsp"
+version = "0.1.54"
+archive = "https://github.com/tekumara/typos-lsp/archive/refs/tags/v0.1.54.tar.gz"
+sha256 = "adabdcba93f884cf100cbfeeaa4aa47548dc6e6b58e9978d947abdbadda2762d"
+strip_components = 1
+description = "LSP server for source code spell checking"
+homepage = "https://github.com/tekumara/typos-lsp"
+license = "MIT"
+
+[build]
+system = "cargo"

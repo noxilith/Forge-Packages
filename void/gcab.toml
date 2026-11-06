@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gcab'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "gcab"
+version = "1.6"
+archive = "https://download.gnome.org/sources/gcab/1.6/gcab-1.6.tar.xz"
+sha256 = "2f0c9615577c4126909e251f9de0626c3ee7a152376c15b5544df10fc87e560b"
+strip_components = 1
+description = "GObject library to create cabinet files"
+homepage = "https://wiki.gnome.org/msitools"
+license = "LGPL-2.1-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddocs=false"]
+tools = ["pkg-config"]
+deps = ["gettext"]

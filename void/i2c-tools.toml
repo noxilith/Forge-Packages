@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'i2c-tools'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: make_install_args, build_helper
+# needs, but Forge has no recipe for yet: perl, python3-build, python3-installer, python3-wheel
+[package]
+name = "i2c-tools"
+version = "4.4"
+archive = "https://mirrors.edge.kernel.org/pub/software/utils/i2c-tools/i2c-tools-4.4.tar.xz"
+sha256 = "8b15f0a880ab87280c40cfd7235cfff28134bf14d5646c07518b1ff6642a2473"
+strip_components = 1
+description = "Heterogeneous set of I2C tools"
+homepage = "https://i2c.wiki.kernel.org/index.php/I2C_Tools"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

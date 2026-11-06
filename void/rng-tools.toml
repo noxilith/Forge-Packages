@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'rng-tools'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "rng-tools"
+version = "6.17"
+archive = "https://github.com/nhorman/rng-tools/archive/v6.17.tar.gz"
+sha256 = "4aa50994232da74499b60b3ebf79118e30a1943be375b7d931dcf18df5442fd3"
+strip_components = 1
+description = "Random number generator related utilities"
+homepage = "https://github.com/nhorman/rng-tools"
+license = "GPL-2.0-or-later"
+deps = ["curl", "jansson", "jitterentropy", "libcap", "libgcrypt", "libxml2", "sysfsutils"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-pkcs11", "--without-rtlsdr"]
+tools = ["pkg-config"]

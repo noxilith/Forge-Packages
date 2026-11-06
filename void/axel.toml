@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'axel'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "axel"
+version = "2.17.14"
+archive = "https://github.com/axel-download-accelerator/axel/releases/download/v2.17.14/axel-2.17.14.tar.xz"
+sha256 = "938ee7c8c478bf6fcc82359bbf9576f298033e8b13908e53e3ea9c45c1443693"
+strip_components = 1
+description = "Download accelerator for FTP and HTTP"
+homepage = "https://github.com/axel-download-accelerator/axel"
+license = "GPL-2.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dav'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_install_args, CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "dav"
+version = "0.9.0"
+archive = "https://github.com/atsb/dav-text/archive/dav-text-0.9.0.tar.gz"
+sha256 = "deaf954641a16b5a13ae8c36ea09d8710d6a02ed0a8231026c3c20fb5525c7a9"
+strip_components = 1
+description = "Efficient, small editor for GNU/Linux"
+homepage = "https://github.com/atsb/dav-text"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'glfw'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "glfw"
+version = "3.4"
+archive = "https://github.com/glfw/glfw/archive/3.4.tar.gz"
+sha256 = "c038d34200234d071fae9345bc455e4a8f2f544ab60150765d7704e08f3dac01"
+strip_components = 1
+description = "Multi-platform library for creating windows with OpenGL contexts"
+homepage = "http://www.glfw.org"
+license = "Zlib"
+deps = ["glu", "libXcursor", "libXi", "libXinerama", "libXrandr", "libxkbcommon", "wayland", "wayland-protocols"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]
+tools = ["pkg-config"]

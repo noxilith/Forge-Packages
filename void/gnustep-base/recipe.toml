@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnustep-base'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnustep-make, libffi
+[package]
+name = "gnustep-base"
+version = "1.31.1"
+archive = "https://github.com/gnustep/libs-base/releases/download/base-1_31_1/gnustep-base-1.31.1.tar.gz"
+sha256 = "e7546f1c978a7c75b676953a360194a61e921cb45a4804497b4f346a460545cd"
+strip_components = 1
+description = "Library of general-purpose Objective C objects for GNUstep"
+homepage = "http://www.gnustep.org/"
+license = "GPL-2.0-or-later, GPL-3.0-or-later"
+deps = ["gnutls", "libicu78", "libxml2", "libxslt"]
+patches = ["patches/use-va_copy.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["tar", "which"]

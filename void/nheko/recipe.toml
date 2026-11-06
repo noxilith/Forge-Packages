@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nheko'. Review before relying on it.
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: asciidoc, hicolor-icon-theme, qt6-multimedia, qt6-svg, qt6-tools
+[package]
+name = "nheko"
+version = "0.12.1"
+archive = "https://github.com/Nheko-Reborn/nheko/archive/v0.12.1.tar.gz"
+sha256 = "81cc613ee2420b1289c9cc7aeee81cae69a153971fd3112225e48d1c7b224ea5"
+strip_components = 1
+description = "Desktop client for Matrix using Qt and C++"
+homepage = "https://nheko-reborn.github.io"
+license = "GPL-3.0-or-later"
+deps = ["KDSingleApplication", "cmark", "coeurl", "fmt", "gst-plugins-bad1", "gst-plugins-base1", "gst-plugins-good1", "json-c++", "lmdb++", "mtxclient", "olm", "qt6-base", "qt6-declarative", "qtkeychain-qt6", "re2", "spdlog", "xcb-util-wm"]
+patches = ["patches/Fix-most-reply-rendering-issues-with-qt-6.9.2.patch", "patches/qt610.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

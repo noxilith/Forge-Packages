@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'litterbox'. Review before relying on it.
+# settings not translated: make_build_target
+# needs, but Forge has no recipe for yet: libtls, sqlite
+[package]
+name = "litterbox"
+version = "1.9"
+archive = "https://git.causal.agency/litterbox/snapshot/litterbox-1.9.tar.gz"
+sha256 = "ffb02ca75c743ce88593e30236b9ffbf808c1bcfc194459c52b2df70e0e9e5a9"
+strip_components = 1
+description = "IRC logger"
+homepage = "https://git.causal.agency/litterbox/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

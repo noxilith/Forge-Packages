@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-2048'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-2048"
+version = "50.2"
+archive = "https://gitlab.gnome.org/GNOME/gnome-2048/-/archive/50.2/gnome-2048-50.2.tar.gz"
+sha256 = "ed3ca14525355e06718e7b6e1313e1bb5ae90e4d1cbef142ea9d364a3b04be28"
+strip_components = 1
+description = "2048 clone for GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-2048"
+license = "GPL-3.0-or-later"
+deps = ["libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk+3", "vala"]

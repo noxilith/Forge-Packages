@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'avfs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: bzip2, lzlib, perl, zstd
+[package]
+name = "avfs"
+version = "1.2.0"
+archive = "https://downloads.sourceforge.net/sourceforge/avf/avfs-1.2.0.tar.bz2"
+sha256 = "a25a8ec43c1ee172624e1a4c79ce66a1b930841cdb545b725f1ec64bcabe889c"
+strip_components = 1
+description = "Virtual filesystem that allows browsing compressed files"
+homepage = "https://avf.sourceforge.net/"
+license = "GPL-2.0-only, LGPL-2.0-only"
+deps = ["fuse", "xz", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-system-zlib", "--with-system-bzlib"]
+tools = ["pkg-config"]

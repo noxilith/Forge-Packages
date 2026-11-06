@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'avrdude'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libftdi1
+[package]
+name = "avrdude"
+version = "8.1"
+archive = "https://github.com/avrdudes/avrdude/releases/download/v8.1/avrdude-8.1.tar.gz"
+sha256 = "2d3016edd5281ea09627c20b865e605d4f5354fe98f269ce20522a5b910ab399"
+strip_components = 1
+description = "Utility to manipulate ROM and EEPROM of AVR microcontrollers"
+homepage = "http://www.nongnu.org/avrdude/"
+license = "GPL-2.0-only"
+deps = ["elfutils", "hidapi", "libgpiod", "libserialport", "libusb", "libusb-compat"]
+
+[build]
+system = "cmake"
+configure_args = ["-DHAVE_LINUXGPIO=ON", "-DHAVE_LINUXSPI=ON", "-DHAVE_PARPORT=ON"]
+tools = ["flex", "pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tio'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: lua53
+[package]
+name = "tio"
+version = "3.9"
+archive = "https://github.com/tio/tio/archive/refs/tags/v3.9.tar.gz"
+sha256 = "88e6fc49f458526a265357601e4fb3e7400685e9720a9150227cbd288432e6f1"
+strip_components = 1
+description = "Simple serial device I/O tool"
+homepage = "https://github.com/tio/tio"
+license = "GPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

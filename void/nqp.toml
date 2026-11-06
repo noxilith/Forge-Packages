@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'nqp'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: configure_script
+# needs, but Forge has no recipe for yet: MoarVM-2026.09_1, libffi, libtommath
+[package]
+name = "nqp"
+version = "2026.09"
+archive = "https://rakudo.org/dl/nqp/nqp-2026.09.tar.gz"
+sha256 = "25aea7f4a510efca52f55bd9703aa29ed20dec6003d01268fd1cdf477f9aead9"
+strip_components = 1
+description = "Lightweight Raku-like environment for virtual machines"
+homepage = "https://github.com/Raku/nqp"
+license = "Artistic-2.0"
+deps = ["MoarVM", "libuv", "mimalloc"]
+
+[build]
+system = "autotools"
+configure_args = ["--backends=moar"]
+tools = ["perl"]

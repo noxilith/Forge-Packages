@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'openttd'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: openttd-opengfx, openttd-openmsx, openttd-opensfx, unzip
+[package]
+name = "openttd"
+version = "15.3"
+archive = "https://cdn.openttd.org/openttd-releases/15.3/openttd-15.3-source.tar.xz"
+sha256 = "5ea21eea7d59c78a42071924ac18c6bc0116088f2e96b14cfee9369175973be7"
+strip_components = 1
+description = "Open Source version of Transport Tycoon Deluxe"
+homepage = "https://www.openttd.org/"
+license = "GPL-2.0-only, Zlib"
+deps = ["curl", "xz"]
+patches = ["patches/remove-gfx-tests.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release", "-DCMAKE_INSTALL_BINDIR=bin", "-DCMAKE_INSTALL_DOCDIR=share/doc/openttd"]
+tools = ["pkg-config"]
+deps = ["tar"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'ncspot'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: llvm, ueberzug
+[package]
+name = "ncspot"
+version = "1.5.0"
+archive = "https://github.com/hrkfdn/ncspot/archive/refs/tags/v1.5.0.tar.gz"
+sha256 = "08a0be7e099bc40cf087a4ed8665a425c345a0e83019257d7c4affb7a1bbb881"
+strip_components = 1
+description = "Cross-platform ncurses Spotify client"
+homepage = "https://github.com/hrkfdn/ncspot"
+license = "BSD-2-Clause"
+deps = ["alsa-lib", "dbus", "openssl", "pulseaudio"]
+
+[build]
+system = "cargo"
+configure_args = ["--features", "alsa_backend,cover"]
+tools = ["pkg-config"]
+deps = ["rust-bindgen"]

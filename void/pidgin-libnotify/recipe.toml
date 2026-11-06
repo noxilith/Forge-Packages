@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'pidgin-libnotify'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "pidgin-libnotify"
+version = "0.14"
+archive = "https://downloads.sourceforge.net/sourceforge/gaim-libnotify/pidgin-libnotify-0.14.tar.gz"
+sha256 = "74f4a9f20e0a483df39974178f1f2380786176189512bcd438e4ada280ec3abe"
+strip_components = 1
+description = "Pidgin plugin that enables popups when someone logs in or messages you"
+homepage = "http://gaim-libnotify.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["libnotify", "pidgin"]
+patches = ["patches/pidgin-libnotify-0.14-libnotify-0.7.patch", "patches/pidgin-libnotify-getfocus.patch", "patches/pidgin-libnotify-showbutton.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-deprecated", "--disable-static"]
+tools = ["pkg-config"]

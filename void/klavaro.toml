@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'klavaro'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "klavaro"
+version = "3.14"
+archive = "https://downloads.sourceforge.net/sourceforge/klavaro/klavaro-3.14.tar.bz2"
+sha256 = "87187e49d301c510e6964098cdb612126bf030d2a875fd799eadcad3eae56dab"
+strip_components = 1
+description = "Touch typing tutor"
+homepage = "http://klavaro.sourceforge.net/en/"
+license = "GPL-3.0-or-later"
+deps = ["curl", "gtk+3", "gtkdatabox3"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

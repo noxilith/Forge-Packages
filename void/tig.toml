@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'tig'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_install_args, conf_files
+# needs, but Forge has no recipe for yet: asciidoc, ncurses
+[package]
+name = "tig"
+version = "2.6.1"
+archive = "https://github.com/jonas/tig/archive/tig-2.6.1.tar.gz"
+sha256 = "686967750b9b6331b9f8dedff73ca2e3a5eba3545f77a5af24e42ce6f0527a4c"
+strip_components = 1
+description = "Text-mode interface for Git"
+homepage = "https://jonas.github.io/tig/"
+license = "GPL-2.0-only"
+deps = ["pcre2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xmlto"]

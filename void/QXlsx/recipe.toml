@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'QXlsx'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "QXlsx"
+version = "1.5.1.1"
+archive = "https://github.com/QtExcel/QXlsx/archive/v1.5.1.1.tar.gz"
+sha256 = "70e424ad47529e16cd8ad1bad2ccc561af1eb50ef8ee45f1b50cb277f9a12730"
+strip_components = 1
+description = "Excel file(*.xlsx) reader/writer library"
+homepage = "https://qtexcel.github.io/QXlsx"
+license = "MIT"
+patches = ["patches/fix-missing-header.patch"]
+
+[build]
+system = "cmake"
+subdir = "QXlsx"

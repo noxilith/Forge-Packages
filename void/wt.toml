@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, sqlite
+[package]
+name = "wt"
+version = "4.13.3"
+archive = "https://github.com/emweb/wt/archive/refs/tags/4.13.3.tar.gz"
+sha256 = "0fbfcc0154553b93e1f0bdffa86cc632e4ff21e13bef753f9e94dc50936a3abd"
+strip_components = 1
+description = "Wt, C++ Web Toolkit"
+homepage = "https://www.webtoolkit.eu/wt"
+license = "GPL-2.0-or-later"
+deps = ["Haru", "libfreeglut", "libunwind", "mariadb", "openssl", "pango", "postgresql18", "unixodbc"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_EXAMPLES=OFF"]

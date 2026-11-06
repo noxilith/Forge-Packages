@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'swayr'. Review before relying on it.
+[package]
+name = "swayr"
+version = "0.28.1"
+archive = "https://git.sr.ht/~tsdh/swayr/archive/swayr-0.28.1.tar.gz"
+sha256 = "b539ac0ada52ac6e202785c37ec9f1c24e0826af8510b9a7858b043529ee453c"
+strip_components = 1
+description = "LRU window-switcher (and more) for the sway window manager"
+homepage = "https://sr.ht/~tsdh/swayr/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"
+subdir = "swayr"

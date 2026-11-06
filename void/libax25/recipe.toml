@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libax25'. Review before relying on it.
+[package]
+name = "libax25"
+version = "0.0.12.rc4"
+archive = "https://ftp.debian.org/debian/pool/main/liba/libax25/libax25_0.0.12-rc4.orig.tar.gz"
+sha256 = "d13496038a2a890bfb48d64333891fbd638ba60d681484a1c5afe0e56845b226"
+strip_components = 1
+description = "Functions making it easier to write hamradio programs"
+homepage = "http://www.linux-ax25.org/wiki/Libax25"
+license = "LGPL-2.1-or-later"
+deps = ["zlib"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"

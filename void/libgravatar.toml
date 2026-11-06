@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libgravatar'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "libgravatar"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libgravatar-26.08.1.tar.xz"
+sha256 = "459e245db0872ee5f780d4cc90808e90d9fcb63f0ee9c22552c15d60754c388f"
+strip_components = 1
+description = "KDE PIM library providing Gravatar support"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["pimcommon"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

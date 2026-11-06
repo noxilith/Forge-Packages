@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'webp-pixbuf-loader'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebp
+[package]
+name = "webp-pixbuf-loader"
+version = "0.2.7"
+archive = "https://github.com/aruiz/webp-pixbuf-loader/archive/refs/tags/0.2.7.tar.gz"
+sha256 = "61ce5e8e036043f9d0e78c1596a621788e879c52aedf72ab5e78a8c44849411a"
+strip_components = 1
+description = "WebP Image format loader for GdkPixbuf"
+homepage = "https://github.com/aruiz/webp-pixbuf-loader"
+license = "LGPL-2.0-or-later"
+deps = ["gdk-pixbuf"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

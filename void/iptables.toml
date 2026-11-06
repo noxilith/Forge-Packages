@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'iptables'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# needs, but Forge has no recipe for yet: libmnl, libnetfilter_conntrack, libnfnetlink
+[package]
+name = "iptables"
+version = "1.8.11"
+archive = "https://www.netfilter.org/projects/iptables/files/iptables-1.8.11.tar.xz"
+sha256 = "d87303d55ef8c92bcad4dd3f978b26d272013642b029425775f5bad1009fe7b2"
+strip_components = 1
+description = "Linux IPv[46] packet filtering ruleset"
+homepage = "https://www.netfilter.org/"
+license = "GPL-2.0-or-later"
+deps = ["flex", "libnftnl", "libpcap"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-libipq", "--enable-shared", "--enable-devel", "--enable-bpf-compiler"]
+tools = ["flex", "pkg-config"]

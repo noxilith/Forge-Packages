@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ktop'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "ktop"
+version = "0.5.3"
+archive = "https://github.com/vladimirvivien/ktop/archive/v0.5.3.tar.gz"
+sha256 = "f255733a56ce292cdf6ca543cf5ef85969814de8ccf60431d70b85dfe38f720f"
+strip_components = 1
+description = "Top-like tool for your Kubernetes cluster metrics"
+homepage = "https://github.com/vladimirvivien/ktop"
+license = "Apache-2.0"
+
+[build]
+system = "go"

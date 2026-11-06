@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'cmake-extras'. Review before relying on it.
+[package]
+name = "cmake-extras"
+version = "1.9"
+archive = "https://gitlab.com/ubports/development/core/cmake-extras/-/archive/1.9/cmake-extras-1.9.tar.gz"
+sha256 = "d04eba46e81873fa9f06759edd12b045bc14d7559c49023397ef65999a8fff0a"
+strip_components = 1
+description = "Add-ons for CMake build tools from UBPorts"
+homepage = "https://gitlab.com/ubports/development/core/cmake-extras"
+license = "LGPL-3.0-only"
+
+[build]
+system = "cmake"

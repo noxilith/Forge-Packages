@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'bzip3'. Review before relying on it.
+[package]
+name = "bzip3"
+version = "1.5.5"
+archive = "https://github.com/iczelia/bzip3/releases/download/1.5.5/bzip3-1.5.5.tar.xz"
+sha256 = "dc4e30d4581e5b2c46ed32f4320f03ba21474afc1e89e24dda3879307a61b010"
+strip_components = 1
+description = "Better and stronger spiritual successor to bzip2"
+homepage = "https://github.com/iczelia/bzip3"
+license = "LGPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

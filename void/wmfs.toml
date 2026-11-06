@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'wmfs'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: CFLAGS, conf_files
+[package]
+name = "wmfs"
+version = "201104"
+archive = "https://sources.voidlinux.org/wmfs-201104/wmfs-201104.tar.gz"
+sha256 = "c28b7cec28a6e3f2bc38a136fb1773bab8ec8f48c69ebe25c24192f96e782d64"
+strip_components = 1
+description = "Window Manager From Scratch"
+homepage = "https://github.com/xorg62/wmfs"
+license = "BSD-3-Clause"
+deps = ["fontconfig", "imlib2", "libXft", "libXinerama", "libXrandr", "libXrender"]
+
+[build]
+system = "autotools"
+configure_args = ["--prefix", "--man-prefix", "--xdg-config-dir"]
+tools = ["pkg-config"]

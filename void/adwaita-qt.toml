@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'adwaita-qt'. Review before relying on it.
+# hooks not translated: post_build, post_configure, post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "adwaita-qt"
+version = "1.4.2"
+archive = "https://github.com/FedoraQt/adwaita-qt/archive/1.4.2.tar.gz"
+sha256 = "cd5fd71c46271d70c08ad44562e57c34e787d6a8650071db115910999a335ba8"
+strip_components = 1
+description = "Style to bend Qt applications to look like they belong into GNOME Shell"
+homepage = "https://github.com/FedoraQt/adwaita-qt"
+license = "GPL-2.0-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"

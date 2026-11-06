@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gtk-doc'. Review before relying on it.
+# needs, but Forge has no recipe for yet: docbook-xml, docbook-xsl, itstool, python3-Pygments, python3-anytree, python3-lxml
+[package]
+name = "gtk-doc"
+version = "1.36.0"
+archive = "https://download.gnome.org/sources/gtk-doc/1.36/gtk-doc-1.36.0.tar.xz"
+sha256 = "3b84bac36efbe59017469040dfee58f17cf0853b5f54dfae26347daf55b6d337"
+strip_components = 1
+description = "Documentation tool for public library API"
+homepage = "https://gitlab.gnome.org/GNOME/gtk-doc"
+license = "GPL-2.0-or-later AND GFDL-1.1-or-later"
+deps = ["libxslt"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtests=false"]
+tools = ["pkg-config"]
+deps = ["gettext"]

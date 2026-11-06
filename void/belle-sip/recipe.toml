@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'belle-sip'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: mbedtls
+[package]
+name = "belle-sip"
+version = "5.3.106"
+archive = "https://gitlab.linphone.org/BC/public/belle-sip/-/archive/5.3.106/belle-sip-5.3.106.tar.gz"
+sha256 = "49cbc60c7f0818f4de6e566cd7224655659fd658ab60568d5c6211d4cc874382"
+strip_components = 1
+description = "SIP (RFC3261) implementation written in C"
+homepage = "https://www.linphone.org"
+license = "GPL-2.0-or-later"
+deps = ["bctoolbox", "belr", "zlib"]
+patches = ["patches/cmake.patch", "patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_STRICT=OFF", "-DENABLE_UNIT_TESTS=NO", "-DCMAKE_SKIP_INSTALL_RPATH=ON", "-DBUILD_SHARED_LIBS=TRUE"]

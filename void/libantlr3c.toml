@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libantlr3c'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libantlr3c"
+version = "3.5.2"
+archive = "https://github.com/antlr/antlr3/archive/3.5.2.tar.gz"
+sha256 = "a66d12fd5ca052fdd2b0a64b70d0c58db40e6dec72c3f4497934203090d92808"
+strip_components = 1
+description = "C runtime for the ANTLR parsing library"
+homepage = "https://www.antlr.org"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+subdir = "runtime/C"

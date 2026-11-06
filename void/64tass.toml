@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for '64tass'. Review before relying on it.
+# needs, but Forge has no recipe for yet: unzip
+[package]
+name = "64tass"
+version = "1.60.3243"
+archive = "https://downloads.sourceforge.net/sourceforge/tass64/64tass-1.60.3243-src.zip"
+sha256 = "9d83be3d23a2c55e085b7c7a7856c2f96080447ea120a6a8c21a217ed76427f0"
+strip_components = 1
+description = "Assembler for the 6502 processor and its derivatives"
+homepage = "https://tass64.sourceforge.net"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'SDRPlusPlus'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, glew, jack, rtaudio, volk, zstd
+[package]
+name = "SDRPlusPlus"
+version = "1.0.4"
+archive = "https://github.com/AlexandreRouma/SDRPlusPlus/archive/refs/tags/1.0.4.tar.gz"
+sha256 = "251256de6725ceb4f9fb2823c7ad825068ad16cf9b5fb894259b173aae5a69ea"
+strip_components = 1
+description = "Open source SDR software"
+homepage = "https://github.com/AlexandreRouma/SDRPlusPlus"
+license = "GPL-3.0-only"
+deps = ["SoapySDR", "airspy", "airspyhf", "alsa-lib", "glfw", "hackrf", "librtlsdr", "libusb", "pulseaudio"]
+patches = ["patches/except.patch", "patches/fstat64.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DOPT_BUILD_PLUTOSDR_SOURCE=0"]
+tools = ["pkg-config"]

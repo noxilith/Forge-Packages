@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libnfc'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "libnfc"
+version = "1.8.0"
+archive = "https://github.com/nfc-tools/libnfc/archive/libnfc-1.8.0.tar.gz"
+sha256 = "0ab7d9b41442e7edc2af7c54630396edc73ce51128aa28a5c6e4135dc5595495"
+strip_components = 1
+description = "Low level NFC SDK and Programmers API"
+homepage = "http://nfc-tools.org/"
+license = "GPL-3"
+deps = ["libusb", "libusb-compat"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

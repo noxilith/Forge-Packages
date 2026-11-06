@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kpmcore'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libatasmart
+[package]
+name = "kpmcore"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kpmcore-26.08.1.tar.xz"
+sha256 = "22cac5b6432c4ad606aef72bf884983d9cb7d5245c43e75edd1c5a36f9058668"
+strip_components = 1
+description = "Library for managing partitions"
+homepage = "https://apps.kde.org/partitionmanager"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kauth", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kwidgetsaddons", "parted", "polkit-qt6", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

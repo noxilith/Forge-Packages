@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-purpose'. Review before relying on it.
+# needs, but Forge has no recipe for yet: accounts-qml-module, kf6-base, qt6-tools
+[package]
+name = "kf6-purpose"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/purpose-6.30.0.tar.xz"
+sha256 = "4fda64d235927e3cc230416d5c9304f5d3e040dc2553b77b2c69bf54c6f04862"
+strip_components = 1
+description = "Offers available actions for a specific purpose"
+homepage = "https://invent.kde.org/frameworks/purpose"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kaccounts-integration", "kf6-kcoreaddons", "kf6-kdeclarative", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-knotifications", "kf6-prison", "qt6-declarative"]
+patches = ["patches/intltool.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-base"]

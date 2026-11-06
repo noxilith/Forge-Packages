@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'bluefish'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: gucharmap, hicolor-icon-theme
+[package]
+name = "bluefish"
+version = "2.4.2"
+archive = "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.4.2.tar.bz2"
+sha256 = "b2641f9ff8033719e02c519c5ddb4bdadbd7ff73ef252e9287d512c4770377c5"
+strip_components = 1
+description = "Powerful HTML editor for experienced web designers and programmers"
+homepage = "https://bluefish.openoffice.nl/"
+license = "GPL-3.0-only"
+deps = ["desktop-file-utils", "enchant2", "gtk+3", "libxml2", "xmlcatmgr"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-spell-check", "--disable-update-databases", "--disable-xml-catalog-update"]
+tools = ["pkg-config"]
+deps = ["gdk-pixbuf", "gettext", "glib"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'spotatui'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, llvm
+[package]
+name = "spotatui"
+version = "0.38.2"
+archive = "https://github.com/LargeModGames/spotatui/archive/refs/tags/v0.38.2.tar.gz"
+sha256 = "8f478fe3706c6815c83c6971fb1d78c8500c9cb7e46137099027931b3c4e9496"
+strip_components = 1
+description = "Fully standalone Spotify client for the terminal"
+homepage = "https://github.com/LargeModGames/spotatui"
+license = "MIT"
+deps = ["alsa-lib", "dbus", "desktop-file-utils", "libxcb", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]
+deps = ["rust-bindgen"]

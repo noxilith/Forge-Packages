@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jmtpfs'. Review before relying on it.
+[package]
+name = "jmtpfs"
+version = "0.5"
+archive = "https://github.com/JasonFerrara/jmtpfs/archive/v0.5.tar.gz"
+sha256 = "c0cacc4751c586a3b2b0fcd9c98dae4810a5d44f3eb9d2870868a15eeb696883"
+strip_components = 1
+description = "FUSE-based filesystem for accessing MTP devices"
+homepage = "https://github.com/JasonFerrara/jmtpfs"
+license = "GPL-3.0-only"
+deps = ["file", "fuse", "libmtp"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

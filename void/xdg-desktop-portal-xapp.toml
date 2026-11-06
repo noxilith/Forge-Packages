@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xdg-desktop-portal-xapp'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "xdg-desktop-portal-xapp"
+version = "1.1.3"
+archive = "https://github.com/linuxmint/xdg-desktop-portal-xapp/archive/1.1.3/xdg-desktop-portal-xapp-1.1.3.tar.gz"
+sha256 = "0c163f39a33746aec14a12ebe30f13e0f210e3b383979e7597512eabddca64b6"
+strip_components = 1
+description = "Cross-desktop libraries and common resources from Linux Mint"
+homepage = "https://github.com/linuxmint/xdg-desktop-portal-xapp"
+license = "LGPL-2.0-or-later"
+deps = ["flatpak", "glib", "gtk+3", "xapp", "xapp-symbolic-icons", "xdg-desktop-portal"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

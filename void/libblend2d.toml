@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libblend2d'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libblend2d"
+version = "0.21.2"
+archive = "https://blend2d.com/download/blend2d-0.21.2.tar.gz"
+sha256 = "234ba57a64153c96885a6271f15fdcf6c594ac8cb03adaad19abb8d3b2b533fa"
+strip_components = 1
+description = "High-performance 2D vector graphics engine with JIT compiler"
+homepage = "https://blend2d.com/"
+license = "Zlib"
+
+[build]
+system = "cmake"
+configure_args = ["-DBLEND2D_STATIC=OFF", "-DBLEND2D_DEMOS=OFF", "-DBLEND2D_EXTERNAL_ASMJIT=OFF"]

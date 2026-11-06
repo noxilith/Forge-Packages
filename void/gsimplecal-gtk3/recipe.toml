@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gsimplecal-gtk3'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "gsimplecal-gtk3"
+version = "2.5"
+archive = "https://github.com/dmedvinsky/gsimplecal/archive/v2.5.tar.gz"
+sha256 = "f0be977de36fabc4da489698d2c06e64143572e53f166ab26e6055f6b36deae4"
+strip_components = 1
+description = "Simple and lightweight GTK calendar"
+homepage = "http://dmedvinsky.github.io/gsimplecal/"
+license = "BSD-3-Clause"
+deps = ["gtk+3"]
+patches = ["patches/invalid-cast.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

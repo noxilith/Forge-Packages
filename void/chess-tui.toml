@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'chess-tui'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "chess-tui"
+version = "2.7.1"
+archive = "https://github.com/thomas-mauran/chess-tui/archive/refs/tags/2.7.1.tar.gz"
+sha256 = "471b6280c8aa0979956b85d54dfd216855a47f8517a9a1d3e5286e4044adaac5"
+strip_components = 1
+description = "Play chess from your terminal"
+homepage = "https://thomas-mauran.github.io/chess-tui/"
+license = "MIT"
+deps = ["alsa-lib", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

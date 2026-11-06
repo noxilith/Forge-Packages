@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libebml'. Review before relying on it.
+[package]
+name = "libebml"
+version = "1.4.7"
+archive = "https://dl.matroska.org/downloads/libebml/libebml-1.4.7.tar.xz"
+sha256 = "5b08214f929ee54c6187c370f84235fc9d0f2a2258c4d320d68eae6e2bdfd3f7"
+strip_components = 1
+description = "Extensible Binary Meta Language library"
+homepage = "https://matroska-org.github.io/libebml/"
+license = "LGPL-2.1-or-later"
+deps = ["utfcpp"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

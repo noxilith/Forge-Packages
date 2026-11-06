@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'singular'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libreadline8, ntl
+[package]
+name = "singular"
+version = "4.4.1"
+archive = "https://www.singular.uni-kl.de/ftp/pub/Math/Singular/SOURCES/4-4-1/singular-4.4.1.tar.gz"
+sha256 = "6a4fbaaed05b89c35bff3b1c5e124344a088097f81affe129c9ae619b282b49b"
+strip_components = 1
+description = "Computer algebra system for polynomial computations"
+homepage = "https://www.singular.uni-kl.de"
+license = "GPL-2.0-or-later"
+deps = ["cddlib", "flintlib"]
+patches = ["patches/flint-3.3.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-readline=ncurses", "--enable-gfanlib", "--enable-Singular", "--enable-factory", "--disable-doc", "--disable-polymake", "--without-python", "--with-libparse", "ac_cv_lib_cddgmp_dd_free_global_constants=yes"]
+tools = ["perl"]
+deps = ["tar"]

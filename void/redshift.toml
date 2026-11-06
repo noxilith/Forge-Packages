@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'redshift'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "redshift"
+version = "1.12"
+archive = "https://github.com/jonls/redshift/releases/download/v1.12/redshift-1.12.tar.xz"
+sha256 = "d2f8c5300e3ce2a84fe6584d2f1483aa9eadc668ab1951b2c2b8a03ece3a22ba"
+strip_components = 1
+description = "Adjusts the color temperature of your screen to your surroundings"
+homepage = "http://jonls.dk/redshift/"
+license = "GPL-3.0-or-later"
+deps = ["geoclue2", "glib", "libXxf86vm", "libdrm"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gui", "--enable-geoclue2"]
+tools = ["pkg-config"]
+deps = ["gettext"]

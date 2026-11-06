@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mspdebug'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "mspdebug"
+version = "0.25"
+archive = "https://github.com/dlbeer/mspdebug/archive/v0.25.tar.gz"
+sha256 = "347b5ae5d0ab0cddb54363b72abe482f9f5d6aedb8f230048de0ded28b7d1503"
+strip_components = 1
+description = "Debugger for MSP430 MCUs"
+homepage = "http://mspdebug.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["libusb-compat"]
+
+[build]
+system = "make"

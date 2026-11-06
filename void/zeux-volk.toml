@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'zeux-volk'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "zeux-volk"
+version = "1.4.363.0"
+archive = "https://github.com/zeux/volk/archive/vulkan-sdk-1.4.363.0.tar.gz"
+sha256 = "1547d8d74395d4048fb3f4a6313da56db626e89b55db238d0d7e8944c8a645f3"
+strip_components = 1
+description = "Meta-loader for Vulkan"
+homepage = "https://github.com/zeux/volk"
+license = "MIT"
+deps = ["Vulkan-Headers"]
+
+[build]
+system = "cmake"
+configure_args = ["-DVOLK_INSTALL=ON"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libgepub'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libwebkit2gtk41
+[package]
+name = "libgepub"
+version = "0.7.1"
+archive = "https://download.gnome.org/sources/libgepub/0.7/libgepub-0.7.1.tar.xz"
+sha256 = "a3e4b31a232659d26a54b9121b3882c3d7397c3cf44ae5c64b86700980bc7f60"
+strip_components = 1
+description = "Library to read epub files using glib"
+homepage = "http://live.gnome.org/"
+license = "LGPL-2.1-or-later"
+deps = ["libarchive", "libsoup3", "libxml2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["vala"]

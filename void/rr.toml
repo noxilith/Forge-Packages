@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'rr'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: python3-pexpect, zstd
+[package]
+name = "rr"
+version = "5.9.0"
+archive = "https://github.com/rr-debugger/rr/archive/5.9.0.tar.gz"
+sha256 = "e3a7ea10fc72a74fe9949baa8f2598192c4ee77e50ed229b88d6c3ee34381a39"
+strip_components = 1
+description = "Nondeterministic debugger"
+homepage = "http://rr-project.org/"
+license = "MIT, BSD-2-Clause"
+deps = ["capnproto", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTS=OFF", "-DCMAKE_CXX_STANDARD=17"]
+tools = ["pkg-config"]

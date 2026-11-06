@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gdb'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: libreadline8, mpfr, ncurses
+[package]
+name = "gdb"
+version = "18.1"
+archive = "https://ftp.gnu.org/gnu/gdb/gdb-18.1.tar.xz"
+sha256 = "cd9fc3fe2b47743840e42c1592d3d87f8302eb18639c0b8b4ba0898002e2348f"
+strip_components = 1
+description = "GNU Debugger"
+homepage = "https://www.gnu.org/software/gdb"
+license = "GPL-3.0-or-later"
+deps = ["expat", "gmp", "zlib"]
+patches = ["patches/gdb-mips-linux-nat.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-werror", "--disable-nls", "--with-system-readline", "--with-system-zlib"]
+tools = ["pkg-config"]
+deps = ["texinfo"]

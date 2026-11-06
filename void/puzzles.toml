@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'puzzles'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: halibut
+[package]
+name = "puzzles"
+version = "20260410.06e37f1"
+archive = "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20260410.06e37f1.tar.gz"
+sha256 = "15d8834cfc3775fffc8fefb09064f13b706f9cac3b38817cc572cdccbc3cba73"
+strip_components = 1
+description = "Simon Tatham's Portable Puzzle Collection"
+homepage = "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
+license = "MIT"
+deps = ["gtk+3"]
+
+[build]
+system = "cmake"
+configure_args = ["-DNAME_PREFIX=puzzles-"]
+tools = ["perl", "pkg-config"]
+deps = ["ImageMagick"]

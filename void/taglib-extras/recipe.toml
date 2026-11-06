@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'taglib-extras'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "taglib-extras"
+version = "1.0.1"
+archive = "https://download.kde.org/stable/taglib-extras/1.0.1/src/taglib-extras-1.0.1.tar.gz"
+sha256 = "fe546b4b315f3227c975fed8ea9dfc0e54fc6997fdbba2a9da7beba479229632"
+strip_components = 1
+description = "Additional taglib plugins for KDE"
+homepage = "http://developer.kde.org/~wheeler/taglib.html"
+license = "LGPL-2.1-only OR MPL-1.1"
+deps = ["taglib", "zlib"]
+patches = ["patches/taglib2.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_MP4=ON", "-DWITH_ASF=ON"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cmark'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "cmark"
+version = "0.31.1"
+archive = "https://github.com/commonmark/cmark/archive/0.31.1.tar.gz"
+sha256 = "3da93db5469c30588cfeb283d9d62edfc6ded9eb0edc10a4f5bbfb7d722ea802"
+strip_components = 1
+description = "CommonMark parsing and rendering library and program in C"
+homepage = "https://github.com/commonmark/cmark"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

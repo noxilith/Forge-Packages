@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fuse-mp3fs'. Review before relying on it.
+[package]
+name = "fuse-mp3fs"
+version = "1.1.1"
+archive = "https://github.com/khenriks/mp3fs/releases/download/v1.1.1/mp3fs-1.1.1.tar.gz"
+sha256 = "942b588fb623ea58ce8cac8844e6ff2829ad4bc9b4c163bba58e3fa9ebc15608"
+strip_components = 1
+description = "FUSE client to transcode FLAC to MP3"
+homepage = "https://khenriks.github.io/mp3fs/"
+license = "GPL-3.0-or-later"
+deps = ["flac", "fuse", "lame", "libid3tag", "libvorbis"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

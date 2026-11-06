@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'bacon'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bacon"
+version = "5.0.2"
+archive = "https://www.basic-converter.org/museum/bacon-5.0.2.tar.gz"
+sha256 = "50950d3e1d3ab5405b89501c2875f55306035c81824c4ef29176f23cf507e721"
+strip_components = 1
+description = "BASIC to C converter"
+homepage = "https://www.basic-converter.org"
+license = "MIT"
+deps = ["fltk"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-bash", "--enable-gui-fltk"]
+tools = ["flex", "m4", "pkg-config"]
+deps = ["which"]

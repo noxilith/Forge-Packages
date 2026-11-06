@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qgit'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-qt5compat, qt6-svg
+[package]
+name = "qgit"
+version = "2.13"
+archive = "https://github.com/tibirna/qgit/archive/qgit-2.13.tar.gz"
+sha256 = "9fa64b011963b7b876b8634b140ec5339a81a422317df71b619fcee5740a364a"
+strip_components = 1
+description = "Qt-based Git GUI"
+homepage = "https://github.com/tibirna/qgit"
+license = "GPL-2.0-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"

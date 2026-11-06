@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libtimezonemap'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+[package]
+name = "libtimezonemap"
+version = "0.4.6"
+archive = "https://ftp.debian.org/debian/pool/main/libt/libtimezonemap/libtimezonemap_0.4.6.orig.tar.gz"
+sha256 = "0d634cc2476d8f57d1ee1864bd4f442180ae4bf040a9ae4bf73b66bbd85d7195"
+strip_components = 1
+description = "GTK+3 timezone map widget"
+homepage = "https://launchpad.net/timezonemap"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "glib", "gobject-introspection", "gtk+3", "json-glib", "libsoup3"]
+patches = ["patches/libsoup3.patch", "patches/use-after-free.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

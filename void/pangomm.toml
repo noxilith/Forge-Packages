@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pangomm'. Review before relying on it.
+[package]
+name = "pangomm"
+version = "2.46.2"
+archive = "https://download.gnome.org/sources/pangomm/2.46/pangomm-2.46.2.tar.xz"
+sha256 = "57442ab4dc043877bfe3839915731ab2d693fc6634a71614422fb530c9eaa6f4"
+strip_components = 1
+description = "C++ bindings for the pango library"
+homepage = "https://gtkmm.org"
+license = "LGPL-2.1-or-later"
+deps = ["cairomm", "glibmm", "libsigc++", "pango"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

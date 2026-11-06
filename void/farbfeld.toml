@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'farbfeld'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "farbfeld"
+version = "4"
+archive = "https://dl.suckless.org/farbfeld/farbfeld-4.tar.gz"
+sha256 = "c7df5921edd121ca5d5b1cf6fb01e430aff9b31242262e4f690d3af72ccbe72a"
+strip_components = 1
+description = "Lossless image format which is easy to parse, pipe and compress"
+homepage = "https://tools.suckless.org/farbfeld/"
+license = "ISC"
+deps = ["libjpeg-turbo", "libpng"]
+
+[build]
+system = "make"

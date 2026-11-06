@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'step-cli'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "step-cli"
+version = "0.30.6"
+archive = "https://github.com/smallstep/cli/archive/refs/tags/v0.30.6.tar.gz"
+sha256 = "0c8562b95150cc24bf69ba18fcf9f0bf671f334f5d3ccb39f287692b61531b7c"
+strip_components = 1
+description = "Zero trust swiss army knife"
+homepage = "https://smallstep.com/cli"
+license = "Apache-2.0"
+
+[build]
+system = "go"

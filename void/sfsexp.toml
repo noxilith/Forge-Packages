@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sfsexp'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "sfsexp"
+version = "1.4.1"
+archive = "https://github.com/mjsottile/sfsexp/releases/download/v1.4.1/sfsexp-1.4.1.tar.gz"
+sha256 = "15e9a18bb0d5c3c5093444a9003471c2d25ab611b4219ef1064f598668723681"
+strip_components = 1
+description = "Small Fast S-Expression Library"
+homepage = "https://github.com/mjsottile/sfsexp"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+tools = ["m4"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'vbindiff'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "vbindiff"
+version = "3.0.beta5"
+archive = "https://www.cjmweb.net/vbindiff//vbindiff-3.0_beta5.tar.gz"
+sha256 = "f04da97de993caf8b068dcb57f9de5a4e7e9641dc6c47f79b60b8138259133b8"
+strip_components = 1
+description = "Visual Binary Diff"
+homepage = "https://www.cjmweb.net/vbindiff/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

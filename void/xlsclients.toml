@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xlsclients'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xlsclients"
+version = "1.1.6"
+archive = "https://www.x.org/releases/individual/app/xlsclients-1.1.6.tar.xz"
+sha256 = "909810a3fdbd01d84747907f2c0cc32ee732e77afc88cb310abb9d155b2a0807"
+strip_components = 1
+description = "X client listing utility"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["libxcb"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

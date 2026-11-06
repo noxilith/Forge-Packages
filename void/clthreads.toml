@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'clthreads'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+# settings not translated: make_install_args, CXXFLAGS
+[package]
+name = "clthreads"
+version = "2.4.2"
+archive = "https://kokkinizita.linuxaudio.org/linuxaudio/downloads/clthreads-2.4.2.tar.bz2"
+sha256 = "c659b14c0c4055c44432cb83060b95d30ae0c1ecc6f50d73968e239c100f7a31"
+strip_components = 1
+description = "C++ wrapper library around the POSIX threads API"
+homepage = "https://kokkinizita.linuxaudio.org/linuxaudio/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "make"
+subdir = "source"

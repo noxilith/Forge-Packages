@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'webrtc-audio-processing'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "webrtc-audio-processing"
+version = "1.3"
+archive = "https://www.freedesktop.org/software/pulseaudio/webrtc-audio-processing/webrtc-audio-processing-1.3.tar.gz"
+sha256 = "95552fc17faa0202133707bbb3727e8c2cf64d4266fe31bfdb2298d769c1db75"
+strip_components = 1
+description = "AudioProcessing library based on Google's implementation of WebRTC"
+homepage = "https://freedesktop.org/software/pulseaudio/webrtc-audio-processing"
+license = "BSD-3-Clause"
+deps = ["abseil-cpp"]
+patches = ["patches/Add-generic-byte-order-and-pointer-size-detection.patch", "patches/i686-no-sse.patch", "patches/musl.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

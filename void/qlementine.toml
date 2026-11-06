@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qlementine'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "qlementine"
+version = "1.5.2"
+archive = "https://github.com/oclero/qlementine/archive/v1.5.2.tar.gz"
+sha256 = "e59107e4ea2d70393dddec0c246d59fe30bd4b20360255ae56cf793ac45187d8"
+strip_components = 1
+description = "Modern QStyle for desktop Qt6 applications"
+homepage = "https://oclero.github.io/qlementine/"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]
+tools = ["pkg-config"]
+deps = ["qt6-base"]

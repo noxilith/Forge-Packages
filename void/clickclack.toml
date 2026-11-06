@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'clickclack'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "clickclack"
+version = "0.2.3"
+archive = "https://git.sr.ht/~proycon/clickclack/archive/0.2.3.tar.gz"
+sha256 = "940f13ae1aa8b33677d8153db4af848233cb45dbb755320463dc3f980c73cced"
+strip_components = 1
+description = "Simple haptic feedback and audio feedback tool"
+homepage = "https://git.sr.ht/~proycon/clickclack"
+license = "MIT"
+deps = ["SDL2"]
+
+[build]
+system = "make"

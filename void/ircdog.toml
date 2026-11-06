@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ircdog'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "ircdog"
+version = "0.5.5"
+archive = "https://github.com/ergochat/ircdog/archive/refs/tags/v0.5.5.tar.gz"
+sha256 = "cc75fc53dfaeca27469b42db3596bc42a26259a6534c3edecf8d91bf6b52a4fe"
+strip_components = 1
+description = "Simple wrapper over the raw IRC protocol"
+homepage = "https://github.com/ergochat/ircdog"
+license = "ISC"
+
+[build]
+system = "go"

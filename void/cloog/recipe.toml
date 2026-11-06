@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cloog'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "cloog"
+version = "0.21.1"
+archive = "https://github.com/periscop/cloog/releases/download/cloog-0.21.1/cloog-0.21.1.tar.gz"
+sha256 = "d370cf9990d2be24bfb24750e355bac26110051248cabf2add61f9b3867fb1d7"
+strip_components = 1
+description = "Library that generates loops for scanning polyhedra"
+homepage = "http://www.bastoul.net/cloog/"
+license = "LGPL-2.1-or-later"
+deps = ["isl"]
+patches = ["patches/install-fix.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-isl=system", "--with-gmp=system"]

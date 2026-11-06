@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'nullmailer'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: make_dirs, conf_files
+[package]
+name = "nullmailer"
+version = "2.2"
+archive = "https://untroubled.org/nullmailer/archive/nullmailer-2.2.tar.gz"
+sha256 = "9886fa627b7e7e775e2f09fbe789247b1ca304f152da04ff705e50079263a855"
+strip_components = 1
+description = "Simple relay-only mail transport agent"
+homepage = "https://untroubled.org/nullmailer/"
+license = "GPL-2.0-or-later"
+deps = ["gnutls"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-tls"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wl-clip-persist'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "wl-clip-persist"
+version = "0.4.3"
+archive = "https://github.com/Linus789/wl-clip-persist/archive/refs/tags/v0.4.3.tar.gz"
+sha256 = "83df75502cf5699e71cd022730ae7c87d0cceaea396be83120643e9aa2b96d97"
+strip_components = 1
+description = "Keep Wayland clipboard even after programs close"
+homepage = "https://github.com/Linus789/wl-clip-persist"
+license = "MIT"
+deps = ["wayland"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

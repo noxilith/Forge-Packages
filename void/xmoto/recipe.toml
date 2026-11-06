@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'xmoto'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: SDL_mixer, SDL_net, SDL_ttf, bzip2, lua52, sqlite
+[package]
+name = "xmoto"
+version = "0.6.1"
+archive = "https://github.com/xmoto/xmoto/archive/0.6.1/0.6.1.tar.gz"
+sha256 = "209c8c38b1742d0620d40f90365c7a56f67c86da826c80a76d37fa46ee9c9b66"
+strip_components = 1
+description = "2D motocross platform game"
+homepage = "http://xmoto.tuxfamily.org/"
+license = "GPL-2.0-or-later"
+deps = ["curl", "gettext", "glu", "libjpeg-turbo", "libode", "libpng", "libxdg-basedir", "libxml2", "sdl12-compat", "zlib"]
+patches = ["patches/fix_gettext_GNU-isms_musl.patch", "patches/stdint.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DOpenGL_GL_PREFERENCE=GLVND", "-DXMOTO_PACK=manual"]
+deps = ["desktop-file-utils"]

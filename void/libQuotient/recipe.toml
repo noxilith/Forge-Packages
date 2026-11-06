@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libQuotient'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-tools
+[package]
+name = "libQuotient"
+version = "0.9.5"
+archive = "https://github.com/quotient-im/libQuotient/archive/0.9.5.tar.gz"
+sha256 = "24366dd59aca7b991756e45c3c8823c43fc6a8fdb161ea6dcce5b666c6300766"
+strip_components = 1
+description = "Qt6 library to write cross-platform clients for Matrix"
+homepage = "https://matrix.org/docs/projects/sdk/quotient"
+license = "LGPL-2.1-or-later"
+deps = ["olm", "openssl", "qt6-base", "qtkeychain-qt6"]
+patches = ["patches/qt610.patch", "patches/testolmaccount.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=1", "-DQuotient_INSTALL_TESTS=0"]

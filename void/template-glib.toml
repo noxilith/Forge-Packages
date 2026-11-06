@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'template-glib'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "template-glib"
+version = "3.36.1"
+archive = "https://download.gnome.org/sources/template-glib/3.36/template-glib-3.36.1.tar.xz"
+sha256 = "3b167a17385ad745afbe20fadf8106c66d30c5bd746d5aa1d9bdb7e803f6a503"
+strip_components = 1
+description = "Supports calling into GObject Introspection from templates"
+homepage = "https://gitlab.gnome.org/GNOME/template-glib"
+license = "GPL-3.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgtk_doc=false", "-Dintrospection=enabled"]
+tools = ["flex", "pkg-config"]
+deps = ["gettext", "vala"]

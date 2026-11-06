@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'shmux'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "shmux"
+version = "1.0.3"
+archive = "https://github.com/shmux/shmux/archive/v1.0.3.tar.gz"
+sha256 = "c9f8863e2550e23e633cf5fc7a9c4c52d287059f424ef78aba6ecd98390fb9ab"
+strip_components = 1
+description = "Shell multiplexer (parallel SSH)"
+homepage = "https://github.com/shmux/shmux"
+license = "BSD-3-Clause"
+deps = ["pcre"]
+patches = ["patches/time.patch"]
+
+[build]
+system = "autotools"

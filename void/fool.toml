@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fool'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "fool"
+version = "0.2.1"
+archive = "https://github.com/spacekookie/fool/archive/v0.2.1.tar.gz"
+sha256 = "41fa1a10a3b3cadba4700b809df13df9ed109ecc5c54ba8b645269abff84a41a"
+strip_components = 1
+description = "Powerful git terminal interface which focuses on usability"
+homepage = "https://github.com/spacekookie/fool"
+license = "MIT"
+
+[build]
+system = "cargo"

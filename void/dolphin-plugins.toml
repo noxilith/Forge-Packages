@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dolphin-plugins'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "dolphin-plugins"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/dolphin-plugins-26.08.1.tar.xz"
+sha256 = "f9edc41bb0fc75dba1ac32a8c15ef33fb8152740f10b90265dbc6f1724eb929b"
+strip_components = 1
+description = "Plugins to integrate Dolphin with various revision control systems"
+homepage = "https://kde.org/applications/en/system/org.kde.dolphin_plugins"
+license = "GPL-2.0-or-later"
+deps = ["dolphin", "kf6-ki18n", "kf6-kio", "kf6-ktexteditor", "kf6-ktextwidgets", "kf6-kxmlgui"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

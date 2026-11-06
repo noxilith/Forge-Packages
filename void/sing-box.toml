@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sing-box'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_build_tags, go_package, go_import_path, make_dirs, conf_files
+[package]
+name = "sing-box"
+version = "1.14.0"
+archive = "https://github.com/SagerNet/sing-box/archive/refs/tags/v1.14.0.tar.gz"
+sha256 = "87baf6852e37941cbe40bdd94bec81c957c88a56751cecd6bbf0e6108bc69398"
+strip_components = 1
+description = "Universal proxy platform"
+homepage = "https://sing-box.sagernet.org/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

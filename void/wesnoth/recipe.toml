@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'wesnoth'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, CXXFLAGS
+# needs, but Forge has no recipe for yet: SDL2_image, boost, bzip2
+[package]
+name = "wesnoth"
+version = "1.18.5"
+archive = "https://downloads.sourceforge.net/sourceforge/wesnoth/wesnoth-1.18.5.tar.bz2"
+sha256 = "e15db3caf446d91d389fc275f10c1a9e7ca3c6176c3b8ce94f5ee4a7a0c81bd6"
+strip_components = 1
+description = "Turn-based fantasy strategy game"
+homepage = "https://wesnoth.org"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_mixer", "SDL2_net", "SDL2_ttf", "curl", "dbus", "desktop-file-utils", "fribidi", "libvorbis", "openssl", "pango", "zlib"]
+patches = ["patches/001-disable-audio-test.patch", "patches/boost-1.89.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_OMP=1"]
+tools = ["pkg-config"]
+deps = ["gettext"]

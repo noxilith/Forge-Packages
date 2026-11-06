@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rot8'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rot8"
+version = "1.0.0"
+archive = "https://github.com/efernau/rot8/archive/refs/tags/v1.0.0.tar.gz"
+sha256 = "1c490f3c565e088229f623055ad441d4e7af96ed1c97b78425f6c67d39362624"
+strip_components = 1
+description = "Screen rotation daemon"
+homepage = "https://github.com/efernau/rot8"
+license = "MIT"
+
+[build]
+system = "cargo"

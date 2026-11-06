@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce4-clipman-plugin'. Review before relying on it.
+[package]
+name = "xfce4-clipman-plugin"
+version = "1.7.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.7/xfce4-clipman-plugin-1.7.0.tar.xz"
+sha256 = "903302c3070a951d44ee17a84fa3cf21d36c6787678af8fbfc79e469fd00cb46"
+strip_components = 1
+description = "Clipboard plugin for the Xfce4 panel"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libXtst", "qrencode", "xfce4-panel"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "wayland"]

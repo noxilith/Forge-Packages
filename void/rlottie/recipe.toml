@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rlottie'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "rlottie"
+version = "0.2"
+archive = "https://github.com/Samsung/rlottie/archive/v0.2.tar.gz"
+sha256 = "030ccbc270f144b4f3519fb3b86e20dd79fb48d5d55e57f950f12bab9b65216a"
+strip_components = 1
+description = "Platform independent standalone library that plays Lottie Animation"
+homepage = "https://github.com/Samsung/rlottie"
+license = "LGPL-2.1-or-later, FTL, MIT, BSD-3-Clause"
+patches = ["patches/fix-missing-limits-include.patch"]
+
+[build]
+system = "cmake"

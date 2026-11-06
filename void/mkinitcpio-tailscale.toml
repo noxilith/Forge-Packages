@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mkinitcpio-tailscale'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mkinitcpio-tailscale"
+version = "0.1.2"
+archive = "https://codeberg.org/classabbyamp/mkinitcpio-tailscale/archive/v0.1.2.tar.gz"
+sha256 = "f3d0288993a35f6e70dfec800dee40cd4e65da4b15eb3977e060d3e882f07f8d"
+strip_components = 1
+description = "Hook for mkinitcpio to enable tailscale access in early userspace"
+homepage = "https://codeberg.org/classabbyamp/mkinitcpio-tailscale"
+license = "BSD-2-Clause"
+deps = ["iptables", "mkinitcpio", "psmisc", "tailscale"]
+
+[build]
+system = "make"

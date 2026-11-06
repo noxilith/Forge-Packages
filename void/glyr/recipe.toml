@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'glyr'. Review before relying on it.
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "glyr"
+version = "1.0.10"
+archive = "https://github.com/sahib/glyr/archive/1.0.10.tar.gz"
+sha256 = "77e8da60221c8d27612e4a36482069f26f8ed74a1b2768ebc373c8144ca806e8"
+strip_components = 1
+description = "Music metadata searchengine utility and library"
+homepage = "https://github.com/sahib/glyr"
+license = "LGPL-3.0-or-later"
+deps = ["curl", "glib"]
+patches = ["patches/fix-cflags.patch", "patches/musl-execinfo.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

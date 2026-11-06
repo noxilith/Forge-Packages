@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ksanecore6'. Review before relying on it.
+[package]
+name = "ksanecore6"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/ksanecore-26.08.1.tar.xz"
+sha256 = "0555c4109b6132a774ce4081c12d9deeed8fdb152fa65714f7f73cb20965494d"
+strip_components = 1
+description = "Library providing logic to interface scanners"
+homepage = "https://kde.org/applications/graphics"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "kf6-ki18n", "qt6-base", "sane"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext"]

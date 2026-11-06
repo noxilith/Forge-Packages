@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'unittest-cpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "unittest-cpp"
+version = "2.0.0"
+archive = "https://github.com/unittest-cpp/unittest-cpp/archive/v2.0.0.tar.gz"
+sha256 = "74852198877dc2fdebdc4e5e9bd074018bf8ee03a13de139bfe41f4585b2f5b9"
+strip_components = 1
+description = "Lightweight unit testing framework for C++"
+homepage = "https://github.com/unittest-cpp/unittest-cpp"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DUTPP_AMPLIFY_WARNINGS=OFF"]

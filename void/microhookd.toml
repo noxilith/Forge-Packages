@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'microhookd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "microhookd"
+version = "0.0.1"
+archive = "https://github.com/the-maldridge/microhookd/archive/v0.0.1.tar.gz"
+sha256 = "da8cce688db7b60a6d16375727aceac33c69a0a74841f655979080ea41f2d70b"
+strip_components = 1
+description = "Simplest possible webhook daemon"
+homepage = "https://github.com/the-maldridge/microhookd"
+license = "MIT"
+
+[build]
+system = "go"

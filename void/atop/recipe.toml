@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'atop'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+# settings not translated: make_install_target, make_dirs
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "atop"
+version = "2.12.1"
+archive = "https://www.atoptool.nl/download/atop-2.12.1.tar.gz"
+sha256 = "4fdbe67c5dfaf89405639e18599f4eae77978073ffa54f3c78c368ab54bd12f6"
+strip_components = 1
+description = "System and process level monitor"
+homepage = "https://www.atoptool.nl/"
+license = "GPL-2.0-or-later"
+deps = ["glib", "zlib"]
+patches = ["patches/atop-bb-compat.patch", "patches/musl-fix-includes.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

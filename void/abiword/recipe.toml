@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'abiword'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, harfbuzz, hicolor-icon-theme, wv
+[package]
+name = "abiword"
+version = "3.0.8"
+archive = "https://gitlab.gnome.org/World/AbiWord/-/archive/release-3.0.8/AbiWord-release-3.0.8.tar.gz"
+sha256 = "7c490e46f0a6143f84d5c7e3fed246f34486ad70cd55f162c792827607cd7e9a"
+strip_components = 1
+description = "Free word processing program similar to Microsoft(R) Word"
+homepage = "https://gitlab.gnome.org/World/AbiWord"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "enchant2", "fribidi", "gtk+3", "libgcrypt", "libgsf", "libical", "libjpeg-turbo", "libpng", "librsvg", "libwmf", "libxslt", "redland"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-plugins", "--enable-clipart", "--enable-templates", "--enable-introspection"]
+tools = ["flex", "pkg-config"]
+deps = ["autoconf-archive", "gettext", "glib", "gobject-introspection"]

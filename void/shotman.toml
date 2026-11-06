@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'shotman'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "shotman"
+version = "0.5.1"
+archive = "https://git.sr.ht/~whynothugo/shotman/archive/v0.5.1.tar.gz"
+sha256 = "5af54f8a7a1e7eb98c1653fa6b781210454563db4eb6ff3b87bba2757f36ca4d"
+strip_components = 1
+description = "Uncompromising screenshot GUI for Wayland"
+homepage = "https://shotman.whynothugo.nl"
+license = "ISC"
+deps = ["libxkbcommon", "slurp"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]
+deps = ["scdoc"]

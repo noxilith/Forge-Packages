@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bcache-tools'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "bcache-tools"
+version = "1.1"
+archive = "https://git.kernel.org/pub/scm/linux/kernel/git/colyli/bcache-tools.git/snapshot/bcache-tools-1.1.tar.gz"
+sha256 = "d1c92274ae03b414dd1a05277bf89dd2a8395496c692e3b143d9e6112d3421f8"
+strip_components = 1
+description = "User space tools for the bcache hybrid storage system"
+homepage = "https://bcache.evilpiepirate.org/"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"
+tools = ["pkg-config"]

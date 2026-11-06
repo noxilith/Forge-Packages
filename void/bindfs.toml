@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'bindfs'. Review before relying on it.
+[package]
+name = "bindfs"
+version = "1.18.1"
+archive = "https://bindfs.org/downloads/bindfs-1.18.1.tar.gz"
+sha256 = "2a7064d993a5f255c52d72385ef14e349c131bc44195766e2173428e06d279fd"
+strip_components = 1
+description = "FUSE filesystem for mounting a directory to another location"
+homepage = "https://bindfs.org"
+license = "GPL-2.0-or-later"
+deps = ["fuse3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

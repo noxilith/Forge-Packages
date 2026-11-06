@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xfce4-power-manager'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "xfce4-power-manager"
+version = "4.20.0"
+archive = "https://archive.xfce.org/src/xfce/xfce4-power-manager/4.20/xfce4-power-manager-4.20.0.tar.bz2"
+sha256 = "971391cef63352833bdd92df28957392e17e1f2b3d486c0f57294fd204d6ed29"
+strip_components = 1
+description = "Xfce power manager"
+homepage = "https://xfce.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "glib", "libnotify", "libxfce4ui", "polkit", "upower", "wayland", "xfce4-panel"]
+patches = ["patches/void.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext"]

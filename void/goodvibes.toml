@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'goodvibes'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "goodvibes"
+version = "0.8.0"
+archive = "https://gitlab.com/goodvibes/goodvibes/-/archive/v0.8.0/goodvibes-v0.8.0.tar.gz"
+sha256 = "e8359fc463a6e21cce8ce25603fc7d3fbead6423ee85867a035b826781ebe81f"
+strip_components = 1
+description = "Light and simple internet radio player"
+homepage = "https://gitlab.com/goodvibes/goodvibes"
+license = "GPL-3.0-only"
+deps = ["dconf", "desktop-file-utils", "glib", "gst-plugins-base1", "gst-plugins-good1", "gst-plugins-ugly1", "gtk+3", "libkeybinder3", "libsoup3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["appstream-glib", "gettext"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gpgmepp'. Review before relying on it.
+[package]
+name = "gpgmepp"
+version = "2.1.0"
+archive = "https://www.gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-2.1.0.tar.xz"
+sha256 = "57f804468f0204504b172c6b139cb05124b4263be7ad514932c7c4c5062a16e2"
+strip_components = 1
+description = "GnuPG Made Easy - C++ libraries"
+homepage = "https://www.gnupg.org/software/gpgme/index.html"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["gpgme", "libgpg-error"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTING=ON"]
+tools = ["pkg-config"]

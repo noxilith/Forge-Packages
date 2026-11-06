@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lcms2'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "lcms2"
+version = "2.19.1"
+archive = "https://downloads.sourceforge.net/sourceforge/lcms/lcms2-2.19.1.tar.gz"
+sha256 = "bfc54f7bab59fbc921012014a8032e4cba4abd46db47d46b76416a8c0b2815c8"
+strip_components = 1
+description = "Small-footprint color management engine, version 2"
+homepage = "https://littlecms.com"
+deps = ["libjpeg-turbo", "tiff"]
+
+[build]
+system = "meson"
+configure_args = ["-Dutils=true"]
+tools = ["pkg-config"]

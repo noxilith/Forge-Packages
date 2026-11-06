@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'slop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: glew
+[package]
+name = "slop"
+version = "7.7"
+archive = "https://github.com/naelstrof/slop/archive/v7.7.tar.gz"
+sha256 = "a69a6e5c41d7fff1c6aa35b367a5c5a6dc98e621fa9a1908808d6308c2b40f4e"
+strip_components = 1
+description = "Utility to query for a selection and print the region to stdout"
+homepage = "https://github.com/naelstrof/slop"
+license = "GPL-3.0-or-later"
+deps = ["glm", "libXrender", "libicu78"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

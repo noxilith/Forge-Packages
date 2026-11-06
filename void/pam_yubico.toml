@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pam_yubico'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "pam_yubico"
+version = "2.27"
+archive = "https://developers.yubico.com/yubico-pam/Releases/pam_yubico-2.27.tar.gz"
+sha256 = "63d02788852644d871746e1a7a1d16c272c583c226f62576f5ad232a6a44e18c"
+strip_components = 1
+description = "Pluggable Authentication Module (PAM) for YubiKey"
+homepage = "https://developers.yubico.com/yubico-pam"
+license = "BSD-2-Clause"
+deps = ["libyubikey", "pam", "ykclient", "ykpers"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-silent-rules"]
+tools = ["pkg-config"]

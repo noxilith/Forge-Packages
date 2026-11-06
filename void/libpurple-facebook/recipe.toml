@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libpurple-facebook'. Review before relying on it.
+[package]
+name = "libpurple-facebook"
+version = "0.9.6"
+archive = "https://github.com/dequis/purple-facebook/releases/download/v0.9.6/purple-facebook-0.9.6.tar.gz"
+sha256 = "1db6ed9e8f81cbd4ae10d75c04f5393e5cd4ca11ced74408ca6d07c7b888f3f7"
+strip_components = 1
+description = "Facebook plugin for libpurple"
+homepage = "https://github.com/dequis/purple-facebook"
+license = "GPL-2.0-or-later"
+deps = ["json-glib", "pidgin"]
+patches = ["patches/incompat-ptr.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

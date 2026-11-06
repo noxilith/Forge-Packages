@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'hd-idle'. Review before relying on it.
+# hooks not translated: post_extract
+[package]
+name = "hd-idle"
+version = "1.05"
+archive = "https://downloads.sourceforge.net/sourceforge/hd-idle/hd-idle-1.05.tgz"
+sha256 = "4efefe79d145b50e055582730d9d685e485da3df3dad90fef030036d52aa3a0c"
+strip_components = 1
+description = "Utility for spinning-down external disks after a period of idle time"
+homepage = "http://hd-idle.sourceforge.net"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

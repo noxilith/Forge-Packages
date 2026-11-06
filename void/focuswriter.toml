@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'focuswriter'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-tools
+[package]
+name = "focuswriter"
+version = "1.9.1"
+archive = "https://github.com/gottcode/focuswriter/archive/v1.9.1.tar.gz"
+sha256 = "ca83cade13158111e19eeba86d0a043bb45be4f32bd82f43da2bb910c0edd32d"
+strip_components = 1
+description = "Simple, distraction-free word processor with a hide-away interface"
+homepage = "https://gottcode.org/focuswriter/"
+license = "GPL-3.0-or-later"
+deps = ["hunspell", "pulseaudio"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext", "qt6-base"]

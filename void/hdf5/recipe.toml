@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'hdf5'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "hdf5"
+version = "1.14.6"
+archive = "https://github.com/HDFGroup/hdf5/archive/refs/tags/hdf5_1.14.6.tar.gz"
+sha256 = "09ee1c671a87401a5201c06106650f62badeea5a3b3941e9b1e2e1e08317357f"
+strip_components = 1
+description = "Data model, library, and file format for storing and managing data"
+homepage = "https://www.hdfgroup.org/solutions/hdf5/"
+license = "custom:BSD-3-Clause-LBNL-alike"
+deps = ["zlib"]
+patches = ["patches/0af668f4091f1c35f621d2acdeadd34db6756976.patch", "patches/workaround-broken-test-i686.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-cxx"]
+tools = ["perl"]

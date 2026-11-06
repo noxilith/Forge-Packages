@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mkfontscale'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2
+[package]
+name = "mkfontscale"
+version = "1.2.4"
+archive = "https://www.x.org/releases/individual/app/mkfontscale-1.2.4.tar.xz"
+sha256 = "a01492a17a9b6c0ee3f92ee578850e305315b9f298da5f006a1cd4b51db01a5e"
+strip_components = 1
+description = "X11 Scalable Font Index Generator"
+homepage = "https://gitlab.freedesktop.org/xorg/app/mkfontscale"
+license = "MIT"
+deps = ["freetype", "libfontenc", "xorgproto", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dbzip2=true"]
+tools = ["pkg-config"]

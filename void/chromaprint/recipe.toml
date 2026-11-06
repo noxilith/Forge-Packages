@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'chromaprint'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg6, fftw
+[package]
+name = "chromaprint"
+version = "1.5.1"
+archive = "https://github.com/acoustid/chromaprint/releases/download/v1.5.1/chromaprint-1.5.1.tar.gz"
+sha256 = "a1aad8fa3b8b18b78d3755b3767faff9abb67242e01b478ec9a64e190f335e1c"
+strip_components = 1
+description = "Library that extracts fingerprints from any audio source"
+homepage = "https://acoustid.org/chromaprint"
+license = "MIT, LGPL-2.1-only"
+patches = ["patches/ffmpeg5.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TOOLS=ON"]

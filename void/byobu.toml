@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'byobu'. Review before relying on it.
+[package]
+name = "byobu"
+version = "5.133"
+archive = "https://launchpad.net/byobu/trunk/5.133/+download/byobu_5.133.orig.tar.gz"
+sha256 = "4d8ea48f8c059e56f7174df89b04a08c32286bae5a21562c5c6f61be6dab7563"
+strip_components = 1
+description = "Open source text-based window manager and terminal multiplexer"
+homepage = "https://www.byobu.org"
+license = "GPL-3.0-or-later"
+deps = ["tmux"]
+
+[build]
+system = "autotools"

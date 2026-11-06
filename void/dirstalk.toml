@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'dirstalk'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "dirstalk"
+version = "1.3.3"
+archive = "https://github.com/stefanoj3/dirstalk/archive/1.3.3.tar.gz"
+sha256 = "fd1560ca772d74b052630cd2b4da0fc1916db252ad7484cceb3846bcbc0faa7d"
+strip_components = 1
+description = "Multi threaded application designed to brute force paths on web servers"
+homepage = "https://github.com/stefanoj3/dirstalk"
+license = "MIT"
+
+[build]
+system = "go"

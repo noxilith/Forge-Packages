@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xf86-video-vesa'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, LDFLAGS, lib32disabled
+[package]
+name = "xf86-video-vesa"
+version = "2.6.0"
+archive = "https://www.x.org/releases/individual/driver/xf86-video-vesa-2.6.0.tar.gz"
+sha256 = "dbf3f95bd0b598ac7e7fc9774b37dc387eb4f805f63e93f720a577c23500881c"
+strip_components = 1
+description = "Xorg VESA video driver"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["xorg-server"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

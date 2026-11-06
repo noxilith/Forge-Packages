@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wbg'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libjxl, libwebp
+[package]
+name = "wbg"
+version = "1.3.0"
+archive = "https://codeberg.org/dnkl/wbg/archive/1.3.0.tar.gz"
+sha256 = "bea54a7d869084fc6c5992825c5cdf3a48f992e23f5a2cf95dfaeb6116cb3d47"
+strip_components = 1
+description = "Simple wallpaper application for Wayland compositors"
+homepage = "https://codeberg.org/dnkl/wbg"
+license = "MIT"
+deps = ["libjpeg-turbo", "libpng", "pixman", "tllist", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

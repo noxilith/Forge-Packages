@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gavl'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "gavl"
+version = "1.4.0"
+archive = "https://downloads.sourceforge.net/sourceforge/gmerlin/gavl/1.4.0/gavl-1.4.0.tar.gz"
+sha256 = "51aaac41391a915bd9bad07710957424b046410a276e7deaff24a870929d33ce"
+strip_components = 1
+description = "Low level library, upon which multimedia APIs can be built"
+homepage = "http://gmerlin.sourceforge.net/gavl.html"
+license = "GPL-3.0-or-later"
+patches = ["patches/cross-test.patch", "patches/musl-sched_h.patch"]
+
+[build]
+system = "autotools"

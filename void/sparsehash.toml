@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'sparsehash'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sparsehash"
+version = "2.0.4"
+archive = "https://github.com/sparsehash/sparsehash/archive/sparsehash-2.0.4.tar.gz"
+sha256 = "8cd1a95827dfd8270927894eb77f62b4087735cbede953884647f16c521c7e58"
+strip_components = 1
+description = "Library that contains several hash-map implementations"
+homepage = "https://github.com/sparsehash/sparsehash"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

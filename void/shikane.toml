@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'shikane'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: pandoc
+[package]
+name = "shikane"
+version = "1.0.1"
+archive = "https://gitlab.com/w0lff/shikane/-/archive/v1.0.1/shikane-v1.0.1.tar.gz"
+sha256 = "9aa9a3f8c62d28f89a6c6334a9351dd8ad70c93b6606dd317d8b6efedf478810"
+strip_components = 1
+description = "Deterministic dynamic output configuration tool"
+homepage = "https://gitlab.com/w0lff/shikane"
+license = "MIT"
+
+[build]
+system = "cargo"

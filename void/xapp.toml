@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xapp'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: inxi
+[package]
+name = "xapp"
+version = "3.2.2"
+archive = "https://github.com/linuxmint/xapp/archive/3.2.2.tar.gz"
+sha256 = "d0ea664053e6f35cc556e060b161905004f03d0695473772d2fb8a37cf445591"
+strip_components = 1
+description = "Cross-desktop libraries and common resources from Linux Mint"
+homepage = "https://github.com/linuxmint/xapp"
+license = "GPL-3.0-or-later, LGPL-3.0-or-later"
+deps = ["cairo", "gdk-pixbuf", "gettext", "glib", "gtk+3", "libX11", "libdbusmenu-glib", "libgnomekbd", "libxkbfile", "python3-gobject", "xapp-symbolic-icons", "xfconf"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["vala"]

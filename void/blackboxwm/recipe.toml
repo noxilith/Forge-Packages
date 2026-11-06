@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'blackboxwm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "blackboxwm"
+version = "0.77"
+archive = "https://github.com/bbidulock/blackboxwm/releases/download/0.77/blackbox-0.77.tar.lz"
+sha256 = "e4f814fb02f6a977e9aab1c60192087597b79b0a56cc4a14e8a962b7d45d82d1"
+strip_components = 1
+description = "Stacking window manager for X11"
+homepage = "https://github.com/bbidulock/blackboxwm"
+license = "MIT"
+deps = ["libX11", "libXext", "libXft", "libXt"]
+patches = ["patches/d3481ee7b7d104ef53ead4d35b9a9254c64bb87a.patch", "patches/time64.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

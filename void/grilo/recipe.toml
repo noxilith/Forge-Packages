@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'grilo'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "grilo"
+version = "0.3.19"
+archive = "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.19.tar.xz"
+sha256 = "0869c81d19ab139c667d79567c14ddcb6cb5cbfc0108d04cade287eb29536706"
+strip_components = 1
+description = "Framework focused on making media discovery and browsing easy"
+homepage = "https://wiki.gnome.org/Projects/Grilo"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+3", "liboauth", "libsoup3", "libxml2", "totem-pl-parser"]
+patches = ["patches/fix-pc-file.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

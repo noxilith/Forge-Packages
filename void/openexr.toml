@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'openexr'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "openexr"
+version = "3.2.1"
+archive = "https://github.com/openexr/openexr/archive/v3.2.1.tar.gz"
+sha256 = "61e175aa2203399fb3c8c2288752fbea3c2637680d50b6e306ea5f8ffdd46a9b"
+strip_components = 1
+description = "High dynamic-range (HDR) image file format"
+homepage = "https://www.openexr.com/"
+license = "BSD-3-Clause"
+deps = ["imath", "libdeflate"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

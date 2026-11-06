@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'PerWindowLayout'. Review before relying on it.
+[package]
+name = "PerWindowLayout"
+version = "0.6"
+archive = "https://downloads.sourceforge.net/sourceforge/perwindowlayout/perwindowlayoutd-0.6.tar.gz"
+sha256 = "982ae890e4885b5cbd720d00eab8b46294835afcbc7d8ded363beca56c203a12"
+strip_components = 1
+description = "Per window keyboard layout under X11"
+homepage = "https://sourceforge.net/projects/perwindowlayout/"
+license = "GPL-3.0-or-later"
+deps = ["libX11"]
+
+[build]
+system = "autotools"

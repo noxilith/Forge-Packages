@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'gnome-app-list'. Review before relying on it.
+[package]
+name = "gnome-app-list"
+version = "3.0"
+archive = "https://download.gnome.org/sources/gnome-app-list/3.0/gnome-app-list-3.0.tar.xz"
+sha256 = "98a911d85cae9651081994ba9ac6b6e9a3131c72e3dd368d227a1ada9bbfc4a0"
+strip_components = 1
+description = "Curated list of apps to feature or highlight in GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-app-list"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "meson"
+deps = ["libxml2"]

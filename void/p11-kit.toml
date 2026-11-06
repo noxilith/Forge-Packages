@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'p11-kit'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, conf_files
+# needs, but Forge has no recipe for yet: libffi
+[package]
+name = "p11-kit"
+version = "0.26.4"
+archive = "https://github.com/p11-glue/p11-kit/releases/download/0.26.4/p11-kit-0.26.4.tar.xz"
+sha256 = "89c3ffb10e076ee036e14732bf6547a1e1c4fb48699a5dee7ceb5ce4f7c0c462"
+strip_components = 1
+description = "Provides a way to load and enumerate PKCS#11 modules"
+homepage = "https://github.com/p11-glue/p11-kit"
+license = "BSD-3-Clause"
+deps = ["libtasn1"]
+
+[build]
+system = "meson"
+configure_args = ["-Dlibffi=enabled", "-Dsystemd=disabled", "-Dbash_completion=disabled", "-Dman=true", "-Dnls=true", "-Dtrust_module=enabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "gtk-doc", "libxslt"]

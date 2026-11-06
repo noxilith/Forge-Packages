@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zathura-cb'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "zathura-cb"
+version = "2026.07.18"
+archive = "https://pwmt.org/projects/zathura-cb/download/zathura-cb-2026.07.18.tar.xz"
+sha256 = "072660fd32ce56ce512655caf8c190ffbf6c3f36ff09b3f740d65150f99ddc13"
+strip_components = 1
+description = "Comic book support for zathura"
+homepage = "https://pwmt.org/projects/zathura-cb/"
+license = "Zlib"
+deps = ["gtk4", "libarchive", "zathura"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

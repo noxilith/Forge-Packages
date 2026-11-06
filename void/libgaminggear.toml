@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libgaminggear'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libcanberra, sqlite
+[package]
+name = "libgaminggear"
+version = "0.15.1"
+archive = "https://downloads.sourceforge.net/sourceforge/libgaminggear/libgaminggear-0.15.1.tar.bz2"
+sha256 = "ffbd59c62e3107b09ec99f1e5147529c61931987abc7f86a140449b46388c549"
+strip_components = 1
+description = "Provides functionality for gaming input devices"
+homepage = "https://sourceforge.net/projects/libgaminggear/"
+license = "GPL-2.0-only"
+deps = ["glib", "gtk+", "libnotify"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

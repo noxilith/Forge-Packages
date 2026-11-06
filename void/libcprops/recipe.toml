@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libcprops'. Review before relying on it.
+[package]
+name = "libcprops"
+version = "0.1.12"
+archive = "https://downloads.sourceforge.net/sourceforge/cprops/libcprops-0.1.12.tar.bz2"
+sha256 = "3737772d2718a2c550adf4ca92cc492e613aa9200aae2bbaaf128d90f4ef67f2"
+strip_components = 1
+description = "C prototyping tools"
+homepage = "http://cprops.sourceforge.net/"
+license = "LGPL-2.1"
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-cpsp", "--disable-cpsvc"]
+tools = ["flex"]
+deps = ["makedepend", "which"]

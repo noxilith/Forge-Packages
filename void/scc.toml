@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'scc'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, build_helper
+[package]
+name = "scc"
+version = "4.1.0"
+archive = "https://github.com/boyter/scc/archive/refs/tags/v4.1.0.tar.gz"
+sha256 = "4f3cf36010c542b10d5582afb91c668b26889160b184deee21b4319347030a7c"
+strip_components = 1
+description = "Fast cloc replacement written in pure Go"
+homepage = "https://github.com/boyter/scc"
+license = "MIT"
+
+[build]
+system = "go"

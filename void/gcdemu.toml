@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gcdemu'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gcdemu"
+version = "3.3.1"
+archive = "https://downloads.sourceforge.net/sourceforge/cdemu/gcdemu-3.3.1.tar.xz"
+sha256 = "cc1459c5b4fe27ce6931361a4d1c6b577b9aeb59ba29853a692b697a085876f6"
+strip_components = 1
+description = "GTK application for controlling CDEmu daemon"
+homepage = "http://cdemu.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["cdemu-daemon", "gtk+3", "libnotify", "python3-gobject"]
+
+[build]
+system = "cmake"

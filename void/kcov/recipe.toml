@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kcov'. Review before relying on it.
+[package]
+name = "kcov"
+version = "41"
+archive = "https://github.com/SimonKagstrom/kcov/archive/v41.tar.gz"
+sha256 = "13cddde0c6c97dc78ece23f7adcad7a8f2b5ae3c84193020e7edd9bf44e5997c"
+strip_components = 1
+description = "Code coverage tester for compiled programs, Python and shell"
+homepage = "https://simonkagstrom.github.io/kcov/index.html"
+license = "GPL-2.0-only"
+deps = ["curl", "elfutils"]
+patches = ["patches/cmake.patch", "patches/musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

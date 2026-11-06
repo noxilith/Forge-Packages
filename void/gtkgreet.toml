@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gtkgreet'. Review before relying on it.
+# needs, but Forge has no recipe for yet: greetd
+[package]
+name = "gtkgreet"
+version = "0.8"
+archive = "https://git.sr.ht/~kennylevinsen/gtkgreet/archive/0.8.tar.gz"
+sha256 = "e5c70219da191a60e2e009412603e05c36cee15bbbf7657dbbeaa1d21a692873"
+strip_components = 1
+description = "Gtk greeter for greetd"
+homepage = "https://git.sr.ht/~kennylevinsen/gtkgreet"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "gtk-layer-shell", "json-c"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

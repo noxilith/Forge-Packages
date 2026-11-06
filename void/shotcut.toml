@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'shotcut'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: ffmpeg6, qt6-charts, qt6-multimedia, qt6-tools, qt6-websockets
+[package]
+name = "shotcut"
+version = "26.9.27"
+archive = "https://github.com/mltframework/shotcut/archive/v26.9.27.tar.gz"
+sha256 = "ddc75c9e79a356896881f26716d7b37da42ee6a2e9727956c9cb472ee4765dc7"
+strip_components = 1
+description = "Free, open source, cross-platform video editor"
+homepage = "https://www.shotcut.org"
+license = "GPL-3.0-or-later"
+deps = ["frei0r-plugins", "mlt7", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSHOTCUT_VERSION=26.9.27"]
+tools = ["pkg-config"]

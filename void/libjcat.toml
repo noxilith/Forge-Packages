@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libjcat'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "libjcat"
+version = "0.2.6"
+archive = "https://github.com/hughsie/libjcat/archive/0.2.6.tar.gz"
+sha256 = "28a1416cc207e51f6ffe2f0c16f7772541eac0cd864d38dbc0c3004888ef1131"
+strip_components = 1
+description = "Library for reading and writing Jcat files"
+homepage = "https://github.com/hughsie/libjcat"
+license = "LGPL-2.1-or-later"
+deps = ["gnutls", "gpgme", "json-glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["vala"]

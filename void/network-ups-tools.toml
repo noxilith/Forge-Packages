@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'network-ups-tools'. Review before relying on it.
+# 6 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: asciidoc, avahi, net-snmp, python3-packaging-bootstrap
+[package]
+name = "network-ups-tools"
+version = "2.8.5"
+archive = "https://www.networkupstools.org/source/2.8/nut-2.8.5.tar.gz"
+sha256 = "18bf32e59eb764b13da3c4fa70384926d7fa584cb31d2fe7f137a570633eeec1"
+strip_components = 1
+description = "UPS control and monitoring features (NUT)"
+homepage = "https://www.networkupstools.org/"
+license = "GPL-2.0-or-later AND GPL-3.0-or-later"
+deps = ["libusb-compat", "neon", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-doc=man", "--disable-static", "--with-user=nut", "--with-group=nut", "--with-ssl", "--with-usb", "--with-dev", "--with-serial", "-with-avahi", "--with-libltdl", "--without-ipmi", "--without-freeipmi", "--without-systemdsystemunitdir", "--with-snmp", "--enable-docs-changelog=no"]
+tools = ["pkg-config"]

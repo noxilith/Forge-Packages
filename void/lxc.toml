@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'lxc'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: apparmor
+[package]
+name = "lxc"
+version = "7.0.0"
+archive = "https://linuxcontainers.org/downloads/lxc/lxc-7.0.0.tar.gz"
+sha256 = "ba0c860626efbac6683f351dd718edb062065e919716d787b89e3d547c5d9493"
+strip_components = 1
+description = "Linux Containers - utilities"
+homepage = "https://linuxcontainers.org"
+license = "LGPL-2.1-or-later"
+deps = ["dbus", "libcap", "libseccomp", "openssl", "pam", "wget", "xz"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpam-cgroup=true", "-Ddistrosysconfdir=default", "-Dinit-script=[]"]
+tools = ["pkg-config"]
+deps = ["docbook2x"]

@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'shntool'. Review before relying on it.
+[package]
+name = "shntool"
+version = "3.0.10"
+archive = "https://ftp.debian.org/debian/pool/main/s/shntool/shntool_3.0.10.orig.tar.gz"
+sha256 = "74302eac477ca08fb2b42b9f154cc870593aec8beab308676e4373a5e4ca2102"
+strip_components = 1
+description = "Multi-purpose WAVE data processing and reporting utility"
+homepage = "http://shnutils.freeshell.org/shntool/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

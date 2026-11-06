@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'skim'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+[package]
+name = "skim"
+version = "5.6.6"
+archive = "https://github.com/skim-rs/skim/archive/refs/tags/v5.6.6.tar.gz"
+sha256 = "4f988bf6da4a5e1f71e296d7f96047db2d24253a06a5597b179206f7ecd034d7"
+strip_components = 1
+description = "Fuzzy Finder in rust"
+homepage = "https://github.com/skim-rs/skim"
+license = "MIT"
+
+[build]
+system = "cargo"

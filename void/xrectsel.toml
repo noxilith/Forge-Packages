@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xrectsel'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "xrectsel"
+version = "0.3.2"
+archive = "https://github.com/lolilolicon/xrectsel/archive/0.3.2.tar.gz"
+sha256 = "1b4b928bb7270e0531467c1e7f93322c784c7c0dedc13d1d5e53034417fde785"
+strip_components = 1
+description = "Print the geometry of a rectangular screen region"
+homepage = "https://github.com/lolilolicon/xrectsel"
+license = "GPL-3.0-or-later"
+deps = ["libX11"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

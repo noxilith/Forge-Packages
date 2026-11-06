@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'bcachefs-tools'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: libaio, util-linux-common, zstd
+[package]
+name = "bcachefs-tools"
+version = "1.36.1"
+archive = "https://github.com/koverstreet/bcachefs-tools/archive/refs/tags/v1.36.1.tar.gz"
+sha256 = "e65a309ec26e1e89b7b43fa31cf4b81112e2bb258a288cc4f31f4ad985e9d386"
+strip_components = 1
+description = "Userspace tools for bcachefs"
+homepage = "https://bcachefs.org/"
+license = "GPL-2.0-only"
+deps = ["attr", "eudev", "keyutils", "libscrypt", "libsodium", "liburcu", "lz4", "zlib"]
+patches = ["patches/make.patch", "patches/musl-1.1.patch", "patches/musl.patch", "patches/pwritev2.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["jq", "llvm19"]

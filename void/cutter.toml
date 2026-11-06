@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cutter'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-location, qt6-qt5compat, qt6-svg, qt6-tools
+[package]
+name = "cutter"
+version = "2.3.4"
+archive = "https://github.com/rizinorg/cutter/releases/download/v2.3.4/Cutter-v2.3.4-src.tar.gz"
+sha256 = "edc266a5f7a1f1c7f71cf5c6c9727e05008b728eae3bb42beb7d0b24ce07c5c3"
+strip_components = 1
+description = "Free and open source reverse engineering platform powered by rizin"
+homepage = "https://cutter.re"
+license = "GPL-3.0-only"
+deps = ["capstone", "graphviz", "qt6-declarative", "rizin", "syntax-highlighting"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCUTTER_ENABLE_PYTHON=ON", "-DCUTTER_ENABLE_PYTHON_BINDINGS=OFF", "-DCUTTER_ENABLE_GRAPHVIZ=ON", "-DCUTTER_ENABLE_KSYNTAXHIGHLIGHTING=ON", "-DCUTTER_USE_BUNDLED_RIZIN=OFF", "-DCUTTER_USE_ADDITIONAL_RIZIN_PATHS=OFF", "-DCUTTER_ENABLE_CRASH_REPORTS=OFF", "-DCUTTER_QT6=ON"]
+tools = ["pkg-config"]
+deps = ["qt6-base"]

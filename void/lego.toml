@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lego'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "lego"
+version = "4.33.0"
+archive = "https://github.com/go-acme/lego/archive/v4.33.0.tar.gz"
+sha256 = "d57af04d6f5d0a018f19b099401fea093d4cc2efff177eaa45418b0046921175"
+strip_components = 1
+description = "Let's Encrypt client and ACME library written in Go"
+homepage = "https://go-acme.github.io/lego"
+license = "MIT"
+
+[build]
+system = "go"

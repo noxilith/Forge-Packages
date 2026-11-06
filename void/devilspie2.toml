@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'devilspie2'. Review before relying on it.
+# needs, but Forge has no recipe for yet: lua54
+[package]
+name = "devilspie2"
+version = "0.45"
+archive = "https://download.savannah.gnu.org/releases/devilspie2/devilspie2_0.45-src.tar.gz"
+sha256 = "6cc55a68ccfd8bb5620f4cd7c9913ef29aba8a9e96648497c5b448fdb97cb034"
+strip_components = 1
+description = "Window matching utility for X"
+homepage = "https://www.nongnu.org/devilspie2"
+license = "GPL-3.0-or-later"
+deps = ["glib", "libwnck"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["gettext"]

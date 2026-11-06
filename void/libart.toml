@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libart'. Review before relying on it.
+[package]
+name = "libart"
+version = "2.3.21"
+archive = "https://download.gnome.org/sources/libart_lgpl/2.3/libart_lgpl-2.3.21.tar.bz2"
+sha256 = "fdc11e74c10fc9ffe4188537e2b370c0abacca7d89021d4d303afdf7fd7476fa"
+strip_components = 1
+description = "High-performance 2D graphics library"
+homepage = "http://www.levien.com/libart/"
+license = "LGPL-2.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

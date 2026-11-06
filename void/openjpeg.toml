@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'openjpeg'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "openjpeg"
+version = "1.5.2"
+archive = "https://downloads.sourceforge.net/sourceforge/openjpeg.mirror/1.5.2/openjpeg-1.5.2.tar.gz"
+sha256 = "15df7b194a5d8dba0052cd21c17a4dc761149a770a907d73fffb972078c28a87"
+strip_components = 1
+description = "Open-source JPEG 2000 codec written in C language"
+homepage = "http://www.openjpeg.org/"
+license = "BSD-2-Clause"
+deps = ["lcms2", "libpng", "tiff"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

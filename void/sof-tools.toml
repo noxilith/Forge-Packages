@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sof-tools'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sof-tools"
+version = "2.15"
+archive = "https://github.com/thesofproject/sof/archive/refs/tags/v2.15.tar.gz"
+sha256 = "ab05e701a322fb7840ae11a06c874dc3f9e01a124abadbcfc26d9c5bb3d8af69"
+strip_components = 1
+description = "Sound Open Firmware and topology binaries - development tools"
+homepage = "https://thesofproject.github.io/latest/index.html"
+license = "BSD-3-Clause"
+deps = ["alsa-lib"]
+
+[build]
+system = "cmake"
+subdir = "tools"
+tools = ["m4"]
+deps = ["alsa-utils"]

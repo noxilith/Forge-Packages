@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-klotski'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-klotski"
+version = "3.38.2"
+archive = "https://download.gnome.org/sources/gnome-klotski/3.38/gnome-klotski-3.38.2.tar.xz"
+sha256 = "91637845649f3ca709d29f71ee775b946d1112087209f32264e8fad21a0ca0e2"
+strip_components = 1
+description = "GNOME puzzle game where you move blocks"
+homepage = "https://wiki.gnome.org/Apps/Klotski"
+license = "GPL-2.0-or-later"
+deps = ["libgnome-games-support", "librsvg"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

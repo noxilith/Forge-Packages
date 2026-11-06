@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libpaper'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+[package]
+name = "libpaper"
+version = "1.1.29"
+archive = "https://ftp.debian.org/debian/pool/main/libp/libpaper/libpaper_1.1.29.tar.gz"
+sha256 = "26330e21e9a3124658d515fd850b0cde546ff42d89b2596a5264c5f1677f0547"
+strip_components = 1
+description = "Library for handling paper characteristics"
+homepage = "http://packages.debian.org/unstable/source/libpaper"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+deps = ["gettext"]

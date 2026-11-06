@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tasknc'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "tasknc"
+version = "0.8.0.0.20171231"
+archive = "https://github.com/lharding/tasknc/archive/c41d0240e9b848e432f01de735f28de93b934ae7.tar.gz"
+sha256 = "40b7386b1d066b74bd217c76cfdce13f14589223206584a5e2acb931291ade42"
+strip_components = 1
+description = "Ncurses wrapper for task warrior"
+homepage = "https://github.com/lharding/tasknc"
+license = "MIT"
+deps = ["task"]
+patches = ["patches/ncurses-6.3.patch"]
+
+[build]
+system = "make"
+tools = ["perl"]

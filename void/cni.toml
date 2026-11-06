@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cni'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "cni"
+version = "1.2.3"
+archive = "https://github.com/containernetworking/cni/archive/refs/tags/v1.2.3.tar.gz"
+sha256 = "7e94c67144912b56d125dae9458b2fb21c8ce9fc868849df27e35dc8edaf7f24"
+strip_components = 1
+description = "Container Network Interface"
+homepage = "https://github.com/containernetworking/cni"
+license = "Apache-2.0"
+
+[build]
+system = "go"

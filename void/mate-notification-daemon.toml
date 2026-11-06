@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mate-notification-daemon'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme, libcanberra
+[package]
+name = "mate-notification-daemon"
+version = "1.28.3"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-notification-daemon-1.28.3.tar.xz"
+sha256 = "e00cecb1ff9f75b9ccc2644558e44343b80941edb40377dd8100ed3922adf413"
+strip_components = 1
+description = "Notification daemon for MATE"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["dconf", "desktop-file-utils", "gtk-layer-shell", "libnotify", "libwnck", "mate-desktop", "mate-panel"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-schemas-compile", "--enable-wayland"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxml2"]

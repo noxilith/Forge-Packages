@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mate-user-guide'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "mate-user-guide"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-user-guide-1.28.0.tar.xz"
+sha256 = "53ef0814f506544614ed61ab7be5221cc8d3a9f14f7ef9698c90fe7e46014b9e"
+strip_components = 1
+description = "MATE User Guide"
+homepage = "https://mate-desktop.org"
+license = "GFDL-1.1-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lazygit'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "lazygit"
+version = "0.66.2"
+archive = "https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.66.2.tar.gz"
+sha256 = "fcaad0909af765ef87bd873164a4de78435515ab4d8b04f58d6ad51e8ecd00e5"
+strip_components = 1
+description = "Simple terminal UI for git commands"
+homepage = "https://github.com/jesseduffield/lazygit"
+license = "MIT"
+
+[build]
+system = "go"

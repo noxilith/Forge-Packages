@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'elinks'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: bzip2, ncurses, tre
+[package]
+name = "elinks"
+version = "0.20.0"
+archive = "https://github.com/rkd77/elinks/archive/v0.20.0.tar.gz"
+sha256 = "7067925d13297ee91dfaf5aa2e0295a3049d0d8ee5da899a7baf1f5150a6d8d4"
+strip_components = 1
+description = "Full-Featured Text WWW Browser"
+homepage = "https://github.com/rkd77/elinks"
+license = "GPL-2.0-only"
+deps = ["gpm", "libidn", "openssl", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-true-color", "--enable-fastmem", "--without-spidermonkey"]
+tools = ["pkg-config"]
+deps = ["gettext"]

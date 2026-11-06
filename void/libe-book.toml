@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libe-book'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: boost, doxygen, libcppunit
+[package]
+name = "libe-book"
+version = "0.1.4"
+archive = "https://downloads.sourceforge.net/sourceforge/project/libebook/libe-book-0.1.4/libe-book-0.1.4.tar.xz"
+sha256 = "104b7e791b6632745898e9b6a0037b7540235771a4d8c3bde2c764466ad912f1"
+strip_components = 1
+description = "Import reflowable e-book formats"
+homepage = "http://sourceforge.net/projects/libebook/"
+license = "MPL-2.0"
+deps = ["libicu78", "liblangtag", "librevenge", "libxml2", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-werror"]
+tools = ["gperf", "pkg-config"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'connman'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: libmnl, libreadline8, wpa_supplicant
+[package]
+name = "connman"
+version = "1.45"
+archive = "https://www.kernel.org/pub/linux/network/connman/connman-1.45.tar.xz"
+sha256 = "77128cce80865455c4f106b5901a575e2dfdb35a7d2e2e2996f16e85cba10913"
+strip_components = 1
+description = "Open Source CONNection MANager"
+homepage = "https://git.kernel.org/pub/scm/network/connman/connman.git"
+license = "GPL-2.0-only"
+deps = ["dbus", "glib", "gnutls", "iptables", "openconnect"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-polkit", "--enable-client", "--enable-pie", "--enable-ethernet", "--enable-wifi", "--enable-bluetooth", "--enable-loopback", "--enable-nmcompat", "--enable-openvpn", "--enable-openconnect", "--enable-iwd", "--disable-tools", "--disable-wispr"]
+tools = ["pkg-config"]

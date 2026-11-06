@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xrestop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "xrestop"
+version = "0.6"
+archive = "https://www.x.org/releases/individual/app/xrestop-0.6.tar.gz"
+sha256 = "c4a212808be703b4929b01fa57efc46e6b662b958dc33c044efeab38065cd5dd"
+strip_components = 1
+description = "Top-like X Server resource usage monitor that uses the XRes extension"
+homepage = "https://www.freedesktop.org/wiki/Software/xrestop/"
+license = "GPL-2.0-or-later"
+deps = ["libXres"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

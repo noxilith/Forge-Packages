@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dreamchess'. Review before relying on it.
+# needs, but Forge has no recipe for yet: SDL2_image, glew
+[package]
+name = "dreamchess"
+version = "0.3.0"
+archive = "https://github.com/dreamchess/dreamchess/archive/0.3.0.tar.gz"
+sha256 = "b070a34acf69ed92e523902683d104abb295d78b6f37663f4668e929b9e90470"
+strip_components = 1
+description = "3D, OpenGL chess game with a moderately strong chess engine"
+homepage = "https://www.dreamchess.org/"
+license = "GPL-3.0-or-later"
+deps = ["SDL2_mixer", "mxml", "pugixml"]
+
+[build]
+system = "cmake"
+tools = ["bison", "flex"]

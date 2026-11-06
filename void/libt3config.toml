@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libt3config'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "libt3config"
+version = "1.0.0"
+archive = "https://os.ghalkes.nl/dist/libt3config-1.0.0.tar.bz2"
+sha256 = "1aba7262ed79b11b30f93d02183aafde49c9d6655f08ac438b26af3151908c01"
+strip_components = 1
+description = "Tilde Terminal Toolkit's library for configuration files"
+homepage = "https://os.ghalkes.nl/t3/libt3config.html"
+license = "GPL-3.0-or-later"
+deps = ["gettext"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

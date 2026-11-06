@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libvpd'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: sg3_utils, sqlite
+[package]
+name = "libvpd"
+version = "2.2.6"
+archive = "https://downloads.sourceforge.net/sourceforge/linux-diag/libvpd-2.2.6.tar.gz"
+sha256 = "fe093777dc83409c9b6e41862deeb474a06dcd45a6f90ac70e113a2a21a4dc3c"
+strip_components = 1
+description = "VPD Database access library"
+homepage = "https://sourceforge.net/projects/linux-diag"
+license = "LGPL-2.1-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"

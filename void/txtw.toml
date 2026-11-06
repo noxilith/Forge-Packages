@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'txtw'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "txtw"
+version = "0.4"
+archive = "https://github.com/baskerville/txtw/archive/0.4.tar.gz"
+sha256 = "b7c974ffda5b65421daee8c015f154b2a51daf2d736df841873d9b262c868846"
+strip_components = 1
+description = "Return the pixel width of the given strings for a given font"
+homepage = "https://github.com/baskerville/txtw"
+license = "Unlicense"
+deps = ["cairo"]
+
+[build]
+system = "make"

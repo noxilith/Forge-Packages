@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'network-manager-applet'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: apparmor, dbus-glib, hicolor-icon-theme
+[package]
+name = "network-manager-applet"
+version = "1.36.0"
+archive = "https://download.gnome.org/sources/network-manager-applet/1.36/network-manager-applet-1.36.0.tar.xz"
+sha256 = "a84704487ea3afe1485c47fb2ab598b8f779f540ae0dcbf0a1c5f85e64a7e253"
+strip_components = 1
+description = "NetworkManager panel applet for GNOME"
+homepage = "https://wiki.gnome.org/Projects/NetworkManager"
+license = "GPL-2.0-or-later"
+deps = ["ModemManager", "NetworkManager", "iso-codes", "jansson", "libayatana-appindicator", "libdbusmenu-glib", "libgudev", "libnma", "libnotify", "libsecret", "mobile-broadband-provider-info", "polkit"]
+
+[build]
+system = "meson"
+configure_args = ["-Dselinux=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

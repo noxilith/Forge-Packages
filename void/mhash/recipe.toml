@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mhash'. Review before relying on it.
+[package]
+name = "mhash"
+version = "0.9.9.9"
+archive = "https://downloads.sourceforge.net/sourceforge/project/mhash/mhash/0.9.9.9/mhash-0.9.9.9.tar.bz2"
+sha256 = "56521c52a9033779154432d0ae47ad7198914785265e1f570cee21ab248dfef0"
+strip_components = 1
+description = "Uniform interface to a large number of hash algorithms"
+homepage = "http://mhash.sourceforge.net/"
+license = "LGPL-2.1-or-later"
+patches = ["patches/fix-cpp-bools.patch", "patches/fix-tests-use-after-free.patch"]
+
+[build]
+system = "autotools"

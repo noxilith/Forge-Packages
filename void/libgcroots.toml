@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libgcroots'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libgcroots"
+version = "0.3.2"
+archive = "https://github.com/uim/libgcroots/releases/download/0.3.2/libgcroots-0.3.2.tar.bz2"
+sha256 = "b177a1c033bd907ea341db7e46eeee181acb73225bf58ada1966e7b4d50f657f"
+strip_components = 1
+description = "GC library for sigscheme Scheme interpreter"
+homepage = "https://github.com/uim/libgcroots"
+license = "custom:libgcroots"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

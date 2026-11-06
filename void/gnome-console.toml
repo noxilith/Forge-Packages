@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gnome-console'. Review before relying on it.
+[package]
+name = "gnome-console"
+version = "48.0.1"
+archive = "https://download.gnome.org/sources/gnome-console/48/gnome-console-48.0.1.tar.xz"
+sha256 = "018e908e4daebcfcb150d4f1bb28d98272aa9d14d6815eaf8da45f889db05c49"
+strip_components = 1
+description = "Simple user-friendly terminal emulator for the GNOME desktop"
+homepage = "https://gitlab.gnome.org/GNOME/console"
+license = "GPL-3.0-or-later"
+deps = ["gsettings-desktop-schemas", "libadwaita", "libgtop", "pcre2", "vte3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gobject-introspection", "gtk+3"]

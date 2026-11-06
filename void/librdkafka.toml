@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'librdkafka'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "librdkafka"
+version = "1.8.2"
+archive = "https://github.com/edenhill/librdkafka/archive/v1.8.2.tar.gz"
+sha256 = "6a747d293a7a4613bd2897e28e8791476fbe1ae7361f2530a876e0fd483482a6"
+strip_components = 1
+description = "Apache Kafka C/C++ library"
+homepage = "https://github.com/edenhill/librdkafka"
+license = "BSD-2-Clause"
+deps = ["libsasl", "openssl", "zlib"]
+
+[build]
+system = "autotools"

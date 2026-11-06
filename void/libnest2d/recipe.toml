@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libnest2d'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, clipper
+[package]
+name = "libnest2d"
+version = "0.4"
+archive = "https://github.com/tamasmeszaros/libnest2d/archive/0.4.tar.gz"
+sha256 = "00c909aa5690bead2be36cc57653c54c7c69d260a3c74924e9dfd79994729a2a"
+strip_components = 1
+description = "2D irregular bin packing and nesting library"
+homepage = "https://github.com/tamasmeszaros/libnest2d"
+license = "LGPL-3.0-or-later"
+deps = ["catch2", "nlopt"]
+patches = ["patches/allow-disallowed-areas.patch", "patches/boost-geometry-need-cxx-14.patch", "patches/fix-cmake.patch", "patches/new-catch2.patch", "patches/soversion.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DLIBNEST2D_HEADER_ONLY=OFF", "-DLIBNEST2D_BUILD_UNITTESTS=ON"]

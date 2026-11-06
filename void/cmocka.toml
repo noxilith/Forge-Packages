@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cmocka'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "cmocka"
+version = "2.0.2"
+archive = "https://cmocka.org/files/2.0/cmocka-2.0.2.tar.xz"
+sha256 = "39f92f366bdf3f1a02af4da75b4a5c52df6c9f7e736c7d65de13283f9f0ef416"
+strip_components = 1
+description = "Unit testing framework in C"
+homepage = "https://cmocka.org/"
+license = "Apache-2.0"
+
+[build]
+system = "cmake"
+configure_args = ["-DUNIT_TESTING=ON"]

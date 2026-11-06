@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'influxdb'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_ldflags, go_package, go_import_path, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "influxdb"
+version = "1.8.3"
+archive = "https://github.com/influxdata/influxdb/archive/v1.8.3.tar.gz"
+sha256 = "d8b89e324ed7343c1397124ac3cc68c405406faf74e7369e733611cada54656d"
+strip_components = 1
+description = "Scalable datastore for metrics, events, and real-time analytics"
+homepage = "https://influxdata.com/time-series-platform/influxdb/"
+license = "MIT"
+
+[build]
+system = "go"
+deps = ["xmlto"]

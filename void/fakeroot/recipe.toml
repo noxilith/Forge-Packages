@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fakeroot'. Review before relying on it.
+# hooks not translated: post_patch, pre_check, pre_configure
+# settings not translated: lib32disabled
+[package]
+name = "fakeroot"
+version = "1.37.1.1"
+archive = "https://salsa.debian.org/clint/fakeroot/-/archive/upstream/1.37.1.1/fakeroot-upstream-1.37.1.1.tar.gz"
+sha256 = "caeef85642445245e4e994ce3633d21718a0baf16d5398e280b3149cbfcfae35"
+strip_components = 1
+description = "Gives a fake root environment"
+homepage = "https://salsa.debian.org/clint/fakeroot"
+license = "GPL-3.0-or-later"
+deps = ["acl", "libcap"]
+patches = ["patches/cross-dont-run-sysv-ipc-test.patch", "patches/fakeroot-no64.patch", "patches/fakeroot-stdint.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

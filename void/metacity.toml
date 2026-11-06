@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'metacity'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool, libcanberra
+[package]
+name = "metacity"
+version = "3.52.0"
+archive = "https://download.gnome.org/sources/metacity/3.52/metacity-3.52.0.tar.xz"
+sha256 = "a72438ace6d5903ae79338c6098b1b35ab91c8a97c4323701d3bef1f3eeb191c"
+strip_components = 1
+description = "Window Manager for the GNOME environment"
+homepage = "https://gitlab.gnome.org/GNOME/metacity"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gsettings-desktop-schemas", "gtk+3", "libSM", "libX11", "libXcomposite", "libXdamage", "libXfixes", "libXinerama", "libXpresent", "libXrender", "libXres", "libgtop", "pango", "startup-notification", "vulkan-loader", "zenity"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "yelp-tools"]

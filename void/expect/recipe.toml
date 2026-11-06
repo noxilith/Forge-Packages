@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'expect'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: tcl
+[package]
+name = "expect"
+version = "5.45.4"
+archive = "https://downloads.sourceforge.net/sourceforge/expect/Expect/5.45.4/expect5.45.4.tar.gz"
+sha256 = "49a7da83b0bdd9f46d04a04deec19c7767bb9a323e40c4781f89caf760b92c34"
+strip_components = 1
+description = "Programmed dialogue with interactive programs"
+homepage = "http://www.nist.gov/el/msid/expect.cfm"
+license = "Public Domain"
+patches = ["patches/0001-init-CC.patch", "patches/0002-cross-WNOHANG-requires-POSIX_SOURCE.patch", "patches/0003-cross-wnohang-value.patch", "patches/0004-cross-misc.patch", "patches/0005-fix-buf-overflow-when-logging.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["expect_cv_wnohang_value=1"]

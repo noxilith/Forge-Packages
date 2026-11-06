@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gpgme'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper, CFLAGS
+[package]
+name = "gpgme"
+version = "2.1.2"
+archive = "https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-2.1.2.tar.bz2"
+sha256 = "0687a95b299871c4141f507c0f740de6b429c9ac067d0fa4e062e3264df5fb77"
+strip_components = 1
+description = "GnuPG Made Easy"
+homepage = "https://www.gnupg.org/software/gpgme/index.html"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["libassuan", "libgpg-error"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-fd-passing"]
+tools = ["pkg-config"]
+deps = ["gnupg"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'fuse-overlayfs'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "fuse-overlayfs"
+version = "1.14"
+archive = "https://github.com/containers/fuse-overlayfs/archive/v1.14.tar.gz"
+sha256 = "0779d1ee8fbb6adb48df40e54efa9c608e1d7bbd844800a4c32c110d5fcbe9f2"
+strip_components = 1
+description = "FUSE implementation for overlayfs"
+homepage = "https://github.com/containers/fuse-overlayfs"
+license = "GPL-3.0-or-later"
+deps = ["fuse3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

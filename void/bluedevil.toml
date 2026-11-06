@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bluedevil'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "bluedevil"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/bluedevil-6.7.5.tar.xz"
+sha256 = "1f6c0b01327b4b5e2ddcf11fd8e4b3e66ba492c9c66c61a95d4ddfd258850d5f"
+strip_components = 1
+description = "KDE Bluetooth integration"
+homepage = "https://invent.kde.org/plasma/bluedevil"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kf6-bluez-qt", "kf6-kcmutils", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kded", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-kjobwidgets", "kf6-knotifications", "kf6-kpackage", "kf6-kservice", "kf6-ksvg", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "libplasma", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

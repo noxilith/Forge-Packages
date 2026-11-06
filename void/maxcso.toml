@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'maxcso'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "maxcso"
+version = "1.13.0"
+archive = "https://github.com/unknownbrackets/maxcso/archive/v1.13.0.tar.gz"
+sha256 = "af9c05add1a1d199ec184d3471081af1b91d591b2473800ea989c882fb632730"
+strip_components = 1
+description = "Fast CSO compression/decompression tool"
+homepage = "https://github.com/unknownbrackets/maxcso"
+license = "ISC"
+deps = ["libuv", "lz4", "zlib"]
+
+[build]
+system = "make"

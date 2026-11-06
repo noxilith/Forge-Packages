@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'uriparser'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen, qt5
+[package]
+name = "uriparser"
+version = "1.0.2"
+archive = "https://github.com/uriparser/uriparser/releases/download/uriparser-1.0.2/uriparser-1.0.2.tar.bz2"
+sha256 = "dd2e4843f43de6f5aedf430e530f1e2d159eba8ca4d64c2787af1c20f707a9e4"
+strip_components = 1
+description = "RFC 3986 compliant URI parsing and handling library"
+homepage = "https://uriparser.github.io/"
+license = "BSD-3-Clause"
+deps = ["gtest"]
+
+[build]
+system = "cmake"
+configure_args = ["-DURIPARSER_BUILD_TESTS=ON"]
+tools = ["pkg-config"]
+deps = ["graphviz"]

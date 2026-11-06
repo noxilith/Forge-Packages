@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mmtf-cpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mmtf-cpp"
+version = "1.0.0"
+archive = "https://github.com/rcsb/mmtf-cpp/archive/v1.0.0.tar.gz"
+sha256 = "881f69c4bb56605fa63fd5ca50842facc4947f686cbf678ad04930674d714f40"
+strip_components = 1
+description = "C++ implementation of the MMTF API, decoder and encoder"
+homepage = "https://github.com/rcsb/mmtf-cpp"
+license = "MIT"
+deps = ["msgpack-cxx"]
+
+[build]
+system = "cmake"

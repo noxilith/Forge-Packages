@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'invada-studio-plugins'. Review before relying on it.
+# hooks not translated: pre_build, pre_configure
+# needs, but Forge has no recipe for yet: ladspa-sdk
+[package]
+name = "invada-studio-plugins"
+version = "0.3.1"
+archive = "https://launchpad.net/invada-studio/ladspa/0.3/+download/invada-studio-plugins_0.3.1-nopkg.tar.gz"
+sha256 = "1f2566a5b27799f9fb2368acf8f447d813e7cd26465d6e9c428ca2ee5d37050a"
+strip_components = 1
+description = "Invada Studio LADSPA plugins"
+homepage = "https://launchpad.net/invada-studio"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

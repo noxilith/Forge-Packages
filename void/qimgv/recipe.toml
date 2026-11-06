@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qimgv'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, opencv, qt6-imageformats, qt6-qt5compat, qt6-svg
+[package]
+name = "qimgv"
+version = "1.0.2"
+archive = "https://github.com/easymodo/qimgv/archive/v1.0.2.tar.gz"
+sha256 = "ace75077c5b6f3cb2b0d40b24482b3778728d98dce75ed8186c7ae4282e57634"
+strip_components = 1
+description = "Cross-platform image viewer with webm support"
+homepage = "https://github.com/easymodo/qimgv"
+license = "GPL-3.0-or-later"
+deps = ["exiv2", "qt6-base"]
+patches = ["patches/exiv2-0.28.patch", "patches/fix-mpv-opengl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DVIDEO_SUPPORT=OFF", "-DOPENCV_SUPPORT=ON", "-DKDE_SUPPORT=OFF"]
+tools = ["pkg-config"]

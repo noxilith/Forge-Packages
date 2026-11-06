@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'brasero'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool, libburn, libcanberra, schilytools
+[package]
+name = "brasero"
+version = "3.12.4"
+archive = "https://download.gnome.org/sources/brasero/3.12/brasero-3.12.4.tar.xz"
+sha256 = "3226049ac40969093c5756f9892e76dbda1efeb105cda32f39fd52f6547ed5b3"
+strip_components = 1
+description = "Application to burn CD/DVD for the Gnome Desktop"
+homepage = "https://wiki.gnome.org/Apps/Brasero"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "cdrdao", "dconf", "desktop-file-utils", "gst-plugins-base1", "gstreamer1", "gtk+3", "libSM", "libisofs", "libnotify", "libxml2", "shared-mime-info", "tinysparql", "totem-pl-parser"]
+
+[build]
+system = "meson"
+configure_args = ["-Dyelp=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

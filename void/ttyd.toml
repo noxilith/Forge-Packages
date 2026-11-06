@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ttyd'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: vim
+[package]
+name = "ttyd"
+version = "1.7.7"
+archive = "https://github.com/tsl0922/ttyd/archive/refs/tags/1.7.7.tar.gz"
+sha256 = "039dd995229377caee919898b7bd54484accec3bba49c118e2d5cd6ec51e3650"
+strip_components = 1
+description = "Share your terminal over the web"
+homepage = "https://tsl0922.github.io/ttyd/"
+license = "MIT"
+deps = ["json-c", "libuv", "libwebsockets", "openssl", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'linuxconsoletools'. Review before relying on it.
+# hooks not translated: pre_install
+[package]
+name = "linuxconsoletools"
+version = "1.8.1"
+archive = "https://downloads.sourceforge.net/sourceforge/project/linuxconsole/linuxconsoletools-1.8.1.tar.bz2"
+sha256 = "4da29745c782b7db18f5f37c49e77bf163121dd3761e2fc7636fa0cbf35c2456"
+strip_components = 1
+description = "Set of utilities to test and configure joysticks"
+homepage = "https://sourceforge.net/projects/linuxconsole/"
+license = "GPL-3.0-or-later"
+deps = ["SDL2"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

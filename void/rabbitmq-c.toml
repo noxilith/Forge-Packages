@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'rabbitmq-c'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "rabbitmq-c"
+version = "0.15.0"
+archive = "https://github.com/alanxz/rabbitmq-c/archive/v0.15.0.tar.gz"
+sha256 = "7b652df52c0de4d19ca36c798ed81378cba7a03a0f0c5d498881ae2d79b241c2"
+strip_components = 1
+description = "RabbitMQ C client"
+homepage = "https://github.com/alanxz/rabbitmq-c"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cmake"
+deps = ["popt", "xmlto"]

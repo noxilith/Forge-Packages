@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'j4-dmenu-desktop'. Review before relying on it.
+[package]
+name = "j4-dmenu-desktop"
+version = "3.2"
+archive = "https://github.com/enkore/j4-dmenu-desktop/archive/r3.2.tar.gz"
+sha256 = "99e2f394570f8fb0b1a2cde2926980fd9685ce60e1500b575057f8424c9ad555"
+strip_components = 1
+description = "Fast desktop menu"
+homepage = "https://github.com/enkore/j4-dmenu-desktop"
+license = "GPL-3.0-or-later"
+deps = ["fmt", "spdlog"]
+
+[build]
+system = "meson"
+configure_args = ["-Denable-tests=false"]
+tools = ["pkg-config"]

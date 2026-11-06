@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'x2x-git'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "x2x-git"
+version = "20190715"
+archive = "https://github.com/dottedmag/x2x/archive/514c6c70e97a296d5d79ce5e8cb3cc34ae833851.tar.gz"
+sha256 = "a26c9ce9ef327e4f25c8f9406013e9dcc57272bc60e25172fa8398311e069561"
+strip_components = 1
+description = "Use mouse and keyboard from X display on another"
+homepage = "https://github.com/dottedmag/x2x"
+license = "custom:x2x"
+deps = ["libX11", "libXext", "libXtst"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

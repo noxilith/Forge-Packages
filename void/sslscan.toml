@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'sslscan'. Review before relying on it.
+[package]
+name = "sslscan"
+version = "2.2.2"
+archive = "https://github.com/rbsec/sslscan/archive/refs/tags/2.2.2.tar.gz"
+sha256 = "f6095c01163eef04ff9b3540913f20d899f54e27b1194afd409c5fc807eacb46"
+strip_components = 1
+description = "Fast SSL/TLS scanner"
+homepage = "https://github.com/rbsec/sslscan"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "make"

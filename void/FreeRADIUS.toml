@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'FreeRADIUS'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: mit-krb5, talloc
+[package]
+name = "FreeRADIUS"
+version = "3.0.26"
+archive = "https://github.com/FreeRADIUS/freeradius-server/archive/release_3_0_26.tar.gz"
+sha256 = "6aea98d6126035e7ccca483d8b3faea447030169639807017ec98985b78fb2ca"
+strip_components = 1
+description = "World's most popular RADIUS Server"
+homepage = "http://freeradius.org"
+license = "GPL-2.0-only"
+deps = ["json-c", "mariadb", "openssl", "pam", "postgresql18"]
+
+[build]
+system = "autotools"

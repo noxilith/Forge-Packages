@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pangomm2.48'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cairomm1.16
+[package]
+name = "pangomm2.48"
+version = "2.50.0"
+archive = "https://download.gnome.org/sources/pangomm/2.50/pangomm-2.50.0.tar.xz"
+sha256 = "a27aa77e017b9afce9e751d85bd1cf890abbb3a58bf59d0fac917eef82db3b5b"
+strip_components = 1
+description = "C++ bindings for the pango library"
+homepage = "https://gtkmm.org"
+license = "LGPL-2.1-or-later"
+deps = ["glibmm2.68", "libsigc++3", "pango"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

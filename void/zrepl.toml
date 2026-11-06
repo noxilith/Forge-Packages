@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'zrepl'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, conf_files
+[package]
+name = "zrepl"
+version = "0.7.0"
+archive = "https://github.com/zrepl/zrepl/archive/v0.7.0.tar.gz"
+sha256 = "d451ad1d05a0afdc752daf1dada9327aa338f691eca91e1c8fc9828eebd89757"
+strip_components = 1
+description = "One-stop ZFS backup & replication solution"
+homepage = "https://github.com/zrepl/zrepl"
+license = "MIT"
+deps = ["zfs"]
+
+[build]
+system = "go"

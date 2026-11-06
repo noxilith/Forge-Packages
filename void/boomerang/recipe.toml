@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'boomerang'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "boomerang"
+version = "0.5.2"
+archive = "https://github.com/BoomerangDecompiler/boomerang/archive/v0.5.2.tar.gz"
+sha256 = "1d2c9c2f5de1a3e1d5fe3879e82bca268d1c49e6ba3d0a7848695f18c594384d"
+strip_components = 1
+description = "General, open source machine code decompiler"
+homepage = "https://github.com/BoomerangDecompiler/boomerang"
+license = "BSD-3-Clause"
+deps = ["capstone"]
+patches = ["patches/dont_include_toolchain-file.patch", "patches/fix-cflags.patch", "patches/include-stdint.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBOOMERANG_BUILD_REGRESSION_TESTS=FALSE"]
+tools = ["flex"]

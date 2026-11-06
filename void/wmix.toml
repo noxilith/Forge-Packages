@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'wmix'. Review before relying on it.
+[package]
+name = "wmix"
+version = "3.5"
+archive = "https://www.dockapps.net/download/wmix-3.5.tar.gz"
+sha256 = "58d2572bddb958268b6008eed0760765f9dbdbbd1650ebb146cd0e4287003eee"
+strip_components = 1
+description = "Featureful WindowMaker dockapp mixer for OSS or ALSA"
+homepage = "https://www.dockapps.net/wmix"
+license = "GPL-2.0-only"
+deps = ["alsa-lib", "libXpm", "libXrandr"]
+
+[build]
+system = "autotools"

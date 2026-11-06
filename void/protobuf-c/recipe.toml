@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'protobuf-c'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "protobuf-c"
+version = "1.5.2"
+archive = "https://github.com/protobuf-c/protobuf-c/releases/download/v1.5.2/protobuf-c-1.5.2.tar.gz"
+sha256 = "e2c86271873a79c92b58fef7ebf8de1aa0df4738347a8bd5d4e65a80a16d0d24"
+strip_components = 1
+description = "C implementation of the Google Protocol Buffers"
+homepage = "https://github.com/protobuf-c/protobuf-c"
+license = "BSD-2-Clause"
+deps = ["protobuf"]
+patches = ["patches/protobuf-34.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

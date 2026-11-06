@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qxmpp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libtheora, libvpx, qt6-qt5compat, qt6-tools, speex
+[package]
+name = "qxmpp"
+version = "1.16.3"
+archive = "https://invent.kde.org/libraries/qxmpp/-/archive/v1.16.3/qxmpp-v1.16.3.tar.gz"
+sha256 = "04d5f9f7ecb96585d64bb563171c5e1f590ca3c70740eb674c94208f86a2b1bf"
+strip_components = 1
+description = "Cross-platform C++ XMPP client and server library"
+homepage = "https://invent.kde.org/libraries/qxmpp"
+license = "LGPL-2.1-or-later"
+deps = ["gstreamer1", "libomemo-c", "opus", "qca-qt6", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_EXAMPLES=false", "-DBUILD_OMEMO=true", "-DWITH_GSTREAMER=true", "-DBUILD_TESTS=false"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

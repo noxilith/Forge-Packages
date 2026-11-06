@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'Field3D'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "Field3D"
+version = "1.7.3"
+archive = "https://github.com/imageworks/Field3D/archive/refs/tags/v1.7.3.tar.gz"
+sha256 = "b6168bc27abe0f5e9b8d01af7794b3268ae301ac72b753712df93125d51a0fd4"
+strip_components = 1
+description = "Library for storing voxel data on disk and in memory"
+homepage = "https://github.com/imageworks/Field3D/wiki/Field3D-Home"
+license = "BSD-3-Clause"
+deps = ["hdf5", "imath", "openexr"]
+patches = ["patches/Field3D-openexr.patch", "patches/boost-1.83.patch"]
+
+[build]
+system = "cmake"

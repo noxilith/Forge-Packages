@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'openpgp-card-ssh-agent'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "openpgp-card-ssh-agent"
+version = "0.3.7"
+archive = "https://codeberg.org/openpgp-card/ssh-agent/archive/v0.3.7.tar.gz"
+sha256 = "152eec265e67fbe622e443b299a0107922e919b28c3bf6d79bfb28debb7e3a25"
+strip_components = 1
+description = "Standalone SSH Agent for use with OpenPGP cards"
+homepage = "https://codeberg.org/openpgp-card/ssh-agent"
+license = "Apache-2.0 OR MIT"
+deps = ["dbus", "pcsc-ccid", "pcsclite"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

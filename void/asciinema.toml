@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'asciinema'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "asciinema"
+version = "3.2.0"
+archive = "https://github.com/asciinema/asciinema/archive/refs/tags/v3.2.0.tar.gz"
+sha256 = "247c7c87481f38d7788c1fb1be12021c778676c0d0ab37e529ec528f87f487ce"
+strip_components = 1
+description = "Record and share your terminal sessions, the right way"
+homepage = "https://asciinema.org/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

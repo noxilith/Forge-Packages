@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Bear'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: grpc
+[package]
+name = "Bear"
+version = "3.1.6"
+archive = "https://github.com/rizsotto/Bear/archive/3.1.6.tar.gz"
+sha256 = "99cd891eec6e89b734d7cafe0e623dd8c2f27d8cbf3ee9bc4807e69e5c8fb55c"
+strip_components = 1
+description = "Tool that generates a compilation database for clang tooling"
+homepage = "https://github.com/rizsotto/Bear"
+license = "GPL-3.0-or-later"
+deps = ["gtest", "json-c++", "protobuf", "spdlog"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

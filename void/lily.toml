@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'lily'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "lily"
+version = "2.5"
+archive = "https://gitlab.com/FascinatedBox/lily/-/archive/v2.5/lily-v2.5.tar.gz"
+sha256 = "782fc78bb5a2e3440c6aa473f853110acec37af76b48229f1901cd52dbf0fd02"
+strip_components = 1
+description = "Interpreted language with a focus on expressiveness and type safety"
+homepage = "https://gitlab.com/FascinatedBox/lily"
+license = "MIT"
+
+[build]
+system = "cmake"

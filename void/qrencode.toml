@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'qrencode'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "qrencode"
+version = "4.1.1"
+archive = "https://github.com/fukuchi/libqrencode/archive/refs/tags/v4.1.1.tar.gz"
+sha256 = "5385bc1b8c2f20f3b91d258bf8ccc8cf62023935df2d2676b5b67049f31a049c"
+strip_components = 1
+description = "Library for encoding data in a QR Code symbol"
+homepage = "https://fukuchi.org/works/qrencode/index.html.en"
+license = "LGPL-2.1-or-later"
+deps = ["libpng"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

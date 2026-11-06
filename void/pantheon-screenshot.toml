@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pantheon-screenshot'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, libcanberra
+[package]
+name = "pantheon-screenshot"
+version = "8.0.4"
+archive = "https://github.com/elementary/screenshot-tool/archive/8.0.4.tar.gz"
+sha256 = "06b14af30b4641a5bd4df763f96b3123e2554b3112eb621b136b8cf809d05954"
+strip_components = 1
+description = "Screenshot tool"
+homepage = "https://github.com/elementary/screenshot-tool"
+license = "LGPL-3.0-only"
+deps = ["desktop-file-utils", "gdk-pixbuf", "granite7", "gtk4", "libhandy1", "libportal"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

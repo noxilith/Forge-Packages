@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wayland'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libffi
+[package]
+name = "wayland"
+version = "1.26.0"
+archive = "https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.26.0/downloads/wayland-1.26.0.tar.xz"
+sha256 = "64176eaa46e4969903e286f8e5ef8331affc17fdf03ac9b58381d2b23162b7a3"
+strip_components = 1
+description = "Core Wayland window system code and protocol"
+homepage = "https://wayland.freedesktop.org/"
+license = "MIT"
+deps = ["expat", "flex", "libxml2"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddocumentation=false", "-Db_ndebug=false"]
+tools = ["flex", "pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'zaz'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: SDL_image, libtheora
+[package]
+name = "zaz"
+version = "1.0.0"
+archive = "https://downloads.sourceforge.net/sourceforge/zaz/zaz-1.0.0.tar.bz2"
+sha256 = "e332cc1a6559e18a2b632940c53d20e2f2d2b583ba9dc1fd02a586437f9f0397"
+strip_components = 1
+description = "Arcade action puzzle game"
+homepage = "http://zaz.sourceforge.net"
+license = "GPL-3.0-or-later"
+deps = ["freetype", "ftgl", "libvorbis"]
+patches = ["patches/Makefile.in.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

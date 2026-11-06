@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'rustypaste'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "rustypaste"
+version = "0.18.1"
+archive = "https://github.com/orhun/rustypaste/archive/refs/tags/v0.18.1.tar.gz"
+sha256 = "4b63be093e080d4a39e9ca03b378df96f0ae604e469a9c4d9bb437f9643524f0"
+strip_components = 1
+description = "Minimal file upload/pastebin service"
+homepage = "https://github.com/orhun/rustypaste"
+license = "MIT"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

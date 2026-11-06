@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'eom'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: dbus-glib, itstool
+[package]
+name = "eom"
+version = "1.28.1"
+archive = "https://github.com/mate-desktop/eom/releases/download/v1.28.1/eom-1.28.1.tar.xz"
+sha256 = "ccc169b8e240828b36965dfd84fa1478957dec2028ffeba553ae97e542e15120"
+strip_components = 1
+description = "MATE image viewer"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["ImageMagick", "dbus", "exempi", "gdk-pixbuf", "glib", "gobject-introspection", "gtk+3", "lcms2", "libX11", "libexif", "libjpeg-turbo", "libpeas", "librsvg", "libxml2", "mate-desktop", "mate-icon-theme", "shared-mime-info", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Dintrospection=enabled", "-Dthumbnailer=true"]
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext"]

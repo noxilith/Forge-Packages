@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'matio'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "matio"
+version = "1.5.23"
+archive = "https://github.com/tbeu/matio/releases/download/v1.5.23/matio-1.5.23.tar.gz"
+sha256 = "9f91eae661df46ea53c311a1b2dcff72051095b023c612d7cbfc09406c9f4d6e"
+strip_components = 1
+description = "MATLAB MAT file I/O library"
+homepage = "https://github.com/tbeu/matio"
+license = "BSD-2-Clause"
+deps = ["hdf5", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

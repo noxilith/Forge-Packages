@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'netcdf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "netcdf"
+version = "4.9.2"
+archive = "https://github.com/Unidata/netcdf-c/archive/v4.9.2.tar.gz"
+sha256 = "bc104d101278c68b303359b3dc4192f81592ae8640f1aee486921138f7f88cb7"
+strip_components = 1
+description = "Machine-independent format for representing scientific data"
+homepage = "https://www.unidata.ucar.edu/software/netcdf/"
+license = "NetCDF"
+deps = ["curl", "hdf5", "libxml2"]
+
+[build]
+system = "autotools"
+tools = ["m4"]

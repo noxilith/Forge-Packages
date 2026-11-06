@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tmines'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "tmines"
+version = "1.0"
+archive = "https://github.com/tropf/tmines/archive/v1.0.tar.gz"
+sha256 = "7b5037c7cedd6c744ec63d10fa59b415e5e3654e52b0cfda561ac545af8576cf"
+strip_components = 1
+description = "Terminal minesweeper clone"
+homepage = "https://github.com/tropf/tmines"
+license = "MIT"
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"

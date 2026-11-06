@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'syft'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "syft"
+version = "1.42.2"
+archive = "https://github.com/anchore/syft/archive/refs/tags/v1.42.2.tar.gz"
+sha256 = "355dc28dd7de6a42226a4664372230994c730f69dbb5a3e76d3b9bd943cc7c37"
+strip_components = 1
+description = "SBOM generator CLI for container images, filesystems and more"
+homepage = "https://github.com/anchore/syft"
+license = "Apache-2.0"
+
+[build]
+system = "go"

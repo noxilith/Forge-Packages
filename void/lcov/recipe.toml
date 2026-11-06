@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lcov'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args, conf_files
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "lcov"
+version = "1.15"
+archive = "https://github.com/linux-test-project/lcov/archive/v1.15.tar.gz"
+sha256 = "d88b0718f59815862785ac379aed56974b9edd8037567347ae70081cd4a3542a"
+strip_components = 1
+description = "Front-end for GCC's coverage testing tool gcov"
+homepage = "http://ltp.sourceforge.net/coverage/lcov.php"
+license = "GPL-2.0-or-later"
+patches = ["patches/fix-undef-behaviour.patch", "patches/handle-equals-signs.patch"]
+
+[build]
+system = "make"
+tools = ["perl"]

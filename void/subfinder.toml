@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'subfinder'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "subfinder"
+version = "2.13.0"
+archive = "https://github.com/projectdiscovery/subfinder/archive/refs/tags/v2.13.0.tar.gz"
+sha256 = "7519b9f6722ef768280cc102da13c10e54e068661a85ec9400e78b8639f378c6"
+strip_components = 1
+description = "Passive subdomain discovery tool"
+homepage = "https://github.com/projectdiscovery/subfinder"
+license = "MIT"
+
+[build]
+system = "go"

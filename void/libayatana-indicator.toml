@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libayatana-indicator'. Review before relying on it.
+[package]
+name = "libayatana-indicator"
+version = "0.9.4"
+archive = "https://github.com/AyatanaIndicators/libayatana-indicator/archive/0.9.4.tar.gz"
+sha256 = "a18d3c682e29afd77db24366f8475b26bda22b0e16ff569a2ec71cd6eb4eac95"
+strip_components = 1
+description = "Ayatana Indicators Shared Library"
+homepage = "https://ayatanaindicators.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["ayatana-ido", "glib", "gtk+3"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTS=ON"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'msg2'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "msg2"
+version = "1.2.0"
+archive = "https://roboticoverlords.org/msg2/msg2-1.2.0.tar.xz"
+sha256 = "4834104465f62f0ecec7615e75ca2e50a5e42218854da8f6b022a120937702ac"
+strip_components = 1
+description = "Output a blue arrow and a white message on the commandline"
+homepage = "https://roboticoverlords.org/msg2/"
+license = "GPL-3.0-or-later"
+patches = ["patches/fix-cflags.patch"]
+
+[build]
+system = "cmake"

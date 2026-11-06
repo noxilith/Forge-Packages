@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'tor'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: ca-certificates, zstd
+[package]
+name = "tor"
+version = "0.4.9.13"
+archive = "https://dist.torproject.org/tor-0.4.9.13.tar.gz"
+sha256 = "5e748d3272cdf44a7d7741173f371c8def3d96eecb77e93c89c50663ce9cc792"
+strip_components = 1
+description = "Anonymizing overlay network"
+homepage = "https://www.torproject.org/"
+license = "BSD-3-Clause, GPL-3.0-only"
+deps = ["libcap", "libevent", "libscrypt", "libseccomp", "xz", "zlib"]
+patches = ["patches/ppc.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gpl"]
+tools = ["pkg-config"]

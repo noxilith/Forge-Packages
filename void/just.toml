@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'just'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+# settings not translated: build_helper
+[package]
+name = "just"
+version = "1.58.0"
+archive = "https://github.com/casey/just/archive/refs/tags/1.58.0.tar.gz"
+sha256 = "c8a36e6e9397f2fdfcb0cc246fcdb790b52a784f3c8cabc0d8baeb031852a148"
+strip_components = 1
+description = "Just a command runner"
+homepage = "https://github.com/casey/just"
+license = "CC0-1.0"
+
+[build]
+system = "cargo"

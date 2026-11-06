@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xcb-proto'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcb-proto"
+version = "1.17.0"
+archive = "https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.17.0.tar.xz"
+sha256 = "2c1bacd2110f4799f74de6ebb714b94cf6f80fb112316b1219480fd22562148c"
+strip_components = 1
+description = "XML-XCB (X C Bindings) protocol descriptions"
+homepage = "https://gitlab.freedesktop.org/xorg/proto/xcbproto"
+license = "MIT"
+deps = ["libxml2"]
+
+[build]
+system = "autotools"

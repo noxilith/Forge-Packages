@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'multimon-ng'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "multimon-ng"
+version = "1.6.2"
+archive = "https://github.com/EliasOenal/multimon-ng/archive/1.6.2.tar.gz"
+sha256 = "9c3105d1d2553d06af7b3af0126dd7164f6142c4ab5434e0016f6eb01aff96b0"
+strip_components = 1
+description = "Digital transmission decoder"
+homepage = "https://github.com/EliasOenal/multimon-ng"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "cmake"

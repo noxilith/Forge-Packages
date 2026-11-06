@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'xf86-input-mtrack'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: mtdev
+[package]
+name = "xf86-input-mtrack"
+version = "0.5.0"
+archive = "https://github.com/p2rkw/xf86-input-mtrack/archive/v0.5.0.tar.gz"
+sha256 = "a976723720028832afd45bfcaab479f60833ff6f1c780be727d1791675dc14c4"
+strip_components = 1
+description = "Xorg Multitouch Trackpad Driver"
+homepage = "https://github.com/p2rkw/xf86-input-mtrack"
+license = "MIT"
+deps = ["xorg-server"]
+patches = ["patches/fix-time64.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

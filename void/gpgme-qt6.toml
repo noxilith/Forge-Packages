@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gpgme-qt6'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "gpgme-qt6"
+version = "2.2.0"
+archive = "https://www.gnupg.org/ftp/gcrypt/qgpgme/qgpgme-2.2.0.tar.xz"
+sha256 = "3c6290ff5bfeab981bb48b2951703761f1dbea640cb637beb3560d5fefb0e0b3"
+strip_components = 1
+description = "GnuPG Made Easy - Qt6 binding"
+homepage = "https://www.gnupg.org/software/gpgme/index.html"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["gpgme", "gpgmepp", "libassuan", "libgpg-error", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gnupg"]

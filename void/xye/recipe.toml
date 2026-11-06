@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xye'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL_image, SDL_ttf
+[package]
+name = "xye"
+version = "0.12.2"
+archive = "https://downloads.sourceforge.net/sourceforge/xye/xye-0.12.2.tar.gz"
+sha256 = "5d7c04f37d6b4a1821594512c7ddbc8189f968e08ecfd5af55231302f2f917d8"
+strip_components = 1
+description = "Puzzle game inspired by Kye"
+homepage = "http://xye.sourceforge.net"
+license = "Zlib, custom:resource"
+patches = ["patches/fix-gcc6-narrowing.patch"]
+
+[build]
+system = "autotools"

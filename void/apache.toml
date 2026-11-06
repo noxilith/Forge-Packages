@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'apache'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_configure, post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: db, util-linux-common
+[package]
+name = "apache"
+version = "2.4.69"
+archive = "https://archive.apache.org/dist/httpd/httpd-2.4.69.tar.bz2"
+sha256 = "c5e6ebc66e349b87d7fc6916ae7cc2a808ed348003de134cf9e9d89d3e2cc73d"
+strip_components = 1
+description = "Apache http server"
+homepage = "https://httpd.apache.org/"
+license = "Apache-2.0"
+deps = ["apr-util", "expat", "gdbm", "nghttp2", "openldap", "openssl", "pcre2", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--prefix=", "--enable-pie", "--enable-modules=all", "--enable-mods-shared=all", "--enable-authn-dbm", "--enable-authn-anon", "--enable-authn-dbd", "--enable-authn-alias", "--enable-authz-dbm", "--enable-http2", "--enable-authz-owner", "--enable-authnz-ldap", "--enable-auth-digest", "-enable-isapi", "--enable-file-cache", "--enable-cache", "--enable-disk-cache", "--enable-mem-cache", "--enable-dbd", "--enable-bucketeer", "--enable-dumpio", "--enable-echo", "--enable-reqtimeout", "--enable-ext-filter", "--enable-substitute", "--enable-deflate", "--enable-charset-lite", "--enable-ldap", "--enable-log-forensic", "--enable-logio", "--enable-mime-magic", "--enable-cern-meta", "--enable-expires", "--enable-headers", "--enable-ident", "--enable-usertrack", "--enable-unique-id", "--enable-proxy", "--enable-proxy-connect", "--enable-proxy-ftp", "--enable-proxy-http", "--enable-proxy-scgi", "--enable-proxy-ajp", "--enable-proxy-balancer", "--enable-ssl", "--enable-http", "--enable-speling", "--enable-dav", "--enable-info", "--enable-cgi", "--enable-cgid", "--enable-dav-fs", "--enable-dav-lock", "--enable-vhost-alias", "--enable-imagemap", "--enable-so", "--enable-rewrite", "--enable-layout=XBPS", "--enable-mpms-shared=all"]
+tools = ["perl", "pkg-config"]

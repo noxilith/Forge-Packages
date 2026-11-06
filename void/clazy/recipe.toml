@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'clazy'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "clazy"
+version = "1.17.1"
+archive = "https://download.kde.org/stable/clazy/1.17.1/src/clazy-v1.17.1.tar.xz"
+sha256 = "e5c0900833f38b8a3238b1e42611f8e4cc1a5300f1b763f2dad0b25c97a58863"
+strip_components = 1
+description = "Qt oriented code checker based on clang framework"
+homepage = "https://apps.kde.org/en/clazy"
+license = "LGPL-2.0-or-later"
+deps = ["llvm21"]
+patches = ["patches/0001-Replace-Find-scripts-with-llvm-clang-provided-cmake-.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DTEST_VERSION_OPTION=--qt-versions=6"]
+tools = ["perl"]

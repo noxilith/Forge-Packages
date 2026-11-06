@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'make'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "make"
+version = "4.4.1"
+archive = "https://ftp.gnu.org/gnu/make/make-4.4.1.tar.lz"
+sha256 = "8814ba072182b605d156d7589c19a43b89fc58ea479b9355146160946f8cf6e9"
+strip_components = 1
+description = "GNU Make build tool"
+homepage = "http://www.gnu.org/software/make"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

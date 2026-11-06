@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cotp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cotp"
+version = "1.9.9"
+archive = "https://github.com/replydev/cotp/archive/refs/tags/v1.9.9.tar.gz"
+sha256 = "f3866e29130078a14ff3da4f544709d1a7a1edb257a77321254a5a87530b6a5e"
+strip_components = 1
+description = "Command line TOTP/HOTP authenticator"
+homepage = "https://github.com/replydev/cotp"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"

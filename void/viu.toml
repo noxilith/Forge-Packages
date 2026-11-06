@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'viu'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "viu"
+version = "1.6.1"
+archive = "https://github.com/atanunq/viu/archive/refs/tags/v1.6.1.tar.gz"
+sha256 = "639c1fe14aee5e34b635de041ac77177e2959cf26072d8ef69c444b15c8273bd"
+strip_components = 1
+description = "CLI app to view images in the terminal"
+homepage = "https://github.com/atanunq/viu"
+license = "MIT"
+
+[build]
+system = "cargo"

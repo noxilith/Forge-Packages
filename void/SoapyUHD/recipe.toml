@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'SoapyUHD'. Review before relying on it.
+[package]
+name = "SoapyUHD"
+version = "0.4.1"
+archive = "https://github.com/pothosware/SoapyUHD/archive/soapy-uhd-0.4.1.tar.gz"
+sha256 = "9779cce2e732cd41905b6cf8ea85edbbf51b1ac918e6180bd4891eebb4c8d085"
+strip_components = 1
+description = "SoapySDR module for Ettus UHD"
+homepage = "https://github.com/pothosware/SoapyUHD"
+license = "GPL-3.0-or-later"
+deps = ["SoapySDR", "uhd"]
+patches = ["patches/boost-1.92.patch", "patches/uhd-4.08.patch", "patches/uhd-4.11.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

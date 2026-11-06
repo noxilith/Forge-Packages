@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mlterm'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: libutempter
+[package]
+name = "mlterm"
+version = "3.9.5"
+archive = "https://downloads.sourceforge.net/sourceforge/mlterm/mlterm-3.9.5.tar.gz"
+sha256 = "7d28678aa90dade72cea4e1e5fffb5e4c343487d60ca36c88dc615134613af39"
+strip_components = 1
+description = "Multi Lingual TERMinal emulator for X"
+homepage = "http://mlterm.sourceforge.net/"
+license = "BSD-3-Clause"
+deps = ["freetype", "fribidi", "gdk-pixbuf", "gtk+3", "libXft"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-fribidi", "--enable-optimize-redrawing", "--with-tools=mlconfig,mlterm-zoom,mlterm-menu,mlclient,mlcc,mlfc", "--with-gtk=3.0", "--with-imagelib=gdk-pixbuf"]
+tools = ["pkg-config"]
+deps = ["gettext"]

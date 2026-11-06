@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tombi'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: build_helper
+[package]
+name = "tombi"
+version = "1.8.3"
+archive = "https://github.com/tombi-toml/tombi/archive/refs/tags/v1.8.3.tar.gz"
+sha256 = "fa3b7192c0fae4bf634d8a2a204b2451ee70e0d4a31db7187e3d544828edb7d1"
+strip_components = 1
+description = "TOML Formatter, Linter and Language Server"
+homepage = "https://tombi-toml.github.io/tombi/"
+license = "MIT"
+
+[build]
+system = "cargo"
+subdir = "rust/tombi-cli"

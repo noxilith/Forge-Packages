@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gobuster'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "gobuster"
+version = "3.8.2"
+archive = "https://github.com/OJ/gobuster/archive/v3.8.2.tar.gz"
+sha256 = "6919232eafbd0c4bbc9664d7f434b6a8d82133aa09f1400341ef6985ceff208a"
+strip_components = 1
+description = "Directory, file and DNS busting tool"
+homepage = "https://github.com/OJ/gobuster"
+license = "Apache-2.0"
+
+[build]
+system = "go"

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'giggle'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS, lib32disabled
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, intltool, itstool
+[package]
+name = "giggle"
+version = "0.7"
+archive = "https://download.gnome.org/sources/giggle/0.7/giggle-0.7.tar.xz"
+sha256 = "ae2e2237fa0d0999d99d0a0ee9b7ec147e80bd2472d59a045b2b01eb02261f59"
+strip_components = 1
+description = "Git repository viewer"
+homepage = "https://wiki.gnome.org/Apps/giggle"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtksourceview"]
+patches = ["patches/0001-Fix-628184-Giggle-does-not-display-diff-for-files-th.patch", "patches/0002-include-gtksource.h-instead-of-gtksourceview.h.patch", "patches/0004-Port-to-vte-2.91-API.patch", "patches/0005-Fixed-bug-of-GUI-not-remembering-settings.patch", "patches/cross.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "tar", "yelp-tools"]

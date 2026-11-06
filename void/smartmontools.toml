@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'smartmontools'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "smartmontools"
+version = "7.5"
+archive = "https://downloads.sourceforge.net/sourceforge/smartmontools/smartmontools-7.5.tar.gz"
+sha256 = "690b83ca331378da9ea0d9d61008c4b22dde391387b9bbad7f29387f2595f76e"
+strip_components = 1
+description = "S.M.A.R.T Monitoring Tools"
+homepage = "http://smartmontools.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["libcap-ng"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-libcap-ng=yes"]

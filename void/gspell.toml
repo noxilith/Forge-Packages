@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gspell'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "gspell"
+version = "1.14.2"
+archive = "https://download.gnome.org/sources/gspell/1.14/gspell-1.14.2.tar.xz"
+sha256 = "4ec7e5accc9013281bacd6bbc00006be733818b81ba3fe332c1e876c7e1e1477"
+strip_components = 1
+description = "Flexible API to add spell checking to a GTK+ application"
+homepage = "https://gitlab.gnome.org/GNOME/gspell"
+license = "LGPL-2.1-or-later"
+deps = ["enchant2", "glib", "gtk+3", "libicu78"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

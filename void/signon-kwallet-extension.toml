@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'signon-kwallet-extension'. Review before relying on it.
+# needs, but Forge has no recipe for yet: signond
+[package]
+name = "signon-kwallet-extension"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/signon-kwallet-extension-26.08.1.tar.xz"
+sha256 = "d50f42b725e5d1bcb7c9e3caff77c2b9c835715567427e544c3824e484776ced"
+strip_components = 1
+description = "KWallet integration for signon framework"
+homepage = "https://invent.kde.org/network/signon-kwallet-extension"
+license = "GPL-2.0-only"
+deps = ["kf6-kwallet"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "qt6-base"]

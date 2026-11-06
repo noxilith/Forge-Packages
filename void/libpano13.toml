@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libpano13'. Review before relying on it.
+[package]
+name = "libpano13"
+version = "2.9.23"
+archive = "https://downloads.sourceforge.net/sourceforge/panotools/libpano13/libpano13-2.9.23/libpano13-2.9.23.tar.gz"
+sha256 = "e7c076d37a14c39434962115e47ddbe18452ca3de5ce40e2aaefa7cf5815ea28"
+strip_components = 1
+description = "Panorama Pictures Tools library"
+homepage = "http://panotools.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["libjpeg-turbo", "libpng", "tiff", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'inotify-tools'. Review before relying on it.
+# hooks not translated: post_patch, pre_configure
+[package]
+name = "inotify-tools"
+version = "4.25.9.0"
+archive = "https://github.com/inotify-tools/inotify-tools/archive/4.25.9.0.tar.gz"
+sha256 = "d33a4fd24c72c2d08893f129d724adf725b93dae96c359e4f4e9f32573cc853b"
+strip_components = 1
+description = "Provides a simple interface to inotify"
+homepage = "https://github.com/inotify-tools/inotify-tools"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bridge-utils'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "bridge-utils"
+version = "1.7.1"
+archive = "https://www.kernel.org/pub/linux/utils/net/bridge-utils/bridge-utils-1.7.1.tar.xz"
+sha256 = "a61d8be4f1a1405c60c8ef38d544f0c18c05b33b9b07e5b4b31033536165e60e"
+strip_components = 1
+description = "Layer2 ethernet bridging for Linux"
+homepage = "https://wiki.linuxfoundation.org/networking/bridge"
+license = "GPL-2.0-or-later"
+patches = ["patches/fix-PATH_MAX-musl.patch", "patches/fix-musl.patch"]
+
+[build]
+system = "autotools"

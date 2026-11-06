@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'io.elementary.calculator'. Review before relying on it.
+[package]
+name = "io.elementary.calculator"
+version = "1.7.2"
+archive = "https://github.com/elementary/calculator/archive/1.7.2.tar.gz"
+sha256 = "d296d06b36a0c7dd84e7e91e9801989e83312612d6ee6f0479030c1b340d397b"
+strip_components = 1
+description = "Calculator app designed for elementary OS"
+homepage = "https://github.com/elementary/calculator"
+license = "GPL-3.0-only"
+deps = ["granite", "gtk+3", "libhandy1"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["AppStream", "desktop-file-utils", "gettext", "vala"]

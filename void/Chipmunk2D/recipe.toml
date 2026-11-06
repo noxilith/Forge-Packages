@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'Chipmunk2D'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "Chipmunk2D"
+version = "7.0.3"
+archive = "https://github.com/slembcke/Chipmunk2D/archive/Chipmunk-7.0.3.tar.gz"
+sha256 = "1e6f093812d6130e45bdf4cb80280cb3c93d1e1833d8cf989d554d7963b7899a"
+strip_components = 1
+description = "Fast and lightweight 2D game physics library"
+homepage = "https://chipmunk-physics.net/"
+license = "MIT"
+patches = ["patches/musl-sysctl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DEMOS=NO"]

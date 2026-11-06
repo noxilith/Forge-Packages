@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ecdsautils'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ecdsautils"
+version = "0.4.2"
+archive = "https://github.com/freifunk-gluon/ecdsautils/archive/refs/tags/v0.4.2.tar.gz"
+sha256 = "8880e5a506555a06d7a866de8a76c28bb4c7472abbf0d3fb396100d16c447174"
+strip_components = 1
+description = "Tiny collection of programs used for ECDSA"
+homepage = "https://github.com/freifunk-gluon/ecdsautils"
+license = "BSD-2-Clause AND MIT"
+deps = ["libuecc"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

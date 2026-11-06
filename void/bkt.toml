@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'bkt'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bkt"
+version = "0.8.2"
+archive = "https://github.com/dimo414/bkt/archive/refs/tags/0.8.2.tar.gz"
+sha256 = "d9128a13070ebc564bcc70210062bdd60eb757fd0f5d075c50e9aa7f714c6562"
+strip_components = 1
+description = "Subprocess caching utility"
+homepage = "https://www.bkt.rs/"
+license = "MIT"
+
+[build]
+system = "cargo"

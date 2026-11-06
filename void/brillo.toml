@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'brillo'. Review before relying on it.
+# settings not translated: make_install_args
+[package]
+name = "brillo"
+version = "1.4.13"
+archive = "https://gitlab.com/cameronnemo/brillo/-/archive/v1.4.13/brillo-v1.4.13.tar.gz"
+sha256 = "a08cc8279449f474f8124b8aeb76b34a10e89489853be5280d1476616769b260"
+strip_components = 1
+description = "Control the brightness of backlight and keyboard LED devices"
+homepage = "https://gitlab.com/cameronnemo/brillo"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"
+deps = ["go-md2man"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mdevd'. Review before relying on it.
+# 6 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "mdevd"
+version = "0.1.8.2"
+archive = "https://skarnet.org/software/mdevd/mdevd-0.1.8.2.tar.gz"
+sha256 = "ce1ae0149b6a57a34f608218fd6181aa6aa68135cac2f4d931b5b417b072e244"
+strip_components = 1
+description = "Small mdev-compatible kernel hotplug daemon similar to udevd"
+homepage = "https://skarnet.org/software/mdevd/"
+license = "ISC"
+deps = ["skalibs"]
+
+[build]
+system = "autotools"

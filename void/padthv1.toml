@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'padthv1'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, jack, qt6-svg
+[package]
+name = "padthv1"
+version = "1.4.3"
+archive = "https://downloads.sourceforge.net/sourceforge/padthv1/padthv1-1.4.3.tar.gz"
+sha256 = "2ed4374d29f225d8b809bdc2de304b2ddf81b8ae575cc3441d98fb0aef7fdeac"
+strip_components = 1
+description = "Old-school polyphonic additive synthesizer"
+homepage = "https://padthv1.sourceforge.io/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "liblo", "lv2", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

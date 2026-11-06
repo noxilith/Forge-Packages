@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-about'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-about"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-about/archive/2.4.0.tar.gz"
+sha256 = "fc5dbf055ecf7732191466181d8689f7006032be8eb71fcfffdc75a63bd09702"
+strip_components = 1
+description = "LXQt about application"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["liblxqt"]
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools", "qt6-base"]

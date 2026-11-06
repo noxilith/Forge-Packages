@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'SDL2'. Review before relying on it.
+[package]
+name = "SDL2"
+version = "2.32.10"
+archive = "https://www.libsdl.org/release/SDL2-2.32.10.tar.gz"
+sha256 = "5f5993c530f084535c65a6879e9b26ad441169b3e25d789d83287040a9ca5165"
+strip_components = 1
+description = "Simple DirectMedia Layer (version 2)"
+homepage = "https://www.libsdl.org/"
+license = "Zlib"
+deps = ["alsa-lib", "dbus", "eudev", "libsamplerate", "libusb-compat"]
+patches = ["patches/alsa-info_free.patch.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSDL_ALSA=ON", "-DSDL_ESD=OFF", "-DSDL_RPATH=OFF", "-DSDL_CLOCK_GETTIME=ON", "-DSDL_PULSEAUDIO_SHARED=OFF", "-DSDL_ALSA_SHARED=OFF", "-DSDL_DBUS=ON"]
+tools = ["nasm", "pkg-config"]

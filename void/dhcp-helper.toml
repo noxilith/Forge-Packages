@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'dhcp-helper'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "dhcp-helper"
+version = "1.2"
+archive = "https://ftp.debian.org/debian/pool/main/d/dhcp-helper/dhcp-helper_1.2-1.tar.gz"
+sha256 = "d11647e4af1f8b25fb854b6f444fec66910d7446d97de918eff5b8a284397e49"
+strip_components = 1
+description = "Simple, straightforward DHCP relay agent"
+homepage = "http://www.thekelleys.org.uk/dhcp-helper/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

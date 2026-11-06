@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xfce4-session'. Review before relying on it.
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "xfce4-session"
+version = "4.20.4"
+archive = "https://archive.xfce.org/src/xfce/xfce4-session/4.20/xfce4-session-4.20.4.tar.bz2"
+sha256 = "805c373378d080754d69dd2f20db95cdc066c89a4f024a41435ca0d66571c402"
+strip_components = 1
+description = "Session manager for the XFCE desktop environment"
+homepage = "https://xfce.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk-layer-shell", "iceauth", "libSM", "libwnck", "libxfce4ui", "libxfce4windowing", "polkit", "upower", "xfce4-panel"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-polkit"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

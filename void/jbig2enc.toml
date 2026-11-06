@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'jbig2enc'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "jbig2enc"
+version = "0.32"
+archive = "https://github.com/agl/jbig2enc/archive/refs/tags/0.32.tar.gz"
+sha256 = "5b3b1c48617e5b1608f916a78038ea867a2c9eb20c2ff34a78a48a243f655c2a"
+strip_components = 1
+description = "JBIG2 Encoder"
+homepage = "https://github.com/agl/jbig2enc"
+license = "Apache-2.0"
+deps = ["leptonica", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

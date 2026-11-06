@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'qsynth'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fluidsynth, qt6-svg, qt6-tools
+[package]
+name = "qsynth"
+version = "1.0.5"
+archive = "https://downloads.sourceforge.net/sourceforge/qsynth/qsynth-1.0.5.tar.gz"
+sha256 = "b35cf78232992a6b0f605ac1e931478a331478bf71a2f4ae750d71a6124adcd8"
+strip_components = 1
+description = "Qt GUI Interface for FluidSynth"
+homepage = "http://qsynth.sourceforge.io"
+license = "GPL-2.0-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

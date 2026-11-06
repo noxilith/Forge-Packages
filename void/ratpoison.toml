@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ratpoison'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libreadline8, perl
+[package]
+name = "ratpoison"
+version = "1.4.9"
+archive = "https://download.savannah.nongnu.org/releases/ratpoison/ratpoison-1.4.9.tar.xz"
+sha256 = "d98fa4be025ecca453c407ff311ab3949f29f20d6d8abedf8f0716b85fc8d1f1"
+strip_components = 1
+description = "Window manager without mouse dependency"
+homepage = "https://www.nongnu.org/ratpoison/"
+license = "GPL-2.0-only"
+deps = ["libICE", "libXft", "libXinerama", "libXrandr", "libXtst"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["texinfo"]

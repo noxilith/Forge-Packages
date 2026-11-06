@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'embree'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "embree"
+version = "4.4.1"
+archive = "https://github.com/embree/embree/archive/refs/tags/v4.4.1.tar.gz"
+sha256 = "dcf338cc61b636c871ccf370e673bfd380c5ecb71ce49ad50f28e1d4ec9995dc"
+strip_components = 1
+description = "High Performance Ray Tracing Kernels"
+homepage = "https://embree.github.io/"
+license = "Apache-2.0"
+deps = ["ImageMagick", "glfw", "libXmu", "libfreeglut", "libjpeg-turbo", "libpng", "openexr", "tbb"]
+
+[build]
+system = "cmake"
+configure_args = ["-DEMBREE_IGNORE_CMAKE_CXX_FLAGS=OFF", "-DEMBREE_TUTORIALS=OFF", "-DEMBREE_ZIP_MODE=OFF", "-DCMAKE_BUILD_TYPE=Release"]
+deps = ["ispc"]

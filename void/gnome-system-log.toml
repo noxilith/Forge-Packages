@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-system-log'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, intltool, itstool
+[package]
+name = "gnome-system-log"
+version = "3.9.90"
+archive = "https://download.gnome.org/sources/gnome-system-log/3.9/gnome-system-log-3.9.90.tar.xz"
+sha256 = "9eeb51982d347aa7b33703031e2c1d8084201374665425cd62199649b29a5411"
+strip_components = 1
+description = "GNOME system log viewer"
+homepage = "http://www.gnome.org"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-schemas-compile"]
+tools = ["pkg-config"]
+deps = ["glib"]

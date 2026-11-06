@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mimalloc'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "mimalloc"
+version = "3.6.1"
+archive = "https://github.com/microsoft/mimalloc/archive/refs/tags/v3.6.1.tar.gz"
+sha256 = "2672e6a99d4579fb4bb32d9de0d63aa424ce600d31fbfaf06eb74d940d2e07a6"
+strip_components = 1
+description = "General purpose allocator with excellent performance characteristics"
+homepage = "https://github.com/microsoft/mimalloc"
+license = "MIT"
+patches = ["patches/0001-ensure-libname-is-libmimalloc.so.patch", "patches/0002-i686-pprof-test.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release", "-DMI_BUILD_OBJECT=OFF", "-DMI_INSTALL_TOPLEVEL=ON"]

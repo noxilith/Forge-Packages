@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'chronograf'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_build
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper, make_dirs
+# needs, but Forge has no recipe for yet: yarn
+[package]
+name = "chronograf"
+version = "1.11.4"
+archive = "https://github.com/influxdata/chronograf/archive/1.11.4.tar.gz"
+sha256 = "7d3c567b38e0c38807aedbc63fb0840db68ab08a8aeeb57a719c77f579baf538"
+strip_components = 1
+description = "Open source monitoring and visualization UI for the TICK stack"
+homepage = "https://www.influxdata.com/time-series-platform/chronograf/"
+license = "AGPL-3.0-or-later"
+patches = ["patches/lmdb.patch", "patches/musl-cargo-target.patch", "patches/noscripts.patch"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]
+deps = ["nodejs"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libnitrokey'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: nitrokey-udev-rules
+[package]
+name = "libnitrokey"
+version = "3.8"
+archive = "https://github.com/Nitrokey/libnitrokey/releases/download/v3.8/libnitrokey-v3.8.tar.gz"
+sha256 = "3b7ebcfc47b2c45313bc5f17842f0160cbaf87f41d2621af18c5b56837e393a1"
+strip_components = 1
+description = "Communicate with Nitrokey devices in a clean and easy manner"
+homepage = "https://github.com/Nitrokey/libnitrokey"
+license = "LGPL-3.0-or-later"
+deps = ["hidapi"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

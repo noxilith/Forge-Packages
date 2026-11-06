@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'yara'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "yara"
+version = "4.5.8"
+archive = "https://github.com/VirusTotal/yara/archive/v4.5.8.tar.gz"
+sha256 = "c322414975ff6f701149856613afdcd92a7e6939c284c798ae3c85618197efaa"
+strip_components = 1
+description = "Pattern matching swiss knife for malware researchers"
+homepage = "https://virustotal.github.io/yara/"
+license = "BSD-3-Clause"
+deps = ["file", "jansson", "openssl", "protobuf-c"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-magic", "--enable-cuckoo"]
+tools = ["pkg-config"]

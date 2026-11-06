@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nufraw'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_configure
+[package]
+name = "nufraw"
+version = "0.43.3"
+archive = "https://downloads.sourceforge.net/sourceforge/nufraw/nufraw-0.43-3.tar.gz"
+sha256 = "2c7dcc1590993ec267b3112562b2433010d6f94f6acc6506c76aa29cf8c6c32c"
+strip_components = 1
+description = "Utility to read and manipulate raw images from digital cameras"
+homepage = "https://sourceforge.net/projects/nufraw/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "exiv2", "glib", "gtkimageview", "jasper", "lcms2", "lensfun"]
+patches = ["patches/0001-nufraw-glib-2.70.patch", "patches/exiv-0.28.x.diff"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-contrast", "--enable-mime", "--enable-openmp", "--enable-extras"]
+tools = ["pkg-config"]

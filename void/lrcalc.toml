@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'lrcalc'. Review before relying on it.
+[package]
+name = "lrcalc"
+version = "2.1"
+archive = "https://sites.math.rutgers.edu/~asbuch/lrcalc/lrcalc-2.1.tar.gz"
+sha256 = "996ac00e6ea8321ef09b34478f5379f613933c3254aeba624b6419b8afa5df57"
+strip_components = 1
+description = "Littlewood-Richardson Calculator"
+homepage = "https://sites.math.rutgers.edu/~asbuch/lrcalc/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

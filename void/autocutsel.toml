@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'autocutsel'. Review before relying on it.
+[package]
+name = "autocutsel"
+version = "0.10.1"
+archive = "https://github.com/sigmike/autocutsel/releases/download/0.10.1/autocutsel-0.10.1.tar.gz"
+sha256 = "f17e06d42f7494436d4b26f4be0b6b0da39481c0400c96778e4b905b6341eb17"
+strip_components = 1
+description = "Synchronize the two copy/paste buffers used by X applications"
+homepage = "https://github.com/sigmike/autocutsel"
+license = "GPL-2.0-or-later"
+deps = ["libXaw"]
+
+[build]
+system = "autotools"

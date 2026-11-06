@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'twitch-cli'. Review before relying on it.
+# settings not translated: go_ldflags, go_import_path, CPPFLAGS
+[package]
+name = "twitch-cli"
+version = "1.1.25"
+archive = "https://github.com/twitchdev/twitch-cli/archive/refs/tags/v1.1.25.tar.gz"
+sha256 = "63d13cd54b64e17237650d7aaadb1453fe28565f54111be056beb24d58831c67"
+strip_components = 1
+description = "Official Twitch CLI to make developing on Twitch easier"
+homepage = "https://dev.twitch.tv/docs/cli"
+license = "Apache-2.0"
+
+[build]
+system = "go"

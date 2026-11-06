@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xconsole'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xconsole"
+version = "1.1.1"
+archive = "https://www.x.org/releases/individual/app/xconsole-1.1.1.tar.xz"
+sha256 = "d412abbea2423f2930443c43db1c83d7d0cf2b677419b86ed54aa5d47f072322"
+strip_components = 1
+description = "Monitor system console messages with X"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXaw"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

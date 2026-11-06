@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'makedepend'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "makedepend"
+version = "1.0.9"
+archive = "https://www.x.org/releases/individual/util/makedepend-1.0.9.tar.xz"
+sha256 = "92d0deb659fff6d8ddbc1d27fc4ca8ceb2b6dbe15d73f0a04edc09f1c5782dd4"
+strip_components = 1
+description = "Dependency generator for makefiles"
+homepage = "https://gitlab.freedesktop.org/xorg/util/makedepend"
+license = "MIT"
+deps = ["xorgproto"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

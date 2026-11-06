@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'rpi-utils'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: perl
+[package]
+name = "rpi-utils"
+version = "20260126"
+archive = "https://github.com/raspberrypi/utils/archive/f0ceb02829c3f8349b53633747527f4e2e5c0ae7.tar.gz"
+sha256 = "eac3765a2d18f36e8410d32619c3f33b1c87a0fb431857d3b319e81fe7287d60"
+strip_components = 1
+description = "Collection of utilities for Raspberry Pi"
+homepage = "https://github.com/raspberrypi/utils"
+license = "BSD-3-Clause"
+deps = ["dtc"]
+patches = ["patches/no-dev.patch", "patches/realloc-32bit.patch"]
+
+[build]
+system = "cmake"

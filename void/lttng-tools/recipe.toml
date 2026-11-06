@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lttng-tools'. Review before relying on it.
+# needs, but Forge has no recipe for yet: lttng-modules-dkms, lttng-ust, util-linux-common
+[package]
+name = "lttng-tools"
+version = "2.12.4"
+archive = "https://lttng.org/files/lttng-tools/lttng-tools-2.12.4.tar.bz2"
+sha256 = "d729f8c2373a41194f171aeb0da0a9bb35ac181f31afa7e260786d19a500dea1"
+strip_components = 1
+description = "Set of tools to control LTTng tracing"
+homepage = "https://lttng.org"
+license = "LGPL-2.1-only, GPL-2.0-only"
+deps = ["libxml2", "popt"]
+patches = ["patches/musl-ino_t.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

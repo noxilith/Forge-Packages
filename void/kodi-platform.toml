@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'kodi-platform'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kodi, tinyxml
+[package]
+name = "kodi-platform"
+version = "20250416"
+archive = "https://github.com/xbmc/kodi-platform/archive/kodiplatform-20250416.tar.gz"
+sha256 = "e559715b37b91e219ea2bb72cff0d0b29cf08386685fd12328520a294bb17b57"
+strip_components = 1
+description = "Kodi platform support library"
+homepage = "https://github.com/xbmc/kodi-platform"
+license = "GPL-2.0-or-later"
+deps = ["p8-platform"]
+
+[build]
+system = "cmake"

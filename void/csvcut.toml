@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'csvcut'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "csvcut"
+version = "1.4"
+archive = "https://github.com/gega/csvcut/releases/download/v1.4/csvcut-1.4.tar.gz"
+sha256 = "5cc3694b910111d5220c6ca8230f65ed66b9f8c5e5eddb880e27724510889c66"
+strip_components = 1
+description = "Process CSV files like 'cut' utility"
+homepage = "https://github.com/gega/csvcut"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

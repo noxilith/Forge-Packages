@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qlipper'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "qlipper"
+version = "6.1.0"
+archive = "https://github.com/pvanek/qlipper/archive/6.1.0.tar.gz"
+sha256 = "6d1aa86060cdcd97ae409b6d77cb95c86db3da4ccba02bdd06c159bc7482ce8f"
+strip_components = 1
+description = "Lightweight and cross-platform clipboard history applet"
+homepage = "https://github.com/pvanek/qlipper"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kguiaddons", "qt6-base"]
+
+[build]
+system = "cmake"

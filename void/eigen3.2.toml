@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'eigen3.2'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "eigen3.2"
+version = "3.2.10"
+archive = "https://gitlab.com/libeigen/eigen/-/archive/3.2.10/eigen-3.2.10.tar.bz2"
+sha256 = "1c982c9fa13422e885fcd82a140dbc6e5e6cd066deed38ba0b8051b70462e4d1"
+strip_components = 1
+description = "C++ template library for linear algebra (version 3.x)"
+homepage = "http://eigen.tuxfamily.org/"
+license = "MPL-2.0, GPL-3.0-or-later, LGPL-2.1-or-later, BSD-3-Clause"
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release"]

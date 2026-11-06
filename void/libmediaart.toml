@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libmediaart'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "libmediaart"
+version = "1.9.6"
+archive = "https://download.gnome.org/sources/libmediaart/1.9/libmediaart-1.9.6.tar.xz"
+sha256 = "c3bc5025d7db380587f9c8eb800c611f6b5a16d6b4b78fcff93f62876a677f17"
+strip_components = 1
+description = "Media art extraction and cache management library"
+homepage = "http://www.gnome.org/"
+license = "LGPL-2.1-or-later"
+deps = ["gdk-pixbuf", "glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

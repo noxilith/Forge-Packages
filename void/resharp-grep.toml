@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'resharp-grep'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "resharp-grep"
+version = "0.6.0"
+archive = "https://github.com/ieviev/resharp-grep/archive/refs/tags/v0.6.0.tar.gz"
+sha256 = "056b187d4ee8c3abe7a6f3d077420e5776fb24fa83c9e82c89ce14f8c29d71ca"
+strip_components = 1
+description = "Recursive grep with boolean constraints and regex intersection"
+homepage = "https://github.com/ieviev/resharp-grep"
+license = "MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'hydrogen'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: jack, ladspa-sdk, libcppunit, qt5
+[package]
+name = "hydrogen"
+version = "1.0.2"
+archive = "https://github.com/hydrogen-music/hydrogen/archive/1.0.2.tar.gz"
+sha256 = "de1ce64da8ae7a84d7fbd789e84010d6a837378bc9811acb282c30b9ee8042f5"
+strip_components = 1
+description = "Advanced drum machine"
+homepage = "http://www.hydrogen-music.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "libarchive", "liblo", "liblrdf", "libsndfile", "pulseaudio"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWANT_DEBUG=OFF"]
+tools = ["pkg-config"]

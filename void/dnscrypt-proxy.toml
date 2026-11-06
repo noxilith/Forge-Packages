@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dnscrypt-proxy'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path, conf_files
+# needs, but Forge has no recipe for yet: python3-urllib3
+[package]
+name = "dnscrypt-proxy"
+version = "2.1.18"
+archive = "https://github.com/DNSCrypt/dnscrypt-proxy/archive/refs/tags/2.1.18.tar.gz"
+sha256 = "9b810d862ba07c383cc0b8f9f7f1f2ca8f74a02f849d818c4c4d37cc21a7dfa6"
+strip_components = 1
+description = "DNS proxy that encrypts queries"
+homepage = "https://github.com/DNSCrypt/dnscrypt-proxy"
+license = "ISC"
+
+[build]
+system = "go"

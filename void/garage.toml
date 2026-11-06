@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'garage'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: sqlite, zstd
+[package]
+name = "garage"
+version = "2.3.0"
+archive = "https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v2.3.0.tar.gz"
+sha256 = "b83a981677676b35400bbbaf20974c396f32da31c7c7630ce55fc3e62c0e2e01"
+strip_components = 1
+description = "Distributed S3 object storage service tailored for self-hosting"
+homepage = "https://garagehq.deuxfleurs.fr/"
+license = "AGPL-3.0-only"
+deps = ["libsodium"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

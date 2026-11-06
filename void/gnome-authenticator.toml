@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-authenticator'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool, llvm
+[package]
+name = "gnome-authenticator"
+version = "4.5.0"
+archive = "https://gitlab.gnome.org/World/Authenticator/-/archive/4.5.0/Authenticator-4.5.0.tar.gz"
+sha256 = "195d61084f41a90b3ef5dfa433309a5b86beef76ea6cd36e3329b72181eb23a1"
+strip_components = 1
+description = "Two-factor authentication code generator for GNOME"
+homepage = "https://gitlab.gnome.org/World/Authenticator"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gnome-keyring", "gtk4", "libadwaita", "openssl", "pipewire", "zbar"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk+3"]

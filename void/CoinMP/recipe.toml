@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'CoinMP'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_build
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "CoinMP"
+version = "1.8.4"
+archive = "https://www.coin-or.org/download/source/CoinMP/CoinMP-1.8.4.tgz"
+sha256 = "3459fb0ccbdd39342744684338984ac4cc153fb0434f4cae8cf74bd67490a38d"
+strip_components = 1
+description = "Library that supports most of Coin CLP, CBC and CGL"
+homepage = "https://github.com/coin-or/CoinMP"
+license = "CPL-1.0"
+deps = ["Clp", "coin-or-cbc", "coin-or-cgl", "coin-or-osi", "coin-or-sample", "coin-or-utils"]
+patches = ["patches/fix-gcc9.1-strncpy.patch", "patches/implicit-function.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["graphviz"]

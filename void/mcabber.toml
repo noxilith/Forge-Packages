@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mcabber'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libotr, ncurses
+[package]
+name = "mcabber"
+version = "1.1.2"
+archive = "https://github.com/McKael/mcabber/releases/download/1.1.2/mcabber-1.1.2.tar.bz2"
+sha256 = "c4a1413be37434b6ba7d577d94afb362ce89e2dc5c6384b4fa55c3e7992a3160"
+strip_components = 1
+description = "Small XMPP (Jabber) console client"
+homepage = "http://mcabber.com"
+license = "GPL-2.0-or-later"
+deps = ["aspell", "glib", "gpgme", "libgcrypt", "loudmouth"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-hgcset", "--enable-aspell", "--enable-otr"]
+tools = ["pkg-config"]

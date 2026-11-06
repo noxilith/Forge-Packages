@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libgta'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2
+[package]
+name = "libgta"
+version = "1.2.1"
+archive = "https://marlam.de/gta/releases/libgta-1.2.1.tar.xz"
+sha256 = "d445667e145f755f0bc34ac89b63a6bfdce1eea943f87ee7a3f23dc0dcede8b1"
+strip_components = 1
+description = "Generic Tagged Arrays"
+homepage = "https://marlam.de/gta/"
+license = "LGPL-2.1-or-later"
+deps = ["xz", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

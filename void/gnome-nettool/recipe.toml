@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-nettool'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: bind, hicolor-icon-theme, itstool, net-tools, traceroute
+[package]
+name = "gnome-nettool"
+version = "42.0"
+archive = "https://download.gnome.org/sources/gnome-nettool/42/gnome-nettool-42.0.tar.xz"
+sha256 = "a54f29eef2038aee69551c8b19ca4f758e5eb9e2090a4bc6b5633dff0188751f"
+strip_components = 1
+description = "Collection of GNOME3 Networking Tools"
+homepage = "http://www.gnome.org"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gsettings-desktop-schemas", "gtk+3", "iputils", "libgtop"]
+patches = ["patches/meson-drop-unused-positional-arguments.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

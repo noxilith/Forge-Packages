@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'inspectrum'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, qt5
+[package]
+name = "inspectrum"
+version = "0.3.1"
+archive = "https://github.com/miek/inspectrum/archive/v0.3.1.tar.gz"
+sha256 = "94e42333aceb06c15fb6fc10d186d61112975fdcf9539357a279e886e9edf35e"
+strip_components = 1
+description = "Offline radio signal analyzer"
+homepage = "https://github.com/miek/inspectrum"
+license = "GPL-3.0-or-later"
+deps = ["liquid-dsp"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

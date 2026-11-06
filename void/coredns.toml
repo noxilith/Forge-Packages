@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'coredns'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_ldflags, go_import_path, make_dirs, conf_files
+[package]
+name = "coredns"
+version = "1.10.1"
+archive = "https://github.com/coredns/coredns/archive/v1.10.1.tar.gz"
+sha256 = "f47186452e5f2925e2c71135669afd9e03b9b55831417d33d612ef2fa69924a7"
+strip_components = 1
+description = "CoreDNS is a DNS server that chains plugins"
+homepage = "https://coredns.io"
+license = "Apache-2.0"
+
+[build]
+system = "go"
+deps = ["mmark"]

@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'ding-libs'. Review before relying on it.
+[package]
+name = "ding-libs"
+version = "0.6.1"
+archive = "https://releases.pagure.org/SSSD/ding-libs/ding-libs-0.6.1.tar.gz"
+sha256 = "a319a327deb81f2dfab9ce4a4926e80e1dac5dcfc89f4c7e548cec2645af27c1"
+strip_components = 1
+description = "'D is not GLib' utility libraries"
+homepage = "https://pagure.io/SSSD/ding-libs"
+license = "LGPL-3.0-or-later"
+
+[build]
+system = "autotools"

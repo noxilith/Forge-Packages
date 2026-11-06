@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'ruby'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch, pre_configure
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: libffi, libreadline8
+[package]
+name = "ruby"
+version = "3.4.12"
+archive = "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.12.tar.xz"
+sha256 = "db6c147940d7ad0b706823d42c8e6713c36dec70a1f83f635f1d3a7f0599ec90"
+strip_components = 1
+description = "Ruby programming language"
+homepage = "https://www.ruby-lang.org/en/"
+license = "Ruby, BSD-2-Clause"
+deps = ["gdbm", "libyaml", "openssl", "pango", "zlib"]
+patches = ["patches/musl-fix-get_main_stack.patch", "patches/test_insns-lower-recursion-depth.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--disable-rpath", "--enable-pie"]
+tools = ["bison", "pkg-config"]
+deps = ["groff"]

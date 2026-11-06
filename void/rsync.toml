@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'rsync'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS, conf_files
+# needs, but Forge has no recipe for yet: python3-cmarkgfm, zstd
+[package]
+name = "rsync"
+version = "3.5.1"
+archive = "https://www.samba.org/ftp/rsync/src/rsync-3.5.1.tar.gz"
+sha256 = "c55f9c9dc10fb8bec397b399a0fdded53cc9a2d8e30891bb0d63724d25c37bef"
+strip_components = 1
+description = "Remote fast incremental file transfer tool"
+homepage = "https://rsync.samba.org/"
+license = "GPL-3.0-only"
+deps = ["acl", "libidn2", "lz4", "openssl", "popt", "xxHash", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-included-zlib=no", "--with-rrsync"]
+tools = ["perl"]

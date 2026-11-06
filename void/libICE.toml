@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libICE'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libICE"
+version = "1.1.2"
+archive = "https://www.x.org/releases/individual/lib/libICE-1.1.2.tar.xz"
+sha256 = "974e4ed414225eb3c716985df9709f4da8d22a67a2890066bc6dfc89ad298625"
+strip_components = 1
+description = "Inter Client Exchange (ICE) library for X"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["xorgproto", "xtrans"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'scryer-prolog'. Review before relying on it.
+# hooks not translated: post_install, pre_check
+[package]
+name = "scryer-prolog"
+version = "0.10.0"
+archive = "https://github.com/mthom/scryer-prolog/archive/refs/tags/v0.10.0.tar.gz"
+sha256 = "353eca4eea539e0a0eedb1572736bfcc64c5fb6fd2da3b8737c513ad62f60f3b"
+strip_components = 1
+description = "Modern Prolog implementation written mostly in Rust"
+homepage = "https://github.com/mthom/scryer-prolog"
+license = "BSD-3-Clause"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

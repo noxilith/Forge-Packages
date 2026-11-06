@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kdnssd'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kdnssd"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kdnssd-6.30.0.tar.xz"
+sha256 = "6d59a98f58c66842d29fd7a00e07e0f74e375061aabdfb4c52bbe3140c278225"
+strip_components = 1
+description = "Network service discovery using Zeroconf"
+homepage = "https://invent.kde.org/frameworks/kdnssd"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

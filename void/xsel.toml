@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xsel'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "xsel"
+version = "1.2.1"
+archive = "https://github.com/kfish/xsel/archive/refs/tags/1.2.1.tar.gz"
+sha256 = "18487761f5ca626a036d65ef2db8ad9923bf61685e06e7533676c56d7d60eb14"
+strip_components = 1
+description = "Command-line getting and setting the contents of the X selection"
+homepage = "http://www.kfish.org/software/xsel/"
+license = "HPND-sell-variant"
+deps = ["libXt"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

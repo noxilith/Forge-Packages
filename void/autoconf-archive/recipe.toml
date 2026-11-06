@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'autoconf-archive'. Review before relying on it.
+[package]
+name = "autoconf-archive"
+version = "2023.02.20"
+archive = "https://ftp.gnu.org/gnu/autoconf-archive/autoconf-archive-2023.02.20.tar.xz"
+sha256 = "71d4048479ae28f1f5794619c3d72df9c01df49b1c628ef85fde37596dc31a33"
+strip_components = 1
+description = "Collection of freely re-usable Autoconf macros"
+homepage = "https://www.gnu.org/software/autoconf-archive/"
+license = "GPL-3.0-or-later"
+patches = ["patches/0001-AX_C_FLOAT_WORDS_BIGENDIAN-Fix-bug-AX_C_FLOAT_WORDS_.patch"]
+
+[build]
+system = "autotools"
+deps = ["texinfo"]

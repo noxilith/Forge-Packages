@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'OpenCL-CLHPP'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "OpenCL-CLHPP"
+version = "2026.05.29"
+archive = "https://github.com/KhronosGroup/OpenCL-CLHPP/archive/refs/tags/v2026.05.29.tar.gz"
+sha256 = "fafb4fd202d113992c009d46e6358e70076167e62a5baeb377fe813033a2655e"
+strip_components = 1
+description = "OpenCL API C++ bindings"
+homepage = "https://github.com/KhronosGroup/OpenCL-CLHPP"
+license = "Apache-2.0"
+deps = ["OpenCL-Headers", "ocl-icd"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_EXAMPLES=OFF", "-DBUILD_TESTING=OFF", "-DBUILD_DOCS=ON"]
+deps = ["graphviz"]

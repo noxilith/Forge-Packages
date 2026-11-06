@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libnsl'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libnsl"
+version = "2.0.1"
+archive = "https://github.com/thkukuk/libnsl/archive/v2.0.1.tar.gz"
+sha256 = "59048b53be8d3904bf939313debf13956a881b0de79da40f7719a77bcd1e9c53"
+strip_components = 1
+description = "Public client interface for NIS(YP) and NIS+"
+homepage = "https://github.com/thkukuk/libnsl"
+license = "LGPL-2.1-only"
+deps = ["libtirpc"]
+
+[build]
+system = "autotools"
+tools = ["m4", "pkg-config"]
+deps = ["gettext"]

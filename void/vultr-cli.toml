@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'vultr-cli'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "vultr-cli"
+version = "3.11.0"
+archive = "https://github.com/vultr/vultr-cli/archive/refs/tags/v3.11.0.tar.gz"
+sha256 = "e29be650393530c424ea301b6d39092d2daceaa8059a4096bcfa3bbd54828fe2"
+strip_components = 1
+description = "Official command line tool for Vultr services"
+homepage = "https://github.com/vultr/vultr-cli"
+license = "Apache-2.0"
+
+[build]
+system = "go"

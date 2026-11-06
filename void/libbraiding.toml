@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libbraiding'. Review before relying on it.
+[package]
+name = "libbraiding"
+version = "1.3.2"
+archive = "https://github.com/miguelmarco/libbraiding/releases/download/1.3.2/libbraiding-1.3.2.tar.gz"
+sha256 = "d43a32e7770d5c9a89ae489c5ac353da9610a761f76745382cf7612eab046ffd"
+strip_components = 1
+description = "Library to compute several properties of braids"
+homepage = "https://github.com/miguelmarco/libbraiding/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

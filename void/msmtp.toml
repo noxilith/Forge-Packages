@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'msmtp'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "msmtp"
+version = "1.8.34"
+archive = "https://marlam.de/msmtp/releases/msmtp-1.8.34.tar.xz"
+sha256 = "84e8fe2a5a80a1ee7802013b3fbdb846a3f27a4163cf37a1c6d7c7f888873ead"
+strip_components = 1
+description = "Mini SMTP client"
+homepage = "https://marlam.de/msmtp/"
+license = "GPL-3.0-or-later"
+deps = ["gnutls"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

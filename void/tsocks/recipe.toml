@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tsocks'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+[package]
+name = "tsocks"
+version = "1.8beta5"
+archive = "https://downloads.sourceforge.net/sourceforge/tsocks/tsocks-1.8beta5.tar.gz"
+sha256 = "849d7ef5af80d03e76cc05ed9fb8fa2bcc2b724b51ebfd1b6be11c7863f5b347"
+strip_components = 1
+description = "Transparent SOCKS proxying library"
+homepage = "http://tsocks.sourceforge.net/"
+license = "GPL-2.0-only"
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"

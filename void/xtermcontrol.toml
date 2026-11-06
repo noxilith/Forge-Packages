@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'xtermcontrol'. Review before relying on it.
+[package]
+name = "xtermcontrol"
+version = "3.11"
+archive = "https://thrysoee.dk/xtermcontrol/xtermcontrol-3.11.tar.gz"
+sha256 = "49ea6d3eda0dbcf875363763cefe1818ce6786b9910255ea641d9786bdafd44c"
+strip_components = 1
+description = "Enables dynamic control of xterm properties"
+homepage = "https://thrysoee.dk/xtermcontrol"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"

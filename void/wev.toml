@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wev'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wev"
+version = "1.0.0"
+archive = "https://git.sr.ht/~sircmpwn/wev/archive/1.0.0.tar.gz"
+sha256 = "613a1df1a4879d50ce72023de14aaf05be2e6f51346e84a69f50fc6d8502bbf4"
+strip_components = 1
+description = "Tool for debugging events on a Wayland, analagous to the X11 tool xev"
+homepage = "https://git.sr.ht/~sircmpwn/wev"
+license = "MIT"
+deps = ["libxkbcommon", "wayland", "wayland-protocols"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["scdoc"]

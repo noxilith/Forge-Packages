@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'uptimed'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+[package]
+name = "uptimed"
+version = "0.4.7"
+archive = "https://github.com/rpodgorny/uptimed/archive/v0.4.7.tar.gz"
+sha256 = "2f669d2968ca1d0865b7a97791c9dbcca759631a1afc5d6702964f070a57252b"
+strip_components = 1
+description = "Daemon that records system uptimes"
+homepage = "https://github.com/rpodgorny/uptimed"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

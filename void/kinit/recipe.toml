@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kinit'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kinit"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kinit-5.116.0.tar.xz"
+sha256 = "e4a4acc661035d22f7636397d23307c2e4e4129a7ed82d458fdf2f7ee63dbc2c"
+strip_components = 1
+description = "Helper library to speed up start of applications on KDE workspaces"
+homepage = "https://invent.kde.org/frameworks/kinit"
+license = "LGPL-2.0-only"
+deps = ["kbookmarks", "kdoctools", "kio", "kservice", "libcap"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

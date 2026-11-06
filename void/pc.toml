@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "pc"
+version = "0.6"
+archive = "https://git.sr.ht/~ft/pc/archive/0.6.tar.gz"
+sha256 = "30636dcf06690d5483389e53759ac0e9fa6fc1de44dcfe78119b698b0b959d90"
+strip_components = 1
+description = "Programmer's calculator"
+homepage = "https://git.sr.ht/~ft/pc"
+license = "MIT"
+
+[build]
+system = "make"
+deps = ["byacc"]

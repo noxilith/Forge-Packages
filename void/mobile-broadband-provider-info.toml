@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mobile-broadband-provider-info'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mobile-broadband-provider-info"
+version = "20250613"
+archive = "https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info/-/archive/20250613/mobile-broadband-provider-info-20250613.tar.bz2"
+sha256 = "7bf72daee64895c77c0f0d2f2b96c4117be3c063292a6d522392946b303cb841"
+strip_components = 1
+description = "Database of mobile broadband service providers"
+homepage = "https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info/"
+license = "custom:Creative Commons Public Domain"
+
+[build]
+system = "meson"
+deps = ["libxslt"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'zim-tools'. Review before relying on it.
+# needs, but Forge has no recipe for yet: Mustache, libzim
+[package]
+name = "zim-tools"
+version = "3.5.0"
+archive = "https://github.com/openzim/zim-tools/archive/refs/tags/3.5.0.tar.gz"
+sha256 = "43c9049e61165c63a763fbad72ef758051dcad24f84ae1ab2876e9520c753f03"
+strip_components = 1
+description = "Various ZIM command line tools"
+homepage = "http://www.openzim.org"
+license = "GPL-3.0-or-later"
+deps = ["docopt.cpp", "file", "gumbo-parser", "libicu78", "xapian-core", "zlib"]
+patches = ["patches/ftbfs.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

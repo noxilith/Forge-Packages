@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'man-db'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: bzip2, db
+[package]
+name = "man-db"
+version = "2.13.1"
+archive = "https://download.savannah.nongnu.org/releases/man-db/man-db-2.13.1.tar.xz"
+sha256 = "8afebb6f7eb6bb8542929458841f5c7e6f240e30c86358c1fbcefbea076c87d9"
+strip_components = 1
+description = "On-line manual database"
+homepage = "https://man-db.gitlab.io/man-db/"
+license = "GPL-3.0-or-later"
+deps = ["gettext", "groff", "gzip", "less", "libpipeline", "libseccomp", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-db=db", "--with-pager=less", "--disable-rpath", "--enable-threads=posix", "--disable-setuid", "--without-included-regex", "--enable-automatic-create", "--with-libseccomp", "--without-systemdsystemunitdir", "--without-systemdtmpfilesdir", "--enable-cache-owner=_man", "--disable-year2038"]
+tools = ["pkg-config"]

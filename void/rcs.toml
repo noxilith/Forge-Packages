@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rcs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ed, lzip
+[package]
+name = "rcs"
+version = "5.10.1"
+archive = "https://ftp.gnu.org/gnu/rcs/rcs-5.10.1.tar.lz"
+sha256 = "43ddfe10724a8b85e2468f6403b6000737186f01e60e0bd62fde69d842234cc5"
+strip_components = 1
+description = "Revision Control System"
+homepage = "http://www.gnu.org/software/rcs/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+deps = ["groff"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'orz'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "orz"
+version = "1.6.2"
+archive = "https://github.com/richox/orz/archive/v1.6.2.tar.gz"
+sha256 = "ff9f8d77084f0510cfb4966be7cf02a00c4a17715879dfdb85eaa1380023a7c7"
+strip_components = 1
+description = "General purpose data compressor"
+homepage = "https://github.com/richox/orz"
+license = "MIT"
+
+[build]
+system = "cargo"

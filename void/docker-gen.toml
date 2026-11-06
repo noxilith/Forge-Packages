@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'docker-gen'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "docker-gen"
+version = "0.17.2"
+archive = "https://github.com/nginx-proxy/docker-gen/archive/refs/tags/0.17.2.tar.gz"
+sha256 = "dfea32f45e8b3f0c61f93927375d538de6bb94c2089b0fb4adbbbce3289df378"
+strip_components = 1
+description = "Generate files from docker container meta-data"
+homepage = "https://github.com/nginx-proxy/docker-gen"
+license = "MIT"
+
+[build]
+system = "go"

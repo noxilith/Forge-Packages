@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'nilfs-utils'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "nilfs-utils"
+version = "2.3.1"
+archive = "https://github.com/nilfs-dev/nilfs-utils/archive/refs/tags/v2.3.1.tar.gz"
+sha256 = "f4488f2978b3054fd97f87d206032cbf376d98479759d2855b57bc24a8d8efb9"
+strip_components = 1
+description = "Log-structured file system for Linux - userspace utils"
+homepage = "https://nilfs.sourceforge.io/"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+configure_args = ["--without-selinux", "--with-libmount", "--enable-usrmerge=bin", "--enable-static"]
+tools = ["pkg-config"]

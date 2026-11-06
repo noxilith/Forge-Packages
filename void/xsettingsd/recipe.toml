@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xsettingsd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xsettingsd"
+version = "1.0.4"
+archive = "https://codeberg.org/derat/xsettingsd/archive/v1.0.4.tar.gz"
+sha256 = "fe56ced940390f97d08bbdad677eee8470387388e1cb54aea0dbff3308294a76"
+strip_components = 1
+description = "Daemon that implements the XSETTINGS specification"
+homepage = "https://codeberg.org/derat/xsettingsd"
+license = "BSD-3-Clause"
+deps = ["libX11"]
+patches = ["patches/scons.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

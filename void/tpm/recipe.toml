@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tpm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tpm"
+version = "1.3.3"
+archive = "https://github.com/nmeum/tpm/archive/1.3.3.tar.gz"
+sha256 = "85930c86b13a08c706c2845a4b09138b43e160ae43e3f5e81021241f31f463ad"
+strip_components = 1
+description = "Tiny password manager"
+homepage = "https://github.com/nmeum/tpm"
+license = "GPL-3.0-or-later"
+deps = ["gnupg"]
+patches = ["patches/gpg.patch"]
+
+[build]
+system = "make"
+tools = ["perl"]

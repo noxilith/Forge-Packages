@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mysql++'. Review before relying on it.
+# settings not translated: make_install_target
+[package]
+name = "mysql++"
+version = "3.3.0"
+archive = "https://tangentsoft.net/mysqlpp/releases/mysql++-3.3.0.tar.gz"
+sha256 = "449cbc46556cc2cc9f9d6736904169a8df6415f6960528ee658998f96ca0e7cf"
+strip_components = 1
+description = "C++ wrapper for MySQLs C API"
+homepage = "https://tangentsoft.net/mysqlpp"
+license = "LGPL-2.1-or-later"
+deps = ["mariadb"]
+patches = ["patches/01-fix-cross.patch"]
+
+[build]
+system = "autotools"

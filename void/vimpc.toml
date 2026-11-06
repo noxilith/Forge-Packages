@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'vimpc'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "vimpc"
+version = "0.09.2"
+archive = "https://github.com/boysetsfrog/vimpc/archive/v0.09.2.tar.gz"
+sha256 = "caa772f984e35b1c2fbe0349bc9068fc00c17bcfcc0c596f818fa894cac035ce"
+strip_components = 1
+description = "Ncurses based mpd client with vi like key bindings"
+homepage = "https://github.com/boysetsfrog/vimpc"
+license = "GPL-3.0-or-later"
+deps = ["curl", "glib", "libmpdclient", "pcre", "taglib"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-boost"]
+tools = ["pkg-config"]

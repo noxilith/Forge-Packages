@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libopensmtpd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, make_cmd
+[package]
+name = "libopensmtpd"
+version = "0.7"
+archive = "https://distfiles.sigtrap.nl/libopensmtpd-0.7.tar.gz"
+sha256 = "cdd6d5e11a7063f9265da43a42309c646554b8b68b03982ca8472dbe2b08a613"
+strip_components = 1
+description = "Library for creating opensmtpd filters"
+homepage = "http://imperialat.at/dev/libopensmtpd/"
+license = "ISC"
+deps = ["libevent"]
+
+[build]
+system = "make"

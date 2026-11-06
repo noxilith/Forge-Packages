@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qqc2-breeze-style'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base
+[package]
+name = "qqc2-breeze-style"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/qqc2-breeze-style-6.7.5.tar.xz"
+sha256 = "788f0698c904112cc33bf6f8fb446b2e4fd7231d38c0955cbc3baa50d375d1ee"
+strip_components = 1
+description = "Breeze-inspired QQC2 style"
+homepage = "https://invent.kde.org/plasma/qqc2-breeze-style"
+license = "LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL"
+deps = ["kf6-kconfig", "kf6-kconfigwidgets", "kf6-kguiaddons", "kf6-kiconthemes", "kf6-kirigami", "kf6-kquickcharts", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "qt6-base"]

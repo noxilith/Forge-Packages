@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'alembic'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "alembic"
+version = "1.8.6"
+archive = "https://github.com/alembic/alembic/archive/1.8.6.tar.gz"
+sha256 = "c572ebdea3a5f0ce13774dd1fceb5b5815265cd1b29d142cf8c144b03c131c8c"
+strip_components = 1
+description = "Open framework for storing and sharing scene data"
+homepage = "https://www.alembic.io"
+license = "BSD-3-Clause, MIT"
+deps = ["imath", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

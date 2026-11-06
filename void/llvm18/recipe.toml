@@ -1,0 +1,23 @@
+# Imported from Void Linux's template for 'llvm18'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_build, post_install, post_patch, pre_build, pre_configure
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: libffi, python3-MyST-Parser, python3-Sphinx, python3-markdown-it, python3-mdit-py-plugins, python3-sphinx-automodapi, python3-sphinx-markdown-tables, python3-yaml
+[package]
+name = "llvm18"
+version = "18.1.8"
+archive = "https://github.com/llvm/llvm-project/archive/refs/tags/llvmorg-18.1.8.tar.gz"
+sha256 = "09c08693a9afd6236f27a2ebae62cda656eba19021ef3f94d59e931d662d4856"
+strip_components = 1
+description = "LLVM Compiler Infrastructure Project - Version 18"
+homepage = "https://www.llvm.org"
+license = "Apache-2.0"
+deps = ["elfutils", "libedit", "libxml2", "z3", "zlib"]
+patches = ["patches/SmallVector.patch", "patches/always-set-a-larger-stack-size-explicitly.patch", "patches/clang-001-fix-unwind-chain-inclusion.patch", "patches/clang-002-add-musl-triples.patch", "patches/clang-003-ppc64-dynamic-linker-path.patch", "patches/compiler-rt-sanitizer-ppc64-musl.patch", "patches/compiler-rt-sanitizer-supported-arch.patch", "patches/libcxx-armv67.patch", "patches/libcxx-musl.patch", "patches/libcxx-ssp-nonshared.patch", "patches/libcxxabi-dl.patch", "patches/libomp-soname.patch", "patches/llvm-001-musl.patch", "patches/llvm-004-override-opt.patch", "patches/llvm-005-ppc-bigpic.patch", "patches/llvm-006-aarch64-mf_exec.patch", "patches/openmp-stdint.patch", "patches/z3-libs.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release", "-DENABLE_LINKER_BUILD_ID=YES", "-DLIBCXX_CXX_ABI=libcxxabi", "-DLIBCXX_ENABLE_STATIC_ABI_LIBRARY=YES", "-DLIBCXXABI_USE_LLVM_UNWINDER=YES", "-DLIBCXXABI_ENABLE_STATIC_UNWINDER=YES", "-DLIBOMP_ENABLE_SHARED=YES", "-DLIBOMP_INSTALL_ALIASES=NO", "-DLLVM_INCLUDE_DOCS=YES", "-DLLVM_BUILD_DOCS=YES", "-DLLVM_ENABLE_SPHINX=YES", "-DLLVM_ENABLE_Z3_SOLVER=YES", "-DSPHINX_WARNINGS_AS_ERRORS=NO", "-DLLVM_INSTALL_UTILS=YES", "-DLLVM_BUILD_LLVM_DYLIB=YES", "-DLLVM_LINK_LLVM_DYLIB=YES", "-DCLANG_LINK_CLANG_DYLIB=YES", "-DLLVM_ENABLE_RTTI=YES", "-DLLVM_ENABLE_FFI=YES", "-DLLVM_ENABLE_PER_TARGET_RUNTIME_DIR=NO", "-DLLDB_ENABLE_PYTHON=NO", "-DLLVM_ENABLE_RUNTIMES=compiler-rt"]
+subdir = "llvm"
+tools = ["perl", "pkg-config"]
+deps = ["swig"]

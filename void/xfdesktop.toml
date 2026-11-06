@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xfdesktop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "xfdesktop"
+version = "4.20.2"
+archive = "https://archive.xfce.org/src/xfce/xfdesktop/4.20/xfdesktop-4.20.2.tar.bz2"
+sha256 = "1d9bd76015fb6e9aca05e73cd998c7c66ed4fc8c10b626e08fc2eb7c39df3f7b"
+strip_components = 1
+description = "Desktop manager for the Xfce Desktop Environment"
+homepage = "https://xfce.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "exo", "garcon", "gtk-layer-shell", "libnotify", "libwnck", "libxfce4ui", "libxfce4windowing", "libyaml"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtests=false"]
+tools = ["pkg-config"]
+deps = ["Thunar", "gettext", "glib"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kasts'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-tools
+[package]
+name = "kasts"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kasts-26.08.1.tar.xz"
+sha256 = "175b9cfc837c6ca5b3b31909088e18ced5fda885ae1897a611235c7087264515"
+strip_components = 1
+description = "Convergent podcast application"
+homepage = "https://apps.kde.org/kasts"
+license = "GPL-3.0-or-later"
+deps = ["glib", "gstreamer1", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kirigami", "kf6-kwindowsystem", "kf6-networkmanager-qt", "kf6-syndication", "kf6-threadweaver", "kirigami-addons", "qt6-base", "qt6-declarative", "qtkeychain-qt6", "taglib", "vlc"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

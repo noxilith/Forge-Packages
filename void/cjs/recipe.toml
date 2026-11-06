@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'cjs'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libreadline8, xvfb-run
+[package]
+name = "cjs"
+version = "128.1"
+archive = "https://github.com/linuxmint/cjs/archive/refs/tags/128.1.tar.gz"
+sha256 = "20e59f7402f960fbba184b2eb2cdee60e316554fd771bf4d5598ec5e3b9d1002"
+strip_components = 1
+description = "Javascript for Cinnamon"
+homepage = "https://github.com/linuxmint/cjs"
+license = "LGPL-2.0-or-later"
+deps = ["gtk+3", "gtk4", "mozjs128"]
+patches = ["patches/ignore-encoding-test.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dprofiler=disabled", "-Dinstalled_tests=false"]
+tools = ["pkg-config"]
+deps = ["dbus", "glib"]

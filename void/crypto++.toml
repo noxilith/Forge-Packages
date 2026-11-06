@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'crypto++'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_target, make_install_target, CXXFLAGS
+[package]
+name = "crypto++"
+version = "8.9.0"
+archive = "https://github.com/weidai11/cryptopp/archive/refs/tags/CRYPTOPP_8_9_0.tar.gz"
+sha256 = "ab5174b9b5c6236588e15a1aa1aaecb6658cdbe09501c7981ac8db276a24d9ab"
+strip_components = 1
+description = "Free C++ class library of cryptographic schemes"
+homepage = "http://www.cryptopp.com/"
+license = "BSL-1.0"
+
+[build]
+system = "make"

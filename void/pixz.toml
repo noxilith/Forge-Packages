@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pixz'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "pixz"
+version = "1.0.7"
+archive = "https://github.com/vasi/pixz/archive/v1.0.7.tar.gz"
+sha256 = "e29fba74ae399e5d27c21a6009002705ebcc20947b283ed0aa721df6a409680a"
+strip_components = 1
+description = "A parallel, indexing version of XZ"
+homepage = "https://github.com/vasi/pixz"
+license = "BSD-2-Clause"
+deps = ["libarchive", "xz"]
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_file_src_pixz_1=no"]
+tools = ["pkg-config"]

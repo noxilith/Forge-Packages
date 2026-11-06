@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'firejail'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: apparmor
+[package]
+name = "firejail"
+version = "0.9.80"
+archive = "https://github.com/netblue30/firejail/archive/0.9.80.tar.gz"
+sha256 = "1397bba6774a6361171c72464ddcdcfbc36d44fa413ecc9a1d56092f8da58825"
+strip_components = 1
+description = "SUID security sandbox program"
+homepage = "https://firejail.wordpress.com"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-apparmor"]
+tools = ["pkg-config"]

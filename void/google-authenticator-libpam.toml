@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'google-authenticator-libpam'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "google-authenticator-libpam"
+version = "1.09"
+archive = "https://github.com/google/google-authenticator-libpam/archive/1.09.tar.gz"
+sha256 = "ab1d7983413dc2f11de2efa903e5c326af8cb9ea37765dacb39949417f7cd037"
+strip_components = 1
+description = "PAM module for two-factor authentication"
+homepage = "https://github.com/google/google-authenticator-libpam"
+license = "Apache-2.0"
+deps = ["pam"]
+
+[build]
+system = "autotools"

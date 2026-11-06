@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xdg-desktop-portal-gnome'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "xdg-desktop-portal-gnome"
+version = "48.0"
+archive = "https://download.gnome.org/sources/xdg-desktop-portal-gnome/48/xdg-desktop-portal-gnome-48.0.tar.xz"
+sha256 = "cd15aca2e1364da308eb3796bb8ae4a577e60ca4fe12006b315232cfd19c8861"
+strip_components = 1
+description = "GNOME portal backend for xdg-desktop-portal"
+homepage = "https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome"
+license = "LGPL-2.1-or-later"
+deps = ["dbus", "glib", "gnome-desktop", "gsettings-desktop-schemas", "gtk4", "libadwaita", "xdg-desktop-portal", "xdg-desktop-portal-gtk"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "wayland"]

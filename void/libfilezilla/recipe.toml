@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libfilezilla'. Review before relying on it.
+[package]
+name = "libfilezilla"
+version = "0.51.1"
+archive = "https://repo-default.voidlinux.org/distfiles/libfilezilla-0.51.1.tar.xz"
+sha256 = "9a4c88931711f4b9d31702af3555501151b2b9fa46d07f350597a3bc9d5832e6"
+strip_components = 1
+description = "Small and modern C++ library, which offers some basic functionalities"
+homepage = "https://lib.filezilla-project.org/"
+license = "GPL-2.0-or-later"
+deps = ["gnutls", "nettle"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'samplv1'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw, jack, qt6-svg
+[package]
+name = "samplv1"
+version = "1.4.3"
+archive = "https://downloads.sourceforge.net/sourceforge/samplv1/samplv1-1.4.3.tar.gz"
+sha256 = "ec0875a5fc462fa3c9722de0fb7e29ea316acb3ed6078c312034c6b477ed03d6"
+strip_components = 1
+description = "Old-school polyphonic sampler"
+homepage = "https://samplv1.sourceforge.io/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "liblo", "libsndfile", "lv2", "qt6-base", "rubberband"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libfakekey'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libfakekey"
+version = "0.3"
+archive = "https://git.yoctoproject.org/cgit/cgit.cgi/libfakekey/snapshot/libfakekey-0.3.tar.gz"
+sha256 = "d282fa6481a5b85f71e36e8bad4cfa938cc8eaac4c42ffa27f9203ac634813f4"
+strip_components = 1
+description = "X virtual keyboard library"
+homepage = "https://www.yoctoproject.org/tools-resources/projects/matchbox"
+license = "GPL-2.0-or-later"
+deps = ["libXtst"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

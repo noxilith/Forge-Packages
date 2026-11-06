@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nm-tray'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "nm-tray"
+version = "0.5.1"
+archive = "https://github.com/palinek/nm-tray/archive/0.5.1.tar.gz"
+sha256 = "482ff25dff752ca5e43e9e475afab95fbb28da88e3c87bc4afa3d789a99d5aac"
+strip_components = 1
+description = "NetworkManager tray icon implemented with Qt"
+homepage = "https://github.com/palinek/nm-tray"
+license = "GPL-2.0-or-later"
+deps = ["NetworkManager", "kf6-networkmanager-qt", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

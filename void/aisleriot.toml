@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'aisleriot'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: itstool, libcanberra, pysolfc-cardsets
+[package]
+name = "aisleriot"
+version = "3.22.35"
+archive = "https://gitlab.gnome.org/GNOME/aisleriot/-/archive/3.22.35/aisleriot-3.22.35.tar.gz"
+sha256 = "790282d3c61ed360cb4c826f5c85d6285dc9d7bae03af9380b5503b470e1149d"
+strip_components = 1
+description = "GNOME solitaire card game"
+homepage = "https://wiki.gnome.org/Apps/Aisleriot"
+license = "GPL-3.0-or-later"
+deps = ["guile", "librsvg", "yelp"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtheme_pysol=true", "-Dtheme_kde=false", "-Db_ndebug=false", "-Db_lto=false"]
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib"]

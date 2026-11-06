@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libayatana-appindicator-glib'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: gi-docgen
+[package]
+name = "libayatana-appindicator-glib"
+version = "2.0.1"
+archive = "https://github.com/AyatanaIndicators/libayatana-appindicator-glib/archive/2.0.1.tar.gz"
+sha256 = "670e58fa2d89a3d0532745986ec3d7ca8fd90f3db830041f69a91fb7eb75c406"
+strip_components = 1
+description = "Ayatana Application Indicators Shared Library"
+homepage = "https://ayatanaindicators.github.io/"
+license = "LGPL-3.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTS=ON"]
+tools = ["pkg-config"]
+deps = ["cmake-extras", "gobject-introspection", "vala"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fragments'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "fragments"
+version = "3.0.1"
+archive = "https://gitlab.gnome.org/World/Fragments/-/archive/3.0.1/Fragments-3.0.1.tar.gz"
+sha256 = "33b9b68a85450288e930fcbcf1af0fcf3f630e3493f5e8784f05f4e32620703f"
+strip_components = 1
+description = "BitTorrent Client"
+homepage = "https://gitlab.gnome.org/World/Fragments"
+license = "GPL-3.0-or-later"
+deps = ["dbus", "glib", "gtk4", "libadwaita", "openssl", "transmission"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext"]

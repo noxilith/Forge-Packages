@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'log4cpp'. Review before relying on it.
+[package]
+name = "log4cpp"
+version = "1.1.6"
+archive = "https://downloads.sourceforge.net/sourceforge/log4cpp/log4cpp-1.1.6.tar.gz"
+sha256 = "a036bc6bd6044479e6c456de7edd042b060ea5c843e47beb75f59baea9b20e3a"
+strip_components = 1
+description = "Library of C++ classes for flexible logging"
+homepage = "http://log4cpp.sourceforge.net/"
+license = "LGPL-2.1-or-later"
+deps = ["libnsl"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--without-idsa"]

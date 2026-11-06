@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fetchmail'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "fetchmail"
+version = "6.6.6"
+archive = "https://downloads.sourceforge.net/sourceforge/fetchmail/fetchmail-6.6.6.tar.xz"
+sha256 = "da99f8c573c4d9e63f493c7e24447126aea25b53b4c076ec79266874e29b1975"
+strip_components = 1
+description = "Remote-mail retrieval utility"
+homepage = "http://fetchmail.sourceforge.net/"
+license = "GPL-2.0-only"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

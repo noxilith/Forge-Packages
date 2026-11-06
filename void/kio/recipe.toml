@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kio'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: mit-krb5, qt5
+[package]
+name = "kio"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kio-5.116.0.tar.xz"
+sha256 = "efb719d6659c39a03b165dca3b6c84f729a833290fc44e7e1f99625690b6115a"
+strip_components = 1
+description = "KDE Network transparent access to files and data"
+homepage = "https://invent.kde.org/frameworks/kio"
+license = "LGPL-2.0-or-later"
+deps = ["acl", "desktop-file-utils", "kbookmarks", "kdoctools", "kf6-kio", "kjobwidgets", "ksolid", "kwallet", "libxml2", "libxslt"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DESIGNERPLUGIN=ON", "-DKF6_COMPAT_BUILD=ON"]
+deps = ["extra-cmake-modules", "gettext", "kauth", "kcoreaddons"]

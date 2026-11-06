@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'smenu'. Review before relying on it.
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "smenu"
+version = "1.5.0"
+archive = "https://github.com/p-gen/smenu/releases/download/v1.5.0/smenu-1.5.0.tar.bz2"
+sha256 = "2de2217d322a5e28cb20f9128e60df6c00b4e8e8879381ac8ed8bdcdccc4c5ca"
+strip_components = 1
+description = "Create selection menus with words from stdin"
+homepage = "https://github.com/p-gen/smenu"
+license = "MPL-2.0"
+
+[build]
+system = "autotools"

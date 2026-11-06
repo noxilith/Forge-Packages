@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libqb'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "libqb"
+version = "2.0.10"
+archive = "https://github.com/ClusterLabs/libqb/releases/download/v2.0.10/libqb-2.0.10.tar.gz"
+sha256 = "6609cd68f225b6380b17de5bf48071db670b7e8ee6743f7dfa64547394b0ef07"
+strip_components = 1
+description = "High performance logging, tracing, ipc, poll"
+homepage = "https://clusterlabs.github.io/libqb/"
+license = "LGPL-2.1-or-later"
+deps = ["libxml2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["splint"]

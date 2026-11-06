@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'qtcurve'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: qt5, qt6-svg
+[package]
+name = "qtcurve"
+version = "1.9.1+202511"
+archive = "https://github.com/KDE/qtcurve/archive/5a5566ffdb7c672f73788426aab8a8604ff7dc87.tar.gz"
+sha256 = "92e5b6daf977686de6545cc8b7ddc3cebd8930374fed66b009f9ce240c2e1c30"
+strip_components = 1
+description = "Configurable set of widget styles for KDE and Gtk"
+homepage = "https://github.com/KDE/qtcurve"
+license = "LGPL-2.1-or-later"
+deps = ["cairo", "gtk+", "kf6-frameworkintegration", "kf6-karchive", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "libX11", "libxcb", "libxkbcommon", "pango", "qt6-base", "qt6-declarative"]
+patches = ["patches/cross.patch", "patches/kf6.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_QT4=OFF", "-DENABLE_QT5=ON", "-DQTC_QT5_ENABLE_KDE=OFF", "-DENABLE_QT6=ON", "-DQTC_QT6_ENABLE_KDE=ON", "-DQTC_QT6_ENABLE_QTQUICK2=ON"]
+tools = ["perl", "pkg-config"]
+deps = ["extra-cmake-modules", "gdk-pixbuf", "gettext"]

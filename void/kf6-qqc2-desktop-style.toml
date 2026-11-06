@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-qqc2-desktop-style'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-qqc2-desktop-style"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/qqc2-desktop-style-6.30.0.tar.xz"
+sha256 = "74c6402fa697a76254e1c68ebd86136be49e03fad86482e86a27e5478f662c41"
+strip_components = 1
+description = "Qt Quick Controls 2: Desktop Style"
+homepage = "https://invent.kde.org/frameworks/qqc2-desktop-style"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcolorscheme", "kf6-kconfig", "kf6-kiconthemes", "kf6-kirigami", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'babl'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "babl"
+version = "0.1.128"
+archive = "https://download.gimp.org/pub/babl/0.1/babl-0.1.128.tar.xz"
+sha256 = "e676507b421d414d49db8627415dc1eadbd787536baa7d6fe94a1f1971cbe73e"
+strip_components = 1
+description = "Dynamic pixel format translation library"
+homepage = "https://gegl.org/babl/"
+license = "LGPL-3.0-only"
+deps = ["lcms2", "vala"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith-docs=false", "-Denable-gir=true"]
+tools = ["pkg-config"]
+deps = ["gobject-introspection"]

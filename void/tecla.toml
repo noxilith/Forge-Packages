@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tecla'. Review before relying on it.
+[package]
+name = "tecla"
+version = "50.0"
+archive = "https://download.gnome.org/sources/tecla/50/tecla-50.0.tar.xz"
+sha256 = "2542acb24850082e0ccf6aa17af9651db71d22f0e233fdbf5ed0cffe2e45bc06"
+strip_components = 1
+description = "Libadwaita keyboard layout viewer for the Gnome Desktop"
+homepage = "https://gitlab.gnome.org/GNOME/tecla"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "libadwaita"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

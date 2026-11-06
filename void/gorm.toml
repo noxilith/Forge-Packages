@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gorm'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnustep-make
+[package]
+name = "gorm"
+version = "1.5.0"
+archive = "https://github.com/gnustep/apps-gorm/archive/gorm-1_5_0.tar.gz"
+sha256 = "21bb0ba0f9a24ab5ef47e455198c4b2e0e8c9d17e7b0853bafbd89b80127bb2b"
+strip_components = 1
+description = "Graphical Object Relationship Modeller for GNUstep"
+homepage = "http://www.gnustep.org/experience/Gorm.html"
+license = "GPL-2.0-or-later"
+deps = ["gnustep-base", "gnustep-gui"]
+
+[build]
+system = "make"

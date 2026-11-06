@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'nss-pam-ldapd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: mit-krb5
+[package]
+name = "nss-pam-ldapd"
+version = "0.9.13"
+archive = "https://arthurdejong.org/nss-pam-ldapd/nss-pam-ldapd-0.9.13.tar.gz"
+sha256 = "e01784e17cb533bb66bd0601e205e785263445c3c2df7a6f90232ab4131c716d"
+strip_components = 1
+description = "NSS and PAM support for LDAP"
+homepage = "https://arthurdejong.org/nss-pam-ldapd/"
+license = "LGPL-2.1-or-later"
+deps = ["libsasl", "openldap", "pam"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-sasl", "--enable-kerberos"]

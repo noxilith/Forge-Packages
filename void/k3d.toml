@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'k3d'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_ldflags, go_import_path, build_helper
+[package]
+name = "k3d"
+version = "5.9.0"
+archive = "https://github.com/k3d-io/k3d/archive/v5.9.0.tar.gz"
+sha256 = "969cce82c4871bb829be798655abe2b6709b77cc0f42f7ff69293c621dfbbab0"
+strip_components = 1
+description = "Creates containerized k3s clusters"
+homepage = "https://k3d.io/"
+license = "MIT"
+deps = ["docker-cli"]
+
+[build]
+system = "go"

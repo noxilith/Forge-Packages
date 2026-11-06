@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'alkimia'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "alkimia"
+version = "8.2.1"
+archive = "https://download.kde.org/stable/alkimia/8.2.1/alkimia-8.2.1.tar.xz"
+sha256 = "f921410e180e0a5811e1ee2926954920c6576a72b3b65f53791faa6c85fcb689"
+strip_components = 1
+description = "Infrastructure for common storage and business logic"
+homepage = "https://invent.kde.org/office/alkimia"
+license = "LGPL-2.1-or-later"
+deps = ["gmp", "gpgme-qt6", "kf6-kcodecs", "kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kirigami", "kf6-knewstuff", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "kf6-kxmlgui", "libplasma", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DBUILD_TESTING=OFF"]
+tools = ["perl", "pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage"]

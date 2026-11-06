@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'x11perf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "x11perf"
+version = "1.6.1"
+archive = "https://www.x.org/releases/individual/app/x11perf-1.6.1.tar.bz2"
+sha256 = "1c7e0b8ffc2794b4ccf11e04d551823abe0ea47b4f7db0637390db6fbe817c34"
+strip_components = 1
+description = "X11 server performance test program"
+homepage = "https://wiki.freedesktop.org/xorg/"
+license = "MIT"
+deps = ["libXext", "libXft", "libXmu"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

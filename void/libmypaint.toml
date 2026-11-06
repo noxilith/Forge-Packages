@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libmypaint'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "libmypaint"
+version = "1.6.1"
+archive = "https://github.com/mypaint/libmypaint/releases/download/v1.6.1/libmypaint-1.6.1.tar.xz"
+sha256 = "741754f293f6b7668f941506da07cd7725629a793108bb31633fb6c3eae5315f"
+strip_components = 1
+description = "MyPaint brush engine library"
+homepage = "https://github.com/mypaint/libmypaint"
+license = "ISC"
+deps = ["glib", "json-c", "json-glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gegl"]
+tools = ["pkg-config"]

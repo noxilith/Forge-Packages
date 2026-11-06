@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ksshaskpass'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "ksshaskpass"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/ksshaskpass-6.7.5.tar.xz"
+sha256 = "deb5698b5682bc15d22446db9cf8641857d0bd7785e145b7b6e9247a68d35fd2"
+strip_components = 1
+description = "KDE ssh-add helper"
+homepage = "https://invent.kde.org/plasma/ksshaskpass"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kdoctools", "kf6-kwallet", "qtkeychain-qt6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

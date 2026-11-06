@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libqt5xdg'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "libqt5xdg"
+version = "3.12.0"
+archive = "https://github.com/lxqt/libqtxdg/archive/3.12.0.tar.gz"
+sha256 = "084e5fe7b4087d95657be7b5be3668e98bf14c2ba3b150205ebd819508774d45"
+strip_components = 1
+description = "Qt5 implementation of freedesktop.org XDG specifications"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "libqtxdg"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["lxqt-build-tools-qt5"]

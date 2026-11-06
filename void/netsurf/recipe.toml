@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'netsurf'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: libcss, libdom, libnsbmp, libnsgif, libnsutils, libwebp, nsgenbind, perl-HTML-Parser, vim
+[package]
+name = "netsurf"
+version = "3.11"
+archive = "https://download.netsurf-browser.org/netsurf/releases/source/netsurf-3.11-src.tar.gz"
+sha256 = "c28a626aefee428d053b13f88b5c440922245976522d12eaf137cfd32d201cb2"
+strip_components = 1
+description = "Free, open source web browser written in C"
+homepage = "https://www.netsurf-browser.org"
+license = "GPL-2.0-only, MIT"
+deps = ["curl", "desktop-file-utils", "gtk+3", "libutf8proc", "shared-mime-info"]
+patches = ["patches/utf8proc-path.diff"]
+
+[build]
+system = "make"
+tools = ["flex", "gperf", "pkg-config"]
+deps = ["gdk-pixbuf", "glib", "tar"]

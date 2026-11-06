@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'broot'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "broot"
+version = "1.56.2"
+archive = "https://github.com/Canop/broot/archive/refs/tags/v1.56.2.tar.gz"
+sha256 = "3e7be4252c76565f6d71b34bd07d26e1444b9ac2e1c8271c724f6e866fe75565"
+strip_components = 1
+description = "Interactive directory tree view, fuzzy search, balanced BFS descent"
+homepage = "https://dystroy.org/broot/"
+license = "MIT"
+deps = ["libgit2-1.9"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

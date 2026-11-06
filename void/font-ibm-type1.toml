@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-ibm-type1'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-ibm-type1"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-ibm-type1-1.0.4.tar.gz"
+sha256 = "9129d73e3037709b03ea2bf61658ffa65e9a259a25b1df9a1e19c9ed8fcd1518"
+strip_components = 1
+description = "IBM Courier Type1 fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

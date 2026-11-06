@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'synfig'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, ffmpeg6, intltool
+[package]
+name = "synfig"
+version = "1.4.5"
+archive = "https://github.com/synfig/synfig/releases/download/v1.4.5/synfig-1.4.5.tar.gz"
+sha256 = "51a395f7dceb2ec51721043eb9b9f7149477a3399d92d624eef266f155521bc1"
+strip_components = 1
+description = "CLI 2D vector and timeline-based animation software"
+homepage = "https://www.synfig.org/"
+license = "GPL-2.0-or-later"
+deps = ["ETL", "ImageMagick", "gettext", "libmng", "libxml++", "mlt7", "openexr"]
+patches = ["patches/ffmpeg6.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

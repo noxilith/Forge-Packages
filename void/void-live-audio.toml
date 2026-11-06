@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'void-live-audio'. Review before relying on it.
+[package]
+name = "void-live-audio"
+version = "0.1.1"
+archive = "https://github.com/classabbyamp/void-live-audio/archive/refs/tags/v0.1.1.tar.gz"
+sha256 = "6cd09a279b019efe512acae42605dc58882de972dc43a5de181bd5a10d348a88"
+strip_components = 1
+description = "Script for enabling and configuring audio (for live environments)"
+homepage = "https://github.com/classabbyamp/void-live-audio"
+license = "GPL-3.0-or-later, CC0-1.0"
+deps = ["alsa-utils"]
+
+[build]
+system = "make"

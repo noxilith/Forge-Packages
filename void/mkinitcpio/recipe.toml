@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mkinitcpio'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: asciidoc, busybox, zstd
+[package]
+name = "mkinitcpio"
+version = "41"
+archive = "https://sources.archlinux.org/other/mkinitcpio/mkinitcpio-41.tar.xz"
+sha256 = "5102520b9fc899ec1c64eb6cd0dd75985042e714318e3b574976b7497cff5a14"
+strip_components = 1
+description = "Next generation of initramfs creation"
+homepage = "https://gitlab.archlinux.org/archlinux/mkinitcpio/mkinitcpio"
+license = "GPL-2.0-only"
+deps = ["eudev", "libarchive"]
+patches = ["patches/hwdb-error-msg.patch", "patches/quiet-rw-fsck.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsystemd=disabled", "-Dkernel_install=false", "-Dalpm=false", "-Dpresets=false", "-Dvconsole_conf=rc.conf", "-Dsystemd_hooks=false"]

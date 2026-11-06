@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-frameworkintegration'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-frameworkintegration"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/frameworkintegration-6.30.0.tar.xz"
+sha256 = "817c49b2f6abbfe624e32f9a21ffcac7edf6e0486a0883050a1441e2fef3c932"
+strip_components = 1
+description = "Framework to integrate applications with a KDE Workspace"
+homepage = "https://invent.kde.org/frameworks/frameworkintegration"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcolorscheme", "kf6-kconfig", "kf6-ki18n", "kf6-kiconthemes", "kf6-knewstuff", "kf6-knotifications", "kf6-kpackage", "kf6-kwidgetsaddons"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

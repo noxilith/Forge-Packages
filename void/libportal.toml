@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libportal'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libportal"
+version = "0.10.0"
+archive = "https://github.com/flatpak/libportal/releases/download/0.10.0/libportal-0.10.0.tar.xz"
+sha256 = "1c74a3f7becbd4ff745d7f565afd06e97e50eb080a0e268cb14bb55289a745bf"
+strip_components = 1
+description = "Flatpak portal library"
+homepage = "https://github.com/flatpak/libportal"
+license = "LGPL-3.0-only"
+deps = ["glib", "gobject-introspection", "gtk+3", "gtk4", "qt6-base"]
+
+[build]
+system = "meson"
+configure_args = ["-Dbackend-gtk3=enabled", "-Dbackend-gtk4=enabled", "-Dbackend-qt6=enabled"]
+tools = ["pkg-config"]

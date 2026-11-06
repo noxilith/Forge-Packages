@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'alsa-firmware'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+[package]
+name = "alsa-firmware"
+version = "1.2.4"
+archive = "https://www.alsa-project.org/files/pub/firmware/alsa-firmware-1.2.4.tar.bz2"
+sha256 = "b67b6d7d08bcfc247ef6ff0ab88a99c188305a3cf57ae2dfd0bcd9a5b36cd5bb"
+strip_components = 1
+description = "Advanced Linux Sound Architecture (ALSA) firmware"
+homepage = "https://www.alsa-project.org/wiki/Main_Page"
+license = "GPL-2.0-only, BSD-3-Clause-Clear"
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"

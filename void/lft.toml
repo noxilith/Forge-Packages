@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lft'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "lft"
+version = "4.03"
+archive = "https://pwhois.org/dl/index.who?file=lft-4.03.tar.gz"
+sha256 = "d84aff0c2baf57a5c5b21fb3b228eed0ac0e12e5a676b3b3be13e34770b91d17"
+strip_components = 1
+description = "Layer Four Traceroute"
+homepage = "https://pwhois.org/lft/"
+license = "VOSTROM"
+deps = ["c-ares", "libpcap"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

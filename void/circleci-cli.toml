@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'circleci-cli'. Review before relying on it.
+# hooks not translated: post_build, post_install, pre_check
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper
+[package]
+name = "circleci-cli"
+version = "1.0.47876"
+archive = "https://github.com/CircleCI-Public/circleci-cli/archive/v1.0.47876.tar.gz"
+sha256 = "9888490d947b58369c62e4b9ba486b66e6338c3acbd39754c8be42591a81121b"
+strip_components = 1
+description = "Use CircleCI from the command line"
+homepage = "https://circleci-public.github.io/circleci-cli/"
+license = "MIT"
+
+[build]
+system = "go"

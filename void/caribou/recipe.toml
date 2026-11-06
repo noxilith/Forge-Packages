@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'caribou'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper, lib32disabled
+[package]
+name = "caribou"
+version = "0.4.21"
+archive = "https://download.gnome.org/sources/caribou/0.4/caribou-0.4.21.tar.xz"
+sha256 = "9c43d9f4bd30f4fea7f780d4e8b14f7589107c52e9cb6bd202bd0d1c2064de55"
+strip_components = 1
+description = "Alternative to the Gnome On-screen Keyboard"
+homepage = "https://wiki.gnome.org/Projects/Caribou"
+license = "LGPL-2.1-only"
+deps = ["at-spi2-core", "clutter", "desktop-file-utils", "gobject-introspection", "gtk+3", "libXtst", "libgee", "libxklavier", "python3-atspi", "python3-dbus", "python3-gobject", "vala"]
+patches = ["patches/autostart-set-nodisplay.patch", "patches/fix-crash.patch", "patches/fix-font-property-in-style.css.patch", "patches/fix-gir-vala.patch", "patches/no-intltool.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-schemas-compile", "--disable-static", "--disable-gtk2-module"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxslt"]

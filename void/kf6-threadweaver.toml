@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-threadweaver'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-threadweaver"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/threadweaver-6.30.0.tar.xz"
+sha256 = "e5400968a41820393e76190ab5dbb276c09513263d1b185d64b40f82dcd9b457"
+strip_components = 1
+description = "KDE Helper for multithreaded programming"
+homepage = "https://invent.kde.org/frameworks/threadweaver"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'dpp'. Review before relying on it.
+# settings not translated: cmake_builddir
+[package]
+name = "dpp"
+version = "10.0.34"
+archive = "https://github.com/brainboxdotcc/DPP/archive/refs/tags/v10.0.34.tar.gz"
+sha256 = "58eee75e81ac305db0b71a8cd4b821ff3cabcdfa0575e56ba5e4ce543531bd2f"
+strip_components = 1
+description = "C++ Discord API Library for Bots"
+homepage = "https://dpp.dev"
+license = "Apache-2.0"
+deps = ["json-c++", "openssl", "opus", "zlib"]
+patches = ["patches/fix_ctime.diff"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDPP_NO_VCPKG=ON", "-DDPP_USE_EXTERNAL_JSON=ON", "-DDPP_CORO=ON"]
+tools = ["pkg-config"]

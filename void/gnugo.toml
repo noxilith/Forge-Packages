@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'gnugo'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "gnugo"
+version = "3.8"
+archive = "https://ftp.gnu.org/gnu/gnugo/gnugo-3.8.tar.gz"
+sha256 = "da68d7a65f44dcf6ce6e4e630b6f6dd9897249d34425920bfdd4e07ff1866a72"
+strip_components = 1
+description = "Free program that plays the game Go"
+homepage = "https://www.gnu.org/software/gnugo/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

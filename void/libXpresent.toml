@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXpresent'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXpresent"
+version = "1.0.2"
+archive = "https://www.x.org/releases/individual/lib/libXpresent-1.0.2.tar.gz"
+sha256 = "e98a211e51d8b9381d16b24a57cecb926a23e743b9e0b1ffc3e870206b7dee1a"
+strip_components = 1
+description = "XPresent extension C library"
+homepage = "https://cgit.freedesktop.org/xorg/lib/libXpresent/"
+license = "X11"
+deps = ["libXfixes", "libXrandr"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'vkBasalt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: glslang
+[package]
+name = "vkBasalt"
+version = "0.3.2.10"
+archive = "https://github.com/DadSchoorse/vkBasalt/archive/v0.3.2.10.tar.gz"
+sha256 = "22f0d44518361b12cf51f30fc9931423977af32a396e746ebf6d726c05788de6"
+strip_components = 1
+description = "Vulkan post-processing layer"
+homepage = "https://github.com/DadSchoorse/vkBasalt"
+license = "Zlib"
+deps = ["SPIRV-Headers", "Vulkan-Headers", "libX11"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

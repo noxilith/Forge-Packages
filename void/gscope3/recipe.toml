@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gscope3'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "gscope3"
+version = "3.18"
+archive = "https://github.com/tefletch/gscope/archive/v2.18+v3.18.tar.gz"
+sha256 = "06d0fd4351b4f8dc1850c81b07c112b0974bfb140f9fe56f8af6f865be3e0a2a"
+strip_components = 1
+description = "Interactive source code browsing tool for C and other languages"
+homepage = "https://github.com/tefletch/gscope"
+license = "MIT"
+deps = ["gtksourceview"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+subdir = "packages/gscope3"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'caja-extensions'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: dbus-glib
+[package]
+name = "caja-extensions"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/caja-extensions-1.28.0.tar.xz"
+sha256 = "d2986c5e0740835fe271cfbd5823eeeaf03291af1763203f4700abb8109e3175"
+strip_components = 1
+description = "Extensions for the MATE Caja file manager"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["caja", "dbus", "gst-plugins-base1", "gtk+3", "gupnp", "mate-desktop", "totem"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gksu", "--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxml2"]

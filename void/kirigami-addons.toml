@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kirigami-addons'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kirigami-addons"
+version = "1.13.1"
+archive = "https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.13.1.tar.xz"
+sha256 = "76026f0abe8c948208ce75a02a9ecac60c618ac5288ca546e09da64bc4af7050"
+strip_components = 1
+description = "Add-ons for the Kirigami framework"
+homepage = "https://invent.kde.org/libraries/kirigami-addons"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kglobalaccel", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kirigami", "kf6-kitemmodels", "kf6-qqc2-desktop-style", "kf6-sonnet", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DBUILD_TESTING=OFF", "-DBUILD_QCH=ON"]
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mesa-demos'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: glslang, mesa
+[package]
+name = "mesa-demos"
+version = "9.0.0"
+archive = "https://archive.mesa3d.org/demos/mesa-demos-9.0.0.tar.xz"
+sha256 = "3046a3d26a7b051af7ebdd257a5f23bfeb160cad6ed952329cdff1e9f1ed496b"
+strip_components = 1
+description = "Mesa 3D demos and tools"
+homepage = "https://gitlab.freedesktop.org/mesa/demos"
+license = "MIT"
+deps = ["Vulkan-Headers", "freetype", "glu", "libXext", "libdecor", "libfreeglut", "libxkbcommon", "vulkan-loader", "wayland", "wayland-protocols"]
+patches = ["patches/disable-nonfree.patch", "patches/mesa-demos-data-dir.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith-system-data-files=true"]
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'odilia'. Review before relying on it.
+[package]
+name = "odilia"
+version = "0.1.4"
+archive = "https://github.com/odilia-app/odilia/archive/refs/tags/v0.1.4.tar.gz"
+sha256 = "4a35c7c949e8da919403d3e8a095ca44036e222af9d8d9ebcf5b28bb586f298e"
+strip_components = 1
+description = "Fast screenreader for the *nix desktop"
+homepage = "https://odilia.app/"
+license = "GPL-3.0-or-later"
+deps = ["at-spi2-core", "gsettings-desktop-schemas", "speech-dispatcher"]
+patches = ["patches/fix-lock.diff"]
+
+[build]
+system = "cargo"
+subdir = "odilia"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'powertop'. Review before relying on it.
+# settings not translated: LDFLAGS
+# needs, but Forge has no recipe for yet: ncurses, pciutils
+[package]
+name = "powertop"
+version = "2.16.1"
+archive = "https://github.com/fenrus75/powertop/archive/refs/tags/v2.16.1.tar.gz"
+sha256 = "73d5e96d992ed7f040e17c6c9130deebcf42c38990711840981c7afac6f7832f"
+strip_components = 1
+description = "Tool to diagnose issues with power consumption and power management"
+homepage = "https://github.com/fenrus75/powertop"
+license = "GPL-2.0-only"
+deps = ["libnl3", "libtraceevent", "libtracefs"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ADMS-qucs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: perl-XML-LibXML
+[package]
+name = "ADMS-qucs"
+version = "2.3.7"
+archive = "https://github.com/Qucs/ADMS/archive/release-2.3.7.tar.gz"
+sha256 = "0d24f645d7ce0daa447af1b0cff1123047f3b73cc41cf403650f469721f95173"
+strip_components = 1
+description = "Automatic Device Model Synthesizer (Qucs fork)"
+homepage = "https://github.com/Qucs/ADMS"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cmake"
+tools = ["bison", "flex", "perl"]

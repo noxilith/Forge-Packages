@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'strawberry'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: boost, fftw, qt6-tools
+[package]
+name = "strawberry"
+version = "1.2.31"
+archive = "https://files.strawberrymusicplayer.org/strawberry-1.2.31.tar.xz"
+sha256 = "cffc0cd453f3126a930b9e67f547e54d9fde0c8754fdead8185d2b2f5c68c037"
+strip_components = 1
+description = "Audio player and music collection organizer"
+homepage = "https://www.strawberrymusicplayer.org/"
+license = "GPL-3.0-or-later"
+deps = ["KDSingleApplication", "alsa-lib", "chromaprint", "desktop-file-utils", "gnutls", "gst-plugins-base1", "gst-plugins-good1", "libcdio", "libebur128", "libgpod", "libmtp", "libsecret", "protobuf", "pulseaudio", "qt6-base", "rapidjson", "sparsehash", "taglib", "uchardet"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

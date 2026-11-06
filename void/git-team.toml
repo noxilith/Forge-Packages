@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'git-team'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "git-team"
+version = "1.8.1"
+archive = "https://github.com/hekmekk/git-team/archive/v1.8.1.tar.gz"
+sha256 = "8bbac5e495310167e9ffad6f6b0e6b6929bae3dc249de16cd050209f389be59b"
+strip_components = 1
+description = "Manage and enhance git commit messages with co-authors"
+homepage = "https://github.com/hekmekk/git-team"
+license = "MIT"
+
+[build]
+system = "go"

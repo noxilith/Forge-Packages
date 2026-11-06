@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fifengine'. Review before relying on it.
+# needs, but Forge has no recipe for yet: SDL2_image, boost, glew, python3-future, python3-setuptools, tinyxml
+[package]
+name = "fifengine"
+version = "0.4.2"
+archive = "https://github.com/fifengine/fifengine/archive/0.4.2.tar.gz"
+sha256 = "e882b55befa36ae2f1a89ada16af0f814a1b78f7cbe6021ec5b1605604cf8ff8"
+strip_components = 1
+description = "Multi-platform isometric game engine"
+homepage = "https://github.com/fifengine/fifengine"
+license = "LGPL-2.1-or-later"
+deps = ["SDL2", "SDL2_ttf", "fifechan", "libXcursor", "libopenal"]
+patches = ["patches/boost-1.88.patch", "patches/ftbfs.patch", "patches/remove_deprecated_getchildren.patch", "patches/swig.patch"]
+
+[build]
+system = "cmake"
+deps = ["swig"]

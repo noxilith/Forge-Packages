@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-prison'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-multimedia, qt6-tools
+[package]
+name = "kf6-prison"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/prison-6.30.0.tar.xz"
+sha256 = "2cdb0a2689ab45b907c76c9a01c1dc14855b8e5329ad0a9cf65c1ad64e5fed1b"
+strip_components = 1
+description = "Barcode API to produce QRCode barcodes and DataMatrix barcodes"
+homepage = "https://invent.kde.org/frameworks/prison"
+license = "LGPL-2.1-or-later"
+deps = ["libdmtx", "qrencode", "qt6-declarative", "zxing-cpp"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "qt6-base"]

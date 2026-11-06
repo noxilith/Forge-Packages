@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'android-file-transfer-linux'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libreadline8, qt6-svg, qt6-tools
+[package]
+name = "android-file-transfer-linux"
+version = "4.5"
+archive = "https://github.com/whoozle/android-file-transfer-linux/archive/v4.5.tar.gz"
+sha256 = "0f366a8d659926d3859a8628d4f7592692389b060f67da9a936d19b252b42d96"
+strip_components = 1
+description = "Android File Transfer for Linux"
+homepage = "https://github.com/whoozle/android-file-transfer-linux"
+license = "LGPL-2.1-or-later"
+deps = ["file", "fuse3", "qt6-base", "taglib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIB=1"]
+tools = ["pkg-config"]

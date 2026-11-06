@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'darkice'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "darkice"
+version = "1.5"
+archive = "https://github.com/rafael2k/darkice/releases/download/v1.5/darkice-1.5.tar.gz"
+sha256 = "18b4c4573a7ccfe09c1094eb5798159e2a9892106ea62d753933f6f2a746058e"
+strip_components = 1
+description = "Live audio streamer source client for icecast"
+homepage = "http://www.darkice.org"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "faac", "lame", "libogg", "libsamplerate", "libvorbis", "pulseaudio"]
+patches = ["patches/fix-missing-cstdint-header.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

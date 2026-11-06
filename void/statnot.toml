@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'statnot'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "statnot"
+version = "0.0.4"
+archive = "https://github.com/halhen/statnot/archive/d70982eb5d86e7849295b634721a74a433fcb532.tar.gz"
+sha256 = "9b6346e2340dd4ba5f76cbc7f3d5a09d2ba623bb74aab2355b793055f96991bf"
+strip_components = 1
+description = "Notification system for lightweight window managers"
+homepage = "https://github.com/halhen/statnot/"
+license = "GPL-2.0-or-later"
+deps = ["python3-dbus", "python3-gobject", "xsetroot"]
+
+[build]
+system = "make"

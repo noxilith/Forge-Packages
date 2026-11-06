@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'diffpdf'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "diffpdf"
+version = "2.1.3.1"
+archive = "https://gitlab.com/eang/diffpdf/-/archive/v2.1.3.1/diffpdf-v2.1.3.1.tar.gz"
+sha256 = "e2a670ff30d89aa5c98b44b937baad9aabaac29a477c43b5b79318b155d4cd25"
+strip_components = 1
+description = "Diffing pdf files visually or textually"
+homepage = "https://gitlab.com/eang/diffpdf"
+license = "GPL-2.0-or-later"
+deps = ["poppler-qt5"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

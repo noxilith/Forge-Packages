@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libversion'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libversion"
+version = "3.0.4"
+archive = "https://github.com/repology/libversion/archive/3.0.4.tar.gz"
+sha256 = "48c2a4a98b6f220dedd535979f1e9ab83f9bf869e06c0f5e7bb1be6d2e662fee"
+strip_components = 1
+description = "Advanced version string comparison library"
+homepage = "https://github.com/repology/libversion"
+license = "MIT"
+
+[build]
+system = "cmake"

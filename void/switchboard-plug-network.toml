@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'switchboard-plug-network'. Review before relying on it.
+[package]
+name = "switchboard-plug-network"
+version = "2.5.0"
+archive = "https://github.com/elementary/switchboard-plug-network/archive/2.5.0.tar.gz"
+sha256 = "cca83a64a32e1a213af2836500a7fea994b69e40045f4e4e32f634ace8ae898a"
+strip_components = 1
+description = "Switchboard Network Plug"
+homepage = "https://github.com/elementary/switchboard-plug-network"
+license = "GPL-3.0-or-later"
+deps = ["NetworkManager", "granite", "gtk+3", "libnma", "switchboard"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

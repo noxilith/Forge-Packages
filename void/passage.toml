@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'passage'. Review before relying on it.
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: tree
+[package]
+name = "passage"
+version = "1.7.4a2"
+archive = "https://github.com/FiloSottile/passage/archive/refs/tags/1.7.4a2.tar.gz"
+sha256 = "d4bd97be2eda4249b31c2042707ef70ba50385f6fb7791598f51be794168ee2c"
+strip_components = 1
+description = "Stores, retrieves, generates, and synchronizes passwords securely"
+homepage = "https://github.com/FiloSottile/passage"
+license = "GPL-2.0-or-later"
+deps = ["age", "qrencode"]
+
+[build]
+system = "make"

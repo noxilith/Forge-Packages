@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'glibmm'. Review before relying on it.
+[package]
+name = "glibmm"
+version = "2.66.8"
+archive = "https://download.gnome.org/sources/glibmm/2.66/glibmm-2.66.8.tar.xz"
+sha256 = "64f11d3b95a24e2a8d4166ecff518730f79ecc27222ef41faf7c7e0340fc9329"
+strip_components = 1
+description = "C++ bindings for GLib"
+homepage = "https://www.gtkmm.org"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "libsigc++"]
+
+[build]
+system = "meson"
+configure_args = ["-Dbuild-examples=false"]
+tools = ["perl", "pkg-config"]

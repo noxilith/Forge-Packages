@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'eden'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: boost, ffmpeg6, glslang, mbedtls, qt6-charts, qt6-qt5compat, qt6-tools, zstd
+[package]
+name = "eden"
+version = "0.2.1"
+archive = "https://git.eden-emu.dev/eden-emu/eden/archive/v0.2.1.tar.gz"
+sha256 = "a43ea2886b75204438f691a4ddfad99e88b508e30431978dd13fba1c22440d19"
+strip_components = 1
+description = "Nintendo Switch video game console emulator"
+homepage = "https://eden-emu.dev"
+license = "GPL-3.0-or-later"
+deps = ["SDL2", "SPIRV-Headers", "SPIRV-Tools", "Vulkan-Headers", "Vulkan-Utility-Libraries", "fmt", "gamemode", "json-c++", "libenet", "libva", "lz4", "opus", "qt6-base", "quazip", "zlib"]
+patches = ["patches/fix-cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DDYNARMIC_TESTS=OFF", "-DENABLE_UPDATE_CHECKER=OFF", "-DUSE_DISCORD_PRESENCE=OFF", "-DYUZU_CMD=OFF", "-DYUZU_ROOM_STANDALONE=OFF", "-DYUZU_TESTS=OFF", "-DYUZU_USE_BUNDLED_FFMPEG=OFF", "-DYUZU_USE_BUNDLED_QT=OFF", "-DYUZU_USE_BUNDLED_SDL2=OFF", "-DYUZU_USE_EXTERNAL_SDL2=OFF", "-DUSE_FASTER_LINKER=ON", "-DCPM_USE_LOCAL_PACKAGES=ON", "-DYUZU_USE_QT_MULTIMEDIA=OFF", "-DYUZU_USE_QT_WEB_ENGINE=OFF", "-DENABLE_LTO=ON", "-DENABLE_QT_TRANSLATION=ON"]
+tools = ["pkg-config"]
+deps = ["mold"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gtest'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_cmd
+# needs, but Forge has no recipe for yet: unzip
+[package]
+name = "gtest"
+version = "1.17.0"
+archive = "https://github.com/google/googletest/archive/v1.17.0.tar.gz"
+sha256 = "65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c"
+strip_components = 1
+description = "Google's framework for writing C++ tests"
+homepage = "https://github.com/google/googletest"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_SKIP_RPATH=ON"]

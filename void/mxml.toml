@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mxml'. Review before relying on it.
+# hooks not translated: pre_install
+[package]
+name = "mxml"
+version = "3.3.1"
+archive = "https://github.com/michaelrsweet/mxml/releases/download/v3.3.1/mxml-3.3.1.tar.gz"
+sha256 = "0c663ed1fe393b5619f80101798202eea43534abd7c8aff389022fd8c1dacc32"
+strip_components = 1
+description = "Minimal XML library"
+homepage = "https://www.msweet.org/mxml/"
+license = "Apache-2.0"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static", "--enable-shared"]

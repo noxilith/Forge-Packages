@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'scrot'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_install_args
+[package]
+name = "scrot"
+version = "2.0.0"
+archive = "https://github.com/resurrecting-open-source-projects/scrot/archive/2.0.0.tar.gz"
+sha256 = "c6e8f9d5be22e47c137d3e2d9e6be4617a3f569cf549f7f492a21ee82f30fa7f"
+strip_components = 1
+description = "Simple command-line screenshot utility for X"
+homepage = "https://github.com/resurrecting-open-source-projects/scrot"
+license = "MIT"
+deps = ["imlib2", "libXcomposite", "libXcursor", "libXrandr", "libmd"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["autoconf-archive"]

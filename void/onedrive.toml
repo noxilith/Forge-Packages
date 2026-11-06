@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'onedrive'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "onedrive"
+version = "2.5.11"
+archive = "https://github.com/abraunegg/onedrive/archive/refs/tags/v2.5.11.tar.gz"
+sha256 = "7a9cfbf1cc20c8e157dd028e819ec14b9893c158494b9744708ace975076f995"
+strip_components = 1
+description = "OneDrive Client for Linux"
+homepage = "https://github.com/abraunegg/onedrive"
+license = "GPL-3.0-or-later"
+deps = ["curl", "ldc", "libnotify"]
+
+[build]
+system = "autotools"
+configure_args = ["DC=ldc2", "--enable-notifications", "--enable-completions"]
+tools = ["pkg-config"]

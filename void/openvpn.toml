@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'openvpn'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "openvpn"
+version = "2.7.5"
+archive = "https://build.openvpn.net/downloads/releases/openvpn-2.7.5.tar.gz"
+sha256 = "c6864b3c7d4e059c7d6ce22d1b5fa646c8b379a06af872eeb9792b6083a44ac4"
+strip_components = 1
+description = "Easy-to-use, robust, and highly configurable VPN"
+homepage = "https://www.openvpn.net"
+license = "GPL-2.0-only"
+deps = ["libcap-ng", "libnl3", "lz4", "lzo", "pam"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-systemd"]
+tools = ["pkg-config"]

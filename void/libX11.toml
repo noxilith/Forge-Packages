@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libX11'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libX11"
+version = "1.8.14"
+archive = "https://www.x.org/releases/individual/lib/libX11-1.8.14.tar.xz"
+sha256 = "bbc78c46217174655c2b32b138ad119f3ac15f50808b4d0b3a2677a4b1afc950"
+strip_components = 1
+description = "Base X libraries from Xorg"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libx11"
+license = "MIT"
+deps = ["libxcb", "xorgproto", "xtrans"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ipv6", "--enable-xlocaledir", "--without-xmlto", "--enable-static", "--enable-malloc0returnsnull"]
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

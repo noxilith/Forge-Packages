@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libump-git'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libump-git"
+version = "20181122"
+archive = "https://github.com/linux-sunxi/libump/archive/ec0680628744f30b8fac35e41a7bd8e23e59c39f.tar.gz"
+sha256 = "745bbb3e6a6b2b1d8caec75d2f2e884691ceefa5c2be0480baed31dba66cf450"
+strip_components = 1
+description = "ARMs Universal Memory Provider userspace library"
+homepage = "https://github.com/linux-sunxi/libump"
+license = "Apache-2.0"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

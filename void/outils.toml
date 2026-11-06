@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'outils'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "outils"
+version = "0.14"
+archive = "https://github.com/leahneukirchen/outils/archive/v0.14.tar.gz"
+sha256 = "e4dcbd92b25bbb371216b0fad5aa80cdff19f466f7ec8b5e145111fb348c91eb"
+strip_components = 1
+description = "Some non-standard OpenBSD tools"
+homepage = "https://github.com/leahneukirchen/outils"
+license = "ISC, BSD-3-Clause"
+
+[build]
+system = "make"

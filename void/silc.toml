@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'silc'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "silc"
+version = "1.1.19"
+archive = "https://downloads.sourceforge.net/sourceforge/silc/silc/server/sources/silc-server-1.1.19.tar.bz2"
+sha256 = "b2fdfb9aca1c8886e7de9aa888f856247848aaf19b78b4fa64ca69c7210e76ce"
+strip_components = 1
+description = "Secure Internet Live Conferencing server"
+homepage = "http://www.silcnet.org/server.html"
+license = "GPL-2.0-or-later"
+deps = ["silc-toolkit"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-debug", "--disable-optimizations", "--enable-ipv6", "ac_cv_func_pthread_rwlock_init=set", "ac_cv_func_epoll_wait=set"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lxqt-qtplugin'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-qtplugin"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-qtplugin/archive/2.4.0.tar.gz"
+sha256 = "4cf79f24567d9e36a325c4855f7e4a5b163db4a9047ad9fd0f9c6e3f30efbdb6"
+strip_components = 1
+description = "LXQt Qt theme plugin"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["libdbusmenu-lxqt", "libfm-qt", "liblxqt", "libqtxdg", "qt6-base"]
+patches = ["patches/qt-plugindir.patch"]
+
+[build]
+system = "cmake"
+deps = ["libfm", "lxqt-build-tools"]

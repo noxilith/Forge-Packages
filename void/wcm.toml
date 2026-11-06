@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wcm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wcm"
+version = "0.11.0"
+archive = "https://github.com/WayfireWM/wcm/archive/v0.11.0.tar.gz"
+sha256 = "239aaa77d53b0105cf26cfcd669db46ffacd0df822ba0b6a5c79e624ac526f86"
+strip_components = 1
+description = "Wayfire Config Manager"
+homepage = "https://wayfire.org/"
+license = "MIT"
+deps = ["fmt", "gtkmm", "wayfire", "wf-shell"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "wayland"]

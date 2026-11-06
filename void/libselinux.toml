@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libselinux'. Review before relying on it.
+# settings not translated: make_install_args
+[package]
+name = "libselinux"
+version = "3.11"
+archive = "https://github.com/SELinuxProject/selinux/releases/download/3.11/libselinux-3.11.tar.gz"
+sha256 = "73d419c6e20e874adaa4019372cbd097eecf4d276e13f27ec5e67d35c0bd203c"
+strip_components = 1
+description = "SELinux library and simple utilities"
+homepage = "https://www.nsa.gov/what-we-do/research/selinux/"
+license = "GPL-2.0-only"
+deps = ["libsepol", "pcre2"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

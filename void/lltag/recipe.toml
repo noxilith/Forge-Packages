@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lltag'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: mp3info, perl, perl-MP3-Tag
+[package]
+name = "lltag"
+version = "0.14.6"
+archive = "https://github.com/bgoglin/lltag/archive/lltag-0.14.6.tar.gz"
+sha256 = "e24c88866d89f90c11bcf89d9d1b4e8af78f486f1f7454a28210b10b8af17252"
+strip_components = 1
+description = "Automatic command-line mp3/ogg/flac file tagger and renamer"
+homepage = "http://bgoglin.free.fr/lltag/"
+license = "GPL-2.0-or-later"
+deps = ["flac", "vorbis-tools"]
+patches = ["patches/fix_flac_tracknumber_reading.patch"]
+
+[build]
+system = "make"
+tools = ["perl"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libt3window'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "libt3window"
+version = "0.4.2"
+archive = "https://os.ghalkes.nl/dist/libt3window-0.4.2.tar.bz2"
+sha256 = "d5d3fbbed3f51fb5349e29f5bc98a3a7239f88aed18ecf97d21fb8b1a49f2012"
+strip_components = 1
+description = "Tilde Terminal Toolkit's window library"
+homepage = "https://os.ghalkes.nl/t3/libt3window.html"
+license = "GPL-3.0-or-later"
+deps = ["gettext", "libtranscript", "libunistring"]
+
+[build]
+system = "autotools"
+configure_args = ["LIBTOOL=./hack/libtool"]
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xsetroot'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xsetroot"
+version = "1.1.4"
+archive = "https://www.x.org/releases/individual/app/xsetroot-1.1.4.tar.xz"
+sha256 = "1315a3f7e9abe06357363b93461e272601f67225ce0bc075c430cce35073362b"
+strip_components = 1
+description = "X root window parameter setting program"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXcursor", "libXfixes", "libXmu", "libXrender", "xbitmaps"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

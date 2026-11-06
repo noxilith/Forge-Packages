@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'grass'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2, fftw, libreadline8, python3-Pillow, python3-dateutil, python3-matplotlib, python3-numpy, python3-ply, python3-six, sqlite, wxPython, zstd
+[package]
+name = "grass"
+version = "8.5.0"
+archive = "https://github.com/OSGeo/grass/archive/refs/tags/8.5.0.tar.gz"
+sha256 = "c40cb6e741e92a253a44ddd38c7b665d0b44726495f0b8422ef205c0d33ca998"
+strip_components = 1
+description = "Geographic Resources Analysis Support System - GIS"
+homepage = "https://grass.osgeo.org/"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "geos", "gettext", "glu", "lapack", "libgdal", "netcdf", "proj", "tiff", "unixodbc"]
+patches = ["patches/generic-installdir.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--without-pdal", "--with-bzlib", "--with-nls", "--with-pthread", "--with-readline", "--with-geos", "--with-blas", "--with-lapack", "--with-netcdf", "--with-odbc", "--with-openmp"]
+tools = ["flex", "pkg-config"]
+deps = ["tar"]

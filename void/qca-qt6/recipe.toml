@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qca-qt6'. Review before relying on it.
+# needs, but Forge has no recipe for yet: botan, ca-certificates, nss, qt6-qt5compat, qt6-tools
+[package]
+name = "qca-qt6"
+version = "2.3.10"
+archive = "https://download.kde.org/stable/qca/2.3.10/qca-2.3.10.tar.xz"
+sha256 = "1c5b722da93d559365719226bb121c726ec3c0dc4c67dea34f1e50e4e0d14a02"
+strip_components = 1
+description = "Qt6 Cryptographic Architecture"
+homepage = "https://userbase.kde.org/QCA"
+license = "LGPL-2.1-or-later"
+deps = ["libgcrypt", "openssl", "qt6-base"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT6=ON", "-DUSE_RELATIVE_PATHS=true"]
+tools = ["pkg-config"]

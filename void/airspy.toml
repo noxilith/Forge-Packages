@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'airspy'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "airspy"
+version = "1.0.10"
+archive = "https://github.com/airspy/airspyone_host/archive/v1.0.10.tar.gz"
+sha256 = "fcca23911c9a9da71cebeffeba708c59d1d6401eec6eb2dd73cae35b8ea3c613"
+strip_components = 1
+description = "Tiny and efficient software defined radio (SDR) - tools"
+homepage = "https://airspy.com/"
+license = "GPL-2.0-or-later"
+deps = ["libusb"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

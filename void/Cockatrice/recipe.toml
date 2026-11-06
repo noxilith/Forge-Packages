@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'Cockatrice'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-svg, qt6-tools, qt6-websockets
+[package]
+name = "Cockatrice"
+version = "3.0.2"
+archive = "https://github.com/Cockatrice/Cockatrice/archive/refs/tags/2026-06-26-Release-3.0.2.tar.gz"
+sha256 = "b088cbf865bd6cbf694fd8c5a8d403c38931053a1deede22cb49158e2eb7d2e9"
+strip_components = 1
+description = "Cross-platform virtual tabletop for multiplayer card games"
+homepage = "https://github.com/Cockatrice/Cockatrice"
+license = "GPL-2.0-only"
+deps = ["abseil-cpp", "gtest", "protobuf", "qt6-base", "xz", "zlib"]
+patches = ["patches/libexecinfo.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_SERVER=1", "-DWITH_CLIENT=1", "-DWITH_ORACLE=1", "-DTEST=1"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gosu'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS
+[package]
+name = "gosu"
+version = "0.14.5"
+archive = "https://github.com/gosu/gosu/archive/v0.14.5.tar.gz"
+sha256 = "4dbc4998e2c630ee7758544de4286c70c68e639524b6088ccdc7b5487c928695"
+strip_components = 1
+description = "2D game development library"
+homepage = "https://www.libgosu.org"
+license = "MIT"
+deps = ["SDL2_ttf", "libopenal", "libsndfile", "mpg123", "pango"]
+patches = ["patches/stdexcept.patch"]
+
+[build]
+system = "cmake"
+subdir = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'qrtr-ns'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "qrtr-ns"
+version = "1.0"
+archive = "https://github.com/linux-msm/qrtr/archive/v1.0.tar.gz"
+sha256 = "dc5db4872ff0d3c43b5c6d115fadc94f393c9c8c89b4246e327853b466d6c49f"
+strip_components = 1
+description = "Userspace reference for net/qrtr in the Linux kernel"
+homepage = "https://github.com/linux-msm/qrtr"
+license = "BSD-3-Clause"
+
+[build]
+system = "make"

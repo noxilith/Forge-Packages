@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'xxHash'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xxHash"
+version = "0.8.2"
+archive = "https://github.com/Cyan4973/xxHash/archive/v0.8.2.tar.gz"
+sha256 = "baee0c6afd4f03165de7a4e67988d16f0f2b257b51d0e3cb91909302a26a79c4"
+strip_components = 1
+description = "Fast non-cryptographic hashing algorithm"
+homepage = "https://cyan4973.github.io/xxHash/"
+license = "BSD-2-Clause, GPL-2.0-or-later"
+
+[build]
+system = "make"

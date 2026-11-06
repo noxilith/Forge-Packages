@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'hidapi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "hidapi"
+version = "0.14.0"
+archive = "https://github.com/libusb/hidapi/archive/refs/tags/hidapi-0.14.0.tar.gz"
+sha256 = "a5714234abe6e1f53647dd8cba7d69f65f71c558b7896ed218864ffcf405bcbd"
+strip_components = 1
+description = "Simple library for communicating with USB and Bluetooth HID devices"
+homepage = "https://github.com/libusb/hidapi"
+license = "BSD-3-Clause"
+deps = ["eudev", "libusb"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wuzz'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "wuzz"
+version = "0.5.0"
+archive = "https://github.com/asciimoo/wuzz/archive/v0.5.0.tar.gz"
+sha256 = "721ea7343698e9f3c69e09eab86b9b1fef828057655f7cebc1de728c2f75151e"
+strip_components = 1
+description = "Interactive cli tool for HTTP inspection"
+homepage = "https://github.com/asciimoo/wuzz"
+license = "AGPL-3.0-or-later"
+patches = ["patches/go-mod-tidy.patch"]
+
+[build]
+system = "go"

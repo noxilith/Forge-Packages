@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libevdev'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libevdev"
+version = "1.13.6"
+archive = "https://www.freedesktop.org/software/libevdev/libevdev-1.13.6.tar.xz"
+sha256 = "73f215eccbd8233f414737ac06bca2687e67c44b97d2d7576091aa9718551110"
+strip_components = 1
+description = "Wrapper library for evdev devices"
+homepage = "https://www.freedesktop.org/wiki/Software/libevdev/"
+license = "MIT"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gcov"]
+tools = ["pkg-config"]

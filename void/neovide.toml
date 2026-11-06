@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'neovide'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: gn, harfbuzz, hicolor-icon-theme, libwebp, llvm, python
+[package]
+name = "neovide"
+version = "0.16.2"
+archive = "https://github.com/neovide/neovide/archive/refs/tags/0.16.2.tar.gz"
+sha256 = "a2016cceab3cba50b6a8b2f6787ae9017a85923575e89a83ebb9d428e8f80ca9"
+strip_components = 1
+description = "No Nonsense Neovim Client in Rust"
+homepage = "https://neovide.dev/"
+license = "MIT"
+deps = ["expat", "fontconfig", "freetype", "libicu78", "libjpeg-turbo", "libpng", "zlib"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]
+deps = ["curl"]

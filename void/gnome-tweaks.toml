@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-tweaks'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnome-settings-daemon
+[package]
+name = "gnome-tweaks"
+version = "49.0"
+archive = "https://download.gnome.org/sources/gnome-tweaks/49/gnome-tweaks-49.0.tar.xz"
+sha256 = "b3909bdcb4905b68427d6ab581e01f436dff8e5c0a389b1e0b14500f18806ebb"
+strip_components = 1
+description = "GNOME tool to customize advanced options"
+homepage = "https://wiki.gnome.org/Apps/Tweaks"
+license = "GPL-3.0-or-later, CC0-1.0"
+deps = ["dconf", "gsettings-desktop-schemas", "libadwaita", "mutter", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk4"]

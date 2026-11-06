@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rtl_433'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rtl_433"
+version = "25.12"
+archive = "https://github.com/merbanan/rtl_433/archive/25.12.tar.gz"
+sha256 = "d283ec7a41a02d398e8918b20b65df3bf684cf4478371830662004005dadcdd2"
+strip_components = 1
+description = "RTLSDR based 433MHz generic data receiver"
+homepage = "https://github.com/merbanan/rtl_433"
+license = "GPL-2.0-or-later"
+deps = ["SoapySDR", "librtlsdr", "libusb", "openssl"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

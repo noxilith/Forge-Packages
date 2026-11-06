@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libscfg'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libscfg"
+version = "0.1.1"
+archive = "https://git.sr.ht/~emersion/libscfg/archive/v0.1.1.tar.gz"
+sha256 = "621a91bf233176e0052e9444f0a42696ad1bfda24b25c027c99cb6e693f273d7"
+strip_components = 1
+description = "C library for scfg, a simple configuration format"
+homepage = "https://git.sr.ht/~emersion/libscfg"
+license = "MIT"
+
+[build]
+system = "meson"

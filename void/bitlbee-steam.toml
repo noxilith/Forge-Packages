@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bitlbee-steam'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "bitlbee-steam"
+version = "1.4.2"
+archive = "https://github.com/jgeboski/bitlbee-steam/archive/v1.4.2.tar.gz"
+sha256 = "fced6878906e14d96f899d362620de17c41a7fb84c2460068a9c08fc6904de38"
+strip_components = 1
+description = "Steam protocol plugin for BitlBee"
+homepage = "https://github.com/jgeboski/bitlbee-steam"
+license = "GPL-2.0-or-later"
+deps = ["bitlbee"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

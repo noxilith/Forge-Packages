@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xwmfs'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "xwmfs"
+version = "0.91"
+archive = "https://github.com/gerstner-hub/xwmfs/archive/v0.91.tar.gz"
+sha256 = "89121a2634374d32ed2403aa74b56f64f613c6591034cab6cfc686d5aee64ac6"
+strip_components = 1
+description = "X11 Window-Manager file system based on FUSE"
+homepage = "https://github.com/gerstner-hub/xwmfs"
+license = "GPL-2.0-or-later"
+deps = ["fuse", "libX11"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["which"]

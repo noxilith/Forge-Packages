@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lok'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_install
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "lok"
+version = "6.2"
+archive = "https://github.com/dimkr/lok/archive/refs/tags/6.2.tar.gz"
+sha256 = "17215d1ef5760e282562bd852abab5ac5ae136fe579c02bb8fb6f9734e2c3185"
+strip_components = 1
+description = "A Linux port of OpenBSD's awk"
+homepage = "https://github.com/dimkr/lok"
+license = "ISC"
+
+[build]
+system = "make"

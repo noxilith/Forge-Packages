@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'oksh'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "oksh"
+version = "7.9"
+archive = "https://github.com/ibara/oksh/releases/download/oksh-7.9/oksh-7.9.tar.gz"
+sha256 = "51b2d92515950c959dbf24f6fc33336db8c0526c2a50fee4ca598a18a6114a49"
+strip_components = 1
+description = "Portable OpenBSD ksh, based on the Public Domain Korn Shell"
+homepage = "https://github.com/ibara/oksh"
+license = "Public Domain"
+patches = ["patches/cross.patch"]
+
+[build]
+system = "autotools"

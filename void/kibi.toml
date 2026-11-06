@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'kibi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "kibi"
+version = "0.3.3"
+archive = "https://github.com/ilai-deutel/kibi/archive/refs/tags/v0.3.3.tar.gz"
+sha256 = "a7a7b6f6937f39ae86fd4f556034a3744bb99091c102bc6f38b281ee751d10e9"
+strip_components = 1
+description = "Lightweight, configurable text editor"
+homepage = "https://github.com/ilai-deutel/kibi"
+license = "Apache-2.0, MIT"
+
+[build]
+system = "cargo"

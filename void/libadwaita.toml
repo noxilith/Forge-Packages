@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'libadwaita'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: harfbuzz
+[package]
+name = "libadwaita"
+version = "1.9.1"
+archive = "https://download.gnome.org/sources/libadwaita/1.9/libadwaita-1.9.1.tar.xz"
+sha256 = "2ae34dbb3ea56d270925707cefa36050482ec88a741f1810b7619a5377c41a66"
+strip_components = 1
+description = "GTK4 building blocks for modern adaptive applications"
+homepage = "https://gitlab.gnome.org/GNOME/libadwaita/"
+license = "LGPL-2.0-or-later"
+deps = ["AppStream", "glib", "gtk4"]
+
+[build]
+system = "meson"
+configure_args = ["-Dexamples=true", "-Dtests=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "sassc"]

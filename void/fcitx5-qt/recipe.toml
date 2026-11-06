@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'fcitx5-qt'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: doxygen, fcitx5, qt5
+[package]
+name = "fcitx5-qt"
+version = "5.1.14"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-qt/fcitx5-qt-5.1.14.tar.zst"
+sha256 = "f004988784734abe16e412755a7ac225c1c4adab424e721b8b6a5298aa033348"
+strip_components = 1
+description = "Flexible Context-aware Input Tool with eXtension v5 - Qt"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "LGPL-2.1-or-later, BSD-3-Clause"
+deps = ["fmt", "libxkbcommon", "qt6-base"]
+patches = ["patches/vtable.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_QT4=OFF", "-DENABLE_QT5=ON", "-DENABLE_QT6=ON"]
+tools = ["pkg-config"]
+deps = ["cldr-emoji-annotation", "extra-cmake-modules", "gettext"]

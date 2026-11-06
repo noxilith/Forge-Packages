@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cutecom'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "cutecom"
+version = "0.51.0"
+archive = "https://gitlab.com/cutecom/cutecom/-/archive/v0.51.0/cutecom-v0.51.0.tar.gz"
+sha256 = "4b2591daa983b31716091bd1602988b5a06a19c1a3402150826fc36233edbedd"
+strip_components = 1
+description = "Graphical serial terminal"
+homepage = "https://gitlab.com/cutecom/cutecom/"
+license = "GPL-3.0-only"
+patches = ["patches/QPainterPath.patch"]
+
+[build]
+system = "cmake"

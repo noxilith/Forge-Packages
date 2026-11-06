@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'symmetrica'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "symmetrica"
+version = "3.1.0"
+archive = "https://gitlab.com/sagemath/symmetrica/-/archive/3.1.0/symmetrica-3.1.0.tar.bz2"
+sha256 = "46137328f5dfae50167356ed9bcdf0aadef9dcb70553d3788106dc7c5b890ee8"
+strip_components = 1
+description = "Collection of C routines for representation theory"
+homepage = "https://gitlab.com/sagemath/symmetrica"
+license = "ISC"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pwget'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "pwget"
+version = "2.1.0"
+archive = "https://github.com/majewsky/pwget/archive/v2.1.0.tar.gz"
+sha256 = "0b8d2ac33e3711a1adebdaefacfe740b096741537cad9be7c09b76b9a1c6df4d"
+strip_components = 1
+description = "Single-binary stateless password manager"
+homepage = "https://github.com/majewsky/pwget"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

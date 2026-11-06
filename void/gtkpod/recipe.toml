@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gtkpod'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gtkpod"
+version = "2.1.5"
+archive = "https://downloads.sourceforge.net/sourceforge/gtkpod/gtkpod-2.1.5.tar.gz"
+sha256 = "a57dc8ae9138e0cb4cee98691e7a95001130c9ea7823e6a75cc72503facd3a76"
+strip_components = 1
+description = "Platform independent GUI for Apple's iPod using GTK3"
+homepage = "http://www.gtkpod.org/libgpod"
+license = "GPL-2.0-or-later"
+deps = ["anjuta", "clutter-gtk", "curl", "faad2", "flac", "gdl", "gst-plugins-base1", "libdiscid", "libgpod", "libid3tag", "libmp4v2", "libmusicbrainz5", "libvorbis"]
+patches = ["patches/fix-libxml2-2.12.patch", "patches/fix-multibyte-character-segfault.patch", "patches/musl.patch", "patches/python3.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["flex", "pkg-config"]
+deps = ["glib"]

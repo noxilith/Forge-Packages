@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'supertux2'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: SDL2_image, glew, physfs
+[package]
+name = "supertux2"
+version = "0.7.0"
+archive = "https://github.com/SuperTux/supertux/releases/download/v0.7.0/SuperTux-v0.7.0-Source.tar.gz"
+sha256 = "32fc5b99b9994ed58e58341d6f21de925764b381256e108591136de53bc31da5"
+strip_components = 1
+description = "Side-scrolling platform game, milestone 2"
+homepage = "https://supertux.org"
+license = "GPL-3.0-or-later"
+deps = ["SDL2", "curl", "fmt", "freetype", "glm", "libogg", "libopenal", "libpng", "libraqm", "libvorbis", "zlib"]
+patches = ["patches/gcc12.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DINSTALL_SUBDIR_BIN=bin", "-DINSTALL_SUBDIR_SHARE=share/supertux2", "-DUSE_STATIC_SIMPLESQUIRREL=ON"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sandbar'. Review before relying on it.
+[package]
+name = "sandbar"
+version = "0.1"
+archive = "https://github.com/kolunmi/sandbar/archive/refs/tags/v0.1.tar.gz"
+sha256 = "5e875d6aca54c195d1842c124e48a7385eaada67a7160adbc279c6d6fa0d2b48"
+strip_components = 1
+description = "Bar (similar to dwm) for the river wayland compositor"
+homepage = "https://github.com/kolunmi/sandbar"
+license = "GPL-3.0-or-later"
+deps = ["fcft", "pixman", "wayland", "wayland-protocols"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

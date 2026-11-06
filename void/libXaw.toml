@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXaw'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXaw"
+version = "1.0.16"
+archive = "https://www.x.org/releases/individual/lib/libXaw-1.0.16.tar.xz"
+sha256 = "731d572b54c708f81e197a6afa8016918e2e06dfd3025e066ca642a5b8c39c8f"
+strip_components = 1
+description = "X Athena Widgets Library"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXext", "libXmu", "libXpm", "libXt"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-xmlto"]
+tools = ["pkg-config"]

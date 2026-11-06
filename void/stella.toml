@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'stella'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "stella"
+version = "6.5.3"
+archive = "https://github.com/stella-emu/stella/releases/download/6.5.3/stella-6.5.3-src.tar.xz"
+sha256 = "b49d5e5a5aa872e1f4b6f24eabd72304abdd577801d6ec349760c73b99e7f14d"
+strip_components = 1
+description = "Multi-platform Atari 2600 VCS Emulator"
+homepage = "https://stella-emu.github.io/"
+license = "GPL-2.0-or-later, BSD-3-Clause"
+deps = ["SDL2", "desktop-file-utils", "glu", "libpng", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

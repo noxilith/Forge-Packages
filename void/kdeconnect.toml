@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kdeconnect'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-connectivity, qt6-multimedia, qt6-tools
+[package]
+name = "kdeconnect"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kdeconnect-kde-26.08.1.tar.xz"
+sha256 = "2aed54ecd6b88a91d047714b384d7bd20d0a8d8bf399923c73cf3509372b36e0"
+strip_components = 1
+description = "Multi-platform app that allows your devices to communicate"
+homepage = "https://kdeconnect.kde.org"
+license = "GPL-2.0-or-later"
+deps = ["breeze-icons", "fuse-sshfs", "kde-cli-tools", "kf6-kcmutils", "kf6-kconfigwidgets", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-knotifications", "kf6-kpackage", "kf6-kpeople", "kf6-kservice", "kf6-kstatusnotifieritem", "kf6-kwayland", "kf6-modemmanager-qt", "kf6-qqc2-desktop-style", "kf6-sonnet", "kirigami-addons", "libei", "libevdev", "libfakekey", "pulseaudio-qt", "qca-qt6", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DBLUETOOTH_ENABLED=ON", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kwindowsystem", "qt6-declarative", "wayland"]

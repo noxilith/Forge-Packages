@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'gdk-pixbuf'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: python3-docutils
+[package]
+name = "gdk-pixbuf"
+version = "2.42.12"
+archive = "https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.12.tar.xz"
+sha256 = "b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7"
+strip_components = 1
+description = "Image loading library for The GTK+ toolkit (v2)"
+homepage = "https://wiki.gnome.org/Projects/GdkPixbuf"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "libjpeg-turbo", "libpng", "shared-mime-info", "tiff"]
+patches = ["patches/largejpeg-oom-test.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dpng=enabled", "-Djpeg=enabled", "-Dtiff=enabled", "-Dgif=enabled", "-Dothers=enabled", "-Dinstalled_tests=false"]
+tools = ["pkg-config"]
+deps = ["gettext"]

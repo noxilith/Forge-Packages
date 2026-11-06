@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libhugetlbfs'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_build_args, make_install_args, CFLAGS
+[package]
+name = "libhugetlbfs"
+version = "2.23"
+archive = "https://github.com/libhugetlbfs/libhugetlbfs/releases/download/2.23/libhugetlbfs-2.23.tar.gz"
+sha256 = "b70672f1e807c61b7eb3adf41c1903b42917951f2e7f8aef6821841700c04479"
+strip_components = 1
+description = "Library to deal with hugetlbfs"
+homepage = "https://github.com/libhugetlbfs/libhugetlbfs"
+license = "LGPL-2.1-or-later"
+patches = ["patches/0001-Makefile-Fix-version-discovery.patch", "patches/0002-Append-version-to-soname.patch", "patches/0003-glibc-2.34.patch"]
+
+[build]
+system = "make"

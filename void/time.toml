@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'time'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "time"
+version = "1.10"
+archive = "https://ftp.gnu.org/gnu/time/time-1.10.tar.gz"
+sha256 = "e8c29fb4ab599d8478e41e8618f50db8aede9c90af27d0d2ef28ae50d5de09c3"
+strip_components = 1
+description = "Displays information about the resources that a program uses"
+homepage = "https://www.gnu.org/software/time/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_func_wait3_rusage=yes"]

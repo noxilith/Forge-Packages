@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nauty'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: make_install_args
+[package]
+name = "nauty"
+version = "2.9.3"
+archive = "https://pallini.di.uniroma1.it/nauty2_9_3.tar.gz"
+sha256 = "9fc4edae04f88a0f5883985be3b39cf7f898fd6cc96e96b9ee25452743cc1b5b"
+strip_components = 1
+description = "Compute the automorphism groups of graphs and digraphs"
+homepage = "https://pallini.di.uniroma1.it/"
+license = "Apache-2.0"
+patches = ["patches/dont-test-clz-if-disabled.patch", "patches/dont-test-popcnt-if-disabled.patch"]
+
+[build]
+system = "autotools"

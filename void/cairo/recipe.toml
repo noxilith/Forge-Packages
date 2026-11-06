@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cairo'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "cairo"
+version = "1.18.4"
+archive = "https://cairographics.org/releases/cairo-1.18.4.tar.xz"
+sha256 = "445ed8208a6e4823de1226a74ca319d3600e83f6369f99b14265006599c32ccb"
+strip_components = 1
+description = "Vector graphics library with cross-device output support"
+homepage = "https://cairographics.org"
+license = "LGPL-2.1-or-later, MPL-1.1"
+deps = ["fontconfig", "freetype", "glib", "libX11", "libXext", "libXrender", "libpng", "libxcb", "lzo", "pixman", "zlib"]
+patches = ["patches/musl-stacksize.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtests=disabled"]
+tools = ["pkg-config"]

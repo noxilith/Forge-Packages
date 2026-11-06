@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mtpaint'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libwebp
+[package]
+name = "mtpaint"
+version = "3.50.11"
+archive = "https://github.com/wjaguar/mtPaint/archive/f37cf09c02b0ebd81d29c67be9741f54d76a9171.tar.gz"
+sha256 = "40feed3ddfaf2b19f39b92e416ce7eed50833c7e486145e2c2b73c90c8315f62"
+strip_components = 1
+description = "Simple GTK painting program"
+homepage = "http://mtpaint.sourceforge.net/"
+license = "GPL-3.0-or-later"
+deps = ["ImageMagick", "desktop-file-utils", "gettext", "gtk+3", "openjpeg2"]
+
+[build]
+system = "autotools"
+configure_args = ["imagick", "cflags", "jpeg", "jp2v2", "tiff", "lcms2", "man", "gtk3", "webp", "intl", "release"]
+tools = ["pkg-config"]

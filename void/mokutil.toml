@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mokutil'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "mokutil"
+version = "0.7.2"
+archive = "https://github.com/lcp/mokutil/archive/refs/tags/0.7.2.tar.gz"
+sha256 = "839d677c4fc9805f1565703ca32863e4652692c53da66a88ae9b9e30676f9e17"
+strip_components = 1
+description = "Utility to manipulate machine owner keys"
+homepage = "https://github.com/lcp/mokutil"
+license = "GPL-3.0-or-later"
+deps = ["efivar", "keyutils", "openssl"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

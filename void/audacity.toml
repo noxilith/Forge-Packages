@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'audacity'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: ffmpeg6, hicolor-icon-theme, jack, opusfile, portaudio, sqlite
+[package]
+name = "audacity"
+version = "3.7.8"
+archive = "https://github.com/audacity/audacity/releases/download/Audacity-3.7.8/audacity-sources-3.7.8.tar.gz"
+sha256 = "75f2b1d9c7d45faaaf193844d5fee796694deac7bf4932ca520563ab4fb74c27"
+strip_components = 1
+description = "Graphical cross-platform audio editor"
+homepage = "https://www.audacityteam.org"
+license = "GPL-2.0-or-later, GPL-3.0-or-later, CC-BY-3.0"
+deps = ["desktop-file-utils", "expat", "flac", "gtk+3", "lame", "libid3tag", "libmad", "libogg", "libsndfile", "libsoxr", "libvorbis", "lilv", "lv2", "portmidi", "rapidjson", "serd", "sord", "soundtouch", "sratom", "suil", "twolame", "vamp-plugin-sdk", "wavpack", "wxWidgets-gtk3", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-Daudacity_use_ffmpeg=loaded", "-Daudacity_lib_preference=system", "-Daudacity_obey_system_dependencies=ON", "-Daudacity_conan_enabled=OFF", "-Daudacity_use_portsmf=local", "-Daudacity_use_sbsms=local", "-Daudacity_has_vst3=OFF", "-Daudacity_has_crashreports=OFF", "-Daudacity_has_networking=OFF", "-Daudacity_has_sentry_reporting=OFF", "-Daudacity_has_updates_check=OFF", "-DAUDACITY_BUILD_LEVEL=2"]
+tools = ["pkg-config"]
+deps = ["gettext"]

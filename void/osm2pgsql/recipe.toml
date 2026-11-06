@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'osm2pgsql'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, bzip2, lua53
+[package]
+name = "osm2pgsql"
+version = "1.6.0"
+archive = "https://github.com/openstreetmap/osm2pgsql/archive/1.6.0.tar.gz"
+sha256 = "0ec8b58ab972ac8356185af4161270c1b625a77299f09e5fb7f45e616ef1a9a5"
+strip_components = 1
+description = "Tool for loading OpenStreetMap data into a PostgreSQL database"
+homepage = "https://osm2pgsql.org"
+license = "GPL-3.0-or-later"
+deps = ["expat", "postgresql18", "proj", "zlib"]
+patches = ["patches/no-boost.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_CXX_STANDARD=17"]

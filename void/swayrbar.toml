@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'swayrbar'. Review before relying on it.
+[package]
+name = "swayrbar"
+version = "0.4.2"
+archive = "https://git.sr.ht/~tsdh/swayr/archive/swayrbar-0.4.2.tar.gz"
+sha256 = "6a7b3b0bbb57160e6933b2ee0ad7438909a74ebafd871bf79bdb3fa47f9bbbe0"
+strip_components = 1
+description = "Swaybar-protocol implementation for sway/swaybar"
+homepage = "https://sr.ht/~tsdh/swayr/"
+license = "GPL-3.0-or-later"
+deps = ["swayr"]
+
+[build]
+system = "cargo"
+subdir = "swayrbar"

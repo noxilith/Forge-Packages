@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'apulse'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "apulse"
+version = "0.1.14"
+archive = "https://github.com/i-rinat/apulse/archive/refs/tags/v0.1.14.tar.gz"
+sha256 = "9208e71de64579222661945edca16ec1f57d02a58b958f2e654d588a8f4ca3e3"
+strip_components = 1
+description = "PulseAudio emulation for ALSA"
+homepage = "https://github.com/i-rinat/apulse"
+license = "MIT"
+deps = ["alsa-lib", "glib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

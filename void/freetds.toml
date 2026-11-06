@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'freetds'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "freetds"
+version = "1.5.18"
+archive = "https://www.freetds.org/files/stable/freetds-1.5.18.tar.bz2"
+sha256 = "6b2c8b93b9ee7c83855daf745de5878790032f14dbaee553d83a9d211b84dd4b"
+strip_components = 1
+description = "Open source implementation of the Tabular Data Stream protocol"
+homepage = "https://www.freetds.org/"
+license = "LGPL-2.0-or-later"
+deps = ["unixodbc"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

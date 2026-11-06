@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'havoc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "havoc"
+version = "0.7.0"
+archive = "https://github.com/ii8/havoc/archive/refs/tags/0.7.0.tar.gz"
+sha256 = "b4f819bfc3b0f8ea967018948dbf3a71f174a02886d00ee16121739fcd140d6f"
+strip_components = 1
+description = "Minimal terminal emulator for Wayland on Linux"
+homepage = "https://github.com/ii8/havoc"
+license = "Public Domain, MIT"
+deps = ["libxkbcommon", "wayland", "wayland-protocols"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

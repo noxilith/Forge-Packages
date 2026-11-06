@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'LGOGDownloader'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "LGOGDownloader"
+version = "3.18"
+archive = "https://github.com/Sude-/lgogdownloader/archive/v3.18.tar.gz"
+sha256 = "7f5a6f4a439e8a83975ba71a3aee6b866fce331f9d94b44f50c37cd6854e0a7a"
+strip_components = 1
+description = "Open source downloader for GOG.com games that uses the GOG.com API"
+homepage = "https://github.com/Sude-/lgogdownloader"
+license = "WTFPL"
+deps = ["curl", "jsoncpp", "openssl", "rhash", "tidy5", "tinyxml2", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

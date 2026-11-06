@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'trackballs'. Review before relying on it.
+# needs, but Forge has no recipe for yet: SDL2_image
+[package]
+name = "trackballs"
+version = "1.3.5"
+archive = "https://github.com/trackballs/trackballs/archive/v1.3.5.tar.gz"
+sha256 = "431587933e8f01d92a976933fe415aa0b000e5e7ec053b53efac0d8004311acc"
+strip_components = 1
+description = "Marble steering game"
+homepage = "https://trackballs.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2_mixer", "SDL2_ttf", "guile", "zlib"]
+patches = ["patches/respect-our-cpp.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gtksourceview2'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gtksourceview2"
+version = "2.10.5"
+archive = "https://download.gnome.org/sources/gtksourceview/2.10/gtksourceview-2.10.5.tar.bz2"
+sha256 = "c585773743b1df8a04b1be7f7d90eecdf22681490d6810be54c81a7ae152191e"
+strip_components = 1
+description = "Text widget that extends GTK+ GtkTextView widget"
+homepage = "http://www.gnome.org"
+license = "GPL-2.0-or-later"
+deps = ["gtk+", "libxml2"]
+patches = ["patches/python3.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["glib"]

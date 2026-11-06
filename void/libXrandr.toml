@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXrandr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXrandr"
+version = "1.5.5"
+archive = "https://www.x.org/releases/individual/lib/libXrandr-1.5.5.tar.xz"
+sha256 = "72b922c2e765434e9e9f0960148070bd4504b288263e2868a4ccce1b7cf2767a"
+strip_components = 1
+description = "X RandR Library from X.org"
+homepage = "https://www.x.org/"
+license = "MIT"
+deps = ["libXext", "libXrender", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bzrtp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mbedtls, sqlite
+[package]
+name = "bzrtp"
+version = "5.3.106"
+archive = "https://gitlab.linphone.org/BC/public/bzrtp/-/archive/5.3.106/bzrtp-5.3.106.tar.gz"
+sha256 = "d18008dd992ab45caf16d05ec58099666ce8dcddcebf5ae6d0bcece33788a5aa"
+strip_components = 1
+description = "Opensource implementation of ZRTP keys exchange protocol"
+homepage = "https://www.linphone.org"
+license = "GPL-2.0-or-later"
+deps = ["bctoolbox", "libxml2"]
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTS=FALSE", "-DBUILD_SHARED_LIBS=TRUE"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xlsfonts'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xlsfonts"
+version = "1.0.9"
+archive = "https://www.x.org/releases/individual/app/xlsfonts-1.0.9.tar.xz"
+sha256 = "a6a2e291801458d92510263b175d16f98024dc3816ebddbde79b5009f6c3b065"
+strip_components = 1
+description = "Server font list displayer for X"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libX11"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

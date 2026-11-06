@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pwvucontrol'. Review before relying on it.
+# hooks not translated: post_patch, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "pwvucontrol"
+version = "0.5.2"
+archive = "https://github.com/saivert/pwvucontrol/archive/refs/tags/0.5.2.tar.gz"
+sha256 = "125f8b36e82e4fbad97356626c46701f92aeb94f96ed8941b740141e33f2c9f5"
+strip_components = 1
+description = "Volume control applet for Pipewire"
+homepage = "https://github.com/saivert/pwvucontrol"
+license = "GPL-3.0-only"
+deps = ["libadwaita", "pipewire", "wireplumber"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils", "gettext", "glib", "gtk4"]

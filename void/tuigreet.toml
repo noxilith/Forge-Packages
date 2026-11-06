@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tuigreet'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: make_install_args, make_dirs
+# needs, but Forge has no recipe for yet: greetd
+[package]
+name = "tuigreet"
+version = "0.11.1"
+archive = "https://github.com/tuigreet/tuigreet/archive/refs/tags/0.11.1.tar.gz"
+sha256 = "7d643ba224c40c6a63f9462a826630543071aea08e732ccd2e880bcd80d939e8"
+strip_components = 1
+description = "Graphical console greeter for greetd"
+homepage = "https://github.com/tuigreet/tuigreet"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cargo"
+deps = ["scdoc"]

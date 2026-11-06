@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'texstudio'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-qt5compat, qt6-svg, qt6-tools
+[package]
+name = "texstudio"
+version = "4.9.9"
+archive = "https://github.com/texstudio-org/texstudio/archive/4.9.9.tar.gz"
+sha256 = "3654ef4c7273cafda5209caae487453b7ea58a7cc5c9144cb5f8a441852eeafa"
+strip_components = 1
+description = "Powerful Tex/LaTeX editor based on texmaker"
+homepage = "https://texstudio.org/"
+license = "GPL-2.0-or-later"
+deps = ["hunspell", "kf6-kdeclarative", "quazip"]
+patches = ["patches/30-disable-auto-update.patch", "patches/31-fix-desktop.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["qt6-base"]

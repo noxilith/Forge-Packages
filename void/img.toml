@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'img'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_build_tags, go_import_path
+# needs, but Forge has no recipe for yet: shadow
+[package]
+name = "img"
+version = "0.5.11"
+archive = "https://github.com/genuinetools/img/archive/v0.5.11.tar.gz"
+sha256 = "c6d805ab899db639fa08f0e33fe6673593be8336d288bb1cb4cb81a3229a916f"
+strip_components = 1
+description = "Standalone, daemonless, unprivileged container image builder"
+homepage = "https://github.com/genuinetools/img"
+license = "MIT"
+deps = ["libseccomp", "runc"]
+
+[build]
+system = "go"

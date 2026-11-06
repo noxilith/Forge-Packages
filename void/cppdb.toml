@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cppdb'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cppdb"
+version = "0.3.1"
+archive = "https://downloads.sourceforge.net/sourceforge/cppcms/cppdb/0.3.1/cppdb-0.3.1.tar.bz2"
+sha256 = "d60eef5a732d8f84ef5e4a2845a8cefc543a6c75bf3782589c2cf6aa150b992e"
+strip_components = 1
+description = "SQL Connectivity Library"
+homepage = "http://cppcms.com/sql/cppdb/"
+license = "MIT"
+deps = ["libpqxx"]
+
+[build]
+system = "cmake"

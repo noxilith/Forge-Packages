@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libmanette'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "libmanette"
+version = "0.2.6"
+archive = "https://download.gnome.org/sources/libmanette/0.2/libmanette-0.2.6.tar.xz"
+sha256 = "63653259a821ec7d90d681e52e757e2219d462828c9d74b056a5f53267636bac"
+strip_components = 1
+description = "Simple GObject game controller library"
+homepage = "https://gitlab.gnome.org/aplazas/libmanette"
+license = "GPL-3.0-or-later"
+deps = ["glib", "libevdev", "libgudev"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gobject-introspection", "vala"]

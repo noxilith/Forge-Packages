@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ocean-sound-theme'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base
+[package]
+name = "ocean-sound-theme"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/ocean-sound-theme-6.7.5.tar.xz"
+sha256 = "452e5ab04f5e2d7cbf9357e4e12badf8493aefda437ba130eb38c9e511313b72"
+strip_components = 1
+description = "Ocean Sound Theme for Plasma"
+homepage = "https://invent.kde.org/plasma/ocean-sound-theme"
+license = "CC-BY-SA-4.0"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

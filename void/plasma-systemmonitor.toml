@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'plasma-systemmonitor'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "plasma-systemmonitor"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-systemmonitor-6.7.5.tar.xz"
+sha256 = "5708e8f0e1833e0829144a14aba1f177262661cc57b20c4a5a34bfd6973d1f1b"
+strip_components = 1
+description = "Application for monitoring system resources"
+homepage = "https://invent.kde.org/plasma/plasma-systemmonitor"
+license = "GPL-2.0-only, GPL-3.0-only, LGPL-2.1-only, LGPL-3.0-only"
+deps = ["kf6-kconfig", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kglobalaccel", "kf6-ki18n", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-knewstuff", "kf6-kpackage", "kf6-kquickcharts", "kf6-kservice", "kf6-kwindowsystem", "kf6-qqc2-desktop-style", "kirigami-addons", "ksystemstats", "libksysguard", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

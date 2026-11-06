@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ferium'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "ferium"
+version = "4.7.1"
+archive = "https://github.com/gorilla-devs/ferium/archive/refs/tags/v4.7.1.tar.gz"
+sha256 = "a9b9fd966f47d5f8c32e483a21ea476f6883f194e7813f1f81b0001e14b046a5"
+strip_components = 1
+description = "CLI program for managing Minecraft mods and modpacks"
+homepage = "https://github.com/gorilla-devs/ferium"
+license = "MPL-2.0"
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features"]
+tools = ["pkg-config"]

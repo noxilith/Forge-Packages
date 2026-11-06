@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'md4c'. Review before relying on it.
+[package]
+name = "md4c"
+version = "0.5.2"
+archive = "https://github.com/mity/md4c/archive/refs/tags/release-0.5.2.tar.gz"
+sha256 = "55d0111d48fb11883aaee91465e642b8b640775a4d6993c2d0e7a8092758ef21"
+strip_components = 1
+description = "Markdown for C"
+homepage = "https://github.com/mity/md4c/"
+license = "MIT"
+
+[build]
+system = "cmake"

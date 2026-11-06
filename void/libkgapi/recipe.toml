@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libkgapi'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "libkgapi"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libkgapi-26.08.1.tar.xz"
+sha256 = "435dd7b20d0547d45627a471e12d9695119dc044f770046cb33017757af375de"
+strip_components = 1
+description = "KDE-based library for accessing various Google services"
+homepage = "https://invent.kde.org/pim/libkgapi"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kcalendarcore", "kf6-kcontacts", "kf6-kio", "kf6-kwallet"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

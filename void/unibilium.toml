@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'unibilium'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "unibilium"
+version = "2.1.4"
+archive = "https://github.com/neovim/unibilium/archive/v2.1.4.tar.gz"
+sha256 = "7360907bcf79ba49f6fc4a504767ff86e93ab9018477026fcc70d5ab77e1f2c1"
+strip_components = 1
+description = "Simple, self-contained terminfo library"
+homepage = "https://github.com/neovim/unibilium"
+license = "LGPL-3.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["perl"]

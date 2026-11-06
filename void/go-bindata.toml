@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'go-bindata'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "go-bindata"
+version = "3.0.7.20151023"
+archive = "https://github.com/jteeuwen/go-bindata/archive/a0ff2567cfb70903282db057e799fd826784d41d.tar.gz"
+sha256 = "65cf65ac422fb8072abfaabec86c20a74e448a93b489e896a36642e7049f5d32"
+strip_components = 1
+description = "Small utility which generates Go code from any file"
+homepage = "https://github.com/jteeuwen/go-bindata"
+license = "Public Domain"
+
+[build]
+system = "go"

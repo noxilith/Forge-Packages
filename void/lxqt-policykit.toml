@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lxqt-policykit'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-policykit"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-policykit/archive/2.4.0.tar.gz"
+sha256 = "c33eba486fb14504a37402c208e996078b355d3fd5c3515226f29ce1896ba9ab"
+strip_components = 1
+description = "LXQt PolicyKit agent"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["liblxqt", "polkit-qt6"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools"]

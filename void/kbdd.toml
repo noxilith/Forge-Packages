@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kbdd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+[package]
+name = "kbdd"
+version = "0.7.1"
+archive = "https://github.com/qnikst/kbdd/archive/v0.7.1.tar.gz"
+sha256 = "17b3ee6054e86f9d54e70023582061f287a14a96bd8841a99b61921f3a3b165a"
+strip_components = 1
+description = "Simple daemon and library to make per window layout using XKB"
+homepage = "https://github.com/qnikst/kbdd"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libX11"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ppsspp'. Review before relying on it.
+# hooks not translated: post_configure, post_install, post_patch, pre_configure
+# needs, but Forge has no recipe for yet: glew, zstd
+[package]
+name = "ppsspp"
+version = "1.20.4"
+archive = "https://github.com/hrydgard/ppsspp/releases/download/v1.20.4/ppsspp-1.20.4.tar.xz"
+sha256 = "4de21db3105d9d81a465a8a7e78c68ee3c0e0bf6597d1c1d530f7555f3ad8b31"
+strip_components = 1
+description = "Fast and portable PSP emulator"
+homepage = "https://www.ppsspp.org/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_ttf", "desktop-file-utils", "libpng", "libzip", "rapidjson", "snappy", "wayland", "zlib"]
+patches = ["patches/disable-glslang-tests.patch", "patches/ffmpeg.patch", "patches/ffmpeg6.patch", "patches/riscv-musl.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DHEADLESS=ON", "-DUSE_SYSTEM_FFMPEG=OFF", "-DUNITTEST=ON", "-DUSING_QT_UI=OFF", "-DUSE_SYSTEM_ZSTD=ON", "-DARMIPS_USE_STD_FILESYSTEM=ON", "-DUSE_SYSTEM_RAPIDJSON=ON", "-DUSE_SYSTEM_FREETYPE=ON", "-DUSE_SYSTEM_SNAPPY=ON", "-DUSE_SYSTEM_LIBZIP=ON", "-DFFMPEG_DIR=ffmpeg/linux/void"]
+tools = ["pkg-config"]

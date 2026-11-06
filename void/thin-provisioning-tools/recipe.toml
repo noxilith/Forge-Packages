@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'thin-provisioning-tools'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "thin-provisioning-tools"
+version = "1.0.4"
+archive = "https://github.com/jthornber/thin-provisioning-tools/archive/v1.0.4.tar.gz"
+sha256 = "a973786fb9cb49d30be6fb8178d6739bc23609d4114ab601f0983ecdbf349abf"
+strip_components = 1
+description = "Tools for manipulating the metadata of dm-thin device-mapper targets"
+homepage = "https://github.com/jthornber/thin-provisioning-tools"
+license = "GPL-3.0-or-later"
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

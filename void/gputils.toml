@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'gputils'. Review before relying on it.
+[package]
+name = "gputils"
+version = "1.5.0.1"
+archive = "https://downloads.sourceforge.net/sourceforge/gputils/gputils-1.5.0-1.tar.gz"
+sha256 = "96994faedf90f018e6ed8802a32165ba9350f8be73ff1b3489961cad0f3e08b3"
+strip_components = 1
+description = "PIC Programming Utilities"
+homepage = "http://gputils.sourceforge.net/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

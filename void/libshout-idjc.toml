@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libshout-idjc'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: libtheora, speex
+[package]
+name = "libshout-idjc"
+version = "2.4.6+1"
+archive = "https://downloads.sourceforge.net/sourceforge/libshoutidjc.idjc.p/libshout-idjc-2.4.6-r1.tar.gz"
+sha256 = "7594ffc5e1d435014125d7dffb15a3450bba15d480a413c49aeaa5605050e1a1"
+strip_components = 1
+description = "Libshout plus some extensions for IDJC"
+homepage = "http://idjc.sourceforge.net"
+license = "LGPL-2.0-or-later"
+deps = ["libogg", "libvorbis"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

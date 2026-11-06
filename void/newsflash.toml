@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'newsflash'. Review before relying on it.
+# hooks not translated: post_patch, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libwebkit2gtk41, sqlite
+[package]
+name = "newsflash"
+version = "5.0.0"
+archive = "https://gitlab.com/news-flash/news_flash_gtk/-/archive/v.5.0.0/news_flash_gtk-v.5.0.0.tar.gz"
+sha256 = "6746595e3c12ae652ca483608db9c78dd60b89aa60f8608264a1e1c0bb23b946"
+strip_components = 1
+description = "RSS feed reader that supports various web based services"
+homepage = "https://gitlab.com/news-flash/news_flash_gtk"
+license = "GPL-3.0-or-later"
+deps = ["clapper", "gtksourceview5", "libadwaita", "libxml2", "openssl"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils", "gettext", "glib", "gtk4", "llvm22", "rust-bindgen"]

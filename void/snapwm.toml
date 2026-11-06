@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'snapwm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "snapwm"
+version = "2.0.8"
+archive = "https://github.com/moetunes/snapwm-stable/archive/v2.0.8.tar.gz"
+sha256 = "75227f949274338094b68ca37ff99554dd9e43b0a67420f8454099b814110c72"
+strip_components = 1
+description = "Minimal and lightweight dynamic tiling window manager"
+homepage = "https://github.com/moetunes/snapwm-stable"
+license = "MIT"
+deps = ["libX11", "libXinerama", "libXrandr"]
+
+[build]
+system = "make"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kglobalacceld'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "kglobalacceld"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kglobalacceld-6.7.5.tar.xz"
+sha256 = "83e9a4e226e695fe1544cfa19a9659c5f1000be46c669fe3a9e299029c6c2abf"
+strip_components = 1
+description = "Daemon providing Global Keyboard Shortcut functionality"
+homepage = "https://invent.kde.org/plasma/kglobalacceld"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kglobalaccel", "kf6-kio", "kf6-kservice", "kf6-kwindowsystem", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules"]

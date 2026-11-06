@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xmppc'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "xmppc"
+version = "0.1.2"
+archive = "https://codeberg.org/Anoxinon_e.V./xmppc/archive/0.1.2.tar.gz"
+sha256 = "05259ec5cba25f693edfe01389a3405835404539c7817fb208c201e29480e6b7"
+strip_components = 1
+description = "Command-line XMPP messaging client"
+homepage = "https://codeberg.org/Anoxinon_e.V./xmppc"
+license = "GPL-3.0-only"
+deps = ["glib", "gpgme", "libstrophe", "openssl"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

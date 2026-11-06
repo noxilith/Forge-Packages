@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'act'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "act"
+version = "0.2.89"
+archive = "https://github.com/nektos/act/archive/refs/tags/v0.2.89.tar.gz"
+sha256 = "649cd5b91cad870871d2283fb3ad95c8fa1d5ced7a1db8d7b346d1a7dcd3ec71"
+strip_components = 1
+description = "Run your GitHub Actions locally"
+homepage = "https://github.com/nektos/act"
+license = "MIT, Apache-2.0"
+
+[build]
+system = "go"

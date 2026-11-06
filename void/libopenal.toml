@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libopenal'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: ffmpeg6, jack
+[package]
+name = "libopenal"
+version = "1.25.2"
+archive = "https://github.com/kcat/openal-soft/archive/refs/tags/1.25.2.tar.gz"
+sha256 = "fb27e5839aa11f0e5b9d33756965291fad5d6909ab928ea1f796f4a1a6877894"
+strip_components = 1
+description = "Cross-platform 3D audio library"
+homepage = "https://github.com/kcat/openal-soft"
+license = "LGPL-2.1-or-later"
+deps = ["SDL2", "alsa-lib", "pulseaudio", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DALSOFT_EXAMPLES=OFF"]
+tools = ["pkg-config"]

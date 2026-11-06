@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'NetworkManager-openvpn'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: lib32disabled
+[package]
+name = "NetworkManager-openvpn"
+version = "1.12.5"
+archive = "https://download.gnome.org/sources/NetworkManager-openvpn/1.12/NetworkManager-openvpn-1.12.5.tar.xz"
+sha256 = "ce32e38b0500eddf2fc8072ca17679817fc2d35eb91f6ff7b9904209c14b5afd"
+strip_components = 1
+description = "NetworkManager VPN plugin for OpenVPN"
+homepage = "https://wiki.gnome.org/Projects/NetworkManager"
+license = "GPL-2.0-or-later"
+deps = ["glib", "gtk+3", "gtk4", "libnma", "libsecret", "openvpn"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--with-gtk4"]
+tools = ["pkg-config"]
+deps = ["gettext"]

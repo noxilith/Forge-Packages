@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libcap-ng'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: python3-setuptools
+[package]
+name = "libcap-ng"
+version = "0.9.3"
+archive = "https://github.com/stevegrubb/libcap-ng/archive/refs/tags/v0.9.3.tar.gz"
+sha256 = "fe11ebbb55904763b3532f19069f13ec319042634620180a03bd4653d301563e"
+strip_components = 1
+description = "Alternate POSIX capabilities library"
+homepage = "https://people.redhat.com/sgrubb/libcap-ng/"
+license = "LGPL-2.1-or-later"
+deps = ["libbpf"]
+patches = ["patches/pid_t-portability.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-python3"]
+tools = ["pkg-config"]
+deps = ["swig"]

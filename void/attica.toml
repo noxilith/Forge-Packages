@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'attica'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "attica"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/attica-5.116.0.tar.xz"
+sha256 = "681107c4dd989999cecd002c58c01ec3af8317bb9da5267809ad465750d21fea"
+strip_components = 1
+description = "Qt library that implements the Open Collaboration Services API"
+homepage = "https://invent.kde.org/frameworks/attica"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "kcoreaddons"]

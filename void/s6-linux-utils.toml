@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 's6-linux-utils'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "s6-linux-utils"
+version = "2.6.4.1"
+archive = "https://skarnet.org/software/s6-linux-utils/s6-linux-utils-2.6.4.1.tar.gz"
+sha256 = "16e1a5b5a2b4a98674b4a9719612adb79588e3c20c4083360278ea38f2d32129"
+strip_components = 1
+description = "Minimalistic Linux-specific system utilities (s6-chroot, s6-mount etc.)"
+homepage = "https://skarnet.org/software/s6-linux-utils"
+license = "ISC"
+deps = ["execline", "skalibs"]
+
+[build]
+system = "autotools"

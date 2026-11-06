@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'opencore-amr'. Review before relying on it.
+[package]
+name = "opencore-amr"
+version = "0.1.6"
+archive = "https://downloads.sourceforge.net/sourceforge/opencore-amr/opencore-amr-0.1.6.tar.gz"
+sha256 = "483eb4061088e2b34b358e47540b5d495a96cd468e361050fae615b1809dc4a1"
+strip_components = 1
+description = "AMRNB/AMRWB Encoder Decoder"
+homepage = "https://sourceforge.net/projects/opencore-amr/"
+license = "Apache-2.0"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

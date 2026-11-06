@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pluma'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool, python3-setuptools
+[package]
+name = "pluma"
+version = "1.28.1"
+archive = "https://github.com/mate-desktop/pluma/releases/download/v1.28.1/pluma-1.28.1.tar.xz"
+sha256 = "27137ff1bb1c53a90d2308b8a6b203e5d07f13a644a0d950f3ead7bb9cf1e241"
+strip_components = 1
+description = "Powerful text editor for MATE"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "enchant2", "glib", "gtk+3", "gtksourceview4", "iso-codes", "libICE", "libSM", "libpeas", "mate-desktop", "zenity"]
+patches = ["patches/python-3.12.patch"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "gobject-introspection"]

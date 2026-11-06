@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'aspell-nl'. Review before relying on it.
+[package]
+name = "aspell-nl"
+version = "0.50"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/nl/aspell-nl-0.50-2.tar.bz2"
+sha256 = "440e0b7df8c5903d728221fe4ba88a74658ce14c8bb04b290c41402dfd41cb39"
+strip_components = 1
+description = "Dutch dictionary for aspell"
+homepage = "http://aspell.net"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+deps = ["aspell", "which"]

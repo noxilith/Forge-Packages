@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ProcDump-for-Linux'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "ProcDump-for-Linux"
+version = "1.1.1"
+archive = "https://github.com/Microsoft/ProcDump-for-Linux/archive/1.1.1.tar.gz"
+sha256 = "712be77d97f802ca7ad7eaaa521f7742c15db93af0c968c8b54e48e3ab341baa"
+strip_components = 1
+description = "ProcDump-for-Linux provides a way to create core dumps"
+homepage = "https://github.com/Microsoft/ProcDump-for-Linux"
+license = "MIT"
+deps = ["gdb", "zlib"]
+
+[build]
+system = "make"

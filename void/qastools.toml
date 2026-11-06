@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qastools'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt5
+[package]
+name = "qastools"
+version = "0.23.0"
+archive = "https://gitlab.com/sebholt/qastools/-/archive/v0.23.0/qastools-v0.23.0.tar.bz2"
+sha256 = "d18ee5e1045ec44a18d5f7b8613f3987f225b4ef96c63128bf5cc645b2e6dbbb"
+strip_components = 1
+description = "Collection of desktop applications for the Linux sound system ALSA"
+homepage = "https://gitlab.com/sebholt/qastools"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "desktop-file-utils"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["tar"]

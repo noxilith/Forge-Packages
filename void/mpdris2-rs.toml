@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mpdris2-rs'. Review before relying on it.
+[package]
+name = "mpdris2-rs"
+version = "1.1.1"
+archive = "https://github.com/szclsya/mpdris2-rs/archive/refs/tags/v1.1.1.tar.gz"
+sha256 = "f94eba0022282cb81f5a3c70c7f844ef5c42236e6765cab7a113f902395bd999"
+strip_components = 1
+description = "Exposing MPRIS V2.1 D-Bus interface for mpd"
+homepage = "https://github.com/szclsya/mpdris2-rs"
+license = "GPL-3.0-only"
+deps = ["dbus"]
+
+[build]
+system = "cargo"

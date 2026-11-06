@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'nss-mdns'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: avahi
+[package]
+name = "nss-mdns"
+version = "0.15.1"
+archive = "https://github.com/lathiat/nss-mdns/archive/v0.15.1.tar.gz"
+sha256 = "2d1b8de2e9ed5526f51c8bb627b719c07668465b5315787e7cfeed776ab90b9a"
+strip_components = 1
+description = "NSS module for Multicast DNS name resolution"
+homepage = "https://github.com/lathiat/nss-mdns"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

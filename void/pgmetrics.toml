@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pgmetrics'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "pgmetrics"
+version = "1.19.1"
+archive = "https://github.com/rapidloop/pgmetrics/archive/refs/tags/v1.19.1.tar.gz"
+sha256 = "36719647b928c2887a78686f8eca0f52830bd9ada8f2a691000df23f80439054"
+strip_components = 1
+description = "Collect and display statistics from running Postgresql"
+homepage = "https://pgmetrics.io"
+license = "Apache-2.0"
+
+[build]
+system = "go"

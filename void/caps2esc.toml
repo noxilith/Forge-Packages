@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'caps2esc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "caps2esc"
+version = "0.3.2"
+archive = "https://gitlab.com/interception/linux/plugins/caps2esc/-/archive/v0.3.2/caps2esc-v0.3.2.tar.gz"
+sha256 = "d8a5c7a23cb7368fde2b91a0b5481d8ce906af146dd9a49f609052f2cf1d212c"
+strip_components = 1
+description = "Transforming the most useless key ever in the most useful one"
+homepage = "https://gitlab.com/interception/linux/plugins/caps2esc"
+license = "MIT"
+deps = ["interception-tools"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'glib'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_check, post_install, post_patch, pre_check
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xsl, libffi, python3-docutils, python3-packaging, util-linux-common
+[package]
+name = "glib"
+version = "2.88.3"
+archive = "https://download.gnome.org/sources/glib/2.88/glib-2.88.3.tar.xz"
+sha256 = "ab24d24e698dfa1e408b7bcdb508f4aafc906185a8b8ce72fdf79bbbdc9b383b"
+strip_components = 1
+description = "GNU library of C routines"
+homepage = "https://www.gtk.org"
+license = "LGPL-2.1-or-later"
+deps = ["dbus", "elfutils", "pcre2", "zlib"]
+patches = ["patches/0001-Relocate-the-repository-directory-for-native-builds.patch", "patches/glib-compile-schemas-remove-deprecated-warnings.patch", "patches/gobject_init_on_demand.patch", "patches/quark_init_on_demand.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dman=true", "-Dselinux=disabled", "-Dintrospection=enabled", "--default-library=both", "-Db_lto=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "gobject-introspection-bootstrap", "libxslt"]

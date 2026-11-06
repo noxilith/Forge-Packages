@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'thrift'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+# needs, but Forge has no recipe for yet: boost, python3-build, python3-installer, python3-setuptools, python3-wheel
+[package]
+name = "thrift"
+version = "0.25.0"
+archive = "https://github.com/apache/thrift/archive/v0.25.0.tar.gz"
+sha256 = "f6aa5fadd01320e17c73e0c1f3b22c858bd235fe5214a5dd9cd5c830822c4529"
+strip_components = 1
+description = "Apache Thrift compiler"
+homepage = "https://thrift.apache.org/"
+license = "Apache-2.0"
+deps = ["libevent", "openssl", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON", "-DWITH_AS3=OFF", "-DWITH_JAVA=OFF", "-DWITH_JAVASCRIPT=OFF", "-DWITH_NODEJS=OFF", "-DWITH_PYTHON=ON"]
+tools = ["bison", "flex"]

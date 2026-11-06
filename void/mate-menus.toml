@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'mate-menus'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "mate-menus"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-menus-1.28.0.tar.xz"
+sha256 = "cf40c75c7d6f0aad1d4969828fc62025c6222bc6a84f0bb9d6ead7e45970508d"
+strip_components = 1
+description = "MATE menu specifications"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'blobby2'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, hicolor-icon-theme, lua52, physfs, zip
+[package]
+name = "blobby2"
+version = "1.1.1"
+archive = "https://downloads.sourceforge.net/sourceforge/blobby/blobby2-linux-1.1.1.tar.gz"
+sha256 = "357ee513e69d3b50f67fc063d4acb7959a5fe88977817f0aab14ccc70db214ba"
+strip_components = 1
+description = "Arcade style volleyball game"
+homepage = "http://blobbyvolley.de"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "desktop-file-utils", "tinyxml2"]
+patches = ["patches/system-deps.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

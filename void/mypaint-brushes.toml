@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mypaint-brushes'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "mypaint-brushes"
+version = "2.0.2"
+archive = "https://github.com/mypaint/mypaint-brushes/archive/v2.0.2.tar.gz"
+sha256 = "01032550dd817bb0f8e85d83a632ed2e50bc16e0735630839e6c508f02f800ac"
+strip_components = 1
+description = "Brushes used by MyPaint and other software using libmypaint"
+homepage = "https://github.com/mypaint/mypaint-brushes"
+license = "CC0-1.0"
+
+[build]
+system = "autotools"

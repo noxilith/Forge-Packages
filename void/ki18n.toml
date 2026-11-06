@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ki18n'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "ki18n"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/ki18n-5.116.0.tar.xz"
+sha256 = "933250628090e240141c23acc40f796da1ff5a658987b60a0c7cc182701e6bcd"
+strip_components = 1
+description = "KDE Gettext-based UI text internationalization"
+homepage = "https://invent.kde.org/frameworks/ki18n"
+license = "LGPL-2.0-or-later"
+deps = ["iso-codes"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

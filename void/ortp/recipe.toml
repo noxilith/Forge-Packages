@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ortp'. Review before relying on it.
+[package]
+name = "ortp"
+version = "5.3.106"
+archive = "https://gitlab.linphone.org/BC/public/ortp/-/archive/5.3.106/ortp-5.3.106.tar.gz"
+sha256 = "5c3ba6f67cdd8c8fe0008f94539402c7794c42eb36ba1a0ca2a7f4776a8257ea"
+strip_components = 1
+description = "Real-Time Transport Protocol (RFC 3550) library"
+homepage = "https://www.linphone.org/technical-corner/ortp"
+license = "LGPL-2.1-or-later"
+deps = ["bctoolbox"]
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=TRUE", "-DENABLE_UNIT_TESTS=OFF"]

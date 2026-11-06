@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'systemsettings'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "systemsettings"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/systemsettings-6.7.5.tar.xz"
+sha256 = "317a21165709d61796fba19f5454397577ffd8aa96655b29dd286a1df252cddb"
+strip_components = 1
+description = "KDE System settings"
+homepage = "https://invent.kde.org/plasma/systemsettings"
+license = "GPL-2.0-or-later, GFDL-1.2-only"
+deps = ["kf6-kauth", "kf6-kcmutils", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-kitemviews", "kf6-kjobwidgets", "kf6-krunner", "kf6-kservice", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "kwin", "plasma-activities", "plasma-workspace", "qt6-base", "qt6-declarative", "setxkbmap", "xrdb"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext"]

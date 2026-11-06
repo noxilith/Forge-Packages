@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'texinfo'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses, perl
+[package]
+name = "texinfo"
+version = "7.3"
+archive = "https://ftp.gnu.org/gnu/texinfo/texinfo-7.3.tar.xz"
+sha256 = "51f74eb0f51cfa9873b85264dfdd5d46e8957ec95b88f0fb762f63d9e164c72e"
+strip_components = 1
+description = "GNU Documentation System"
+homepage = "https://www.gnu.org/software/texinfo/"
+license = "GPL-3.0-or-later"
+deps = ["gzip"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-perl-xs"]
+tools = ["perl"]

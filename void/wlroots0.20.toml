@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wlroots0.20'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: glslang, hwids, mesa
+[package]
+name = "wlroots0.20"
+version = "0.20.2"
+archive = "https://gitlab.freedesktop.org/wlroots/wlroots/-/releases/0.20.2/downloads/wlroots-0.20.2.tar.gz"
+sha256 = "80c567d2ed4efb2cfa6b077f22c7a710d9c78ba4e185a75e8694001114af0733"
+strip_components = 1
+description = "Modular Wayland compositor library 0.20"
+homepage = "https://gitlab.freedesktop.org/wlroots/wlroots"
+license = "MIT"
+deps = ["eudev", "lcms2", "libdisplay-info", "libdrm", "libglvnd", "libinput", "libliftoff", "libxcb", "libxkbcommon", "pixman", "seatd", "vulkan-loader", "wayland", "wayland-protocols", "xcb-util", "xcb-util-cursor", "xcb-util-errors", "xcb-util-image", "xcb-util-keysyms", "xcb-util-renderutil", "xcb-util-wm", "xcb-util-xrm", "xorg-server-xwayland"]
+
+[build]
+system = "meson"
+configure_args = ["--auto-features=enabled", "-Dexamples=false", "-Dwerror=false", "-Db_ndebug=false"]
+tools = ["pkg-config"]

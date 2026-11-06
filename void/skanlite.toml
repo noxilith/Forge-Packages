@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'skanlite'. Review before relying on it.
+[package]
+name = "skanlite"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/skanlite-26.08.1.tar.xz"
+sha256 = "7ab83ff5c3d5bfe5e3534a77a5423de88a0ea43850a6a5666551f2e684d87bb2"
+strip_components = 1
+description = "Image Scanning Application"
+homepage = "https://apps.kde.org/skanlite"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kio", "kf6-kxmlgui", "libksane6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DBUILD_WITH_QT6=ON", "-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-base"]

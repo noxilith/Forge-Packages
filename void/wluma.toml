@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wluma'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "wluma"
+version = "4.11.1"
+archive = "https://github.com/maximbaz/wluma/archive/refs/tags/4.11.1.tar.gz"
+sha256 = "1b66145af53bbfc437e4314fe27f776cb73c5cb8c7893bf1c008b9a81532b710"
+strip_components = 1
+description = "Automatic brightness adjustment based on screen contents and ALS"
+homepage = "https://github.com/maximbaz/wluma"
+license = "ISC"
+deps = ["dbus", "eudev", "v4l-utils", "vulkan-loader", "wayland"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

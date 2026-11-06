@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rtags'. Review before relying on it.
+[package]
+name = "rtags"
+version = "2.38"
+archive = "https://github.com/Andersbakken/rtags/releases/download/v2.38/rtags-2.38.tar.gz"
+sha256 = "e19d9cf5823cccc43266ca57c19ae0bb879cbe138511cb3f0343958860481a5d"
+strip_components = 1
+description = "C/C++ indexer with integration for Emacs based on clang"
+homepage = "https://github.com/Andersbakken/rtags"
+license = "GPL-3.0-or-later"
+deps = ["llvm19", "openssl", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSKIP_CTEST=TRUE"]
+tools = ["pkg-config"]

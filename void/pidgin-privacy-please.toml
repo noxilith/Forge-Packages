@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pidgin-privacy-please'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch
+[package]
+name = "pidgin-privacy-please"
+version = "0.7.1"
+archive = "https://ftp.debian.org/debian/pool/main/p/pidgin-privacy-please/pidgin-privacy-please_0.7.1.orig.tar.gz"
+sha256 = "8134bcd5da98fe8b4c9918fd420c7e68b0990e895ed2534396cacbf473f2615c"
+strip_components = 1
+description = "Pidgin plugin to stop spam"
+homepage = "https://packages.debian.org/sid/pidgin-privacy-please"
+license = "GPL-3.0-or-later"
+deps = ["glib", "pidgin"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

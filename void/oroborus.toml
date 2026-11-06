@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'oroborus'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "oroborus"
+version = "2.0.20"
+archive = "https://ftp.debian.org/debian/pool/main/o/oroborus/oroborus_2.0.20.tar.gz"
+sha256 = "5220a540bcf6812c6773fbe583d9ea3f54f452cbac55bedcaadeba8c3a9a7b89"
+strip_components = 1
+description = "A minimalistic window manager"
+homepage = "http://www.oroborus.org/"
+license = "GPL-2.0-or-later"
+deps = ["libICE", "libSM", "libX11", "libXext", "libXpm"]
+
+[build]
+system = "autotools"

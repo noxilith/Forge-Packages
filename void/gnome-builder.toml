@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-builder'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libwebkit2gtk41, python3-Sphinx, python3-lxml, python3-sphinx_rtd_theme
+[package]
+name = "gnome-builder"
+version = "48.0"
+archive = "https://download.gnome.org/sources/gnome-builder/48/gnome-builder-48.0.tar.xz"
+sha256 = "7afe9a7a3b3c6621768bc46a61d698dd788b3653fb46a708238bdccf4de67ba4"
+strip_components = 1
+description = "IDE for GNOME"
+homepage = "https://wiki.gnome.org/Apps/Builder"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "cmark", "desktop-file-utils", "editorconfig", "flatpak", "flatpak-builder", "glib", "gobject-introspection", "gom", "gtk4", "gtksourceview5", "json-glib", "jsonrpc-glib", "libadwaita", "libdex", "libgit2-glib", "libpanel", "libpeas2", "libportal", "libsoup3", "libspelling", "libxml2", "llvm19", "ostree", "pango", "pcre2", "python3-gobject", "sysprof", "template-glib", "vala", "vte3"]
+
+[build]
+system = "meson"
+configure_args = ["-Dhelp=true", "-Dnetwork_tests=false"]
+tools = ["flex", "pkg-config"]
+deps = ["appstream-glib", "gettext", "mm-common"]

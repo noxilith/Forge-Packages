@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lcdf-typetools'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "lcdf-typetools"
+version = "2.110"
+archive = "https://www.lcdf.org/type/lcdf-typetools-2.110.tar.gz"
+sha256 = "517f9ee879208679d3224a14d5e6eb20598fc648d5c3562708083d003088a934"
+strip_components = 1
+description = "Utilities for manipulating OpenType, Type 1 and Multiple Master fonts"
+homepage = "https://www.lcdf.org/type/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

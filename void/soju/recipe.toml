@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'soju'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_build_tags, go_package, go_import_path, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "soju"
+version = "0.11.1"
+archive = "https://codeberg.org/emersion/soju/archive/v0.11.1.tar.gz"
+sha256 = "42f0b422267fb039ae598d34122f89857fe0cb590baf7136032bf46a244b00eb"
+strip_components = 1
+description = "User-friendly IRC bouncer"
+homepage = "https://soju.im"
+license = "AGPL-3.0-or-later"
+deps = ["libcap"]
+patches = ["patches/void-defaults.patch"]
+
+[build]
+system = "go"
+deps = ["scdoc"]

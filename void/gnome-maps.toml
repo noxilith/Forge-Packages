@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-maps'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "gnome-maps"
+version = "51.2"
+archive = "https://download.gnome.org/sources/gnome-maps/51/gnome-maps-51.2.tar.xz"
+sha256 = "81038882a057702bad0991ab9faa2e2f0d621fbefb22f49013710425ff38fd5a"
+strip_components = 1
+description = "GNOME maps application"
+homepage = "https://apps.gnome.org/Maps"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "geoclue2", "geocode-glib", "gjs", "json-glib", "libadwaita", "libgweather", "libportal", "librsvg", "libsecret", "libshumate", "libxml2", "rest"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "gettext", "glib", "gtk4"]

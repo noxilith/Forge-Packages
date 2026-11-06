@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'vibe'. Review before relying on it.
+# settings not translated: make_install_args
+[package]
+name = "vibe"
+version = "3.0.1"
+archive = "https://github.com/TornaxO7/vibe/archive/refs/tags/vibe-v3.0.1.tar.gz"
+sha256 = "72371fa30265062de8c36be90133e8c178c1ea4f8f29bb9e4eb86f2729221f41"
+strip_components = 1
+description = "Desktop audio visualizer and shader player for wayland"
+homepage = "https://github.com/TornaxO7/vibe"
+license = "GPL-2.0-only"
+deps = ["alsa-lib", "libxkbcommon"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

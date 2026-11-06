@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'grilo-plugins'. Review before relying on it.
+# needs, but Forge has no recipe for yet: avahi-discover, itstool, libdmapsharing, lua54, sqlite
+[package]
+name = "grilo-plugins"
+version = "0.3.18"
+archive = "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.18.tar.xz"
+sha256 = "8e3ce74ee717c3c322d0cb0f8df26bb0914028a5d016e28055ffb49cc9a46c5e"
+strip_components = 1
+description = "Plugins for Grilo"
+homepage = "https://wiki.gnome.org/Projects/Grilo"
+license = "LGPL-2.1-or-later"
+deps = ["gnome-online-accounts", "gom", "grilo", "gstreamer1", "json-glib", "libarchive", "libgcrypt", "libmediaart", "libquvi", "libxml2", "rest", "tinysparql", "totem-pl-parser"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgoa=enabled"]
+tools = ["gperf", "pkg-config"]
+deps = ["gettext", "glib", "localsearch"]

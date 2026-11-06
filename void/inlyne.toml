@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'inlyne'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "inlyne"
+version = "0.5.2"
+archive = "https://github.com/Inlyne-Project/inlyne/archive/v0.5.2.tar.gz"
+sha256 = "4a2f426e88cf192f6aad1bd927640b97350bf6447620d7252bf0d6d01d6d3f40"
+strip_components = 1
+description = "GPU-powered, browserless, markdown and HTML viewer"
+homepage = "https://github.com/Inlyne-Project/inlyne"
+license = "MIT"
+deps = ["fontconfig", "libxkbcommon", "oniguruma", "wayland"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xlogo'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xlogo"
+version = "1.0.7"
+archive = "https://www.x.org/releases/individual/app/xlogo-1.0.7.tar.xz"
+sha256 = "8a3f67b20407a53286a7de1a04dbda12d272234d59ef35e68ecfaf7633d83624"
+strip_components = 1
+description = "X Window System logo"
+homepage = "http://www.x.org/archive/X11R6.8.1/doc/xlogo.1.html"
+license = "MIT"
+deps = ["libXaw"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

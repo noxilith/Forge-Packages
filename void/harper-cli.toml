@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'harper-cli'. Review before relying on it.
+# hooks not translated: pre_build, pre_check, pre_install
+# settings not translated: make_build_args, make_install_args
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "harper-cli"
+version = "2.13.0"
+archive = "https://github.com/Automattic/harper/archive/refs/tags/v2.13.0.tar.gz"
+sha256 = "c2576a84a81019399095eb1bdbd0b66a32a1dba780ff1dea2b3d083e8b20626e"
+strip_components = 1
+description = "Offline grammar checker for the English language"
+homepage = "https://writewithharper.com"
+license = "Apache-2.0"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

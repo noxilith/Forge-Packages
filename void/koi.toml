@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'koi'. Review before relying on it.
+[package]
+name = "koi"
+version = "0.5.1"
+archive = "https://github.com/baduhai/Koi/archive/refs/tags/0.5.1.tar.gz"
+sha256 = "af62bb621f78bd6c91872a1619e6829bbf3ea8b4b006da966445dba57edbb5d2"
+strip_components = 1
+description = "Automatic theme switcher for KDE Plasma"
+homepage = "https://github.com/baduhai/Koi"
+license = "LGPL-3.0-only"
+deps = ["kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kwidgetsaddons", "plasma-desktop", "plasma-integration", "plasma-workspace", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cmatrix'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "cmatrix"
+version = "2.0"
+archive = "https://github.com/abishekvashok/cmatrix/archive/v2.0.tar.gz"
+sha256 = "ad93ba39acd383696ab6a9ebbed1259ecf2d3cf9f49d6b97038c66f80749e99a"
+strip_components = 1
+description = "Simulates the display from The Matrix"
+homepage = "https://github.com/abishekvashok/cmatrix"
+license = "GPL-2.0-or-later"
+patches = ["patches/unicode.patch"]
+
+[build]
+system = "cmake"
+deps = ["kbd"]

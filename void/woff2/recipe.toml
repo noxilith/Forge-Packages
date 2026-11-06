@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'woff2'. Review before relying on it.
+[package]
+name = "woff2"
+version = "1.0.2"
+archive = "https://github.com/google/woff2/archive/v1.0.2.tar.gz"
+sha256 = "add272bb09e6384a4833ffca4896350fdb16e0ca22df68c0384773c67a175594"
+strip_components = 1
+description = "Web Open Font Format 2 reference implementaton"
+homepage = "https://github.com/google/woff2"
+license = "GPL-3.0-or-later"
+deps = ["brotli"]
+patches = ["patches/always-install-executables.patch", "patches/dont-set-rpath.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

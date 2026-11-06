@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'html-xml-utils'. Review before relying on it.
+[package]
+name = "html-xml-utils"
+version = "8.8"
+archive = "https://www.w3.org/Tools/HTML-XML-utils/html-xml-utils-8.8.tar.gz"
+sha256 = "950027e1780787ca88271570aae890e0ac9b906f764554c2dee263d4cf7b74b8"
+strip_components = 1
+description = "Number of simple utilities for manipulating HTML and XML files"
+homepage = "https://www.w3.org/Tools/HTML-XML-utils/README"
+license = "W3C"
+deps = ["libidn"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"

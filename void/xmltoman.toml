@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xmltoman'. Review before relying on it.
+# needs, but Forge has no recipe for yet: perl-XML-Parser
+[package]
+name = "xmltoman"
+version = "0.4"
+archive = "https://github.com/Distrotech/xmltoman/archive/0.4.tar.gz"
+sha256 = "2ab86b74fe364a866d84c14b20cbd42a09fa85c629deeff52376bbf890854feb"
+strip_components = 1
+description = "Convert XML to man pages in groff format or html"
+homepage = "https://sourceforge.net/projects/xmltoman"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"
+tools = ["perl"]

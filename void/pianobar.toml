@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pianobar'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "pianobar"
+version = "2022.04.01"
+archive = "https://6xq.net/pianobar/pianobar-2022.04.01.tar.bz2"
+sha256 = "1670b28865a8b82a57bb6dfea7f16e2fa4145d2f354910bb17380b32c9b94763"
+strip_components = 1
+description = "Free/open-source, console-based client for Pandora radio"
+homepage = "https://6xq.net/pianobar/"
+license = "MIT"
+deps = ["curl", "faad2", "gnutls", "json-c", "libao", "libgcrypt"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

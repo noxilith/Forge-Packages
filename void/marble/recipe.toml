@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'marble'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch, pre_check
+# needs, but Forge has no recipe for yet: gpsd, qt6-position, qt6-qt5compat, qt6-serialport, qt6-svg, qt6-tools, qt6-webchannel, shapelib
+[package]
+name = "marble"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/marble-26.08.1.tar.xz"
+sha256 = "a8d5fbfb6b8cc4a8517df6e75143afcdaebcd7995f88f7a459d6b17c9bae1a98"
+strip_components = 1
+description = "Virtual globe and world atlas"
+homepage = "https://marble.kde.org"
+license = "LGPL-2.1-or-later, GFDL-1.2-only"
+deps = ["abseil-cpp", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kpackage", "kf6-kparts", "kf6-krunner", "libplasma", "phonon", "protobuf", "qt6-base", "qt6-declarative", "zlib"]
+patches = ["patches/soversion.patch", "patches/test-data-path.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["perl", "pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'softhsm'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "softhsm"
+version = "2.7.0"
+archive = "https://github.com/softhsm/SoftHSMv2/archive/refs/tags/2.7.0.tar.gz"
+sha256 = "be14a5820ec457eac5154462ffae51ba5d8a643f6760514d4b4b83a77be91573"
+strip_components = 1
+description = "Cryptographic store accessible through a PKCS #11 interface"
+homepage = "https://www.opendnssec.org/en/latest/softhsm/"
+license = "BSD-2-Clause"
+deps = ["openssl", "p11-kit"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-crypto-backend=openssl", "--with-objectstore-backend-db"]
+tools = ["pkg-config"]

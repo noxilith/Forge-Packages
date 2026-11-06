@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'nano'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "nano"
+version = "9.2"
+archive = "https://www.nano-editor.org/dist/v9/nano-9.2.tar.xz"
+sha256 = "05ecb99247b782e8a5b3a25ed4101dd034b0236902f7449bc9795b717642f7e9"
+strip_components = 1
+description = "GNU nano text editor"
+homepage = "https://www.nano-editor.org/"
+license = "GPL-3.0-or-later"
+deps = ["file"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-utf8"]
+tools = ["pkg-config"]
+deps = ["groff"]

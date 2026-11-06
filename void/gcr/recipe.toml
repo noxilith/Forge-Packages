@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'gcr'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, CFLAGS
+# needs, but Forge has no recipe for yet: gi-docgen, hicolor-icon-theme
+[package]
+name = "gcr"
+version = "3.41.2"
+archive = "https://download.gnome.org/sources/gcr/3.41/gcr-3.41.2.tar.xz"
+sha256 = "bad10f3c553a0e1854649ab59c5b2434da22ca1a54ae6138f1f53961567e1ab7"
+strip_components = 1
+description = "GNOME crypto package"
+homepage = "https://gitlab.gnome.org/GNOME/gcr"
+license = "LGPL-2.0-or-later, LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gnupg", "gtk+3", "libgcrypt", "libsecret", "libxslt", "p11-kit"]
+patches = ["patches/Fix-FTBFS-on-x32.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dssh_agent=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "openssh"]

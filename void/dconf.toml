@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dconf'. Review before relying on it.
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "dconf"
+version = "0.40.0"
+archive = "https://download.gnome.org/sources/dconf/0.40/dconf-0.40.0.tar.xz"
+sha256 = "cf7f22a4c9200421d8d3325c5c1b8b93a36843650c9f95d6451e20f0bcb24533"
+strip_components = 1
+description = "Low-level configuration system"
+homepage = "https://wiki.gnome.org/Projects/dconf"
+license = "LGPL-2.1-or-later"
+deps = ["bash-completion", "dbus", "glib", "gtk+3", "libxml2", "vala"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["libxslt"]

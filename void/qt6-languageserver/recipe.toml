@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qt6-languageserver'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "qt6-languageserver"
+version = "6.11.2"
+archive = "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtlanguageserver-everywhere-src-6.11.2.tar.xz"
+sha256 = "38bc4272ecf4ca0eb1927227053e52be6b2e05733f46d03422306aace511fc5e"
+strip_components = 1
+description = "Implementation of the Language Server Protocol for Qt6"
+homepage = "https://www.qt.io"
+license = "GPL-3.0-only WITH Qt-GPL-exception-1.0, LGPL-3.0-only, GPL-2.0-or-later"
+deps = ["qt6-base"]
+patches = ["patches/0001-Revert-JSON-RPC-QtLanguageServer-Enforce-static-buil.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_BUILD_TESTS=ON"]

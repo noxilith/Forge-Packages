@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'monsterwm-git'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_args, CFLAGS, LDFLAGS
+[package]
+name = "monsterwm-git"
+version = "20120304"
+archive = "https://github.com/c00kiemon5ter/monsterwm/archive/eb3820f877a624e00be5a0ee28feb943889cb915.tar.gz"
+sha256 = "404dc50128daee172af2e3c836d4979b675814491db59fde1b039fc6069aca54"
+strip_components = 1
+description = "Minimal and lightweight dynamic tiling window manager"
+homepage = "https://github.com/c00kiemon5ter/monsterwm"
+license = "MIT"
+deps = ["libX11"]
+
+[build]
+system = "make"

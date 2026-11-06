@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'nemiver'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: boost, intltool, itstool, sqlite
+[package]
+name = "nemiver"
+version = "0.9.6"
+archive = "https://download.gnome.org/sources/nemiver/0.9/nemiver-0.9.6.tar.xz"
+sha256 = "85ab8cf6c4f83262f441cb0952a6147d075c3c53d0687389a3555e946b694ef2"
+strip_components = 1
+description = "Graphical front-end for gdb"
+homepage = "https://wiki.gnome.org/Apps/Nemiver"
+license = "GPL-2.0-only"
+deps = ["gdb", "gsettings-desktop-schemas", "gtksourceviewmm", "libgdlmm", "libgtop", "libxml2", "vte3"]
+patches = ["patches/bool-conversion.patch", "patches/fix-nullptr.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-gsettings=yes", "--disable-schemas-install", "--disable-schemas-compile"]
+tools = ["pkg-config"]
+deps = ["glib"]

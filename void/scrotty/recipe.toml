@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'scrotty'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "scrotty"
+version = "2.0"
+archive = "https://github.com/maandree/scrotty/archive/2.0.tar.gz"
+sha256 = "466528d6ecf0138f57c40541258389686e22771c28d40f28c00825faaeaab1a3"
+strip_components = 1
+description = "Framebuffer screenshoter"
+homepage = "https://github.com/maandree/scrotty"
+license = "GPL-3.0-or-later"
+deps = ["ImageMagick", "libpng"]
+patches = ["patches/fish-completion-vendor.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["auto-auto-complete", "gettext", "texinfo"]

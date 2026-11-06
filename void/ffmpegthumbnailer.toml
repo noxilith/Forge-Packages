@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ffmpegthumbnailer'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg, ffmpeg6
+[package]
+name = "ffmpegthumbnailer"
+version = "2.2.3"
+archive = "https://github.com/dirkvdb/ffmpegthumbnailer/archive/refs/tags/2.2.3.tar.gz"
+sha256 = "8c9b9057c6cc8bce9d11701af224c8139c940f734c439a595525e073b09d19b8"
+strip_components = 1
+description = "Lightweight video thumbnailer"
+homepage = "https://github.com/dirkvdb"
+license = "GPL-2.0-or-later"
+deps = ["libjpeg-turbo", "libpng"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

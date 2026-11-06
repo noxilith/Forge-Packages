@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'bctoolbox'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: mbedtls
+[package]
+name = "bctoolbox"
+version = "5.3.106"
+archive = "https://gitlab.linphone.org/BC/public/bctoolbox/-/archive/5.3.106/bctoolbox-5.3.106.tar.gz"
+sha256 = "d5cbef92dd5089260d60e4064e0068693e0d71908818c2f50ed7319de9c8f988"
+strip_components = 1
+description = "Library to create and run audio and video streams"
+homepage = "https://gitlab.linphone.org/BC/public/bctoolbox"
+license = "GPL-2.0-only"
+deps = ["bcunit"]
+patches = ["patches/cmake.patch", "patches/disable-psa-crypto.patch", "patches/map-use-after-free.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_TESTS=ON", "-DENABLE_TESTS_COMPONENT=FALSE", "-DENABLE_STRICT=FALSE", "-DBUILD_SHARED_LIBS=ON"]

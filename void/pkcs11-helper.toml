@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pkcs11-helper'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "pkcs11-helper"
+version = "1.30.0"
+archive = "https://github.com/OpenSC/pkcs11-helper/releases/download/pkcs11-helper-1.30.0/pkcs11-helper-1.30.0.tar.bz2"
+sha256 = "4c5815ba910cabf26df08d449ca2909daf4538c9899aa7f7fadc61229d3488a9"
+strip_components = 1
+description = "Library to help simplify interacting with PKCS#11 providers"
+homepage = "https://github.com/OpenSC/pkcs11-helper"
+license = "GPL-2.0-only, BSD-3-Clause"
+deps = ["openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-doc", "--disable-static"]
+tools = ["pkg-config"]

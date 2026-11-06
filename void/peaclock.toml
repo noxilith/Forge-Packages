@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'peaclock'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "peaclock"
+version = "0.4.3"
+archive = "https://github.com/octobanana/peaclock/archive/0.4.3.tar.gz"
+sha256 = "3de32486e45ddf6a62c591619b5373d23c8eaf885975441ae581ca7241c48012"
+strip_components = 1
+description = "Colourful binary clock for the terminal"
+homepage = "https://octobanana.com/software/peaclock"
+license = "MIT"
+deps = ["libicu78"]
+
+[build]
+system = "cmake"

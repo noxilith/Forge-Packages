@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sddm-kcm'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "sddm-kcm"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/sddm-kcm-6.7.5.tar.xz"
+sha256 = "b7641d15996f590df27d8f820dffc79d83ce9e4e19a88f03bb1d8651faa25887"
+strip_components = 1
+description = "KDE Config Module for SDDM"
+homepage = "https://invent.kde.org/plasma/sddm-kcm"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kauth", "kf6-kcmutils", "kf6-kconfig", "kf6-kio", "kf6-knewstuff", "libXcursor", "sddm", "xcb-util-image"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

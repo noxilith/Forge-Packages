@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'SLADE'. Review before relying on it.
+# settings not translated: build_helper, CXXFLAGS
+# needs, but Forge has no recipe for yet: 7zip, bzip2, fluidsynth, freeimage, glew, lua53
+[package]
+name = "SLADE"
+version = "3.2.12"
+archive = "https://github.com/sirjuddington/SLADE/archive/3.2.12.tar.gz"
+sha256 = "02448f44ba4eb38c36d3af29610e2346af9d0f6383f721e89e369c48321cc497"
+strip_components = 1
+description = "Modern editor for Doom-engine based games"
+homepage = "https://github.com/sirjuddington/SLADE"
+license = "GPL-2.0-or-later"
+deps = ["SFML", "curl", "dumb", "ftgl", "gtk+3", "wxWidgets-gtk3", "xz", "zlib"]
+patches = ["patches/signed....patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["which"]

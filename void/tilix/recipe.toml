@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'tilix'. Review before relying on it.
+# settings not translated: build_helper, LDFLAGS
+# needs, but Forge has no recipe for yet: gtkd, po4a
+[package]
+name = "tilix"
+version = "1.9.6"
+archive = "https://github.com/gnunn1/tilix/archive/1.9.6.tar.gz"
+sha256 = "be389d199a6796bd871fc662f8a37606a1f84e5429f24e912d116f16c5f0a183"
+strip_components = 1
+description = "Tiling terminal emulator for Linux"
+homepage = "https://gnunn1.github.io/tilix-web/"
+license = "MPL-2.0"
+deps = ["dconf", "glib", "gsettings-desktop-schemas", "ldc", "libX11", "libsecret", "vte3"]
+patches = ["patches/disable-appstream-test.patch", "patches/llvm-unwind.patch", "patches/musl-hacks.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Db_lto=false"]
+tools = ["pkg-config"]
+deps = ["AppStream", "desktop-file-utils", "gdk-pixbuf", "gettext"]

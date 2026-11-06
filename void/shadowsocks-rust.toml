@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'shadowsocks-rust'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "shadowsocks-rust"
+version = "1.24.0"
+archive = "https://github.com/shadowsocks/shadowsocks-rust/archive/refs/tags/v1.24.0.tar.gz"
+sha256 = "a89865d1c5203de1b732017dd032e85f943d1592e8d3152eb7d2c4f3fca387bf"
+strip_components = 1
+description = "Rust port of shadowsocks, a fast lightweight obfuscated tunnel proxy"
+homepage = "https://github.com/shadowsocks/shadowsocks-rust"
+license = "MIT"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

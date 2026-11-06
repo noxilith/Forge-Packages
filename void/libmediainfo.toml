@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libmediainfo'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_check, pre_configure
+# settings not translated: skip_extraction
+# needs, but Forge has no recipe for yet: libzen
+[package]
+name = "libmediainfo"
+version = "26.10"
+archive = "https://mediaarea.net/download/source/libmediainfo/26.10/libmediainfo_26.10.tar.xz"
+sha256 = "a806fd36592549a03e810486f415a6858d4d8f14066bfbe97b32a447cd5eb590"
+strip_components = 1
+description = "Shared library for mediainfo"
+homepage = "https://mediaarea.net/MediaInfo"
+license = "BSD-2-Clause"
+deps = ["curl", "libmms"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--disable-static", "--with-libcurl", "--with-libmms"]
+subdir = "Project/GNU/Library"
+tools = ["pkg-config"]

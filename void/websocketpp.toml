@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'websocketpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "websocketpp"
+version = "0.8.2"
+archive = "https://github.com/amini-allight/websocketpp/archive/363ec80247782e4b933f93079f02a0835de28570.tar.gz"
+sha256 = "b6a291d938037860be33f6e52f22037cad8dffc6578ff55cc4dbaed3e7c75865"
+strip_components = 1
+description = "C++/Boost Asio based websocket client/server library"
+homepage = "https://www.zaphoyd.com/websocketpp"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"

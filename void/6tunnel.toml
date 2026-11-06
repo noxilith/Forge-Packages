@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for '6tunnel'. Review before relying on it.
+[package]
+name = "6tunnel"
+version = "0.14"
+archive = "https://github.com/wojtekka/6tunnel/releases/download/0.14/6tunnel-0.14.tar.gz"
+sha256 = "6945312793079408f1ab40071cee68e70158a23560145f1d424a3eb16227f235"
+strip_components = 1
+description = "IPv6 hosts with IPv4-only applications and vice-versa"
+homepage = "https://github.com/wojtekka/6tunnel"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"

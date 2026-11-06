@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dgen-sdl'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "dgen-sdl"
+version = "1.33"
+archive = "https://downloads.sourceforge.net/sourceforge/dgen/dgen-sdl-1.33.tar.gz"
+sha256 = "99e2c06017c22873c77f88186ebcc09867244eb6e042c763bb094b02b8def61e"
+strip_components = 1
+description = "Multi-platform Genesis/Mega Drive Emulator"
+homepage = "http://dgen.sourceforge.net"
+license = "BSD-3-Clause, GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["libarchive", "sdl12-compat"]
+
+[build]
+system = "autotools"
+tools = ["nasm", "pkg-config"]

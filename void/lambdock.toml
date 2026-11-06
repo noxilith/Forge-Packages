@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lambdock'. Review before relying on it.
+[package]
+name = "lambdock"
+version = "0.6.7"
+archive = "https://codeberg.org/jjba23/lambdock/archive/v0.6.7.tar.gz"
+sha256 = "c4237a60fc361203bbdc22bdc0548c17957ac7e9aa66bc4b9df80be7300ffde6"
+strip_components = 1
+description = "Modern, hyper-hackable, Wayland-native desktop dock application"
+homepage = "https://codeberg.org/jjba23/lambdock"
+license = "GPL-3.0-or-later"
+deps = ["gtk4", "gtk4-layer-shell", "guile", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib"]

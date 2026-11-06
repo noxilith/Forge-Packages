@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'seafile-client-qt'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: qt5, sqlite
+[package]
+name = "seafile-client-qt"
+version = "8.0.10"
+archive = "https://github.com/haiwen/seafile-client/archive/v8.0.10.tar.gz"
+sha256 = "9c89c3fb1579b57f47df7ac6a8a1046393929db82982bdd73b5bbfb79ac30e78"
+strip_components = 1
+description = "Cloud storage system - Qt graphical client"
+homepage = "https://seafile.com"
+license = "Apache-2.0"
+deps = ["libevent", "seafile-libclient"]
+patches = ["patches/qt5.15-QPainterPath.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'seer'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-charts, qt6-svg, qt6-tools
+[package]
+name = "seer"
+version = "2.5"
+archive = "https://github.com/epasveer/seer/archive/v2.5.tar.gz"
+sha256 = "06f8eac1ab26149e6919c3bb021c1052f4da42c17b540d87db944682a81071b3"
+strip_components = 1
+description = "GUI frontend to gdb"
+homepage = "https://github.com/epasveer/seer"
+license = "GPL-3.0-or-later"
+deps = ["gdb", "qt6-base"]
+
+[build]
+system = "cmake"
+subdir = "src"
+tools = ["pkg-config"]

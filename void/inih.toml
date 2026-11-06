@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'inih'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "inih"
+version = "62"
+archive = "https://github.com/benhoyt/inih/archive/r62.tar.gz"
+sha256 = "9c15fa751bb8093d042dae1b9f125eb45198c32c6704cd5481ccde460d4f8151"
+strip_components = 1
+description = "Simple ini file parser library"
+homepage = "https://github.com/benhoyt/inih"
+license = "BSD-3-Clause"
+
+[build]
+system = "meson"
+configure_args = ["-Ddistro_install=true", "-Ddefault_library=shared"]

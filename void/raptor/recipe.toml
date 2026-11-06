@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'raptor'. Review before relying on it.
+[package]
+name = "raptor"
+version = "2.0.16"
+archive = "https://librdf.org/dist/source/raptor2-2.0.16.tar.gz"
+sha256 = "089db78d7ac982354bdbf39d973baf09581e6904ac4c92a98c5caadb3de44680"
+strip_components = 1
+description = "Raptor RDF Syntax Library"
+homepage = "https://librdf.org/raptor"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later, Apache-2.0"
+deps = ["curl", "libicu78", "libxml2", "libxslt"]
+patches = ["patches/4dbc4c1da2a033c497d84a1291c46f416a9cac51.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--with-yajl=no"]
+tools = ["pkg-config"]

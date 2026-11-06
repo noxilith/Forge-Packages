@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'imapfilter'. Review before relying on it.
+# hooks not translated: post_configure, post_install
+# settings not translated: make_build_args, CFLAGS
+# needs, but Forge has no recipe for yet: lua53
+[package]
+name = "imapfilter"
+version = "2.8.3"
+archive = "https://github.com/lefcha/imapfilter/archive/v2.8.3.tar.gz"
+sha256 = "a28ee90ac20a996e2fc19cbc36a36c152483085011f3b2ec8dfd913b7a6d9804"
+strip_components = 1
+description = "Mail filtering utility"
+homepage = "https://github.com/lefcha/imapfilter"
+license = "MIT"
+deps = ["openssl", "pcre2"]
+
+[build]
+system = "make"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kronometer'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt5
+[package]
+name = "kronometer"
+version = "2.3.0"
+archive = "https://download.kde.org/stable/kronometer/2.3.0/src/kronometer-2.3.0.tar.xz"
+sha256 = "75b9e1a26f0f468d016b2dc3cd2d8fd31412ac968c5c3e7551a7502f7cfac476"
+strip_components = 1
+description = "Stopwatch Application"
+homepage = "https://userbase.kde.org/Kronometer"
+license = "GPL-2.0-or-later"
+deps = ["kxmlgui"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

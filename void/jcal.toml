@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'jcal'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "jcal"
+version = "0.5.1"
+archive = "https://github.com/persiancal/jcal/archive/v0.5.1.tar.gz"
+sha256 = "6cc477c668962de9250b7aebfdf0eee979ab94ec4f393dc04782024ef68fff45"
+strip_components = 1
+description = "Jalali Calendar Library"
+homepage = "https://github.com/persiancal/jcal"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"
+subdir = "sources"
+deps = ["which"]

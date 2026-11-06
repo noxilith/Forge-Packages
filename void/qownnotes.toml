@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'qownnotes'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: botan, qt6-qt5compat, qt6-svg, qt6-tools, qt6-websockets
+[package]
+name = "qownnotes"
+version = "26.10.5"
+archive = "https://github.com/pbek/QOwnNotes/releases/download/v26.10.5/qownnotes-26.10.5.tar.xz"
+sha256 = "c1214862254ae9661c8c0b120a5a5b370ad8f1030ec2b54fce29e556892652a2"
+strip_components = 1
+description = "Plain-text file notepad and todo-list manager with markdown support"
+homepage = "https://www.qownnotes.org"
+license = "GPL-2.0-only"
+deps = ["libgit2", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQON_QT6_BUILD=ON", "-DBUILD_WITH_LIBGIT2=1", "-DBUILD_WITH_SYSTEM_BOTAN=1"]
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'yersinia'. Review before relying on it.
+# hooks not translated: post_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "yersinia"
+version = "0.8.2"
+archive = "https://github.com/tomac/yersinia/archive/v0.8.2.tar.gz"
+sha256 = "964f528dbffd904376ab7986e69b1e8639591c929e2f39186ac9ebf2d3bc761f"
+strip_components = 1
+description = "Framework for layer 2 security testing"
+homepage = "https://github.com/tomac/yersinia"
+license = "GPL-2.0-or-later"
+deps = ["gettext", "libnet", "libpcap"]
+patches = ["patches/fix_crossbuild.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gtk"]
+tools = ["pkg-config"]

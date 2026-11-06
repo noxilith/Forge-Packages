@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'timg'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "timg"
+version = "1.6.3"
+archive = "https://github.com/hzeller/timg/archive/v1.6.3.tar.gz"
+sha256 = "59c908867f18c81106385a43065c232e63236e120d5b2596b179ce56340d7b01"
+strip_components = 1
+description = "Terminal Image and Video Viewer"
+homepage = "https://github.com/hzeller/timg"
+license = "GPL-2.0-only"
+deps = ["GraphicsMagick", "libdeflate", "libexif", "libjpeg-turbo", "librsvg", "libsixel", "poppler"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_OPENSLIDE_SUPPORT=OFF", "-DTIMG_VERSION_FROM_GIT=OFF"]
+tools = ["pkg-config"]

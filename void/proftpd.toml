@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'proftpd'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "proftpd"
+version = "1.3.9"
+archive = "https://github.com/proftpd/proftpd/archive/v1.3.9.tar.gz"
+sha256 = "4a5f13b666226813b4da0ade34535d325e204ab16cf8008c7353b1b5a972f74b"
+strip_components = 1
+description = "Highly configurable GPL-licensed FTP server software"
+homepage = "http://www.proftpd.org/"
+license = "GPL-3.0-or-later"
+deps = ["libcap"]
+
+[build]
+system = "autotools"

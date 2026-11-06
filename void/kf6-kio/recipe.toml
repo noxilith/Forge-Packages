@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kio'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-qt5compat, qt6-tools
+[package]
+name = "kf6-kio"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kio-6.30.0.tar.xz"
+sha256 = "c19cbd4878347b67a9e05ee6541083f51dd90f9e58ee245b4d7634e09f9c04b2"
+strip_components = 1
+description = "KDE Network transparent access to files and data"
+homepage = "https://invent.kde.org/frameworks/kio"
+license = "LGPL-2.1-or-later"
+deps = ["acl", "kf6-karchive", "kf6-kauth", "kf6-kbookmarks", "kf6-kcompletion", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kded", "kf6-kdoctools", "kf6-kiconthemes", "kf6-kitemviews", "kf6-kjobwidgets", "kf6-kservice", "kf6-kwallet", "kf6-kwindowsystem", "kf6-solid", "qt6-base"]
+patches = ["patches/fix-fstatat-calls.patch", "patches/test.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig"]

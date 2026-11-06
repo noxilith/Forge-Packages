@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'jose'. Review before relying on it.
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "jose"
+version = "14"
+archive = "https://github.com/latchset/jose/releases/download/v14/jose-14.tar.xz"
+sha256 = "cee329ef9fce97c4c025604a8d237092f619aaa9f6d35fdf9d8c9052bc1ff95b"
+strip_components = 1
+description = "Javascript Object Signing and Encryption"
+homepage = "https://github.com/latchset/jose"
+license = "Apache-2.0"
+deps = ["jansson", "openssl", "zlib"]
+
+[build]
+system = "meson"
+configure_args = ["-Db_ndebug=false"]
+tools = ["pkg-config"]

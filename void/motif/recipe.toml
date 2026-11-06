@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'motif'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+[package]
+name = "motif"
+version = "2.3.8"
+archive = "https://downloads.sourceforge.net/sourceforge/motif/Motif%202.3.8%20Source%20Code/motif-2.3.8.tar.gz"
+sha256 = "859b723666eeac7df018209d66045c9853b50b4218cecadb794e2359619ebce7"
+strip_components = 1
+description = "User interface component toolkit"
+homepage = "https://sourceforge.net/projects/motif/"
+license = "LGPL-2.1-only"
+deps = ["libX11", "libXext", "libXft", "libXpm", "libXt", "xbitmaps"]
+patches = ["patches/02-fix-format-security.patch", "patches/03-no-demos.patch", "patches/06-cast-size_t-to-int.patch", "patches/07-fix_lintian_reported_manpage_typos.patch", "patches/08-fix_hyphen_in_man_pages.patch", "patches/09-fix_typo_in_libxm.patch", "patches/10-fix_manpage-has-bad-whatis-entry.patch", "patches/11-fix_underlinking.patch", "patches/13-fix_hardcoded_x11rgb_path.patch", "patches/15-link_uil_against_libuil.patch", "patches/16-fix-undefined-use-of-sprintf.patch", "patches/17-switch-to-system-iswspace.patch", "patches/20-cross-compile.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-jpeg", "--disable-png", "--enable-xft", "--disable-demos"]
+tools = ["flex", "pkg-config"]

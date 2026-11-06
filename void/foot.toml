@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'foot'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libutempter, ncurses
+[package]
+name = "foot"
+version = "1.28.0"
+archive = "https://codeberg.org/dnkl/foot/archive/1.28.0.tar.gz"
+sha256 = "4296be402b5684d049534598e69db92b918f92beac9dab76b585207045f0b037"
+strip_components = 1
+description = "Fast, lightweight and minimalistic Wayland terminal emulator"
+homepage = "https://codeberg.org/dnkl/foot"
+license = "MIT"
+deps = ["fcft", "libutf8proc", "libxkbcommon", "tllist", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc"]

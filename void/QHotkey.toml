@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'QHotkey'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "QHotkey"
+version = "1.5.0"
+archive = "https://github.com/Skycoder42/QHotkey/archive/refs/tags/1.5.0.tar.gz"
+sha256 = "e8ca5ba77ad04662c18dce8de4b37b373bcb693a7e062fca3d832bf63473b143"
+strip_components = 1
+description = "Global shortcut/hotkey for Desktop Qt-Applications"
+homepage = "https://github.com/Skycoder42/QHotkey"
+license = "BSD-3-Clause"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_DEFAULT_MAJOR_VERSION=6"]
+tools = ["pkg-config"]

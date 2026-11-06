@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gperftools'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_configure
+[package]
+name = "gperftools"
+version = "2.8"
+archive = "https://github.com/gperftools/gperftools/releases/download/gperftools-2.8/gperftools-2.8.tar.gz"
+sha256 = "240deacdd628b6459671b83eb0c4db8e97baadf659f25b92e9a078d536bd513e"
+strip_components = 1
+description = "Multi-threaded malloc() and performance analysis tools"
+homepage = "https://github.com/gperftools/gperftools"
+license = "BSD-3-Clause"
+deps = ["libunwind"]
+patches = ["patches/armv6.patch", "patches/elf-mem-image-musl.patch", "patches/ppc-musl.patch", "patches/sigev_notify_thread_id.patch"]
+
+[build]
+system = "autotools"

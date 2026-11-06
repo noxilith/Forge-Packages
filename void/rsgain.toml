@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'rsgain'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "rsgain"
+version = "3.7"
+archive = "https://github.com/complexlogic/rsgain/archive/refs/tags/v3.7.tar.gz"
+sha256 = "ef383af1adbc01a6e858b45b67b632168ef7c1ee8c2f8267630cbd0f9bf8498e"
+strip_components = 1
+description = "Simple, but powerful ReplayGain 2.0 tagging utility"
+homepage = "https://github.com/complexlogic/rsgain"
+license = "BSD-2-Clause"
+deps = ["fmt", "inih", "libebur128", "taglib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

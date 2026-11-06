@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mate-power-manager'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, itstool, libcanberra
+[package]
+name = "mate-power-manager"
+version = "1.28.1"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-power-manager-1.28.1.tar.xz"
+sha256 = "8ebdcb74b607e868336ba9a8146cdef8f97bce535c2b0cb3bf650c58f71eee21"
+strip_components = 1
+description = "Power management tool for the MATE desktop"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "dbus", "dconf", "glib", "gtk+3", "libX11", "libXext", "libXrandr", "libnotify", "libsecret", "mate-desktop", "mate-panel", "upower", "xorgproto"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "polkit"]

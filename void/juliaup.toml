@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'juliaup'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "juliaup"
+version = "1.19.10"
+archive = "https://github.com/JuliaLang/juliaup/archive/refs/tags/v1.19.10.tar.gz"
+sha256 = "04b7fd19423e230108b7f43d9ff07dd292abbe9f1d4bbeffb6ab77f84dd3d572"
+strip_components = 1
+description = "Julia installer and version multiplexer"
+homepage = "https://github.com/JuliaLang/juliaup"
+license = "MIT"
+
+[build]
+system = "cargo"

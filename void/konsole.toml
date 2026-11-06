@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'konsole'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-tools
+[package]
+name = "konsole"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/konsole-26.08.1.tar.xz"
+sha256 = "64d8aaba741f4412ede26ffbbbe3824523e941b725d3046ec27f510fd42d82e6"
+strip_components = 1
+description = "KDE's Terminal Emulator"
+homepage = "https://kde.org/applications/en/system/org.kde.konsole"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later, GFDL-1.2-or-later"
+deps = ["kf6-kbookmarks", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-knewstuff", "kf6-knotifications", "kf6-knotifyconfig", "kf6-kparts", "kf6-kpty", "kf6-kservice", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "kf6-kwindowsystem", "kf6-kxmlgui", "libicu78", "libssh"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

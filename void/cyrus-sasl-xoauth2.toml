@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cyrus-sasl-xoauth2'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "cyrus-sasl-xoauth2"
+version = "0.2"
+archive = "https://github.com/moriyoshi/cyrus-sasl-xoauth2/archive/v0.2.tar.gz"
+sha256 = "a62c26566098100d30aa254e4c1aa4309876b470f139e1019bb9032b6e2ee943"
+strip_components = 1
+description = "XOAUTH2 mechanism plugin for cyrus-sasl"
+homepage = "https://github.com/moriyoshi/cyrus-sasl-xoauth2"
+license = "MIT"
+deps = ["libsasl"]
+
+[build]
+system = "autotools"

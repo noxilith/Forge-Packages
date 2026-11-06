@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'jellyfin-desktop'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: qt6-webchannel
+[package]
+name = "jellyfin-desktop"
+version = "2.0.0"
+archive = "https://github.com/jellyfin/jellyfin-desktop/archive/refs/tags/v2.0.0.tar.gz"
+sha256 = "782e0e7f916efa04b8714ca895f60276320c9682f6c82aea6ff3b82bce466ee7"
+strip_components = 1
+description = "Jellyfin desktop client"
+homepage = "https://github.com/jellyfin/jellyfin-desktop"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "libcec", "mpvqt", "qt6-pdf"]
+patches = ["patches/mpvqt-1.2.0.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCHECK_FOR_UPDATES=OFF"]
+deps = ["qt6-base"]

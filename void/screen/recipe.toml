@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'screen'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libutempter, ncurses
+[package]
+name = "screen"
+version = "5.0.2"
+archive = "https://ftp.gnu.org/gnu/screen/screen-5.0.2.tar.gz"
+sha256 = "ca9a2c7e240919bc7ac12124593ae4529bb4eb5f7349d8857829b7e3f0b3b332"
+strip_components = 1
+description = "GNU screen manager with VT100/ANSI terminal emulation"
+homepage = "http://www.gnu.org/s/screen/"
+license = "GPL-3.0-or-later"
+deps = ["pam"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-telnet", "--enable-utmp"]

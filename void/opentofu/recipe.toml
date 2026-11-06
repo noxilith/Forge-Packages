@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'opentofu'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "opentofu"
+version = "1.13.2"
+archive = "https://github.com/opentofu/opentofu/archive/v1.13.2.tar.gz"
+sha256 = "ea26bb64b303701fee619b7f28422459be9ff04ee87c5491d046022e1c24f499"
+strip_components = 1
+description = "Tool for building and changing infrastructure, from community"
+homepage = "https://opentofu.org/"
+license = "MPL-2.0"
+patches = ["patches/test-version-mismatch.patch"]
+
+[build]
+system = "go"

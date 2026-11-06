@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libmpack'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "libmpack"
+version = "1.0.5"
+archive = "https://github.com/libmpack/libmpack/archive/1.0.5.tar.gz"
+sha256 = "4ce91395d81ccea97d3ad4cb962f8540d166e59d3e2ddce8a22979b49f108956"
+strip_components = 1
+description = "Simple implementation of msgpack in C"
+homepage = "https://github.com/libmpack/libmpack"
+license = "MIT"
+
+[build]
+system = "make"

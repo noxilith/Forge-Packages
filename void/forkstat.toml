@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'forkstat'. Review before relying on it.
+[package]
+name = "forkstat"
+version = "0.03.02"
+archive = "https://ftp.debian.org/debian/pool/main/f/forkstat/forkstat_0.03.02.orig.tar.xz"
+sha256 = "571e7c50703b2eac8d1c5476e5edf24dd2f5c7beff4e3719f090efd376ab950d"
+strip_components = 1
+description = "Program that logs process fork(), exec() and exit() activity"
+homepage = "https://github.com/ColinIanKing/forkstat"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

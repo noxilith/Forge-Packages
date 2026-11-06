@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for '3proxy'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "3proxy"
+version = "1.0.2"
+archive = "https://github.com/3proxy/3proxy/archive/refs/tags/1.0.2.tar.gz"
+sha256 = "dd138c975f5019149e8ba3509e04c2581e56e81db70b39eb4a47552eca045184"
+strip_components = 1
+description = "Tiny proxy server"
+homepage = "https://3proxy.org"
+license = "BSD-3-Clause"
+deps = ["openssl"]
+
+[build]
+system = "cmake"

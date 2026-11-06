@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'hwloc'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "hwloc"
+version = "2.13.0"
+archive = "https://www.open-mpi.org/software/hwloc/v2.13/downloads/hwloc-2.13.0.tar.bz2"
+sha256 = "52e936afb6ebd80f171f763fcf14f7b1f5ce98b125af5dd2f328b873b1fd0dab"
+strip_components = 1
+description = "Portable abstraction of hierarchical hardware architectures"
+homepage = "https://www.open-mpi.org/projects/hwloc/"
+license = "BSD-3-Clause"
+deps = ["cairo", "eudev", "libxml2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

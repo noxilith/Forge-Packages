@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gcompat'. Review before relying on it.
+[package]
+name = "gcompat"
+version = "1.1.0"
+archive = "https://distfiles.adelielinux.org/source/gcompat/gcompat-1.1.0.tar.xz"
+sha256 = "4e8c9cbf0615f1ce5d56ce02d84ac9c0a3d38b5bed32e8e02e2105e9658c9d57"
+strip_components = 1
+description = "Compatibility layer to allow running glibc binaries on musl systems"
+homepage = "https://git.adelielinux.org/adelie/gcompat"
+license = "ISC"
+deps = ["musl-obstack"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

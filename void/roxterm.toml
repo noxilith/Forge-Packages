@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'roxterm'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme, itstool, po4a
+[package]
+name = "roxterm"
+version = "3.18.2"
+archive = "https://github.com/realh/roxterm/archive/3.18.2.tar.gz"
+sha256 = "d20a19abe03798bfc6c9404eb7ce4fbecabf2e1ab527b587aab76d06635a92e7"
+strip_components = 1
+description = "Highly configurable terminal emulator"
+homepage = "https://github.com/realh/roxterm"
+license = "GPL-2.0-or-later, LGPL-3.0-only"
+deps = ["desktop-file-utils", "libSM", "vte3"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["ImageMagick", "glib", "librsvg", "xmlto"]

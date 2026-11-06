@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cinnamon-menus'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "cinnamon-menus"
+version = "6.6.0"
+archive = "https://github.com/linuxmint/cinnamon-menus/archive/6.6.0.tar.gz"
+sha256 = "87596380720077991f58afdbbabe72d9afd10f56d64043076cf7b09bc6b0f3c1"
+strip_components = 1
+description = "Cinnamon menu specifications"
+homepage = "https://github.com/linuxmint/cinnamon-menus"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

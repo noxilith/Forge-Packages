@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xfwm4'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "xfwm4"
+version = "4.20.0"
+archive = "https://archive.xfce.org/src/xfce/xfwm4/4.20/xfwm4-4.20.0.tar.bz2"
+sha256 = "a58b63e49397aa0d8d1dcf0636be93c8bb5926779aef5165e0852890190dcf06"
+strip_components = 1
+description = "Next generation window manager for Xfce"
+homepage = "https://xfce.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "libXcomposite", "libXdamage", "libXfixes", "libXpresent", "libXrandr", "libXrender", "libwnck", "libxfce4ui", "startup-notification"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

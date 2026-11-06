@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libyubikey'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libyubikey"
+version = "1.13"
+archive = "https://developers.yubico.com/yubico-c/Releases/libyubikey-1.13.tar.gz"
+sha256 = "04edd0eb09cb665a05d808c58e1985f25bb7c5254d2849f36a0658ffc51c3401"
+strip_components = 1
+description = "Yubico YubiKey authentication device C SDK"
+homepage = "https://developers.yubico.com/yubico-c"
+license = "BSD"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-silent-rules"]

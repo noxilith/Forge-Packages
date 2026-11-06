@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cproto'. Review before relying on it.
+[package]
+name = "cproto"
+version = "4.8a"
+archive = "https://invisible-island.net/archives/cproto/cproto-4.8a.tgz"
+sha256 = "beb121e08c0d47b5bd719071c32a77edcc31dff992a84e3d9a59c0f7ec9fadd3"
+strip_components = 1
+description = "Generates function prototypes and variable declarations from C code"
+homepage = "https://invisible-island.net/cproto/cproto.html"
+license = "Public Domain"
+
+[build]
+system = "autotools"
+tools = ["flex"]

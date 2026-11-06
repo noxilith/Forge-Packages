@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xtools'. Review before relying on it.
+# needs, but Forge has no recipe for yet: spdx-licenses-list, xtools-minimal-0.70_1
+[package]
+name = "xtools"
+version = "0.70"
+archive = "https://git.vuxu.org/xtools/snapshot/xtools-0.70.tar.gz"
+sha256 = "0671e75984fad7826feb8bf2133a4547a2ad095171348597895eda4fe92f88ee"
+strip_components = 1
+description = "Opinionated helpers for working with XBPS"
+homepage = "https://git.vuxu.org/xtools"
+license = "Public Domain"
+deps = ["curl"]
+
+[build]
+system = "make"

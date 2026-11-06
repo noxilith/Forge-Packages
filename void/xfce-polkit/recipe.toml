@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xfce-polkit'. Review before relying on it.
+[package]
+name = "xfce-polkit"
+version = "0.3"
+archive = "https://github.com/ncopa/xfce-polkit/releases/download/v0.3/xfce-polkit-0.3.tar.gz"
+sha256 = "564e566a83c2dd5fc2199481deb56842797fefbe985d4e55219bacbeb573f23a"
+strip_components = 1
+description = "Simple PolicyKit authentication agent for XFCE"
+homepage = "https://github.com/ncopa/xfce-polkit"
+license = "GPL-2.0-or-later"
+deps = ["libxfce4ui", "polkit"]
+patches = ["patches/only-default-xfce.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

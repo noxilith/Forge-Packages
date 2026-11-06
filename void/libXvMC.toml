@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libXvMC'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXvMC"
+version = "1.0.14"
+archive = "https://www.x.org/releases/individual/lib/libXvMC-1.0.14.tar.xz"
+sha256 = "e4be9eb6b6bafdbbf81f47f7163047215376e45e2dc786d0ea6181c930725ed9"
+strip_components = 1
+description = "XVideo Motion Compensation Library"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libxvmc"
+license = "MIT"
+deps = ["libX11", "libXext", "libXv", "xorgproto"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-malloc0returnsnull"]
+tools = ["pkg-config"]

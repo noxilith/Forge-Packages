@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tiff5'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "tiff5"
+version = "4.4.0"
+archive = "https://download.osgeo.org/libtiff/tiff-4.4.0.tar.gz"
+sha256 = "917223b37538959aca3b790d2d73aa6e626b688e02dcda272aec24c2f498abed"
+strip_components = 1
+description = "Library and tools for reading and writing TIFF data files"
+homepage = "http://www.simplesystems.org/libtiff/"
+license = "libtiff"
+deps = ["jbigkit", "libjpeg-turbo", "xz", "zlib"]
+patches = ["patches/libtiff5-4.4.0-CVE-2022-34526.patch", "patches/libtiff5-4.4.0-fpe_tiffcrop.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-cxx", "--without-x"]

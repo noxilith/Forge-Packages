@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lensfun'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-setuptools
+[package]
+name = "lensfun"
+version = "0.3.4"
+archive = "https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.4.tar.gz"
+sha256 = "dafb39c08ef24a0e2abd00d05d7341b1bf1f0c38bfcd5a4c69cf5f0ecb6db112"
+strip_components = 1
+description = "Library for rectifying and simulating photographic lens distortions"
+homepage = "https://lensfun.github.io"
+license = "LGPL-3.0-only, CC-BY-SA-3.0"
+deps = ["glib"]
+patches = ["patches/setuptools-root.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DINSTALL_HELPER_SCRIPTS=0"]
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'php8.4-imagick'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure, pre_install
+# needs, but Forge has no recipe for yet: php8.4
+[package]
+name = "php8.4-imagick"
+version = "3.8.1"
+archive = "https://pecl.php.net/get/imagick-3.8.1.tgz"
+sha256 = "3a3587c0a524c17d0dad9673a160b90cd776e836838474e173b549ed864352ee"
+strip_components = 1
+description = "Provides a PHP wrapper to the ImageMagick library"
+homepage = "https://pecl.php.net/package/imagick"
+license = "PHP-3.01"
+deps = ["ImageMagick", "pcre2"]
+patches = ["patches/0001-fix-cross-compile-libmagick-header-file-search-path.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

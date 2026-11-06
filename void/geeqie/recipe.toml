@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'geeqie'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libjxl, libwebp, vim
+[package]
+name = "geeqie"
+version = "3.4"
+archive = "https://github.com/BestImageViewer/geeqie/archive/refs/tags/v3.4.tar.gz"
+sha256 = "3a676193b42485858e23855278fd0083bfc6c405aec4db991eae4cdb4ca7c1db"
+strip_components = 1
+description = "Lightweight GTK+ based image viewer"
+homepage = "https://www.geeqie.org"
+license = "GPL-2.0-or-later"
+deps = ["cfitsio", "desktop-file-utils", "djvulibre", "exiv2", "ffmpegthumbnailer", "glib", "gtk4", "imlib2", "lcms2", "libarchive", "libheif", "libjpeg-turbo", "libraw", "librsvg", "libshumate", "libspelling", "openexr", "openjpeg2", "poppler"]
+patches = ["patches/disable-ancillary-files-test.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gdk-pixbuf", "gettext"]

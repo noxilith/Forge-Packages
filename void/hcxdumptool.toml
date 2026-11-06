@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'hcxdumptool'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "hcxdumptool"
+version = "6.2.0"
+archive = "https://github.com/ZerBea/hcxdumptool/archive/6.2.0.tar.gz"
+sha256 = "3131e9353ca0828b627136e88c8e5d83c7fc78b13164a25962ab584b9fe40af4"
+strip_components = 1
+description = "Small tool to capture packets from wlan devices"
+homepage = "https://github.com/ZerBea/hcxdumptool/"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

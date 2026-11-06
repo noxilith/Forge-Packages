@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'spampd'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+# needs, but Forge has no recipe for yet: perl, perl-Net-Server, spamassassin
+[package]
+name = "spampd"
+version = "2.30"
+archive = "https://github.com/downloads/mpaperno/spampd/spampd-2.30.tar.gz"
+sha256 = "c980e55f46c7757fd45294e5268766253123490d0158d2ee36ad5700ddf823bb"
+strip_components = 1
+description = "SMTP proxy used scan messages for spam"
+homepage = "http://www.worlddesign.com/index.cfm/page/software/open-source/spampd.htm"
+license = "GPL-2.0-or-later"
+patches = ["patches/perl-5.18-fixes.patch"]
+
+[build]
+system = "make"
+tools = ["perl"]

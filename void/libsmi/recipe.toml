@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libsmi'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: CFLAGS
+[package]
+name = "libsmi"
+version = "0.5.0"
+archive = "https://www.ibr.cs.tu-bs.de/projects/libsmi/download/libsmi-0.5.0.tar.gz"
+sha256 = "f21accdadb1bb328ea3f8a13fc34d715baac6e2db66065898346322c725754d3"
+strip_components = 1
+description = "Library to Access SMI MIB Information"
+homepage = "https://www.ibr.cs.tu-bs.de/projects/libsmi/"
+license = "TCL, BSD-3-Clause, Beerware"
+patches = ["patches/implicit-function.patch"]
+
+[build]
+system = "autotools"

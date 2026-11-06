@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qt6-httpserver'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-websockets
+[package]
+name = "qt6-httpserver"
+version = "6.11.2"
+archive = "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qthttpserver-everywhere-src-6.11.2.tar.xz"
+sha256 = "f0f5763b2ba58f20f5cffdfbedb97e62e32b5c639df6d9a6378905028be7bd8e"
+strip_components = 1
+description = "Cross-platform application and UI framework (QT6) - HTTP Server"
+homepage = "https://www.qt.io"
+license = "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'croc'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "croc"
+version = "10.4.14"
+archive = "https://github.com/schollz/croc/archive/refs/tags/v10.4.14.tar.gz"
+sha256 = "3d3ffcc7321867f9a943a0f24f8d1efabc7f89dc7644dcab789b05cbc4764e16"
+strip_components = 1
+description = "Easily and securely send things from one computer to another"
+homepage = "https://github.com/schollz/croc"
+license = "MIT"
+
+[build]
+system = "go"

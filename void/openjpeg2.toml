@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'openjpeg2'. Review before relying on it.
+[package]
+name = "openjpeg2"
+version = "2.5.4"
+archive = "https://github.com/uclouvain/openjpeg/archive/v2.5.4.tar.gz"
+sha256 = "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+strip_components = 1
+description = "Open-source JPEG 2000 codec written in C language (Version 2)"
+homepage = "http://www.openjpeg.org/"
+license = "BSD-2-Clause"
+deps = ["lcms2", "libpng", "tiff"]
+
+[build]
+system = "cmake"

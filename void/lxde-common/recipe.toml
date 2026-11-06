@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lxde-common'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "lxde-common"
+version = "0.99.3"
+archive = "https://github.com/lxde/lxde-common/archive/refs/tags/0.99.3.tar.gz"
+sha256 = "e55ac4b4406f7538ed5994677c6488c6a0dd9a4b34a0969402aaa4f04b52b26f"
+strip_components = 1
+description = "LXDE configuration data"
+homepage = "http://lxde.org"
+license = "GPL-2.0-or-later"
+deps = ["gnome-themes-extra", "lxde-icon-theme", "lxsession"]
+patches = ["patches/dbus-update-environment.patch", "patches/default-config.patch"]
+
+[build]
+system = "autotools"
+deps = ["gettext", "glib"]

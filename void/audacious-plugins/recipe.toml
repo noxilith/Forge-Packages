@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'audacious-plugins'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg6, fluidsynth, jack, opusfile
+[package]
+name = "audacious-plugins"
+version = "4.6.2"
+archive = "https://github.com/audacious-media-player/audacious-plugins/archive/refs/tags/audacious-plugins-4.6.2.tar.gz"
+sha256 = "b4f8e0930aa7c2b04b86cba5baed01a25c94a70ff2dc2e217737562e7105814c"
+strip_components = 1
+description = "Plugins for the Audacious media player"
+homepage = "https://audacious-media-player.org/"
+license = "BSD-2-Clause"
+deps = ["alsa-lib", "audacious-base", "curl", "faad2", "flac", "lame", "libbs2b", "libcdio-paranoia", "libcue", "libmms", "libmodplug", "libmtp", "libnotify", "libopenmpt", "libsamplerate", "libsidplayfp", "libsoxr", "libvorbis", "libxml2", "mpg123", "neon", "opus", "pipewire", "pulseaudio", "wavpack"]
+patches = ["patches/ffmpeg5.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

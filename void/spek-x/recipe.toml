@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'spek-x'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: ffmpeg6, intltool
+[package]
+name = "spek-x"
+version = "0.9.3"
+archive = "https://github.com/MikeWang000000/spek-x/archive/v0.9.3.tar.gz"
+sha256 = "7f4b109903333cdd310ab2b9176f0dc49a565891376e281a233d342cedf90ef7"
+strip_components = 1
+description = "Acoustic spectrum analyser"
+homepage = "https://github.com/MikeWang000000/spek-x"
+license = "GPL-3.0-or-later"
+deps = ["wxWidgets-gtk3"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

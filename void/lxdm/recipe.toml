@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'lxdm'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "lxdm"
+version = "0.5.3"
+archive = "https://downloads.sourceforge.net/sourceforge/lxdm/lxdm-0.5.3.tar.xz"
+sha256 = "4891efee81c72a400cc6703e40aa76f3f3853833d048b72ec805da0f93567f2f"
+strip_components = 1
+description = "GUI login manager for LXDE"
+homepage = "https://lxde.org"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "iso-codes", "pam"]
+patches = ["patches/default-PATH.patch", "patches/default-config.patch", "patches/execinfo.patch", "patches/fix-msghdr-usage.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-consolekit", "--with-pam", "--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext"]

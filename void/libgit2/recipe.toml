@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libgit2'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: libssh2
+[package]
+name = "libgit2"
+version = "1.7.2"
+archive = "https://github.com/libgit2/libgit2/archive/refs/tags/v1.7.2.tar.gz"
+sha256 = "de384e29d7efc9330c6cdb126ebf88342b5025d920dcb7c645defad85195ea7f"
+strip_components = 1
+description = "Git linkable library"
+homepage = "https://libgit2.org"
+license = "custom:GPL-2.0-or-later WITH GCC-exception-2.0"
+deps = ["http-parser", "openssl", "zlib"]
+patches = ["patches/disable-test-validate_current_user_ownership.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_REPRODUCIBLE_BUILDS=ON", "-DBUILD_CLI=OFF", "-DUSE_SSH=ON", "-DUSE_HTTP_PARSER=system"]
+tools = ["pkg-config"]

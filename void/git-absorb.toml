@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'git-absorb'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "git-absorb"
+version = "0.9.0"
+archive = "https://github.com/tummychow/git-absorb/archive/refs/tags/0.9.0.tar.gz"
+sha256 = "a0f74e6306d7fbd746d2b4a6856621d46a7f82e3e88b6bb8b6fc0480cf811f53"
+strip_components = 1
+description = "Like git commit --fixup, but automatic"
+homepage = "https://github.com/tummychow/git-absorb"
+license = "BSD-3-Clause"
+deps = ["libgit2-1.9"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

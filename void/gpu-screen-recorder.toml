@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gpu-screen-recorder'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: ffmpeg
+[package]
+name = "gpu-screen-recorder"
+version = "5.12.5"
+archive = "https://dec05eba.com/snapshot/gpu-screen-recorder.git.5.12.5.tar.gz"
+sha256 = "3207bef976d130f8df465f4290304e226f82ce0c226b6a8cb9756e6316e15b79"
+strip_components = 1
+description = "Extremely fast screen recorder for Linux"
+homepage = "https://git.dec05eba.com/gpu-screen-recorder/about"
+license = "GPL-3.0-only"
+deps = ["libX11", "libXcomposite", "libXcursor", "libXdamage", "libXext", "libXfixes", "libXi", "libXinerama", "libXrandr", "libcap", "libdrm", "libglvnd", "libva", "pipewire", "pulseaudio"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["wayland"]

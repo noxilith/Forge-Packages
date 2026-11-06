@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tty-solitaire'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "tty-solitaire"
+version = "1.4.1"
+archive = "https://github.com/mpereira/tty-solitaire/archive/v1.4.1.tar.gz"
+sha256 = "8eb536a87f0586e1f057a3aa05256df34cbd92a3e22545d1df2f945e27d89db2"
+strip_components = 1
+description = "Play solitaire in your terminal"
+homepage = "https://github.com/mpereira/tty-solitaire"
+license = "MIT"
+
+[build]
+system = "make"

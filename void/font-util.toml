@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'font-util'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: lib32disabled
+[package]
+name = "font-util"
+version = "1.4.2"
+archive = "https://www.x.org/releases/individual/font/font-util-1.4.2.tar.xz"
+sha256 = "02e4f8afdcf03cc8372ca9c37aa104b1e36b47722dbc79531be08f0a4c622999"
+strip_components = 1
+description = "Tools for truncating and subseting of ISO10646-1 BDF fonts"
+homepage = "https://gitlab.freedesktop.org/xorg/font/util"
+license = "MIT"
+deps = ["expat", "font-alias", "fontconfig", "freetype", "mkfontscale"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

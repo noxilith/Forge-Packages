@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'alsa-utils'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "alsa-utils"
+version = "1.2.16"
+archive = "https://www.alsa-project.org/files/pub/utils/alsa-utils-1.2.16.tar.bz2"
+sha256 = "092399d5e8749a1d5e188e393157521cec4b75693b60ebb79bbce728cff2232c"
+strip_components = 1
+description = "Advanced Linux Sound Architecture (ALSA) utilities"
+homepage = "https://www.alsa-project.org/wiki/Main_Page"
+license = "GPL-2.0-only"
+deps = ["alsa-lib", "libsamplerate"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-alsaconf"]
+tools = ["pkg-config"]
+deps = ["xmlto"]

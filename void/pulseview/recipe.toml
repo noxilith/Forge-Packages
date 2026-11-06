@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'pulseview'. Review before relying on it.
+# hooks not translated: pre_patch
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, qt5, sigrok-firmware-fx2lafw
+[package]
+name = "pulseview"
+version = "0.4.2"
+archive = "https://sigrok.org/download/source/pulseview/pulseview-0.4.2.tar.gz"
+sha256 = "f042f77a3e1b35bf30666330e36ec38fab8d248c3693c37b7e35d401c3bfabcb"
+strip_components = 1
+description = "Qt-based LA/scope/MSO GUI for sigrok"
+homepage = "https://sigrok.org/"
+license = "GPL-3.0-or-later"
+deps = ["glib", "glibmm", "libsigrok", "libsigrokdecode", "libzip"]
+patches = ["patches/boost-1.89.patch", "patches/qt-5.15.patch", "patches/template-c-linkage.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DDISABLE_WERROR=TRUE"]
+tools = ["pkg-config"]

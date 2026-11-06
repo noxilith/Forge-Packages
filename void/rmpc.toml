@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'rmpc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "rmpc"
+version = "0.11.0"
+archive = "https://github.com/mierak/rmpc/archive/refs/tags/v0.11.0.tar.gz"
+sha256 = "930019066228d18e9530a8c0d77f10e231ab5efbbbca73b331efcd6fbb47557d"
+strip_components = 1
+description = "TUI MPD client with album art support"
+homepage = "https://mierak.github.io/rmpc"
+license = "BSD-3-Clause"
+
+[build]
+system = "cargo"

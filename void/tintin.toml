@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tintin'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "tintin"
+version = "2.02.60"
+archive = "https://downloads.sourceforge.net/sourceforge/tintin/tintin-2.02.60.tar.gz"
+sha256 = "b638031d56029ae03365b81e6ef9069837a71a4fb8fb2d52453261114a76cc41"
+strip_components = 1
+description = "Console-based MUD client"
+homepage = "https://tintin.mudhalla.net/"
+license = "GPL-2.0-or-later"
+deps = ["gnutls", "pcre2", "zlib"]
+
+[build]
+system = "autotools"
+subdir = "src"

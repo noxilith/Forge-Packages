@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cpufrequtils'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "cpufrequtils"
+version = "008"
+archive = "https://git.kernel.org/pub/scm/linux/kernel/git/brodo/cpufrequtils.git/snapshot/cpufrequtils-a2f0c39d5f21596bb9f5223e895c0ff210b265d0.tar.gz"
+sha256 = "53b0fd1092e2053d31f4707ae0485f0d09b7faafcfac0e53da06c28ecfe23c95"
+strip_components = 1
+description = "Userspace tools for the Linux kernel cpufreq subsystem"
+homepage = "https://git.kernel.org/pub/scm/linux/kernel/git/brodo/cpufrequtils.git"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"
+deps = ["gettext"]

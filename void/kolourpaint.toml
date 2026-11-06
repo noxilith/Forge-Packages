@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kolourpaint'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "kolourpaint"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kolourpaint-26.08.1.tar.xz"
+sha256 = "e2ae301feb5e0ccb7634421b7e320808590fcf7c5bf4c4eb3c60d87bd68caca3"
+strip_components = 1
+description = "Free, easy-to-use paint program for KDE"
+homepage = "http://www.kolourpaint.org/"
+license = "BSD-2-Clause, GPL-2.0-or-later, LGPL-2.1-only, GFDL-1.2-only"
+deps = ["kf6-kcrash", "kf6-kguiaddons", "kf6-ki18n", "kf6-kio", "kf6-kjobwidgets", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "kf6-kxmlgui", "libksane6", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6", "-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdoctools"]

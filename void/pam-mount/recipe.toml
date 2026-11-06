@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pam-mount'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: hxtools, util-linux-common
+[package]
+name = "pam-mount"
+version = "2.22"
+archive = "https://inai.de/files/pam_mount/pam_mount-2.22.tar.zst"
+sha256 = "26c1c73550ee2dcf65e30a988d65a3e0b72e516a817ac0051c46a03bd435ff82"
+strip_components = 1
+description = "PAM module that can mount volumes for a user session"
+homepage = "https://inai.de/projects/pam_mount/"
+license = "GPL-3.0-or-later"
+deps = ["cryptsetup", "libHX", "libxml2", "pam", "pcre2"]
+patches = ["patches/gcc-14.patch"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]

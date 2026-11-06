@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'partclone'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: docbook-xsl, ncurses, util-linux-common, zstd
+[package]
+name = "partclone"
+version = "0.3.47"
+archive = "https://github.com/Thomas-Tsai/partclone/archive/refs/tags/0.3.47.tar.gz"
+sha256 = "8215844d14737d8fbb09fe1b1eafe688a8c790eafc8413a26c08e5795ac9ccd3"
+strip_components = 1
+description = "File system clone and restore utilities"
+homepage = "https://partclone.org/"
+license = "GPL-2.0-or-later"
+deps = ["e2fsprogs", "nilfs-utils", "ntfs-3g", "openssl", "xxHash"]
+patches = ["patches/01bbe56ce51d49a4cf05bbaafdf19936b39aee0d.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-rpath", "--enable-ncursesw", "--enable-f2fs", "--enable-extfs", "--enable-hfsp", "--enable-fat", "--enable-exfat", "--enable-ntfs", "--enable-btrfs", "--enable-minix", "--enable-nilfs2"]
+tools = ["pkg-config"]
+deps = ["gettext", "libxslt"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'zeek'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: bind
+[package]
+name = "zeek"
+version = "9.0.1"
+archive = "https://download.zeek.org/zeek-9.0.1.tar.gz"
+sha256 = "fbee2eb5ee6ebd64ef0db830fbb9fa1d702d58807643c719e8338a59329197f2"
+strip_components = 1
+description = "Advanced framework for network traffic analysis"
+homepage = "https://www.zeek.org"
+license = "BSD-3-Clause"
+deps = ["flex", "geoip", "libpcap", "openssl", "zeromq", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_INSTALL_LIBDIR=lib", "-DDISABLE_SPICY=1"]
+tools = ["flex", "pkg-config"]
+deps = ["spicy", "swig"]

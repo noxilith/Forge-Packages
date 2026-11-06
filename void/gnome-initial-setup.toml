@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-initial-setup'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebkit2gtk41, mit-krb5
+[package]
+name = "gnome-initial-setup"
+version = "48.1"
+archive = "https://download.gnome.org/sources/gnome-initial-setup/48/gnome-initial-setup-48.1.tar.xz"
+sha256 = "b3dabf7e79b665ff12241fbdba615489513d886224759986af8f48657592315e"
+strip_components = 1
+description = "GNOME initial setup"
+homepage = "https://wiki.gnome.org/Design/OS/InitialSetup"
+license = "GPL-2.0-or-later"
+deps = ["NetworkManager", "accountsservice", "gdm", "geoclue2", "geocode-glib", "glib", "gnome-desktop", "gnome-online-accounts", "gtk+3", "gtk4", "ibus", "iso-codes", "libadwaita", "libgweather", "libnma", "libpwquality", "libsecret", "pango", "polkit", "rest", "vala"]
+
+[build]
+system = "meson"
+configure_args = ["-Dparental_controls=disabled", "-Dsystemd=false"]
+tools = ["pkg-config"]
+deps = ["dconf", "gettext"]

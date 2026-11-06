@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libavc1394'. Review before relying on it.
+[package]
+name = "libavc1394"
+version = "0.5.4"
+archive = "https://downloads.sourceforge.net/sourceforge/libavc1394/libavc1394-0.5.4.tar.gz"
+sha256 = "7cb1ff09506ae911ca9860bef4af08c2403f3e131f6c913a2cbd6ddca4215b53"
+strip_components = 1
+description = "Library to control A/V devices using the 1394ta AV/C commands"
+homepage = "http://sourceforge.net/projects/libavc1394/"
+license = "LGPL-2.1-or-later"
+deps = ["libraw1394"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

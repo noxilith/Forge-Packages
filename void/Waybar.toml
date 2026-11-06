@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'Waybar'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "Waybar"
+version = "0.15.0"
+archive = "https://github.com/Alexays/Waybar/archive/refs/tags/0.15.0.tar.gz"
+sha256 = "21c2bbef88c40473c355003582f9331d2f9b8a01efdcce0935edfc5f6b023a3e"
+strip_components = 1
+description = "Polybar-like Wayland Bar for Sway and Wlroots based compositors"
+homepage = "https://github.com/Alexays/Waybar"
+license = "MIT"
+deps = ["chrono-date", "eudev", "fmt", "glib", "gtk-layer-shell", "gtkmm", "jsoncpp", "libevdev", "libinput", "libsigc++", "playerctl", "spdlog", "upower", "wayland"]
+
+[build]
+system = "meson"
+configure_args = ["-Dlibudev=enabled", "-Dman-pages=enabled", "-Dsystemd=disabled", "-Drfkill=enabled"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'geary'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool, libcanberra, libwebkit2gtk41, snowball, ytnef
+[package]
+name = "geary"
+version = "46.0"
+archive = "https://download.gnome.org/sources/geary/46/geary-46.0.tar.xz"
+sha256 = "afad151302817ddf098b5e416e7ac7f2d5eea567a3b80bb90bd3c62afd13b9a1"
+strip_components = 1
+description = "Lightweight email program for the GNOME desktop"
+homepage = "https://wiki.gnome.org/Apps/Geary"
+license = "LGPL-2.1-or-later"
+deps = ["appstream-glib", "enchant2", "folks", "gcr", "glib", "gmime", "gnome-keyring", "gnome-online-accounts", "gobject-introspection", "gsound", "gspell", "json-glib", "libgee", "libhandy1", "libpeas", "libsecret", "libsoup3", "libunwind", "libxml2"]
+patches = ["patches/libucontext.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dprofile=release", "-Dcontractor=enabled"]
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk+3", "iso-codes", "vala"]

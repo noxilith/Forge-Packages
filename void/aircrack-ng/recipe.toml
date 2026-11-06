@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'aircrack-ng'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: python3-setuptools, sqlite
+[package]
+name = "aircrack-ng"
+version = "1.7"
+archive = "https://download.aircrack-ng.org/aircrack-ng-1.7.tar.gz"
+sha256 = "05a704e3c8f7792a17315080a21214a4448fd2452c1b0dd5226a3a55f90b58c3"
+strip_components = 1
+description = "Complete suite of tools to assess WiFi network security"
+homepage = "https://www.aircrack-ng.org/"
+license = "GPL-2.0-or-later, BSD-3-Clause, OpenSSL"
+deps = ["hwloc", "libnl3", "libpcap", "libpciaccess", "libxml2", "openssl", "pcre", "zlib"]
+patches = ["patches/evalrev.patch", "patches/getopt.patch", "patches/python.patch", "patches/sqlite3.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-opt", "--with-experimental", "--with-ext-scripts"]
+tools = ["pkg-config"]
+deps = ["ethtool"]

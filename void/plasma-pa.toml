@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'plasma-pa'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, libcanberra, qt6-tools, sound-theme-freedesktop
+[package]
+name = "plasma-pa"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-pa-6.7.5.tar.xz"
+sha256 = "4fe28579693858cdaf34d5b7e25b441d3e653058ff18579c8596eb8a57221a25"
+strip_components = 1
+description = "PulseAudio Plasma applet"
+homepage = "https://invent.kde.org/plasma/plasma-pa"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "kf6-kcmutils", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdeclarative", "kf6-kdoctools", "kf6-kglobalaccel", "kf6-ki18n", "kf6-kirigami", "kf6-kitemmodels", "kf6-kstatusnotifieritem", "kf6-ksvg", "libplasma", "pulseaudio", "pulseaudio-qt", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kpackage", "kf6-kwindowsystem"]

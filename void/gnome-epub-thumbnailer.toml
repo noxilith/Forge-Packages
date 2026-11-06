@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gnome-epub-thumbnailer'. Review before relying on it.
+[package]
+name = "gnome-epub-thumbnailer"
+version = "1.8"
+archive = "https://download.gnome.org/sources/gnome-epub-thumbnailer/1.8/gnome-epub-thumbnailer-1.8.tar.xz"
+sha256 = "f90619d58c69902f2eff57b9f0042b4737861083f475921a310fecc612fca017"
+strip_components = 1
+description = "Thumbnailer for EPub and MOBI books"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-epub-thumbnailer"
+license = "GPL-2.0-or-later"
+deps = ["gdk-pixbuf", "libarchive", "libxml2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

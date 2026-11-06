@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gcsf'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "gcsf"
+version = "0.2.4"
+archive = "https://github.com/harababurel/gcsf/archive/0.2.4.tar.gz"
+sha256 = "702b2eb64effa36270d28778f64fc254754366c860ac7d55bc81b9ab46157cd4"
+strip_components = 1
+description = "FUSE file system based on Google Drive"
+homepage = "https://github.com/harababurel/gcsf"
+license = "MIT"
+deps = ["fuse", "openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

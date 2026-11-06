@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cairomm'. Review before relying on it.
+[package]
+name = "cairomm"
+version = "1.14.6"
+archive = "https://cairographics.org/releases/cairomm-1.14.6.tar.xz"
+sha256 = "7e0d5c7f29175d573a03ab5c45aef63f48dd91a5caf335a404cd763e4b7cea4a"
+strip_components = 1
+description = "C++ bindings to Cairo vector graphics library"
+homepage = "https://www.cairographics.org/cairomm/"
+license = "GPL-2.0-or-later, MPL-1.1"
+deps = ["cairo", "fontconfig", "libXrender", "libpng", "libsigc++"]
+
+[build]
+system = "meson"
+configure_args = ["-Dbuild-examples=false"]
+tools = ["pkg-config"]

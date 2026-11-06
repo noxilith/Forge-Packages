@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'aalib'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "aalib"
+version = "1.4rc5"
+archive = "https://downloads.sourceforge.net/sourceforge/aa-project/aalib-1.4rc5.tar.gz"
+sha256 = "fbddda9230cf6ee2a4f5706b4b11e2190ae45f5eda1f0409dc4f99b35e0a70ee"
+strip_components = 1
+description = "Portable ASCII art GFX library"
+homepage = "https://aa-project.sourceforge.net/aalib/"
+license = "LGPL-2.0-or-later"
+patches = ["patches/gcc14.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kreport'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kreport"
+version = "3.2.0"
+archive = "https://download.kde.org/stable/kreport/src/kreport-3.2.0.tar.xz"
+sha256 = "22716d719654e8f887fe4d33654e252ddf3d3d818c44e15a8af0e6f2e7d6ccd7"
+strip_components = 1
+description = "Reports creation and generation framework for multiple formats"
+homepage = "https://community.kde.org/KReport"
+license = "LGPL-2.0-or-later"
+deps = ["ecm", "kconfig", "kcoreaddons", "kguiaddons", "kproperty", "kwidgetsaddons"]
+patches = ["patches/symbol-loss.patch"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'obconf-qt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, openbox, qt6-tools
+[package]
+name = "obconf-qt"
+version = "0.16.6"
+archive = "https://github.com/lxqt/obconf-qt/releases/download/0.16.6/obconf-qt-0.16.6.tar.xz"
+sha256 = "23cc8d16fa639871a2087644527afddcdbac9553a65768f7847f598de29d0715"
+strip_components = 1
+description = "LXQt Openbox configuration tool"
+homepage = "https://lxqt.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gpscorrelate'. Review before relying on it.
+[package]
+name = "gpscorrelate"
+version = "2.3"
+archive = "https://github.com/dfandrich/gpscorrelate/releases/download/2.3/gpscorrelate-2.3.tar.xz"
+sha256 = "1f66383d5a660d5744c6e8d329124207620984091e4772cc5b34c799e618d3ba"
+strip_components = 1
+description = "Match GPS tracks to photographs and store the matches in EXIF"
+homepage = "https://dfandrich.github.io/gpscorrelate/"
+license = "GPL-2.0-or-later"
+deps = ["exiv2", "gtk+3", "libxml2"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["libxslt"]

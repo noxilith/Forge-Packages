@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wasm-tools'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wasm-tools"
+version = "1.257.0"
+archive = "https://github.com/bytecodealliance/wasm-tools/archive/refs/tags/v1.257.0.tar.gz"
+sha256 = "39d00fc16728a43c2d2f27d085b39e8133b86ee7e35e83edfaf4cbcd361698af"
+strip_components = 1
+description = "CLI and Rust libraries for low-level manipulation of WebAssembly modules"
+homepage = "https://github.com/bytecodealliance/wasm-tools"
+license = "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT"
+patches = ["patches/fix-build.patch"]
+
+[build]
+system = "cargo"
+configure_args = ["--bin", "wasm-tools"]

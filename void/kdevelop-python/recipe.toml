@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kdevelop-python'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "kdevelop-python"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kdev-python-26.08.1.tar.xz"
+sha256 = "b134e0b58307099b49dd3043d5d199d5fe589e543395c3c7a1e65965fd3f4b3d"
+strip_components = 1
+description = "Python 3 language and Django project support for KDevelop"
+homepage = "https://www.kdevelop.org/"
+license = "LGPL-2.0-or-later, GPL-2.0-or-later"
+deps = ["kdevelop", "kf6-kcmutils", "kf6-kitemmodels", "kf6-knewstuff", "kf6-knotifyconfig", "kf6-ktexteditor", "kf6-threadweaver"]
+patches = ["patches/kdev-python-1.7.0-py3-doc-syntax.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "qt6-base", "tar"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'difftastic'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "difftastic"
+version = "0.67.0"
+archive = "https://github.com/Wilfred/difftastic/archive/refs/tags/0.67.0.tar.gz"
+sha256 = "a6a15d6ca9f9ab7c034d1770417d1829deb3fbe9dcf4731b9cba867e50e78437"
+strip_components = 1
+description = "Structural diff tool that understands syntax"
+homepage = "https://difftastic.wilfred.me.uk"
+license = "MIT"
+
+[build]
+system = "cargo"

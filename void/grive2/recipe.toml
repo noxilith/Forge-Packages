@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'grive2'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "grive2"
+version = "0.5.3"
+archive = "https://github.com/vitalif/grive2/archive/v0.5.3.tar.gz"
+sha256 = "4cb67c32e94749353e08ce5fefb831fefa3e7b49b863329489a84804df11449d"
+strip_components = 1
+description = "Google Drive client with support for partial sync"
+homepage = "http://yourcmc.ru/wiki/Grive2"
+license = "GPL-2.0-only"
+deps = ["curl", "expat", "libgcrypt", "yajl"]
+patches = ["patches/boost-1.89.patch", "patches/missing-include.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

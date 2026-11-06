@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'pipes.c'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "pipes.c"
+version = "1.2.1"
+archive = "https://github.com/pipeseroni/pipes.c/releases/download/v1.2.1/pipes-c-1.2.1.tar.gz"
+sha256 = "a9d662280c01de4e7471191b77324674f2e3a736050d4590a2e406573f4f8701"
+strip_components = 1
+description = "Classic Pipes screensaver in a terminal window written in C"
+homepage = "https://github.com/pipeseroni/pipes.c"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

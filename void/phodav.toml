@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'phodav'. Review before relying on it.
+# needs, but Forge has no recipe for yet: avahi-discover
+[package]
+name = "phodav"
+version = "3.0"
+archive = "https://download.gnome.org/sources/phodav/3.0/phodav-3.0.tar.xz"
+sha256 = "392ec2d06d50300dcff1ef269a2a985304e29bce3520002fca29f2edc1d138d1"
+strip_components = 1
+description = "GNOME Web Dav implementation"
+homepage = "https://wiki.gnome.org/phodav"
+license = "LGPL-2.1-or-later"
+deps = ["eudev", "glib", "libsoup3", "libxml2"]
+
+[build]
+system = "meson"
+configure_args = ["-Davahi=enabled", "-Dgtk_doc=disabled"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xdotool'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, make_build_target
+[package]
+name = "xdotool"
+version = "4.20260303.1"
+archive = "https://github.com/jordansissel/xdotool/archive/refs/tags/v4.20260303.1/xdotool-4.20260303.1.tar.gz"
+sha256 = "c1f971a384da588eb99ca0755fc4300316d49c1e612537e3f1de52215e104fa3"
+strip_components = 1
+description = "Command-line X11 automation tool"
+homepage = "https://github.com/jordansissel/xdotool"
+license = "BSD-3-Clause"
+deps = ["libXinerama", "libXtst", "libxkbcommon"]
+
+[build]
+system = "make"
+tools = ["perl", "pkg-config"]

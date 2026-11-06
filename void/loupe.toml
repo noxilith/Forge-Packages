@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'loupe'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: glycin, itstool
+[package]
+name = "loupe"
+version = "51.0"
+archive = "https://download.gnome.org/sources/loupe/51/loupe-51.0.tar.xz"
+sha256 = "13fa9990565ef917902f777cfce091ab60adb8a114a9f6cca274dfc5c0aae661"
+strip_components = 1
+description = "Simple image viewer for GNOME"
+homepage = "https://gitlab.gnome.org/GNOME/loupe"
+license = "GPL-3.0-or-later"
+deps = ["lcms2", "libadwaita", "libgweather", "libseccomp"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "gtk4"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bpftop'. Review before relying on it.
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "bpftop"
+version = "0.9.0"
+archive = "https://github.com/jfernandez/bpftop/archive/refs/tags/v0.9.0.tar.gz"
+sha256 = "a81bcc69a697ffa0919d63394d914d4b1f15b2ba33d2c28e6f6dae2187f59a5a"
+strip_components = 1
+description = "Dynamic real-time view of running eBPF programs"
+homepage = "https://github.com/jfernandez/bpftop"
+license = "Apache-2.0"
+deps = ["elfutils", "libbpf"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

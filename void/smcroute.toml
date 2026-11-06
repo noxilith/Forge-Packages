@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'smcroute'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "smcroute"
+version = "2.5.7"
+archive = "https://github.com/troglobit/smcroute/releases/download/2.5.7/smcroute-2.5.7.tar.gz"
+sha256 = "7d2c83e11908fe37844fa9b49ae50924555c4e1bb440fb059a95c94e442ea8a5"
+strip_components = 1
+description = "Static multicast routing for UNIX"
+homepage = "https://github.com/troglobit/smcroute"
+license = "GPL-2.0-or-later"
+deps = ["libcap"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-mrdisc"]
+tools = ["pkg-config"]

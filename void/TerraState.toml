@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'TerraState'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path, make_dirs
+[package]
+name = "TerraState"
+version = "1.2.5"
+archive = "https://github.com/the-maldridge/terrastate/archive/v1.2.5.tar.gz"
+sha256 = "8bdac42e74b23765e8e449faf6289aa26da709f427a2368083b162b2e32e2eba"
+strip_components = 1
+description = "Remote state for Terraform"
+homepage = "https://github.com/the-maldridge/terrastate"
+license = "MIT"
+
+[build]
+system = "go"

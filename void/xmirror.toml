@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xmirror'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-yaml
+[package]
+name = "xmirror"
+version = "0.4.1"
+archive = "https://github.com/void-linux/xmirror/archive/refs/tags/v0.4.1.tar.gz"
+sha256 = "8ebea2f3cc4dac55146201c67cf5d046f95e56caf29d5645aa004b6c72c6a3c1"
+strip_components = 1
+description = "Interactive script for changing XBPS mirrors"
+homepage = "https://github.com/void-linux/xmirror"
+license = "BSD-2-Clause"
+deps = ["dialog"]
+
+[build]
+system = "make"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cwm'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "cwm"
+version = "7.9"
+archive = "https://github.com/leahneukirchen/cwm/archive/v7.9.tar.gz"
+sha256 = "ec75056a5f57980d9f57076c4ae7d25a1e6903ea4e793c0a04b98e25edb0fc90"
+strip_components = 1
+description = "Lightweight and efficient window manager for X11"
+homepage = "http://man.openbsd.org/cwm"
+license = "ISC"
+deps = ["libXft", "libXinerama", "libXrandr"]
+
+[build]
+system = "make"
+tools = ["bison", "pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'oniux'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: sqlite, zstd
+[package]
+name = "oniux"
+version = "0.14.0"
+archive = "https://gitlab.torproject.org/tpo/core/oniux/-/archive/v0.14.0/oniux-v0.14.0.tar.gz"
+sha256 = "45cd29e2c50304dd39a94dc87fc19f82d356b4b476311b2147aea98f1451e35b"
+strip_components = 1
+description = "Isolate an arbitrary application over the Tor network"
+homepage = "https://gitlab.torproject.org/tpo/core/oniux"
+license = "MIT OR Apache-2.0"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

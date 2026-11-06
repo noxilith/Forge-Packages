@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'ijq'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "ijq"
+version = "1.4.0"
+archive = "https://codeberg.org/gpanders/ijq/archive/v1.4.0.tar.gz"
+sha256 = "3bc925a05755f621926ac21051a257220f924bb7fa6dd85dc1367cd508b391cb"
+strip_components = 1
+description = "Interactive jq tool for the terminal"
+homepage = "https://codeberg.org/gpanders/ijq"
+license = "GPL-3.0-or-later"
+deps = ["jq"]
+
+[build]
+system = "go"
+deps = ["scdoc"]

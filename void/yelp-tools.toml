@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'yelp-tools'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool, python3-lxml
+[package]
+name = "yelp-tools"
+version = "42.1"
+archive = "https://download.gnome.org/sources/yelp-tools/42/yelp-tools-42.1.tar.xz"
+sha256 = "3e496a4020d4145b99fd508a25fa09336a503a4e8900028421e72c6a4b11f905"
+strip_components = 1
+description = "Tools for creating Yelp documentation"
+homepage = "http://www.gnome.org"
+license = "GPL-2.0-or-later"
+deps = ["libxslt", "yelp-xsl"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

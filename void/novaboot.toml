@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'novaboot'. Review before relying on it.
+# needs, but Forge has no recipe for yet: perl, perl-Expect, perl-IO-Stty
+[package]
+name = "novaboot"
+version = "20220425"
+archive = "https://github.com/wentasah/novaboot/archive/20220425.tar.gz"
+sha256 = "9e93a7af546c58071b71b3a9ed3b3d6f69371e8a41e61ec1e538c527bdd9b403"
+strip_components = 1
+description = "Tool that automates booting of operating systems on hardware or in qemu"
+homepage = "https://github.com/wentasah/novaboot"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"
+tools = ["perl"]

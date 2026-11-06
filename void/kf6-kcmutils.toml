@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kf6-kcmutils'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kcmutils"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kcmutils-6.30.0.tar.xz"
+sha256 = "0159f80d030ac250b0b353113a55c013ed7e38cb0b678df44d2f0d0b2aca944c"
+strip_components = 1
+description = "Utilities for interacting with KCModules"
+homepage = "https://invent.kde.org/frameworks/kcmutils"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kio", "kf6-kirigami", "kf6-kxmlgui", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

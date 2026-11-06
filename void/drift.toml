@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'drift'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "drift"
+version = "1.3.0"
+archive = "https://github.com/phlx0/drift/archive/refs/tags/v1.3.0.tar.gz"
+sha256 = "6c8545a667ff3ede2093a042c21f6dd0034916ed43d5c37180ec9ebca3d7a350"
+strip_components = 1
+description = "Terminal screensaver that turns idle time into ambient art"
+homepage = "https://github.com/phlx0/drift"
+license = "MIT"
+
+[build]
+system = "go"

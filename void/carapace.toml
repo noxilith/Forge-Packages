@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'carapace'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_build_tags, go_package, go_import_path
+[package]
+name = "carapace"
+version = "1.7.3"
+archive = "https://github.com/carapace-sh/carapace-bin/archive/refs/tags/v1.7.3.tar.gz"
+sha256 = "6e5b778538653bc3ee8b65fbc74028a6edf022ca85179bedea71882699662e89"
+strip_components = 1
+description = "Multi-shell multi-command argument completer"
+homepage = "https://carapace.sh/"
+license = "MIT"
+
+[build]
+system = "go"

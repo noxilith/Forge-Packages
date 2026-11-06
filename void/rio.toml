@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'rio'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: glslang, rio-terminfo-0.5.28_1
+[package]
+name = "rio"
+version = "0.5.28"
+archive = "https://github.com/raphamorim/rio/archive/refs/tags/v0.5.28.tar.gz"
+sha256 = "80ddf991cef26b8f49a80b911d35c7361879f4e072479410d29f1b67dd965213"
+strip_components = 1
+description = "Hardware-accelerated GPU terminal emulator powered by WebGPU"
+homepage = "https://rioterm.com/"
+license = "MIT"
+deps = ["fontconfig", "freetype", "oniguruma"]
+
+[build]
+system = "cargo"
+subdir = "frontends/rioterm"
+tools = ["pkg-config"]
+deps = ["scdoc", "shaderc"]

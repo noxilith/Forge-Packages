@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'imwheel'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "imwheel"
+version = "1.0.0"
+archive = "https://sourceforge.net/projects/imwheel/files/imwheel-source/1.0.0pre12/imwheel-1.0.0pre12.tar.gz"
+sha256 = "2320ed019c95ca4d922968e1e1cbf0c075a914e865e3965d2bd694ca3d57cfe3"
+strip_components = 1
+description = "Universial mouse wheel and stick translator for X11"
+homepage = "http://imwheel.sourceforge.net/"
+license = "GPL-2.0-only"
+deps = ["libX11", "libXmu", "libXtst"]
+patches = ["patches/fix-jax-intptr_t.patch", "patches/no-imwheel-gpm.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gpm", "--disable-gpm-doc"]
+tools = ["pkg-config"]

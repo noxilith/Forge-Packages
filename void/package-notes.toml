@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'package-notes'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-pyelftools
+[package]
+name = "package-notes"
+version = "0.20"
+archive = "https://github.com/systemd/package-notes/archive/refs/tags/v0.20.tar.gz"
+sha256 = "d3251dfcb03467c3ae71a7d248e24fa264d49c61c54be7c8f07e18bedf4e04d5"
+strip_components = 1
+description = "Tools to add packaging metadata to ELF files"
+homepage = "https://github.com/systemd/package-notes"
+license = "CC0-1.0"
+
+[build]
+system = "make"

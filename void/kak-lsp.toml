@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'kak-lsp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "kak-lsp"
+version = "22.0.0"
+archive = "https://github.com/kakoune-lsp/kakoune-lsp/archive/v22.0.0.tar.gz"
+sha256 = "fe631342dc68692ac8cf3ff454e83d37756998e85f27f33d0cfd923c1309a7e0"
+strip_components = 1
+description = "Language Server Protocol client for Kakoune"
+homepage = "https://github.com/kakoune-lsp/kakoune-lsp"
+license = "Unlicense"
+
+[build]
+system = "cargo"

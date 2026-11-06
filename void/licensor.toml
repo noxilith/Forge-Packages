@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'licensor'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "licensor"
+version = "2.1.0"
+archive = "https://github.com/raftario/licensor/archive/v2.1.0.tar.gz"
+sha256 = "d061ce9fd26d58b0c6ababa7acdaf35222a4407f0b5ea9c4b78f6835527611fd"
+strip_components = 1
+description = "Write licenses to stdout"
+homepage = "https://github.com/raftario/licensor"
+license = "MIT"
+
+[build]
+system = "cargo"

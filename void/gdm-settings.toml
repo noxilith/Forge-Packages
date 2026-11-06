@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gdm-settings'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "gdm-settings"
+version = "4.1"
+archive = "https://github.com/gdm-settings/gdm-settings/archive/refs/tags/v4.1.tar.gz"
+sha256 = "d3be6f4e7e2ffc0f41236ea314183cb012fabef4dc557ea1f2eecf83c45947d4"
+strip_components = 1
+description = "Settings app for GNOME's Login Manager, GDM"
+homepage = "https://gdm-settings.github.io/"
+license = "AGPL-3.0-or-later"
+deps = ["glib", "libadwaita", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils", "gettext", "gtk+3", "gtk4"]

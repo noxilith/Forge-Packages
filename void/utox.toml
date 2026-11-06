@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'utox'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libvpx
+[package]
+name = "utox"
+version = "0.18.1"
+archive = "https://github.com/uTox/uTox/releases/download/v0.18.1/uTox-0.18.1-full.tar.gz"
+sha256 = "fc883483d86b1830674f3b08515daa27ae54ab47646c7edc48a067e8d1e8c114"
+strip_components = 1
+description = "Lightweight Tox instant messenger client written in C"
+homepage = "https://github.com/uTox/uTox/"
+license = "MIT"
+deps = ["check", "dbus", "filter_audio", "fontconfig", "libXrender", "libopenal", "opus", "toxcore", "v4l-utils"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_ASAN=OFF"]
+tools = ["pkg-config"]

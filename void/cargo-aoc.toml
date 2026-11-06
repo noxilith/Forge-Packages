@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cargo-aoc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cargo-aoc"
+version = "0.3.4"
+archive = "https://github.com/gobanos/cargo-aoc/archive/0.3.4.tar.gz"
+sha256 = "ad89ab3d240dc7e7cf1b6fb67c979fe51013b40bdaa89eae1d2c4662566e6d80"
+strip_components = 1
+description = "CLI helper tool for advent of code in rust"
+homepage = "https://github.com/gobanos/cargo-aoc"
+license = "MIT, Apache-2.0"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+subdir = "cargo-aoc"
+tools = ["pkg-config"]

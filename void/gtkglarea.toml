@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gtkglarea'. Review before relying on it.
+[package]
+name = "gtkglarea"
+version = "2.1.0"
+archive = "https://download.gnome.org/sources/gtkglarea/2.1/gtkglarea-2.1.0.tar.xz"
+sha256 = "8e1e545877d2f5139300b54c2e3bcd70acf7d80a78421a894192186a64db82de"
+strip_components = 1
+description = "GTK/GL Area libraries"
+homepage = "http://mono-project.com/GtkGLArea"
+license = "GPL-2.0-or-later"
+deps = ["glu", "gtk+"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

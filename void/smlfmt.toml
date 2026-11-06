@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'smlfmt'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "smlfmt"
+version = "1.3.0"
+archive = "https://github.com/shwestrick/smlfmt/archive/refs/tags/v1.3.0.tar.gz"
+sha256 = "9d26a87bfba7d49929edf3cbdc060e9a58cd5a5b1367456281aed2e3e267926a"
+strip_components = 1
+description = "Custom parser and code formatter for Standard ML"
+homepage = "https://github.com/shwestrick/smlfmt"
+license = "MIT"
+
+[build]
+system = "make"
+deps = ["mlton"]

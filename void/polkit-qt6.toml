@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'polkit-qt6'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "polkit-qt6"
+version = "0.201.1"
+archive = "https://download.kde.org/stable/polkit-qt-1/polkit-qt-1-0.201.1.tar.xz"
+sha256 = "95d8e2cae530c546d9437459deb8a1bea38d572f0f9772cc2860dc143637f256"
+strip_components = 1
+description = "Qt-style PolicyKit API (Qt6)"
+homepage = "https://invent.kde.org/libraries/polkit-qt-1"
+license = "LGPL-2.1-or-later"
+deps = ["polkit", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6"]
+tools = ["pkg-config"]

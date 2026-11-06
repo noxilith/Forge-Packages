@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jsoncpp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "jsoncpp"
+version = "1.9.8"
+archive = "https://github.com/open-source-parsers/jsoncpp/archive/1.9.8.tar.gz"
+sha256 = "51828cf3574281d2b79ec2a1c56a9e4c20cc1103711321ea96384cffb8d2d904"
+strip_components = 1
+description = "JSON implementation in C++"
+homepage = "https://github.com/open-source-parsers/jsoncpp"
+license = "Public Domain, MIT"
+patches = ["patches/0001-test-make-ValueTest-objects-float-check-robust-again.patch"]
+
+[build]
+system = "meson"

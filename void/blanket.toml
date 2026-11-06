@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'blanket'. Review before relying on it.
+[package]
+name = "blanket"
+version = "0.8.0"
+archive = "https://github.com/rafaelmardojai/blanket/archive/refs/tags/0.8.0.tar.gz"
+sha256 = "46bc401182a738d9b4986b7491dfe330127117a511c24b81309b49ed5b9e6e83"
+strip_components = 1
+description = "Improve focus and productivity by listening to different sounds"
+homepage = "https://apps.gnome.org//Blanket/"
+license = "GPL-3.0-or-later"
+deps = ["gst-plugins-bad1", "gst-plugins-good1", "gst1-python3", "gtk4"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "desktop-file-utils", "gettext", "glib", "libadwaita"]

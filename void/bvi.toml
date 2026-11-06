@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'bvi'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "bvi"
+version = "1.4.1"
+archive = "https://downloads.sourceforge.net/sourceforge/bvi/bvi-1.4.1.src.tar.gz"
+sha256 = "3035255ca79e0464567d255baa5544f7794e2b7eb791dcc60cc339cf1aa01e28"
+strip_components = 1
+description = "Display-oriented editor for binary files"
+homepage = "http://bvi.sourceforge.net/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

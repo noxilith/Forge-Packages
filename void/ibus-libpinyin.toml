@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ibus-libpinyin'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libpinyin, sqlite
+[package]
+name = "ibus-libpinyin"
+version = "1.16.5"
+archive = "https://github.com/libpinyin/ibus-libpinyin/releases/download/1.16.5/ibus-libpinyin-1.16.5.tar.gz"
+sha256 = "cc652d48e68b8b03afc5e9e08509676aee89f9d492b9a3897cd028bcc800ce31"
+strip_components = 1
+description = "Intelligent Pinyin engine using libpinyin for IBus"
+homepage = "https://github.com/libpinyin/ibus-libpinyin"
+license = "GPL-2.0-or-later"
+deps = ["glib", "ibus", "libnotify"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

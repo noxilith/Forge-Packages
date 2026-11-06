@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'remmina'. Review before relying on it.
+# needs, but Forge has no recipe for yet: avahi-discover, hicolor-icon-theme, intltool, libwebkit2gtk41, telepathy-glib
+[package]
+name = "remmina"
+version = "1.4.43"
+archive = "https://gitlab.com/Remmina/Remmina/-/archive/v1.4.43/Remmina-v1.4.43.tar.bz2"
+sha256 = "0348903f49ec762149d7639b0677873ba12c319e4987528fd15800e18dca029c"
+strip_components = 1
+description = "Remote desktop client written in GTK+"
+homepage = "https://remmina.org"
+license = "GPL-2.0-or-later"
+deps = ["curl", "desktop-file-utils", "freerdp", "fuse3", "gobject-introspection", "gstreamermm", "json-glib", "kf6-kwallet", "libayatana-appindicator", "libgcrypt", "libsasl", "libsecret", "libsodium", "libsoup3", "libssh", "libva", "libvncserver", "libxkbfile", "lz4", "opus", "phodav", "spice-gtk", "spice-protocol", "usbredir", "vte3"]
+patches = ["patches/kwallet6.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_USE_PTHREADS_INIT=ON", "-DWITH_KF6WALLET=on", "-DWITH_FREERDP3=ON"]
+tools = ["pkg-config"]
+deps = ["glib", "qt6-base", "shared-mime-info"]

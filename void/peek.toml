@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'peek'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ffmpeg, txt2man
+[package]
+name = "peek"
+version = "1.5.1"
+archive = "https://github.com/phw/peek/archive/1.5.1.tar.gz"
+sha256 = "d2b52297d3941db2f10ad4dd00a6d5606728c0fee6af5f1594a036f88e478237"
+strip_components = 1
+description = "Simple animated GIF screen recorder with an easy to use interface"
+homepage = "https://github.com/phw/peek"
+license = "GPL-3.0-or-later"
+deps = ["gsettings-desktop-schemas", "gtk+3", "libkeybinder3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxml2", "vala"]

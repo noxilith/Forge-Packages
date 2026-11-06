@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kf6-kwidgetsaddons'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kwidgetsaddons"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kwidgetsaddons-6.30.0.tar.xz"
+sha256 = "ab1333c258678caa7562120a1c03bb71779f7232f1a0e75b9525d921dee3e0a3"
+strip_components = 1
+description = "KWidgetsAddons"
+homepage = "https://invent.kde.org/frameworks/kwidgetsaddons"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base"]
+patches = ["patches/cross-designer.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DESIGNERPLUGIN=ON", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules"]

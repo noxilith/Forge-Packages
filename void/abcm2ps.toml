@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'abcm2ps'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: python3-docutils
+[package]
+name = "abcm2ps"
+version = "8.14.15"
+archive = "https://github.com/leesavide/abcm2ps/archive/v8.14.15.tar.gz"
+sha256 = "5f02ac6203c4226cfbc6206935dca715ed7c45328535ee23e776c9da0219c822"
+strip_components = 1
+description = "ABC music notation software"
+homepage = "http://moinejf.free.fr/"
+license = "GPL-3.0-or-later"
+deps = ["pango"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["which"]

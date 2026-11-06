@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'emptty'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, conf_files
+[package]
+name = "emptty"
+version = "0.16.1"
+archive = "https://github.com/tvrzna/emptty/archive/v0.16.1.tar.gz"
+sha256 = "e85d0658fd793ad97be90af241451a9374b299d9525d2aeb57a6f83f10ad4931"
+strip_components = 1
+description = "Dead simple Display Manager running in CLI as TTY login"
+homepage = "https://github.com/tvrzna/emptty"
+license = "MIT"
+deps = ["pam"]
+
+[build]
+system = "go"

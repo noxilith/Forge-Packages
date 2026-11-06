@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'postgis-postgresql17'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_check, pre_configure
+[package]
+name = "postgis-postgresql17"
+version = "3.6.3"
+archive = "https://download.osgeo.org/postgis/source/postgis-3.6.3.tar.gz"
+sha256 = "58ff19ae133e470280efb4949ef92e0364d4c2a66bef8c57e69477348d815ea3"
+strip_components = 1
+description = "Spatial database extender for PostgreSQL"
+homepage = "https://postgis.net/"
+license = "GPL-2.0-or-later"
+deps = ["geos", "json-c", "libgdal", "libpqxx", "libxml2", "pcre", "postgresql17", "proj", "protobuf-c"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]
+deps = ["which"]

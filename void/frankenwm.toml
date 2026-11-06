@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'frankenwm'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "frankenwm"
+version = "1.0.23"
+archive = "https://github.com/sulami/FrankenWM/archive/v1.0.23.tar.gz"
+sha256 = "64f63f8fcd824d892087b62f9459a2eba7d3dc29ae39a4558315297b32afdf6a"
+strip_components = 1
+description = "XCB dynamic tiling WM"
+homepage = "https://github.com/sulami/FrankenWM"
+license = "MIT"
+deps = ["libX11", "libxcb", "xcb-util", "xcb-util-keysyms", "xcb-util-wm"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

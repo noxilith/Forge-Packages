@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'dcron'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, make_dirs, conf_files
+[package]
+name = "dcron"
+version = "4.6"
+archive = "https://github.com/ptchinster/dcron/archive/refs/tags/v4.6.tar.gz"
+sha256 = "d1dced1554213225f5ca333ebc5eab96ab80fa30800d9420782d5dfa6e2a15e7"
+strip_components = 1
+description = "Dillon's lightweight cron daemon"
+homepage = "https://github.com/ptchinster/dcron"
+license = "GPL-2.0-or-later"
+patches = ["patches/makefile.patch"]
+
+[build]
+system = "make"

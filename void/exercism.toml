@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'exercism'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "exercism"
+version = "3.5.8"
+archive = "https://github.com/exercism/cli/archive/v3.5.8.tar.gz"
+sha256 = "386cee0117c42a0ead45b6f636f96c2fc20cc5f64f802fcda93c7a0778330f3c"
+strip_components = 1
+description = "Command line tool for exercism.io"
+homepage = "https://exercism.io"
+license = "MIT"
+
+[build]
+system = "go"

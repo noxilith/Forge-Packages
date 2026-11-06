@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'pounce'. Review before relying on it.
+# settings not translated: make_build_target
+# needs, but Forge has no recipe for yet: libtls, sqlite
+[package]
+name = "pounce"
+version = "3.1"
+archive = "https://git.causal.agency/pounce/snapshot/pounce-3.1.tar.gz"
+sha256 = "97f245556b1cc940553fca18f4d7d82692e6c11a30f612415e5e391e5d96604e"
+strip_components = 1
+description = "Multi-client, TLS-only IRC bouncer"
+homepage = "https://git.causal.agency/pounce/"
+license = "GPL-3.0-or-later"
+deps = ["curl", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-notify", "--enable-palaver"]
+tools = ["pkg-config"]

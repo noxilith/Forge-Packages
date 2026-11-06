@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tuxpaint-stamps'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: make_install_target
+[package]
+name = "tuxpaint-stamps"
+version = "2025.05.26"
+archive = "https://downloads.sourceforge.net/sourceforge/tuxpaint/tuxpaint-stamps/2025-05-26/tuxpaint-stamps-2025.05.26.tar.gz"
+sha256 = "09f4a29f8036c93a64c28134e3afaefb4b9d95a09a71e68fb7537f3c5f82949f"
+strip_components = 1
+description = "Stamps set for tuxpaint"
+homepage = "https://www.tuxpaint.org/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

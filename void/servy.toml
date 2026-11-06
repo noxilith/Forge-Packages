@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'servy'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "servy"
+version = "1.0.1"
+archive = "https://static.crates.io/crates/servy/servy-1.0.1.crate"
+sha256 = "232a5918ae6f3f74775e693de27e1a1089ab65222f0e0db5292e4d8ec440b67d"
+strip_components = 1
+description = "Tiny little web server"
+homepage = "https://github.com/zethra/servy"
+license = "Apache-2.0, MIT"
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

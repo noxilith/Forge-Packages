@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tarpaulin'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tarpaulin"
+version = "0.25.0"
+archive = "https://github.com/xd009642/tarpaulin/archive/0.25.0.tar.gz"
+sha256 = "3dde8f50a6e9eb6948062556a6125ce6d27ebe36ca808b5dd3fc7b9c8ed10112"
+strip_components = 1
+description = "Code coverage tool for Rust/Cargo projects"
+homepage = "https://github.com/xd009642/tarpaulin"
+license = "MIT, Apache-2.0"
+deps = ["openssl", "zlib"]
+patches = ["patches/0.20.1-tests.patch", "patches/0.25.0-tests.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'orocos-kdl'. Review before relying on it.
+[package]
+name = "orocos-kdl"
+version = "1.5.1"
+archive = "https://github.com/orocos/orocos_kinematics_dynamics/archive/v1.5.1.tar.gz"
+sha256 = "5acb90acd82b10971717aca6c17874390762ecdaa3a8e4db04984ea1d4a2af9b"
+strip_components = 1
+description = "Orocos Kinematics and Dynamics C++ library"
+homepage = "http://www.orocos.org/kdl"
+license = "LGPL-2.1-only"
+deps = ["eigen3.2"]
+
+[build]
+system = "cmake"
+subdir = "orocos_kdl"

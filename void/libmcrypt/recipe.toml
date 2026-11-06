@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libmcrypt'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libmcrypt"
+version = "2.5.8"
+archive = "https://downloads.sourceforge.net/sourceforge/mcrypt/libmcrypt-2.5.8.tar.bz2"
+sha256 = "bf2f1671f44af88e66477db0982d5ecb5116a5c767b0a0d68acb34499d41b793"
+strip_components = 1
+description = "A data encryption library"
+homepage = "http://mcrypt.sourceforge.net/"
+license = "GPL-2.0-or-later"
+patches = ["patches/01-rotate-mask.patch", "patches/02-autoconf-2.70.patch", "patches/03-uninitialized.patch", "patches/04-prototypes.patch", "patches/05-c99.patch"]
+
+[build]
+system = "autotools"

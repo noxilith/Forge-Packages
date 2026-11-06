@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'picom'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libev, ruby-asciidoctor, uthash
+[package]
+name = "picom"
+version = "13"
+archive = "https://github.com/yshui/picom/archive/v13.tar.gz"
+sha256 = "db9791a54255742c924ef82a6a882042636d61de0fa61bc14c5e56279cf5791c"
+strip_components = 1
+description = "Lightweight compositor for X11 (previously a compton fork)"
+homepage = "https://github.com/yshui/picom/"
+license = "MPL-2.0 AND MIT"
+deps = ["dbus", "libconfig", "libepoxy", "pcre2", "pixman", "xcb-util-image", "xcb-util-renderutil"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith_docs=true"]
+tools = ["pkg-config"]

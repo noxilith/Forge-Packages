@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libXft'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXft"
+version = "2.3.9"
+archive = "https://www.x.org/releases/individual/lib/libXft-2.3.9.tar.xz"
+sha256 = "60a25b78945ed6932635b3bb1899a517d31df7456e69867ffba27f89ff3976f5"
+strip_components = 1
+description = "Library for configuring and customizing font access"
+homepage = "https://gitlab.freedesktop.org/xorg/lib/libxft"
+license = "MIT"
+deps = ["fontconfig", "freetype", "libXrender", "xorgproto"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

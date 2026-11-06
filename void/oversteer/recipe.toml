@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'oversteer'. Review before relying on it.
+# needs, but Forge has no recipe for yet: python3-evdev, python3-matplotlib, python3-numpy, python3-packaging-bootstrap, python3-pyudev, python3-scipy, python3-xdg
+[package]
+name = "oversteer"
+version = "0.8.3"
+archive = "https://github.com/berarma/oversteer/archive/v0.8.3.tar.gz"
+sha256 = "becf6ba62a3344037b448c49a543c17de5013829c4514d5fe8b9671c08e8e183"
+strip_components = 1
+description = "Graphical Steering Wheel Manager for Linux"
+homepage = "https://github.com/berarma/oversteer"
+license = "GPL-3.0-or-later"
+deps = ["eudev", "python3-gobject"]
+patches = ["patches/python3-required-modules.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext"]

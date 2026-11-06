@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'caerbannog'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gpgme-python3, python3-anytree, python3-fuzzyfinder
+[package]
+name = "caerbannog"
+version = "0.3"
+archive = "https://git.sr.ht/~craftyguy/caerbannog/archive/0.3.tar.gz"
+sha256 = "7fc6a96e9d5ddc31b49b108c5bf383bb5cce02f945ec568e8a44a54d8686e546"
+strip_components = 1
+description = "Frontend for password-store"
+homepage = "https://git.sr.ht/~craftyguy/caerbannog"
+license = "GPL-3.0-or-later"
+deps = ["libhandy1", "libnotify", "python3-gobject"]
+
+[build]
+system = "meson"
+deps = ["glib"]

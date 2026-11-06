@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'prs'. Review before relying on it.
+# settings not translated: make_install_args
+[package]
+name = "prs"
+version = "0.5.7"
+archive = "https://gitlab.com/timvisee/prs/-/archive/v0.5.7/prs-v0.5.7.tar.gz"
+sha256 = "0ad41003ab48a5309e3f2df0d6fe723babfe66007c980d3d0abf72c0a4d47f59"
+strip_components = 1
+description = "Pass compatible password manager written in Rust"
+homepage = "https://timvisee.com/projects/prs/"
+license = "GPL-3.0-only"
+deps = ["at-spi2-core", "cairo", "gdk-pixbuf", "glib", "gnupg", "gtk+3", "pango"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

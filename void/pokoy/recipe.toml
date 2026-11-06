@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'pokoy'. Review before relying on it.
+[package]
+name = "pokoy"
+version = "0.2.5"
+archive = "https://github.com/ttygde/pokoy/archive/v0.2.5.tar.gz"
+sha256 = "ae3ee5935e503d1f48f7fc8e4df2071e9d4586a52dfe778ef643deb28ca6a22f"
+strip_components = 1
+description = "Daemon that helps prevent RSI and other computer related stress"
+homepage = "https://github.com/ttygde/pokoy"
+license = "GPL-2.0-only"
+deps = ["libxcb", "xcb-util-keysyms", "xcb-util-wm"]
+patches = ["patches/build.patch"]
+
+[build]
+system = "make"

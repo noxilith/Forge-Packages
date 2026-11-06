@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libomxil-bellagio'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "libomxil-bellagio"
+version = "0.9.3"
+archive = "https://downloads.sourceforge.net/sourceforge/omxil/omxil/Bellagio%200.9.3/libomxil-bellagio-0.9.3.tar.gz"
+sha256 = "593c0729c8ef8c1467b3bfefcf355ec19a46dd92e31bfc280e17d96b0934d74c"
+strip_components = 1
+description = "Opensource implementation of the OpenMAX Integration Layer API"
+homepage = "http://omxil.sourceforge.net"
+license = "LGPL-2.1-or-later"
+patches = ["patches/fedora-fixes.patch", "patches/fix-malloc-size.patch", "patches/memcpy-bounds.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

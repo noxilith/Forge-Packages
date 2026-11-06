@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libtd'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+[package]
+name = "libtd"
+version = "1.8.66"
+archive = "https://github.com/tdlib/td/archive/a9966eb3704a3351568c28013fed67d797c17828.tar.gz"
+sha256 = "8abd09dc925afd86eac1e6c7c86da034e9e459a3a66289dd630f6da97489e8a4"
+strip_components = 1
+description = "Cross-platform library for building Telegram clients"
+homepage = "https://core.telegram.org/tdlib"
+license = "BSL-1.0"
+deps = ["openssl", "zlib"]
+patches = ["patches/build_2e2.patch"]
+
+[build]
+system = "cmake"
+tools = ["gperf"]

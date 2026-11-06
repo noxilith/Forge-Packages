@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ppp'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "ppp"
+version = "2.5.0"
+archive = "https://ftp.samba.org/pub/ppp/ppp-2.5.0.tar.gz"
+sha256 = "5cae0e8075f8a1755f16ca290eb44e6b3545d3f292af4da65ecffe897de636ff"
+strip_components = 1
+description = "PPP (Point-to-Point Protocol) daemon"
+homepage = "https://ppp.samba.org/"
+license = "BSD-3-Clause, LGPL-2.0-or-later, GPL-2.0-or-later, Public Domain"
+deps = ["libpcap", "openssl"]
+patches = ["patches/fix-openssl-pc.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-cbcp"]
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qpdf'. Review before relying on it.
+[package]
+name = "qpdf"
+version = "12.4.2"
+archive = "https://github.com/qpdf/qpdf/archive/refs/tags/v12.4.2.tar.gz"
+sha256 = "88ddeb5f25c6e9156f3113fc3994d3a5e0cdfeee398cd09dd00fabc9dac9f573"
+strip_components = 1
+description = "Content-Preserving PDF Transformation System"
+homepage = "https://github.com/qpdf/qpdf"
+license = "Apache-2.0"
+deps = ["libjpeg-turbo", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]

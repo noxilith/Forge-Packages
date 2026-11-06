@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'switchboard'. Review before relying on it.
+[package]
+name = "switchboard"
+version = "6.0.0"
+archive = "https://github.com/elementary/switchboard/archive/6.0.0.tar.gz"
+sha256 = "40c2fd17535cba239b7c78b62d93a3f5ef7e990b31a7c4ecf04cba0c2b60d792"
+strip_components = 1
+description = "Extensible System Settings app designed for elementary OS"
+homepage = "https://github.com/elementary/switchboard"
+license = "LGPL-2.1-or-later"
+deps = ["granite", "gtk+3", "libhandy1"]
+patches = ["patches/meson-0.61.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

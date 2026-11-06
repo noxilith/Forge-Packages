@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cliflux'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cliflux"
+version = "1.9.1"
+archive = "https://github.com/spencerwi/cliflux/archive/refs/tags/v1.9.1.tar.gz"
+sha256 = "82b0f6186748034656b7c1f1df5a564248a845babe119538b3e1e71686cb51ca"
+strip_components = 1
+description = "Terminal client for Miniflux RSS reader"
+homepage = "https://github.com/spencerwi/cliflux"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

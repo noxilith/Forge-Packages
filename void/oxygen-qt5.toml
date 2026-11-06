@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'oxygen-qt5'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt5
+[package]
+name = "oxygen-qt5"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/oxygen-6.7.5.tar.xz"
+sha256 = "ffa4b969197f6e09a6ee4f468925e67223666d761ee9801a8ea612e09b756037"
+strip_components = 1
+description = "Oxygen visual style for the Plasma Desktop"
+homepage = "https://invent.kde.org/plasma/oxygen"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["frameworkintegration", "kcmutils", "kdoctools", "kwayland", "oxygen-qt6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DBUILD_QT6=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kconfig", "kcoreaddons"]

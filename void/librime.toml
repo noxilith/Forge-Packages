@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'librime'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost, lua54
+[package]
+name = "librime"
+version = "1.17.0"
+archive = "https://github.com/rime/librime/archive/1.17.0.tar.gz"
+sha256 = "a60274da5d8b8a7187e6c7e9ba5023334ed7bdd182535e93c4e96de8cf188377"
+strip_components = 1
+description = "Rime Input Method Engine"
+homepage = "https://github.com/rime/librime"
+license = "BSD-3-Clause"
+deps = ["capnproto", "gtest", "leveldb", "marisa", "opencc", "xorgproto", "yaml-cpp"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_LOGGING=OFF", "-DBUILD_TEST=ON"]
+tools = ["pkg-config"]

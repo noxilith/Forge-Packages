@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fcitx5-hangul'. Review before relying on it.
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: fcitx5
+[package]
+name = "fcitx5-hangul"
+version = "5.1.10"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-hangul/fcitx5-hangul-5.1.10.tar.zst"
+sha256 = "7f5def69c880d6b7fc291edf470ab508c240a6d9e0d2f27db8e0583cb730f5df"
+strip_components = 1
+description = "Fcitx5 - Hangul support"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "GPL-3.0-or-later"
+deps = ["libhangul"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

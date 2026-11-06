@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'yakuake'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-svg, qt6-tools
+[package]
+name = "yakuake"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/yakuake-26.08.1.tar.xz"
+sha256 = "723a806681faeb3d4aa2fbc93e11392f6fbb66d8bfadcc5508c355d2eaa893ee"
+strip_components = 1
+description = "Drop-down terminal emulator based on KDE konsole technology"
+homepage = "https://kde.org/applications/system/org.kde.yakuake"
+license = "GPL-2.0-only, GFDL-1.2-only"
+deps = ["kf6-kcrash", "kf6-kdbusaddons", "kf6-kglobalaccel", "kf6-kiconthemes", "kf6-knewstuff", "kf6-knotifications", "kf6-knotifyconfig", "kf6-kparts", "kf6-kstatusnotifieritem", "kf6-kwayland", "konsole", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "plasma-wayland-protocols", "wayland"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'lf'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "lf"
+version = "r42"
+archive = "https://github.com/gokcehan/lf/archive/r42.tar.gz"
+sha256 = "7a8f7c2c86419270b713b6235dced7b9d0e68732e74a1e0f375f774fff4023ca"
+strip_components = 1
+description = "Terminal file manager"
+homepage = "https://github.com/gokcehan/lf"
+license = "MIT"
+
+[build]
+system = "go"

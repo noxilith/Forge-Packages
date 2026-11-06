@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'schedtool'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "schedtool"
+version = "1.3.0"
+archive = "https://ftp.debian.org/debian/pool/main/s/schedtool/schedtool_1.3.0.orig.tar.gz"
+sha256 = "6628e4e805fab9c72b2daeb300c599d3de581f48eb21ce6caee3ae530b18450e"
+strip_components = 1
+description = "Query and set CPU scheduling parameters"
+homepage = "http://freshmeat.sourceforge.net/projects/schedtool/"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"

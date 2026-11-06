@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-kquickcharts'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-shadertools, qt6-tools
+[package]
+name = "kf6-kquickcharts"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kquickcharts-6.30.0.tar.xz"
+sha256 = "9fe8c0c78ffd23ccfb99cc36477550a229c114ad057def938f38cdec35f82ab1"
+strip_components = 1
+description = "QtQuick plugin providing high-performance charts"
+homepage = "https://invent.kde.org/frameworks/kquickcharts"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["SPIRV-Tools", "extra-cmake-modules", "qt6-base"]

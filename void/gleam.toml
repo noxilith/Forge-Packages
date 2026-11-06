@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gleam'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: rebar3
+[package]
+name = "gleam"
+version = "1.19.2"
+archive = "https://github.com/gleam-lang/gleam/archive/refs/tags/v1.19.2.tar.gz"
+sha256 = "d8796325dad02802dccc91568a90a00e43247cad1d87ddbd9779a99d3c435d61"
+strip_components = 1
+description = "Statically typed language for the Erlang VM"
+homepage = "https://gleam.run/"
+license = "Apache-2.0"
+deps = ["erlang"]
+
+[build]
+system = "cargo"

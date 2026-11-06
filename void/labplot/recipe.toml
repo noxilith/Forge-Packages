@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'labplot'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: fftw, qt6-tools, zstd
+[package]
+name = "labplot"
+version = "2.12.1"
+archive = "https://download.kde.org/stable/labplot/labplot-2.12.1.tar.xz"
+sha256 = "e28155bfddf40e5b6f7c4791313556d1e48138044f216f210d515b9f6d6c106a"
+strip_components = 1
+description = "Interactive graphing and analysis of scientific data"
+homepage = "https://labplot.kde.org"
+license = "GPL-2.0-or-later, GPL-3.0-or-later"
+deps = ["cfitsio", "eigen", "gsl", "hdf5", "kf6-karchive", "kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-knewstuff", "kf6-kparts", "kf6-kservice", "kf6-ktextwidgets", "kf6-kuserfeedback", "kf6-kwidgetsaddons", "kf6-purpose", "kf6-syntax-highlighting", "lz4", "netcdf", "poppler-qt5", "qt-advanced-docking-system"]
+patches = ["patches/fix-qelapsedtimer.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_CANTOR=OFF", "-DENABLE_MQTT=OFF", "-DENABLE_READSTAT=OFF"]
+tools = ["bison", "pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

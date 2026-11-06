@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'alacritty'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+# needs, but Forge has no recipe for yet: alacritty-terminfo-0.17.0_1, ncurses
+[package]
+name = "alacritty"
+version = "0.17.0"
+archive = "https://github.com/alacritty/alacritty/archive/refs/tags/v0.17.0.tar.gz"
+sha256 = "38d6527d346cda5c6049332a1f3338a89ea66cd7981b54d4c3ce801b392496f8"
+strip_components = 1
+description = "Cross-platform, GPU-accelerated terminal emulator"
+homepage = "https://github.com/alacritty/alacritty"
+license = "Apache-2.0"
+deps = ["fontconfig", "freetype", "libXcursor", "libXi", "libXrandr", "libXxf86vm", "libxcb", "libxkbcommon"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]
+deps = ["scdoc"]

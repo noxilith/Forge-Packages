@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gmtk'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gmtk"
+version = "1.0.9"
+archive = "https://github.com/kdekorte/gmtk/archive/v1.0.9.tar.gz"
+sha256 = "fc23c853deb35ee35db06dd3da5069ce3dc64faf3a0053324616fadf81a415db"
+strip_components = 1
+description = "Common functions for gnome-mplayer and gecko-mediaplayer"
+homepage = "https://sites.google.com/site/kdekorte2/gmtk"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "dconf", "gtk+3", "pulseaudio"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["glib"]

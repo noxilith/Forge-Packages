@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'profile-cleaner'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bc, sqlite
+[package]
+name = "profile-cleaner"
+version = "2.45"
+archive = "https://github.com/graysky2/profile-cleaner/archive/refs/tags/v2.45.tar.gz"
+sha256 = "af3d169b26e4d845741e24d8c036011c746aa921dafe195f1f65a34a2cceed95"
+strip_components = 1
+description = "Reduces profile size by cleaning their sqlite databases"
+homepage = "https://github.com/graysky2/profile-cleaner"
+license = "MIT"
+deps = ["findutils", "parallel"]
+
+[build]
+system = "make"

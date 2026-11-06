@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'httpstat'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "httpstat"
+version = "1.2.1"
+archive = "https://github.com/davecheney/httpstat/archive/refs/tags/v1.2.1.tar.gz"
+sha256 = "be3f191a0b07ef3a38b94c0bb9a821b2fc33ea347525a193a167173a2198191c"
+strip_components = 1
+description = "It's like curl -v, with colours"
+homepage = "https://github.com/davecheney/httpstat"
+license = "MIT"
+
+[build]
+system = "go"

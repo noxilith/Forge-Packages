@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'chawan'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: libssh2, nim
+[package]
+name = "chawan"
+version = "0.5.1"
+archive = "https://git.sr.ht/~bptato/chawan/archive/v0.5.1.tar.gz"
+sha256 = "67a54f10acd2dcda6c62bca825ccaf228f94d04ba9dc85c9369930c58d12ec21"
+strip_components = 1
+description = "Text-mode web browser and pager"
+homepage = "https://chawan.net/"
+license = "Unlicense"
+deps = ["brotli", "openssl"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

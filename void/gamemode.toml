@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gamemode'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "gamemode"
+version = "1.8.2"
+archive = "https://github.com/FeralInteractive/gamemode/archive/1.8.2.tar.gz"
+sha256 = "2b4a20894822caf04767af6a1601130d6b718fc30b8a77895607341b1674740f"
+strip_components = 1
+description = "Optimise Linux system performance on demand"
+homepage = "https://github.com/FeralInteractive/gamemode"
+license = "BSD-3-Clause"
+deps = ["dbus", "elogind", "inih"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwith-sd-bus-provider=elogind", "-Dwith-privileged-group=gamemode"]
+tools = ["pkg-config"]

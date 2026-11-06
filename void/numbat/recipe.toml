@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'numbat'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "numbat"
+version = "1.24.0"
+archive = "https://github.com/sharkdp/numbat/archive/refs/tags/v1.24.0.tar.gz"
+sha256 = "03c84d1d30bce73f2fcbfa79c8df51e580293918fef9c35966b158eaae234a08"
+strip_components = 1
+description = "Statically typed programming language for scientific computations"
+homepage = "https://numbat.dev"
+license = "Apache-2.0 OR MIT"
+deps = ["openssl"]
+patches = ["patches/native-tls.patch"]
+
+[build]
+system = "cargo"
+subdir = "numbat-cli"
+tools = ["pkg-config"]

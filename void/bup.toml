@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bup'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: libreadline8, pandoc, python3-fuse, python3-pyxattr
+[package]
+name = "bup"
+version = "0.34"
+archive = "https://github.com/bup/bup/archive/0.34.tar.gz"
+sha256 = "ab790f39e53bee9570f17c58d22e4bc03246f25d45e12cc1b7b5f2bef6d14611"
+strip_components = 1
+description = "Backup system based on the git packfile format"
+homepage = "https://github.com/bup/bup"
+license = "LGPL-2.0-only"
+deps = ["acl", "par2cmdline"]
+
+[build]
+system = "autotools"
+tools = ["perl", "pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'osmid'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "osmid"
+version = "0.8.0"
+archive = "https://github.com/llloret/osmid/archive/v0.8.0.tar.gz"
+sha256 = "774d6c2c7ba81d1ab9d4e7ee031ce15a1506f19ee940166d277dbdee98f87b50"
+strip_components = 1
+description = "Tool to convert MIDI to OSC and OSC to MIDI"
+homepage = "https://github.com/llloret/osmid/"
+license = "MIT, ISC, GPL-3.0-or-later"
+deps = ["alsa-lib", "libX11"]
+patches = ["patches/big-endian.patch", "patches/musl.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

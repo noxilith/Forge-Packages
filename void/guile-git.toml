@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'guile-git'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "guile-git"
+version = "0.12.1"
+archive = "https://codeberg.org/guile-git/guile-git/archive/v0.12.1.tar.gz"
+sha256 = "413f5e29272653143840d48bb9aa235dd1418cdd6565b3a1f6b1dad4d6dd03f4"
+strip_components = 1
+description = "Guile bindings of libgit2"
+homepage = "https://codeberg.org/guile-git/guile-git"
+license = "GPL-3.0-or-later"
+deps = ["guile", "libgit2", "scheme-bytestructures"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["texinfo"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fldigi'. Review before relying on it.
+# needs, but Forge has no recipe for yet: portaudio
+[package]
+name = "fldigi"
+version = "4.2.13"
+archive = "https://downloads.sourceforge.net/sourceforge/fldigi/fldigi/fldigi-4.2.13.tar.gz"
+sha256 = "e090a5491e3d797f2ed603d17d80d9919aafee9735ad3c9f8a7fe9669980d087"
+strip_components = 1
+description = "Ham radio digital modem for CW, PSK, MFSK, RTTY, and others"
+homepage = "http://www.w1hkj.com"
+license = "GPL-3.0-or-later"
+deps = ["fltk", "hamlib", "libsamplerate", "libusb", "pulseaudio"]
+patches = ["patches/nullptr-def.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

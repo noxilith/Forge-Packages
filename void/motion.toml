@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'motion'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ffmpeg6
+[package]
+name = "motion"
+version = "4.7.1"
+archive = "https://github.com/Motion-Project/motion/archive/release-4.7.1.tar.gz"
+sha256 = "c11f68c7cea949227e57797b932f01432d8942ef5323c75063d19b951d0d4194"
+strip_components = 1
+description = "Software motion detector"
+homepage = "https://motion-project.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["gettext", "libmicrohttpd", "v4l-utils"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["tar"]

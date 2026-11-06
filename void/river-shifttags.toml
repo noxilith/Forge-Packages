@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'river-shifttags'. Review before relying on it.
+[package]
+name = "river-shifttags"
+version = "0.2.2"
+archive = "https://gitlab.com/akumar-xyz/river-shifttags/-/archive/0.2.2/river-shifttags-0.2.2.tar.gz"
+sha256 = "222da347c2037d0eb2e0cc16dbef54b4356ad8abd723cd647c61ef3bf0430ab7"
+strip_components = 1
+description = "Small utility for river Wayland compositor to rotate focused tags"
+homepage = "https://gitlab.com/akumar-xyz/river-shifttags"
+license = "GPL-3.0-or-later"
+deps = ["wayland"]
+
+[build]
+system = "make"

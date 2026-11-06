@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'freedroidRPG'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: SDL_gfx, SDL_image, SDL_mixer, SDL_ttf, glew, lua53
+[package]
+name = "freedroidRPG"
+version = "1.0"
+archive = "https://codeberg.org/freedroid/freedroid-src/archive/1.0.tar.gz"
+sha256 = "cbf4bc589014287a955cffaa2467b1ed0cedd6502c83ed92c79545c3fef163e7"
+strip_components = 1
+description = "Role playing game featuring Tux and evil robots"
+homepage = "https://www.freedroid.org/"
+license = "GPL-2.0-or-later"
+deps = ["libjpeg-turbo", "libogg", "libpng", "libvorbis"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "which"]

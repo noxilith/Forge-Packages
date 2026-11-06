@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'chroot-grep'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "chroot-grep"
+version = "3.11"
+archive = "https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz"
+sha256 = "1db2aedde89d0dea42b16d9528f894c8d15dae4e190b59aecc78f5a951276eab"
+strip_components = 1
+description = "GNU grep utility - for use with xbps-src"
+homepage = "https://www.gnu.org/software/grep/"
+license = "GPL-3.0-or-later"
+patches = ["patches/efgrep-remove-warning.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-perl-regexp", "--disable-nls", "ac_cv_path_GREP=grep"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'bubblewrap'. Review before relying on it.
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "bubblewrap"
+version = "0.13.1"
+archive = "https://github.com/containers/bubblewrap/releases/download/v0.13.1/bubblewrap-0.13.1.tar.xz"
+sha256 = "0e85c8702248b8dd64144f594147553650cdd0e4c951690345faace79c217c4d"
+strip_components = 1
+description = "Unprivileged sandboxing tool"
+homepage = "https://github.com/containers/bubblewrap"
+license = "LGPL-2.1-or-later"
+deps = ["libcap"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["libxslt"]

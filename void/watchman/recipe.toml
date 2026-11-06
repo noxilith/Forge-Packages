@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'watchman'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "watchman"
+version = "4.9.0"
+archive = "https://github.com/facebook/watchman/archive/v4.9.0.tar.gz"
+sha256 = "1f6402dc70b1d056fffc3748f2fdcecff730d8843bb6936de395b3443ce05322"
+strip_components = 1
+description = "Watches files and records, or triggers actions, when they change"
+homepage = "https://facebook.github.io/watchman/"
+license = "Apache-2.0"
+deps = ["openssl", "pcre"]
+patches = ["patches/fix_autogen.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-statedir", "--enable-lenient"]
+tools = ["pkg-config"]

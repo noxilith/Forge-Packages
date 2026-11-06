@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tcptrack'. Review before relying on it.
+# hooks not translated: post_extract
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "tcptrack"
+version = "1.4.3"
+archive = "https://github.com/bchretien/tcptrack/archive/v1.4.3.tar.gz"
+sha256 = "8725205ecbeddc3f891e3345e70f150d87705b099eafd8780f4739ab14f8c862"
+strip_components = 1
+description = "Monitor TCP connections on network"
+homepage = "https://github.com/bchretien/tcptrack/"
+license = "GPL-2.0-or-later"
+deps = ["libpcap"]
+patches = ["patches/format-time-t.patch"]
+
+[build]
+system = "autotools"

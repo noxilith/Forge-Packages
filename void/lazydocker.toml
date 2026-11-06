@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lazydocker'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "lazydocker"
+version = "0.25.2"
+archive = "https://github.com/jesseduffield/lazydocker/archive/v0.25.2.tar.gz"
+sha256 = "405071220e5be9aa061c65d290e0347143b73ae0a3cc01df164f0105de2b53c4"
+strip_components = 1
+description = "Simple terminal UI for docker and docker-compose, written in Go"
+homepage = "https://github.com/jesseduffield/lazydocker"
+license = "MIT"
+deps = ["docker-cli", "docker-compose"]
+
+[build]
+system = "go"

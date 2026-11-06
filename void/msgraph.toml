@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'msgraph'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "msgraph"
+version = "0.2.3"
+archive = "https://download.gnome.org/sources/msgraph/0.2/msgraph-0.2.3.tar.xz"
+sha256 = "ed42e800cb7f0a07477cd9e3e744cdc1a240a6ad7ab96b8a875806267a9fddb0"
+strip_components = 1
+description = "Library to access MS Graph API for Office 365"
+homepage = "https://gitlab.gnome.org/GNOME/msgraph"
+license = "LGPL-3.0-or-later"
+deps = ["glib", "gnome-online-accounts", "json-glib", "rest", "uhttpmock"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

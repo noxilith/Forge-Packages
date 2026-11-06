@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xf86-video-cirrus'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, LDFLAGS, lib32disabled
+[package]
+name = "xf86-video-cirrus"
+version = "1.6.0"
+archive = "https://www.x.org/releases/individual/driver/xf86-video-cirrus-1.6.0.tar.xz"
+sha256 = "0ef3fa0083de3d9a040f11b3af38598d8405f1165b908fdd6712c30038326401"
+strip_components = 1
+description = "Xorg Cirrus Logic video driver"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["xorg-server"]
+patches = ["patches/no-vbe-non-x86.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

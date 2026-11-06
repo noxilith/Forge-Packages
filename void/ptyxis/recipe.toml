@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ptyxis'. Review before relying on it.
+[package]
+name = "ptyxis"
+version = "50.1"
+archive = "https://download.gnome.org/sources/ptyxis/50/ptyxis-50.1.tar.xz"
+sha256 = "73f4b76480644b2840415859a51d20cd7487b0619714f8defcd38212c3ddcffe"
+strip_components = 1
+description = "Terminal for a container-oriented desktop"
+homepage = "https://gitlab.gnome.org/chergert/ptyxis"
+license = "GPL-3.0-or-later"
+deps = ["libadwaita", "libportal", "vte3"]
+patches = ["patches/fix-W_EXITCODE.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk4"]

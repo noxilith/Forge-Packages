@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'yad'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: libwebkit2gtk41
+[package]
+name = "yad"
+version = "14.2"
+archive = "https://github.com/v1cont/yad/releases/download/v14.2/yad-14.2.tar.xz"
+sha256 = "5cab399af8d9a10b76d477f848180d00addba38f4f1272a05b153a393bba3038"
+strip_components = 1
+description = "Yet Another Dialog - create/interact with GTK+ dialog boxes"
+homepage = "https://github.com/v1cont/yad"
+license = "GPL-3.0-or-later"
+deps = ["gspell", "gtk+3", "gtksourceview"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-icon-browser"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

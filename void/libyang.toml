@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libyang'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "libyang"
+version = "1.0.215"
+archive = "https://github.com/CESNET/libyang/archive/v1.0.215.tar.gz"
+sha256 = "c4498a77a7c12a28c9911f993eeafbf2badd2ecea58bb74781bd61cfc635e4c9"
+strip_components = 1
+description = "YANG data modeling language library"
+homepage = "https://github.com/CESNET/libyang"
+license = "BSD-3-Clause"
+deps = ["pcre"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_LYD_PRIV=ON"]
+tools = ["pkg-config"]

@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'xfwm4-themes'. Review before relying on it.
+[package]
+name = "xfwm4-themes"
+version = "4.10.0"
+archive = "https://archive.xfce.org/src/art/xfwm4-themes/4.10/xfwm4-themes-4.10.0.tar.bz2"
+sha256 = "3214d5f00e9703b5e8c9e7c3287d606dedec7285ceb4d5db332e93ada66fd575"
+strip_components = 1
+description = "Themes for the XFCE window manager"
+homepage = "https://xfce.org/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "autotools"

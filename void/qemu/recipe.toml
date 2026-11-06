@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'qemu'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install
+# needs, but Forge has no recipe for yet: SDL2_image, brltty, jack, libaio, libssh2, mesa, ncurses, nss, python3-pycotap, python3-qemu.qmp, python3-sphinx_rtd_theme, python3-wheel (+3)
+[package]
+name = "qemu"
+version = "11.1.3"
+archive = "https://wiki.qemu.org/download/qemu-11.1.3.tar.bz2"
+sha256 = "65567c4ee93ce833c9c7b2fb796c7a12d91ed0af83a2ce6fd9f30aa1b4ee0e72"
+strip_components = 1
+description = "Open source processor emulator"
+homepage = "https://www.qemu.org"
+license = "GPL-2.0-only, LGPL-2.1-only"
+deps = ["SDL2", "alsa-lib", "bluez", "capstone", "curl", "dtc", "gnutls", "gtk+3", "libX11", "libcacard", "libcap-ng", "libcbor", "libdrm", "libepoxy", "libiscsi", "libjpeg-turbo", "libnfs", "libpng", "libsasl", "libseccomp", "libslirp", "liburing", "libusb", "libxkbcommon", "numactl", "pcsclite", "pixman", "pulseaudio", "qemu-user", "snappy", "spice", "usbredir", "vde2", "virglrenderer", "vte3"]
+patches = ["patches/musl-initialize-msghdr.patch", "patches/tcg-overflow.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-pie", "--disable-user", "--disable-download", "-Dxen=disabled", "-Ddocs=enabled", "-Dlibusb=enabled", "-Dsnappy=enabled", "-Dtpm=enabled", "-Dusb_redir=enabled", "-Dvhost_net=enabled", "-Dvirtfs=enabled", "-Dpng=enabled", "-Daudio_drv_list=alsa,sdl,jack,pa", "-Dopengl=enabled", "-Dpa=enabled", "-Dsdl=enabled", "-Dsmartcard=enabled", "-Dspice=enabled", "-Dvirglrenderer=enabled", "-Dgtk=enabled"]
+tools = ["flex", "perl", "pkg-config"]
+deps = ["gettext", "glib"]

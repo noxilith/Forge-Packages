@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'gnucash'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, CXXFLAGS, conf_files
+# needs, but Forge has no recipe for yet: boost, gwenhywfar, libwebkit2gtk41, perl, python3-setuptools, tzutils
+[package]
+name = "gnucash"
+version = "5.17"
+archive = "https://github.com/Gnucash/gnucash/releases/download/5.17/gnucash-5.17.tar.bz2"
+sha256 = "3d18a88f5b8230f01e04c2d2d73bf95e7dcd3bf8d8cee6ffa54bb24dee58b85f"
+strip_components = 1
+description = "Financial-accounting software"
+homepage = "http://www.gnucash.org"
+license = "GPL-2.0-or-later"
+deps = ["aqbanking", "dconf", "gc", "glib", "gtest", "guile", "ktoblzcheck", "libdbi", "libdbi-drivers", "libicu78", "libofx", "libsecret", "libxslt"]
+patches = ["patches/boost-1.89.patch", "patches/disabletests.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_PYTHON=1", "-DCOMPILE_GSCHEMAS=OFF"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "swig"]

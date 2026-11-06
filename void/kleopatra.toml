@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kleopatra'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kleopatra"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kleopatra-26.08.1.tar.xz"
+sha256 = "f05abd1f28c5c61b0c58d96a31ffcf8a005c0f4264aac6d8661a6687688fc756"
+strip_components = 1
+description = "Certificate Manager and Unified Crypto GUI"
+homepage = "https://www.kde.org/applications/utilities/kleopatra/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later, GFDL-1.2-or-later"
+deps = ["AppStream", "KDSingleApplication", "akonadi-mime", "gnupg", "gpgme-qt6", "kf6-kcmutils", "kf6-kcrash", "kf6-kitemmodels", "kf6-kmime", "kf6-kstatusnotifieritem", "kf6-ktextwidgets", "kidentitymanagement", "kmailtransport", "kmbox", "libkleo", "mimetreeparser"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdoctools", "qt6-base"]

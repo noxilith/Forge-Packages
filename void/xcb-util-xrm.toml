@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xcb-util-xrm'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_configure
+[package]
+name = "xcb-util-xrm"
+version = "1.3"
+archive = "https://github.com/Airblader/xcb-util-xrm/archive/v1.3.tar.gz"
+sha256 = "9d4a66c7366abb4840f6f822c613e1776c5898235358de728ba4554263fa0783"
+strip_components = 1
+description = "XCB utility functions for the X resource manager"
+homepage = "https://github.com/Airblader/xcb-util-xrm"
+license = "MIT"
+deps = ["libX11", "xcb-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xorg-util-macros"]

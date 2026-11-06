@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ipv6calc'. Review before relying on it.
+# needs, but Forge has no recipe for yet: db
+[package]
+name = "ipv6calc"
+version = "4.0.1"
+archive = "https://github.com/pbiering/ipv6calc/archive/4.0.1.tar.gz"
+sha256 = "0de7dbe66c0e3602becc18bb8f69a278a02eeaf5d58779cd1c0e0069eb80a7e6"
+strip_components = 1
+description = "Small utility to manipulate IPv6 addresses"
+homepage = "https://www.deepspace6.net/projects/ipv6calc.html"
+license = "GPL-2.0-only"
+deps = ["geoip", "libmaxminddb"]
+patches = ["patches/use-bash-for-scripts.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-geoip", "--enable-mmdb", "--enable-external", "ac_cv_file__sbin_ldconfig=no"]
+tools = ["perl"]

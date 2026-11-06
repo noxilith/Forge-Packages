@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kodi-addon-pvr-zattoo'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kodi, kodi-addon-inputstream-adaptive, sqlite, tinyxml
+[package]
+name = "kodi-addon-pvr-zattoo"
+version = "21.0.7"
+archive = "https://github.com/rbuehlma/pvr.zattoo/archive/21.0.7-Omega.tar.gz"
+sha256 = "d57efceff2f451cc8864d429abed6c7d808ea5092fddf3ece3f598d4a5e26b1f"
+strip_components = 1
+description = "Kodi PVR addon for streaming live TV from zattoo"
+homepage = "https://github.com/rbuehlma/pvr.zattoo"
+license = "GPL-2.0-only"
+deps = ["kodi-platform", "p8-platform", "rapidjson", "tinyxml2"]
+patches = ["patches/musl-missing-ctime-include.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

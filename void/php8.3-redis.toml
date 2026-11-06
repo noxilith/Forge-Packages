@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'php8.3-redis'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure, pre_install
+# needs, but Forge has no recipe for yet: php8.3
+[package]
+name = "php8.3-redis"
+version = "6.1.0"
+archive = "https://pecl.php.net/get/redis-6.1.0.tgz"
+sha256 = "f10405f639fe415e9ed4ec99538e72c90694d8dbd62868edcfcd6a453466b48c"
+strip_components = 1
+description = "PHP extension for Redis"
+homepage = "https://pecl.php.net/package/redis"
+license = "PHP-3.01"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mlton'. Review before relying on it.
+# settings not translated: make_build_target
+[package]
+name = "mlton"
+version = "20241230"
+archive = "https://github.com/MLton/mlton/releases/download/on-20241230-release/mlton-20241230.src.tgz"
+sha256 = "cd170218f67b76c3fcb4d487ba8841518babcebb41e4702074668e61156ca6f6"
+strip_components = 1
+description = "MLton Standard ML (SML) compiler"
+homepage = "http://mlton.org/"
+license = "HPND"
+deps = ["gmp"]
+
+[build]
+system = "make"
+deps = ["polyml", "tar"]

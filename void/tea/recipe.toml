@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tea'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, build_helper
+[package]
+name = "tea"
+version = "0.16.0"
+archive = "https://gitea.com/gitea/tea/archive/v0.16.0.tar.gz"
+sha256 = "3c8523e551f576290c69fe6375208e0cb27d4fc1e48b29b13e02ca6ada851c05"
+strip_components = 1
+description = "Command line tool to interact with Gitea"
+homepage = "https://gitea.com/gitea/tea"
+license = "MIT"
+patches = ["patches/completion-fix.patch"]
+
+[build]
+system = "go"

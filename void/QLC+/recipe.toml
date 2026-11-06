@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'QLC+'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libftdi1, qt5
+[package]
+name = "QLC+"
+version = "4.14.1"
+archive = "https://github.com/mcallegari/qlcplus/archive/QLC+_4.14.1.tar.gz"
+sha256 = "5a8ca95208e8d91715b77c47d9011e2e9d2b1129656a94d2bf1425e5477ada51"
+strip_components = 1
+description = "Q Lighting Controller"
+homepage = "https://www.qlcplus.org/"
+license = "Apache-2.0"
+deps = ["alsa-lib", "eudev", "libmad", "libsndfile", "libusb-compat"]
+patches = ["patches/werror.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

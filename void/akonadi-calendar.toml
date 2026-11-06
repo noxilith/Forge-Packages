@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'akonadi-calendar'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "akonadi-calendar"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/akonadi-calendar-26.08.1.tar.xz"
+sha256 = "7fd92f7b4be2b36ff33b96ec8668285b967d3a0dcd26d61ac9826524dc99cfba"
+strip_components = 1
+description = "Akonadi calendar integration"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "LGPL-2.1-or-later"
+deps = ["kcalutils", "kf6-kcalendarcore", "kf6-kcodecs", "kf6-kconfig", "kf6-kcrash", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kio", "kf6-kmime", "kf6-knotifications", "kf6-kwidgetsaddons", "kf6-kxmlgui", "kidentitymanagement", "kmailtransport", "messagelib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

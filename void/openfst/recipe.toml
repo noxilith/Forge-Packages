@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'openfst'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "openfst"
+version = "1.8.2"
+archive = "https://www.openfst.org/twiki/pub/FST/FstDownload/openfst-1.8.2.tar.gz"
+sha256 = "de987bf3624721c5d5ba321af95751898e4f4bb41c8a36e2d64f0627656d8b42"
+strip_components = 1
+description = "Finite-state transducers library"
+homepage = "https://www.openfst.org"
+license = "Apache-2.0"
+patches = ["patches/cross-compile.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-bin", "--disable-dependency-tracking", "--enable-compact-fsts", "--enable-compress", "--enable-const-fsts", "--enable-far", "--enable-linear-fsts", "--enable-lookahead-fsts", "--enable-mpdt", "--enable-ngram-fsts", "--enable-pdt", "--enable-shared", "--enable-static", "--with-pic"]

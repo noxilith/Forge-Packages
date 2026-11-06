@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'twm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "twm"
+version = "1.0.13.1"
+archive = "https://www.x.org/releases/individual/app/twm-1.0.13.1.tar.xz"
+sha256 = "a52534755aa8b492c884e52fa988bac84ab4d54641954679b9aaf08e323df2c5"
+strip_components = 1
+description = "Tab Window Manager for the X Window System"
+homepage = "http://www.x.org/archive/X11R6.8.1/doc/twm.1.html"
+license = "MIT"
+deps = ["libXmu"]
+
+[build]
+system = "autotools"
+tools = ["bison", "pkg-config"]
+deps = ["xorg-util-macros"]

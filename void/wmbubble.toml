@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'wmbubble'. Review before relying on it.
+[package]
+name = "wmbubble"
+version = "1.54"
+archive = "https://github.com/rnjacobs/wmbubble/archive/1.54.tar.gz"
+sha256 = "ccbc9a74864ef86fbafad4ac08186de190d4a7a269bcb58493de7194c4c80933"
+strip_components = 1
+description = "System monitoring dockapp, based on BubbleMon"
+homepage = "https://github.com/rnjacobs/wmbubble"
+license = "GPL-2.0-or-later"
+deps = ["libX11"]
+
+[build]
+system = "make"

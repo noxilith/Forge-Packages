@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'eog-plugins'. Review before relying on it.
+# settings not translated: lib32disabled
+[package]
+name = "eog-plugins"
+version = "44.1"
+archive = "https://download.gnome.org/sources/eog-plugins/44/eog-plugins-44.1.tar.xz"
+sha256 = "c4c384155fabb34889d76b616065483f94c8310fa0147236d009c68cd4a85c93"
+strip_components = 1
+description = "Eye of GNOME plugins"
+homepage = "https://gitlab.gnome.org/GNOME/eog-plugins/"
+license = "GPL-2.0-or-later"
+deps = ["eog", "exempi", "gnome-desktop", "gsettings-desktop-schemas", "libchamplain", "libexif", "libhandy1", "libpeas", "librsvg", "python3-gobject"]
+
+[build]
+system = "meson"
+configure_args = ["-Dplugin_postasa=false"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'latte-dock'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "latte-dock"
+version = "0.10.8"
+archive = "https://download.kde.org/stable/latte-dock/latte-dock-0.10.8.tar.xz"
+sha256 = "00aab59d97b877f43292fc082c8bfe7f634b265cbee8ab5a2d2c78e0414c912a"
+strip_components = 1
+description = "Dock based on plasma frameworks"
+homepage = "https://invent.kde.org/plasma/latte-dock/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["gettext", "knewstuff", "libSM", "libksysguard", "plasma-framework"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DENABLE_MAKE_UNIQUE=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "kconfig", "kcoreaddons", "kpackage"]

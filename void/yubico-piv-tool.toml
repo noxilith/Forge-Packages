@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'yubico-piv-tool'. Review before relying on it.
+[package]
+name = "yubico-piv-tool"
+version = "2.7.1"
+archive = "https://developers.yubico.com/yubico-piv-tool/Releases/yubico-piv-tool-2.7.1.tar.gz"
+sha256 = "9813190a5c2560ef7fe8018c03614091e911e0596c5853ef25c82cd9283a444b"
+strip_components = 1
+description = "Yubikey PIV management tool"
+homepage = "https://developers.yubico.com/yubico-piv-tool"
+license = "BSD-2-Clause"
+deps = ["check", "openssl", "pcsclite", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DGENERATE_MAN_PAGES=OFF"]
+tools = ["perl", "pkg-config"]
+deps = ["gengetopt"]

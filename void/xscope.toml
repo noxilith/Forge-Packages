@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xscope'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xscope"
+version = "1.4.5"
+archive = "https://www.x.org/releases/individual/app/xscope-1.4.5.tar.xz"
+sha256 = "5f125d4c94e19e4be48edc43691e46df0b82f0b6ead95453dc7ac775a0d70066"
+strip_components = 1
+description = "X Window Protocol Viewer"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXt"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

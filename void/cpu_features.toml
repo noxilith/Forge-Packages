@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cpu_features'. Review before relying on it.
+[package]
+name = "cpu_features"
+version = "0.10.1"
+archive = "https://github.com/google/cpu_features/archive/v0.10.1.tar.gz"
+sha256 = "52639b380fced11d738f8b151dbfee63fb94957731d07f1966c812e5b90cbad4"
+strip_components = 1
+description = "Cross platform C99 library to get cpu features at runtime"
+homepage = "https://github.com/google/cpu_features"
+license = "Apache-2.0"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=NO"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'thunar-volman'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "thunar-volman"
+version = "4.20.0"
+archive = "https://archive.xfce.org/src/xfce/thunar-volman/4.20/thunar-volman-4.20.0.tar.bz2"
+sha256 = "b0dad852959b515b8fbfd1ed552e362340347d26d5246e7f1b973027131eb1da"
+strip_components = 1
+description = "Thunar Volume Manager"
+homepage = "https://xfce.org/"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "exo", "libgudev", "libnotify", "libxfce4ui"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

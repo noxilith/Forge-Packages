@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pipr'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+[package]
+name = "pipr"
+version = "0.0.16"
+archive = "https://github.com/elkowar/pipr/archive/v0.0.16/pipr-0.0.16.tar.gz"
+sha256 = "4be6f79ff25f69efe6d4fe45bdc0b751b3adc8de33a2dc825073d59e5d50d3d0"
+strip_components = 1
+description = "Tool for writing interactive shell pipelines"
+homepage = "https://github.com/elkowar/pipr"
+license = "MIT"
+deps = ["oniguruma"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'atkmm'. Review before relying on it.
+[package]
+name = "atkmm"
+version = "2.28.3"
+archive = "https://download.gnome.org/sources/atkmm/2.28/atkmm-2.28.3.tar.xz"
+sha256 = "7c2088b486a909be8da2b18304e56c5f90884d1343c8da7367ea5cd3258b9969"
+strip_components = 1
+description = "Set of interfaces for accessibility (C++ bindings)"
+homepage = "https://www.gtkmm.org"
+license = "LGPL-2.1-or-later"
+deps = ["at-spi2-core", "glibmm", "libsigc++"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

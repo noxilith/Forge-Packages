@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mdBook-legacy'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mdBook-legacy"
+version = "0.4.35"
+archive = "https://github.com/rust-lang/mdBook/archive/refs/tags/v0.4.35.tar.gz"
+sha256 = "2fcefce12acc957c1d604e60c309502b9ec37040f6f70656f12c81374ff27bd4"
+strip_components = 1
+description = "Create book from markdown files. Like Gitbook but implemented in Rust  - legacy version for void-docs"
+homepage = "https://github.com/rust-lang/mdBook"
+license = "MPL-2.0"
+
+[build]
+system = "cargo"

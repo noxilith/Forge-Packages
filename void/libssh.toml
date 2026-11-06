@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libssh'. Review before relying on it.
+[package]
+name = "libssh"
+version = "0.12.0"
+archive = "https://git.libssh.org/projects/libssh.git/snapshot/libssh-0.12.0.tar.gz"
+sha256 = "a93c97f539f23a213734fa4a1807c7da577ad155d78145d44fd2af26bfb0e2ea"
+strip_components = 1
+description = "Multiplatform C library implementing the SSH v2 protocol"
+homepage = "https://www.libssh.org/"
+license = "LGPL-2.1-or-later"
+deps = ["cmocka", "openssl", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

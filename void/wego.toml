@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'wego'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "wego"
+version = "2.4"
+archive = "https://github.com/schachmat/wego/archive/refs/tags/2.4.tar.gz"
+sha256 = "5ae1c76a322ff2e295034a801755c42b0cb6bdef5ab205af42cf95dbf7c570f4"
+strip_components = 1
+description = "Weather client for the terminal"
+homepage = "https://github.com/schachmat/wego"
+license = "ISC"
+
+[build]
+system = "go"

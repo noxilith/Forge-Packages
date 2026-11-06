@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'plotutils'. Review before relying on it.
+[package]
+name = "plotutils"
+version = "2.6"
+archive = "https://ftp.gnu.org/gnu/plotutils/plotutils-2.6.tar.gz"
+sha256 = "4f4222820f97ca08c7ea707e4c53e5a3556af4d8f1ab51e0da6ff1627ff433ab"
+strip_components = 1
+description = "Set of utilities and libraries for plotting"
+homepage = "http://directory.fsf.org/wiki/Plotutils"
+license = "GPL-3"
+deps = ["libXaw", "libpng"]
+patches = ["patches/plotutils-2.6-libpng-1.5.patch"]
+
+[build]
+system = "autotools"

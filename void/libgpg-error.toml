@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libgpg-error'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "libgpg-error"
+version = "1.61"
+archive = "https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2"
+sha256 = "7a85413f2bc354f4f8aa832b718af122e48965e9e0eb9012ee659c13c6385c93"
+strip_components = 1
+description = "Library for error values used by GnuPG component"
+homepage = "https://www.gnupg.org"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-install-gpg-error-config"]

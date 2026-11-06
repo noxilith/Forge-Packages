@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'OpenJK'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "OpenJK"
+version = "0.0.20210922"
+archive = "https://github.com/JACoders/OpenJK/archive/43e9a3da555a487e23081bbd03101e7c926a1e83.tar.gz"
+sha256 = "efd2e3d96fe449819c4276dfea7ae7d591591ee0e651167844110e073f2edb3c"
+strip_components = 1
+description = "Open Source Implementation of Jedi Knight II and III Engine"
+homepage = "https://github.com/JACoders/OpenJK"
+license = "GPL-2.0-only"
+deps = ["SDL2", "libjpeg-turbo", "libpng", "zlib"]
+patches = ["patches/fix-sdl2-cross-compile.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBuildJK2SPEngine=on", "-DBuildJK2SPGame=on", "-DBuildJK2SPRdVanilla=on"]
+tools = ["pkg-config"]

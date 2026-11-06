@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ghostwriter'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt6-location, qt6-multimedia, qt6-svg, qt6-tools, qt6-webchannel
+[package]
+name = "ghostwriter"
+version = "26.08.2"
+archive = "https://download.kde.org/stable/release-service/26.08.2/src/ghostwriter-26.08.2.tar.xz"
+sha256 = "03ad5d604205bc6a33f6dcd0cc4c1e04e7c4a4e0ba88ef3169e2aaf971d21700"
+strip_components = 1
+description = "Distraction-free Markdown editor"
+homepage = "http://kde.github.io/ghostwriter"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kdoctools", "kf6-kxmlgui", "kf6-sonnet", "qt6-declarative", "qt6-pdf"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "qt6-base"]

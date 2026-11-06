@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'qsv'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "qsv"
+version = "11.0.2"
+archive = "https://github.com/dathere/qsv/archive/refs/tags/11.0.2.tar.gz"
+sha256 = "239838d64ed956be64004beb38d382af3282d2b76e19c6de15b669292be00ca2"
+strip_components = 1
+description = "CLI toolkit for CSV data-wrangling"
+homepage = "https://qsv.dathere.com"
+license = "Unlicense"
+
+[build]
+system = "cargo"
+configure_args = ["--features=feature_capable"]
+tools = ["pkg-config"]

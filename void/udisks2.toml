@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'udisks2'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: docbook-xsl, libatasmart, sg3_utils
+[package]
+name = "udisks2"
+version = "2.10.1"
+archive = "https://github.com/storaged-project/udisks/releases/download/udisks-2.10.1/udisks-2.10.1.tar.bz2"
+sha256 = "b75734ccf602540dedb4068bec206adcb508a4c003725e117ae8f994d92d8ece"
+strip_components = 1
+description = "Disk Management Service, version 2"
+homepage = "https://www.freedesktop.org/wiki/Software/udisks"
+license = "GPL-2.0-or-later"
+deps = ["acl", "btrfs-progs", "elogind", "libblockdev", "libgudev", "parted", "polkit"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-lvm2", "--enable-btrfs"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "libxslt"]

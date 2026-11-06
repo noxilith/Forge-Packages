@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'telegraf'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "telegraf"
+version = "1.39.3"
+archive = "https://github.com/influxdata/telegraf/archive/v1.39.3.tar.gz"
+sha256 = "13b4186fac9a9d29858c532b73efc41e0a1ac8ce93a615b59d5a6e589e71ab2f"
+strip_components = 1
+description = "Plugin-driven server agent for collecting & reporting metrics"
+homepage = "https://www.influxdata.com/time-series-platform/telegraf/"
+license = "MIT"
+
+[build]
+system = "go"

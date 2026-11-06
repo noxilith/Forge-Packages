@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xcursor-themes'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xcursor-themes"
+version = "1.0.7"
+archive = "https://www.x.org/releases/individual/data/xcursor-themes-1.0.7.tar.xz"
+sha256 = "95bae8f48823d894a05bf42dfbf453674ab7dbdeb11e2bc079e8525ad47378c8"
+strip_components = 1
+description = "X.org Cursor themes"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["libXcursor", "libXrender"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["xcursorgen", "xorg-util-macros"]

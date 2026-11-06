@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kbookmarks'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kbookmarks"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kbookmarks-5.116.0.tar.xz"
+sha256 = "540a5ae54b7325218798af79f73a97d6ffcbcc683156de33b3a964e934368f05"
+strip_components = 1
+description = "KDE Bookmarks management library"
+homepage = "https://invent.kde.org/frameworks/kbookmarks"
+license = "LGPL-2.0-only"
+deps = ["kxmlgui"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "kcoreaddons"]

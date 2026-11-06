@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xss-lock'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-docutils
+[package]
+name = "xss-lock"
+version = "0.3.0"
+archive = "https://bitbucket.org/raymonad/xss-lock/get/1e158fb20108.tar.gz"
+sha256 = "19c9e55fd14346e79a1cfaa400cb51ef467d9e3f482fb28a38ba2bbc2c972d91"
+strip_components = 1
+description = "Hooks your favorite locker to the MIT screen saver extension for X"
+homepage = "https://bitbucket.org/raymonad/xss-lock"
+license = "MIT"
+deps = ["glib", "libxcb", "xcb-util"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'filezilla'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, hicolor-icon-theme, sqlite
+[package]
+name = "filezilla"
+version = "3.69.3"
+archive = "https://repo-default.voidlinux.org/distfiles/FileZilla_3.69.3_src.tar.xz"
+sha256 = "77847c572388df9d64eb547b49b6be81896b57cf41d5e472659dfeb8053ae17e"
+strip_components = 1
+description = "Fast and reliable FTP, FTPS and SFTP client"
+homepage = "https://filezilla-project.org"
+license = "GPL-2.0-or-later"
+deps = ["dbus", "desktop-file-utils", "gnutls", "gtk+3", "libfilezilla", "libidn", "pugixml", "wxWidgets-gtk3", "xdg-utils"]
+patches = ["patches/cross.patch", "patches/missing-list-include.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-manualupdatecheck", "--disable-autoupdatecheck", "--with-wx-config=wx-config-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'sbctl'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, build_helper, make_dirs
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "sbctl"
+version = "0.18"
+archive = "https://github.com/Foxboron/sbctl/archive/0.18.tar.gz"
+sha256 = "7aa2af7b50d42abe39eb4875069ae5cd3fb8406d067d7a58b029c8270bacd14d"
+strip_components = 1
+description = "Secure Boot key manager"
+homepage = "https://github.com/Foxboron/sbctl"
+license = "MIT"
+deps = ["pcsclite"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'spice'. Review before relying on it.
+# needs, but Forge has no recipe for yet: nss
+[package]
+name = "spice"
+version = "0.16.0"
+archive = "https://www.spice-space.org/download/releases/spice-server/spice-0.16.0.tar.bz2"
+sha256 = "0a6ec9528f05371261bbb2d46ff35e7b5c45ff89bb975a99af95a5f20ff4717d"
+strip_components = 1
+description = "Implements the SPICE protocol"
+homepage = "https://www.spice-space.org/"
+license = "LGPL-2.1-or-later"
+deps = ["alsa-lib", "glib", "libXfixes", "libXinerama", "libXrandr", "libXrender", "libcacard", "libjpeg-turbo", "libsasl", "openssl", "opus", "pixman", "spice-protocol"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-tunnel", "--disable-opengl", "--enable-smartcard", "--with-sasl", "--disable-static", "--enable-xinerama", "--disable-celt051"]
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-krunner'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-krunner"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/krunner-6.30.0.tar.xz"
+sha256 = "0885d0936aec6dc8553c673f1c685013e345b933a52812a07c5bddd1eebdb551"
+strip_components = 1
+description = "Framework for providing different actions given a string query"
+homepage = "https://invent.kde.org/frameworks/krunner"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kitemmodels", "kf6-kwindowsystem"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QTMETATYPESDIR=lib/qt6/metatypes"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

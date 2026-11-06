@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libjaylink'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libjaylink"
+version = "0.5.0"
+archive = "https://gitlab.zapb.de/libjaylink/libjaylink/-/archive/0.5.0/libjaylink-0.5.0.tar.gz"
+sha256 = "235b12d161b29d813026704f335536a6a916646ea2058302e4ca45ca2cd81325"
+strip_components = 1
+description = "Library to access SEGGER J-Link and compatible devices"
+homepage = "https://gitlab.zapb.de/libjaylink/libjaylink"
+license = "LGPL-2.1-or-later"
+deps = ["libusb"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

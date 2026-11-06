@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'Tuba'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libwebp
+[package]
+name = "Tuba"
+version = "0.11.1"
+archive = "https://codeberg.org/GeopJr/Tuba/archive/refs/tags/v0.11.1.tar.gz"
+sha256 = "ccda501d4ee1638e4f7ed9fa936b0748a9c560234c052de601c651470736f7f8"
+strip_components = 1
+description = "Browse the fediverse"
+homepage = "https://tuba.geopjr.dev/"
+license = "GPL-3.0-only"
+deps = ["gtksourceview5", "libadwaita", "libgee", "libsecret", "libsoup3", "webp-pixbuf-loader"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddistro=true"]
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "vala"]

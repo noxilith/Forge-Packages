@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'z80ex'. Review before relying on it.
+[package]
+name = "z80ex"
+version = "1.1.21"
+archive = "https://downloads.sourceforge.net/sourceforge/project/z80ex/z80ex/1.1.21/z80ex-1.1.21.tar.gz"
+sha256 = "6f5e521d068a614b41e10180ad4ae45b1bc258ec28c962543feb9078856c2530"
+strip_components = 1
+description = "ZiLOG Z80 CPU emulation library"
+homepage = "https://sourceforge.net/projects/z80ex/"
+license = "GPL-2.0-only"
+patches = ["patches/fix-cflags.patch"]
+
+[build]
+system = "cmake"

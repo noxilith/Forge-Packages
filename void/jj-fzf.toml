@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jj-fzf'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jujutsu, pandoc, util-linux
+[package]
+name = "jj-fzf"
+version = "0.42.0"
+archive = "https://github.com/tim-janik/jj-fzf/releases/download/v0.42.0/jj-fzf-0.42.0.tar.zst"
+sha256 = "42bc13b6719ba3ac0595f3498a6711d87b83df612fa0e2ffa140d0d6a2277be3"
+strip_components = 1
+description = "Text UI for Jujutsu based on fzf"
+homepage = "https://github.com/tim-janik/jj-fzf/"
+license = "MPL-2.0"
+deps = ["fzf"]
+
+[build]
+system = "make"

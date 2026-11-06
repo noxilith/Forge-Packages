@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xfce4-settings'. Review before relying on it.
+# settings not translated: build_helper, conf_files
+# needs, but Forge has no recipe for yet: libcanberra
+[package]
+name = "xfce4-settings"
+version = "4.20.4"
+archive = "https://archive.xfce.org/src/xfce/xfce4-settings/4.20/xfce4-settings-4.20.4.tar.bz2"
+sha256 = "ad5c3c5bfb36f5eb091c05897d60f468d0d5cc4364c8d1d38ca53d8bb04387da"
+strip_components = 1
+description = "Xfce settings manager"
+homepage = "https://xfce.org/"
+license = "GPL-2.0-only"
+deps = ["desktop-file-utils", "exo", "garcon", "glib", "gnome-icon-theme", "gtk-layer-shell", "libXrandr", "libnotify", "libxklavier", "upower", "wayland", "xf86-input-libinput"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-sound-settings", "--enable-xrandr", "--enable-upower-glib"]
+tools = ["pkg-config"]
+deps = ["gettext", "libxml2"]

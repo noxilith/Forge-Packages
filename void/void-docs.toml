@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'void-docs'. Review before relying on it.
+[package]
+name = "void-docs"
+version = "2026.04.13"
+archive = "https://github.com/void-linux/void-docs/archive/refs/tags/2026.04.13.tar.gz"
+sha256 = "c6d21421a7e51bddeb2bd39519893e0b9ca5d24a66473fa71f62ce21c7ee6525"
+strip_components = 1
+description = "Documentation for Void Linux"
+homepage = "https://github.com/void-linux/void-docs"
+license = "CC-BY-SA-4.0"
+
+[build]
+system = "make"
+deps = ["lowdown", "mdBook-legacy", "mdbook-typst"]

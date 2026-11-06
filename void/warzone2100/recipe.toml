@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'warzone2100'. Review before relying on it.
+# hooks not translated: post_extract
+# needs, but Forge has no recipe for yet: asciidoc, glew, harfbuzz, libtheora, physfs, unzip, zip
+[package]
+name = "warzone2100"
+version = "4.7.0"
+archive = "https://github.com/Warzone2100/warzone2100/releases/download/4.7.0/warzone2100_src.tar.xz"
+sha256 = "95ee4d5b88680ea1b1cf230b67ea84028e08a2458b84605ac9f7fb9eb97c4e37"
+strip_components = 1
+description = "3D realtime strategy game on a future Earth"
+homepage = "http://wz2100.net"
+license = "GPL-2.0-or-later"
+deps = ["SDL3", "curl", "desktop-file-utils", "fontconfig", "fribidi", "libopenal", "libopusenc", "libpng", "libsodium", "libvorbis", "libzip", "protobuf"]
+patches = ["patches/vulkan-fixes.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWZ_ENABLE_WARNINGS_AS_ERRORS=OFF", "-DWZ_DISTRIBUTOR=void"]
+tools = ["pkg-config"]
+deps = ["gettext", "shaderc"]

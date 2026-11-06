@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kdegraphics-thumbnailers'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ghostscript
+[package]
+name = "kdegraphics-thumbnailers"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kdegraphics-thumbnailers-26.08.1.tar.xz"
+sha256 = "dfa5ff87674eb255fdf25fa7e5adbef387fc712fe9e1180fe6dcced138f3092d"
+strip_components = 1
+description = "KDE Plasma 6 Thumbnailers for various graphics file formats"
+homepage = "https://invent.kde.org/graphics/kdegraphics-thumbnailers"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kconfig", "kf6-kio", "libkdcraw-qt6", "libkexiv2", "libqmobipocket6"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

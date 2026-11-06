@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'zfs'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: dkms, perl, util-linux-common, xbps-triggers
+[package]
+name = "zfs"
+version = "2.4.4"
+archive = "https://github.com/openzfs/zfs/releases/download/zfs-2.4.4/zfs-2.4.4.tar.gz"
+sha256 = "2a3c70d55a37cc71618a95a60e81ad66530201eb118d37741dc92efcf848c8b1"
+strip_components = 1
+description = "Z File System -- userland, pyzfs, and kernel modules (using DKMS)"
+homepage = "https://openzfs.github.io/openzfs-docs/"
+license = "CDDL-1.0"
+deps = ["attr", "libtirpc", "pam", "zlib"]
+patches = ["patches/0001-only-build-the-module-in-dkms.conf.patch", "patches/0002-fix-seektest-musl.patch", "patches/0003-musl-strftime.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-config=user", "--with-tirpc"]
+tools = ["pkg-config"]
+deps = ["dracut", "tar"]

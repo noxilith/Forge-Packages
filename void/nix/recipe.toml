@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'nix'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, CXXFLAGS, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: boost, busybox, bzip2, doxygen, perl-DBD-SQLite, sqlite
+[package]
+name = "nix"
+version = "2.35.2"
+archive = "https://github.com/NixOS/nix/archive/refs/tags/2.35.2.tar.gz"
+sha256 = "f71711db9831d1e58d0fccf01cf2db83315b58da00300334d214e4de90b1759e"
+strip_components = 1
+description = "Purely functional package manager"
+homepage = "https://nixos.org/nix/"
+license = "LGPL-2.1-or-later"
+deps = ["brotli", "curl", "editline", "gc", "gtest", "jq", "json-c++", "libarchive", "libblake3", "libgit2-1.9", "libseccomp", "libsodium", "lowdown", "lsof", "openssl", "tar", "toml11", "xz"]
+patches = ["patches/pkgconfig-toml11.patch", "patches/syscall.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dunit-tests=false", "-Ddoc-gen=false", "-Djson-schema-checks=false"]
+tools = ["flex", "pkg-config"]
+deps = ["mdBook", "rsync"]

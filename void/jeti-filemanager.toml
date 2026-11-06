@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'jeti-filemanager'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "jeti-filemanager"
+version = "2.0.1"
+archive = "https://github.com/mrshampoo/jeti-filemanager/archive/2.0.1.tar.gz"
+sha256 = "4da4ddee8fe6774b91ea473810d6c6898777c9bbcb8816996d72095dc0e18691"
+strip_components = 1
+description = "Total Commander filemanager ncurses clone"
+homepage = "https://github.com/mrshampoo/jeti-filemanager/"
+license = "GPL-3.0-only"
+
+[build]
+system = "make"

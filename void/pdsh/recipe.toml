@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pdsh'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "pdsh"
+version = "2.36"
+archive = "https://github.com/chaos/pdsh/archive/pdsh-2.36.tar.gz"
+sha256 = "ef008ad580593aceac2fd830266390744de487328c5a6c1cd254cfa7156782a6"
+strip_components = 1
+description = "High performance, parallel remote shell utility"
+homepage = "https://github.com/chaos/pdsh"
+license = "GPL-2.0-or-later"
+patches = ["patches/fix_configure_ac.patch", "patches/without-rresvport.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static-modules", "--with-readline", "--with-negroup", "--with-exec", "--with-rsh", "--with-ssh"]

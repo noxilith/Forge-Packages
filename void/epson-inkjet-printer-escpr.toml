@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'epson-inkjet-printer-escpr'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: cups
+[package]
+name = "epson-inkjet-printer-escpr"
+version = "1.8.1"
+archive = "https://download3.ebz.epson.net/dsc/f/03/00/15/17/82/a7321f719f0c5f9e0675641d593710ed6bd11555/epson-inkjet-printer-escpr-1.8.1-1.tar.gz"
+sha256 = "c8f4459cda1146b57a4261406588979261cd05666d7a3c29a6dbc2d8a578abe9"
+strip_components = 1
+description = "Epson Inkjet Printer Driver (ESC/P-R)"
+homepage = "https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX&productName=B700"
+license = "GPL-2.0-or-later"
+deps = ["cups-filters"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

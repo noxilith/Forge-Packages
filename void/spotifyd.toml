@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'spotifyd'. Review before relying on it.
+[package]
+name = "spotifyd"
+version = "0.4.2"
+archive = "https://github.com/Spotifyd/spotifyd/archive/v0.4.2.tar.gz"
+sha256 = "e1dc21f806b205739e508bd567698657a47ca17eecb0f91d9320af5e74b8418a"
+strip_components = 1
+description = "Spotify client running as a UNIX daemon"
+homepage = "https://github.com/Spotifyd/spotifyd"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features"]
+tools = ["pkg-config"]

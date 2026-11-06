@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gettext'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "gettext"
+version = "0.22.5"
+archive = "https://ftp.gnu.org/gnu/gettext/gettext-0.22.5.tar.gz"
+sha256 = "ec1705b1e969b83a9f073144ec806151db88127f5e40fe5a94cb6c8fa48996a0"
+strip_components = 1
+description = "Internationalized Message Handling Library and tools"
+homepage = "https://www.gnu.org/software/gettext/"
+license = "GPL-3.0-or-later"
+patches = ["patches/musl-realpath.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-java", "--disable-native-java", "--disable-csharp", "--disable-libasprintf", "--enable-threads=posix", "--disable-rpath", "--without-emacs", "--disable-acl", "--with-included-glib", "--with-included-libcroco", "--without-git", "--with-included-libxml", "--with-included-libunistring", "--disable-openmp", "--disable-curses", "--without-examples", "--enable-nls", "gl_cv_func_gettimeofday_clobber=no"]
+deps = ["xz"]

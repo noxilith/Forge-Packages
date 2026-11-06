@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libkcddb6'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "libkcddb6"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libkcddb-26.08.1.tar.xz"
+sha256 = "2d86bd59ff8d1d5474e594ca0a8ce2ef5a1cabf9a27f357c6e83c9920dd1dafb"
+strip_components = 1
+description = "KDE CDDB library"
+homepage = "https://projects.kde.org/projects/kde/kdemultimedia/libkcddb"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later, BSD-3-Clause, GFDL-1.2-only"
+deps = ["kf6-kcmutils", "kf6-kio", "libmusicbrainz5"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_MAJOR_VERSION=6", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kdoctools", "qt6-base"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'iat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "iat"
+version = "0.1.7"
+archive = "https://downloads.sourceforge.net/sourceforge/iat.berlios/iat-0.1.7.tar.gz"
+sha256 = "b25d57fde28a02b2d87cd49fd1478b039adbd836351879a654fea14c27764b21"
+strip_components = 1
+description = "Tool for detecting the structure of many types of CD/DVD image"
+homepage = "http://sourceforge.net/projects/iat.berlios/"
+license = "custom:GPL-2.0-or-later-with-BSD-attribution-requirement"
+
+[build]
+system = "autotools"

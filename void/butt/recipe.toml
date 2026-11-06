@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'butt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: portaudio
+[package]
+name = "butt"
+version = "1.44.0"
+archive = "https://danielnoethen.de/butt/release/1.44.0/butt-1.44.0.tar.gz"
+sha256 = "266288bcb60e1cc430b92398836876af41f4f5b7a7dbc116cb7b0f83a64d022d"
+strip_components = 1
+description = "Cross platform, Easy to use SHOUTcast and Icecast streaming tool"
+homepage = "https://danielnoethen.de/butt/"
+license = "GPL-2.0-or-later"
+deps = ["curl", "dbus", "fdk-aac", "flac", "fltk", "lame", "libXfixes", "libogg", "libsamplerate", "libvorbis", "openssl", "opus", "portmidi"]
+patches = ["patches/0001-limits.h-patch.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

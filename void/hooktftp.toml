@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hooktftp'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "hooktftp"
+version = "1.1.1"
+archive = "https://github.com/tftp-go-team/hooktftp/archive/1.1.1.tar.gz"
+sha256 = "ae50cd4a9b703365388de6301c9d97e0c417160fad8131c0f0727c08e67bcbc2"
+strip_components = 1
+description = "Hook based tftp server"
+homepage = "https://github.com/tftp-go-team/hooktftp"
+license = "MIT"
+
+[build]
+system = "go"

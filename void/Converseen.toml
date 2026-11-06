@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Converseen'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "Converseen"
+version = "0.15.2.8"
+archive = "https://github.com/Faster3ck/Converseen/archive/refs/tags/v0.15.2.8.tar.gz"
+sha256 = "bb29870f5d69aa8decb462aba67365f84cccda45a3a5225d8d3638979bc2b8bf"
+strip_components = 1
+description = "Free batch image processor"
+homepage = "https://github.com/Faster3ck/Converseen"
+license = "GPL-3.0-or-later"
+deps = ["ImageMagick", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_QT6=yes", "-Wunused-result=yes"]
+tools = ["pkg-config"]

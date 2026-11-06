@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ddgr'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ddgr"
+version = "2.2"
+archive = "https://github.com/jarun/ddgr/archive/refs/tags/v2.2.tar.gz"
+sha256 = "a858e0477ea339b64ae0427743ebe798a577c4d942737d8b3460bce52ac52524"
+strip_components = 1
+description = "DuckDuckGo from the terminal"
+homepage = "https://github.com/jarun/ddgr"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"

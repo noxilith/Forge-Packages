@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ccls'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: libffi, ncurses, zstd
+[package]
+name = "ccls"
+version = "0.20250815.1"
+archive = "https://github.com/MaskRay/ccls/archive/0.20250815.1.tar.gz"
+sha256 = "b44d9f981e65dcf950525886f8211727da8a41d3070d323d558f950749bc493c"
+strip_components = 1
+description = "C/C++/ObjC language server"
+homepage = "https://github.com/MaskRay/ccls"
+license = "Apache-2.0"
+deps = ["libedit", "libxml2", "llvm19", "rapidjson", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_SYSTEM_RAPIDJSON=ON"]

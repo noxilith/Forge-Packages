@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'giflib'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: CFLAGS
+[package]
+name = "giflib"
+version = "6.1.3"
+archive = "https://downloads.sourceforge.net/sourceforge/giflib/giflib-6.1.3.tar.gz"
+sha256 = "b65b66b99f0424b93525f987386f22fc5efb9da2bfc92ad4a532249aaffbab0e"
+strip_components = 1
+description = "Library to handle, display and manipulate GIF images"
+homepage = "https://sourceforge.net/projects/giflib/"
+license = "MIT"
+patches = ["patches/0001-Fix-CVE-2026-26740-heap-OOB-write-in-EGifGCBToSavedE.patch", "patches/0002-Fix-integer-overflow-and-type-safety-issues-across-g.patch", "patches/0003-Resolve-ticket-203-GifUnionColorMap-NULL-Pointer-Der.patch"]
+
+[build]
+system = "make"
+deps = ["xmlto"]

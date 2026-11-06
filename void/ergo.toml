@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ergo'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_build_tags, go_import_path, make_dirs, conf_files
+[package]
+name = "ergo"
+version = "2.19.1"
+archive = "https://github.com/ergochat/ergo/archive/v2.19.1.tar.gz"
+sha256 = "7b1f6fac874a75c766ccd41d068f4408ac09aa30e594233afe87e7793d93c587"
+strip_components = 1
+description = "Modern IRC server with integrated bouncer features and services"
+homepage = "https://ergo.chat/"
+license = "MIT"
+
+[build]
+system = "go"

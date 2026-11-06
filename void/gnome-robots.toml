@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-robots'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "gnome-robots"
+version = "41.2"
+archive = "https://download.gnome.org/sources/gnome-robots/41/gnome-robots-41.2.tar.xz"
+sha256 = "9121c2f836812043feef2ba661cd5d0fd48e3d6319c43941b9fdd158b9b0eb91"
+strip_components = 1
+description = "GNOME classic robots game"
+homepage = "https://wiki.gnome.org/Apps/Robots"
+license = "GPL-2.0-or-later"
+deps = ["libadwaita", "librsvg"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["desktop-file-utils", "gettext", "glib", "gtk4"]

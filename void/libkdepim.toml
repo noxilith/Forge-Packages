@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libkdepim'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "libkdepim"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/libkdepim-26.08.1.tar.xz"
+sha256 = "f4de990ab9a8e38b9f73870c1f9523d51c69ede75b8ccf2d62e51be48a861682"
+strip_components = 1
+description = "Libraries for KDE PIM applications"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kf6-kcompletion", "kf6-ki18n"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

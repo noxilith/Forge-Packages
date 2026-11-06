@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gifski'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, pre_build, pre_check, pre_install
+# settings not translated: build_helper
+[package]
+name = "gifski"
+version = "1.34.0"
+archive = "https://github.com/ImageOptim/gifski/archive/refs/tags/1.34.0.tar.gz"
+sha256 = "c9711473615cb20d7754e8296621cdd95cc068cb04b640f391cd71f8787b692c"
+strip_components = 1
+description = "Highest-quality GIF encoder based on pngquant"
+homepage = "https://gif.ski"
+license = "AGPL-3.0-only"
+patches = ["patches/fix-cross-build.patch", "patches/fix-tests.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

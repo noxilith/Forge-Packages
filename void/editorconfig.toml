@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'editorconfig'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "editorconfig"
+version = "0.12.11"
+archive = "https://github.com/editorconfig/editorconfig-core-c/archive/v0.12.11.tar.gz"
+sha256 = "9d8b420b56a969ea3cf784861c72d26fa0e158fa1494d732df2c8a1480d36a5c"
+strip_components = 1
+description = "EditorConfig core library written in C"
+homepage = "https://editorconfig.org/"
+license = "BSD-2-Clause"
+deps = ["pcre2"]
+
+[build]
+system = "cmake"

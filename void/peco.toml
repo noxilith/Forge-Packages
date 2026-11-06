@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'peco'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "peco"
+version = "0.6.0"
+archive = "https://github.com/peco/peco/archive/v0.6.0.tar.gz"
+sha256 = "480ba339c5b15ebb9eada276d5e25315ee5c36e878d86dcfc1ea17f54a27197a"
+strip_components = 1
+description = "Simplistic interactive filtering tool"
+homepage = "https://github.com/peco/peco"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "bat"
+version = "0.26.1"
+archive = "https://github.com/sharkdp/bat/archive/refs/tags/v0.26.1.tar.gz"
+sha256 = "4474de87e084953eefc1120cf905a79f72bbbf85091e30cf37c9214eafcaa9c9"
+strip_components = 1
+description = "Cat(1) clone with syntax highlighting and Git integration"
+homepage = "https://github.com/sharkdp/bat"
+license = "Apache-2.0 OR MIT"
+deps = ["libgit2-1.9", "oniguruma"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

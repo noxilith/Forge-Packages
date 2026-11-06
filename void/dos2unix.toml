@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'dos2unix'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "dos2unix"
+version = "7.5.5"
+archive = "https://waterlan.home.xs4all.nl/dos2unix/dos2unix-7.5.5.tar.gz"
+sha256 = "75f692b8484c8c24579a2ffd87df16b9c9428ed95497e3393a21d1ba0697ac33"
+strip_components = 1
+description = "Text file format converter"
+homepage = "https://waterlan.home.xs4all.nl/dos2unix.html"
+license = "BSD-2-Clause"
+
+[build]
+system = "make"
+deps = ["gettext"]

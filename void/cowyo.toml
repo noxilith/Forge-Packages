@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'cowyo'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "cowyo"
+version = "2.12.0"
+archive = "https://github.com/schollz/cowyo/archive/v2.12.0.tar.gz"
+sha256 = "b67d6dcb0ed5c050245ae75c72f182dba396d4caa66f747a2de8e3fdf4c0a1ed"
+strip_components = 1
+description = "Wiki webserver for minimalists"
+homepage = "https://github.com/schollz/cowyo"
+license = "MIT"
+
+[build]
+system = "go"

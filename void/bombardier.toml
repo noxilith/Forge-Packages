@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'bombardier'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "bombardier"
+version = "2.0.2"
+archive = "https://github.com/codesenberg/bombardier/archive/v2.0.2.tar.gz"
+sha256 = "472b14b1c3be26a5f6254f6b7c24f86c9b756544baa5ca28cbfad06aacf7f4ac"
+strip_components = 1
+description = "Fast cross-platform HTTP benchmarking tool"
+homepage = "https://github.com/codesenberg/bombardier"
+license = "MIT"
+
+[build]
+system = "go"

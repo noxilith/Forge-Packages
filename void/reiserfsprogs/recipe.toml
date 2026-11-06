@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'reiserfsprogs'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "reiserfsprogs"
+version = "3.6.27"
+archive = "https://www.kernel.org/pub/linux/kernel/people/jeffm/reiserfsprogs/v3.6.27/reiserfsprogs-3.6.27.tar.xz"
+sha256 = "0e95b67fa7746a3c2d59145e9b9c2feb4a6be52853e83b497b182eae508e62e3"
+strip_components = 1
+description = "Reiserfs utilities"
+homepage = "https://www.kernel.org/pub/linux/kernel/people/jeffm/reiserfsprogs/"
+license = "GPL-2.0-or-later"
+deps = ["acl", "e2fsprogs"]
+patches = ["patches/musl-__compar_fn_t.patch", "patches/musl-loff_t.patch", "patches/musl-long_long_min_max.patch", "patches/musl-prints.patch", "patches/reiserfsprogs-3.6.27-loff_t.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

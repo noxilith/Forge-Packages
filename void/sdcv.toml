@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sdcv'. Review before relying on it.
+# hooks not translated: post_extract, post_install, pre_install
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "sdcv"
+version = "0.5.3"
+archive = "https://github.com/Dushistov/sdcv/archive/v0.5.3.tar.gz"
+sha256 = "75fb95b1607fdd2fb9f7795d3432d295904614150575ae539202f680499803c9"
+strip_components = 1
+description = "Console version of Stardict program"
+homepage = "https://dushistov.github.io/sdcv/"
+license = "GPL-2.0-only"
+deps = ["glib", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tcpflow'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost, sqlite, tre
+[package]
+name = "tcpflow"
+version = "1.6.1"
+archive = "https://github.com/simsong/tcpflow/releases/download/tcpflow-1.6.1/tcpflow-1.6.1.tar.gz"
+sha256 = "436f93b1141be0abe593710947307d8f91129a5353c3a8c3c29e2ba0355e171e"
+strip_components = 1
+description = "Captures data transmitted as part of TCP connections"
+homepage = "https://github.com/simsong/tcpflow"
+license = "GPL-3.0-only, MIT"
+deps = ["cairo", "libcap-ng", "libpcap", "openssl", "zlib"]
+
+[build]
+system = "autotools"

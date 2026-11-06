@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fs-uae'. Review before relying on it.
+# hooks not translated: post_configure, post_patch
+# needs, but Forge has no recipe for yet: libmpeg2, zip
+[package]
+name = "fs-uae"
+version = "3.2.35"
+archive = "https://github.com/FrodeSolheim/fs-uae/releases/download/v3.2.35/fs-uae-3.2.35.tar.xz"
+sha256 = "f3d3cb8d3df34b0b0125c45a5a3e187ff71050be5dc8455cc4505c0380269117"
+strip_components = 1
+description = "FS-UAE Amiga Emulator"
+homepage = "https://fs-uae.net"
+license = "GPL-2.0-only"
+deps = ["SDL2", "glib", "libopenal", "libpng"]
+patches = ["patches/musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

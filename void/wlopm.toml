@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'wlopm'. Review before relying on it.
+# hooks not translated: pre_install
+[package]
+name = "wlopm"
+version = "1.0.0"
+archive = "https://git.sr.ht/~leon_plickat/wlopm/archive/v1.0.0.tar.gz"
+sha256 = "15f31bbd855131943397dded3a26003f2f5056e4c6a1a93d35ff7697b3f1e439"
+strip_components = 1
+description = "Simple client implementing zwlr-output-power-management-v1"
+homepage = "https://git.sr.ht/~leon_plickat/wlopm"
+license = "GPL-3.0-only"
+deps = ["wayland"]
+
+[build]
+system = "make"

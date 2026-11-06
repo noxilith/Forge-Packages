@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'fsearch'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "fsearch"
+version = "0.3.2"
+archive = "https://github.com/cboxdoerfer/fsearch/archive/0.3.2.tar.gz"
+sha256 = "2c9bc7de9ac1ba72232cb4d66a750fe04210fdae96273f04316b6616fc098308"
+strip_components = 1
+description = "Fast file search utility based on GTK+3"
+homepage = "https://cboxdoerfer.github.io/fsearch/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "pcre2"]
+patches = ["patches/query.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

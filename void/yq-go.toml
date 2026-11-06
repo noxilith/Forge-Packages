@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'yq-go'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "yq-go"
+version = "4.54.1"
+archive = "https://github.com/mikefarah/yq/archive/refs/tags/v4.54.1.tar.gz"
+sha256 = "0cec36e7035dd56c508bda56245cbd71e4495d2317bc2528165c4162bce79335"
+strip_components = 1
+description = "Command-line YAML, JSON, XML, CSV, TOML and properties processor"
+homepage = "https://mikefarah.gitbook.io/yq"
+license = "MIT"
+
+[build]
+system = "go"

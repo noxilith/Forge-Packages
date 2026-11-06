@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'evtest-qt'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "evtest-qt"
+version = "0.2.0"
+archive = "https://github.com/Grumbel/evtest-qt/archive/v0.2.0.tar.gz"
+sha256 = "d07df91840fc2dde0f69c1e4be503df1d92bbad6c1e936532d6579dc5d1c1baa"
+strip_components = 1
+description = "Linux Joystick Tester for Qt"
+homepage = "https://github.com/Grumbel/evtest-qt"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "cmake"

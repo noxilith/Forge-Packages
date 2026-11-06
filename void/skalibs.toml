@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'skalibs'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "skalibs"
+version = "2.15.0.0"
+archive = "https://skarnet.org/software/skalibs/skalibs-2.15.0.0.tar.gz"
+sha256 = "7fde96e8afb4191593a15328883e9c7726c96891cf071222146821e8c87f8007"
+strip_components = 1
+description = "General purpose libraries for building software from skarnet.org"
+homepage = "https://skarnet.org/software/skalibs/"
+license = "ISC"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static", "--enable-shared", "--enable-force-devr", "--with-sysdep-devurandom=yes"]

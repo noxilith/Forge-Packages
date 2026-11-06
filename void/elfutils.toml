@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'elfutils'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: bzip2, sqlite, zstd
+[package]
+name = "elfutils"
+version = "0.195"
+archive = "https://sourceware.org/pub/elfutils/0.195/elfutils-0.195.tar.bz2"
+sha256 = "37629fdf7f1f3dc2818e138fca2b8094177d6c2d0f701d3bb650a561218dc026"
+strip_components = 1
+description = "Utilities to handle ELF object files"
+homepage = "https://sourceware.org/elfutils/"
+license = "GPL-3.0-or-later"
+deps = ["curl", "json-c", "libarchive", "libmicrohttpd", "xz", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--program-prefix=eu-", "--enable-debuginfod", "--enable-libdebuginfod"]
+tools = ["m4", "pkg-config"]

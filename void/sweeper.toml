@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'sweeper'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "sweeper"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/sweeper-26.08.1.tar.xz"
+sha256 = "4ad649504927a359eed0aeacff85d74ac958577cf78685a659d69a4890df0603"
+strip_components = 1
+description = "History and temporary file cleaner"
+homepage = "https://apps.kde.org/sweeper"
+license = "LGPL-2.0-or-later"
+deps = ["kf6-kbookmarks", "kf6-kconfig", "kf6-kcrash", "kf6-kdoctools", "kf6-kio", "kf6-ktextwidgets", "kf6-kxmlgui", "plasma-activities-stats"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "qt6-base"]

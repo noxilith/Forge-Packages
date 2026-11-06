@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'qodem'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "qodem"
+version = "1.0.1"
+archive = "https://downloads.sourceforge.net/sourceforge/qodem/qodem-1.0.1.tar.gz"
+sha256 = "dedc73bfa73ced5c6193f1baf1ffe91f7accaad55a749240db326cebb9323359"
+strip_components = 1
+description = "Re-implementation of the Qmodem serial communication package"
+homepage = "https://qodem.sourceforge.net/"
+license = "CC0-1.0"
+deps = ["gpm", "miniupnpc", "sdl12-compat"]
+
+[build]
+system = "autotools"

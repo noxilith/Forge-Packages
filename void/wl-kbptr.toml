@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wl-kbptr'. Review before relying on it.
+# needs, but Forge has no recipe for yet: opencv
+[package]
+name = "wl-kbptr"
+version = "0.4.1"
+archive = "https://github.com/moverest/wl-kbptr/archive/refs/tags/v0.4.1.tar.gz"
+sha256 = "03ac52afa42d7aa88f909f96b2c0e57f5706a11d5d0ff451f6052927571e0624"
+strip_components = 1
+description = "Control the mouse pointer with the keyboard on Wayland"
+homepage = "https://github.com/moverest/wl-kbptr"
+license = "GPL-3.0-only"
+deps = ["cairo", "libxkbcommon", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+configure_args = ["-Dopencv=enabled"]
+tools = ["pkg-config"]

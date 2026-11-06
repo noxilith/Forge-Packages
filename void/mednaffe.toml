@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mednaffe'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "mednaffe"
+version = "0.9.3"
+archive = "https://github.com/AmatCoder/mednaffe/releases/download/0.9.3/mednaffe-0.9.3.tar.gz"
+sha256 = "430572c816b502744eb0239773adf83bee6f4d46b0b75c5971dbbe7fac9fd404"
+strip_components = 1
+description = "Front-end (GUI) for mednafen emulator"
+homepage = "https://github.com/AmatCoder/mednaffe"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "mednafen"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

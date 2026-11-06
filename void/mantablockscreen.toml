@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mantablockscreen'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+[package]
+name = "mantablockscreen"
+version = "0.3"
+archive = "https://github.com/reorr/mantablockscreen/archive/v0.3.tar.gz"
+sha256 = "796a5a16ef6392f2addb6a9bf1412b38a02aea7ee317d2ba8fce5fce08f6dfc0"
+strip_components = 1
+description = "Another i3lock-color wrapper that mantab"
+homepage = "https://github.com/reorr/mantablockscreen"
+license = "MIT"
+deps = ["ImageMagick", "i3lock-color", "picom", "xrandr"]
+
+[build]
+system = "make"

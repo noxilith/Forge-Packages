@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libvdt'. Review before relying on it.
+[package]
+name = "libvdt"
+version = "0.4.3"
+archive = "https://github.com/dpiparo/vdt/archive/refs/tags/v0.4.3.tar.gz"
+sha256 = "705674612ebb5c182b65a8f61f4d173eb7fe7cdeee2235b402541a492e08ace1"
+strip_components = 1
+description = "Collection of fast and inline implementations of mathematical functions"
+homepage = "https://github.com/dpiparo/vdt"
+license = "LGPL-3.0-or-later"
+
+[build]
+system = "cmake"

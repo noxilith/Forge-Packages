@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bcmatroska2'. Review before relying on it.
+[package]
+name = "bcmatroska2"
+version = "5.3.101"
+archive = "https://gitlab.linphone.org/BC/public/bcmatroska2/-/archive/5.3.101/bcmatroska2-5.3.101.tar.gz"
+sha256 = "37b918d3f333071de0bc72f4ac54299516c13d2feb6d0e175f0ba82cb78cf87b"
+strip_components = 1
+description = "C library for working with matroska files"
+homepage = "https://gitlab.linphone.org/BC/public/bcmatroska2"
+license = "GPL-2.0-only"
+deps = ["bctoolbox"]
+patches = ["patches/cmake.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=TRUE"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'occt'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# needs, but Forge has no recipe for yet: freeimage, tcl, tk
+[package]
+name = "occt"
+version = "7.9.3"
+archive = "https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_9_3.tar.gz"
+sha256 = "5ecf094ec6b12d5413dfb851d8c3590c354058aee556e32e408bdfbf8c357d57"
+strip_components = 1
+description = "OpenCASCADE Technology - library for CAD/CAM/CAE applications"
+homepage = "https://www.opencascade.com"
+license = "custom:LGPL-2.1-only-with-exceptions"
+deps = ["freetype", "glu", "tbb"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_FREEIMAGE=ON", "-DUSE_VTK=OFF", "-DINSTALL_SAMPLES=ON", "-DUSE_TBB=ON"]

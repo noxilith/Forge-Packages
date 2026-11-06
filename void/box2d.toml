@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'box2d'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "box2d"
+version = "3.1.1"
+archive = "https://dev-www.libreoffice.org/src/box2d-3.1.1.tar.gz"
+sha256 = "fb6ef914b50f4312d7d921a600eabc12318bb3c55a0b8c0b90608fa4488ef2e4"
+strip_components = 1
+description = "2D physics engine for games"
+homepage = "https://github.com/erincatto/box2d"
+license = "MIT"
+deps = ["libX11"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBOX2D_BUILD_TESTBED=OFF", "-DBOX2D_UNIT_TESTS=OFF", "-DBOX2D_SAMPLES=OFF", "-DBUILD_SHARED_LIBS=ON"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'sdl12-compat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sdl12-compat"
+version = "1.2.78"
+archive = "https://github.com/libsdl-org/sdl12-compat/archive/release-1.2.78.tar.gz"
+sha256 = "40ec5f0bab13a217ffae7aab0c450f1f798761e91fb185051b5211925c9da11a"
+strip_components = 1
+description = "SDL-1.2 compatibility library based on SDL 2.0"
+homepage = "https://github.com/libsdl-org/sdl12-compat"
+license = "Zlib AND (Public Domain OR MIT-0)"
+deps = ["SDL2"]
+patches = ["patches/sdl-config.patch"]
+
+[build]
+system = "cmake"

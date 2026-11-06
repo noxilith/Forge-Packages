@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kf6-knewstuff'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-knewstuff"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/knewstuff-6.30.0.tar.xz"
+sha256 = "85408768b5c3f4b0b51ee6a14ae73fea263f451404e266e286c55e0c17e44037"
+strip_components = 1
+description = "KDE Framework for downloading and sharing additional application data"
+homepage = "https://invent.kde.org/frameworks/knewstuff"
+license = "LGPL-2.1-or-later"
+deps = ["kf6-attica", "kf6-karchive", "kf6-kconfig", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kpackage", "kf6-kwidgetsaddons", "kf6-syndication"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base", "qt6-declarative"]

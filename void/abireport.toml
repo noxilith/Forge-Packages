@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'abireport'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "abireport"
+version = "1.0.11"
+archive = "https://github.com/clearlinux/abireport/releases/download/v1.0.11/abireport-1.0.11.tar.xz"
+sha256 = "2cf4c6cbb14e9d8839d11158142f44589779483c29433d8c422ed9cfa818e7d1"
+strip_components = 1
+description = "Tool to create ABI reports from ELF binaries"
+homepage = "https://github.com/clearlinux/abireport"
+license = "Apache-2.0"
+
+[build]
+system = "go"

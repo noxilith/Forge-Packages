@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'sshpass'. Review before relying on it.
+[package]
+name = "sshpass"
+version = "1.10"
+archive = "https://downloads.sourceforge.net/sourceforge/sshpass/sshpass-1.10.tar.gz"
+sha256 = "ad1106c203cbb56185ca3bad8c6ccafca3b4064696194da879f81c8d7bdfeeda"
+strip_components = 1
+description = "Non-interactive ssh password auth"
+homepage = "https://sshpass.sourceforge.net/"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"

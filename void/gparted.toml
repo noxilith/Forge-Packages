@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gparted'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, itstool
+[package]
+name = "gparted"
+version = "1.8.1"
+archive = "https://downloads.sourceforge.net/sourceforge/gparted/gparted/gparted-1.8.1/gparted-1.8.1.tar.gz"
+sha256 = "67388ac405f9fe92a40636cb03b0e1e0bb6403ad89ccc174b2ff190ef6f32349"
+strip_components = 1
+description = "Gnome Partition Editor"
+homepage = "https://gparted.sourceforge.io"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "glib", "gtkmm", "parted", "yelp-tools"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-libparted-dmraid"]
+tools = ["pkg-config"]
+deps = ["gettext"]

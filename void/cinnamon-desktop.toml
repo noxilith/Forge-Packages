@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cinnamon-desktop'. Review before relying on it.
+# settings not translated: build_helper
+[package]
+name = "cinnamon-desktop"
+version = "6.6.2"
+archive = "https://github.com/linuxmint/cinnamon-desktop/archive/6.6.2.tar.gz"
+sha256 = "4ed0d52a072551c6d536f1be68d4fcdb4166454fc9e48567ab2550282086b0f4"
+strip_components = 1
+description = "Library with common API for various Cinnamon modules"
+homepage = "https://github.com/linuxmint/cinnamon-desktop"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["accountsservice", "alsa-lib", "gtk+3", "libxkbfile", "pam", "pulseaudio", "xkeyboard-config"]
+
+[build]
+system = "meson"
+configure_args = ["-Dalsa=true"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gobject-introspection"]

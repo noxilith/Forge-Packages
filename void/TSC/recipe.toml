@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'TSC'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: boost, glew, mruby2
+[package]
+name = "TSC"
+version = "2.1.0"
+archive = "https://github.com/Secretchronicles/TSC/releases/download/v2.1.0/TSC-2.1.0.tar.gz"
+sha256 = "6a16765b4951e3d5d1ea2b84e6da8f67b0271460f0c570b53ccdab80d7396261"
+strip_components = 1
+description = "OSS 2D platform game"
+homepage = "https://www.secretchronicles.org/"
+license = "GPL-3.0-or-later"
+deps = ["SFML", "cegui", "devil", "gettext", "libXt", "libvorbis", "libxml++", "pcre", "tinyclipboard"]
+patches = ["patches/boost-1.80.patch", "patches/boost-1.88.patch", "patches/no-scriptdocs-cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_SYSTEM_MRUBY=ON", "-DUSE_SYSTEM_TINYCLIPBOARD=ON"]
+subdir = "tsc"
+tools = ["bison", "gperf", "pkg-config"]

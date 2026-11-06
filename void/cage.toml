@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cage'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "cage"
+version = "0.3.0"
+archive = "https://github.com/cage-kiosk/cage/archive/refs/tags/v0.3.0.tar.gz"
+sha256 = "f32e6885444e365de3bc076d307c20eff59ee42ed0237219eebd3d2fe597e289"
+strip_components = 1
+description = "Kiosk compositor for Wayland"
+homepage = "https://www.hjdskes.nl/projects/cage/"
+license = "MIT"
+deps = ["libxkbcommon", "wlroots0.20", "xorg-server-xwayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["scdoc", "wayland"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rset'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "rset"
+version = "3.5"
+archive = "https://scriptedconfiguration.org/code/rset-3.5.tar.gz"
+sha256 = "3e28a29f55bb9e4e215181bb285cc61d91d6d260039e76d803c2101f7c815709"
+strip_components = 1
+description = "Remote Staging Execution Tool"
+homepage = "https://scriptedconfiguration.org/"
+license = "ISC"
+deps = ["curl"]
+
+[build]
+system = "make"

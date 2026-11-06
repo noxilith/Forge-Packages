@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'opendht'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "opendht"
+version = "3.5.4"
+archive = "https://github.com/savoirfairelinux/opendht/archive/refs/tags/v3.5.4.tar.gz"
+sha256 = "674249c4ac07c4392566d761c0189c7bb11dd7b17e9a331c69d6881f7d01e043"
+strip_components = 1
+description = "Distributed Hash Table implementation"
+homepage = "https://github.com/savoirfairelinux/opendht"
+license = "GPL-3.0-or-later"
+deps = ["argon2", "asio", "fmt", "gnutls", "msgpack-cxx"]
+patches = ["patches/fixing-faulty-tests.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DOPENDHT_SYSTEMD=OFF", "-DOPENDHT_TOOLS=ON", "-DOPENDHT_TESTS_NETWORK=OFF"]
+tools = ["pkg-config"]

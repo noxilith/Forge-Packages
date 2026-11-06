@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'bibletime'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build, pre_check
+# needs, but Forge has no recipe for yet: apache-fop, docbook-xml, docbook-xsl, openjdk8, po4a, qt6-svg, qt6-tools
+[package]
+name = "bibletime"
+version = "3.1.1"
+archive = "https://github.com/bibletime/bibletime/releases/download/v3.1.1/bibletime-3.1.1.tar.xz"
+sha256 = "71dbafdc8d29518aede79269d027d80b4192633e7a614c89ed76aeb0e0bd1dd4"
+strip_components = 1
+description = "Powerful cross platform Bible study tool"
+homepage = "http://bibletime.info"
+license = "GPL-2.0-or-later"
+deps = ["clucene", "curl", "qt6-base", "qt6-declarative", "sword", "zlib"]
+patches = ["patches/Let-32-bit-platforms-compile.patch", "patches/fix-cflags.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["libxslt"]

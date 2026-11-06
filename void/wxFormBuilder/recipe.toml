@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wxFormBuilder'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "wxFormBuilder"
+version = "4.2.1"
+archive = "https://github.com/wxFormBuilder/wxFormBuilder/releases/download/v4.2.1/wxFormBuilder-4.2.1-source-full.tar.gz"
+sha256 = "f0dbf353100077ee3fd6d412ccba3daa61891ee766e416154b2a6322ec34d2ed"
+strip_components = 1
+description = "GUI builder for wxWidgets"
+homepage = "https://github.com/wxFormBuilder/wxFormBuilder"
+license = "GPL-2.0-or-later"
+deps = ["gst-plugins-bad1", "wxWidgets-gtk3"]
+patches = ["patches/cmake-no-update-mime.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release"]
+tools = ["pkg-config"]

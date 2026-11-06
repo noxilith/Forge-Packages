@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'pps-tools'. Review before relying on it.
+[package]
+name = "pps-tools"
+version = "1.0.2"
+archive = "https://github.com/ago/pps-tools/archive/v1.0.2.tar.gz"
+sha256 = "1a7efd66152e5439b69143f1f380b40ac5decbbbef516b37a017410b8ba7dff4"
+strip_components = 1
+description = "Tools for LinuxPPS (pulse-per-second)"
+homepage = "http://linuxpps.org/"
+license = "GPL-2.0-or-later"
+patches = ["patches/makefile-DESTDIR.patch", "patches/ppsfind-fixes.patch", "patches/ppswatch-signal.patch"]
+
+[build]
+system = "make"

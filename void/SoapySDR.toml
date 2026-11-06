@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'SoapySDR'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: doxygen, python3-setuptools
+[package]
+name = "SoapySDR"
+version = "0.9.0"
+archive = "https://github.com/pothosware/SoapySDR/archive/soapy-sdr-0.9.0.tar.gz"
+sha256 = "64f97c1ad241156fe299acb8902169019eab34517cd580b563968a43d7533509"
+strip_components = 1
+description = "Vendor and platform neutral SDR support library"
+homepage = "https://github.com/pothosware/SoapySDR"
+license = "BSL-1.0"
+
+[build]
+system = "cmake"
+deps = ["swig"]

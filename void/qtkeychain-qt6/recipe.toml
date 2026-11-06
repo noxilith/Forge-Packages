@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'qtkeychain-qt6'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "qtkeychain-qt6"
+version = "0.17.0"
+archive = "https://github.com/frankosterfeld/qtkeychain/archive/0.17.0.tar.gz"
+sha256 = "3b85c3929034b0a99da777130c34d99f006fcd3a9d56564159399a33fee0e504"
+strip_components = 1
+description = "Platform-independent Qt6 API for storing passwords securely"
+homepage = "https://github.com/frankosterfeld/qtkeychain"
+license = "BSD-2-Clause"
+deps = ["libsecret", "qt6-base"]
+patches = ["patches/fix-cross-qt6.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tc-play'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_args, make_install_args, make_build_target, make_install_target
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "tc-play"
+version = "3.3"
+archive = "https://github.com/bwalex/tc-play/archive/v3.3.tar.gz"
+sha256 = "ad53cd814a23b4f61a1b2b6dc2539624ffb550504c400c45cbd8cd1da4c7d90a"
+strip_components = 1
+description = "Free and simple TrueCrypt implementation based on dm-crypt"
+homepage = "https://github.com/bwalex/tc-play"
+license = "BSD-2-Clause"
+deps = ["libgcrypt", "lvm2"]
+patches = ["patches/sysmacros.patch"]
+
+[build]
+system = "make"

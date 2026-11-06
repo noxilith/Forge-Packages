@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libmpdclient'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libmpdclient"
+version = "2.23"
+archive = "https://www.musicpd.org/download/libmpdclient/2/libmpdclient-2.23.tar.xz"
+sha256 = "4a1b6c7f783d8cac3d3b8e4cbe9ad021c45491e383de3b893ea4eedefbc71607"
+strip_components = 1
+description = "Asynchronous API library for interfacing MPD"
+homepage = "https://www.musicpd.org/libs/libmpdclient/"
+license = "BSD-2-Clause, BSD-3-Clause"
+
+[build]
+system = "meson"

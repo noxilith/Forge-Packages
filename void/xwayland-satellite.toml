@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xwayland-satellite'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "xwayland-satellite"
+version = "0.8.3"
+archive = "https://github.com/Supreeeme/xwayland-satellite/archive/v0.8.3.tar.gz"
+sha256 = "8b32873d7d740143ce9efa3cfb43c17d0176b89d2e8ffaa497db709f154fc478"
+strip_components = 1
+description = "Xwayland outside your Wayland compositor"
+homepage = "https://github.com/Supreeeme/xwayland-satellite"
+license = "MPL-2.0"
+deps = ["xcb-util-cursor", "xorg-server-xwayland"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

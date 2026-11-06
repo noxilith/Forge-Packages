@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'fatrace'. Review before relying on it.
+# hooks not translated: post_extract
+[package]
+name = "fatrace"
+version = "0.19.1"
+archive = "https://github.com/martinpitt/fatrace/archive/0.19.1.tar.gz"
+sha256 = "fd8f143f4e162d36c8ae29c51b32d315415447829c81091e3bb86b326051c77c"
+strip_components = 1
+description = "Report system wide file access events"
+homepage = "https://github.com/martinpitt/fatrace"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kdevelop-php'. Review before relying on it.
+[package]
+name = "kdevelop-php"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kdev-php-26.08.1.tar.xz"
+sha256 = "cbb566e00335153e824bb6b20f8f4db554e2b224f1dc5035ec7e4665bebf1d5d"
+strip_components = 1
+description = "PHP language support for KDevelop"
+homepage = "https://www.kdevelop.org/"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["kdevelop", "kf6-kcmutils", "kf6-ki18n", "kf6-kitemmodels", "kf6-knewstuff", "kf6-knotifyconfig", "kf6-ktexteditor", "kf6-threadweaver"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+deps = ["extra-cmake-modules", "gettext", "kdevelop-pg-qt", "kf6-kconfig", "qt6-base", "tar"]

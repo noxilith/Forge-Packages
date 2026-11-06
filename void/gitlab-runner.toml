@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gitlab-runner'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "gitlab-runner"
+version = "19.2.2"
+archive = "https://gitlab.com/gitlab-org/gitlab-runner/-/archive/v19.2.2/gitlab-runner-v19.2.2.tar.gz"
+sha256 = "093d8e33789357f3ec3a930340dd9496a964163d51e01a479b114b675dec1040"
+strip_components = 1
+description = "Official GitLab CI runner written in Go"
+homepage = "https://docs.gitlab.com/runner/"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gtk-session-lock'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+[package]
+name = "gtk-session-lock"
+version = "0.2.0"
+archive = "https://github.com/Cu3PO42/gtk-session-lock/archive/refs/tags/v0.2.0.tar.gz"
+sha256 = "a4245c6930580c15ed263b9a7bb7e39f47693baec78be1026b4e0e28b233cb4e"
+strip_components = 1
+description = "Library to build screen lockers using the ext-session-lock-v1 protocol"
+homepage = "https://github.com/Cu3PO42/gtk-session-lock"
+license = "GPL-3.0-only, MIT"
+deps = ["gtk+3", "wayland"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gobject-introspection"]

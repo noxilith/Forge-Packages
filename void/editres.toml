@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'editres'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "editres"
+version = "1.1.1"
+archive = "https://www.x.org/releases/individual/app/editres-1.1.1.tar.xz"
+sha256 = "e0a29b2f5e178362f71950c45ec49b43ccc75cacf44356948377e71cdfee119b"
+strip_components = 1
+description = "Dynamic resource editor for X Toolkit applications"
+homepage = "https://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXaw", "libxkbfile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cpuid'. Review before relying on it.
+[package]
+name = "cpuid"
+version = "20260503"
+archive = "https://www.etallen.com/cpuid/cpuid-20260503.src.tar.gz"
+sha256 = "8ee10fb48d4aa20c484a75d6852883710286ed2975c314bda6d0b0383908cbfe"
+strip_components = 1
+description = "Linux tool to dump x86 CPUID information about the CPU(s)"
+homepage = "https://www.etallen.com/cpuid.html"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"
+tools = ["perl"]

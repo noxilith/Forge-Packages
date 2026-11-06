@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'potrace'. Review before relying on it.
+[package]
+name = "potrace"
+version = "1.16"
+archive = "https://downloads.sourceforge.net/sourceforge/potrace/potrace-1.16.tar.gz"
+sha256 = "be8248a17dedd6ccbaab2fcc45835bb0502d062e40fbded3bc56028ce5eb7acc"
+strip_components = 1
+description = "Transforming bitmaps into vector graphics"
+homepage = "http://potrace.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-libpotrace"]

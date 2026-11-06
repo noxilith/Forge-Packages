@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libfm-qt5'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "libfm-qt5"
+version = "1.4.0"
+archive = "https://github.com/lxqt/libfm-qt/archive/1.4.0.tar.gz"
+sha256 = "fbca95a2d3dab9ac21e685cf15534bb832973442046965bea0ef806cc770e7bf"
+strip_components = 1
+description = "Core library of PCManFM-Qt"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["libexif", "lxqt-menu-data", "menu-cache"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools-qt5"]

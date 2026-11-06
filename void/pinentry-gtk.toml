@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pinentry-gtk'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: ncurses, qt6-tools
+[package]
+name = "pinentry-gtk"
+version = "1.3.3"
+archive = "https://gnupg.org/ftp/gcrypt/pinentry/pinentry-1.3.3.tar.bz2"
+sha256 = "c2970f16d6afb66ecddfca767d743936c86239bff936eed7fd7597a678414b63"
+strip_components = 1
+description = "PIN or passphrase entry dialogs for GnuPG based on GTK+"
+homepage = "https://www.gnupg.org/related_software/pinentry/index.html"
+license = "GPL-2.0-or-later"
+deps = ["gcr", "gtk+", "libassuan", "libgpg-error", "qt6-base"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-libcap", "--enable-fallback-curses", "--disable-pinentry-curses", "--disable-pinentry-tty", "--disable-pinentry-emacs", "--enable-pinentry-qt", "--enable-pinentry-gtk2", "--enable-pinentry-gnome3"]
+tools = ["pkg-config"]

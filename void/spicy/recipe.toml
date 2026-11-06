@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'spicy'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper, CFLAGS, CXXFLAGS
+[package]
+name = "spicy"
+version = "1.17.0"
+archive = "https://github.com/zeek/spicy/releases/download/v1.17.0/spicy.tar.gz"
+sha256 = "d6fe2025d76e37ffd8d75c11782f17ad6ca070272de70288e708f173eb99912f"
+strip_components = 1
+description = "Generate Robust Parsers for Protocols & File Formats"
+homepage = "https://docs.zeek.org/projects/spicy/en/latest/"
+license = "BSD-3-Clause"
+deps = ["flex", "zlib"]
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "cmake"
+tools = ["flex"]

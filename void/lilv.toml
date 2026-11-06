@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'lilv'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-packaging-bootstrap
+[package]
+name = "lilv"
+version = "0.28.0"
+archive = "https://gitlab.com/lv2/lilv/-/archive/v0.28.0/lilv-v0.28.0.tar.gz"
+sha256 = "006065dcb59ccaad5463e6bb4598160e41dd6474a959838e74820f60a849bfdb"
+strip_components = 1
+description = "Simple yet powerful C API for using LV2 plugins"
+homepage = "https://gitlab.com/lv2/lilv"
+license = "ISC"
+deps = ["libsndfile", "lv2", "serd", "sord", "sratom", "zix"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

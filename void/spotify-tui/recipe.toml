@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'spotify-tui'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_configure
+[package]
+name = "spotify-tui"
+version = "0.25.0"
+archive = "https://github.com/Rigellute/spotify-tui/archive/v0.25.0.tar.gz"
+sha256 = "9d6fa998e625ceff958a5355b4379ab164ba76575143a7b6d5d8aeb6c36d70a7"
+strip_components = 1
+description = "Spotify for the terminal"
+homepage = "https://github.com/Rigellute/spotify-tui"
+license = "MIT"
+deps = ["libxcb", "openssl"]
+patches = ["patches/openssl3.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

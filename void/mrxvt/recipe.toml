@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mrxvt'. Review before relying on it.
+# settings not translated: CFLAGS
+[package]
+name = "mrxvt"
+version = "0.5.4"
+archive = "https://downloads.sourceforge.net/sourceforge/materm/mrxvt-0.5.4.tar.gz"
+sha256 = "f403ad5a908fcd38a55ed0a7e1b85584cb77be8781199653a39b8af1a9ad10d7"
+strip_components = 1
+description = "Multi-tabbed rxvt based terminal"
+homepage = "http://materm.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["libXft"]
+patches = ["patches/mrxvt-0.5.4-001-fix-segfault-when-wd-empty.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-debug", "--disable-lastlog", "--enable-xft", "--enable-text-shadow", "--with-save-lines=200", "--with-x"]
+tools = ["pkg-config"]

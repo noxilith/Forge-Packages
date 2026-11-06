@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'octave'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: fftw, gl2ps, libreadline8, portaudio, qscintilla-qt6, qt6-qt5compat, qt6-tools
+[package]
+name = "octave"
+version = "11.1.0"
+archive = "https://ftp.gnu.org/gnu/octave/octave-11.1.0.tar.gz"
+sha256 = "c0e7e2c91bc573256431b2cc989290b9bd13851dbadd59d0ac74714f1334b0e6"
+strip_components = 1
+description = "High-level language, primarily intended for numerical computations"
+homepage = "https://octave.org/"
+license = "GPL-3.0-or-later"
+deps = ["GraphicsMagick", "SuiteSparse", "arpack-ng", "curl", "fltk", "fontconfig", "freetype", "glpk", "glu", "hdf5", "lcms2", "libSM", "libsndfile", "pcre2", "qhull", "qt6-base", "rapidjson", "texinfo", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-docs"]
+tools = ["perl", "pkg-config"]

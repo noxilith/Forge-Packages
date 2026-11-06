@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'plasma-activities-stats'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, kde-plasma-base, qt6-tools
+[package]
+name = "plasma-activities-stats"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-activities-stats-6.7.5.tar.xz"
+sha256 = "9896396e29d5841c7a0f42814ced01ab58fcad406a552ddee2c950f205549acf"
+strip_components = 1
+description = "Library for accessing the usage data collected by the activities system"
+homepage = "https://invent.kde.org/plasma/plasma-activities-stats"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kconfig", "kf6-kcoreaddons", "plasma-activities"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "qt6-base"]

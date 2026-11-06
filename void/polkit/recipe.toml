@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'polkit'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, make_dirs
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "polkit"
+version = "127"
+archive = "https://github.com/polkit-org/polkit/archive/127.tar.gz"
+sha256 = "9b7bc16f086479dcc626c575976568ba4a85d34297a750d8ab3d2e57f6d8b988"
+strip_components = 1
+description = "Authorization Toolkit"
+homepage = "https://github.com/polkit-org/polkit"
+license = "GPL-2.0-or-later"
+deps = ["duktape", "elogind", "glib", "pam"]
+patches = ["patches/turnstile.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dman=true", "-Dsession_tracking=elogind"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext", "libxslt"]

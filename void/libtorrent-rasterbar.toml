@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'libtorrent-rasterbar'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: boost, python3-setuptools
+[package]
+name = "libtorrent-rasterbar"
+version = "2.0.10"
+archive = "https://github.com/arvidn/libtorrent/releases/download/v2.0.10/libtorrent-rasterbar-2.0.10.tar.gz"
+sha256 = "fc935b8c1daca5c0a4d304bff59e64e532be16bb877c012aea4bda73d9ca885d"
+strip_components = 1
+description = "C++ bittorrent library by Rasterbar Software"
+homepage = "https://libtorrent.org/"
+license = "BSD-3-Clause"
+deps = ["geoip", "openssl"]
+
+[build]
+system = "cmake"
+configure_args = ["-Dbuild_examples=ON", "-Dbuild_tools=ON", "-Dpython-bindings=ON", "-Dbuild_tests=ON"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'docker-machine'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "docker-machine"
+version = "0.16.2"
+archive = "https://github.com/docker/machine/archive/v0.16.2.tar.gz"
+sha256 = "f333d6dc8976d2c5b0c5e62fb46bce50423e72e3c9210aa77dd6363683db24bf"
+strip_components = 1
+description = "Docker Machine management for a container-centric world"
+homepage = "https://github.com/docker/machine/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

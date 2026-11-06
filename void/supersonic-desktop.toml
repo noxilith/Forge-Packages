@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'supersonic-desktop'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "supersonic-desktop"
+version = "0.21.0"
+archive = "https://github.com/dweymouth/supersonic/archive/v0.21.0.tar.gz"
+sha256 = "b532e5fb0c2e03949a704ac12576713a85eb1890012befd2f2479caa35723804"
+strip_components = 1
+description = "Lightweight cross-platform desktop client for self-hosted music servers"
+homepage = "https://github.com/dweymouth/supersonic"
+license = "GPL-3.0-or-later"
+deps = ["libXcursor", "libXxf86vm", "mpv"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

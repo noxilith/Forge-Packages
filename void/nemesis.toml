@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'nemesis'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "nemesis"
+version = "1.8"
+archive = "https://github.com/troglobit/nemesis/releases/download/v1.8/nemesis-1.8.tar.gz"
+sha256 = "c480570284ba86aa8643eac0d582aaedaeaefa4773b7d0ac9549e4f42c40e78a"
+strip_components = 1
+description = "Command-line network packet crafting and injection utility"
+homepage = "https://github.com/troglobit/nemesis"
+license = "BSD-3-Clause"
+deps = ["libnet"]
+
+[build]
+system = "autotools"

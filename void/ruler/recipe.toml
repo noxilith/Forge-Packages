@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ruler'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: LDFLAGS
+[package]
+name = "ruler"
+version = "0.1.0"
+archive = "https://github.com/tudurom/ruler/archive/v0.1.0.tar.gz"
+sha256 = "5355e19530bb158b504cca6ba18cc402585e9bdb488e01a2ee76492bc70923c7"
+strip_components = 1
+description = "Window rule daemon"
+homepage = "https://github.com/tudurom/ruler"
+license = "ISC"
+deps = ["libwm", "libxcb", "xcb-util-wm"]
+patches = ["patches/fix-invalid-pointer.patch"]
+
+[build]
+system = "make"
+tools = ["flex"]

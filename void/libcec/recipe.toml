@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libcec'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+[package]
+name = "libcec"
+version = "6.0.2"
+archive = "https://github.com/Pulse-Eight/libcec/archive/libcec-6.0.2.tar.gz"
+sha256 = "090696d7a4fb772d7acebbb06f91ab92e025531c7c91824046b9e4e71ecb3377"
+strip_components = 1
+description = "USB CEC Adapter communication Library"
+homepage = "https://github.com/Pulse-Eight/libcec"
+license = "GPL-2.0-or-later"
+deps = ["eudev", "libXrandr", "p8-platform"]
+patches = ["patches/no-fqdn.patch", "patches/python-3.13.patch", "patches/return-right.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["swig"]

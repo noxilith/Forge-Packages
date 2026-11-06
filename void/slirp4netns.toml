@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'slirp4netns'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "slirp4netns"
+version = "1.3.3"
+archive = "https://github.com/rootless-containers/slirp4netns/archive/v1.3.3.tar.gz"
+sha256 = "8d24539967850bada944d56459eb9e9167357d57b39e864d95ed7d6c0dd0298d"
+strip_components = 1
+description = "User-mode networking for unprivileged network namespaces"
+homepage = "https://github.com/rootless-containers/slirp4netns"
+license = "GPL-2.0-only"
+deps = ["libcap", "libseccomp", "libslirp"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

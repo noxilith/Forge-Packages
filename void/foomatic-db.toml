@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'foomatic-db'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "foomatic-db"
+version = "20210104"
+archive = "https://github.com/OpenPrinting/foomatic-db/archive/28466ef2f9f931f49816ed70c499001d1783f5cb.tar.gz"
+sha256 = "eb412f7967300ae49bd22a886ecd478767828eff5da4d1e875c3409898265866"
+strip_components = 1
+description = "OpenPrinting printer support - database"
+homepage = "https://wiki.linuxfoundation.org/openprinting/database/foomatic"
+license = "GPL-2.0-or-later, MIT"
+
+[build]
+system = "autotools"
+deps = ["tar", "xmlstarlet"]

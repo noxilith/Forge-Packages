@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'mlt7'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS, CXXFLAGS
+# needs, but Forge has no recipe for yet: SDL2_image, doxygen, ffmpeg6, fftw, jack, ladspa-sdk, qt5, qt6-qt5compat, qt6-svg, qt6-tools, rnnoise
+[package]
+name = "mlt7"
+version = "7.40.0"
+archive = "https://github.com/mltframework/mlt/archive/v7.40.0.tar.gz"
+sha256 = "49070c3aa84af719de77875d44a62a1c115aff923aff60657fe6dbaaef877601"
+strip_components = 1
+description = "Multimedia framework, designed for television broadcasting"
+homepage = "https://mltframework.org/"
+license = "GPL-3.0-or-later, LGPL-2.1-or-later"
+deps = ["alsa-lib", "frei0r-plugins", "gtk+", "libexif", "libsamplerate", "libvidstab", "libxml2", "movit", "pulseaudio", "rubberband", "sox"]
+patches = ["patches/musl-timeval.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DSWIG_PYTHON=ON", "-DMOD_QT6=ON"]
+tools = ["pkg-config"]
+deps = ["qt6-base", "swig", "which"]

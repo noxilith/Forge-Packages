@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'girara'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen
+[package]
+name = "girara"
+version = "2026.07.18"
+archive = "https://pwmt.org/projects/girara/download/girara-2026.07.18.tar.xz"
+sha256 = "d7255635776a45d42d1e555aa425ab96caf23755442474cf240cbac966d8502f"
+strip_components = 1
+description = "Library implementing a user interface that focuses on minimalism"
+homepage = "https://pwmt.org/projects/girara/"
+license = "Zlib"
+deps = ["glib"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xsane'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "xsane"
+version = "0.999"
+archive = "https://gitlab.com/sane-project/frontend/xsane/-/archive/0.999/xsane-0.999.tar.gz"
+sha256 = "05359707effe1547ff123bb34443a95a4c54bd4888b91a3556c69875b64989b6"
+strip_components = 1
+description = "GTK-based X11 frontend for SANE"
+homepage = "http://www.xsane.org"
+license = "GPL-2.0-or-later"
+deps = ["gtk+", "lcms2", "sane"]
+patches = ["patches/0001-upstream-configure-fixes.patch", "patches/fix-png_jmpbuf.patch", "patches/gcc14.patch", "patches/xdg-open.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-gimp"]
+tools = ["pkg-config"]
+deps = ["autoconf-archive", "gettext"]

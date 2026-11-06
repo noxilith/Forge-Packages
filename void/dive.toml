@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'dive'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "dive"
+version = "0.13.1"
+archive = "https://github.com/wagoodman/dive/archive/v0.13.1.tar.gz"
+sha256 = "2a9666e9c3fddd5e2e5bad81dccda520b8102e7cea34e2888f264b4eb0506852"
+strip_components = 1
+description = "Container image exploration tool"
+homepage = "https://github.com/wagoodman/dive"
+license = "MIT"
+
+[build]
+system = "go"

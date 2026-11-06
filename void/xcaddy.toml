@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'xcaddy'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "xcaddy"
+version = "0.4.5"
+archive = "https://github.com/caddyserver/xcaddy/archive/refs/tags/v0.4.5.tar.gz"
+sha256 = "53c6a9e29965aaf19210ac6470935537040e782101057a199098feb33c2674f8"
+strip_components = 1
+description = "Build Caddy with plugins"
+homepage = "https://github.com/caddyserver/xcaddy"
+license = "Apache-2.0"
+
+[build]
+system = "go"

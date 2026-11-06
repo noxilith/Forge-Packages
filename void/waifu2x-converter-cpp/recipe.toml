@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'waifu2x-converter-cpp'. Review before relying on it.
+# hooks not translated: post_install, pre_check, pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: opencv
+[package]
+name = "waifu2x-converter-cpp"
+version = "5.3.4"
+archive = "https://github.com/DeadSix27/waifu2x-converter-cpp/archive/v5.3.4.tar.gz"
+sha256 = "93e1dca78657c48f9c497a71b9e9d11e88ffadcc20fac27f9c48cdba7f132b51"
+strip_components = 1
+description = "Image upscaling using deep convolutional neural networks"
+homepage = "https://github.com/DeadSix27/waifu2x-converter-cpp"
+license = "MIT"
+deps = ["OpenCL-Headers", "ocl-icd"]
+patches = ["patches/fix-cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DINSTALL_MODELS=ON"]
+tools = ["pkg-config"]

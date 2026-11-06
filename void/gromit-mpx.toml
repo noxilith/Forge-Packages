@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gromit-mpx'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "gromit-mpx"
+version = "1.9.0"
+archive = "https://github.com/bk138/gromit-mpx/archive/1.9.0.tar.gz"
+sha256 = "fdbe18e4315e186f5fbe70b193cd34e630db4455843cf66b3dcf0da4779b01db"
+strip_components = 1
+description = "Multi-pointer annotation tool"
+homepage = "https://github.com/bk138/gromit-mpx"
+license = "GPL-2.0-only"
+deps = ["gtk+3", "libayatana-appindicator", "libdbusmenu-glib", "lz4"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

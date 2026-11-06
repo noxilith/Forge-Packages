@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gphoto2'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "gphoto2"
+version = "2.5.32"
+archive = "https://downloads.sourceforge.net/sourceforge/gphoto/gphoto2-2.5.32.tar.bz2"
+sha256 = "4e379a0f12f72b49ee5ee2283ffd806b5d12d099939d75197a3f4bbc7f27a1a1"
+strip_components = 1
+description = "Digital camera CLI iinterface to libgphoto"
+homepage = "http://www.gphoto.org"
+license = "GPL-2.0-or-later"
+deps = ["libgphoto2", "libjpeg-turbo", "popt"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--disable-rpath", "POPT_LIBS=-lpopt"]
+tools = ["pkg-config"]
+deps = ["gettext"]

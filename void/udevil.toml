@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'udevil'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "udevil"
+version = "0.4.4"
+archive = "https://github.com/IgnorantGuru/udevil/archive/0.4.4.tar.gz"
+sha256 = "ad2fd8375bd62622718a04235e9772119459089938dbb78e657955e595822b7c"
+strip_components = 1
+description = "CLI which mounts and unmounts removable devices without a password"
+homepage = "http://ignorantguru.github.io/udevil/"
+license = "GPL-3.0-or-later"
+deps = ["eudev", "glib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-systemd"]
+tools = ["pkg-config"]

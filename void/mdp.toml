@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mdp'. Review before relying on it.
+# hooks not translated: pre_build
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "mdp"
+version = "1.0.19"
+archive = "https://github.com/visit1985/mdp/archive/refs/tags/1.0.19.tar.gz"
+sha256 = "4043838ff3048a5234ea6e24ab42301ab78ff3f51ed6ba19c0c4711414f6a74a"
+strip_components = 1
+description = "Command-line based markdown presentation tool"
+homepage = "https://github.com/visit1985/mdp"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"

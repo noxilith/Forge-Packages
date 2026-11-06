@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tickr'. Review before relying on it.
+[package]
+name = "tickr"
+version = "0.7.1"
+archive = "https://www.open-tickr.net/src/tickr-0.7.1.tar.gz"
+sha256 = "391529a115b820d5c2cac7b466facc4722b7f90e02ab0acd7350a8e97adcee58"
+strip_components = 1
+description = "Gtk-based rss reader in a ticker bar"
+homepage = "https://www.open-tickr.net/"
+license = "GPL-3.0-or-later"
+deps = ["fribidi", "gnutls", "gtk+", "libxml2"]
+patches = ["patches/musl-fix-unknown-fd_set.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

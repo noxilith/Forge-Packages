@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gnome-mplayer'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: dbus-glib, hicolor-icon-theme, mplayer
+[package]
+name = "gnome-mplayer"
+version = "1.0.9"
+archive = "https://github.com/kdekorte/gnome-mplayer/archive/v1.0.9.tar.gz"
+sha256 = "07e11bc42834dae14ad66f887e6045f2bea94eae7f797b624c9a099f806b5cde"
+strip_components = 1
+description = "Simple MPlayer GUI for GNOME"
+homepage = "https://github.com/kdekorte/gnome-mplayer"
+license = "GPL-2.0-only"
+deps = ["alsa-lib", "desktop-file-utils", "gmtk", "gtk+3", "libXScrnSaver", "libgda", "libnotify", "pulseaudio"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-schemas-install"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

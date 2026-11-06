@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'hsetroot'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "hsetroot"
+version = "1.0.5"
+archive = "https://github.com/himdel/hsetroot/archive/1.0.5.tar.gz"
+sha256 = "cff5f83b85a21e0c5c8c8eecbd552090bb75d8ac59e27b0bae48046f9cb5a44a"
+strip_components = 1
+description = "Tool which changes X server wallpapers"
+homepage = "https://github.com/himdel/hsetroot"
+license = "GPL-2.0-only"
+deps = ["imlib2", "libX11", "libXinerama"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

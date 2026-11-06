@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kaffeine'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kaffeine"
+version = "2.0.18"
+archive = "https://download.kde.org/stable/kaffeine/kaffeine-2.0.18.tar.xz"
+sha256 = "d9799a5b7b94a55963f94938b36b8fcb1be3e753b2be110989934ab15386b681"
+strip_components = 1
+description = "KDE media player"
+homepage = "https://www.kde.org/applications/multimedia/kaffeine/"
+license = "GPL-2.0-or-later"
+deps = ["kio", "ksolid", "libXScrnSaver", "vlc"]
+patches = ["patches/cmake-4.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kcoreaddons"]

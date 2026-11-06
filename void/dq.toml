@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'dq'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "dq"
+version = "0.0.20260601"
+archive = "https://github.com/janmojzis/dq/archive/20260601.tar.gz"
+sha256 = "6ce2294c21c27c34e4eb3dab2c04621671f0edb515092127b7ce9afc50535548"
+strip_components = 1
+description = "Recursive DNS/DNSCurve server and cli tool to debug DNS/DNSCurve"
+homepage = "https://github.com/janmojzis/dq"
+license = "CC0-1.0"
+
+[build]
+system = "make"

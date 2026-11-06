@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'gnome-control-center'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: cracklib, cups, gnome-settings-daemon, hicolor-icon-theme, libcanberra, mit-krb5, samba, sound-theme-freedesktop
+[package]
+name = "gnome-control-center"
+version = "48.3"
+archive = "https://download.gnome.org/sources/gnome-control-center/48/gnome-control-center-48.3.tar.xz"
+sha256 = "c0698245a6420badd077c16ffb218860e457cd7300612718eabf9aba47222bae"
+strip_components = 1
+description = "GNOME control center"
+homepage = "https://gitlab.gnome.org/GNOME/gnome-control-center"
+license = "GPL-2.0-or-later"
+deps = ["ModemManager", "accountsservice", "alsa-plugins", "clutter", "colord", "colord-gtk", "cups-pk-helper", "desktop-file-utils", "gcr4", "gnome-bluetooth", "gnome-desktop", "gnome-menus", "gnome-online-accounts", "gnutls", "grilo", "gsettings-desktop-schemas", "gsound", "gtk4", "ibus", "iso-codes", "libSM", "libX11", "libadwaita", "libgtop", "libgudev", "libnma", "libpwquality", "libsecret", "libwacom", "libxml2", "polkit", "pulseaudio", "tecla", "udisks2", "upower", "vala"]
+patches = ["patches/grd-systemd.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3", "setxkbmap", "wayland"]

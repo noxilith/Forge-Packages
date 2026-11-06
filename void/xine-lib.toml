@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'xine-lib'. Review before relying on it.
+# hooks not translated: post_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: ffmpeg6, jack, libmpcdec, libtheora, samba, speex
+[package]
+name = "xine-lib"
+version = "1.2.13"
+archive = "https://downloads.sourceforge.net/sourceforge/xine/xine-lib-1.2.13.tar.xz"
+sha256 = "5f10d6d718a4a51c17ed1b32b031d4f9b80b061e8276535b2be31e5ac4b75e6f"
+strip_components = 1
+description = "Multimedia playback engine"
+homepage = "http://www.xine-project.org"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["aalib", "alsa-lib", "faad2", "flac", "libSM", "libXext", "libXinerama", "libXv", "libXvMC", "liba52", "libbluray", "libcaca", "libcdio", "libdca", "libdvdnav", "libjpeg-turbo", "libmad", "libmng", "libmodplug", "libvorbis", "libxcb", "pulseaudio", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-vcd", "--disable-gnomevfs", "--without-esound", "--disable-dxr3", "--disable-oss"]
+tools = ["perl", "pkg-config"]
+deps = ["gettext"]

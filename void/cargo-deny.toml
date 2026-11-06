@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cargo-deny'. Review before relying on it.
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "cargo-deny"
+version = "0.19.0"
+archive = "https://github.com/EmbarkStudios/cargo-deny/archive/refs/tags/0.19.0.tar.gz"
+sha256 = "0d4d6972b9ab8ba939a7d26f5c5fd0227dc9d4e8579f6baec6f4831f50155a1d"
+strip_components = 1
+description = "Cargo plugin to help you manage large dependency graphs"
+homepage = "https://github.com/EmbarkStudios/cargo-deny"
+license = "MIT, Apache-2.0"
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features"]
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kubo'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_package, go_import_path, make_dirs
+# needs, but Forge has no recipe for yet: fs-repo-migrations
+[package]
+name = "kubo"
+version = "0.43.1"
+archive = "https://github.com/ipfs/kubo/archive/v0.43.1.tar.gz"
+sha256 = "f8c9a584a4588a469a3029bc10d7334f63552678a07b9f8cd530345e666f2646"
+strip_components = 1
+description = "Global versioned P2P merkle DAG file system"
+homepage = "https://ipfs.io"
+license = "MIT, Apache-2.0"
+deps = ["fuse"]
+patches = ["patches/fix-i686-fusetest.patch"]
+
+[build]
+system = "go"

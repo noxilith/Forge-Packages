@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lxqt-panel'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: libstatgrab, qt6-tools
+[package]
+name = "lxqt-panel"
+version = "2.4.1"
+archive = "https://github.com/lxqt/lxqt-panel/archive/2.4.1.tar.gz"
+sha256 = "37d7ec67dea2234971d66f247ec9bd3c811e7c976402fa4a2f6831222da6b570"
+strip_components = 1
+description = "LXQt desktop panel"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["alsa-lib", "kf6-solid", "kguiaddons", "ksolid", "layer-shell-qt", "libXtst", "libdbusmenu-lxqt", "liblxqt", "libqtxdg", "libsysstat", "libxcb", "libxkbcommon", "lm_sensors", "lxqt-globalkeys", "lxqt-menu-data", "pulseaudio", "qt6-base", "xcb-util-image"]
+patches = ["patches/qt610.patch"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools", "wayland"]

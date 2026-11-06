@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'python3-pivy'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "python3-pivy"
+version = "0.6.11"
+archive = "https://github.com/coin3d/pivy/archive/0.6.11.tar.gz"
+sha256 = "78f79bd7d1ce7e8140ceba4b1220136ea1f14b4403b1e463c59fa892feed961e"
+strip_components = 1
+description = "Python3 bindings for the high-level 3D graphics library Coin"
+homepage = "https://github.com/coin3d/pivy"
+license = "ISC"
+deps = ["coin3"]
+
+[build]
+system = "cmake"
+deps = ["swig"]

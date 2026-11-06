@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'instead'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: SDL2_image, lua51
+[package]
+name = "instead"
+version = "3.4.1"
+archive = "https://github.com/instead-hub/instead/releases/download/3.4.1/instead_3.4.1.tar.gz"
+sha256 = "17479bab7e8cd8fb6349a42758b23a91e81b798b297319c6d60c72895b37ab8b"
+strip_components = 1
+description = "Interactive fiction interpreter"
+homepage = "https://instead-hub.github.io"
+license = "MIT"
+deps = ["SDL2_mixer", "SDL2_ttf", "gtk+3"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

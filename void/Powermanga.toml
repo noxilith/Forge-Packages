@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Powermanga'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: SDL_image, SDL_mixer
+[package]
+name = "Powermanga"
+version = "0.93.1"
+archive = "https://github.com/brunonymous/Powermanga/archive/0.93.1.tar.gz"
+sha256 = "010987a3cb27a1f9388a212f637977692284b5616952efa1efae09d2464e9249"
+strip_components = 1
+description = "Arcade 2D shoot-em-up game"
+homepage = "http://linux.tlk.fr/games/Powermanga"
+license = "GPL-3.0-or-later"
+deps = ["libpng", "sdl12-compat"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'caja-dropbox'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# needs, but Forge has no recipe for yet: python3-docutils
+[package]
+name = "caja-dropbox"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/caja-dropbox-1.28.0.tar.xz"
+sha256 = "b74c38a994254bd3cf7cbc712bc2ec7516a0ca942aa6578526cdbd6aa6201963"
+strip_components = 1
+description = "Dropbox extension for Caja file manager"
+homepage = "https://mate-desktop.org"
+license = "CC-BY-ND-3.0, GPL-3.0-or-later"
+deps = ["caja", "glib", "gtk+3", "python3-gobject"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gdk-pixbuf", "gettext"]

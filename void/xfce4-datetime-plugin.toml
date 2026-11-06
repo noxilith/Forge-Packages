@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfce4-datetime-plugin'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "xfce4-datetime-plugin"
+version = "0.8.3"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/0.8/xfce4-datetime-plugin-0.8.3.tar.bz2"
+sha256 = "6b2eeb79fb586868737426cbd2a4cd43c7f8c58507d8a2f578e0150187cc00b0"
+strip_components = 1
+description = "Date and time display plugin for the Xfce panel"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-datetime-plugin"
+license = "GPL-2.0-or-later"
+deps = ["xfce4-panel"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

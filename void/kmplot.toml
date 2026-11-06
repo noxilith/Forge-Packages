@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kmplot'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt6-svg, qt6-tools
+[package]
+name = "kmplot"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kmplot-26.08.1.tar.xz"
+sha256 = "eee7e1c2dfe2e1a2e378871929bb70c984664291526b93c8f2984b09c12e3f1b"
+strip_components = 1
+description = "Mathematical Function Plotter"
+homepage = "https://apps.kde.org/kmplot"
+license = "GPL-2.0-or-later, GFDL-1.2-or-later"
+deps = ["kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-kguiaddons", "kf6-ki18n", "kf6-kparts", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DBUILD_WITH_QT6=ON", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons"]

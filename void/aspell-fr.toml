@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'aspell-fr'. Review before relying on it.
+[package]
+name = "aspell-fr"
+version = "0.50.3"
+archive = "https://ftp.gnu.org/gnu/aspell/dict/fr/aspell-fr-0.50-3.tar.bz2"
+sha256 = "f9421047519d2af9a7a466e4336f6e6ea55206b356cd33c8bd18cb626bf2ce91"
+strip_components = 1
+description = "French dictionary for aspell"
+homepage = "http://aspell.net/"
+license = "GPL-2.0-or-later"
+deps = ["aspell"]
+
+[build]
+system = "autotools"
+deps = ["which"]

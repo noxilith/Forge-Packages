@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'qt6-pdf'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build, pre_configure, pre_install
+# needs, but Forge has no recipe for yet: ffmpeg6, harfbuzz, libvpx, libwebp, nss, pciutils, python3-html5lib, qt6-svg, qt6-tools, sqlite
+[package]
+name = "qt6-pdf"
+version = "6.11.2"
+archive = "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtwebengine-everywhere-src-6.11.2.tar.xz"
+sha256 = "6101c1aa00ff933d1b65ee5d167f76e8d71b9ac5b378b0111277723ebda7c163"
+strip_components = 1
+description = "Cross-platform application and UI framework - Pdf"
+homepage = "https://www.qt.io"
+license = "GPL-3.0-only, GPL-2.0-only, LGPL-3.0-only, BSD-3-Clause"
+deps = ["eudev", "freetype", "glib", "lcms2", "libevent", "libicu78", "libjpeg-turbo", "libpng", "libxml2", "libxshmfence", "libxslt", "minizip", "openh264", "openjpeg2", "opus", "qt6-base", "qt6-declarative", "snappy", "tiff", "zlib"]
+patches = ["patches/0001-None-no-debug.patch", "patches/0003-cross-hack.patch", "patches/0004-no-glibc-cmake-check.patch", "patches/0010-supported.patch", "patches/0020-gn-cflags.patch", "patches/0030-symbol-level.patch", "patches/0031-musl-widevine.patch", "patches/0101-build-support-musl.patch", "patches/0104-angle-wayland-include.patch", "patches/0105-chromium-121-rust-clang_lib.patch", "patches/0106-chromium-121-rust-without-profiler_builtins.patch", "patches/0107-chromium-124-iwyu-sys-select-dawn-terminal.patch", "patches/0108-chromium-126-split-threshold-for-reg-with-hint.patch", "patches/0109-chromium-130-hardware_destructive_interference_size.patch", "patches/0110-chromium-140-musl-prctl.patch", "patches/0114-fix-aarch64-musl-memory-tagging-macros.patch", "patches/0118-chromium-revert-drop-of-system-java.patch", "patches/0120-cross-build.patch", "patches/0121-fc-cache-version.patch", "patches/0123-fix-argument_spec-isnan-isinf.patch", "patches/0127-fix-missing-TEMP_FAILURE_RETRY-macro.patch", "patches/0128-fix-missing-cstdint-include-musl.patch", "patches/0129-fix-musl-missing-unistd_h-include.patch", "patches/0130-fix-perfetto-GetThreadName-musl.patch", "patches/0131-fix-swiftshader-llvm-musl-config.patch", "patches/0132-libc_malloc.patch", "patches/0133-musl-no-execinfo.patch", "patches/0134-musl-no-mallinfo.patch", "patches/0135-musl-partition-atfork.patch", "patches/0137-no-getcontext.patch", "patches/0140-reenable-linux-i686-builds.patch", "patches/0141-remove-sys-cdefs-includes.patch", "patches/0142-sandbox-membarrier.patch", "patches/0143-sndio.patch", "patches/0144-systypes.patch", "patches/0146-unbundled-cross-toolchain.patch", "patches/0148-webrtc-size_t.patch", "patches/0500-arm64-no-memtag.patch", "patches/0800-musl-sandbox.patch", "patches/0801-musl-tid-caching.patch", "patches/0900-musl-no-sandbox-settls.patch", "patches/no-sandbox-settls.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DQT_FEATURE_qtpdf_build=ON", "-DQT_FEATURE_qtpdf_widgets_build=ON", "-DQT_FEATURE_qtpdf_quick_build=ON", "-DQT_BUILD_EXAMPLES=ON"]
+tools = ["bison", "flex", "gperf", "perl", "pkg-config"]
+deps = ["nodejs", "protobuf"]

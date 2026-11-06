@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cmake-bootstrap'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_cmd
+[package]
+name = "cmake-bootstrap"
+version = "4.1.2"
+archive = "https://www.cmake.org/files/v4.1/cmake-4.1.2.tar.gz"
+sha256 = "643f04182b7ba323ab31f526f785134fb79cba3188a852206ef0473fee282a15"
+strip_components = 1
+description = "CMake for xbps-src"
+homepage = "https://www.cmake.org"
+license = "BSD-3-Clause, ICU"
+patches = ["patches/no-cpack.patch", "patches/no-network.patch", "patches/no-run-cmake-bootstrap.patch", "patches/not-needed.patch", "patches/usleep.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMake_INSTALL_INFIX=libexec/xbps-src/", "-DCMAKE_SKIP_BOOTSTRAP_TEST=1", "-DCMAKE_SKIP_RPATH=OFF", "-DCMAKE_USE_OPENSSL=OFF", "-DBUILD_CursesDialog=OFF", "-DBUILD_QtDialog=OFF", "-DCMake_ENABLE_DEBUGGER=OFF", "-DCMAKE_USE_SYSTEM_LIBRARIES=OFF", "-DCTEST_TEST_CPACK=OFF", "-DCMake_TEST_NO_NETWORK=ON", "-DCMake_NO_SELF_BACKTRACE=1", "-DKWSYS_LFS_WORKS=1"]
+deps = ["samurai"]

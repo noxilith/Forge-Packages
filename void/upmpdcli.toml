@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'upmpdcli'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+[package]
+name = "upmpdcli"
+version = "1.9.18"
+archive = "https://www.lesbonscomptes.com/upmpdcli/downloads/upmpdcli-1.9.18.tar.gz"
+sha256 = "619a4115bb092a11c0ae97a3b9d3a88cb2267dde55bc14aab441f15d9297f1ea"
+strip_components = 1
+description = "UPnP Media Renderer front-end for MPD"
+homepage = "https://www.lesbonscomptes.com/upmpdcli"
+license = "LGPL-2.1-or-later"
+deps = ["curl", "jsoncpp", "libmicrohttpd", "libmpdclient", "libupnpp"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["tar"]

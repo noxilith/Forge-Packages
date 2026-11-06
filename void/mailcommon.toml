@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mailcommon'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-multimedia, qt6-tools
+[package]
+name = "mailcommon"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/mailcommon-26.08.1.tar.xz"
+sha256 = "055bbae0e0df9f0610fca2a4303fe6caabdfc206910a04832cbd717b3c1374e4"
+strip_components = 1
+description = "KDE PIM library providing support for mail applications"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kf6-kcontacts", "libkleo", "mailimporter", "messagelib", "phonon", "pimcommon", "plasma-activities"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DOPTION_USE_PLASMA_ACTIVITIES=ON", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "libxslt", "qt6-base"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'swayfx'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "swayfx"
+version = "0.6"
+archive = "https://github.com/wlrfx/swayfx/archive/refs/tags/0.6.tar.gz"
+sha256 = "854f9d1468b8706718210e026d0bb0ddbc8370f750345fbbdd163f130c1b922d"
+strip_components = 1
+description = "Sway, but with eye candy!"
+homepage = "https://github.com/wlrfx/swayfx"
+license = "MIT"
+deps = ["cairo", "gdk-pixbuf", "json-c", "libcap", "libevdev", "libxkbcommon", "pango", "pcre2", "scenefx", "swaybg", "wlroots0.20", "xorg-server-xwayland"]
+
+[build]
+system = "meson"
+configure_args = ["-Dwerror=false", "-Db_ndebug=false"]
+tools = ["pkg-config"]
+deps = ["scdoc", "wayland"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'wleave'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: conf_files
+[package]
+name = "wleave"
+version = "0.7.1"
+archive = "https://github.com/AMNatty/wleave/archive/refs/tags/0.7.1.tar.gz"
+sha256 = "e994dddc239ff6b09fd5d66daa52220d00a7e589f615e803d06239cd67035971"
+strip_components = 1
+description = "Wayland-native logout script written in GTK4"
+homepage = "https://github.com/AMNatty/wleave"
+license = "MIT"
+deps = ["gtk4", "gtk4-layer-shell", "libadwaita", "librsvg"]
+patches = ["patches/993d0233fad8ce3c7add49df19734b07a4074523.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]
+deps = ["scdoc"]

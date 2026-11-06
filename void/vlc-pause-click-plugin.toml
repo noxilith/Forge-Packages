@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'vlc-pause-click-plugin'. Review before relying on it.
+[package]
+name = "vlc-pause-click-plugin"
+version = "1.0.0"
+archive = "https://github.com/nurupo/vlc-pause-click-plugin/archive/1.0.0.tar.gz"
+sha256 = "ac22abd443168ac88815597023ee8ceddbe549be88b9806fc45c7c79939d7237"
+strip_components = 1
+description = "Plugin for VLC that pauses/plays video on mouse click"
+homepage = "https://github.com/nurupo/vlc-pause-click-plugin"
+license = "LGPL-2.1-or-later"
+deps = ["vlc"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'glabels'. Review before relying on it.
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: intltool, itstool
+[package]
+name = "glabels"
+version = "3.4.1"
+archive = "https://download.gnome.org/sources/glabels/3.4/glabels-3.4.1.tar.xz"
+sha256 = "18e457298abb1c617187361109eeae769317686303fc07726af31e11519c5938"
+strip_components = 1
+description = "A program for creating labels and business cards"
+homepage = "http://glabels.org/"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3", "librsvg", "qrencode"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["glib"]

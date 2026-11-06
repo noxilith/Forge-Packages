@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xmp'. Review before relying on it.
+# settings not translated: conf_files
+[package]
+name = "xmp"
+version = "4.3.1"
+archive = "https://downloads.sourceforge.net/sourceforge/xmp/xmp/4.3.1/xmp-4.3.1.tar.gz"
+sha256 = "cbfdab11233708c4de6ab965f64d96d4cb5b9d8e14d2d23df3b1b896386f870f"
+strip_components = 1
+description = "Extended module player"
+homepage = "http://xmp.sourceforge.net"
+license = "GPL-2.0-only"
+deps = ["alsa-lib", "libxmp", "pulseaudio"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

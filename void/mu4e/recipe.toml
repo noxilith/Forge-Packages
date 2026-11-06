@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mu4e'. Review before relying on it.
+# needs, but Forge has no recipe for yet: emacs
+[package]
+name = "mu4e"
+version = "1.12.13"
+archive = "https://github.com/djcb/mu/releases/download/v1.12.13/mu-1.12.13.tar.xz"
+sha256 = "7908078c5cc90afc7c038d4372b33b404f7fddfe466a27994413dc06f993a445"
+strip_components = 1
+description = "Maildir-utils indexer/searcher and associated Emacs client"
+homepage = "https://www.djcbsoftware.nl/code/mu/"
+license = "GPL-3.0-or-later"
+deps = ["gmime", "xapian-core"]
+patches = ["patches/fix-root-test.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["glib", "texinfo"]

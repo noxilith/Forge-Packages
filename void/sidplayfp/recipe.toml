@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'sidplayfp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "sidplayfp"
+version = "2.16.2"
+archive = "https://github.com/libsidplayfp/sidplayfp/releases/download/v2.16.2/sidplayfp-2.16.2.tar.gz"
+sha256 = "887edcf2d8f9707a65e9ff9af3c33de18da85fcd9d7ac6f3ddc170f9588299a4"
+strip_components = 1
+description = "Library to play Commodore 64 SID music - commandline interface"
+homepage = "https://github.com/libsidplayfp/sidplayfp"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "libsidplayfp", "pulseaudio"]
+patches = ["patches/musl-PATH_MAX.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'victoria-metrics'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_package, go_import_path, make_dirs
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "victoria-metrics"
+version = "1.155.0"
+archive = "https://github.com/VictoriaMetrics/VictoriaMetrics/archive/v1.155.0.tar.gz"
+sha256 = "4c264d22c714107db6d89195af51245ac47e21a4c0c3c15742a699998f88f15a"
+strip_components = 1
+description = "Fast, cost-effective monitoring solution and time series database"
+homepage = "https://victoriametrics.com/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

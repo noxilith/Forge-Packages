@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'stegseek'. Review before relying on it.
+[package]
+name = "stegseek"
+version = "0.6"
+archive = "https://github.com/RickdeJager/stegseek/archive/refs/tags/v0.6.tar.gz"
+sha256 = "66cdd8e4e4b815d7fe368843e7df2f0416af0304df35e4f22db9f16c7ae6c771"
+strip_components = 1
+description = "Worlds fastest steghide cracker"
+homepage = "https://github.com/RickdeJager/stegseek"
+license = "GPL-2.0-or-later"
+deps = ["libjpeg-turbo", "libmcrypt", "mhash", "zlib"]
+patches = ["patches/portable-types.patch"]
+
+[build]
+system = "cmake"

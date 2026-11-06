@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'stoken'. Review before relying on it.
+[package]
+name = "stoken"
+version = "0.92"
+archive = "https://downloads.sourceforge.net/sourceforge/stoken/stoken-0.92.tar.gz"
+sha256 = "aa2b481b058e4caf068f7e747a2dcf5772bcbf278a4f89bc9efcbf82bcc9ef5a"
+strip_components = 1
+description = "RSA SecurID-compatible software token generator"
+homepage = "https://sourceforge.net/p/stoken/wiki/Home/"
+license = "LGPL-2.1-or-later"
+deps = ["gtk+3", "libxml2", "nettle"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

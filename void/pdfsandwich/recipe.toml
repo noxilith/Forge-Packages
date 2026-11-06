@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pdfsandwich'. Review before relying on it.
+# needs, but Forge has no recipe for yet: ghostscript, tesseract-ocr
+[package]
+name = "pdfsandwich"
+version = "0.1.7"
+archive = "https://downloads.sourceforge.net/sourceforge/pdfsandwich/pdfsandwich-0.1.7.tar.bz2"
+sha256 = "9795ffea84b9b6b501f38d49a4620cf0469ddf15aac31bac6dbdc9ec1716fa39"
+strip_components = 1
+description = "CLI tool which is useful to add OCR to scanned books or journals"
+homepage = "http://www.tobias-elze.de/pdfsandwich/"
+license = "GPL-2.0-only"
+deps = ["ImageMagick", "ocaml", "poppler", "unpaper"]
+patches = ["patches/00-fix-tesseract-path.patch"]
+
+[build]
+system = "autotools"
+tools = ["perl"]

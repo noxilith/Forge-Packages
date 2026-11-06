@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'openblas'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "openblas"
+version = "0.3.34"
+archive = "https://github.com/xianyi/OpenBLAS/archive/v0.3.34.tar.gz"
+sha256 = "cd7e129868320cc2d033afa920e31202dfe0b8066a5b66661900ccc0f197dfed"
+strip_components = 1
+description = "Optimized BLAS (Basic Linear Algebra Subprograms) based on GotoBLAS2"
+homepage = "https://www.openblas.net/"
+license = "BSD-3-Clause"
+
+[build]
+system = "make"
+tools = ["perl"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cargo-flamegraph'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: linux-tools
+[package]
+name = "cargo-flamegraph"
+version = "0.6.8"
+archive = "https://github.com/flamegraph-rs/flamegraph/archive/refs/tags/v0.6.8.tar.gz"
+sha256 = "2673a04bd4de142220d42706e0c25a4dea08aee52cdffbf87cca5738cec649ff"
+strip_components = 1
+description = "Easy flamegraphs for Rust projects and everything else"
+homepage = "https://github.com/flamegraph-rs/flamegraph"
+license = "MIT, Apache-2.0"
+
+[build]
+system = "cargo"

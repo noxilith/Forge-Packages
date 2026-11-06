@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kcharselect'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "kcharselect"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kcharselect-26.08.1.tar.xz"
+sha256 = "fbc0a7f9ffaac49f1f2069d01d47e31a5eede9932e1324374465bf58c727a896"
+strip_components = 1
+description = "Character Selector"
+homepage = "https://kde.org/applications/en/utilities/org.kde.kcharselect"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kbookmarks", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kwidgetsaddons", "kf6-kxmlgui"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gsasl'. Review before relying on it.
+# needs, but Forge has no recipe for yet: libreadline8, mit-krb5
+[package]
+name = "gsasl"
+version = "2.2.4"
+archive = "https://ftp.gnu.org/gnu/gsasl/gsasl-2.2.4.tar.gz"
+sha256 = "d32be15efd3a04cb19b232f721bdca02cc6ad7ab415df7d79fb2dd2c0da3e0be"
+strip_components = 1
+description = "GNU SASL framework and a few common SASL mechanisms"
+homepage = "https://www.gnu.org/software/gsasl/"
+license = "GPL-3.0-or-later"
+deps = ["gnutls", "libidn"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-gssapi-impl=mit"]
+tools = ["pkg-config"]
+deps = ["texinfo"]

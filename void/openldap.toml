@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'openldap'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build, pre_configure
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: db
+[package]
+name = "openldap"
+version = "2.6.10"
+archive = "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.10.tgz"
+sha256 = "c065f04aad42737aebd60b2fe4939704ac844266bc0aeaa1609f0cad987be516"
+strip_components = 1
+description = "OpenLDAP (Lightweight Directory Access Protocol)"
+homepage = "http://www.openldap.org"
+license = "OLDAP-2.0"
+deps = ["libsasl", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-dynamic", "--with-tls", "--enable-ldap", "--enable-ipv6", "--enable-local", "--with-cyrus-sasl", "--with-threads", "--enable-syslog", "--enable-slapd", "--enable-crypt", "--enable-spasswd", "--enable-overlays=yes", "--enable-meta=yes", "--disable-static", "--with-yielding_select=yes", "--enable-modules"]
+tools = ["pkg-config"]
+deps = ["mdocml"]

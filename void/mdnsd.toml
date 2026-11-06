@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mdnsd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+[package]
+name = "mdnsd"
+version = "1.2"
+archive = "https://github.com/troglobit/mdnsd/archive/v1.2.tar.gz"
+sha256 = "93464af8f775184dd93fc90c72dd62e958f952294625cf0a1e77311aa9fa1d84"
+strip_components = 1
+description = "Embeddable Multicast DNS Daemon"
+homepage = "https://github.com/troglobit/mdnsd"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lsyncd'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: asciidoc, lua53
+[package]
+name = "lsyncd"
+version = "2.3.1"
+archive = "https://github.com/axkibe/lsyncd/archive/release-2.3.1.tar.gz"
+sha256 = "fc19a77b2258dc6dbb16a74f023de7cd62451c26984cedbec63e20ff22bcbdd8"
+strip_components = 1
+description = "Syncing Daemon that synchronizes local directories with remote targets"
+homepage = "https://github.com/axkibe/lsyncd"
+license = "GPL-2.0-or-later"
+deps = ["rsync"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'homebank'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, intltool
+[package]
+name = "homebank"
+version = "5.8"
+archive = "https://www.gethomebank.org/public/sources/homebank-5.8.tar.gz"
+sha256 = "b608dccf8ce79f0fbee650682435ad1caa5114435f334c41a728467fc9c0002c"
+strip_components = 1
+description = "Free personal finance software"
+homepage = "https://www.gethomebank.org/en/index.php"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "libofx", "librsvg", "libsoup3", "shared-mime-info"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'usb-reset'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "usb-reset"
+version = "0.0.1"
+archive = "https://github.com/the-maldridge/usb-reset/archive/v0.0.1.tar.gz"
+sha256 = "4aa9c4ec27e9926660cbdb5d51c972ea076b1326ee6b7d539409528bae1e0299"
+strip_components = 1
+description = "Simulate a USB Disconnect and Reconnect"
+homepage = "https://github.com/the-maldridge/usb-reset"
+license = "MIT"
+
+[build]
+system = "make"

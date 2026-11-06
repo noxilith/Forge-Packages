@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'wcal'. Review before relying on it.
+[package]
+name = "wcal"
+version = "0.1"
+archive = "https://github.com/leahneukirchen/wcal/archive/v0.1.tar.gz"
+sha256 = "cb6917475acb5ec417edeec43c26692e29d6df313f60b8193352214c0811cf33"
+strip_components = 1
+description = "ISO weekly calendar"
+homepage = "https://github.com/leahneukirchen/wcal"
+license = "Public Domain"
+
+[build]
+system = "make"

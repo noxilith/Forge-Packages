@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'helm'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack, mesa
+[package]
+name = "helm"
+version = "0.9.0"
+archive = "https://github.com/mtytel/helm/archive/v0.9.0.tar.gz"
+sha256 = "4004c11fd1d773cc2a12adb5336873bc86c5ecbd370b8da2820fed6ef5ec58ad"
+strip_components = 1
+description = "Polyphonic synth with lots of modulation"
+homepage = "http://tytel.org/helm"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "curl", "freetype", "libX11", "libXcursor", "libXext", "libXinerama"]
+patches = ["patches/fix-musl.patch", "patches/fix_sigemptyset.patch", "patches/gcc9.patch", "patches/kill-simdflags.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'jupp'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "jupp"
+version = "3.1jupp41"
+archive = "https://www.mirbsd.org/MirOS/dist/jupp/joe-3.1jupp41.tgz"
+sha256 = "7bb8ea8af519befefff93ec3c9e32108d7f2b83216c9bc7b01aef5098861c82f"
+strip_components = 1
+description = "Portable version of JOE’s Own Editor"
+homepage = "https://www.mirbsd.org/jupp.htm"
+license = "GPL-1.0-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-dependency-tracking", "--disable-termidx"]

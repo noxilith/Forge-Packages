@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'clutter-gtk'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "clutter-gtk"
+version = "1.8.4"
+archive = "https://download.gnome.org/sources/clutter-gtk/1.8/clutter-gtk-1.8.4.tar.xz"
+sha256 = "521493ec038973c77edcb8bc5eac23eed41645117894aaee7300b2487cb42b06"
+strip_components = 1
+description = "GTK+3 bindings for the Clutter Toolkit"
+homepage = "http://clutter-project.org/"
+license = "LGPL-2.1-or-later"
+deps = ["clutter", "gtk+3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

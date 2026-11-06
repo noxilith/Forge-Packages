@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'corecollector'. Review before relying on it.
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: dmd
+[package]
+name = "corecollector"
+version = "0.3.5"
+archive = "https://github.com/Cogitri/corecollector/archive/v0.3.5.tar.gz"
+sha256 = "0b9e212ffde1b63024744ccb437504a8ca56d091c1bfd193095b52e0c8a70db6"
+strip_components = 1
+description = "Coredump collector written in D"
+homepage = "https://github.com/Cogitri/corecollector"
+license = "GPL-3.0-or-later"
+deps = ["gdb"]
+patches = ["patches/fix-build-phobos-2-101.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dcoredump_user=_corecollector", "-Dcoredump_group=_corecollector"]
+tools = ["pkg-config"]
+deps = ["scdoc"]

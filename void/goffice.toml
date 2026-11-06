@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'goffice'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "goffice"
+version = "0.10.57"
+archive = "https://download.gnome.org/sources/goffice/0.10/goffice-0.10.57.tar.xz"
+sha256 = "66bfd7e31d2f6756d5a62c3670383cbba02b3cb4c1042950192a801b72a3c9ab"
+strip_components = 1
+description = "Document-centric objects and utilities for GLib and Gtk+"
+homepage = "https://github.com/GNOME/goffice"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libgsf", "librsvg", "libxml2", "libxslt", "pcre"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc"]

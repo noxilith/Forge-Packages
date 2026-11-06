@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'system-monitoring-center'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hwids, python3-Pillow, python3-tkinter, util-linux
+[package]
+name = "system-monitoring-center"
+version = "3.4.1"
+archive = "https://github.com/hakandundar34coding/system-monitoring-center/archive/refs/tags/v3.4.1.tar.gz"
+sha256 = "abe601aaa8f6a3beea2874292931d8b0bf43ecb17a75f605feb8b4b08b4708e5"
+strip_components = 1
+description = "Multi-featured system monitor"
+homepage = "https://github.com/hakandundar34coding/system-monitoring-center"
+license = "GPL-3.0-only"
+deps = ["dmidecode", "gobject-introspection", "iproute2", "libadwaita", "python3-cairo"]
+
+[build]
+system = "meson"
+deps = ["desktop-file-utils", "gettext", "gtk4"]

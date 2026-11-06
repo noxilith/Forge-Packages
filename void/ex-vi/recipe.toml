@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ex-vi'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, CFLAGS
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "ex-vi"
+version = "050325"
+archive = "https://downloads.sourceforge.net/sourceforge/ex-vi/ex-050325.tar.bz2"
+sha256 = "da4be7cf67e94572463b19e56850aa36dc4e39eb0d933d3688fe8574bb632409"
+strip_components = 1
+description = "Original ex/vi text editor (Heirloom version)"
+homepage = "http://ex-vi.sourceforge.net/"
+license = "BSD-4-Clause-UC"
+patches = ["patches/increase-tube.patch", "patches/navkeys.patch"]
+
+[build]
+system = "make"

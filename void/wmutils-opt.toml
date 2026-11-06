@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wmutils-opt'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: LDFLAGS
+[package]
+name = "wmutils-opt"
+version = "1.0"
+archive = "https://github.com/wmutils/opt/archive/v1.0.tar.gz"
+sha256 = "f30bb409bdcfa6720015dbca5356e04d4359cca3800a39948822152a94bcd055"
+strip_components = 1
+description = "Optional addons to wmutils"
+homepage = "https://github.com/wmutils/opt"
+license = "ISC"
+deps = ["libxcb"]
+
+[build]
+system = "make"

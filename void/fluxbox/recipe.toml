@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fluxbox'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "fluxbox"
+version = "1.3.7"
+archive = "https://github.com/fluxbox/fluxbox/archive/refs/tags/Release-1_3_7.tar.gz"
+sha256 = "990414ae342a35c5703e5025a8bf019b0b4dada55d57071c51d3d498abb5cd36"
+strip_components = 1
+description = "Highly configurable and low resource X11 Window manager"
+homepage = "http://www.fluxbox.org"
+license = "MIT"
+deps = ["fribidi", "imlib2", "libSM", "libXext", "libXft", "libXinerama", "libXpm", "libXrandr", "libXrender"]
+patches = ["patches/22866c4d30f5b289c429c5ca88d800200db4fc4f.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-nls", "ac_cv_lib_X11_XOpenDisplay=yes", "ac_cv_lib_Xft_XftFontOpen=yes", "ac_cv_lib_Xrender_XRenderCreatePicture=yes", "ac_cv_lib_Xpm_XpmReadFileToPixmap=yes", "ac_cv_lib_Xinerama_XineramaQueryScreens=yes", "ac_cv_lib_Xext_XShapeCombineShape=yes", "ac_cv_lib_Xrandr_XRRQueryExtension=yes", "ac_cv_lib_fribidi_fribidi_version_info=yes"]
+tools = ["pkg-config"]
+deps = ["gettext"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rclone'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_check
+# settings not translated: go_ldflags, go_build_tags, go_import_path, build_helper
+# needs, but Forge has no recipe for yet: mime-types
+[package]
+name = "rclone"
+version = "1.75.2"
+archive = "https://downloads.rclone.org/v1.75.2/rclone-v1.75.2.tar.gz"
+sha256 = "fa64537e7276196310dbb0bcea6330f03b40e5790197b88f14cce6a19f40eb67"
+strip_components = 1
+description = "Rsync for cloud storage"
+homepage = "https://rclone.org/"
+license = "MIT"
+
+[build]
+system = "go"

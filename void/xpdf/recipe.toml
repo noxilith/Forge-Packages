@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xpdf'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: cups, gsfonts, qt6-svg
+[package]
+name = "xpdf"
+version = "4.06"
+archive = "https://dl.xpdfreader.com/xpdf-4.06.tar.gz"
+sha256 = "1c38f527c46caee0f712386d42a885b96a31ed9ce11904e872559859894d137e"
+strip_components = 1
+description = "Viewer for Portable Document Format (PDF) files"
+homepage = "http://www.xpdfreader.com/"
+license = "GPL-2.0-or-later, GPL-3.0-or-later"
+deps = ["freetype", "libpaper", "libpng", "qt6-base", "zlib"]
+patches = ["patches/permissions.patch"]
+
+[build]
+system = "cmake"

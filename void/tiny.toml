@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'tiny'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "tiny"
+version = "0.13.0"
+archive = "https://github.com/osa1/tiny/archive/refs/tags/v0.13.0.tar.gz"
+sha256 = "599697fa736d7500b093566a32204691093bd16abd76f43a76b761487a7c584c"
+strip_components = 1
+description = "Tiny terminal IRC client"
+homepage = "https://github.com/osa1/tiny"
+license = "MIT"
+deps = ["dbus", "openssl"]
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features=desktop-notifications", "--features=tls-native"]
+subdir = "crates/tiny"
+tools = ["pkg-config"]

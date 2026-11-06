@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gitea'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_build_tags, go_import_path, make_dirs, conf_files
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "gitea"
+version = "28.3.0"
+archive = "https://dl.gitea.io/gitea/28.3.0/gitea-src-28.3.0.tar.gz"
+sha256 = "a632833d5ae02a18e8f7ed79177763801604de6ef6f6d1c1405029d28de9d3a4"
+strip_components = 1
+description = "Git with a cup of Tea"
+homepage = "https://gitea.io"
+license = "MIT"
+deps = ["pam"]
+patches = ["patches/config.patch"]
+
+[build]
+system = "go"
+deps = ["go-bindata"]

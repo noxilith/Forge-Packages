@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gnome-calendar'. Review before relying on it.
+# hooks not translated: pre_build
+[package]
+name = "gnome-calendar"
+version = "50.0"
+archive = "https://download.gnome.org/sources/gnome-calendar/50/gnome-calendar-50.0.tar.xz"
+sha256 = "4b75df071a52d98fb35e647d018030129d24d9007790d02457746c98617aeab0"
+strip_components = 1
+description = "Calendar application designed to perfectly fit the GNOME desktop"
+homepage = "https://apps.gnome.org/Calendar"
+license = "GPL-2.0-or-later"
+deps = ["evolution-data-server", "geoclue2", "gsettings-desktop-schemas", "gtk4", "libadwaita", "libgweather", "libical", "libsoup3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["blueprint-compiler", "gettext", "glib"]

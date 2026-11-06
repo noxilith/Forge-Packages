@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'whatscli'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "whatscli"
+version = "1.1.6"
+archive = "https://github.com/normen/whatscli/archive/refs/tags/v1.1.6.tar.gz"
+sha256 = "36d8dc003078f070b760ad8208913cff97afebec0eabd486700e2101020b9b62"
+strip_components = 1
+description = "Command line interface for WhatsApp"
+homepage = "https://github.com/normen/whatscli"
+license = "MIT"
+
+[build]
+system = "go"

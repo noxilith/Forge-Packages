@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'capnproto'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CXXFLAGS
+[package]
+name = "capnproto"
+version = "1.4.0"
+archive = "https://capnproto.org/capnproto-c++-1.4.0.tar.gz"
+sha256 = "fa02378ad522b318916b9ad928d1372fc9abd43dd1f4f0392e50450f5c87828f"
+strip_components = 1
+description = "Cap'n Proto serialization/RPC system"
+homepage = "https://capnproto.org"
+license = "MIT"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'liblangtag'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "liblangtag"
+version = "0.6.7"
+archive = "https://bitbucket.org/tagoh/liblangtag/downloads/liblangtag-0.6.7.tar.bz2"
+sha256 = "5ed6bcd4ae3f3c05c912e62f216cd1a44123846147f729a49fb5668da51e030e"
+strip_components = 1
+description = "Interface library to access tags for identifying languages"
+homepage = "https://bitbucket.org/tagoh/liblangtag/src"
+license = "LGPL-3.0-or-later, MPL-2.0"
+deps = ["libxml2"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

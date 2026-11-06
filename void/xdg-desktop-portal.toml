@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xdg-desktop-portal'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-dbusmock, python3-docutils, python3-pytest-xdist
+[package]
+name = "xdg-desktop-portal"
+version = "1.22.1"
+archive = "https://github.com/flatpak/xdg-desktop-portal/releases/download/1.22.1/xdg-desktop-portal-1.22.1.tar.xz"
+sha256 = "d4879ddb3d65ff1a8f19187497e6f13dc5d267bcac404a5d501218be355753d3"
+strip_components = 1
+description = "Portal frontend service for Flatpak"
+homepage = "https://github.com/flatpak/xdg-desktop-portal"
+license = "LGPL-2.1-or-later"
+deps = ["flatpak", "fuse3", "geoclue2", "gst-plugins-base1", "pipewire", "polkit", "umockdev"]
+
+[build]
+system = "meson"
+configure_args = ["-Dgeoclue=enabled", "-Dsystemd=disabled"]
+tools = ["pkg-config"]
+deps = ["bubblewrap", "gettext", "glib", "gst-plugins-good1", "gstreamer1", "python3-gobject"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'djvulibre'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "djvulibre"
+version = "3.5.29"
+archive = "https://downloads.sourceforge.net/sourceforge/djvu/djvulibre-3.5.29.tar.gz"
+sha256 = "d3b4b03ae2bdca8516a36ef6eb27b777f0528c9eda26745d9962824a3fdfeccf"
+strip_components = 1
+description = "Utilities for the DjVu image format"
+homepage = "http://djvu.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["tiff"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

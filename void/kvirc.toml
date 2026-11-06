@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kvirc'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: perl, qt6-multimedia, qt6-qt5compat
+[package]
+name = "kvirc"
+version = "5.2.10"
+archive = "https://github.com/kvirc/KVIrc/archive/refs/tags/5.2.10.tar.gz"
+sha256 = "6b448b08aeaf5fd3f2b120525c8c87ddad3336f5b750a557b2022aaad0dda626"
+strip_components = 1
+description = "Qt-based IRC client"
+homepage = "http://www.kvirc.net"
+license = "GPL-2.0-or-later"
+deps = ["openssl", "qt6-base", "zlib"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWANT_ENV_FLAGS=1", "-DWANT_KDE=0"]
+tools = ["perl"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'tailspin'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tailspin"
+version = "7.0.0"
+archive = "https://github.com/bensadeh/tailspin/archive/refs/tags/7.0.0.tar.gz"
+sha256 = "45fafd0b3b43de6490a1a4a86a071f0db3d2a8e3f260b50def131c6996a2930e"
+strip_components = 1
+description = "Log file highlighter"
+homepage = "https://github.com/bensadeh/tailspin"
+license = "MIT"
+
+[build]
+system = "cargo"

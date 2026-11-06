@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'merkaartor'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-networkauth, qt6-qt5compat, qt6-svg, qt6-tools
+[package]
+name = "merkaartor"
+version = "0.20.0"
+archive = "https://github.com/openstreetmap/merkaartor/archive/0.20.0.tar.gz"
+sha256 = "31b73a9d50cb6366a7c15ab36e030467ffe9f7de2be38bad5f3832314d4a5751"
+strip_components = 1
+description = "Openstreetmap map editor"
+homepage = "http://merkaartor.be"
+license = "GPL-2.0-or-later"
+deps = ["exiv2", "libgdal", "proj", "protobuf", "qt6-declarative"]
+patches = ["patches/75223944dc3e61fbe124a0677af709cdd7c83028.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["qt6-base"]

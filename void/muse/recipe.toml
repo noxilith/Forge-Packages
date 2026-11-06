@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'muse'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: fluidsynth, jack, ladspa-sdk, qt5, rtaudio
+[package]
+name = "muse"
+version = "4.2.1"
+archive = "https://github.com/muse-sequencer/muse/archive/4.2.1.tar.gz"
+sha256 = "c9b87d9cdacf280cc1eaefcf05e26e4c2f38dea969823fd8fb7e417f2e7647cf"
+strip_components = 1
+description = "MIDI/Audio sequencer with recording and editing capabilities"
+homepage = "https://muse-sequencer.github.io"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "dssi", "libinstpatch", "liblo", "liblrdf", "libsamplerate", "libsndfile", "lilv", "lv2", "rubberband"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+subdir = "src"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules"]

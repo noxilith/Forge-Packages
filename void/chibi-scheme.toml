@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'chibi-scheme'. Review before relying on it.
+# hooks not translated: post_install, pre_patch
+# settings not translated: build_helper
+[package]
+name = "chibi-scheme"
+version = "0.12"
+archive = "https://github.com/ashinn/chibi-scheme/archive/0.12.tar.gz"
+sha256 = "b70a1147bc70a0f90df3fb6081bc99808237fd17a9accf9ee7a2cc20d95a4df0"
+strip_components = 1
+description = "Small Footprint R7RS Scheme for use as a C Extension Language"
+homepage = "http://synthcode.com/scheme/chibi/"
+license = "BSD-3-Clause"
+
+[build]
+system = "make"

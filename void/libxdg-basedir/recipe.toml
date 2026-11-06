@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libxdg-basedir'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libxdg-basedir"
+version = "1.2.0"
+archive = "https://github.com/devnev/libxdg-basedir/archive/libxdg-basedir-1.2.0.tar.gz"
+sha256 = "1c2b0032a539033313b5be2e48ddd0ae94c84faf21d93956d53562eef4614868"
+strip_components = 1
+description = "Implementation of the XDG Base Directory Specifications"
+homepage = "https://github.com/devnev/libxdg-basedir"
+license = "MIT"
+patches = ["patches/overflow-bug.patch"]
+
+[build]
+system = "autotools"

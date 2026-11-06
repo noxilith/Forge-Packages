@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'erofs-utils'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: util-linux-common, zstd
+[package]
+name = "erofs-utils"
+version = "1.9.4"
+archive = "https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git/snapshot/erofs-utils-1.9.4.tar.gz"
+sha256 = "7d135aa2550326a5acf20f53c518aea5a8900015ce50700044e40f818c31dd80"
+strip_components = 1
+description = "User-space tools for EROFS filesystem"
+homepage = "https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git/about/"
+license = "GPL-2.0-or-later OR MIT"
+deps = ["curl", "fuse", "json-c", "libnl3", "libxml2", "lz4", "openssl", "xxHash", "xz", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-fuse", "--enable-lz4", "--enable-lzma", "--enable-oci", "--enable-s3", "--with-json-c", "--with-libcurl", "--with-libnl3", "--with-libxml2", "--with-libzstd", "--with-openssl", "--with-xxhash", "--with-zlib"]
+tools = ["pkg-config"]

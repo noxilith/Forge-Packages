@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'boundary'. Review before relying on it.
+# settings not translated: go_package, go_import_path
+[package]
+name = "boundary"
+version = "0.21.3"
+archive = "https://github.com/hashicorp/boundary/archive/refs/tags/v0.21.3.tar.gz"
+sha256 = "7f769b64cd72b56c27ab570b6b07276077d76d2575300511c2ffabd2eea14947"
+strip_components = 1
+description = "Identity-based access management for dynamic infrastructure"
+homepage = "https://boundaryproject.io"
+license = "BUSL-1.1"
+
+[build]
+system = "go"

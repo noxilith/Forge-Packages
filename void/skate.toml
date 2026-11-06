@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'skate'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, build_helper
+[package]
+name = "skate"
+version = "1.1.0"
+archive = "https://github.com/charmbracelet/skate/archive/refs/tags/v1.1.0.tar.gz"
+sha256 = "98b60c6d78e89467f37d49aca532ba541201737d8824ad251f4fad274f9556e8"
+strip_components = 1
+description = "Personal key value store"
+homepage = "https://github.com/charmbracelet/skate"
+license = "MIT"
+
+[build]
+system = "go"

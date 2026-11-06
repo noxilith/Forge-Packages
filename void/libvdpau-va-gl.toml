@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libvdpau-va-gl'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "libvdpau-va-gl"
+version = "0.4.2"
+archive = "https://github.com/i-rinat/libvdpau-va-gl/releases/download/v0.4.2/libvdpau-va-gl-0.4.2.tar.gz"
+sha256 = "7d9121540658eb0244859e63da171ca3869e784afbeaf202f44471275c784af4"
+strip_components = 1
+description = "VDPAU driver with VA-API/OpenGL backend"
+homepage = "https://github.com/i-rinat/libvdpau-va-gl"
+license = "MIT"
+deps = ["libva", "libvdpau"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

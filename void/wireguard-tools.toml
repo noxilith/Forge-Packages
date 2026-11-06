@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wireguard-tools'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: make_install_args, make_dirs
+[package]
+name = "wireguard-tools"
+version = "1.0.20260223"
+archive = "https://git.zx2c4.com/wireguard-tools/snapshot/wireguard-tools-1.0.20260223.tar.xz"
+sha256 = "af459827b80bfd31b83b08077f4b5843acb7d18ad9a33a2ef532d3090f291fbf"
+strip_components = 1
+description = "Fast, modern, secure VPN tunnel - userland tools"
+homepage = "https://www.wireguard.com/"
+license = "GPL-2.0-only"
+deps = ["openresolv"]
+
+[build]
+system = "make"
+subdir = "src"

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'compizconfig-python'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: python3-Cython
+[package]
+name = "compizconfig-python"
+version = "0.8.18"
+archive = "https://github.com/compiz-reloaded/compizconfig-python/archive/v0.8.18.tar.gz"
+sha256 = "ef473b070dc7b2c529ab9c4c95640445d9e31e30c94fa565f3a342e57fa659ea"
+strip_components = 1
+description = "Compiz configuration system library for Compiz Reloaded"
+homepage = "https://github.com/compiz-reloaded"
+license = "GPL-2.0-or-later"
+deps = ["libSM", "libXdamage", "libcompizconfig", "libxml++", "protobuf", "startup-notification"]
+patches = ["patches/automake.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "which"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'nerdctl'. Review before relying on it.
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "nerdctl"
+version = "2.3.3"
+archive = "https://github.com/containerd/nerdctl/archive/refs/tags/v2.3.3.tar.gz"
+sha256 = "eacca139faba3182cc6be633f146e02f3744c5dbec2cf93d6b089d7e63621614"
+strip_components = 1
+description = "Docker-compatible CLI for containerd"
+homepage = "https://github.com/containerd/nerdctl"
+license = "Apache-2.0"
+
+[build]
+system = "go"

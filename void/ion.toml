@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ion'. Review before relying on it.
+# hooks not translated: post_install, post_patch, pre_build
+[package]
+name = "ion"
+version = "1.0.5.20201230"
+archive = "https://github.com/redox-os/ion/archive/2bc8826a97929b1878375a5c747e5c4cfed2b10b.tar.gz"
+sha256 = "8ab295c5ff40de6b7a8dd93ee8d417b6e884f2b66b628409e4cd9345d70e9c00"
+strip_components = 1
+description = "Ion shell, written in Rust"
+homepage = "https://github.com/redox-os/ion"
+license = "MIT"
+
+[build]
+system = "cargo"

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'gopm'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "gopm"
+version = "0.7.2.20150801"
+archive = "https://github.com/gpmgo/gopm/archive/4295c22189eb27deedc13fd33e05c1a4da07aa3d.tar.gz"
+sha256 = "67fd6c8940eab9adca178f880d217095ef54db8c608b0d000144d9ba7880c3f8"
+strip_components = 1
+description = "Go Package Manager"
+homepage = "https://github.com/gpmgo/gopm"
+license = "Apache-2.0"
+
+[build]
+system = "go"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'multitail'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "multitail"
+version = "7.1.5"
+archive = "https://github.com/folkertvanheusden/multitail/archive/refs/tags/7.1.5.tar.gz"
+sha256 = "b0c92bf5f504b39591bf3e2e30a1902925c11556e14b89a07cfa7533f9bd171b"
+strip_components = 1
+description = "Tail multiple logfiles"
+homepage = "http://www.vanheusden.com/multitail"
+license = "MIT"
+
+[build]
+system = "cmake"

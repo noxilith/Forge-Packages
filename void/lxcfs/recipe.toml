@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'lxcfs'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: python3-Jinja2
+[package]
+name = "lxcfs"
+version = "7.0.0"
+archive = "https://linuxcontainers.org/downloads/lxcfs/lxcfs-7.0.0.tar.gz"
+sha256 = "89a5ac0e98cfae6aad26d00e0e977affe810865ebccd4c4cf9422f980ade5624"
+strip_components = 1
+description = "FUSE filesystem for LXC"
+homepage = "https://linuxcontainers.org/lxcfs/"
+license = "Apache-2.0"
+deps = ["fuse3"]
+patches = ["patches/no-init-script.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Dinit-script="]
+tools = ["pkg-config"]
+deps = ["help2man"]

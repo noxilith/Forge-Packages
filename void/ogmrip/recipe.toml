@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'ogmrip'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: dbus-glib, enca, intltool, libtheora, mkvtoolnix, mplayer, ogmtools, tesseract-ocr
+[package]
+name = "ogmrip"
+version = "1.0.1"
+archive = "https://downloads.sourceforge.net/sourceforge/ogmrip/ogmrip/1.0/1.0.1/ogmrip-1.0.1.tar.gz"
+sha256 = "4e2e9778ac4da9fe1ab159e3dc6d4367b7a9dbd8f3501df99733ecedb25b02ff"
+strip_components = 1
+description = "Application to rip and encode DVDs into AVI, OGM, MP4, or Matroska"
+homepage = "http://ogmrip.sourceforge.net/en/index.html"
+license = "LGPL-2.1-or-later"
+deps = ["desktop-file-utils", "enchant2", "lame", "libdvdread", "libnotify", "vorbis-tools", "x264", "xvidcore"]
+patches = ["patches/enchant-2.patch", "patches/tesseract.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]

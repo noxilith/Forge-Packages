@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'syncthing'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: go_ldflags, go_build_tags, go_package, go_import_path
+[package]
+name = "syncthing"
+version = "2.1.7"
+archive = "https://github.com/syncthing/syncthing/archive/v2.1.7.tar.gz"
+sha256 = "e9794cab0adf5b0a59d9b631e994dce055c57cb805228555bdfa68118be4bd0a"
+strip_components = 1
+description = "Open Source Continuous File Synchronization"
+homepage = "https://syncthing.net/"
+license = "MPL-2.0"
+
+[build]
+system = "go"

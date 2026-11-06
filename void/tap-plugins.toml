@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tap-plugins'. Review before relying on it.
+# hooks not translated: post_extract
+# needs, but Forge has no recipe for yet: ladspa-sdk
+[package]
+name = "tap-plugins"
+version = "1.0.1"
+archive = "https://github.com/tomszilagyi/tap-plugins/archive/v1.0.1.tar.gz"
+sha256 = "89c932bea903589db2717ca4d87013fea404b4123fc71acba5bc7cba18d3ecbb"
+strip_components = 1
+description = "Tom's LADSPA Plugins"
+homepage = "https://github.com/tomszilagyi/tap-plugins/"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "make"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'yoshimi'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: fftw, jack, libreadline8, ncurses
+[package]
+name = "yoshimi"
+version = "2.3.6.5"
+archive = "https://github.com/Yoshimi/yoshimi/archive/2.3.6.5.tar.gz"
+sha256 = "7c87f23642ce35703cbbf31e8b4a781b6cd00efff8b565eaccfdd082e8c6ac47"
+strip_components = 1
+description = "ZynAddSubFX fork with improved JACK audio & MIDI IO"
+homepage = "https://yoshimi.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["cairo", "fltk", "lv2", "mxml"]
+
+[build]
+system = "cmake"
+subdir = "src"
+tools = ["pkg-config"]

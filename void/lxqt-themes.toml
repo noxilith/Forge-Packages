@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lxqt-themes'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "lxqt-themes"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-themes/archive/2.4.0.tar.gz"
+sha256 = "d9a3a1e593f3e4c9148ed2bb2ec5ad520b8d0303de13fff5288aba0b8b33c481"
+strip_components = 1
+description = "Themes, graphics and icons for LXQt"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "cmake"
+tools = ["perl"]
+deps = ["lxqt-build-tools"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'iprutils'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "iprutils"
+version = "2.4.18.1"
+archive = "https://downloads.sourceforge.net/sourceforge/iprdd/iprutils-2.4.18.1.tar.gz"
+sha256 = "1c26aee3bf95517fcb844f35ff2711a39b46cbfb50619db1d792c93eeee6f43d"
+strip_components = 1
+description = "Userspace support for IBM Power Linux RAID SCSI driver"
+homepage = "https://sourceforge.net/projects/iprdd"
+license = "CPL-1.0"
+deps = ["zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-systemd"]

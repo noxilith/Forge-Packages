@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ibus-avro'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: make_install_target
+[package]
+name = "ibus-avro"
+version = "1.2"
+archive = "https://github.com/sarim/ibus-avro/archive/1.2.tar.gz"
+sha256 = "9d00f12f2d01916e56533fd0267173b644a57161770b60a0f4d9daa61fe8bd1a"
+strip_components = 1
+description = "Avro Phonetic Bangla typing for Linux"
+homepage = "https://linux.omicronlab.com"
+license = "MPL-1.1"
+deps = ["gjs", "ibus"]
+patches = ["patches/autocorrect.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

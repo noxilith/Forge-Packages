@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'fcitx5-configtool'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: lib32disabled
+# needs, but Forge has no recipe for yet: doxygen, fcitx5, qt6-svg
+[package]
+name = "fcitx5-configtool"
+version = "5.1.14"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-configtool/fcitx5-configtool-5.1.14.tar.zst"
+sha256 = "5c2d46ba2ea0e3e9dd19eb0728a962b8bcb929bdc3027fb96e7ad2aecef6124d"
+strip_components = 1
+description = "Fcitx v5 - config tool"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "GPL-2.0-or-later"
+deps = ["fcitx5-gtk", "fcitx5-qt", "glib", "iso-codes", "kf6-kcmutils", "kf6-kcoreaddons", "kf6-kdbusaddons", "kf6-kdeclarative", "kf6-ki18n", "kf6-kiconthemes", "kf6-kirigami", "kf6-kitemviews", "kf6-kpackage", "kf6-ksvg", "kf6-kwidgetsaddons", "libX11", "libplasma", "libxkbcommon", "libxkbfile", "qt6-base", "qt6-declarative"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_KCM=ON", "-DENABLE_CONFIG_QT=ON", "-DENABLE_TEST=ON", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["AppStream", "cldr-emoji-annotation", "extra-cmake-modules", "gettext", "xkeyboard-config"]

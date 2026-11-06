@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fzy'. Review before relying on it.
+# hooks not translated: post_extract, post_install
+# settings not translated: CFLAGS
+[package]
+name = "fzy"
+version = "1.1"
+archive = "https://github.com/jhawthorn/fzy/archive/1.1.tar.gz"
+sha256 = "93d300d9c6c7063b2c6bda4e08a9704a029ec33f609718cd95443d1a890aff4e"
+strip_components = 1
+description = "A fuzzy text selector menu for the terminal"
+homepage = "https://github.com/jhawthorn/fzy"
+license = "MIT"
+
+[build]
+system = "make"

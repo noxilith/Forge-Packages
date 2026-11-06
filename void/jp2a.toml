@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'jp2a'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libwebp, ncurses
+[package]
+name = "jp2a"
+version = "1.3.3"
+archive = "https://github.com/Talinx/jp2a/releases/download/v1.3.3/jp2a-1.3.3.tar.gz"
+sha256 = "733a4dfc847ab9b020b26f7b90dbe3ff1dce7489a91bfc06fe8fd38764e9e246"
+strip_components = 1
+description = "JPEG image to ASCII art converter"
+homepage = "https://github.com/Talinx/jp2a"
+license = "GPL-2.0-only"
+deps = ["curl", "libexif", "libjpeg-turbo", "libpng"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

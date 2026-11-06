@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'freq'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_install
+# needs, but Forge has no recipe for yet: zstd
+[package]
+name = "freq"
+version = "0.9.2"
+archive = "https://github.com/ryancdotorg/freq/archive/refs/tags/v0.9.2.tar.gz"
+sha256 = "204c206ff061372911a56c0db31ec63b719bdcab104b51f609bd538083d855fd"
+strip_components = 1
+description = "Count frequencies of items and show related statistics"
+homepage = "https://github.com/ryancdotorg/freq"
+license = "GPL-2.0-or-later"
+deps = ["libgit2-1.9", "zlib"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

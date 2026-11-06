@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mup'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "mup"
+version = "0.3.0"
+archive = "https://github.com/aziis98/mup/archive/refs/tags/v0.3.0.tar.gz"
+sha256 = "fe2a30e063c79df1f267ffd2741b3ef1c8fb31d18366fa504750b088e2564f48"
+strip_components = 1
+description = "File uploader for sharing files across the local network with website"
+homepage = "https://github.com/aziis98/mup"
+license = "MIT"
+
+[build]
+system = "go"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'Clightd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "Clightd"
+version = "5.9"
+archive = "https://github.com/FedeDP/Clightd/archive/refs/tags/5.9.tar.gz"
+sha256 = "76ae865b5eeb721c98c23b1d4d8531b2b6c10b71386d0396b14666b5650f3054"
+strip_components = 1
+description = "API to read webcam brightness & alter screen brightness/temperature"
+homepage = "https://github.com/FedeDP/Clightd"
+license = "GPL-3.0-or-later"
+deps = ["ddcutil", "elogind", "eudev", "libX11", "libXext", "libXrandr", "libdrm", "libiio", "libjpeg-turbo", "libmodule", "libusb", "polkit", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_DDC=1", "-DENABLE_GAMMA=1", "-DENABLE_DPMS=1", "-DENABLE_SCREEN=1"]
+tools = ["pkg-config"]

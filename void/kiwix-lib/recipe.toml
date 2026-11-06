@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kiwix-lib'. Review before relying on it.
+# needs, but Forge has no recipe for yet: Mustache, libzim
+[package]
+name = "kiwix-lib"
+version = "14.0.0"
+archive = "https://github.com/kiwix/libkiwix/archive/refs/tags/14.0.0.tar.gz"
+sha256 = "dae329ebc08ff510daa50b42de71366bf063813e29bf1c09cc49335d90f32094"
+strip_components = 1
+description = "Common code base for all Kiwix ports"
+homepage = "https://www.kiwix.org/"
+license = "GPL-3.0-or-later"
+deps = ["aria2", "curl", "libicu78", "libmicrohttpd", "pugixml", "xapian-core", "zlib"]
+patches = ["patches/icu-78.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

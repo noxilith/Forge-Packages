@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-grantleetheme'. Review before relying on it.
+[package]
+name = "kf6-grantleetheme"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/grantleetheme-26.08.1.tar.xz"
+sha256 = "bab8da9c6ab35dcc2e4a83e6890c53099aad5dec5be6bfa2d21dc127bb8413bf"
+strip_components = 1
+description = "Library for Grantlee theming support"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kf6-kcolorscheme", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-knewstuff", "kf6-ktexttemplate", "kf6-kxmlgui", "qt6-base"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gemget'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "gemget"
+version = "1.9.0"
+archive = "https://github.com/makeworld-the-better-one/gemget/archive/v1.9.0.tar.gz"
+sha256 = "ded2b0d86e24d0a35a35ea412d08ebff636698fa5114e0da80b5b4c1b003e431"
+strip_components = 1
+description = "Command line downloader for the Gemini protocol"
+homepage = "https://github.com/makeworld-the-better-one/gemget/"
+license = "MIT"
+
+[build]
+system = "go"

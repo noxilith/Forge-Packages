@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'fuse'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "fuse"
+version = "2.9.9"
+archive = "https://github.com/libfuse/libfuse/releases/download/fuse-2.9.9/fuse-2.9.9.tar.gz"
+sha256 = "d0e69d5d608cc22ff4843791ad097f554dd32540ddc9bed7638cc6fea7c1b4b5"
+strip_components = 1
+description = "Filesystem in Userspace"
+homepage = "https://github.com/libfuse/libfuse"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+patches = ["patches/aarch64.patch", "patches/fix-compat-glibc-2.34.patch", "patches/fuse-headers.patch", "patches/fusermount.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-lib", "--enable-util"]
+deps = ["gettext"]

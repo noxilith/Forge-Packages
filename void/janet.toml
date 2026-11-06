@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'janet'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "janet"
+version = "1.42.1"
+archive = "https://github.com/janet-lang/janet/archive/v1.42.1.tar.gz"
+sha256 = "2391f8c6565742dad1c5e8872ad1d570b64a239d5d1ef11a188fc6b400457a04"
+strip_components = 1
+description = "Dynamic Lisp dialect and bytecode VM"
+homepage = "https://janet-lang.org/"
+license = "MIT"
+
+[build]
+system = "meson"
+configure_args = ["-Db_lto=false"]

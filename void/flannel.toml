@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'flannel'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "flannel"
+version = "0.28.9"
+archive = "https://github.com/flannel-io/flannel/archive/v0.28.9.tar.gz"
+sha256 = "4cbdd8e1d4b8cca02090340d50470215d520aa64cc2eccea58865add3860bc43"
+strip_components = 1
+description = "Etcd backed network fabric for containers"
+homepage = "https://github.com/flannel-io/flannel"
+license = "Apache-2.0"
+deps = ["etcd"]
+
+[build]
+system = "go"

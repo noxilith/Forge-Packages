@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'evolution-data-server'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_build
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: boost, libcanberra, libwebkit2gtk41, mit-krb5, nss
+[package]
+name = "evolution-data-server"
+version = "3.56.2"
+archive = "https://download.gnome.org/sources/evolution-data-server/3.56/evolution-data-server-3.56.2.tar.xz"
+sha256 = "df4ec29950f29a76eac6fbe0f814c48d2cef7d3fdb905002a4a883dd761ce93c"
+strip_components = 1
+description = "Centralized access to appointments and contacts"
+homepage = "https://wiki.gnome.org/Apps/Evolution"
+license = "LGPL-2.1-only"
+deps = ["gnome-online-accounts", "gtk4", "libgweather", "libical", "libphonenumber", "libsecret", "libsoup3", "nspr"]
+patches = ["patches/fix-boost.patch", "patches/gen-tables.patch", "patches/gir.patch", "patches/skip-broken-tests.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DWITH_PHONENUMBER=ON", "-DENABLE_WEATHER=ON"]
+tools = ["flex", "gperf", "perl", "pkg-config"]
+deps = ["gettext", "glib"]

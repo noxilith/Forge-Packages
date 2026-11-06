@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'oh'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "oh"
+version = "0.8.3"
+archive = "https://github.com/michaelmacinnis/oh/archive/v0.8.3.tar.gz"
+sha256 = "3ffd50ae66167ef6c7dcd4e1982b8902d34fbfb88d49bda5f6893bf0bcd92da8"
+strip_components = 1
+description = "Surprisingly powerful Unix shell"
+homepage = "https://github.com/michaelmacinnis/oh"
+license = "MIT"
+
+[build]
+system = "go"

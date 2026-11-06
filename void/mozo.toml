@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mozo'. Review before relying on it.
+[package]
+name = "mozo"
+version = "1.28.0"
+archive = "https://pub.mate-desktop.org/releases/1.28/mozo-1.28.0.tar.xz"
+sha256 = "fe98984ffd6aa8c36d0594bcefdba03de39b42d41e007251680384f3cef44924"
+strip_components = 1
+description = "MATE menu editing tool"
+homepage = "https://mate-desktop.org"
+license = "LGPL-2.1-or-later"
+deps = ["desktop-file-utils", "glib", "gtk+3", "mate-menus", "python3-gobject"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext"]

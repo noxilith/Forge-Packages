@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'KDSingleApplication'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "KDSingleApplication"
+version = "1.2.1"
+archive = "https://github.com/KDAB/KDSingleApplication/releases/download/v1.2.1/kdsingleapplication-1.2.1.tar.gz"
+sha256 = "e3254ce9dc5ecf6d61ef83264bc61d486a307f0e3c9ed1bb2176f068cdbcbe09"
+strip_components = 1
+description = "KDAB's helper class for single-instance policy applications"
+homepage = "https://github.com/KDAB/KDSingleApplication"
+license = "MIT"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"

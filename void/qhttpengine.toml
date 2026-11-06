@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qhttpengine'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "qhttpengine"
+version = "1.0.1"
+archive = "https://github.com/nitroshare/qhttpengine/archive/1.0.1.tar.gz"
+sha256 = "6505cf889909dc29bab4069116656e7ca5a9e879f04935139439c5691a76c55e"
+strip_components = 1
+description = "HTTP server for Qt applications"
+homepage = "https://github.com/nitroshare/qhttpengine"
+license = "MIT"
+
+[build]
+system = "cmake"

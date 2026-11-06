@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tml'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "tml"
+version = "0.7.1"
+archive = "https://github.com/liamg/tml/archive/refs/tags/v0.7.1.tar.gz"
+sha256 = "45824c36e810c568365d7f04c69900a0ef1abb46644f94a054cfe2d160999320"
+strip_components = 1
+description = "Tiny markup language for terminal output"
+homepage = "https://github.com/liamg/tml"
+license = "Unlicense"
+
+[build]
+system = "go"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libgnomekbd'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# settings not translated: build_helper
+[package]
+name = "libgnomekbd"
+version = "3.28.1"
+archive = "https://download.gnome.org/sources/libgnomekbd/3.28/libgnomekbd-3.28.1.tar.xz"
+sha256 = "22dc59566d73c0065350f5a97340e62ecc7b08c4df19183804bb8be24c8fe870"
+strip_components = 1
+description = "Gnome keyboard configuration library"
+homepage = "https://gitlab.gnome.org/GNOME/libgnomekbd"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "gtk+3", "libxklavier"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

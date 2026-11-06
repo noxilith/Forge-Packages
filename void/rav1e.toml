@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'rav1e'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# needs, but Forge has no recipe for yet: cargo-c
+[package]
+name = "rav1e"
+version = "0.6.6"
+archive = "https://static.crates.io/crates/rav1e/rav1e-0.6.6.crate"
+sha256 = "16c383692a5e7abd9f6d1eddb1a5e0269f859392387883361bb09e5555852ec1"
+strip_components = 1
+description = "Fastest and safest AV1 encoder"
+homepage = "https://crates.io/crates/rav1e"
+license = "BSD-2-Clause"
+
+[build]
+system = "cargo"

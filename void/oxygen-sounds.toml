@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'oxygen-sounds'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base
+[package]
+name = "oxygen-sounds"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/oxygen-sounds-6.7.5.tar.xz"
+sha256 = "0cc5b60004d8feb8b1de032cb5d3c056c98f62a8713589b90b471e5943e31ad9"
+strip_components = 1
+description = "Oxygen Sound Theme"
+homepage = "https://invent.kde.org/plasma/oxygen-sounds"
+license = "LGPL-3.0-or-later"
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

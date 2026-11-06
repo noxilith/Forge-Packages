@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'hdparm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args
+[package]
+name = "hdparm"
+version = "9.65"
+archive = "https://downloads.sourceforge.net/sourceforge/hdparm/hdparm-9.65.tar.gz"
+sha256 = "d14929f910d060932e717e9382425d47c2e7144235a53713d55a94f7de535a4b"
+strip_components = 1
+description = "Utility to access IDE device parameters"
+homepage = "https://sourceforge.net/projects/hdparm/"
+license = "0BSD"
+
+[build]
+system = "make"

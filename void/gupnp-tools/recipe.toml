@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gupnp-tools'. Review before relying on it.
+[package]
+name = "gupnp-tools"
+version = "0.12.1"
+archive = "https://download.gnome.org/sources/gupnp-tools/0.12/gupnp-tools-0.12.1.tar.xz"
+sha256 = "53cf93123f397e8f8f0b8e9e4364c86a7502a5334f4c0be2e054a824478bd5ba"
+strip_components = 1
+description = "Free replacements of Intel UPnP tools that use GUPnP"
+homepage = "http://gupnp.org/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "gtksourceview4", "gupnp-av", "libsoup3", "libxml2"]
+patches = ["patches/f675ac7e0afe67a86f3f1191d3274d6ffbd4e5d7.patch"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gobject-introspection"]

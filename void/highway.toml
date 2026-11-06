@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'highway'. Review before relying on it.
+[package]
+name = "highway"
+version = "1.3.0"
+archive = "https://github.com/google/highway/archive/1.3.0.tar.gz"
+sha256 = "07b3c1ba2c1096878a85a31a5b9b3757427af963b1141ca904db2f9f4afe0bc2"
+strip_components = 1
+description = "C++ library providing portable SIMD/vector intrinsics"
+homepage = "https://github.com/google/highway"
+license = "Apache-2.0"
+
+[build]
+system = "cmake"
+configure_args = ["-DHWY_SYSTEM_GTEST=ON", "-DHWY_ENABLE_EXAMPLES=OFF", "-DBUILD_SHARED_LIBS=ON"]

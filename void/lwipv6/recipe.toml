@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lwipv6'. Review before relying on it.
+# settings not translated: CPPFLAGS
+[package]
+name = "lwipv6"
+version = "1.5a"
+archive = "https://downloads.sourceforge.net/sourceforge/view-os/lwipv6/1.5a/lwipv6-1.5a.tar.bz2"
+sha256 = "4ad9415c0bf9a2aca0aa858ac1601c20d7c04b5d051d000d4a03eb1eeb0ed05a"
+strip_components = 1
+description = "User level (lightweight) TCP/IP stack with IPv6 support"
+homepage = "http://wiki.v2.cs.unibo.it/wiki/index.php/LWIPV6"
+license = "GPL-2"
+deps = ["libpcap", "vde2"]
+patches = ["patches/endian.patch", "patches/linux-headers-5.10.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'docker-compose'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "docker-compose"
+version = "5.5.1"
+archive = "https://github.com/docker/compose/archive/refs/tags/v5.5.1.tar.gz"
+sha256 = "311077662698fd8e34769a894f9d5240befb1730990efa8ed58e0fa8725d2d84"
+strip_components = 1
+description = "Tool to define and run multi-container Docker applications"
+homepage = "https://docs.docker.com/compose/"
+license = "Apache-2.0"
+deps = ["docker-cli"]
+
+[build]
+system = "go"

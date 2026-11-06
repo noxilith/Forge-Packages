@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'icinga2'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, conf_files
+# needs, but Forge has no recipe for yet: boost, monitoring-plugins
+[package]
+name = "icinga2"
+version = "2.9.3"
+archive = "https://github.com/Icinga/icinga2/archive/v2.9.3.tar.gz"
+sha256 = "37a4d0ecdba9f0229330cfeb773fad4751f3517df2f8846c3bec9deec1fcf045"
+strip_components = 1
+description = "Scalable and extensible monitoring system"
+homepage = "https://www.icinga.org/"
+license = "GPL-2.0-or-later"
+deps = ["libedit", "mariadb", "openssl", "postgresql18", "yajl"]
+patches = ["patches/boost-1.89.patch", "patches/cmake-3.15.patch", "patches/inttypes.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_CXX_STANDARD=17"]
+tools = ["flex"]

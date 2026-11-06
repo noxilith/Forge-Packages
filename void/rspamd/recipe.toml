@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'rspamd'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_check, pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: LuaJIT, ragel, snowball, sqlite
+[package]
+name = "rspamd"
+version = "3.14.2"
+archive = "https://github.com/vstakhov/rspamd/archive/3.14.2.tar.gz"
+sha256 = "b8402b639b2480b793795907d53609f375fd19b99501f777ff49f2e410edfb5b"
+strip_components = 1
+description = "Fast, free and open-source spam filtering system"
+homepage = "https://rspamd.com/"
+license = "Apache-2.0"
+deps = ["glib", "libarchive", "libicu78", "libsodium", "openssl", "pcre2", "zlib"]
+patches = ["patches/snowball-unbundle.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DRSPAMD_USER=rspamd"]
+tools = ["perl", "pkg-config"]

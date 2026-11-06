@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libtar'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libtar"
+version = "1.2.20"
+archive = "https://ftp.netbsd.org/pub/pkgsrc/distfiles/libtar-1.2.20.tar.gz"
+sha256 = "43c5f50e6b4398c8be35d6f3abee26064c3f26174715b60004576792e3283353"
+strip_components = 1
+description = "C library for manipulating POSIX tar files"
+homepage = "https://repo.or.cz/w/libtar.git"
+license = "BSD-3-Clause"
+deps = ["zlib"]
+patches = ["patches/CVE-2013-4420.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

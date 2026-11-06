@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'ario'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: avahi-discover, dbus-glib
+[package]
+name = "ario"
+version = "1.6"
+archive = "https://downloads.sourceforge.net/sourceforge/ario-player/ario-1.6.tar.gz"
+sha256 = "1442ede8eef994384489d72d028d7f7b1a1c81efe737f7147587dd02c772d09a"
+strip_components = 1
+description = "GTK client for MPD"
+homepage = "https://ario-player.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["curl", "gnutls", "gtk+3", "libmpdclient", "libnotify", "taglib"]
+patches = ["patches/no-intltool.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gettext"]

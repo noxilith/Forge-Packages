@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'goatcounter'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path, make_dirs
+# needs, but Forge has no recipe for yet: tzutils
+[package]
+name = "goatcounter"
+version = "2.7.0"
+archive = "https://github.com/zgoat/goatcounter/archive/v2.7.0.tar.gz"
+sha256 = "c919f9113a10916a46a1a6a180fd43552eff2d3503aa7890f41d03fa640ac471"
+strip_components = 1
+description = "Easy web analytics without tracking of personal data"
+homepage = "https://www.goatcounter.com/"
+license = "EUPL-1.2"
+
+[build]
+system = "go"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'hitori'. Review before relying on it.
+# needs, but Forge has no recipe for yet: itstool
+[package]
+name = "hitori"
+version = "44.0"
+archive = "https://download.gnome.org/sources/hitori/44/hitori-44.0.tar.xz"
+sha256 = "42270bd4f9525d180d3151bd7245335dc5cf248a984e02f68ff930da799e583b"
+strip_components = 1
+description = "GNOME eponymous puzzle game"
+homepage = "https://wiki.gnome.org/Apps/Hitori"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

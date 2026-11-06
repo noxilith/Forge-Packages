@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'readosm'. Review before relying on it.
+[package]
+name = "readosm"
+version = "1.1.0a"
+archive = "https://www.gaia-gis.it/gaia-sins/readosm-1.1.0a.tar.gz"
+sha256 = "db7c051d256cec7ecd4c3775ab9bc820da5a4bf72ffd4e9f40b911d79770f145"
+strip_components = 1
+description = "ReadOSM library for extracting valid data from OpenStreetMap input"
+homepage = "https://www.gaia-gis.it/fossil/readosm/index"
+license = "MPL-1.1, GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["expat", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

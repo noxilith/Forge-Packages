@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mergiraf'. Review before relying on it.
+[package]
+name = "mergiraf"
+version = "0.20.0"
+archive = "https://codeberg.org/mergiraf/mergiraf/archive/v0.20.0.tar.gz"
+sha256 = "85a1dc9e60e8ebc22ffe161cc08cb998f18f5e27b7e23319f35328a69a95fd10"
+strip_components = 1
+description = "Syntax-aware git merge driver"
+homepage = "https://mergiraf.org"
+license = "GPL-3.0-only"
+
+[build]
+system = "cargo"
+configure_args = ["--bin", "mergiraf"]

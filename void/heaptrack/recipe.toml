@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'heaptrack'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, qt6-svg, zstd
+[package]
+name = "heaptrack"
+version = "1.5.0"
+archive = "https://github.com/KDE/heaptrack/archive/v1.5.0.tar.gz"
+sha256 = "44e6aefc13460556acced7192bf3600605cd7a5f3a46e670c3127aeae97e19dd"
+strip_components = 1
+description = "Heap memory profiler for Linux"
+homepage = "https://github.com/KDE/heaptrack"
+license = "LGPL-2.1-or-later"
+deps = ["ecm", "kdiagram6", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kitemmodels", "kf6-threadweaver", "libunwind", "qt6-base"]
+patches = ["patches/boost-1.89.patch", "patches/fix-gcc14.patch", "patches/fix-musl.patch", "patches/kf6.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DHEAPTRACK_BUILD_GUI=ON", "-DHEAPTRACK_USE_QT6=ON"]
+deps = ["extra-cmake-modules", "gettext"]

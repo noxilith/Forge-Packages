@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'physlock'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: CFLAGS
+[package]
+name = "physlock"
+version = "13"
+archive = "https://github.com/muennich/physlock/archive/v13.tar.gz"
+sha256 = "9ae4716a1e916f141e47a01b439133ca382281ebdcbec1e53f85da6771774bd6"
+strip_components = 1
+description = "Lightweight linux console locking tool"
+homepage = "https://github.com/muennich/physlock"
+license = "GPL-2.0-or-later"
+deps = ["pam"]
+
+[build]
+system = "make"

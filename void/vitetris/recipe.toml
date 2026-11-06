@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'vitetris'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_dirs
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "vitetris"
+version = "0.59.1"
+archive = "https://github.com/vicgeralds/vitetris/archive/v0.59.1.tar.gz"
+sha256 = "699443df03c8d4bf2051838c1015da72039bbbdd0ab0eede891c59c840bdf58d"
+strip_components = 1
+description = "Terminal-based Tetris clone"
+homepage = "http://www.victornils.net/tetris/"
+license = "BSD-2-Clause"
+patches = ["patches/Makefile.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-ncurses", "--without-x"]

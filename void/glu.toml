@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'glu'. Review before relying on it.
+# needs, but Forge has no recipe for yet: mesa
+[package]
+name = "glu"
+version = "9.0.3"
+archive = "https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz"
+sha256 = "bd43fe12f374b1192eb15fe20e45ff456b9bc26ab57f0eee919f96ca0f8a330f"
+strip_components = 1
+description = "Mesa OpenGL utility library (GLU)"
+homepage = "https://gitlab.freedesktop.org/mesa/glu"
+license = "SGI-B-2.0"
+
+[build]
+system = "meson"
+configure_args = ["-Ddefault_library=shared"]
+tools = ["pkg-config"]

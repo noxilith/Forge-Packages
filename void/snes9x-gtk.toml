@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'snes9x-gtk'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "snes9x-gtk"
+version = "1.60"
+archive = "https://github.com/snes9xgit/snes9x/archive/1.60.tar.gz"
+sha256 = "861c8c0ab1d302d9df51e5ac4717a0069b33614a3f22bf3ab17ebf3405e58722"
+strip_components = 1
+description = "SNES Emulator"
+homepage = "http://www.snes9x.com/"
+license = "LGPL-2.1-or-later"
+deps = ["SDL2", "gtk+3", "minizip", "xorg-server"]
+
+[build]
+system = "meson"
+subdir = "gtk"
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libopenaptx'. Review before relying on it.
+[package]
+name = "libopenaptx"
+version = "0.2.0"
+archive = "https://github.com/pali/libopenaptx/releases/download/0.2.0/libopenaptx-0.2.0.tar.gz"
+sha256 = "51a13a34bb188a87ab1deb64a090ab42a4755d7b02c2bdaf3b8136f749b71b84"
+strip_components = 1
+description = "Open Source implementation of Audio Processing Technology codec (aptX)"
+homepage = "https://github.com/pali/libopenaptx/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "make"

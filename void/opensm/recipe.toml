@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'opensm'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "opensm"
+version = "3.3.24"
+archive = "https://github.com/linux-rdma/opensm/releases/download/3.3.24/opensm-3.3.24.tar.gz"
+sha256 = "a3335e371a4b044427574dff9d324c6c334e502e8facdf58bc070ee151d7e460"
+strip_components = 1
+description = "InfiniBand Subnet Manager and Administrator"
+homepage = "https://github.com/linux-rdma/opensm"
+license = "GPL-2.0-only"
+deps = ["rdma-core"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+tools = ["bison", "flex"]

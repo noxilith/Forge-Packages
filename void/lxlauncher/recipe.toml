@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'lxlauncher'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "lxlauncher"
+version = "0.2.8"
+archive = "https://github.com/lxde/lxlauncher/archive/refs/tags/0.2.8.tar.gz"
+sha256 = "f67d9dbf3a130819fd171b621b3683d7d20cd609554756481b965484ac591b49"
+strip_components = 1
+description = "LXDE launcher for netbooks"
+homepage = "http://lxde.org/"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "menu-cache", "startup-notification"]
+patches = ["patches/fix-invisible-icons.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-gtk3"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

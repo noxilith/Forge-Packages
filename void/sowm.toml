@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'sowm'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sowm"
+version = "1.6"
+archive = "https://github.com/dylanaraps/sowm/archive/1.6.tar.gz"
+sha256 = "7e1d1391f8cf8d1b04458d0b4bb3b61684b535dddcc1dd7d37266e81efd57e02"
+strip_components = 1
+description = "Itsy bitsy floating window manager"
+homepage = "https://github.com/dylanaraps/sowm"
+license = "MIT"
+deps = ["libX11"]
+
+[build]
+system = "make"

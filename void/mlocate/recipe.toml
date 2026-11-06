@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'mlocate'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_install_args, make_dirs
+[package]
+name = "mlocate"
+version = "0.26"
+archive = "https://releases.pagure.org/mlocate/mlocate-0.26.tar.xz"
+sha256 = "3063df79fe198fb9618e180c54baf3105b33d88fe602ff2d8570aaf944f1263e"
+strip_components = 1
+description = "Implementation of locate/updatedb that reuses the database"
+homepage = "https://pagure.io/mlocate"
+license = "GPL-2.0-or-later"
+patches = ["patches/musl_paths-h.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--program-prefix=m"]

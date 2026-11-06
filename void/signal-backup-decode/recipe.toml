@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'signal-backup-decode'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: sqlite
+[package]
+name = "signal-backup-decode"
+version = "0.2.3"
+archive = "https://github.com/pajowu/signal-backup-decode/archive/v0.2.3.tar.gz"
+sha256 = "e7727b6628004cd027e374bcd8a004d8c3e68b3ba03e82ce2c9e04ee58623ed2"
+strip_components = 1
+description = "Decode Signal Android Backups"
+homepage = "https://github.com/pajowu/signal-backup-decode"
+license = "GPL-3.0-or-later"
+deps = ["openssl"]
+patches = ["patches/fix-build.patch"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

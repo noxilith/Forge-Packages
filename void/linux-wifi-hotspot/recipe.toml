@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'linux-wifi-hotspot'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: dnsmasq, hostapd, iw, util-linux
+[package]
+name = "linux-wifi-hotspot"
+version = "4.7.2"
+archive = "https://github.com/lakinduakash/linux-wifi-hotspot/archive/refs/tags/v4.7.2.tar.gz"
+sha256 = "4c85d8c333454da6fd5f03abcf207bb5375387a95acb852b8d7629fcab65326c"
+strip_components = 1
+description = "Feature-rich wifi hotspot creator"
+homepage = "https://github.com/lakinduakash/linux-wifi-hotspot"
+license = "BSD-2-Clause"
+deps = ["gtk+3", "iproute2", "iptables", "libpng", "procps-ng", "qrencode"]
+patches = ["patches/makefile.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["glib", "which"]

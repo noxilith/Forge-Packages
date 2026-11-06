@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libiscsi'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+[package]
+name = "libiscsi"
+version = "1.19.0"
+archive = "https://github.com/sahlberg/libiscsi/archive/1.19.0.tar.gz"
+sha256 = "c7848ac722c8361d5064654bc6e926c2be61ef11dd3875020a63931836d806df"
+strip_components = 1
+description = "ISCSI client library"
+homepage = "https://github.com/sahlberg/libiscsi"
+license = "GPL-2.0-only, LGPL-2.1-only"
+
+[build]
+system = "autotools"

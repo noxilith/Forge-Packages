@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'runit-void'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: runit
+[package]
+name = "runit-void"
+version = "20250212"
+archive = "https://github.com/void-linux/void-runit/archive/refs/tags/20250212.tar.gz"
+sha256 = "c0d3ecea4dae5bba8ca3e563706847ef3b6cbdfcc19b8bf69b3f7a9bc0451f50"
+strip_components = 1
+description = "Void Linux runit scripts"
+homepage = "https://github.com/void-linux/void-runit"
+license = "CC0-1.0"
+deps = ["procps-ng"]
+
+[build]
+system = "make"

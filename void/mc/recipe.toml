@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'mc'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: libssh2, slang
+[package]
+name = "mc"
+version = "4.8.33"
+archive = "https://ftp.osuosl.org/pub/midnightcommander/mc-4.8.33.tar.xz"
+sha256 = "cae149d42f844e5185d8c81d7db3913a8fa214c65f852200a9d896b468af164c"
+strip_components = 1
+description = "User-friendly file manager and visual shell"
+homepage = "https://midnight-commander.org/"
+license = "GPL-3.0-or-later"
+deps = ["e2fsprogs", "glib", "gpm"]
+patches = ["patches/xbps.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-screen=slang", "--without-x"]
+tools = ["perl", "pkg-config"]

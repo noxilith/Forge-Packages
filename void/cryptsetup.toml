@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'cryptsetup'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch
+[package]
+name = "cryptsetup"
+version = "2.8.8"
+archive = "https://www.kernel.org/pub/linux/utils/cryptsetup/v2.8/cryptsetup-2.8.8.tar.xz"
+sha256 = "3acfa685f2dd7fcc832e0b77bc7093aa7da554a51ce8dafbb4138eaa854eee35"
+strip_components = 1
+description = "Setup virtual encryption devices under Linux dm-crypt"
+homepage = "https://gitlab.com/cryptsetup/cryptsetup"
+license = "GPL-2.0-or-later"
+deps = ["argon2", "json-c", "libssh", "lvm2", "openssl", "popt"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-crypto_backend=openssl", "--disable-asciidoc", "--enable-libargon2"]
+tools = ["pkg-config"]

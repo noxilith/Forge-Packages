@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'wiremix'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: llvm
+[package]
+name = "wiremix"
+version = "0.11.0"
+archive = "https://github.com/tsowell/wiremix/archive/refs/tags/v0.11.0.tar.gz"
+sha256 = "62a7cace79c9af537e0917a6d4e5da66b2efe2b4abc5f08c0fbaed727acc8c9f"
+strip_components = 1
+description = "Simple TUI audio mixer for PipeWire"
+homepage = "https://github.com/tsowell/wiremix/"
+license = "MIT OR Apache-2.0"
+deps = ["pipewire"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

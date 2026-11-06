@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libgadu'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libgadu"
+version = "1.12.2"
+archive = "https://github.com/wojtekka/libgadu/archive/1.12.2.tar.gz"
+sha256 = "f53e703d7ad93ce222dbf7fc0cec77f62813af38817a3678e799e91f1c69c94d"
+strip_components = 1
+description = "Gadu-Gadu instant messaging protocol library"
+homepage = "https://www.wasilczyk.pl/en/projects/libgadu/"
+license = "LGPL-2.1-only"
+deps = ["curl", "expat", "gnutls", "libxml2", "zlib"]
+patches = ["patches/musl-sys_types.h.diff"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-c99-vsnprintf"]
+tools = ["perl", "pkg-config"]
+deps = ["protobuf-c"]

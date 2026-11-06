@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xorgproto'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xorgproto"
+version = "2026.1"
+archive = "https://www.x.org/releases/individual/proto/xorgproto-2026.1.tar.xz"
+sha256 = "f9bfe4a9ed8c8ab9d2a3b0d49797f046052dadd06b7a8b45dbffaffb137e8290"
+strip_components = 1
+description = "Combined X.Org X11 Protocol headers"
+homepage = "https://gitlab.freedesktop.org/xorg/proto/xorgproto"
+license = "MIT"
+
+[build]
+system = "meson"
+configure_args = ["-Dlegacy=true"]
+deps = ["xorg-util-macros"]

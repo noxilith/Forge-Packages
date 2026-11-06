@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'xca'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "xca"
+version = "2.9.0"
+archive = "https://github.com/chris2511/xca/releases/download/RELEASE.2.9.0/xca-2.9.0.tar.gz"
+sha256 = "c8a956f6f0660356b725cb06ef5835dfb36526043a4f8c1cfe7674bb7bdd6c5c"
+strip_components = 1
+description = "X Certificate and Key Management"
+homepage = "https://hohnstaedt.de/xca"
+license = "BSD-3-Clause"
+deps = ["openssl", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

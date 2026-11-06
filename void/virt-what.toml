@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'virt-what'. Review before relying on it.
+[package]
+name = "virt-what"
+version = "1.27"
+archive = "https://people.redhat.com/~rjones/virt-what/files/virt-what-1.27.tar.gz"
+sha256 = "d4d9bd9d4ae59095597443fac663495315c7eb4330b872aa5f062df38ac69bf1"
+strip_components = 1
+description = "Detect when running in a virtual machine"
+homepage = "https://people.redhat.com/~rjones/virt-what/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

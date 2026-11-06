@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'packer'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "packer"
+version = "1.16.0"
+archive = "https://github.com/hashicorp/packer/archive/v1.16.0.tar.gz"
+sha256 = "9527aa4ba6a621b67c767803e5ba12b560263ae11b5e25d3db4623a7ec70d6d4"
+strip_components = 1
+description = "Create identical multiplatform machine images from a single source"
+homepage = "http://www.packer.io"
+license = "BUSL-1.1"
+
+[build]
+system = "go"

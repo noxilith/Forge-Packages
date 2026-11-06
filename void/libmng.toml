@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libmng'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libmng"
+version = "2.0.3"
+archive = "https://downloads.sourceforge.net/sourceforge/libmng/libmng-2.0.3.tar.xz"
+sha256 = "4a462fdd48d4bc82c1d7a21106c8a18b62f8cc0042454323058e6da0dbb57dd3"
+strip_components = 1
+description = "Multiple-image Network Graphics (MNG) reference library"
+homepage = "http://www.libmng.com"
+license = "custom"
+deps = ["lcms2", "libjpeg-turbo", "zlib"]
+
+[build]
+system = "autotools"

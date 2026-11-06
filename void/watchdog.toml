@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'watchdog'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: conf_files
+[package]
+name = "watchdog"
+version = "5.16"
+archive = "https://downloads.sourceforge.net/sourceforge/watchdog/watchdog-5.16.tar.gz"
+sha256 = "b8e7c070e1b72aee2663bdc13b5cc39f76c9232669cfbb1ac0adc7275a3b019d"
+strip_components = 1
+description = "Software watchdog daemon"
+homepage = "https://sourceforge.net/projects/watchdog/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'pipenightdreams'. Review before relying on it.
+# hooks not translated: post_configure, post_install, pre_configure
+# needs, but Forge has no recipe for yet: SDL_image
+[package]
+name = "pipenightdreams"
+version = "0.10.0"
+archive = "https://www.libsdl.org/projects/pipenightdreams/packages/pipenightdreams-0.10.0.tar.bz2"
+sha256 = "302f8ce6e0eb32ebd779700527095cf086c2c7132d47095bae9a43c346245541"
+strip_components = 1
+description = "Just another pipe trip"
+homepage = "https://www.libsdl.org/projects/pipenightdreams"
+license = "GPL-2.0-or-later"
+patches = ["patches/fix-new.patch", "patches/fix-no-initializers.patch", "patches/fix-no-inline.patch"]
+
+[build]
+system = "autotools"
+tools = ["flex", "pkg-config"]

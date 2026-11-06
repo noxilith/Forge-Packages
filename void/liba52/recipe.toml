@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'liba52'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "liba52"
+version = "0.8.0"
+archive = "https://distfiles.adelielinux.org/source/a52dec/a52dec-0.8.0.tar.gz"
+sha256 = "03c181ce9c3fe0d2f5130de18dab9bd8bc63c354071515aa56983c74a9cffcc9"
+strip_components = 1
+description = "Free ATSC A/52 stream decoder"
+homepage = "https://git.adelielinux.org/adelie/a52dec"
+license = "GPL-2.0-or-later"
+patches = ["patches/cflags.patch", "patches/disable-globals-test.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared"]

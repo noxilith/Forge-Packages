@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libuecc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libuecc"
+version = "7"
+archive = "https://git.universe-factory.net/libuecc/snapshot/libuecc-7.tar"
+sha256 = "0120aee869f56289204255ba81535369816655264dd018c63969bf35b71fd707"
+strip_components = 1
+description = "Very small Elliptic Curve Cryptography library"
+homepage = "https://git.universe-factory.net/libuecc"
+license = "BSD-2-Clause"
+
+[build]
+system = "cmake"

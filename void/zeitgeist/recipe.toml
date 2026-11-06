@@ -1,0 +1,22 @@
+# Imported from Void Linux's template for 'zeitgeist'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: python3-rdflib, sqlite, telepathy-glib
+[package]
+name = "zeitgeist"
+version = "1.0.4"
+archive = "https://launchpad.net/zeitgeist/1.0/1.0.4/+download/zeitgeist-1.0.4.tar.xz"
+sha256 = "da0e11160b2a36fe6260acf62b4190e29755fd5df130818157a04883c1eb7237"
+strip_components = 1
+description = "Logs the users’ activities and events"
+homepage = "https://launchpad.net/zeitgeist/"
+license = "LGPL-2.1-or-later"
+deps = ["dbus", "gtk+3", "json-glib", "python3-dbus", "python3-gobject", "raptor", "xapian-core"]
+patches = ["patches/skip-log-tests.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-fts", "--enable-datahub"]
+tools = ["pkg-config"]
+deps = ["gettext"]

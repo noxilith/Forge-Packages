@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'unshield'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "unshield"
+version = "1.6.2"
+archive = "https://github.com/twogood/unshield/archive/1.6.2.tar.gz"
+sha256 = "a937ef596ad94d16e7ed2c8553ad7be305798dcdcfd65ae60210b1e54ab51a2f"
+strip_components = 1
+description = "Utility extracting CAB archives from InstallShield installers"
+homepage = "https://github.com/twogood/unshield"
+license = "MIT"
+deps = ["zlib"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

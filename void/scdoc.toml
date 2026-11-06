@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'scdoc'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "scdoc"
+version = "1.11.4"
+archive = "https://git.sr.ht/~sircmpwn/scdoc/archive/1.11.4.tar.gz"
+sha256 = "e1a9c2000f855123a1a50c8f897073e0ee95fc41787431efe3864c2f1c2e7092"
+strip_components = 1
+description = "Tool for generating roff manual pages"
+homepage = "https://git.sr.ht/~sircmpwn/scdoc"
+license = "MIT"
+
+[build]
+system = "make"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'beanstalkd'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: CFLAGS, make_dirs
+[package]
+name = "beanstalkd"
+version = "1.13"
+archive = "https://github.com/kr/beanstalkd/archive/v1.13.tar.gz"
+sha256 = "26292dcdc0a7011d2f8ad968612f2cd8b2ef07687224876015399ae85e9e5263"
+strip_components = 1
+description = "Simple, fast, general-purpose work queue"
+homepage = "https://beanstalkd.github.io"
+license = "MIT"
+
+[build]
+system = "make"
+tools = ["pkg-config"]

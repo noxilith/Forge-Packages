@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'asio'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "asio"
+version = "1.36.0"
+archive = "https://downloads.sourceforge.net/sourceforge/asio/asio-1.36.0.tar.bz2"
+sha256 = "7bf4dbe3c1ccd9cc4c94e6e6be026dcc2110f9201d286bb9500dc85d69825524"
+strip_components = 1
+description = "Cross-platform C++ library for ASynchronous network I/O"
+homepage = "https://think-async.com/Asio/"
+license = "BSL-1.0"
+
+[build]
+system = "autotools"

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'moosefs'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+[package]
+name = "moosefs"
+version = "4.59.2"
+archive = "https://github.com/moosefs/moosefs/archive/refs/tags/v4.59.2.tar.gz"
+sha256 = "12edd2fea891f59408fb2298c8e496738151f747cb38948402efee00a7c86fea"
+strip_components = 1
+description = "Fault tolerant, network distributed file system"
+homepage = "https://moosefs.com/"
+license = "GPL-2.0-only"
+deps = ["fuse", "libpcap", "zlib"]
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-default-user=_mfs", "--with-default-group=_mfs"]
+tools = ["pkg-config"]

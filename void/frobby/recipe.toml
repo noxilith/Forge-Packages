@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'frobby'. Review before relying on it.
+# hooks not translated: post_build
+[package]
+name = "frobby"
+version = "0.9.5"
+archive = "https://github.com/Macaulay2/frobby/archive/refs/tags/v0.9.5.tar.gz"
+sha256 = "714c33c4f68e86d82062d7a42ad42c581d4b4c60d6a73ee1836ba1be7f985eb3"
+strip_components = 1
+description = "Computations with monomial ideals"
+homepage = "https://github.com/Macaulay2/frobby"
+license = "GPL-2.0-only"
+deps = ["gmp"]
+patches = ["patches/Makefile.patch"]
+
+[build]
+system = "make"

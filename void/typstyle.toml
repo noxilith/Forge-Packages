@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'typstyle'. Review before relying on it.
+# settings not translated: make_install_args, build_helper
+[package]
+name = "typstyle"
+version = "0.15.0"
+archive = "https://github.com/Enter-tainer/typstyle/archive/refs/tags/v0.15.0.tar.gz"
+sha256 = "23dd94b7a3f0e5ca40827d3998cc9669457a6aad80a6e70bbb886111734dab3f"
+strip_components = 1
+description = "Beautiful and reliable typst code formatter"
+homepage = "https://github.com/Enter-tainer/typstyle/"
+license = "Apache-2.0"
+
+[build]
+system = "cargo"
+configure_args = ["--no-default-features", "--features=completion"]

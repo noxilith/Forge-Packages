@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'libgda'. Review before relying on it.
+# hooks not translated: post_extract, pre_build, pre_install
+# settings not translated: build_helper, conf_files
+# needs, but Forge has no recipe for yet: db, intltool, itstool, libreadline8, sqlite
+[package]
+name = "libgda"
+version = "5.2.10"
+archive = "https://download.gnome.org/sources/libgda/5.2/libgda-5.2.10.tar.xz"
+sha256 = "6f6cdf7b8053f553b907e0c88a6064eb48cf2751852eb24323dcf027792334c8"
+strip_components = 1
+description = "Database and data abstraction layer"
+homepage = "http://www.gnome-db.org/"
+license = "GPL-2.0-only"
+deps = ["graphviz", "gtk+3", "gtksourceview", "json-glib", "libgcrypt", "libsecret", "libxml2", "libxslt", "mariadb", "openssl"]
+patches = ["patches/error-function-declaration-without-prototype.patch", "patches/gcc-14-compat-1075169.patch", "patches/libgda-5.2.10-mysql-bool-fix.patch", "patches/libgda5-configure-c99-2.patch", "patches/libgda5-configure-c99.patch", "patches/libgda5-gtksourceview-c99.patch", "patches/pointer-types.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-ui", "--with-gtksourceview", "--with-graphviz", "--enable-json", "--enable-system-sqlite", "--without-libsoup"]
+tools = ["flex", "perl", "pkg-config"]
+deps = ["autoconf-archive", "gettext", "glib", "gtk-doc", "yelp-tools"]

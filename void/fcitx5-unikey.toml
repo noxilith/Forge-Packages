@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'fcitx5-unikey'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fcitx5
+[package]
+name = "fcitx5-unikey"
+version = "5.1.11"
+archive = "https://download.fcitx-im.org/fcitx5/fcitx5-unikey/fcitx5-unikey-5.1.11.tar.zst"
+sha256 = "4b858c33581d77e736c940e318606c42498245d91ddfcb5a57dacc1465377e1d"
+strip_components = 1
+description = "Fcitx5 - Unikey engine"
+homepage = "https://fcitx-im.org/wiki/Fcitx"
+license = "GPL-2.0-or-later"
+deps = ["fcitx5-qt", "fmt"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_QT=On", "-DUSE_QT6=On"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

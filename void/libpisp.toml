@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libpisp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libpisp"
+version = "1.7.0"
+archive = "https://github.com/raspberrypi/libpisp/archive/v1.7.0.tar.gz"
+sha256 = "45e3e0fa21f893d9edb6dae8118c5af6aaf74a9c9d5b8ed120a95531e0b13f2b"
+strip_components = 1
+description = "Helper library for Raspberry Pi ISP (PiSP) configuration"
+homepage = "https://github.com/raspberrypi/libpisp"
+license = "BSD-2-Clause AND GPL-2.0-only WITH Linux-syscall-note"
+deps = ["json-c++"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

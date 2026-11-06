@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xplugd'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "xplugd"
+version = "1.4"
+archive = "https://github.com/troglobit/xplugd/archive/v1.4.tar.gz"
+sha256 = "7f84aeacd1fa0d317555e836d460e8f8a529fe57f308e831d426381b8e944e34"
+strip_components = 1
+description = "Daemon that executes a script on X input and RandR changes"
+homepage = "https://github.com/troglobit/xplugd"
+license = "MIT"
+deps = ["libXi", "libXrandr"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

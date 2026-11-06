@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'dte'. Review before relying on it.
+[package]
+name = "dte"
+version = "1.11.1"
+archive = "https://craigbarnes.gitlab.io/dist/dte/dte-1.11.1.tar.gz"
+sha256 = "3d7d0d375fd31906ed436de20161dddc42d97f969a93d22b02aecfc3451e6c39"
+strip_components = 1
+description = "Small, configurable console text editor"
+homepage = "https://craigbarnes.gitlab.io/dte/index.html"
+license = "GPL-2.0-only"
+
+[build]
+system = "make"

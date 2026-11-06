@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'usb-modeswitch'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, conf_files
+# needs, but Forge has no recipe for yet: tcl, usb-modeswitch-data
+[package]
+name = "usb-modeswitch"
+version = "2.6.2"
+archive = "https://www.draisberghof.de/usb_modeswitch/usb-modeswitch-2.6.2.tar.bz2"
+sha256 = "f7abd337784a9d1bd39cb8a587518aff6f2a43d916145eafd80b1b8b7146db66"
+strip_components = 1
+description = "Mode switching tool for controlling multi-mode USB devices"
+homepage = "https://www.draisberghof.de/usb_modeswitch/"
+license = "GPL-2.0-or-later, BSD-2-Clause"
+deps = ["libusb"]
+patches = ["patches/0001-fix-destdir.patch"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

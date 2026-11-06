@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libxfce4ui'. Review before relying on it.
+# settings not translated: build_helper, conf_files
+[package]
+name = "libxfce4ui"
+version = "4.20.2"
+archive = "https://archive.xfce.org/src/xfce/libxfce4ui/4.20/libxfce4ui-4.20.2.tar.bz2"
+sha256 = "5d3d67b1244a10cee0e89b045766c05fe1035f7938f0410ac6a3d8222b5df907"
+strip_components = 1
+description = "Replacement of the old libxfcegui4 library"
+homepage = "https://xfce.org/"
+license = "LGPL-2.0-or-later"
+deps = ["glade3", "gtk+3", "libSM", "libgtop", "libxfce4util", "libxml2", "startup-notification", "xfconf"]
+patches = ["patches/vapi-deps.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-tests", "--enable-introspection", "--enable-vala"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "vala"]

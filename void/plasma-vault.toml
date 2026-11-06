@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'plasma-vault'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "plasma-vault"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/plasma-vault-6.7.5.tar.xz"
+sha256 = "2a25bb2bd75c9d92894d3e75a19b2bcb01adaa937980579f9422e8c1df84dda5"
+strip_components = 1
+description = "Plasma applet and services for creating encrypted vaults"
+homepage = "https://invent.kde.org/plasma/plasma-vault"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["kf6-kdbusaddons", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-kservice", "kf6-networkmanager-qt", "libksysguard", "libplasma", "plasma-activities"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kpackage", "qt6-base"]

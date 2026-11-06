@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'rrdtool'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: LuaJIT, dejavu-fonts-ttf, intltool, perl, perl-XML-Parser, python3-setuptools
+[package]
+name = "rrdtool"
+version = "1.8.0"
+archive = "https://github.com/oetiker/rrdtool-1.x/releases/download/v1.8.0/rrdtool-1.8.0.tar.gz"
+sha256 = "bd37614137d7a8dc523359648eb2a81631a34fd91a82ed5581916a52c08433f4"
+strip_components = 1
+description = "Data logging and graphing system for time series data"
+homepage = "https://oss.oetiker.ch/rrdtool"
+license = "GPL-2.0-or-later"
+deps = ["libxml2", "pango", "ruby"]
+patches = ["patches/gcc14.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-perl", "--enable-perl-site-install", "--with-perl-options=INSTALLDIRS=vendor", "--enable-ruby", "--enable-ruby-site-install", "--enable-python", "--enable-lua", "--enable-lua-site-install", "--enable-tcl", "--disable-libwrap"]
+tools = ["pkg-config"]
+deps = ["gettext", "groff", "which"]

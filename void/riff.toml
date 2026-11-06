@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'riff'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "riff"
+version = "3.4.1"
+archive = "https://github.com/walles/riff/archive/refs/tags/3.4.1.tar.gz"
+sha256 = "d209e5b5a68907382cc91061d2e0570789293214b402c1b344008760fe298302"
+strip_components = 1
+description = "Diff filter highlighting which line parts have changed"
+homepage = "https://github.com/walles/riff"
+license = "MIT"
+
+[build]
+system = "cargo"

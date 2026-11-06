@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'libwaylandpp'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen, mesa
+[package]
+name = "libwaylandpp"
+version = "1.0.0"
+archive = "https://github.com/NilsBrause/waylandpp/archive/1.0.0.tar.gz"
+sha256 = "b20b45917382c6b87e9380130c9a1a1c563da2f498de5830df12fbce326dd9f5"
+strip_components = 1
+description = "Wayland C++ bindings"
+homepage = "https://github.com/NilsBrause/waylandpp"
+license = "MIT"
+deps = ["pugixml", "wayland"]
+patches = ["patches/cstdint.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SCANNER=TRUE", "-DBUILD_LIBRARIES=TRUE", "-DBUILD_DOCUMENTATION=TRUE", "-DBUILD_EXAMPLES=TRUE"]
+tools = ["pkg-config"]
+deps = ["graphviz"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tiramisu'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tiramisu"
+version = "2.0.20240610"
+archive = "https://github.com/Sweets/tiramisu/archive/refs/tags/2.0.20240610.tar.gz"
+sha256 = "b12f6eb40d75329e329c384e4972c9fc668dd8f5c8cafbbe0bebf19036aec53d"
+strip_components = 1
+description = "Desktop notifications, the UNIX way"
+homepage = "https://github.com/Sweets/tiramisu"
+license = "MIT"
+deps = ["glib"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["vala"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'sysbench'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: LuaJIT
+[package]
+name = "sysbench"
+version = "1.0.20"
+archive = "https://github.com/akopytov/sysbench/archive/1.0.20.tar.gz"
+sha256 = "e8ee79b1f399b2d167e6a90de52ccc90e52408f7ade1b9b7135727efe181347f"
+strip_components = 1
+description = "Scriptable database and system performance benchmark"
+homepage = "https://github.com/akopytov/sysbench"
+license = "GPL-2.0-or-later"
+deps = ["ck", "mariadb", "openssl", "postgresql18", "zlib"]
+patches = ["patches/atomics.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-mysql", "--with-postgresql", "--with-system-ck", "--with-system-luajit"]
+tools = ["pkg-config"]

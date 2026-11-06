@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'strongswan'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: ldns, sqlite
+[package]
+name = "strongswan"
+version = "6.1.0"
+archive = "https://download.strongswan.org/strongswan-6.1.0.tar.bz2"
+sha256 = "fe6c97481298767213cfc2e9a1da29fdd8018d481ff4cb9cf0283099654f20d4"
+strip_components = 1
+description = "IPsec-based VPN solution, supporting IKEv1/IKEv2 and MOBIKE"
+homepage = "https://www.strongswan.org/"
+license = "GPL-2.0-or-later"
+deps = ["NetworkManager", "curl", "iproute2", "libcap", "openssl", "pam", "unbound"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-curl", "--enable-md4", "--enable-eap-radius", "--enable-eap-mschapv2", "--enable-eap-md5", "--enable-eap-gtc", "--enable-eap-identity", "--enable-eap-dynamic", "--enable-ha", "--enable-dhcp", "--enable-mediation", "--enable-chapoly", "--enable-nm", "--enable-stroke", "--enable-pkcs11", "--enable-xauth-pam", "--with-capabilities=libcap"]
+tools = ["bison", "flex", "pkg-config"]

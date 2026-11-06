@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'drumkv1'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack, qt6-svg
+[package]
+name = "drumkv1"
+version = "1.4.3"
+archive = "https://download.sourceforge.net/drumkv1/drumkv1-1.4.3.tar.gz"
+sha256 = "b4cccd2d67252a4612b4808e9f8ced6f6bdc6270365a78923d28d9364f539aa4"
+strip_components = 1
+description = "Old-school drum-kit sampler"
+homepage = "https://drumkv1.sourceforge.io/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "liblo", "libsndfile", "lv2", "qt6-base"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

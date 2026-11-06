@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'iverilog'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: libreadline8
+[package]
+name = "iverilog"
+version = "12.0"
+archive = "https://github.com/steveicarus/iverilog/archive/v12_0.tar.gz"
+sha256 = "a68cb1ef7c017ef090ebedb2bc3e39ef90ecc70a3400afb4aa94303bc3beaa7d"
+strip_components = 1
+description = "Verilog simulation and synthesis tool"
+homepage = "https://steveicarus.github.io/iverilog/"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["zlib"]
+patches = ["patches/format-security.patch"]
+
+[build]
+system = "autotools"
+tools = ["flex", "gperf"]

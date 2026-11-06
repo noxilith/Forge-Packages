@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dmenu-wayland'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: CFLAGS
+[package]
+name = "dmenu-wayland"
+version = "0.1"
+archive = "https://github.com/nyyManni/dmenu-wayland/archive/v0.1.tar.gz"
+sha256 = "dcbc70156e138b2bb8788aeebf75af14f75e188ed78865840e341b5375ed6614"
+strip_components = 1
+description = "Dmenu for wayland-compositors"
+homepage = "https://github.com/nyyManni/dmenu-wayland"
+license = "MIT"
+deps = ["cairo", "glib", "gobject-introspection", "libxkbcommon", "pango", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

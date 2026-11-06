@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cinnamon'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: cinnamon-translations, dbus-glib, libcanberra, python3-Pillow, python3-distro, python3-inotify, python3-libsass, python3-pam, python3-pexpect, python3-pytz, python3-requests, python3-tinycss2
+[package]
+name = "cinnamon"
+version = "6.6.7"
+archive = "https://github.com/linuxmint/cinnamon/archive/6.6.7.tar.gz"
+sha256 = "220f9ba77860d63708e682aa3fdc48cd8597b41b698467f116e477b45d514249"
+strip_components = 1
+description = "GNOME3 fork of Linux Mint with GNOME2 aspect"
+homepage = "https://github.com/linuxmint/cinnamon"
+license = "GPL-2.0-or-later, LGPL-2.0-or-later"
+deps = ["NetworkManager", "accountsservice", "caribou", "cinnamon-control-center", "cinnamon-desktop", "cinnamon-menus", "cinnamon-screensaver", "cinnamon-session", "cinnamon-settings-daemon", "cjs", "clutter-gtk", "gcr", "gettext", "gnome-backgrounds", "gnome-themes-extra", "gnome-themes-standard-metacity", "gsound", "gstreamer1", "gtk+3", "ibus", "libcroco", "libgnomekbd", "libkeybinder3", "librsvg", "libtimezonemap", "muffin", "nemo", "network-manager-applet", "polkit", "polkit-gnome", "pulseaudio", "python3-dbus", "python3-gobject", "startup-notification", "upower", "xapp", "xapp-symbolic-icons", "xdg-desktop-portal-xapp"]
+
+[build]
+system = "meson"
+tools = ["perl", "pkg-config"]
+deps = ["glib", "gtk-doc", "xmlto"]

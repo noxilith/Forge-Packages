@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'lcalc'. Review before relying on it.
+[package]
+name = "lcalc"
+version = "2.2.1"
+archive = "https://gitlab.com/-/project/12934202/uploads/0bcf82cdd02412faf9ec0cf80e656610/lcalc-2.2.1.tar.xz"
+sha256 = "aa2c3979b12e12df2ecb681c1a25a0f5a3811c195f61a3baa7512fef1460c40f"
+strip_components = 1
+description = "Michael Rubinstein's L-function calculator"
+homepage = "https://gitlab.com/sagemath/lcalc"
+license = "GPL-2.0-or-later"
+deps = ["gmp", "pari"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-pari"]
+deps = ["gengetopt"]

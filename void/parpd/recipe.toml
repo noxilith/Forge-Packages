@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'parpd'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, conf_files
+[package]
+name = "parpd"
+version = "1.7"
+archive = "https://roy.marples.name/downloads/parpd/parpd-1.7.tar.xz"
+sha256 = "f1f2ed753243b86205922ab0ec1cd0f426779e6b8c273206f0568e819a3fe3b4"
+strip_components = 1
+description = "RFC 1027 compliant Proxy ARP Daemon"
+homepage = "https://roy.marples.name/projects/parpd/"
+license = "BSD-2-Clause"
+patches = ["patches/0001-fix-building-on-musl.patch", "patches/0002-Linux-File-compile-warnings.patch"]
+
+[build]
+system = "make"

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'stagit'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_install_args, LDFLAGS
+[package]
+name = "stagit"
+version = "1.2"
+archive = "https://codemadness.org/releases/stagit/stagit-1.2.tar.gz"
+sha256 = "5659bd8ba7e1417edd40f7b7781a8ea26939ab6aa513409023835f04875921c5"
+strip_components = 1
+description = "Static git page generator"
+homepage = "https://codemadness.org/git/stagit/log.html"
+license = "MIT"
+deps = ["libgit2-1.9"]
+
+[build]
+system = "make"

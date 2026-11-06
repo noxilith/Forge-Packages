@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'iputils'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: docbook-xsl-ns
+[package]
+name = "iputils"
+version = "20250605"
+archive = "https://github.com/iputils/iputils/archive/refs/tags/20250605.tar.gz"
+sha256 = "19e680c9eef8c079da4da37040b5f5453763205b4edfb1e2c114de77908927e4"
+strip_components = 1
+description = "Useful utilities for Linux networking (including ping)"
+homepage = "https://github.com/iputils/iputils"
+license = "BSD-3-Clause, GPL-2.0-or-later"
+deps = ["libcap"]
+
+[build]
+system = "meson"
+configure_args = ["-DUSE_IDN=false"]
+tools = ["pkg-config"]
+deps = ["docbook2x", "gettext", "iproute2"]

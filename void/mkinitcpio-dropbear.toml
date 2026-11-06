@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'mkinitcpio-dropbear'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mkinitcpio-dropbear"
+version = "0.0.5"
+archive = "https://github.com/ahesford/mkinitcpio-dropbear/archive/v0.0.5.tar.gz"
+sha256 = "35d11bd4040ccc75b8d1b534c2c9abc11a7604c6f6fbbb568a97521c73e1e88f"
+strip_components = 1
+description = "Hook for mkinitcpio to enable dropbear SSH in early userspace"
+homepage = "https://github.com/ahesford/mkinitcpio-dropbear"
+license = "BSD-3-Clause"
+deps = ["dropbear", "mkinitcpio"]
+
+[build]
+system = "make"

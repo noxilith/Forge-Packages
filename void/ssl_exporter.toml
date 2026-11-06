@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'ssl_exporter'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "ssl_exporter"
+version = "2.4.3"
+archive = "https://github.com/ribbybibby/ssl_exporter/archive/v2.4.3.tar.gz"
+sha256 = "6b50153ac8f79bd6ffc2d5045325bf23c210d0ffa27b3c68f74e274b2d258f28"
+strip_components = 1
+description = "Exports Prometheus metrics for SSL certificates"
+homepage = "https://github.com/ribbybibby/ssl_exporter"
+license = "Apache-2.0"
+
+[build]
+system = "go"

@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'autofs'. Review before relying on it.
+# 3 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build
+# settings not translated: make_build_args, CFLAGS, conf_files
+[package]
+name = "autofs"
+version = "5.1.9"
+archive = "https://www.kernel.org/pub/linux/daemons/autofs/v5/autofs-5.1.9.tar.xz"
+sha256 = "87e6af6a03794b9462ea519781e50e7d23b5f7c92cd59e1142c85d2493b3c24b"
+strip_components = 1
+description = "Kernel-based automounter for Linux"
+homepage = "https://www.kernel.org/pub/linux/daemons/autofs"
+license = "GPL-2.0-or-later"
+deps = ["libtirpc", "libxml2"]
+patches = ["patches/cyrus-sasl-incompatible-pointer-types.patch", "patches/implicit-function-decl.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-libtirpc"]
+tools = ["flex", "pkg-config"]
+deps = ["kmod", "rpcsvc-proto"]

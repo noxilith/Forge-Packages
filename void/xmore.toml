@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'xmore'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xmore"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/app/xmore-1.0.4.tar.xz"
+sha256 = "7eb560dbc1de4e43c64fe491ad73907a29d734cca82a9ad82c7d3feb9cdb0a9a"
+strip_components = 1
+description = "Plain text display program for the X Window System"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXaw"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'pdfpc'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: discount, libwebkit2gtk41, zstd
+[package]
+name = "pdfpc"
+version = "4.6.0"
+archive = "https://github.com/pdfpc/pdfpc/archive/v4.6.0.tar.gz"
+sha256 = "3b1a393f36a1b0ddc29a3d5111d8707f25fb2dd2d93b0401ff1c66fa95f50294"
+strip_components = 1
+description = "Presenter console with multi-monitor support for PDF files"
+homepage = "https://pdfpc.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["gst-plugins-base1", "gtk+3", "json-glib", "libgee", "poppler", "vala"]
+patches = ["patches/discount-v3.patch", "patches/vala-0.56.7.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DREST=OFF"]
+tools = ["pkg-config"]

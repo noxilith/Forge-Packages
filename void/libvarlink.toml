@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'libvarlink'. Review before relying on it.
+[package]
+name = "libvarlink"
+version = "23"
+archive = "https://github.com/varlink/libvarlink/archive/refs/tags/23.tar.gz"
+sha256 = "a5575e070e446e7c4486d424393950e6cb7a3b376ee20d517b0c13a876659a8d"
+strip_components = 1
+description = "C implementation of the Varlink protocol and command line tool"
+homepage = "https://varlink.org/"
+license = "Apache-2.0"
+
+[build]
+system = "meson"

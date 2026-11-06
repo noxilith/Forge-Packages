@@ -1,0 +1,13 @@
+# Imported from Void Linux's template for 'mdf2iso'. Review before relying on it.
+[package]
+name = "mdf2iso"
+version = "0.3.1"
+archive = "https://ftp.debian.org/debian/pool/main/m/mdf2iso/mdf2iso_0.3.1.orig.tar.gz"
+sha256 = "906f0583cb3d36c4d862da23837eebaaaa74033c6b0b6961f2475b946a71feb7"
+strip_components = 1
+description = "Converts mdf to iso, cue, toc images"
+homepage = "https://salsa.debian.org/debian/mdf2iso"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

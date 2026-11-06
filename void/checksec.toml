@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'checksec'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path, build_helper
+[package]
+name = "checksec"
+version = "3.2.0"
+archive = "https://github.com/slimm609/checksec/archive/3.2.0.tar.gz"
+sha256 = "3ea46986821070ed06fef5215b2a83a9076115a865da70874e19f214db2c8d83"
+strip_components = 1
+description = "Check for protections like RELRO, NoExec, Stack protection, ASLR, PIE"
+homepage = "https://github.com/slimm609/checksec"
+license = "BSD-3-Clause"
+
+[build]
+system = "go"

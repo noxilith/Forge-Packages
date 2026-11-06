@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ktnef'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "ktnef"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/ktnef-26.08.1.tar.xz"
+sha256 = "f044833403ac6d9352287ccaed35af4eea07a95b9d89dfb740b01061e5af48a1"
+strip_components = 1
+description = "API for handling TNEF data"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "LGPL-2.1-or-later"
+deps = ["kcalutils", "kf6-kcalendarcore", "kf6-kcontacts"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'haruna'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-qt5compat, qt6-shadertools, qt6-tools
+[package]
+name = "haruna"
+version = "1.8.1"
+archive = "https://download.kde.org/stable/haruna/1.8.1/haruna-1.8.1.tar.xz"
+sha256 = "01f154e3161292da606899c3017f863362e00bb2402a2796be5e8d6849fc4b4b"
+strip_components = 1
+description = "Video player built with Qt/QML on top of libmpv"
+homepage = "https://apps.kde.org/haruna/"
+license = "GPL-3.0-or-later"
+deps = ["KDSingleApplication", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kfilemetadata", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-kitemmodels", "kf6-kservice", "kf6-kwindowsystem", "kf6-qqc2-desktop-style", "mpvqt", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

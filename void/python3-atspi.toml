@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'python3-atspi'. Review before relying on it.
+[package]
+name = "python3-atspi"
+version = "2.38.0"
+archive = "https://download.gnome.org/sources/pyatspi/2.38/pyatspi-2.38.0.tar.xz"
+sha256 = "ff809312fd0c2f61e191c181a1a638a30b579b91b682cfb5a05535a55265b43d"
+strip_components = 1
+description = "Python2 bindings for AT-SPI"
+homepage = "https://gitlab.gnome.org/GNOME/pyatspi2"
+license = "GPL-2.0-or-later"
+deps = ["at-spi2-core", "python3-gobject"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

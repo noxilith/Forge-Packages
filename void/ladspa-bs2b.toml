@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ladspa-bs2b'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ladspa-sdk
+[package]
+name = "ladspa-bs2b"
+version = "0.9.1"
+archive = "https://downloads.sourceforge.net/sourceforge/bs2b/LADSPA%20plugin/0.9.1/ladspa-bs2b-0.9.1.tar.gz"
+sha256 = "e249b46505b280448bc4fe66d464f6dc6b12fcabefb0f5529a45ad20d78d8aac"
+strip_components = 1
+description = "Audiofilter for headphones - LADSPA plugin"
+homepage = "http://bs2b.sourceforge.net/"
+license = "GPL-2.0-or-later, MIT"
+deps = ["libbs2b"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

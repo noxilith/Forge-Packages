@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'zeal'. Review before relying on it.
+# hooks not translated: post_patch
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, qt6-svg, qt6-tools, qt6-webchannel, sqlite
+[package]
+name = "zeal"
+version = "0.9.1"
+archive = "https://github.com/zealdocs/zeal/archive/v0.9.1.tar.gz"
+sha256 = "0af711d8a37c4355b8e914855a637f47d0fd3ca8c66ba239523a65d45d5a15f5"
+strip_components = 1
+description = "Simple offline API documentation browser"
+homepage = "https://zealdocs.org/"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "libarchive", "qt6-base", "qt6-pdf", "xcb-util-keysyms"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "qt6-declarative"]

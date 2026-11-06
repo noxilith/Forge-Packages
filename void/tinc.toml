@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'tinc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tinc"
+version = "1.0.37"
+archive = "https://www.tinc-vpn.org/packages/tinc-1.0.37.tar.gz"
+sha256 = "f63b7e21c32c4c637576d85f36bdd28ea678b5aa17fad02427645dea30e52ac7"
+strip_components = 1
+description = "VPN (Virtual Private Network) daemon"
+homepage = "https://www.tinc-vpn.org"
+license = "GPL-2.0-or-later"
+deps = ["lzo", "openssl", "zlib"]
+
+[build]
+system = "autotools"

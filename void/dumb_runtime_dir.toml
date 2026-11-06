@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dumb_runtime_dir'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: pam-base
+[package]
+name = "dumb_runtime_dir"
+version = "1.0.4"
+archive = "https://github.com/ifreund/dumb_runtime_dir/releases/download/v1.0.4/dumb_runtime_dir-1.0.4.tar.gz"
+sha256 = "451e680ee2ad4bd268a2cc21571fd843eefde5ffd7a6847221f9a1449924acc0"
+strip_components = 1
+description = "Creates an XDG_RUNTIME_DIR on login and never removes it"
+homepage = "https://github.com/ifreund/dumb_runtime_dir"
+license = "0BSD"
+deps = ["pam"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

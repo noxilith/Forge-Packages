@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'slit'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "slit"
+version = "1.3.0"
+archive = "https://github.com/tigrawap/slit/archive/1.3.0.tar.gz"
+sha256 = "052b8d91d7158336adb4d04e5cf127be41d1c408aa896bfa6cc7fa1a0a16d014"
+strip_components = 1
+description = "Modern PAGER for viewing logs"
+homepage = "https://github.com/tigrawap/slit"
+license = "MIT"
+
+[build]
+system = "go"

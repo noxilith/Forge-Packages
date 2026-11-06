@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libXfont2'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXfont2"
+version = "2.0.7"
+archive = "https://www.x.org/releases/individual/lib/libXfont2-2.0.7.tar.xz"
+sha256 = "8b7b82fdeba48769b69433e8e3fbb984a5f6bf368b0d5f47abeec49de3e58efb"
+strip_components = 1
+description = "X font 2 Library"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["freetype", "libfontenc", "xorgproto", "xtrans"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

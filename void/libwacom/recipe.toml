@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libwacom'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libwacom"
+version = "2.20.0"
+archive = "https://github.com/linuxwacom/libwacom/releases/download/libwacom-2.20.0/libwacom-2.20.0.tar.xz"
+sha256 = "370b45b5e05a91960df0aeb9c9481ae05846aab92ab2d4ec66945a0da4216888"
+strip_components = 1
+description = "Library to identify wacom tablets"
+homepage = "https://github.com/linuxwacom/libwacom"
+license = "MIT"
+deps = ["libevdev", "libgudev", "libxml2"]
+patches = ["patches/skip-uinput-tests.patch"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddocumentation=disabled"]
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'jack_capture'. Review before relying on it.
+# hooks not translated: pre_build
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "jack_capture"
+version = "0.9.73"
+archive = "https://github.com/kmatheussen/jack_capture/archive/0.9.73.tar.gz"
+sha256 = "21afb0257ed7437708cc9e5bec2f6299599461b7eec8bf66967d8ecadb0751de"
+strip_components = 1
+description = "Record sound files with jack"
+homepage = "https://github.com/kmatheussen/jack_capture"
+license = "GPL-2.0-or-later"
+deps = ["lame", "liblo", "libsndfile"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]
+deps = ["which"]

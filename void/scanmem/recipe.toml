@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'scanmem'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: intltool, libreadline8
+[package]
+name = "scanmem"
+version = "0.17"
+archive = "https://github.com/scanmem/scanmem/archive/v0.17.tar.gz"
+sha256 = "f02054b91322cf41517506158fcb74554e9fc6644e696f8aa25e5acf162d374b"
+strip_components = 1
+description = "Memory scanner designed to isolate the address of an arbitrary var"
+homepage = "https://github.com/scanmem/scanmem"
+license = "GPL-3.0-only"
+patches = ["patches/fix-musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--enable-gui"]
+tools = ["m4"]
+deps = ["gettext"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'mdbook-linkcheck'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mdbook-linkcheck"
+version = "0.7.7"
+archive = "https://github.com/Michael-F-Bryan/mdbook-linkcheck/archive/v0.7.7.tar.gz"
+sha256 = "3194243acf12383bd328a9440ab1ae304e9ba244d3bd7f85f1c23b0745c4847a"
+strip_components = 1
+description = "Backend for mdBook which will check links for you"
+homepage = "https://crates.io/crates/mdbook-linkcheck"
+license = "MIT"
+deps = ["openssl"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

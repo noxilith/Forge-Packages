@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'twaindsm'. Review before relying on it.
+# hooks not translated: post_build, pre_configure
+# needs, but Forge has no recipe for yet: doxygen, unzip
+[package]
+name = "twaindsm"
+version = "2.4.2"
+archive = "https://github.com/twain/twain-dsm/archive/d3fc5213d7b7333b68f852468f4278076115a9e0.tar.gz"
+sha256 = "2f2dee68c4dac31789ffd4c212e2a88396e14e598a31dc4200ed3b00f3e48bcb"
+strip_components = 1
+description = "TWAIN data source manager"
+homepage = "http://www.twain.org/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "cmake"
+subdir = "TWAIN_DSM/src"

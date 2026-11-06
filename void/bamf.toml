@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'bamf'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# settings not translated: build_helper, CFLAGS
+[package]
+name = "bamf"
+version = "0.5.6"
+archive = "https://launchpad.net/bamf/0.5/0.5.6/+download/bamf-0.5.6.tar.gz"
+sha256 = "4fcd00f23c542f3b79f35e10e322b67eacb399cac83f48db261cd8e8ea709478"
+strip_components = 1
+description = "Application matching framework"
+homepage = "https://launchpad.net/bamf"
+license = "LGPL-3.0-only, LGPL-2.1-only, GPL-3.0-or-later"
+deps = ["glib", "gtk+3", "libgtop", "libwnck"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gtk-doc"]

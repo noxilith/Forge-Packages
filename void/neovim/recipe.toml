@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'neovim'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: build_helper, CFLAGS
+# needs, but Forge has no recipe for yet: libluv, lua54-lpeg, tree-sitter-c, tree-sitter-lua, tree-sitter-markdown, tree-sitter-query, tree-sitter-vim, tree-sitter-vimdoc
+[package]
+name = "neovim"
+version = "0.12.6"
+archive = "https://github.com/neovim/neovim/archive/refs/tags/v0.12.6.tar.gz"
+sha256 = "8629fdc5eb951daf89a76f68cad12f2f1e03fab0d539150ba3fe6d177d254b7f"
+strip_components = 1
+description = "Fork of Vim aiming to improve user experience, plugins and GUIs"
+homepage = "https://neovim.io"
+license = "Apache-2.0 AND Vim"
+deps = ["libutf8proc", "libuv", "tree-sitter", "unibilium"]
+patches = ["patches/cross-build.patch", "patches/health-check-allow-build-type-none.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCOMPILE_LUA=OFF", "-DENABLE_TRANSLATIONS=ON"]
+deps = ["gettext", "patchelf"]

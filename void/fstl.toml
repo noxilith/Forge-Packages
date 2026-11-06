@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fstl'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "fstl"
+version = "0.10.0"
+archive = "https://github.com/mkeeter/fstl/archive/v0.10.0.tar.gz"
+sha256 = "e00c9f5f90e5efc3804cd2d7a64efb9f592921b7ff78d7190aa4182145119d9a"
+strip_components = 1
+description = "Fast viewer for STL files"
+homepage = "http://www.mattkeeter.com/projects/fstl/"
+license = "MIT"
+
+[build]
+system = "cmake"

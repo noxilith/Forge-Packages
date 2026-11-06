@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'scream'. Review before relying on it.
+# needs, but Forge has no recipe for yet: jack
+[package]
+name = "scream"
+version = "3.8"
+archive = "https://github.com/duncanthrax/scream/archive/3.8.tar.gz"
+sha256 = "d338e947115ca2967e0428fe4dfa060f31ffb123d7cd391ab94b48a8a6337dc3"
+strip_components = 1
+description = "Virtual network sound card for Microsoft Windows - Unix reciever"
+homepage = "https://github.com/duncanthrax/scream"
+license = "MS-PL"
+deps = ["alsa-lib", "libsoxr", "pulseaudio"]
+
+[build]
+system = "cmake"
+subdir = "Receivers/unix"
+tools = ["pkg-config"]

@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'alttab'. Review before relying on it.
+# needs, but Forge has no recipe for yet: uthash
+[package]
+name = "alttab"
+version = "1.8.0"
+archive = "https://github.com/sagb/alttab/archive/v1.8.0.tar.gz"
+sha256 = "bd2651a23cff51497101d869c12e0209e94f95160b4f40505ae34ef3d3a695b1"
+strip_components = 1
+description = "Task switcher for minimalistic window managers"
+homepage = "https://github.com/sagb/alttab"
+license = "GPL-3.0-or-later"
+deps = ["libX11", "libXft", "libXmu", "libXpm", "libXrandr", "libXrender", "libpng"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

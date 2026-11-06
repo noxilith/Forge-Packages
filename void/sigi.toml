@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'sigi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "sigi"
+version = "3.7.1"
+archive = "https://static.crates.io/crates/sigi/sigi-3.7.1.crate"
+sha256 = "9fb629fd2e4644a8e4f173d73c45efad005afe23dd0dbfb0d51dec2f539a28e4"
+strip_components = 1
+description = "Organization tool for people who hate organization"
+homepage = "https://github.com/sigi-cli/sigi"
+license = "GPL-2.0-only"
+
+[build]
+system = "cargo"

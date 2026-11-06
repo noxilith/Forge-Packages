@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'kunifiedpush'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools, qt6-websockets
+[package]
+name = "kunifiedpush"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kunifiedpush-26.08.1.tar.xz"
+sha256 = "818476fbf87df903f92f875302ab9d76fc136d05f42530d35f58f3cc10f0a904"
+strip_components = 1
+description = "UnifiedPush client library and distributor daemon"
+homepage = "https://invent.kde.org/libraries/kunifiedpush"
+license = "GPL-3.0-or-later"
+deps = ["kf6-kcmutils", "kf6-kcoreaddons", "kf6-kcrash", "kf6-ki18n", "kf6-kservice", "kf6-solid"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+deps = ["extra-cmake-modules", "gettext", "qt6-base"]

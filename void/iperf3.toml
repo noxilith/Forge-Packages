@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'iperf3'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args
+[package]
+name = "iperf3"
+version = "3.21"
+archive = "https://downloads.es.net/pub/iperf/iperf-3.21.tar.gz"
+sha256 = "656e4405ebd620121de7ceca3eaf43a88f79ea1b857d041a6a0b1314801acdd8"
+strip_components = 1
+description = "Active measurements of the maximum achievable bandwidth on IP networks"
+homepage = "http://software.es.net/iperf/"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

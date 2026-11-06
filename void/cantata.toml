@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'cantata'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: avahi, qt6-multimedia, qt6-svg, qt6-tools
+[package]
+name = "cantata"
+version = "3.3.1"
+archive = "https://github.com/nullobsi/cantata/archive/refs/tags/v3.3.1.tar.gz"
+sha256 = "e811201adfedca26d8c6a86078213de9e26411db77082f739a225a531ca38bbf"
+strip_components = 1
+description = "Qt client for the music player daemon (MPD)"
+homepage = "https://github.com/nullobsi/cantata"
+license = "GPL-3.0-or-later"
+deps = ["libcddb", "libmtp", "libmusicbrainz5", "media-player-info", "mpg123", "udisks2"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_HTTP_STREAM_PLAYBACK=ON", "-DENABLE_LIBVLC=OFF", "-DENABLE_SIMPLE_MPD_SUPPORT=ON"]
+tools = ["pkg-config"]
+deps = ["qt6-base"]

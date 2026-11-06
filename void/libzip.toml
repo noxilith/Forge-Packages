@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libzip'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: bzip2, zstd
+[package]
+name = "libzip"
+version = "1.12.1"
+archive = "https://libzip.org/download/libzip-1.12.1.tar.gz"
+sha256 = "3b66fe92cbc768d8d4d16e1427bfb7399e15d9c2795c2fc482e7b30a6332a422"
+strip_components = 1
+description = "C library for reading, creating, and modifying zip archives"
+homepage = "https://libzip.org/"
+license = "BSD-3-Clause"
+deps = ["openssl", "xz", "zlib"]
+
+[build]
+system = "cmake"
+tools = ["perl", "pkg-config"]
+deps = ["groff"]

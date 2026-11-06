@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fatsort'. Review before relying on it.
+# hooks not translated: pre_check
+# settings not translated: make_install_args
+[package]
+name = "fatsort"
+version = "1.6.5.640"
+archive = "https://downloads.sourceforge.net/sourceforge/project/fatsort/fatsort-1.6.5.640.tar.xz"
+sha256 = "630ece56d9eb3a55524af0aec3aade7854360eba949172a6cfb4768cb8fbe42e"
+strip_components = 1
+description = "Utility that sorts FAT12, FAT16, FAT32 and exFAT partitions"
+homepage = "https://fatsort.sourceforge.io/"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "make"

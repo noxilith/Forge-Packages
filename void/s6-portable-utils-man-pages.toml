@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 's6-portable-utils-man-pages'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "s6-portable-utils-man-pages"
+version = "2.3.0.4.1"
+archive = "https://git.sr.ht/~flexibeast/s6-portable-utils-man-pages/archive/v2.3.0.4.1.tar.gz"
+sha256 = "4fbce37645de7ab0fe4c1f309d28bac062956b7dc85f14d42df0c39fcb5f8be9"
+strip_components = 1
+description = "Documentation for s6-portable-utils in mdoc(7) format"
+homepage = "https://git.sr.ht/~flexibeast/s6-portable-utils-man-pages"
+license = "ISC"
+
+[build]
+system = "make"
+deps = ["mdocml"]

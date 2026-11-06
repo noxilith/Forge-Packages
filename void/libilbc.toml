@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libilbc'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libilbc"
+version = "3.0.4"
+archive = "https://github.com/TimothyGu/libilbc/releases/download/v3.0.4/libilbc-3.0.4.tar.zst"
+sha256 = "70a37660e59f999dbde8fd10fb0fb375baf8dd02093ab4b32f94bc4abaac4358"
+strip_components = 1
+description = "Packaged version of iLBC codec from the WebRTC project"
+homepage = "https://github.com/TimothyGu/libilbc"
+license = "BSD-3-Clause"
+
+[build]
+system = "cmake"

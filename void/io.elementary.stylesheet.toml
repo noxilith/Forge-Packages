@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'io.elementary.stylesheet'. Review before relying on it.
+[package]
+name = "io.elementary.stylesheet"
+version = "7.0.0"
+archive = "https://github.com/elementary/stylesheet/archive/refs/tags/7.0.0.tar.gz"
+sha256 = "3856dbfa9f11a837c299dd53b0e4f8941f1ddafc9f0ec3d2d57e0deed8f2e7e3"
+strip_components = 1
+description = "GTK Stylesheet for elementary OS"
+homepage = "https://github.com/elementary/stylesheet"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "meson"
+deps = ["gettext", "sassc"]

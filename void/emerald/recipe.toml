@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'emerald'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "emerald"
+version = "0.8.18"
+archive = "https://github.com/compiz-reloaded/emerald/archive/v0.8.18.tar.gz"
+sha256 = "53112b557c0d726ad75450b69df1649412ab5fcdf6c0827e383889f58bf437b1"
+strip_components = 1
+description = "Compiz Reloaded native window decorator"
+homepage = "https://github.com/compiz-reloaded"
+license = "GPL-2.0-or-later"
+deps = ["compiz-core", "gettext", "libwnck"]
+patches = ["patches/CCfix.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["glib", "libxslt"]

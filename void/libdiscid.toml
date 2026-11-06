@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libdiscid'. Review before relying on it.
+[package]
+name = "libdiscid"
+version = "0.7.0"
+archive = "https://data.metabrainz.org/pub/musicbrainz/libdiscid/libdiscid-0.7.0.tar.gz"
+sha256 = "c230ed462c5ed7d7403ceb6984c57c8d05de42386d796bcd893636c0b0ba222f"
+strip_components = 1
+description = "Library for creating MusicBrainz DiscIDs"
+homepage = "https://musicbrainz.org/doc/libdiscid"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

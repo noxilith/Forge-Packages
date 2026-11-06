@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'amsynth'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: intltool, jack, ladspa-sdk
+[package]
+name = "amsynth"
+version = "1.13.4"
+archive = "https://github.com/amsynth/amsynth/releases/download/release-1.13.4/amsynth-1.13.4.tar.gz"
+sha256 = "95679abc3f5e4ea3d45c964cba4f2b2617c3f87e55f54988fc33ec023a873efb"
+strip_components = 1
+description = "Analogue Modeling SYNTHesizer"
+homepage = "https://amsynth.github.io/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "dssi", "gtk+", "liblo", "libsndfile"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'input-leap'. Review before relying on it.
+# needs, but Forge has no recipe for yet: avahi, qt6-tools
+[package]
+name = "input-leap"
+version = "3.0.3"
+archive = "https://github.com/input-leap/input-leap/archive/refs/tags/v3.0.3.tar.gz"
+sha256 = "fbbf6e3f99abccfc3592939a039daf13f0e003dd33764c7c591d354b1a6c07eb"
+strip_components = 1
+description = "Open-source KVM software"
+homepage = "https://github.com/input-leap/input-leap"
+license = "GPL-2.0-only"
+deps = ["libei", "libportal", "qt6-base"]
+patches = ["patches/back-compat.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DINPUTLEAP_BUILD_X11=ON", "-DINPUTLEAP_BUILD_LIBEI=ON"]
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kcompletion'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "kcompletion"
+version = "5.116.0"
+archive = "https://download.kde.org/stable/frameworks/5.116/kcompletion-5.116.0.tar.xz"
+sha256 = "52badaaa51052470cc604ac32ccb3f993d17933ab0e7af17d2ab1613d77d09ea"
+strip_components = 1
+description = "KDE Powerful completion framework"
+homepage = "https://invent.kde.org/frameworks/kcompletion"
+license = "LGPL-2.0-or-later"
+deps = ["kconfig", "kwidgetsaddons"]
+patches = ["patches/cross.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_DESIGNERPLUGIN=ON"]
+deps = ["extra-cmake-modules", "kcoreaddons"]

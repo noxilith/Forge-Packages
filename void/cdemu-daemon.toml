@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'cdemu-daemon'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool, vhba-module-dkms
+[package]
+name = "cdemu-daemon"
+version = "3.3.1"
+archive = "https://downloads.sourceforge.net/sourceforge/cdemu/cdemu-daemon-3.3.1.tar.xz"
+sha256 = "ae48718af54643696c0944045c9ba90de9e3ef8137b214171318535b2b1ffaaa"
+strip_components = 1
+description = "Userspace daemon part of the cdemu suite"
+homepage = "http://cdemu.sourceforge.net"
+license = "GPL-2.0-or-later"
+deps = ["glib", "libao", "libmirage"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

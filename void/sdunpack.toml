@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'sdunpack'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+[package]
+name = "sdunpack"
+version = "0.3.0"
+archive = "https://github.com/baskerville/sdunpack/archive/refs/tags/0.3.0.tar.gz"
+sha256 = "8398414775b2192e42d97b44b261b13a7500f9aa38ed99e26e150a3aa330ad89"
+strip_components = 1
+description = "Unpack a StarDict dictionary as plain text"
+homepage = "https://github.com/baskerville/sdunpack"
+license = "MIT"
+
+[build]
+system = "cargo"

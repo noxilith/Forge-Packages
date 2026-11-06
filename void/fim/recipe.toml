@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'fim'. Review before relying on it.
+# hooks not translated: pre_build, pre_check
+# needs, but Forge has no recipe for yet: libavif, libreadline8, libspectre, libwebp
+[package]
+name = "fim"
+version = "0.7.1"
+archive = "https://download.savannah.nongnu.org/releases/fbi-improved/fim-0.7.1.tar.gz"
+sha256 = "3425648cd53e02849da44c20b061c038838dd489a59bcd67e6b0a706ec06779a"
+strip_components = 1
+description = "Fbi IMproved - image viewer"
+homepage = "https://www.nongnu.org/fbi-improved/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "djvulibre", "giflib", "gtk+3", "jasper", "libcaca", "libexif", "libjpeg-turbo", "libpng", "poppler", "tiff"]
+patches = ["patches/poppler-26.04.0.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-poppler"]
+tools = ["flex", "pkg-config"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libspecbleach'. Review before relying on it.
+# needs, but Forge has no recipe for yet: fftw
+[package]
+name = "libspecbleach"
+version = "0.2.0"
+archive = "https://github.com/lucianodato/libspecbleach/archive/v0.2.0.tar.gz"
+sha256 = "7d2577b23d8b598812eed1ac9c6a9cd3d9930eac10a88f1407adf2d90e6fe569"
+strip_components = 1
+description = "C library for audio noise reduction and other spectral effects"
+homepage = "https://github.com/lucianodato/libspecbleach"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

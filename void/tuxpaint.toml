@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'tuxpaint'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+# settings not translated: CFLAGS, conf_files
+# needs, but Forge has no recipe for yet: SDL2_gfx, SDL2_image, libimagequant
+[package]
+name = "tuxpaint"
+version = "0.9.35"
+archive = "https://downloads.sourceforge.net/sourceforge/tuxpaint/0.9.35/tuxpaint-0.9.35.tar.gz"
+sha256 = "c1c18af91be77e94fdaab2c928204c4c39ba39ac5da2f441aaf2ecab6d8bd0ad"
+strip_components = 1
+description = "Free, award-winning drawing program for children ages 3 to 12"
+homepage = "https://www.tuxpaint.org/"
+license = "GPL-2.0-or-later"
+deps = ["SDL2", "SDL2_Pango", "SDL2_mixer", "SDL2_ttf", "cairo", "freetype", "fribidi", "libpaper", "librsvg", "pango"]
+
+[build]
+system = "make"
+tools = ["gperf", "pkg-config"]
+deps = ["ImageMagick", "gettext"]

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'dracut-crypt-ssh'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "dracut-crypt-ssh"
+version = "1.0.8"
+archive = "https://github.com/dracut-crypt-ssh/dracut-crypt-ssh/archive/v1.0.8.tar.gz"
+sha256 = "98423671efc20ba04c0b3c39968e3970a451acba84e7cc0b29c8699f8eb5585e"
+strip_components = 1
+description = "New initramfs infrastructure - enter LUKS passphrase remotely"
+homepage = "https://github.com/dracut-crypt-ssh/dracut-crypt-ssh"
+license = "GPL-2.0-or-later"
+deps = ["dracut", "dropbear", "openssh"]
+
+[build]
+system = "autotools"
+deps = ["which"]

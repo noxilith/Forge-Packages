@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'unbound'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# settings not translated: conf_files
+# needs, but Forge has no recipe for yet: dnssec-anchors
+[package]
+name = "unbound"
+version = "1.26.2"
+archive = "https://nlnetlabs.nl/downloads/unbound/unbound-1.26.2.tar.gz"
+sha256 = "d8ee7aa6bbb3ff1be7d9e57637d0d0ec2f18273a8efff1a0afe2c665858b96f7"
+strip_components = 1
+description = "Validating, recursive, and caching DNS resolver"
+homepage = "https://nlnetlabs.nl/projects/unbound/about/"
+license = "BSD-3-Clause"
+deps = ["expat", "libevent", "libsodium"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-libevent", "--enable-dnscrypt", "--enable-event-api", "--with-username=_unbound"]

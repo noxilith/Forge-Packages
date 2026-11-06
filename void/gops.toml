@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gops'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "gops"
+version = "0.3.29"
+archive = "https://github.com/google/gops/archive/refs/tags/v0.3.29.tar.gz"
+sha256 = "c4637684ac8efbcc0bc55faf64e3920a7764a9ae8f4580945084c1a5b8b2d051"
+strip_components = 1
+description = "List and diagnose Go processes currently running on your system"
+homepage = "https://github.com/google/gops"
+license = "BSD-3-Clause"
+
+[build]
+system = "go"

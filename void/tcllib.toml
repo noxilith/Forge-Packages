@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tcllib'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: tcl
+[package]
+name = "tcllib"
+version = "1.21"
+archive = "https://github.com/tcltk/tcllib/archive/tcllib-1-21.tar.gz"
+sha256 = "c939b06b3383480a293d6d3cec9af91491e8a38aa3571dfb5024fbf0db260bbd"
+strip_components = 1
+description = "Set of pure-Tcl extensions"
+homepage = "https://core.tcl.tk/tcllib/"
+license = "TCL"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

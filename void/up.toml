@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'up'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "up"
+version = "0.4"
+archive = "https://github.com/akavel/up/archive/v0.4.tar.gz"
+sha256 = "3ea2161ce77e68d7e34873cc80324f372a3b3f63bed9f1ad1aefd7969dd0c1d1"
+strip_components = 1
+description = "Ultimate Plumber - write Linux pipes interactively"
+homepage = "https://github.com/akavel/up/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

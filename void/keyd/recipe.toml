@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'keyd'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "keyd"
+version = "2.6.0"
+archive = "https://github.com/rvaiya/keyd/archive/refs/tags/v2.6.0.tar.gz"
+sha256 = "697089681915b89d9e98caf93d870dbd4abce768af8a647d54650a6a90744e26"
+strip_components = 1
+description = "Key remapping daemon for linux"
+homepage = "https://github.com/rvaiya/keyd"
+license = "MIT"
+patches = ["patches/sched.patch"]
+
+[build]
+system = "make"

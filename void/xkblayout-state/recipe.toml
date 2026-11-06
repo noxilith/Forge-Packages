@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xkblayout-state'. Review before relying on it.
+[package]
+name = "xkblayout-state"
+version = "1b"
+archive = "https://github.com/nonpop/xkblayout-state/archive/v1b.tar.gz"
+sha256 = "ddf2de9949edbea2cb25933c22a6b76d4f868ee3012120216555ac96e9b536d4"
+strip_components = 1
+description = "Small command-line program to get/set the current keyboard layout"
+homepage = "https://github.com/nonpop/xkblayout-state"
+license = "GPL-2.0-or-later"
+deps = ["libX11"]
+patches = ["patches/make.patch"]
+
+[build]
+system = "make"

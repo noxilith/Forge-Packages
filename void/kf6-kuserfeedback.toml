@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'kf6-kuserfeedback'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: kf6-base, qt6-charts, qt6-tools
+[package]
+name = "kf6-kuserfeedback"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kuserfeedback-6.30.0.tar.xz"
+sha256 = "c8a463c8e570f6d532cbe150732220575c6385df97c91399b6c84450691771ca"
+strip_components = 1
+description = "Framework for collecting user feedback via telemetry and surveys"
+homepage = "https://invent.kde.org/frameworks/kuserfeedback"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["bison", "flex"]
+deps = ["extra-cmake-modules"]

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'expat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "expat"
+version = "2.10.0"
+archive = "https://github.com/libexpat/libexpat/releases/download/R_2_10_0/expat-2.10.0.tar.xz"
+sha256 = "c624ba2998fc65df1163a49641ff3f9ab73138b11641d92c86bee0fb01b1bc7f"
+strip_components = 1
+description = "XML parser library written in C"
+homepage = "https://libexpat.github.io/"
+license = "MIT"
+
+[build]
+system = "autotools"

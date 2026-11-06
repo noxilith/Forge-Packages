@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ncftp'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ncftp"
+version = "3.3.0"
+archive = "https://www.ncftp.com/public_ftp/ncftp/ncftp-3.3.0-src.tar.gz"
+sha256 = "7920f884c2adafc82c8e41c46d6f3d22698785c7b3f56f5677a8d5c866396386"
+strip_components = 1
+description = "Set of application programs implementing the File Transfer Protocol"
+homepage = "http://www.ncftp.com/ncftp/"
+license = "ClArtistic"
+
+[build]
+system = "autotools"

@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xfontsel'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xfontsel"
+version = "1.1.2"
+archive = "https://www.x.org/releases/individual/app/xfontsel-1.1.2.tar.gz"
+sha256 = "6f0545b5d123d2b2f5447fb08f2aed98805b6f9ca00b42054c1ec8f83ee08398"
+strip_components = 1
+description = "X font selector"
+homepage = "http://xorg.freedesktop.org"
+license = "X11"
+deps = ["font-misc-misc", "libXaw"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gettext"]

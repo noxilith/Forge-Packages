@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'qprint'. Review before relying on it.
+# hooks not translated: post_install, pre_install
+[package]
+name = "qprint"
+version = "1.1"
+archive = "https://www.fourmilab.ch/webtools/qprint/qprint-1.1.tar.gz"
+sha256 = "ffa9ca1d51c871fb3b56a4bf0165418348cf080f01ff7e59cd04511b9665019c"
+strip_components = 1
+description = "Encode and decode Quoted-Printable files"
+homepage = "https://www.fourmilab.ch/webtools/qprint/"
+license = "Public Domain"
+
+[build]
+system = "autotools"

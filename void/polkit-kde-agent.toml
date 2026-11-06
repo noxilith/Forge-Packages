@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'polkit-kde-agent'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-tools
+[package]
+name = "polkit-kde-agent"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/polkit-kde-agent-1-6.7.5.tar.xz"
+sha256 = "fb731dd979c0296994b5efe37b0a9cdeec5e704f91565540930effdbd7efee58"
+strip_components = 1
+description = "KDE PolKit auth agent"
+homepage = "https://commits.kde.org/polkit-kde-agent"
+license = "GPL-2.0-or-later"
+deps = ["kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-knotifications", "kf6-kwindowsystem", "polkit-qt6", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules", "gettext"]

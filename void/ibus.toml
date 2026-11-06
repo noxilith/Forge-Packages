@@ -1,0 +1,21 @@
+# Imported from Void Linux's template for 'ibus'. Review before relying on it.
+# 4 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_build, pre_configure, pre_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme, python3-setuptools, python3-xdg
+[package]
+name = "ibus"
+version = "1.5.32"
+archive = "https://github.com/ibus/ibus/releases/download/1.5.32/ibus-1.5.32.tar.gz"
+sha256 = "b24f41ae38b236b254c09f1a8f53c2354b69b0789e89cea888d0494b09d15d67"
+strip_components = 1
+description = "Intelligent Input Bus"
+homepage = "https://github.com/ibus/ibus"
+license = "LGPL-2.1-or-later"
+deps = ["dbus", "dconf", "gtk+", "gtk+3", "gtk4", "iso-codes", "json-glib", "libXtst", "libdbusmenu-glib", "libnotify", "librsvg", "setxkbmap", "vala"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ui", "--enable-gtk3", "--enable-gtk4", "--enable-memconf", "--enable-dconf", "--enable-wayland", "--enable-xim", "--disable-tests", "--disable-schemas-compile", "--disable-systemd-services", "--disable-python2", "--enable-introspection", "--enable-vala"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk-doc"]

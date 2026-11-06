@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'brother-brlaser'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cups, ghostscript
+[package]
+name = "brother-brlaser"
+version = "6.2.8"
+archive = "https://github.com/Owl-Maintain/brlaser/archive/refs/tags/v6.2.8.tar.gz"
+sha256 = "16dae855aa7fff0eef0c05398fab37678243d7d610fa5f9af0d3a2cc9bf08cb0"
+strip_components = 1
+description = "Brother laser printer driver"
+homepage = "https://github.com/Owl-Maintain/brlaser"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "cmake"

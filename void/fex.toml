@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fex'. Review before relying on it.
+# hooks not translated: post_build
+[package]
+name = "fex"
+version = "2.0.0"
+archive = "https://github.com/jordansissel/fex/archive/v2.0.0.tar.gz"
+sha256 = "b023711ddab9e656c077921c94d4346e21ab60d8c6d80b00191f3d581f4dfd7c"
+strip_components = 1
+description = "Flexible field/token extraction"
+homepage = "https://github.com/jordansissel/fex"
+license = "Apache-2.0"
+
+[build]
+system = "make"
+tools = ["perl"]

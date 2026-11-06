@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'jp'. Review before relying on it.
+# settings not translated: go_import_path
+[package]
+name = "jp"
+version = "0.2.1"
+archive = "https://github.com/jmespath/jp/archive/0.2.1.tar.gz"
+sha256 = "e88a49f61fffca8f431f78938f71e14d7792f7304344b7aa7391d06e4113f88b"
+strip_components = 1
+description = "Command line interface to JMESPath"
+homepage = "https://github.com/jmespath/jp"
+license = "Apache-2.0"
+
+[build]
+system = "go"

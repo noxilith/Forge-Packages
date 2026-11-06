@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'qrcp'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path, build_helper
+[package]
+name = "qrcp"
+version = "0.11.6"
+archive = "https://github.com/claudiodangelis/qrcp/archive/refs/tags/v0.11.6.tar.gz"
+sha256 = "a3eff505f366713fcb7694e0e292ff2da05e270f9539b6a8561c4cf267ec23c8"
+strip_components = 1
+description = "Transfer files over wifi to mobile devices by scanning a QR code"
+homepage = "https://qrcp.sh/"
+license = "MIT"
+
+[build]
+system = "go"

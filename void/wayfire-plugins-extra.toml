@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'wayfire-plugins-extra'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: boost
+[package]
+name = "wayfire-plugins-extra"
+version = "0.11.2"
+archive = "https://github.com/WayfireWM/wayfire-plugins-extra/archive/refs/tags/v0.11.2.tar.gz"
+sha256 = "def0072efbd8ccd88588296c72df27241caf3dee0007d2535d26770a08f0aca2"
+strip_components = 1
+description = "Additional plugins for Wayfire"
+homepage = "https://wayfire.org/"
+license = "MIT"
+deps = ["glibmm", "wayfire"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "wayland"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'aardvark-dns'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "aardvark-dns"
+version = "2.1.0"
+archive = "https://github.com/containers/aardvark-dns/archive/refs/tags/v2.1.0.tar.gz"
+sha256 = "daf871488603e659b0501224cf0731ac317809b1d1701fc061cb4f6ae39a894f"
+strip_components = 1
+description = "Authoritative dns server for A/AAAA container records"
+homepage = "https://github.com/containers/aardvark-dns"
+license = "Apache-2.0"
+patches = ["patches/9e73fd8ddde844d755f3f992ca9cd7bb0502d87e.patch"]
+
+[build]
+system = "cargo"

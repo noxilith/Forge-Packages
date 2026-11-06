@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'keyutils'. Review before relying on it.
+# settings not translated: make_build_args, make_install_args, CFLAGS, conf_files
+[package]
+name = "keyutils"
+version = "1.6.3"
+archive = "https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/keyutils-1.6.3.tar.gz"
+sha256 = "a61d5706136ae4c05bd48f86186bcfdbd88dd8bd5107e3e195c924cfc1b39bb4"
+strip_components = 1
+description = "Linux Key Management Utilities"
+homepage = "https://www.kernel.org"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+patches = ["patches/relative-lib.patch", "patches/request-key.conf.patch"]
+
+[build]
+system = "make"

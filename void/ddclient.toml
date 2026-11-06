@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'ddclient'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: make_dirs, conf_files
+# needs, but Forge has no recipe for yet: perl-JSON
+[package]
+name = "ddclient"
+version = "4.0.0"
+archive = "https://github.com/ddclient/ddclient/archive/v4.0.0.tar.gz"
+sha256 = "4b37c99ac0011102d7db62f1ece7ff899b06df3d4b172e312703931a3c593c93"
+strip_components = 1
+description = "Perl client used to update dynamic DNS"
+homepage = "https://github.com/ddclient/ddclient"
+license = "GPL-2.0-or-later"
+deps = ["curl"]
+
+[build]
+system = "autotools"

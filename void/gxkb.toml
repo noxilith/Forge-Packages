@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gxkb'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "gxkb"
+version = "0.9.5"
+archive = "https://github.com/zen-tools/gxkb/archive/v0.9.5.tar.gz"
+sha256 = "a95b14b17bd2a6d2b074220f925de68849bcd91cc8ea23c1e15dccf8a77f66c5"
+strip_components = 1
+description = "Lightweight GTK+3 X11 keyboard layout indicator and switcher"
+homepage = "https://github.com/zen-tools/gxkb"
+license = "GPL-2.0-or-later"
+deps = ["gtk+3", "libwnck", "libxklavier"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["which"]

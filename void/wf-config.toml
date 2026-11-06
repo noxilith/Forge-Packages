@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'wf-config'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "wf-config"
+version = "0.11.0"
+archive = "https://github.com/WayfireWM/wf-config/archive/v0.11.0.tar.gz"
+sha256 = "bdccae471c079cdccf4e8fed28622a3b1f04db09349fa0e4fa52b335e815f8d0"
+strip_components = 1
+description = "Wayfire library for managing configuration files"
+homepage = "https://wayfire.org"
+license = "MIT"
+deps = ["glm", "libevdev", "libxml2"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]

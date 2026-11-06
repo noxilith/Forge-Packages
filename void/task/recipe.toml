@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'task'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_extract, post_install
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: sqlite, util-linux-common
+[package]
+name = "task"
+version = "3.5.0"
+archive = "https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v3.5.0/task-3.5.0.tar.gz"
+sha256 = "9ea64b411f8314414f440ec765dfdf5a86c9f6159df47e2f60cff3db6b31157a"
+strip_components = 1
+description = "Task Warrior command-line todo list manager"
+homepage = "https://taskwarrior.org"
+license = "MIT"
+deps = ["gnutls"]
+patches = ["patches/link-system-sqlite.patch"]
+
+[build]
+system = "cmake"

@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'ghciwatch'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "ghciwatch"
+version = "1.4.2"
+archive = "https://github.com/mercurytechnologies/ghciwatch/archive/refs/tags/v1.4.2.tar.gz"
+sha256 = "3a018ce2087269c819a8bb75246de47dfe6e829a5c7cfa3b0951b3e6064d300e"
+strip_components = 1
+description = "Load a GHCi session for a Haskell project and watch for changes"
+homepage = "https://mercurytechnologies.github.io/ghciwatch/"
+license = "MIT"
+
+[build]
+system = "cargo"

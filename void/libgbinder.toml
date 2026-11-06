@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libgbinder'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: make_build_args, make_build_target, make_install_target
+[package]
+name = "libgbinder"
+version = "1.1.54"
+archive = "https://github.com/mer-hybris/libgbinder/archive/refs/tags/1.1.54.tar.gz"
+sha256 = "8fae2c3d94ceef5e3026d5d058daff1b298c18d3b68a66e1c2da10bffa80299b"
+strip_components = 1
+description = "GLib-style interface to binder (Android IPC mechanism)"
+homepage = "https://github.com/mer-hybris/libgbinder"
+license = "BSD-3-Clause"
+deps = ["libglibutil"]
+
+[build]
+system = "make"
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libkeybinder3'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install, pre_configure
+# settings not translated: build_helper
+[package]
+name = "libkeybinder3"
+version = "0.3.2"
+archive = "https://github.com/engla/keybinder/archive/keybinder-3.0-v0.3.2.tar.gz"
+sha256 = "2eec50be6dfafa672d719e719f639df10403f270b2473e60deb2fb8455d13c51"
+strip_components = 1
+description = "Library for registering global keyboard shortcuts (GTK+3)"
+homepage = "https://github.com/engla/keybinder"
+license = "MIT"
+deps = ["gtk+3"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["gtk-doc"]

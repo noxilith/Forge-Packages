@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'orca'. Review before relying on it.
+# needs, but Forge has no recipe for yet: brltty, hicolor-icon-theme, itstool, python3-xdg
+[package]
+name = "orca"
+version = "48.6"
+archive = "https://download.gnome.org/sources/orca/48/orca-48.6.tar.xz"
+sha256 = "edc50344e0dfd72476b5c14b3aa725ca268718ea6dd89bc4ee26f450b339d696"
+strip_components = 1
+description = "Screen reader for individuals who are blind or visually impaired"
+homepage = "https://wiki.gnome.org/Projects/Orca"
+license = "GPL-2.0-or-later"
+deps = ["at-spi2-core", "desktop-file-utils", "gst-plugins-good1", "liblouis", "libwnck", "python3-atspi", "python3-dbus", "python3-gobject", "speech-dispatcher"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "gtk+3"]

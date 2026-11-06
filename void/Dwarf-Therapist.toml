@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'Dwarf-Therapist'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# needs, but Forge has no recipe for yet: dwarffortress, hicolor-icon-theme, qt5
+[package]
+name = "Dwarf-Therapist"
+version = "42.1.21"
+archive = "https://github.com/Dwarf-Therapist/Dwarf-Therapist/archive/v42.1.21.tar.gz"
+sha256 = "654a3eedb805ec796440da2af9939960a77e20f6cb6fcc15f3d580db50a31bcb"
+strip_components = 1
+description = "Management tool designed to run side-by-side with Dwarf Fortress"
+homepage = "https://github.com/Dwarf-Therapist/Dwarf-Therapist/"
+license = "GPL-3.0-or-later"
+deps = ["libcap"]
+
+[build]
+system = "cmake"

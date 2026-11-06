@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'font-bh-lucidatypewriter-75dpi'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-bh-lucidatypewriter-75dpi"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/font/font-bh-lucidatypewriter-75dpi-1.0.4.tar.gz"
+sha256 = "8e502a1a7e81c1b95f08725f40e7e137d4d06700794d006b327d54b7c8d07f88"
+strip_components = 1
+description = "75dpi Bigelow and Holmes Lucida Typewriter PCF fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+deps = ["font-util"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["bdftopcf"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xfce4-sensors-plugin'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "xfce4-sensors-plugin"
+version = "1.5.0"
+archive = "https://archive.xfce.org/src/panel-plugins/xfce4-sensors-plugin/1.5/xfce4-sensors-plugin-1.5.0.tar.xz"
+sha256 = "840442b87fdddcd8595bd9f83ea8b81f771fe296bb9d2abf0e1979e208727ae9"
+strip_components = 1
+description = "Xfce hardware sensors plugin"
+homepage = "https://goodies.xfce.org/projects/panel-plugins/xfce4-sensors-plugin"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "glib", "gtk+3", "libnotify", "libxfce4ui", "libxfce4util", "lm_sensors", "xfce4-panel"]
+
+[build]
+system = "meson"
+configure_args = ["-Dprocacpi=enabled", "-Dsysfsacpi=enabled", "-Dxnvctrl=disabled"]
+tools = ["pkg-config"]
+deps = ["gettext"]

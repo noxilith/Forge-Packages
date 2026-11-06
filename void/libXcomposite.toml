@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libXcomposite'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libXcomposite"
+version = "0.4.7"
+archive = "https://www.x.org/releases/individual/lib/libXcomposite-0.4.7.tar.xz"
+sha256 = "8bdf310967f484503fa51714cf97bff0723d9b673e0eecbf92b3f97c060c8ccb"
+strip_components = 1
+description = "X Composite Library"
+homepage = "https://wiki.freedesktop.org/xorg/"
+license = "X11"
+deps = ["libXfixes", "xorgproto"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

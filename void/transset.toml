@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'transset'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "transset"
+version = "1.0.4"
+archive = "https://www.x.org/releases/individual/app/transset-1.0.4.tar.xz"
+sha256 = "81a9ab74af137733aa8cb6a37f8292948526fe7ef06b859fc0ff272c437c0b38"
+strip_components = 1
+description = "Set transparency on a X window"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXt"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

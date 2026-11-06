@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'firehol'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# needs, but Forge has no recipe for yet: traceroute
+[package]
+name = "firehol"
+version = "3.1.6"
+archive = "https://github.com/firehol/firehol/archive/v3.1.6.tar.gz"
+sha256 = "dc71650a933c1fd420956813d79f9a058bcf3cbaa84b928536a53995ecb889e4"
+strip_components = 1
+description = "Firewall for humans"
+homepage = "https://github.com/firehol/firehol/"
+license = "GPL-2.0-or-later"
+deps = ["curl", "iprange", "iproute2", "ipset", "iputils", "kmod", "procps-ng"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-doc", "--disable-man"]
+deps = ["tar"]

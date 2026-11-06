@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'lnav'. Review before relying on it.
+# hooks not translated: post_install, pre_build, pre_configure
+# needs, but Forge has no recipe for yet: bzip2, ncurses, sqlite
+[package]
+name = "lnav"
+version = "0.14.1"
+archive = "https://github.com/tstack/lnav/archive/v0.14.1.tar.gz"
+sha256 = "9eddf42dbbbd59af423cd25f49e744969c95a3901f9aba07e48481d4c41c4c4e"
+strip_components = 1
+description = "Log file navigator"
+homepage = "http://lnav.org/"
+license = "BSD-2-Clause"
+deps = ["curl", "gpm", "libarchive", "libunistring", "pcre2", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+deps = ["openssh"]

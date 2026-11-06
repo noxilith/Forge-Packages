@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ART'. Review before relying on it.
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: fftw, hicolor-icon-theme, libcanberra
+[package]
+name = "ART"
+version = "1.26.8"
+archive = "https://github.com/artpixls/ART/releases/download/1.26.8/ART-1.26.8.tar.xz"
+sha256 = "c7a247063c4b68aba245376eaeb51386ab3db325971d8993210d5b774edaf368"
+strip_components = 1
+description = "Fork of RawTherapee with additional features"
+homepage = "https://artraweditor.github.io/"
+license = "GPL-3.0-or-later"
+deps = ["desktop-file-utils", "exiv2", "gtkmm", "lensfun", "libiptcdata", "libraw", "librsvg", "mimalloc", "opencolorio"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]

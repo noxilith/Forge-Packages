@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'bitlbee-discord'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "bitlbee-discord"
+version = "0.4.3"
+archive = "https://github.com/sm00th/bitlbee-discord/archive/0.4.3.tar.gz"
+sha256 = "cf6278e8e27a3b72f4b29be1d9952ae357db0f5cd97223595f76f6065f6d4701"
+strip_components = 1
+description = "Discord protocol plugin for BitlBee"
+homepage = "https://github.com/sm00th/bitlbee-discord"
+license = "GPL-2.0-or-later"
+deps = ["bitlbee", "json-glib"]
+patches = ["patches/glib-2.69.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["glib"]

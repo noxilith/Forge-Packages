@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'uni'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "uni"
+version = "2.9.0"
+archive = "https://github.com/arp242/uni/archive/refs/tags/v2.9.0.tar.gz"
+sha256 = "dc595807a0ab875111dafd55be9f3de116cbea652216f9d0082d03dddb3d83be"
+strip_components = 1
+description = "Query the Unicode database from the CLI, with good support for emojis"
+homepage = "https://github.com/arp242/uni"
+license = "MIT"
+
+[build]
+system = "go"

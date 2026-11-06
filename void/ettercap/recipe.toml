@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'ettercap'. Review before relying on it.
+# hooks not translated: post_extract
+# settings not translated: conf_files, lib32disabled
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "ettercap"
+version = "0.8.4.1"
+archive = "https://github.com/Ettercap/ettercap/archive/refs/tags/v0.8.4.1.tar.gz"
+sha256 = "210a535138772ee67f5946ef61efe3bba31413d0f241a11d953fb553cacbbacd"
+strip_components = 1
+description = "Network sniffer/interceptor/logger for ethernet LANs"
+homepage = "https://github.com/Ettercap/ettercap"
+license = "GPL-2.0-only"
+deps = ["curl", "libmaxminddb", "libnet", "libpcap", "openssl", "pcre"]
+patches = ["patches/allow-build-type-none.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DENABLE_GTK=OFF", "-DBUNDLED_LIBS=OFF"]
+tools = ["flex", "pkg-config"]

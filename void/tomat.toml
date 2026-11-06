@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'tomat'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "tomat"
+version = "2.14.0"
+archive = "https://github.com/jolars/tomat/archive/refs/tags/v2.14.0.tar.gz"
+sha256 = "f69cb4ef2a4a8322f0c7f50dd187b0cb3054c44f8dd3d35f045cfba4e5b4610c"
+strip_components = 1
+description = "Pomodoro timer with daemon support for waybar and other status bars"
+homepage = "https://tomat.cc"
+license = "MIT"
+deps = ["alsa-lib"]
+
+[build]
+system = "cargo"
+tools = ["pkg-config"]

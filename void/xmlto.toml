@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xmlto'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: docbook-xsl
+[package]
+name = "xmlto"
+version = "0.0.29"
+archive = "https://pagure.io/xmlto/archive/0.0.29/xmlto-0.0.29.tar.gz"
+sha256 = "40504db68718385a4eaa9154a28f59e51e59d006d1aa14f5bc9d6fded1d6017a"
+strip_components = 1
+description = "Tool to help transform XML documents into other formats"
+homepage = "https://pagure.io/xmlto/"
+license = "GPL-2.0-or-later"
+deps = ["libxslt"]
+
+[build]
+system = "autotools"

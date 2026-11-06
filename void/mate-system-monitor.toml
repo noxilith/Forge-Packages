@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'mate-system-monitor'. Review before relying on it.
+# needs, but Forge has no recipe for yet: dbus-glib, itstool
+[package]
+name = "mate-system-monitor"
+version = "1.28.1"
+archive = "https://pub.mate-desktop.org/releases/1.28/mate-system-monitor-1.28.1.tar.xz"
+sha256 = "42d663d6b90fb5361ebc13f6547983d6f1e2ac75dc2ae4f1cac6ea6329965a25"
+strip_components = 1
+description = "MATE system monitor"
+homepage = "https://mate-desktop.org"
+license = "GPL-2.0-or-later"
+deps = ["dbus", "elogind", "glib", "gtk+3", "gtkmm", "libgtop", "librsvg", "libxml2", "mate-icon-theme"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "polkit"]

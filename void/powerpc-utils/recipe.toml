@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'powerpc-utils'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: bc
+[package]
+name = "powerpc-utils"
+version = "1.3.7"
+archive = "https://github.com/ibm-power-utilities/powerpc-utils/archive/v1.3.7.tar.gz"
+sha256 = "bb48758bca3b9d056141b522e700218ee4e814b517aadf5a01f53b970ad1d3c3"
+strip_components = 1
+description = "Suite of utilities for Linux on Power systems"
+homepage = "https://github.com/ibm-power-utilities/powerpc-utils"
+license = "GPL-2.0-or-later"
+deps = ["librtas", "zlib"]
+patches = ["patches/fix-endian_h.patch", "patches/fix-limits_h.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-silent-rules"]

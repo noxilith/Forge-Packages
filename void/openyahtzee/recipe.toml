@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'openyahtzee'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: hicolor-icon-theme
+[package]
+name = "openyahtzee"
+version = "1.10"
+archive = "https://github.com/guyru/openyahtzee/releases/download/v1.10/openyahtzee-1.10.tar.xz"
+sha256 = "083463c8bc4438a2df7bc5af166add37dc1da3f7eb00447de7e051cbc194f16e"
+strip_components = 1
+description = "Free implementation of the classic dice game Yahtzee"
+homepage = "https://www.openyahtzee.org"
+license = "GPL-2.0-or-later"
+deps = ["desktop-file-utils", "wxWidgets-gtk3"]
+patches = ["patches/locales.patch"]
+
+[build]
+system = "cmake"
+tools = ["pkg-config"]
+deps = ["gettext"]

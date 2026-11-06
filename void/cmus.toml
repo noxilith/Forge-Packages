@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'cmus'. Review before relying on it.
+# 2 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: ffmpeg6, jack, libmpcdec, ncurses, opusfile, sndio
+[package]
+name = "cmus"
+version = "2.12.0"
+archive = "https://github.com/cmus/cmus/archive/v2.12.0.tar.gz"
+sha256 = "44b96cd5f84b0d84c33097c48454232d5e6a19cd33b9b6503ba9c13b6686bfc7"
+strip_components = 1
+description = "Small, fast and powerful console music player"
+homepage = "https://cmus.github.io"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "faad2", "flac", "libao", "libcddb", "libcdio", "libcdio-paranoia", "libdiscid", "libmad", "libmodplug", "libmp4v2", "libvorbis", "pulseaudio", "wavpack"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

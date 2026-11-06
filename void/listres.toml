@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'listres'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "listres"
+version = "1.0.7"
+archive = "https://www.x.org/releases/individual/app/listres-1.0.7.tar.xz"
+sha256 = "d7bdc7354a53f3786487399b6d5ea8169fac9ddac2c751c530383c777d1af139"
+strip_components = 1
+description = "List resources in Xaw widgets"
+homepage = "https://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXaw"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

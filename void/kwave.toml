@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kwave'. Review before relying on it.
+# needs, but Forge has no recipe for yet: doxygen, fftw, hicolor-icon-theme, qt6-multimedia
+[package]
+name = "kwave"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/kwave-26.08.1.tar.xz"
+sha256 = "7f64ac6a23a8e3d7600451f05e610e7d028220a1f0aedcbdcf7e249c3bab3f15"
+strip_components = 1
+description = "Sound editor for KDE"
+homepage = "https://apps.kde.org/kwave"
+license = "GPL-2.0-or-later"
+deps = ["ImageMagick", "alsa-lib", "appstream-glib", "audiofile", "flac", "fontconfig", "freetype", "id3lib", "kf6-karchive", "kf6-kcompletion", "kf6-kconfig", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kcrash", "kf6-kdbusaddons", "kf6-kdoctools", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-ktextwidgets", "kf6-kwidgetsaddons", "kf6-kxmlgui", "lame", "libmad", "libogg", "librsvg", "libsamplerate", "libvorbis", "opus", "pulseaudio", "qt6-base", "samurai", "twolame"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext"]

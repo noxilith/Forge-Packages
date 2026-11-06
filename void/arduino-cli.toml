@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'arduino-cli'. Review before relying on it.
+# hooks not translated: post_build, post_install
+# settings not translated: go_ldflags, go_import_path, build_helper
+[package]
+name = "arduino-cli"
+version = "1.5.1"
+archive = "https://github.com/arduino/arduino-cli/archive/v1.5.1.tar.gz"
+sha256 = "262fbe874f62677d01eb15593144ca82bd6e7c2d0c00f82aa93949ab12924de6"
+strip_components = 1
+description = "Arduino command line interface"
+homepage = "https://github.com/arduino/arduino-cli"
+license = "GPL-3.0-or-later"
+
+[build]
+system = "go"

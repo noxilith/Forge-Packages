@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'vice'. Review before relying on it.
+# 7 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_patch, pre_install
+# needs, but Forge has no recipe for yet: glew, libreadline8
+[package]
+name = "vice"
+version = "3.9"
+archive = "https://downloads.sourceforge.net/sourceforge/vice-emu/releases/vice-3.9.tar.gz"
+sha256 = "40202b63455e26b87ecc63eb5a52322c6fa3f57cab12acf0c227cf9f4daec370"
+strip_components = 1
+description = "Emulator for C64, C128, CBM-II, PET, VIC20, Plus4 and C16"
+homepage = "https://vice-emu.sourceforge.net/"
+license = "GPL-2.0-or-later"
+deps = ["alsa-lib", "curl", "libevdev", "libpng", "zlib"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-cpuhistory", "--enable-x64", "--disable-pdf-docs"]
+tools = ["flex", "perl", "pkg-config"]
+deps = ["dos2unix", "glib", "xa", "xdg-utils"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'archiver'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "archiver"
+version = "3.5.1"
+archive = "https://github.com/mholt/archiver/archive/v3.5.1.tar.gz"
+sha256 = "b69a76f837b6cc1c34c72ace16670360577b123ccc17872a95af07178e69fbe7"
+strip_components = 1
+description = "Easily create and extract common archive formats"
+homepage = "https://github.com/mholt/archiver"
+license = "MIT"
+
+[build]
+system = "go"

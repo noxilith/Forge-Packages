@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'obexfs'. Review before relying on it.
+[package]
+name = "obexfs"
+version = "0.12"
+archive = "https://downloads.sourceforge.net/sourceforge/openobex/obexfs-0.12.tar.gz"
+sha256 = "72a62aeb4d4decff962f22239513651843857492e9d6b50f515c9bf9fccd73bc"
+strip_components = 1
+description = "FUSE based filesystem using ObexFTP"
+homepage = "http://openobex.triq.net/obexfs"
+license = "GPL-2.0-or-later"
+deps = ["bluez", "fuse", "obexftp"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

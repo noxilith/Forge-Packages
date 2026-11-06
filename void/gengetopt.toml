@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'gengetopt'. Review before relying on it.
+[package]
+name = "gengetopt"
+version = "2.23"
+archive = "https://ftp.gnu.org/gnu/gengetopt/gengetopt-2.23.tar.xz"
+sha256 = "b941aec9011864978dd7fdeb052b1943535824169d2aa2b0e7eae9ab807584ac"
+strip_components = 1
+description = "Tool to write cli option parsing code for C programs"
+homepage = "http://www.gnu.org/software/gengetopt"
+license = "GPL-3.0-or-later"
+deps = ["flex"]
+
+[build]
+system = "autotools"
+tools = ["flex"]
+deps = ["texinfo"]

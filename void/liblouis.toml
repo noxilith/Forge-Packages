@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'liblouis'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-build, python3-installer, python3-setuptools
+[package]
+name = "liblouis"
+version = "3.37.0"
+archive = "https://github.com/liblouis/liblouis/releases/download/v3.37.0/liblouis-3.37.0.tar.gz"
+sha256 = "6c3bd3ea73e0cf39d8bf0d724a0ac5ebcb5a24a70f21420de50c8e9f8d009a61"
+strip_components = 1
+description = "Open-source braille translator and back-translator"
+homepage = "http://liblouis.org/"
+license = "GPL-3.0-or-later, LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-ucs4"]
+tools = ["m4", "pkg-config"]
+deps = ["help2man", "texinfo"]

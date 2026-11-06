@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'cgo'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "cgo"
+version = "0.6.1"
+archive = "https://github.com/kieselsteini/cgo/archive/v0.6.1.tar.gz"
+sha256 = "e95fad5ed682ea187afb5690e75eef3cff62dc0adf158e92db69cc9b45fae4d1"
+strip_components = 1
+description = "Terminal based gopher client"
+homepage = "https://github.com/kieselsteini/cgo"
+license = "ISC"
+
+[build]
+system = "make"

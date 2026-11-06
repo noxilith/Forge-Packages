@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'StyLua'. Review before relying on it.
+# 5 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "StyLua"
+version = "2.5.2"
+archive = "https://github.com/JohnnyMorganz/StyLua/archive/refs/tags/v2.5.2.tar.gz"
+sha256 = "26a220c7bf3a8f50d12b76c952fc4569a1162e2d002440faac3344a3634db4f2"
+strip_components = 1
+description = "Opinionated Lua code formatter"
+homepage = "https://github.com/JohnnyMorganz/StyLua"
+license = "MPL-2.0"
+
+[build]
+system = "cargo"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'runc'. Review before relying on it.
+# hooks not translated: post_build, post_install, pre_check
+# settings not translated: go_ldflags, go_build_tags, go_import_path
+[package]
+name = "runc"
+version = "1.5.2"
+archive = "https://github.com/opencontainers/runc/releases/download/v1.5.2/runc-1.5.2.tar.xz"
+sha256 = "46eba094e45fc37d96a1b1dc150971fe8d076d6e23bae09dd35443141bed31a1"
+strip_components = 1
+description = "CLI tool for spawning and running OCI containers"
+homepage = "https://github.com/opencontainers/runc"
+license = "Apache-2.0"
+deps = ["libseccomp"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]
+deps = ["go-md2man"]

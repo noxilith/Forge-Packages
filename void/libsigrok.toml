@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'libsigrok'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: doxygen, libftdi1
+[package]
+name = "libsigrok"
+version = "0.5.2"
+archive = "https://sigrok.org/download/source/libsigrok/libsigrok-0.5.2.tar.gz"
+sha256 = "4d341f90b6220d3e8cb251dacf726c41165285612248f2c52d15df4590a1ce3c"
+strip_components = 1
+description = "C library for talking to hardware"
+homepage = "https://sigrok.org/"
+license = "GPL-3.0-or-later"
+deps = ["glib", "glibmm", "libserialport", "libusb", "libzip"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

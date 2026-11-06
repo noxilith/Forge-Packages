@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kinfocenter'. Review before relying on it.
+# needs, but Forge has no recipe for yet: hwids, kde-plasma-base, pciutils, qt6-tools
+[package]
+name = "kinfocenter"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kinfocenter-6.7.5.tar.xz"
+sha256 = "e3aeb4b6f7237fddff4e68f4d7d715772cc47bd0ac376febe24ae3d717680416"
+strip_components = 1
+description = "KDE Info Center"
+homepage = "https://invent.kde.org/plasma/kinfocenter"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later, GFDL-1.2-only"
+deps = ["aha", "glu", "kf6-kauth", "kf6-kcmutils", "kf6-kcoreaddons", "kf6-kio", "kf6-kservice", "kf6-kwayland", "kf6-solid", "libdrm", "libplasma", "libraw1394", "qt6-base", "qt6-declarative"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kdoctools", "kf6-kpackage"]

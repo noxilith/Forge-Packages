@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'lxqt-config'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "lxqt-config"
+version = "2.4.0"
+archive = "https://github.com/lxqt/lxqt-config/archive/2.4.0.tar.gz"
+sha256 = "2f77f98738c9c69f2e4bf7b492d93777119c8ec7833f0d7da9dbe145389def09"
+strip_components = 1
+description = "LXQt System Settings"
+homepage = "https://lxqt-project.org"
+license = "LGPL-2.1-or-later"
+deps = ["libXcursor", "libkf6screen", "liblxqt", "libqtxdg", "lxqt-menu-data", "xf86-input-libinput"]
+patches = ["patches/cxx20.patch"]
+
+[build]
+system = "cmake"
+configure_args = ["-DCMAKE_CXX_STANDARD=17"]
+tools = ["perl", "pkg-config"]
+deps = ["lxqt-build-tools", "qt6-base"]

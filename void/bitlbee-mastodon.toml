@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'bitlbee-mastodon'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "bitlbee-mastodon"
+version = "1.4.4"
+archive = "https://github.com/kensanata/bitlbee-mastodon//archive/v1.4.4.tar.gz"
+sha256 = "5ecb36a14ea59325f796009a7d3fb86e23d8bb273afe4744c6949c056bf8be48"
+strip_components = 1
+description = "Mastodon plugin for BitlBee"
+homepage = "https://github.com/kensanata/bitlbee-mastodon/"
+license = "GPL-2.0-only"
+deps = ["bitlbee"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libdecor'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+[package]
+name = "libdecor"
+version = "0.2.5"
+archive = "https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.5/libdecor-0.2.5.tar.gz"
+sha256 = "39c109a9a7eae943ba34d18a282c447d5729f9c486c8bc05ea305e4acd341522"
+strip_components = 1
+description = "Client-side decorations library for Wayland client"
+homepage = "https://gitlab.freedesktop.org/libdecor/libdecor"
+license = "MIT"
+deps = ["gtk+3", "pango", "wayland", "wayland-protocols"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddemo=false"]
+tools = ["pkg-config"]

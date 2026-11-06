@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'mdbook-mermaid'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "mdbook-mermaid"
+version = "0.17.0"
+archive = "https://github.com/badboy/mdbook-mermaid/archive/refs/tags/v0.17.0.tar.gz"
+sha256 = "ed155c57d4356b90c26806a8699a1287712831e45c0cc6e5eb7ed4cc7fd4ada7"
+strip_components = 1
+description = "Preprocessor for mdbook to add mermaid support"
+homepage = "https://github.com/badboy/mdbook-mermaid"
+license = "MPL-2.0"
+
+[build]
+system = "cargo"

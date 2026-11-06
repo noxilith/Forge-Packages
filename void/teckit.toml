@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'teckit'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "teckit"
+version = "2.5.13"
+archive = "https://github.com/silnrsi/teckit/archive/refs/tags/v2.5.13.tar.gz"
+sha256 = "fa8455324402e890e814f0262e7409dbc8f2a4fd8375c37a11a38ccfc32d3eff"
+strip_components = 1
+description = "Text Encoding Conversion toolkit"
+homepage = "http://scripts.sil.org/TECkitIntro"
+license = "LGPL-2.1-or-later"
+deps = ["zlib"]
+
+[build]
+system = "autotools"

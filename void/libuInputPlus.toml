@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libuInputPlus'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "libuInputPlus"
+version = "0.1.4"
+archive = "https://github.com/YukiWorkshop/libuInputPlus/archive/v0.1.4.tar.gz"
+sha256 = "a537e156d11ad00c643b93cbd9b712d3ec9d0ae8e40731ff763fe9a6ffe97458"
+strip_components = 1
+description = "Easy-to-use uinput library in C++"
+homepage = "https://github.com/YukiWorkshop/libuInputPlus"
+license = "MIT"
+
+[build]
+system = "cmake"

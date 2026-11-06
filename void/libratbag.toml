@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'libratbag'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: python3-evdev
+[package]
+name = "libratbag"
+version = "0.18"
+archive = "https://github.com/libratbag/libratbag/archive/v0.18.tar.gz"
+sha256 = "8a7f8bf00c21ef5ad534e2804ed537f2fc6521a3932dd822c438e561a85a1bcd"
+strip_components = 1
+description = "DBus daemon to configure gaming mice"
+homepage = "https://github.com/libratbag/libratbag"
+license = "MIT"
+deps = ["dbus", "elogind", "eudev", "glib", "json-glib", "libevdev", "libunistring", "python3-gobject"]
+
+[build]
+system = "meson"
+configure_args = ["-Dtests=false", "-Dsystemd-unit-dir=", "-Dsystemd=false", "-Db_ndebug=false"]
+tools = ["pkg-config"]
+deps = ["swig"]

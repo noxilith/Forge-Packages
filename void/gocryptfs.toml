@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gocryptfs'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_package, go_import_path
+[package]
+name = "gocryptfs"
+version = "2.6.1"
+archive = "https://github.com/rfjakob/gocryptfs/releases/download/v2.6.1/gocryptfs_v2.6.1_src-deps.tar.gz"
+sha256 = "9a966c1340a1a1d92073091643687b1205c46b57017c5da2bf7e97e3f5729a5a"
+strip_components = 1
+description = "Encrypted overlay filesystem written in Go"
+homepage = "https://nuetzlich.net/gocryptfs"
+license = "MIT"
+deps = ["fuse3", "openssl"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

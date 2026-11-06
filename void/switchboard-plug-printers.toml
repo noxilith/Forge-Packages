@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'switchboard-plug-printers'. Review before relying on it.
+# needs, but Forge has no recipe for yet: cups
+[package]
+name = "switchboard-plug-printers"
+version = "2.1.10"
+archive = "https://github.com/elementary/switchboard-plug-printers/archive/2.1.10.tar.gz"
+sha256 = "448f6ae28fc4dacc2c329532e21aacc4ec7aa4af7d93bd6d7013002253faef3d"
+strip_components = 1
+description = "Switchboard Printers Plug"
+homepage = "https://github.com/elementary/switchboard-plug-printers"
+license = "GPL-3.0-or-later"
+deps = ["cups-pk-helper", "granite", "gtk+3", "switchboard"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "vala"]

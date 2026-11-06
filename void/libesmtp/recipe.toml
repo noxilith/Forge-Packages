@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libesmtp'. Review before relying on it.
+[package]
+name = "libesmtp"
+version = "1.0.6"
+archive = "https://ftp.osuosl.org/pub/blfs/conglomeration/libesmtp/libesmtp-1.0.6.tar.bz2"
+sha256 = "d0a61a5c52d99fa7ce7d00ed0a07e341dbda67101dbed1ab0cdae3f37db4eb0b"
+strip_components = 1
+description = "Manage submission of emails using SMTP protocol"
+homepage = "https://ftp.osuosl.org/pub/blfs/conglomeration/libesmtp"
+license = "LGPL-2.1-or-later"
+deps = ["openssl"]
+patches = ["patches/openssl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static", "--with-openssl"]

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libfixposix'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libfixposix"
+version = "0.4.3"
+archive = "https://github.com/sionescu/libfixposix/archive/v0.4.3.tar.gz"
+sha256 = "78fe8bcebf496520ac29b5b65049f5ec1977c6bd956640bdc6d1da6ea04d8504"
+strip_components = 1
+description = "Thin wrapper over POSIX syscalls"
+homepage = "https://github.com/sionescu/libfixposix"
+license = "BSL-1.0"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

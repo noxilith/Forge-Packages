@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'font-alias'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "font-alias"
+version = "1.0.6"
+archive = "https://www.x.org/releases/individual/font/font-alias-1.0.6.tar.gz"
+sha256 = "cd392ece2e569fb276c4a825bf61078f603e97c1c71b23cd690e0678b117dfcb"
+strip_components = 1
+description = "Standard aliases for X11 PCF fonts"
+homepage = "http://xorg.freedesktop.org/"
+license = "MIT"
+
+[build]
+system = "autotools"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'draco'. Review before relying on it.
+[package]
+name = "draco"
+version = "1.5.9"
+archive = "https://github.com/google/draco/archive/refs/tags/1.5.9.tar.gz"
+sha256 = "5b84e0e212ccc7b03ace681760a65a66fe2481a5f54df65154cfc8f0cbb87148"
+strip_components = 1
+description = "Library to compress/decompress 3D geometric meshes, point clouds"
+homepage = "https://google.github.io/draco/"
+license = "Apache-2.0"
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_SHARED_LIBS=ON"]
+tools = ["pkg-config"]

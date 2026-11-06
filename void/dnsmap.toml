@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'dnsmap'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "dnsmap"
+version = "0.36"
+archive = "https://github.com/resurrecting-open-source-projects/dnsmap/archive/0.36.tar.gz"
+sha256 = "f52d6d49cbf9a60f601c919f99457f108d51ecd011c63e669d58f38d50ad853c"
+strip_components = 1
+description = "Passive DNS network mapper a.k.a. subdomain bruteforcer"
+homepage = "https://github.com/resurrecting-open-source-projects/dnsmap"
+license = "GPL-2.0-or-later"
+
+[build]
+system = "autotools"

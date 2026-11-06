@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'audiofile'. Review before relying on it.
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: asciidoc
+[package]
+name = "audiofile"
+version = "0.3.6"
+archive = "https://github.com/mpruett/audiofile/archive/audiofile-0.3.6.tar.gz"
+sha256 = "52125fee6c7454d743acdc27ebda194c6b5c7b9111426c7d5fdea0754cd366cc"
+strip_components = 1
+description = "C library for reading and writing audio files"
+homepage = "https://audiofile.68k.org"
+license = "LGPL-2.1-or-later"
+deps = ["alsa-lib", "flac"]
+patches = ["patches/004-CVE-2017-6829.patch", "patches/005-CVE-2017-6827-CVE-2017-6828-CVE-2017-6832-CVE-2017-6833-CVE-2017-6835-CVE-2017-6837.patch", "patches/006-CVE-2017-6839.patch", "patches/007-CVE-2017-6830-CVE-2017-6834-CVE-2017-6836-CVE-2017-6838.patch", "patches/009-CVE-2017-6831.patch", "patches/fix-gcc6-shift_left.patch"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

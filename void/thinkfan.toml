@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'thinkfan'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: libatasmart
+[package]
+name = "thinkfan"
+version = "2.0.0"
+archive = "https://github.com/vmatare/thinkfan/archive/2.0.0.tar.gz"
+sha256 = "0fc94eb378dcba8c889e91f41dab3a8d6eebc7324a59a0704cc39aa66551987e"
+strip_components = 1
+description = "Simple fan control program"
+homepage = "https://github.com/vmatare/thinkfan"
+license = "GPL-3.0-or-later"
+deps = ["lm_sensors", "yaml-cpp"]
+
+[build]
+system = "cmake"
+configure_args = ["-DUSE_ATASMART:BOOL=ON"]
+tools = ["pkg-config"]

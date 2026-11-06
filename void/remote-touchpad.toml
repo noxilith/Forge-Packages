@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'remote-touchpad'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_build_tags, go_import_path
+[package]
+name = "remote-touchpad"
+version = "1.5.5"
+archive = "https://github.com/Unrud/remote-touchpad/archive/refs/tags/v1.5.5.tar.gz"
+sha256 = "7a04cdf59ae8c60ae9e806c683f2d9cdb226fb36bd45ebb428339a5b4e3c73b6"
+strip_components = 1
+description = "Control mouse and keyboard from the web browser of another device"
+homepage = "https://github.com/Unrud/remote-touchpad"
+license = "GPL-3.0-or-later"
+deps = ["libX11", "libXrandr", "libXt", "libXtst"]
+
+[build]
+system = "go"

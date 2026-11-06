@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'menu-cache'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "menu-cache"
+version = "1.1.1"
+archive = "https://github.com/lxde/menu-cache/archive/refs/tags/1.1.1.tar.gz"
+sha256 = "e8af90467df271c3c8700c840ca470ca2915699c6f213c502a87d74608748f08"
+strip_components = 1
+description = "LXDE freedesktop menu specification"
+homepage = "http://lxde.org/"
+license = "LGPL-2.1-or-later"
+deps = ["glib", "libfm-extra"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]
+tools = ["pkg-config"]
+deps = ["gtk-doc"]

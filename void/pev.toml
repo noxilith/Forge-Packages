@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'pev'. Review before relying on it.
+# hooks not translated: post_install, post_patch
+# settings not translated: make_build_args, make_install_args
+[package]
+name = "pev"
+version = "0.81"
+archive = "https://downloads.sourceforge.net/sourceforge/project/pev/pev-0.81/pev-0.81.tar.gz"
+sha256 = "4192691c57eec760e752d3d9eca2a1322bfe8003cfc210e5a6b52fca94d5172b"
+strip_components = 1
+description = "PE file analysis toolkit"
+homepage = "http://pev.sourceforge.net/"
+license = "GPL-2.0-or-later, MIT, LGPL-3.0-or-later, BSD-2-Clause"
+deps = ["openssl", "pcre"]
+
+[build]
+system = "make"

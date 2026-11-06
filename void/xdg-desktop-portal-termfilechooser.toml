@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xdg-desktop-portal-termfilechooser'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xdg-desktop-portal-termfilechooser"
+version = "1.4.3"
+archive = "https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser/archive/refs/tags/v1.4.3.tar.gz"
+sha256 = "9d9046778da9da37ab559dbb8f8ec1a28efe050751a21a8c5daa06535a25c5c8"
+strip_components = 1
+description = "Portal backend service for alternative file choosers"
+homepage = "https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser"
+license = "MIT"
+deps = ["basu", "flatpak", "fontconfig", "inih", "xdg-desktop-portal"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "scdoc"]

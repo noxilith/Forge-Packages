@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gdmap'. Review before relying on it.
+# hooks not translated: post_patch
+# needs, but Forge has no recipe for yet: intltool
+[package]
+name = "gdmap"
+version = "0.8.1"
+archive = "https://downloads.sourceforge.net/sourceforge/gdmap/gdmap-0.8.1.tar.gz"
+sha256 = "a200c98004b349443f853bf611e49941403fce46f2335850913f85c710a2285b"
+strip_components = 1
+description = "Graphical Disk Map"
+homepage = "http://gdmap.sourceforge.net/"
+license = "GPL-2.0-only"
+deps = ["gtk+", "libxml2"]
+patches = ["patches/gtk-fix.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["LIBS=-lm"]
+tools = ["pkg-config"]

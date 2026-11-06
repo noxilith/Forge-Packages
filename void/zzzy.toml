@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'zzzy'. Review before relying on it.
+# hooks not translated: post_install, pre_build
+[package]
+name = "zzzy"
+version = "1"
+archive = "https://github.com/jgarte/zzzy/archive/refs/tags/1.tar.gz"
+sha256 = "0adef2e82a4cbcc6985463517c912736542a002139570282f849dc475ebe4bfc"
+strip_components = 1
+description = "Simple sleep cycle calculator"
+homepage = "https://github.com/jgarte/zzzy"
+license = "ISC"
+
+[build]
+system = "make"

@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'messagelib'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# needs, but Forge has no recipe for yet: qt6-tools, qt6-webchannel
+[package]
+name = "messagelib"
+version = "26.08.1"
+archive = "https://download.kde.org/stable/release-service/26.08.1/src/messagelib-26.08.1.tar.xz"
+sha256 = "0f3d5b72a4c49bee88aa4c432b127f85e1f152eafecd6d5bd6abca5c05206d68"
+strip_components = 1
+description = "KDE PIM messaging library"
+homepage = "https://community.kde.org/KDE_PIM"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["akonadi-contacts", "gpgme-qt6", "kf6-knewstuff", "kidentitymanagement", "kmailtransport", "kmbox", "libgravatar", "libkdepim", "pimcommon", "qt6-pdf"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins", "-DKDE_INSTALL_QMLDIR=lib/qt6/qml"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig", "kf6-kcoreaddons", "qt6-base"]

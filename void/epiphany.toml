@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'epiphany'. Review before relying on it.
+# needs, but Forge has no recipe for yet: avahi-discover, hicolor-icon-theme, itstool, libwebkit2gtk41, nss
+[package]
+name = "epiphany"
+version = "48.5"
+archive = "https://download.gnome.org/sources/epiphany/48/epiphany-48.5.tar.xz"
+sha256 = "0f66552ad6593c7952a3ddee5bf515656c8c434871076d9f1a91a7af9346b1b4"
+strip_components = 1
+description = "Intuitive GNOME web browser"
+homepage = "https://wiki.gnome.org/Apps/Web"
+license = "GPL-2.0-or-later"
+deps = ["NetworkManager", "desktop-file-utils", "gcr4", "gnome-desktop", "iso-codes", "json-glib", "libadwaita", "libarchive", "libdazzle", "libnotify", "libportal", "libsecret", "libsoup3", "libwnck", "libxslt", "nettle"]
+
+[build]
+system = "meson"
+configure_args = ["-Dunit_tests=disabled"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib", "gtk+3"]

@@ -1,0 +1,20 @@
+# Imported from Void Linux's template for 'charliecloud'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+# settings not translated: CFLAGS
+# needs, but Forge has no recipe for yet: python3-Sphinx, python3-lark, python3-requests, python3-sphinx_rtd_theme
+[package]
+name = "charliecloud"
+version = "0.45.2"
+archive = "https://gitlab.com/charliecloud/charliecloud/-/archive/v0.45.2/charliecloud-v0.45.2.tar.gz"
+sha256 = "436c6067e9a3a3725042387f673427568abf7b53a67c68a455a5240f3f42623e"
+strip_components = 1
+description = "Lightweight, fully unprivileged container implementation"
+homepage = "https://charliecloud.io/"
+license = "Apache-2.0"
+deps = ["cJSON", "fuse", "gc", "squashfuse"]
+patches = ["patches/configure.patch", "patches/musl.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-bundled-lark", "--disable-html", "--with-gc", "--with-json", "--with-squashfuse"]
+tools = ["pkg-config"]

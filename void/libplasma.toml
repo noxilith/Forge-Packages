@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'libplasma'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-svg, qt6-tools
+[package]
+name = "libplasma"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/libplasma-6.7.5.tar.xz"
+sha256 = "27b28823254aa489c094c40a314ce1575fd7906eeb521e636bb8fd2dc2981f2f"
+strip_components = 1
+description = "Plasma library and runtime components"
+homepage = "https://invent.kde.org/plasma/libplasma"
+license = "GPL-3.0-or-later"
+deps = ["kf6-karchive", "kf6-kcmutils", "kf6-kcolorscheme", "kf6-kconfigwidgets", "kf6-kcoreaddons", "kf6-kglobalaccel", "kf6-kguiaddons", "kf6-ki18n", "kf6-kiconthemes", "kf6-kio", "kf6-kirigami", "kf6-knotifications", "kf6-kpackage", "kf6-ksvg", "kf6-kwindowsystem", "plasma-activities", "plasma-wayland-protocols", "qt6-base", "qt6-declarative", "wayland"]
+
+[build]
+system = "cmake"
+configure_args = ["-DKDE_INSTALL_QMLDIR=lib/qt6/qml", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kconfig"]

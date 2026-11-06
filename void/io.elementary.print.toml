@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'io.elementary.print'. Review before relying on it.
+[package]
+name = "io.elementary.print"
+version = "0.1.3"
+archive = "https://github.com/elementary/print/archive/0.1.3.tar.gz"
+sha256 = "bf2656ca7708f0984b5f683c2777fca3eea799288ea6e971787f45219c57c025"
+strip_components = 1
+description = "Simple printing applet for use with Contractor"
+homepage = "https://github.com/elementary/print"
+license = "GPL-3.0-or-later"
+deps = ["gtk+3"]
+
+[build]
+system = "meson"
+tools = ["pkg-config"]
+deps = ["vala"]

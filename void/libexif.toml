@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libexif'. Review before relying on it.
+# hooks not translated: pre_configure
+[package]
+name = "libexif"
+version = "0.6.26"
+archive = "https://github.com/libexif/libexif/archive/libexif-0_6_26-release.tar.gz"
+sha256 = "974329442c4b0515814aa700073abbac592a29d1c2c14e4ec2bf0209764dabe9"
+strip_components = 1
+description = "EXIF file library"
+homepage = "https://github.com/libexif/libexif"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["ac_cv_path_DOXYGEN=false"]
+deps = ["gettext", "glib"]

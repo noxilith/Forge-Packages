@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'yubikey-touch-detector'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_import_path
+[package]
+name = "yubikey-touch-detector"
+version = "1.13.0"
+archive = "https://github.com/max-baz/yubikey-touch-detector/archive/refs/tags/1.13.0.tar.gz"
+sha256 = "8c12cea50fe31721f13fe55ee4b6be5315ac8a444c33beb3e8bb7e947cfa231e"
+strip_components = 1
+description = "Tool to detect when your YubiKey is waiting for a touch"
+homepage = "https://github.com/max-baz/yubikey-touch-detector"
+license = "ISC"
+deps = ["gpgme"]
+
+[build]
+system = "go"
+tools = ["pkg-config"]

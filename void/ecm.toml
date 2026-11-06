@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'ecm'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "ecm"
+version = "7.0.6"
+archive = "https://gitlab.inria.fr/zimmerma/ecm/-/archive/git-7.0.6/ecm-git-7.0.6.tar.gz"
+sha256 = "d7f7cbfe414ae019fa0cd610685b9ad4d04d333ee3d826a05e6e5affd95ca91a"
+strip_components = 1
+description = "Elliptic Curve Method for Integer Factorization"
+homepage = "https://gitlab.inria.fr/zimmerma/ecm"
+license = "GPL-3.0-or-later"
+deps = ["gmp"]
+
+[build]
+system = "autotools"
+configure_args = ["--enable-shared", "--enable-openmp"]
+tools = ["m4"]

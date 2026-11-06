@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'gst-plugins-ugly1'. Review before relying on it.
+# needs, but Forge has no recipe for yet: intltool, libmpeg2, orc
+[package]
+name = "gst-plugins-ugly1"
+version = "1.28.6"
+archive = "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.28.6.tar.xz"
+sha256 = "ee279da13a740fd7f060d631a673223fa3bcc8c33d350c8d0264bd332a24ecd8"
+strip_components = 1
+description = "GStreamer plugins from the ugly set (1.x)"
+homepage = "https://gstreamer.freedesktop.org"
+license = "LGPL-2.1-or-later, GPL-2.0-or-later"
+deps = ["glib", "gst-plugins-base1", "lame", "liba52", "libcdio", "libdvdread", "libmad", "libxml2", "mpg123", "x264"]
+
+[build]
+system = "meson"
+configure_args = ["-Dsidplay=disabled", "-Dgpl=enabled", "-Dx264=enabled", "-Da52dec=enabled", "-Dmpeg2dec=enabled", "-Dcdio=enabled"]
+tools = ["pkg-config"]

@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'gnome-photos'. Review before relying on it.
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: docbook-xsl, itstool
+[package]
+name = "gnome-photos"
+version = "44.0"
+archive = "https://download.gnome.org/sources/gnome-photos/44/gnome-photos-44.0.tar.xz"
+sha256 = "e78e210397d3c62809c6cd5521da6eccb4a11ddea5bf2af8632a47f4da5c829e"
+strip_components = 1
+description = "Access, organize, and share your photos on GNOME"
+homepage = "https://wiki.gnome.org/Apps/Photos"
+license = "GPL-2.0-or-later"
+deps = ["babl", "desktop-file-utils", "exempi", "gegl", "geocode-glib", "gnome-desktop", "gnome-online-accounts", "grilo", "gtk+3", "lcms2", "libdazzle", "libexif", "libgexiv2", "libhandy1", "libportal", "librsvg", "localsearch", "tinysparql"]
+
+[build]
+system = "meson"
+configure_args = ["-Ddogtail=false", "-Dmanuals=true"]
+tools = ["pkg-config"]
+deps = ["gdk-pixbuf", "gettext", "glib", "libxslt"]

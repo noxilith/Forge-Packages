@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'qolibri'. Review before relying on it.
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: qt5, qt5-webengine
+[package]
+name = "qolibri"
+version = "2.1.4"
+archive = "https://github.com/ludios/qolibri/archive/2.1.4.tar.gz"
+sha256 = "0163f19f80915879c5c276f48507aedfe5c186be3c57f965db5d68a9a7157150"
+strip_components = 1
+description = "EPWING Dictionary/Book Viewer"
+homepage = "https://github.com/ludios/qolibri"
+license = "GPL-2.0-or-later"
+deps = ["eb", "zlib"]
+
+[build]
+system = "cmake"

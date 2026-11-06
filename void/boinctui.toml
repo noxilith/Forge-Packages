@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'boinctui'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: pre_configure
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "boinctui"
+version = "2.7.1"
+archive = "https://sourceforge.net/projects/boinctui/files/boinctui_2.7.1.tar.gz"
+sha256 = "44b059a31d1dc4d7125a48bef6c201c08fda599ed22490cbb626880bbd0ccf66"
+strip_components = 1
+description = "Curses based fullscreen BOINC manager"
+homepage = "https://sourceforge.net/projects/boinctui/"
+license = "GPL-3.0-or-later"
+deps = ["expat", "openssl"]
+
+[build]
+system = "autotools"
+configure_args = ["--without-gnutls"]

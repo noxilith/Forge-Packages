@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'xkb-switch'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "xkb-switch"
+version = "1.6.0"
+archive = "https://github.com/ierton/xkb-switch/archive/1.6.0.tar.gz"
+sha256 = "17ddd00a09945f634654ddf98d55023b0727755f828706747fd5227e2651633d"
+strip_components = 1
+description = "Query and change the XKB layout state"
+homepage = "https://github.com/ierton/xkb-switch"
+license = "GPL-3.0-or-later"
+deps = ["libX11", "libxkbfile"]
+
+[build]
+system = "cmake"

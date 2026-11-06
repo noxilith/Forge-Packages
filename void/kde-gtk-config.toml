@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'kde-gtk-config'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kde-plasma-base, qt6-svg, qt6-tools
+[package]
+name = "kde-gtk-config"
+version = "6.7.5"
+archive = "https://download.kde.org/stable/plasma/6.7.5/kde-gtk-config-6.7.5.tar.xz"
+sha256 = "6590fefad29e37be7d51ed89e9dbaf67884ae0a3fed14f8d58ac1352c0c0503d"
+strip_components = 1
+description = "GTK+3 Configurator for KDE"
+homepage = "https://invent.kde.org/plasma/kde-gtk-config"
+license = "GPL-2.0-or-later, LGPL-2.1-or-later"
+deps = ["glib", "gsettings-desktop-schemas", "gtk+3", "kde-cli-tools", "kf6-kcmutils", "kf6-kcolorscheme", "kf6-kconfig", "kf6-kdbusaddons", "kf6-kdecoration", "kf6-kguiaddons", "kf6-knewstuff", "kf6-kwindowsystem", "qt6-base", "xsettingsd"]
+
+[build]
+system = "cmake"
+configure_args = ["-DBUILD_TESTING=OFF", "-DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"]
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "gettext", "kf6-kcoreaddons", "sassc"]

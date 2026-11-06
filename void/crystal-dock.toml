@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'crystal-dock'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt6-tools
+[package]
+name = "crystal-dock"
+version = "2.16"
+archive = "https://github.com/dangvd/crystal-dock/archive/refs/tags/v2.16.tar.gz"
+sha256 = "7fa93d24975d49c1c53acc01c6543ec270764f7ec40b59a31d0e519c75b22909"
+strip_components = 1
+description = "Customizable dock for Wayland"
+homepage = "https://github.com/dangvd/crystal-dock"
+license = "GPL-3.0-only"
+deps = ["layer-shell-qt", "qt6-base", "wayland"]
+
+[build]
+system = "cmake"
+subdir = "src"
+tools = ["pkg-config"]
+deps = ["extra-cmake-modules", "qt6-declarative"]

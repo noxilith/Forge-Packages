@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libHX'. Review before relying on it.
+[package]
+name = "libHX"
+version = "5.4"
+archive = "https://inai.de/files/libhx/libHX-5.4.tar.zst"
+sha256 = "3b169f4b0d3ddd888033b5816f54e7438b991c465197640c37d9f9dd5d926595"
+strip_components = 1
+description = "C library providing data structures and common functions"
+homepage = "https://inai.de/projects/libhx/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+configure_args = ["--enable-static"]

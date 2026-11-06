@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'tlsh'. Review before relying on it.
+# hooks not translated: post_build, post_install, pre_check, pre_configure
+# settings not translated: build_helper
+# needs, but Forge has no recipe for yet: python3-setuptools
+[package]
+name = "tlsh"
+version = "4.8.2"
+archive = "https://github.com/trendmicro/tlsh/archive/4.8.2.tar.gz"
+sha256 = "0528294fbb1fe3659db564dd0b7b1b27fc41280a8408e4f7abf7e8b27f7b1ac6"
+strip_components = 1
+description = "Fuzzy matching library"
+homepage = "https://github.com/trendmicro/tlsh"
+license = "Apache-2.0, BSD-3-Clause"
+patches = ["patches/fix-cflags.patch", "patches/musl.patch"]
+
+[build]
+system = "cmake"

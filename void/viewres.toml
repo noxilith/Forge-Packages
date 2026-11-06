@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'viewres'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "viewres"
+version = "1.0.8"
+archive = "https://www.x.org/releases/individual/app/viewres-1.0.8.tar.xz"
+sha256 = "4b221c2b103390b166633612b9abf8036cbbe90605dbd8a37cf2a377fa2b6cd2"
+strip_components = 1
+description = "Graphical class browser for Xt"
+homepage = "http://xorg.freedesktop.org"
+license = "MIT"
+deps = ["libXaw"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

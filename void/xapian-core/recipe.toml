@@ -1,0 +1,17 @@
+# Imported from Void Linux's template for 'xapian-core'. Review before relying on it.
+# needs, but Forge has no recipe for yet: util-linux-common
+[package]
+name = "xapian-core"
+version = "1.4.30"
+archive = "https://oligarchy.co.uk/xapian/1.4.30/xapian-core-1.4.30.tar.xz"
+sha256 = "4edf9989499e8bc95085c9f7108ed41d69546c34c6eea81da0fa22d95043bf72"
+strip_components = 1
+description = "Open source search engine"
+homepage = "https://www.xapian.org/"
+license = "GPL-2.0-or-later"
+deps = ["zlib"]
+patches = ["patches/cross-config.cmake.patch"]
+
+[build]
+system = "autotools"
+configure_args = ["--disable-static"]

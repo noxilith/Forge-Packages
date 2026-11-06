@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'libyaml'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "libyaml"
+version = "0.2.5"
+archive = "https://github.com/yaml/libyaml/archive/0.2.5.tar.gz"
+sha256 = "fa240dbf262be053f3898006d502d514936c818e422afdcf33921c63bed9bf2e"
+strip_components = 1
+description = "Fast YAML 1.1 parser and emitter library"
+homepage = "https://pyyaml.org/wiki/LibYAML"
+license = "MIT"
+
+[build]
+system = "autotools"

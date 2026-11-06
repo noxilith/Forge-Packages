@@ -1,0 +1,14 @@
+# Imported from Void Linux's template for 'dotherside'. Review before relying on it.
+# needs, but Forge has no recipe for yet: qt5
+[package]
+name = "dotherside"
+version = "0.7.1"
+archive = "https://github.com/filcuc/dotherside/archive/v0.7.1.tar.gz"
+sha256 = "de318ef55762d4db4ae7aa272d4bb1dbd4864efd53b87b45abad149b4d13b1e7"
+strip_components = 1
+description = "C language library for creating bindings for the Qt QML language"
+homepage = "https://github.com/filcuc/dotherside"
+license = "LGPL-3.0-only"
+
+[build]
+system = "cmake"

@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'upterm'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_package, go_import_path
+[package]
+name = "upterm"
+version = "0.10.0"
+archive = "https://github.com/owenthereal/upterm/archive/refs/tags/v0.10.0.tar.gz"
+sha256 = "05409ae3a124d611221f64e87016d67cfd2d3a125fcfec95abb9a123acd9d1a2"
+strip_components = 1
+description = "Secure Terminal Sharing"
+homepage = "https://github.com/owenthereal/upterm/"
+license = "Apache-2.0"
+
+[build]
+system = "go"

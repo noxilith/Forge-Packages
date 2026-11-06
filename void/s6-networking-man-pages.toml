@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 's6-networking-man-pages'. Review before relying on it.
+# hooks not translated: post_install
+[package]
+name = "s6-networking-man-pages"
+version = "2.7.0.4.1"
+archive = "https://git.sr.ht/~flexibeast/s6-networking-man-pages/archive/v2.7.0.4.1.tar.gz"
+sha256 = "3a80b9474b5111552264511a6fea247e524235b8207f5d747acf976757e22404"
+strip_components = 1
+description = "Mdoc versions of the documentation for the s6-networking suite"
+homepage = "https://git.sr.ht/~flexibeast/s6-networking-man-pages"
+license = "ISC"
+
+[build]
+system = "make"
+deps = ["mdocml"]

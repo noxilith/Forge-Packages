@@ -1,0 +1,18 @@
+# Imported from Void Linux's template for 'gnome-shell-extensions'. Review before relying on it.
+# needs, but Forge has no recipe for yet: gnome-shell, unzip
+[package]
+name = "gnome-shell-extensions"
+version = "48.3"
+archive = "https://download.gnome.org/sources/gnome-shell-extensions/48/gnome-shell-extensions-48.3.tar.xz"
+sha256 = "adde34c08f40b63411be6f1d17e235550a0090494871e6481c312989d7f4a2d4"
+strip_components = 1
+description = "Extensions for GNOME shell, including classic mode"
+homepage = "https://wiki.gnome.org/Projects/GnomeShell/Extensions"
+license = "GPL-2.0-or-later"
+deps = ["nautilus"]
+
+[build]
+system = "meson"
+configure_args = ["-Dextension_set=all"]
+tools = ["pkg-config"]
+deps = ["gettext", "glib"]

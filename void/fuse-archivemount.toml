@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'fuse-archivemount'. Review before relying on it.
+[package]
+name = "fuse-archivemount"
+version = "0.9.1"
+archive = "https://www.cybernoia.de/software/archivemount/archivemount-0.9.1.tar.gz"
+sha256 = "c529b981cacb19541b48ddafdafb2ede47a40fcaf16c677c1e2cd198b159c5b3"
+strip_components = 1
+description = "Mounts an archive for access as a file system"
+homepage = "https://www.cybernoia.de/software/archivemount.html"
+license = "LGPL-2.0-or-later"
+deps = ["fuse", "libarchive"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

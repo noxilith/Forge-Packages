@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libedit'. Review before relying on it.
+# 1 configure argument(s) left out (computed values or paths outside the package)
+# hooks not translated: post_install
+# needs, but Forge has no recipe for yet: ncurses
+[package]
+name = "libedit"
+version = "20260512.3.1"
+archive = "https://www.thrysoee.dk/editline/libedit-20260512-3.1.tar.gz"
+sha256 = "432d5e7ea8b0116dd39f2eca7bc11d0eed77faa6b77ea526ace89907c23ea4a0"
+strip_components = 1
+description = "Port of the NetBSD Command Line Editor Library"
+homepage = "https://www.thrysoee.dk/editline/"
+license = "BSD-3-Clause"
+
+[build]
+system = "autotools"

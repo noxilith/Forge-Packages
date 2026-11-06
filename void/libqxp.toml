@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'libqxp'. Review before relying on it.
+# needs, but Forge has no recipe for yet: boost, libcppunit
+[package]
+name = "libqxp"
+version = "0.0.3"
+archive = "https://dev-www.libreoffice.org/src/libqxp/libqxp-0.0.3.tar.xz"
+sha256 = "4687a9cc96c32d7406e5072c4da150fca696c563e5cde62b024f82fa53d32332"
+strip_components = 1
+description = "Parser for QuarkXPress file format documents"
+homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libqxp"
+license = "MPL-2.0"
+deps = ["libicu78", "librevenge"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

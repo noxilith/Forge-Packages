@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'gizmo'. Review before relying on it.
+# hooks not translated: post_install
+# settings not translated: go_ldflags, go_import_path
+[package]
+name = "gizmo"
+version = "0.2.3"
+archive = "https://github.com/gizmo-platform/gizmo/archive/refs/tags/v0.2.3.tar.gz"
+sha256 = "97e612b853c5296f5f4f4c801e9b22b811495a1f0ee6b66144390da792263d3a"
+strip_components = 1
+description = "Software for the Gizmo Mechatronics Platform"
+homepage = "https://gizmoplatform.org"
+license = "ISC"
+
+[build]
+system = "go"

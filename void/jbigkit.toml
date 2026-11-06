@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'jbigkit'. Review before relying on it.
+# hooks not translated: post_install, pre_configure
+[package]
+name = "jbigkit"
+version = "2.2"
+archive = "https://github.com/void-linux/jbigkit-shared/archive/v2.2.tar.gz"
+sha256 = "5cccbfb3bd7daf224a244ce0578dbcf706e4f39962426ceede873262b29b9931"
+strip_components = 1
+description = "Data compression library/utilities for bi-level high-resolution images"
+homepage = "http://www.cl.cam.ac.uk/~mgk25/jbigkit"
+license = "GPL-2.0-only"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

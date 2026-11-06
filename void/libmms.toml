@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'libmms'. Review before relying on it.
+[package]
+name = "libmms"
+version = "0.6.4"
+archive = "https://downloads.sourceforge.net/sourceforge/libmms/libmms-0.6.4.tar.gz"
+sha256 = "3c05e05aebcbfcc044d9e8c2d4646cd8359be39a3f0ba8ce4e72a9094bee704f"
+strip_components = 1
+description = "MMS stream protocol library"
+homepage = "http://sourceforge.net/projects/libmms/"
+license = "LGPL-2.0-or-later"
+deps = ["glib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

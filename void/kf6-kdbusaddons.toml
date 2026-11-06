@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'kf6-kdbusaddons'. Review before relying on it.
+# needs, but Forge has no recipe for yet: kf6-base, qt6-tools
+[package]
+name = "kf6-kdbusaddons"
+version = "6.30.0"
+archive = "https://download.kde.org/stable/frameworks/6.30/kdbusaddons-6.30.0.tar.xz"
+sha256 = "063ef80460f76d86dc4b033ef04b65b69ba82ee0de410440fe609465e7f5a997"
+strip_components = 1
+description = "KDE Convenience classes for DBus"
+homepage = "https://invent.kde.org/frameworks/kdbusaddons"
+license = "LGPL-2.1-or-later"
+deps = ["qt6-base"]
+
+[build]
+system = "cmake"
+deps = ["extra-cmake-modules"]

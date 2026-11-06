@@ -1,0 +1,16 @@
+# Imported from Void Linux's template for 'rarian'. Review before relying on it.
+# settings not translated: make_dirs
+[package]
+name = "rarian"
+version = "0.8.1"
+archive = "https://download.gnome.org/sources/rarian/0.8/rarian-0.8.1.tar.bz2"
+sha256 = "aafe886d46e467eb3414e91fa9e42955bd4b618c3e19c42c773026b205a84577"
+strip_components = 1
+description = "Documentation metadata library"
+homepage = "http://rarian.freedesktop.org/"
+license = "LGPL-2.1-or-later"
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]
+deps = ["libxslt"]

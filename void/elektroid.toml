@@ -1,0 +1,15 @@
+# Imported from Void Linux's template for 'elektroid'. Review before relying on it.
+[package]
+name = "elektroid"
+version = "3.3"
+archive = "https://github.com/dagargo/elektroid/releases/download/3.3/elektroid-3.3.tar.gz"
+sha256 = "e8474314ce9ad5fb934f381904232d3fbaeffed925a89235879561549147df12"
+strip_components = 1
+description = "Data transfer application for Elektron music devices"
+homepage = "https://github.com/dagargo/elektroid"
+license = "GPL-3.0-or-later"
+deps = ["alsa-lib", "gettext", "glib", "gtk+3", "json-glib", "libsamplerate", "libsndfile", "libzip", "pulseaudio", "rubberband", "zlib"]
+
+[build]
+system = "autotools"
+tools = ["pkg-config"]

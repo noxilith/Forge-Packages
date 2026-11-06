@@ -1,0 +1,19 @@
+# Imported from Void Linux's template for 'xchm'. Review before relying on it.
+# hooks not translated: pre_configure
+# settings not translated: CXXFLAGS
+# needs, but Forge has no recipe for yet: chmlib
+[package]
+name = "xchm"
+version = "1.40"
+archive = "https://github.com/rzvncj/xCHM/releases/download/1.40/xchm-1.40.tar.gz"
+sha256 = "f78c1d48edb2c6d6985850ea7ba8529248278a0ac28c3a988816afbbd6698115"
+strip_components = 1
+description = "CHM viewer for Unix"
+homepage = "https://github.com/rzvncj/xCHM"
+license = "GPL-2.0-or-later"
+deps = ["wxWidgets-gtk3"]
+
+[build]
+system = "autotools"
+configure_args = ["--with-wx-config=wx-config-gtk3"]
+deps = ["gettext", "tar"]
