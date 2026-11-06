@@ -278,7 +278,7 @@ fn all() -> Vec<Recipe> {
         .tools(&["pkg-config"]).pkgconfig(&["wayland-client", "wayland-protocols", "egl", "pixman-1", "libdrm", "gbm", "xkbcommon", "pango", "cairo", "pangocairo"]));
     r.push(recipe("hyprland", &h("Hyprland"), cm).rev("v0.57.1")
         .note("The Hyprland compositor. Everything it needs that distributions often lack is a Forge dependency\n(re2, glaze, lua, libcanberra, libxcb-errors, the Hypr* libraries). The machine must provide the usual\nWayland/graphics libraries below, glslang and a C++ compiler.\nTo log in to it: `forge integrate hyprland`.")
-        .deps(&["hyprutils", "hyprlang", "hyprcursor", "hyprgraphics", "aquamarine", "hyprland-protocols", "re2", "glaze", "lua", "libcanberra", "xcb-util-errors", "sdbus-cpp"])
+        .deps(&["hyprutils", "hyprlang", "hyprcursor", "hyprgraphics", "aquamarine", "hyprland-protocols", "re2", "glaze", "lua", "libcanberra", "xcb-util-errors", "sdbus-cpp", "hyprwire"])
         .build_deps(&scanner).tools(&["pkg-config", "python3"])
         .pkgconfig(&["xkbcommon", "uuid", "wayland-server", "wayland-protocols", "cairo", "pango", "pangocairo", "pixman-1", "xcursor", "libdrm", "libinput", "libeis-1.0", "gbm", "gio-2.0", "muparser", "lcms2", "xcb", "xcb-render", "xcb-xfixes", "xcb-icccm", "xcb-composite", "xcb-res", "egl", "glesv2"])
         .run(Run { isolate: Some("none".into()), dirs: v(&["config/hypr"]), args: v(&["--config", "{data}/config/hypr/hyprland.conf"]), args_commands: v(&["Hyprland"]), ..Default::default() }));

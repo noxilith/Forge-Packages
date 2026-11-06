@@ -19,6 +19,7 @@ deps = [
   'libcanberra',
   'xcb-util-errors',
   'sdbus-cpp',
+  'hyprwire',
 ]
 
 [build]
