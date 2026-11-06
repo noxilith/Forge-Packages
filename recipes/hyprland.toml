@@ -18,6 +18,7 @@ deps = [
   'lua',
   'libcanberra',
   'xcb-util-errors',
+  'sdbus-cpp',
 ]
 
 [build]
