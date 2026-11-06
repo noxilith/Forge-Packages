@@ -10,7 +10,12 @@ system = 'meson'
 tools = ['pkg-config', 'wayland-scanner']
 # Host libraries (Forge packages above provide their own).
 pkgconfig = ['wayland-client', 'wayland-protocols', 'wayland-server']
-configure_args = ['-Dman-pages=disabled', '-Dfish-completions=false']
+configure_args = [
+  '-Dman-pages=disabled',
+  '-Dbash-completions=false',
+  '-Dzsh-completions=false',
+  '-Dfish-completions=false',
+]
 # Shell fragments, decided on the build machine.
 configure_sh = [
   '-Dlogind-provider=$([ -e /usr/include/systemd/sd-bus.h ] && echo systemd || echo elogind)',

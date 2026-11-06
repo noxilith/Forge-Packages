@@ -9,6 +9,9 @@
 #   -> add the contents of forge-binary.key as the repository secret FORGE_BINARY_KEY
 #   -> put the contents of forge-binary.pub into OFFICIAL_PUBKEY (crates/forge-build/src/binary.rs in Forge)
 #
+# They are built on Arch Linux (a rolling distribution with current libraries: Ubuntu's are too old for
+# Hyprland and friends), so the binaries need a C library at least as new as Arch's.
+#
 # Packages with the install path built in only fit a machine with the same FORGE_ROOT (here
 # /opt/forge, the system-wide install); the rest fit any root. Both need a compatible C library.
 # A distribution builds its own with its own key and FORGE_PLATFORM.
@@ -27,19 +30,30 @@ env:
   FORGE_PLATFORM: x86_64-linux
   # Always Forge's own compilers, never whatever the runner has: the binaries must be reproducible.
   FORGE_TOOLCHAINS: managed
-  # Hyprland's libraries need C++23 (<print>), which means GCC 14; Ubuntu 24.04 defaults to 13.
-  CC: gcc-14
-  CXX: g++-14
 
 jobs:
   build:
     runs-on: ubuntu-24.04
+    # Arch Linux, for current libraries. The sandbox (bubblewrap) needs the container to be privileged.
+    container:
+      image: archlinux:latest
+      options: --privileged
     timeout-minutes: 350
     strategy:
       fail-fast: false
       matrix:
         shard: [0, 1, 2]
     steps:
+      - name: Tools and libraries the builds need
+        run: |
+          pacman -Syu --noconfirm --needed base-devel git curl bubblewrap cmake ninja meson pkgconf autoconf automake libtool python rust xorg-util-macros
+          # The libraries the recipes link against. One missing name must not stop the rest.
+          libs="wayland wayland-protocols libxkbcommon fontconfig freetype2 harfbuzz pixman libpng libjpeg-turbo cairo
+            gdk-pixbuf2 pango glib2 libdrm mesa libglvnd libinput seatd systemd systemd-libs libffi libwebp librsvg
+            pipewire pam pugixml tomlplusplus util-linux-libs libxcb xcb-util-cursor xcb-util-wm libxcursor hwdata libei
+            muparser lcms2 glslang qt6-base qt6-declarative clang libdisplay-info file"
+          pacman -S --noconfirm --needed $libs || for p in $libs; do pacman -S --noconfirm --needed "$p" || echo "::warning::could not install $p"; done
+          git config --global --add safe.directory '*'
       - uses: actions/checkout@v4
         with:
           path: packages
@@ -47,22 +61,6 @@ jobs:
         with:
           repository: noxilith/Forge
           path: forge
-      - name: Tools the builds need
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y bubblewrap git curl build-essential gcc-14 g++-14 pkg-config cmake ninja-build meson autoconf automake libtool python3
-          # The libraries the recipes link against. One missing name must not stop the rest.
-          libs="libwayland-dev libwayland-bin wayland-protocols libxkbcommon-dev libfontconfig-dev libfreetype-dev
-            libharfbuzz-dev libpixman-1-dev libpng-dev libjpeg-dev libcairo2-dev libgdk-pixbuf-2.0-dev libpango1.0-dev
-            libglib2.0-dev libdrm-dev libgbm-dev libinput-dev libseat-dev libudev-dev libffi-dev libwebp-dev
-            librsvg2-dev libpipewire-0.3-dev libspa-0.2-dev libpam0g-dev libpugixml-dev libtomlplusplus-dev uuid-dev
-            libxcb1-dev libxcb-cursor-dev libxcb-render0-dev libxcb-xfixes0-dev libxcb-icccm4-dev
-            libxcb-composite0-dev libxcb-res0-dev libxcb-util-dev libxcursor-dev libegl-dev libgles-dev hwdata
-            libei-dev libmuparser-dev liblcms2-dev libsystemd-dev zlib1g-dev glslang-tools qt6-base-dev
-            qt6-declarative-dev clang libclang-dev libdisplay-info-dev"
-          sudo apt-get install -y $libs || for p in $libs; do sudo apt-get install -y "$p" || echo "::warning::could not install $p"; done
-          # bubblewrap needs unprivileged user namespaces, which Ubuntu 24.04 restricts by default
-          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
       - name: Build Forge
         run: cargo build --release --manifest-path forge/Cargo.toml -p forge-cli
       - name: Build and pack this shard
@@ -76,15 +74,14 @@ jobs:
           printf '%s\n' "$FORGE_BINARY_KEY" > key
           # The repository under test is this checkout, not the published one.
           export FORGE_REPO="$PWD/packages" FORGE_BINARY_URL=""
-          sudo mkdir -p "$FORGE_ROOT"
+          mkdir -p "$FORGE_ROOT"
           : > failed.txt
           for pkg in $(grep -v '^#' packages/binaries.list | grep . | awk -v s="$SHARD" '(NR-1)%3==s'); do
-            sudo -E "$forge" --system install "$pkg" --yes --from-source || { echo "$pkg" >> failed.txt; echo "::warning::$pkg failed to build and was left out"; }
+            "$forge" --system install "$pkg" --yes --from-source || { echo "$pkg" >> failed.txt; echo "::warning::$pkg failed to build and was left out"; }
           done
           mkdir out
-          sudo -E "$forge" --system binary pack --all --out out --secret key || true
+          "$forge" --system binary pack --all --out out --secret key || true
           rm -f key
-          sudo chown -R "$USER" out
       - uses: actions/upload-artifact@v4
         with:
           name: shard-${{ matrix.shard }}

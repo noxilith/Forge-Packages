@@ -201,6 +201,7 @@ fn all() -> Vec<Recipe> {
     let scanner = ["hyprwayland-scanner"];
     let meson_man = ["-Dman-pages=disabled"];
     let nofish = ["-Dfish-completions=false"]; // Meson installs these to an absolute system path
+    let nocomp = ["-Dbash-completions=false", "-Dzsh-completions=false", "-Dfish-completions=false"];
     let sdbus_note = "Uses the machine's sd-bus: libsystemd, or elogind where systemd's header isn't installed.";
     let mut r: Vec<Recipe> = Vec::new();
 
@@ -257,7 +258,7 @@ fn all() -> Vec<Recipe> {
     r.push(recipe("hyprlang", &h("hyprlang"), cm).rev("v0.6.8").deps(&["hyprutils"]));
     r.push(recipe("hyprwire", &h("hyprwire"), cm).rev("v0.3.1").deps(&["hyprutils"]).tools(&["pkg-config"]).pkgconfig(&["libffi"]));
     r.push(recipe("hyprland-protocols", &h("hyprland-protocols"), cm).rev("v0.8.0").note("Wayland protocol definitions used by the Hypr* tools."));
-    r.push(recipe("hyprgraphics", &h("hyprgraphics"), cm).rev("v0.6.0").deps(&["hyprutils"]).tools(&["pkg-config"]).pkgconfig(&["pixman-1", "cairo", "libjpeg", "libwebp", "libpng"]));
+    r.push(recipe("hyprgraphics", &h("hyprgraphics"), cm).rev("v0.6.0").deps(&["hyprutils"]).tools(&["pkg-config"]).pkgconfig(&["pixman-1", "cairo", "libjpeg", "libwebp", "libpng", "libmagic"]));
     r.push(recipe("hyprcursor", &h("hyprcursor"), cm).rev("v0.1.13").deps(&["hyprlang", "libzip"]).tools(&["pkg-config"]).pkgconfig(&["librsvg-2.0", "cairo", "tomlplusplus"]));
     r.push(recipe("aquamarine", &h("aquamarine"), cm).rev("v0.16.0").deps(&["hyprutils"]).build_deps(&scanner).tools(&["pkg-config"])
         .pkgconfig(&["libdrm", "gbm", "libinput", "libseat", "libudev", "pixman-1", "wayland-client", "wayland-protocols", "hwdata", "egl", "glesv2"]));
@@ -328,10 +329,10 @@ fn all() -> Vec<Recipe> {
     r.push(recipe("swaybg", &format!("{GH}swaywm/swaybg"), "meson").rev("v1.2.2").note("Wallpaper.").tools(&["pkg-config", "wayland-scanner"])
         .pkgconfig(&["wayland-client", "wayland-protocols", "cairo", "gdk-pixbuf-2.0"]).args(&meson_man));
     r.push(recipe("swaylock", &format!("{GH}swaywm/swaylock"), "meson").rev("v1.8.6").note("Screen locker. Uses the machine's PAM and needs a PAM service file for `swaylock`.")
-        .tools(&["pkg-config", "wayland-scanner"]).pkgconfig(&["wayland-client", "wayland-protocols", "xkbcommon", "cairo", "gdk-pixbuf-2.0"]).args(&[&meson_man[..], &nofish[..]].concat())
+        .tools(&["pkg-config", "wayland-scanner"]).pkgconfig(&["wayland-client", "wayland-protocols", "xkbcommon", "cairo", "gdk-pixbuf-2.0"]).args(&[&meson_man[..], &nocomp[..]].concat())
         .run(spawner("swaylock", "config/swaylock/config", "--config")));
     r.push(recipe("swayidle", &format!("{GH}swaywm/swayidle"), "meson").rev("v1.9.1").note(&format!("Idle manager. Runs commands, so only its own config is pointed at the package.\n{sdbus_note}"))
-        .tools(&["pkg-config", "wayland-scanner"]).pkgconfig(&["wayland-client", "wayland-protocols", "wayland-server"]).args(&[&meson_man[..], &nofish[..]].concat())
+        .tools(&["pkg-config", "wayland-scanner"]).pkgconfig(&["wayland-client", "wayland-protocols", "wayland-server"]).args(&[&meson_man[..], &nocomp[..]].concat())
         .args_sh(vec![format!("-Dlogind-provider={}", sd("systemd", "elogind"))]).run(spawner("swayidle", "config/swayidle/config", "-C")));
     r.push(recipe("xwayland-satellite", &format!("{GH}Supreeeme/xwayland-satellite"), "cargo").rev("v0.8")
         .note("Runs X11 programs under compositors without built-in XWayland (such as niri).\nNeeds the `Xwayland` binary on the machine.")

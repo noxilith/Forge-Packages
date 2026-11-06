@@ -9,7 +9,12 @@ system = 'meson'
 tools = ['pkg-config', 'wayland-scanner']
 # Host libraries (Forge packages above provide their own).
 pkgconfig = ['wayland-client', 'wayland-protocols', 'xkbcommon', 'cairo', 'gdk-pixbuf-2.0']
-configure_args = ['-Dman-pages=disabled', '-Dfish-completions=false']
+configure_args = [
+  '-Dman-pages=disabled',
+  '-Dbash-completions=false',
+  '-Dzsh-completions=false',
+  '-Dfish-completions=false',
+]
 
 [run]
 isolate = 'none'

@@ -8,4 +8,4 @@ deps = ['hyprutils']
 system = 'cmake'
 tools = ['pkg-config']
 # Host libraries (Forge packages above provide their own).
-pkgconfig = ['pixman-1', 'cairo', 'libjpeg', 'libwebp', 'libpng']
+pkgconfig = ['pixman-1', 'cairo', 'libjpeg', 'libwebp', 'libpng', 'libmagic']
