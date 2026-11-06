@@ -24,4 +24,8 @@ pkgconfig = [
   'gbm',
   'pam',
 ]
-configure_args = ['-DCMAKE_INSTALL_SYSCONFDIR=etc']
+
+[install]
+post = [
+  '[ ! -d "$FORGE_STAGE/etc" ] || { mkdir -p "$FORGE_STAGE$FORGE_PREFIX/etc/pam.d" && cp "$(find "$FORGE_STAGE/etc" -name hyprlock -type f | head -1)" "$FORGE_STAGE$FORGE_PREFIX/etc/pam.d/hyprlock" && rm -rf "$FORGE_STAGE/etc"; }',
+]
