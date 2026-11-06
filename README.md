@@ -7,7 +7,7 @@ The package repository for [Forge](https://github.com/noxilith/Forge): what
 forge install hyprland                            # by name
 forge build https://github.com/hyprwm/Hyprland    # by link: uses the recipe here
 forge build --ignore-repo <link>                  # ignore recipes, auto-detect
-forge sync                                        # fetch newer recipes
+forge sync                                        # fetch newer recipes; lists packages you have that can update
 ```
 
 Two directories, looked up in this order:
