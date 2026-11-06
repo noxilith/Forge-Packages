@@ -1,0 +1,11 @@
+# Packages the binaries workflow builds, packs and publishes (one name per line).
+# Their dependencies are built too and published with them.
+# Start small: add a name only once `forge install <name> --from-source` works for you.
+foot
+grim
+slurp
+wl-clipboard
+cliphist
+swaybg
+hyprutils
+hyprlang

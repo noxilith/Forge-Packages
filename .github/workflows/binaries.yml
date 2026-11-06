@@ -1,0 +1,67 @@
+# Builds the packages in binaries.list from source, signs them, and publishes them to the
+# `binaries` release, which `forge install` downloads from.
+#
+# One-time setup:
+#   forge binary keygen ./keys            # on your machine; keep forge-binary.key secret
+#   -> add the contents of forge-binary.key as the repository secret FORGE_BINARY_KEY
+#   -> put the contents of forge-binary.pub into OFFICIAL_PUBKEY (crates/forge-build/src/binary.rs in Forge)
+#
+# Prebuilt packages only fit a machine with the same FORGE_ROOT (here /opt/forge, the system-wide
+# install) and a compatible C library. A distribution builds its own with its own key and FORGE_PLATFORM.
+name: binaries
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * 1"
+
+permissions:
+  contents: write
+
+env:
+  FORGE_ROOT: /opt/forge
+  FORGE_PLATFORM: x86_64-linux
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: packages
+      - uses: actions/checkout@v4
+        with:
+          repository: noxilith/Forge
+          path: forge
+      - name: Tools the builds need
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bubblewrap git curl build-essential pkg-config cmake ninja-build meson
+          # bubblewrap needs unprivileged user namespaces, which Ubuntu 24.04 restricts by default
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - name: Build Forge
+        run: cargo build --release --manifest-path forge/Cargo.toml -p forge-cli
+      - name: Build and pack
+        env:
+          FORGE_BINARY_KEY: ${{ secrets.FORGE_BINARY_KEY }}
+        run: |
+          set -eu
+          forge="$PWD/forge/target/release/forge"
+          install -m 0600 /dev/null key
+          printf '%s\n' "$FORGE_BINARY_KEY" > key
+          # The repository under test is this checkout, not the published one.
+          export FORGE_REPO="$PWD/packages" FORGE_BINARY_URL=""
+          sudo mkdir -p "$FORGE_ROOT"
+          for pkg in $(grep -v '^#' packages/binaries.list); do
+            sudo -E "$forge" --system install "$pkg" --yes --from-source
+          done
+          mkdir out
+          sudo -E "$forge" --system binary pack --all --out out --secret key
+          rm -f key
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view binaries >/dev/null 2>&1 || gh release create binaries --title binaries --notes "Prebuilt packages for forge install (signed)."
+          gh release upload binaries out/* --clobber
