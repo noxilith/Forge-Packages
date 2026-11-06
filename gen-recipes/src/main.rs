@@ -239,13 +239,14 @@ fn all() -> Vec<Recipe> {
     r.push(recipe("libogg", &format!("{GH}xiph/ogg"), cm).rev("v1.3.6").note(found).args(&["-DBUILD_SHARED_LIBS=ON"]));
     r.push(recipe("libvorbis", &format!("{GH}xiph/vorbis"), cm).rev("v1.3.7").note(found).deps(&["libogg"]).args(&["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"]));
     r.push(recipe("libcanberra", &format!("{GH}Distrotech/libcanberra"), "custom").rev("edbf1733563f37c650d99fae1e826bf4a46ac3f7").deps(&["libvorbis"])
-        .note(&format!("{found} (needed by Hyprland)\nSource: a GitHub mirror of the original, unmaintained upstream, pinned to the commit that ships a\ngenerated `configure`. Its build-aux helper scripts are symlinks to a path that only exists on the\nauthor's machine; any that dangle are replaced from libtool's copies. GTK/PulseAudio/ALSA backends\nare turned off, as Hyprland only needs the library. Its Makefiles want to re-run one specific automake\nversion; that regeneration is switched off (the shipped files are used as they are)."))
-        .tools(&["pkg-config"])
+        .note(&format!("{found} (needed by Hyprland)\nSource: a GitHub mirror of the original, unmaintained upstream, pinned to the commit that ships a\ngenerated `configure`. Its build-aux helper scripts are symlinks to a path that only exists on the\nauthor's machine; any that dangle are replaced from libtool's copies. GTK/PulseAudio/ALSA backends\nare turned off, as Hyprland only needs the library. The shipped `configure` is from 2010 and rejects current libtool, so the build files are regenerated\n(`autoreconf`, which needs autoconf, automake, libtool and gtk-doc on the machine)."))
+        .tools(&["pkg-config", "autoreconf"])
         .steps(&[
             r#"for f in compile config.guess config.sub depcomp install-sh ltmain.sh missing; do [ -e build-aux/$f ] || { rm -f build-aux/$f; for d in /usr/share/libtool/build-aux /usr/share/automake-*; do [ -f $d/$f ] && cp $d/$f build-aux/$f && break; done; }; done"#,
+            r#"gtkdocize --copy || true; autoreconf -fi"#,
             r#"./configure --prefix="$FORGE_PREFIX" --disable-gtk --disable-gtk3 --disable-alsa --disable-pulse --disable-oss --disable-gstreamer --disable-tdb --disable-lynx --disable-gtk-doc --disable-gtk-doc-html"#,
-            r#"make -j"$FORGE_JOBS" ACLOCAL=: AUTOMAKE=: AUTOCONF=: AUTOHEADER=:"#,
-            r#"make install DESTDIR="$FORGE_STAGE" ACLOCAL=: AUTOMAKE=: AUTOCONF=: AUTOHEADER=:"#,
+            r#"make -j"$FORGE_JOBS""#,
+            r#"make install DESTDIR="$FORGE_STAGE""#,
         ]));
     r.push(recipe("xcb-util-errors", "https://gitlab.freedesktop.org/xorg/lib/libxcb-errors.git", "autotools").rev("b90bcfbb7a41716a40fe7fb11518cc89190dbe85")
         .note(&format!("{found} (libxcb-errors, needed by Hyprland for XWayland)\nPinned to a master commit: the 1.0.1 tag points a submodule at a git:// URL that no longer answers.\nNeeds a working autoconf/automake/libtool on the machine (it ships no generated `configure`)."))

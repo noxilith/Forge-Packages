@@ -51,7 +51,7 @@ jobs:
           libs="wayland wayland-protocols libxkbcommon fontconfig freetype2 harfbuzz pixman libpng libjpeg-turbo cairo
             gdk-pixbuf2 pango glib2 libdrm mesa libglvnd libinput seatd systemd systemd-libs libffi libwebp librsvg
             pipewire pam pugixml tomlplusplus util-linux-libs libxcb xcb-util-cursor xcb-util-wm libxcursor hwdata libei
-            muparser lcms2 glslang qt6-base qt6-declarative clang libdisplay-info file"
+            muparser lcms2 glslang qt6-base qt6-declarative qt6-wayland clang libdisplay-info file gtk-doc"
           pacman -S --noconfirm --needed $libs || for p in $libs; do pacman -S --noconfirm --needed "$p" || echo "::warning::could not install $p"; done
           git config --global --add safe.directory '*'
       - uses: actions/checkout@v4
