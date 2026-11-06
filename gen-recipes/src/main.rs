@@ -309,7 +309,7 @@ fn all() -> Vec<Recipe> {
     r.push(recipe("foot", &format!("{CB}dnkl/foot"), "meson").rev("1.28.0").deps(&["fcft", "tllist", "utf8proc"])
         .note("Wayland terminal. It starts your shell, so only its own --config is pointed at the package\n(an XDG redirect would leak into every program you run in it).")
         .tools(&["pkg-config", "wayland-scanner"]).pkgconfig(&["wayland-client", "wayland-cursor", "wayland-protocols", "xkbcommon", "fontconfig", "pixman-1"])
-        .args(&["-Ddocs=disabled"]).run(spawner("foot", "config/foot/foot.ini", "--config")));
+        .args(&["-Ddocs=disabled", "-Dsystemd-units-dir=lib/systemd/user"]).run(spawner("foot", "config/foot/foot.ini", "--config")));
     r.push(recipe("fuzzel", &format!("{CB}dnkl/fuzzel"), "meson").rev("1.15.0").deps(&["fcft", "tllist"]).build_deps(&["scdoc"])
         .note("Application launcher. It starts programs, so only its own --config is pointed at the package.")
         .tools(&["pkg-config", "wayland-scanner"]).pkgconfig(&["wayland-client", "wayland-cursor", "wayland-protocols", "xkbcommon", "fontconfig", "pixman-1", "cairo"])
